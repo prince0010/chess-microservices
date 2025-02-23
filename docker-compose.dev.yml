@@ -1,0 +1,79 @@
+version: "3.7"
+
+services:
+  # NATS-Server
+  nats-server:
+    image: nats:latest
+    container_name: nats
+    ports:
+      - 8222:8222
+    networks:
+      - chessmicroservicesnet
+
+  # Gateway-MS
+  chess-gateway:
+    container_name: chess-gateway
+    build: ./chess-gateway
+    image: chess-gateway # Explicitly setting the image name
+    ports:
+      - ${CHESS_GATEWAY_PORT}:3000
+    env_file:
+      - .env
+    volumes:
+      - ./chess-gateway/src:/usr/src/app/src
+    command: npm run start:dev
+    environment:
+      PORT: ${CHESS_GATEWAY_PORT}
+      NATS_SERVERS: "${NATS_SERVERS}"
+    networks:
+      - chessmicroservicesnet
+
+  # Auth-ms
+  auth-ms:
+    container_name: chess-auth-ms
+    build: ./chess-auth-ms
+    image: auth-ms
+    ports:
+      - ${AUTH_MS_PORT}:3001
+    volumes:
+      - ./chess-auth-ms/src:/usr/src/app/src
+    depends_on: [auth-mariadb]
+    command: npm run start:dev
+    environment:
+      PORT: ${AUTH_MS_PORT}
+      NATS_SERVERS: "${NATS_SERVERS}"
+      MARIADB_VERSION: ${MARIADB_VERSION}
+      AUTH_MARIADB_CONTAINER_NAME: ${AUTH_MARIADB_CONTAINER_NAME}
+      AUTH_CONTAINER_NAME: ${AUTH_CONTAINER_NAME}
+      AUTH_DB_PORT: ${AUTH_DB_PORT}
+      AUTH_DB_HOST: ${AUTH_DB_HOST}
+      AUTH_DB_NAME: ${AUTH_DB_NAME}
+      AUTH_DB_ROOT_PASSWORD: ${AUTH_DB_ROOT_PASSWORD}
+      AUTH_DB_USERNAME: ${AUTH_DB_USERNAME}
+      AUTH_DB_PASSWORD: ${AUTH_DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+    networks:
+      - chessmicroservicesnet
+
+  auth-mariadb:
+    image: "mariadb:${MARIADB_VERSION:-10.11.2}"
+    container_name: ${AUTH_MARIADB_CONTAINER_NAME:-auth-mariadb}
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${AUTH_DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${AUTH_DB_NAME}
+      MARIADB_USER: ${AUTH_DB_USERNAME}
+      MARIADB_PASSWORD: ${AUTH_DB_PASSWORD}
+    ports:
+      - "63311:3306"
+    networks:
+      - chessmicroservicesnet
+    volumes:
+      - ./chess-auth-ms/auth-mysql-data:/var/lib/mysql
+
+networks:
+  chessmicroservicesnet:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
