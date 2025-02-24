@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 3001
 
-CMD ["npm", "run", "start:dev"]
+CMD npx typeorm migration:run -d dist/db/typeorm.config.js && npm run start:dev
