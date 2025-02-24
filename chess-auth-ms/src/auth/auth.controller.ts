@@ -24,4 +24,9 @@ export class AuthController {
   verifyToken(@Payload() token: string) {
     return this.authService.verify(token);
   }
+
+  @MessagePattern('auth.findone.user')
+  findOne(@Payload() uid: string | number) {
+    return this.authService.findOne(+uid);
+  }
 }

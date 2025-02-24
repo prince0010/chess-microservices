@@ -119,6 +119,25 @@ export class AuthService {
     }
   }
 
+  async findOne(uid: number): Promise<Auth> {
+    try {
+      const user = await this.authRepository.findOneBy({ uid });
+      if (!user) {
+        throw new RpcException({
+          status: 401,
+          message: `User not found with UID: ${uid}`,
+        });
+      }
+
+      return user;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
   // ==== private methods ====
   private getJwtPayload(user: Auth): JwtPayload {
     return {

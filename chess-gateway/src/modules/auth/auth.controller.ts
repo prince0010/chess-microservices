@@ -1,4 +1,13 @@
-import { Body, Controller, Get, Inject, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Inject,
+  Param,
+  ParseIntPipe,
+  Post,
+  UseGuards,
+} from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { catchError } from 'rxjs';
 
@@ -36,5 +45,15 @@ export class AuthController {
   @Get('verify')
   verifyToken(@User() user: ICurrentUser, @Token() token: string) {
     return { user, token };
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/:id')
+  findOne(@Param('id', ParseIntPipe) id: string) {
+    return this.client.send('auth.findone.user', id).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
   }
 }
