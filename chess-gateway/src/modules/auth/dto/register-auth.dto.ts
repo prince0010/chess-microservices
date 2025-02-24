@@ -1,4 +1,6 @@
+import { Type } from 'class-transformer';
 import {
+  IsArray,
   IsDate,
   IsEnum,
   IsNotEmpty,
@@ -27,13 +29,19 @@ export class RegisterAuthDto {
   @IsNotEmpty()
   country: string;
 
-  @IsOptional()
   @IsEnum(Gender, {
     message: `gender must be a valid enum value: [${[...genderArray]}]`,
   })
-  gender?: string;
+  gender: string;
+
+  @IsArray()
+  @IsOptional()
+  @IsString({ each: true })
+  roles: string[];
 
   @IsOptional()
-  @IsDate()
+  // @IsString() // Validate as a string (if received as a string)
+  @IsDate() // Validate as a Date object
+  @Type(() => Date) // Converts from string to Date automatically
   birthday?: Date;
 }

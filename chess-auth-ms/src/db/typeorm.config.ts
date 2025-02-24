@@ -4,8 +4,6 @@ import * as dotenv from 'dotenv';
 // Load environment variables
 dotenv.config();
 
-console.log(process.env.AUTH_DB_NAME);
-
 export const dataSourceOptions: DataSourceOptions = {
   type: 'mariadb',
   host: 'auth-mariadb', // Put here the mysql alias container when using Docker

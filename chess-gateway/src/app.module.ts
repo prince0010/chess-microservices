@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 
+import { AuthModule } from './modules/auth/auth.module';
 import { HealthCheckModule } from './modules/health-check/health-check.module';
 import { NatsModule } from './modules/transports/nats.module';
 
 @Module({
-  imports: [HealthCheckModule, NatsModule],
+  imports: [AuthModule, HealthCheckModule, NatsModule],
 })
 export class AppModule {}

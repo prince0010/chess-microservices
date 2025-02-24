@@ -21,26 +21,8 @@ export class AuthService {
     private readonly jwtService: JwtService, // default Nest Service to generate JWT
   ) {}
 
-  async verify(token: string) {
-    try {
-      const { sub, iat, exp, ...user } = this.jwtService.verify(token, {
-        secret: envs.jwtSecret,
-      });
-
-      return {
-        user,
-        token: await this.singJWT(user),
-      };
-    } catch (error) {
-      throw new RpcException({
-        status: 401,
-        message: 'Invalid token',
-      });
-    }
-  }
-
   async register(registerAuthDto: RegisterAuthDto): Promise<any> {
-    const { password, username, roles, ...restUser } = registerAuthDto;
+    const { password, username, ...restUser } = registerAuthDto;
 
     try {
       const existsUsername = await this.authRepository.findOneBy({ username });
@@ -54,13 +36,15 @@ export class AuthService {
       const newUser = this.authRepository.create({
         username,
         password: bcryptjs.hashSync(password, 10),
-        roles,
+        ...restUser,
       });
 
       const savedUser = await this.authRepository.save(newUser);
 
+      const { password: leavePassword, ...restFrontendUser } = savedUser;
+
       return {
-        user: restUser,
+        user: restFrontendUser,
         token: await this.singJWT(savedUser),
       };
     } catch (error) {
@@ -73,13 +57,14 @@ export class AuthService {
 
   async login(loginAuthDto: LoginAuthDto) {
     const { username, password } = loginAuthDto;
+
     try {
       const user = await this.authRepository.findOneBy({ username });
 
       if (!user) {
         throw new RpcException({
           status: 400,
-          message: 'User does not exists',
+          message: 'User does not exists on system.',
         });
       }
 
@@ -102,6 +87,34 @@ export class AuthService {
       throw new RpcException({
         status: 400,
         message: error.message,
+      });
+    }
+  }
+
+  async verify(token: string) {
+    try {
+      const { sub, iat, exp, ...user } = this.jwtService.verify(token, {
+        secret: envs.jwtSecret,
+      });
+
+      const userFromDB = await this.authRepository.findOneBy({ uid: user.uid });
+      if (!userFromDB) {
+        throw new RpcException({
+          status: 401,
+          message: 'User not found with UID',
+        });
+      }
+
+      const { password: __, ...restUser } = userFromDB;
+
+      return {
+        user: restUser,
+        token: await this.singJWT(userFromDB),
+      };
+    } catch (error) {
+      throw new RpcException({
+        status: 401,
+        message: 'Invalid token',
       });
     }
   }

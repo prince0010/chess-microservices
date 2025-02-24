@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { ValidationPipe } from '@nestjs/common';
-import { MicroserviceOptions } from '@nestjs/microservices';
+import { MicroserviceOptions, RpcException } from '@nestjs/microservices';
 import { Transport } from '@nestjs/microservices';
 
 import { AppModule } from './app.module';
@@ -21,6 +21,17 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
+      transform: true,
+      exceptionFactory: (errors) => {
+        const messages = errors
+          .map((err) => Object.values(err.constraints || {}))
+          .flat();
+
+        return new RpcException({
+          status: 400,
+          message: messages.length ? messages : ['Validation failed'],
+        });
+      },
     }),
   );
 

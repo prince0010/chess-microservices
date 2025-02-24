@@ -1,12 +1,12 @@
 version: "3.7"
 
 services:
-  # NATS-Server
-  nats-server:
+  # NATS
+  nats:
     image: nats:latest
     container_name: nats
     networks:
-      - chessmicroservicesnet
+      - chessnetwork
 
   # Gateway-MS
   chess-gateway:
@@ -21,7 +21,7 @@ services:
       - PORT=${CHESS_GATEWAY_PORT}
       - NATS_SERVERS=${NATS_SERVERS}
     networks:
-      - chessmicroservicesnet
+      - chessnetwork
 
   # Auth-ms
   auth-ms:
@@ -46,7 +46,7 @@ services:
       AUTH_DB_PASSWORD: ${AUTH_DB_PASSWORD}
       JWT_SECRET: ${JWT_SECRET}
     networks:
-      - chessmicroservicesnet
+      - chessnetwork
 
   auth-mariadb:
     image: "mariadb:${MARIADB_VERSION:-10.11.2}"
@@ -62,12 +62,12 @@ services:
       - "63311:3306"
     restart: always
     networks:
-      - chessmicroservicesnet
+      - chessnetwork
     volumes:
       - ./chess-auth-ms/auth-mysql-data:/var/lib/mysql
 
 networks:
-  chessmicroservicesnet:
+  chessnetwork:
     driver: bridge
     driver_opts:
       com.docker.network.enable_ipv6: "false"

@@ -22,7 +22,7 @@ export class Auth {
   gender: string;
 
   @Column({ type: 'date', nullable: true, default: null })
-  birthday?: string; // to calculate age
+  birthday: Date | null; // to calculate age
 
   @Column({ length: 128, nullable: true, default: null })
   token?: string; // if it is needed to implement forgot password

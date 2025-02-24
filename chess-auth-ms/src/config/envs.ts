@@ -29,13 +29,13 @@ const envsSchema = joi
     AUTH_DB_USERNAME: joi.string().required(),
     AUTH_DB_PASSWORD: joi.string().required(),
     JWT_SECRET: joi.string().required(),
-    NATS_SERVERS: joi.array().items(joi.string()).required(),
+    NATS_SERVERS: joi.string().required(),
   })
   .unknown(true);
 
 const { error, value } = envsSchema.validate({
   ...process.env,
-  NATS_SERVERS: process.env.NATS_SERVERS?.split(','),
+  NATS_SERVERS: process.env.NATS_SERVERS,
 });
 
 if (error) {

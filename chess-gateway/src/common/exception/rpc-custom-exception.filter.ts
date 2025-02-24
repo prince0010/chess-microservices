@@ -19,9 +19,9 @@ export class RpcCustomExceptionFilter implements ExceptionFilter {
       return response.status(status).json(rpcError);
     }
 
-    response.status(401).json({
-      status: 400,
-      message: rpcError,
+    response.status(500).json({
+      statusCode: 500,
+      message: 'Error not handled yet. Internal Server Error',
     });
   }
 }

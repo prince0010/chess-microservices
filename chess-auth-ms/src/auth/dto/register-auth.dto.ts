@@ -1,3 +1,4 @@
+import { Type } from 'class-transformer';
 import {
   IsArray,
   IsDate,
@@ -41,5 +42,6 @@ export class RegisterAuthDto {
 
   @IsOptional()
   @IsDate()
+  @Type(() => Date)
   birthday?: Date;
 }
