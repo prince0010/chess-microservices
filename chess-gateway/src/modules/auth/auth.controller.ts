@@ -11,8 +11,8 @@ import {
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { catchError } from 'rxjs';
 
+import { AuthGuard } from 'src/guards/auth.guard';
 import { NATS_SERVICE } from 'src/config';
-import { AuthGuard } from './guards/auth.guard';
 import { Token, User } from './decorators';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';

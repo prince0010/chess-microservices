@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { LessonModule } from './lesson/lesson.module';
 import { ConfigDB } from './db/config';
 
 @Module({
@@ -20,7 +21,7 @@ import { ConfigDB } from './db/config';
       imports: [ConfigModule],
       inject: [ConfigService],
     }),
-    // LessonModule,
+    LessonModule,
   ],
   controllers: [],
   providers: [],
