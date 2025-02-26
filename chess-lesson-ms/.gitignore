@@ -12,6 +12,10 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Auth Mysql Volumes
+/lesson-mysql-data/*
+!/lesson-mysql-data/.gitkeep
+
 # OS
 .DS_Store
 
@@ -39,6 +43,7 @@ lerna-debug.log*
 .env
 .env.development.local
 .env.test.local
+.env.production
 .env.production.local
 .env.local
 
