@@ -3,7 +3,9 @@ import { MessagePattern, Payload } from '@nestjs/microservices';
 
 import { LessonService } from './lesson.service';
 import { LessonSeederService } from './lesson-seeder.service';
+
 import { InsertLessonDto } from './dto/insert-lesson.dto';
+import { FindAllLessonsDto } from './dto/find-all-lessons.dto';
 
 @Controller()
 export class LessonController {
@@ -17,12 +19,12 @@ export class LessonController {
     return this.lessonSeederService.insertLessons(insertLessonDto);
   }
 
-  @MessagePattern('findAll')
-  findAll() {
-    return this.lessonService.findAll();
+  @MessagePattern('lesson.find.all')
+  findAll(@Payload() findAllLessonsDto: FindAllLessonsDto) {
+    return this.lessonService.findAll(findAllLessonsDto);
   }
 
-  @MessagePattern('findOne')
+  @MessagePattern('lesson.find.one')
   findOne(@Payload() id: number) {
     return this.lessonService.findOne(id);
   }
