@@ -21,7 +21,6 @@ services:
       - .env
     volumes:
       - ./chess-gateway/src:/usr/src/app/src
-    command: npm run start:dev
     environment:
       PORT: ${CHESS_GATEWAY_PORT}
       NATS_SERVERS: "${NATS_SERVERS}"
@@ -38,7 +37,6 @@ services:
     volumes:
       - ./chess-auth-ms/src:/usr/src/app/src
     depends_on: [auth-mariadb]
-    command: npm run start:dev
     environment:
       PORT: ${AUTH_MS_PORT}
       NATS_SERVERS: "${NATS_SERVERS}"
@@ -64,7 +62,6 @@ services:
     volumes:
       - ./chess-lesson-ms/src:/usr/src/app/src
     depends_on: [lesson-mariadb]
-    command: npm run start:dev
     environment:
       PORT: ${LESSON_MS_PORT}
       NATS_SERVERS: "${NATS_SERVERS}"

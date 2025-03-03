@@ -30,9 +30,9 @@ export class RegisterAuthDto {
   country: string;
 
   @IsArray()
-  @IsOptional()
+  @IsNotEmpty()
   @IsString({ each: true })
-  roles: string[];
+  roles: string[]; // teacher or player
 
   @IsNotEmpty()
   @IsEnum(Gender, {

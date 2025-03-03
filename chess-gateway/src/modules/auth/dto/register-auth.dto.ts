@@ -35,9 +35,9 @@ export class RegisterAuthDto {
   gender: string;
 
   @IsArray()
-  @IsOptional()
+  @IsNotEmpty()
   @IsString({ each: true })
-  roles: string[];
+  roles: string[]; // TEACHER or PLAYER
 
   @IsOptional()
   // @IsString() // Validate as a string (if received as a string)
