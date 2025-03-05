@@ -25,7 +25,9 @@ export class AuthService {
     const { password, username, ...restUser } = registerAuthDto;
 
     try {
-      const existsUsername = await this.authRepository.findOneBy({ username });
+      const existsUsername = await this.authRepository.findOneBy({
+        username: username.toLowerCase(),
+      });
 
       if (existsUsername) {
         throw new BadRequestException(
@@ -34,7 +36,7 @@ export class AuthService {
       }
 
       const newUser = this.authRepository.create({
-        username,
+        username: username.toLowerCase(),
         password: bcryptjs.hashSync(password, 10),
         ...restUser,
       });
@@ -59,7 +61,10 @@ export class AuthService {
     const { username, password } = loginAuthDto;
 
     try {
-      const user = await this.authRepository.findOneBy({ username });
+      const user = await this.authRepository
+        .createQueryBuilder('user')
+        .where('LOWER(user.username) = LOWER(:username)', { username })
+        .getOne();
 
       if (!user) {
         throw new RpcException({
