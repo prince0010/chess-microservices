@@ -17,6 +17,7 @@ services:
     image: chess-gateway # Explicitly setting the image name
     ports:
       - ${CHESS_GATEWAY_PORT}:3000
+    command: npm run start:dev
     env_file:
       - .env
     volumes:
@@ -37,6 +38,7 @@ services:
     volumes:
       - ./chess-auth-ms/src:/usr/src/app/src
     depends_on: [auth-mariadb]
+    command: npm run start:dev
     environment:
       PORT: ${AUTH_MS_PORT}
       NATS_SERVERS: "${NATS_SERVERS}"
@@ -62,6 +64,7 @@ services:
     volumes:
       - ./chess-lesson-ms/src:/usr/src/app/src
     depends_on: [lesson-mariadb]
+    command: npm run start:dev
     environment:
       PORT: ${LESSON_MS_PORT}
       NATS_SERVERS: "${NATS_SERVERS}"
