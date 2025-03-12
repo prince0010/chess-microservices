@@ -2,8 +2,9 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { LessonModule } from './lesson/lesson.module';
 import { ConfigDB } from './db/config';
+import { BotModule } from './modules/bot/bot.module';
+import { LessonModule } from './modules/lesson/lesson.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { ConfigDB } from './db/config';
       imports: [ConfigModule],
       inject: [ConfigService],
     }),
+    BotModule,
     LessonModule,
   ],
   controllers: [],
