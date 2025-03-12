@@ -7,6 +7,7 @@ import {
   ParseIntPipe,
   Post,
   Query,
+  Req,
   UseGuards,
 } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
@@ -34,6 +35,18 @@ export class LessonController {
   }
 
   @UseGuards(AuthGuard)
+  @Get('lessons-completed')
+  findAllCompleted(@Req() req: any) {
+    const payload = { userUid: req.user.uid };
+
+    return this.client.send('lesson.complete.findAllByUser', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
   @Get('/')
   findAll(@Query() findAllLessonsDto: FindAllLessonsDto) {
     return this.client.send('lesson.find.all', findAllLessonsDto).pipe(
@@ -47,6 +60,18 @@ export class LessonController {
   @Get('/:id')
   findOne(@Param('id', ParseIntPipe) id: string) {
     return this.client.send('lesson.find.one', id).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Post('complete-one/:id')
+  completeOne(@Param('id', ParseIntPipe) lessonId: string, @Req() req: any) {
+    const payload = { lessonId: +lessonId, userUid: req.user.uid };
+
+    return this.client.send('lesson.complete.one', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

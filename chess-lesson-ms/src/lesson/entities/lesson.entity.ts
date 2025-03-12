@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 import { LessonLevel } from 'src/enum';
+import { LessonCompleted } from './lesson-completed.entity';
 
 @Entity('lesson')
 export class Lesson {
@@ -48,4 +49,8 @@ export class Lesson {
 
   @Column({ nullable: false })
   plyCount: number; // Number of half-moves in the game
+
+  // Relations
+  @OneToMany(() => LessonCompleted, (lessonCompleted) => lessonCompleted.lesson)
+  lessonsCompleted: LessonCompleted[];
 }
