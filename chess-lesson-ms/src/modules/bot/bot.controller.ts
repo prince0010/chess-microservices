@@ -7,27 +7,28 @@ import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
 export class BotController {
   constructor(private readonly botService: BotService) {}
 
-  @MessagePattern('createBot')
+  @MessagePattern('bot.create.one')
   create(@Payload() createBotDto: CreateBotDto) {
-    return this.botService.create(createBotDto);
+    return this.botService.createOne(createBotDto);
   }
 
-  @MessagePattern('findAllBot')
+  // TODO: create this method so it is missing
+  @MessagePattern('bot.find.all')
   findAll() {
     return this.botService.findAll();
   }
 
-  @MessagePattern('findOneBot')
+  @MessagePattern('bot.find.one')
   findOne(@Payload() id: number) {
     return this.botService.findOne(id);
   }
 
-  @MessagePattern('updateBot')
-  update(@Payload() updateBotDto: UpdateBotDto) {
-    return this.botService.update(updateBotDto.id, updateBotDto);
+  @MessagePattern('bot.update.one')
+  update(@Payload() data: { id: number; updateBotDto: UpdateBotDto }) {
+    return this.botService.update(data.id, data.updateBotDto);
   }
 
-  @MessagePattern('removeBot')
+  @MessagePattern('bot.remove.one')
   remove(@Payload() id: number) {
     return this.botService.remove(id);
   }
