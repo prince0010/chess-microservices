@@ -71,11 +71,13 @@ export class BotService {
       id = null,
       name = null,
       difficulty = null,
+      isActive = true,
     } = findAllBotsDto;
 
     const offset = (page - 1) * limit;
 
     const findOptions: FindManyOptions<Bot> = {
+      where: { isActive },
       take: limit,
       skip: offset,
       order: {

@@ -34,4 +34,7 @@ export class FindAllBotsDto {
   @IsOptional()
   @IsString()
   name?: string;
+
+  @IsOptional()
+  isActive?: string;
 }

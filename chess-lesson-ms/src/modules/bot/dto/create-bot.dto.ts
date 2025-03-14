@@ -1,5 +1,6 @@
 import { PartialType } from '@nestjs/mapped-types';
 import {
+  IsBoolean,
   IsEnum,
   IsNotEmpty,
   IsNumber,
@@ -38,4 +39,8 @@ export class CreateBotDto {
   description?: string;
 }
 
-export class UpdateBotDto extends PartialType(CreateBotDto) {}
+export class UpdateBotDto extends PartialType(CreateBotDto) {
+  @IsBoolean()
+  @IsOptional()
+  isActive?: boolean;
+}

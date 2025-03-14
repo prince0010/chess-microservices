@@ -1,4 +1,4 @@
-import { Type } from 'class-transformer';
+import { Transform, Type } from 'class-transformer';
 import {
   IsEnum,
   IsNumber,
@@ -34,4 +34,8 @@ export class FindAllBotsDto {
   @IsOptional()
   @IsString()
   name?: string;
+
+  @IsOptional()
+  @Transform(({ value }) => value === 'true')
+  isActive?: boolean;
 }
