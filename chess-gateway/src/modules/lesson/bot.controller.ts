@@ -20,6 +20,7 @@ import { AdminGuard } from 'src/guards/admin.guard';
 import { AuthGuard } from 'src/guards/auth.guard';
 
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
+import { FindAllBotsDto } from './dto/find-all-bots.dto';
 
 @Controller('bot')
 export class BotController {
@@ -29,6 +30,16 @@ export class BotController {
   @Post('create-one')
   createOne(@Body() createBotDto: CreateBotDto) {
     return this.client.send('bot.create.one', createBotDto).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/')
+  findAll(@Query() findAllBotsDto: FindAllBotsDto) {
+    return this.client.send('bot.find.all', findAllBotsDto).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

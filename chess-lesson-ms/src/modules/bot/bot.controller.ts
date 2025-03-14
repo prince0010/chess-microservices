@@ -1,7 +1,10 @@
 import { Controller } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
+
 import { BotService } from './bot.service';
+
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
+import { FindAllBotsDto } from './dto/find-all-bots.dto';
 
 @Controller()
 export class BotController {
@@ -12,10 +15,9 @@ export class BotController {
     return this.botService.createOne(createBotDto);
   }
 
-  // TODO: create this method so it is missing
   @MessagePattern('bot.find.all')
-  findAll() {
-    return this.botService.findAll();
+  findAll(@Payload() findAllBotsDto: FindAllBotsDto) {
+    return this.botService.findAll(findAllBotsDto);
   }
 
   @MessagePattern('bot.find.one')

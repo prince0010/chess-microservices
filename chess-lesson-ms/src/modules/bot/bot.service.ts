@@ -1,13 +1,15 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { FindManyOptions, Repository } from 'typeorm';
 
 import { Bot } from './entities/bot.entity';
 import { BotUserHistory } from './entities/bot-user-history.entity';
 
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
 import { BotDifficulty, ELO_RANGE } from 'src/enum';
+import { FindAllBotsDto } from './dto/find-all-bots.dto';
+import { ICountAndListBots } from './interfaces/bot.interface';
 
 @Injectable()
 export class BotService {
@@ -62,8 +64,54 @@ export class BotService {
     }
   }
 
-  findAll() {
-    return `This action returns all bot`;
+  async findAll(findAllBotsDto: FindAllBotsDto): Promise<ICountAndListBots> {
+    const {
+      limit = 10,
+      page = 1,
+      id = null,
+      name = null,
+      difficulty = null,
+    } = findAllBotsDto;
+
+    const offset = (page - 1) * limit;
+
+    const findOptions: FindManyOptions<Bot> = {
+      take: limit,
+      skip: offset,
+      order: {
+        id: 'ASC',
+      },
+    };
+
+    const whereConditions: any = {};
+    if (id) {
+      whereConditions.id = id;
+    }
+    if (name) {
+      whereConditions.name = name;
+    }
+    if (difficulty) {
+      whereConditions.difficulty = difficulty;
+    }
+
+    if (Object.keys(whereConditions).length > 0) {
+      findOptions.where = whereConditions;
+    }
+
+    try {
+      const [bots, total] = await this.botRepository.findAndCount(findOptions);
+
+      return {
+        currentPage: page,
+        total,
+        bots,
+      };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
   }
 
   async findOne(id: number): Promise<Bot> {
