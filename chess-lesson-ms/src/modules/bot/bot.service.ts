@@ -7,9 +7,10 @@ import { Bot } from './entities/bot.entity';
 import { BotUserHistory } from './entities/bot-user-history.entity';
 
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
-import { BotDifficulty, ELO_RANGE } from 'src/enum';
+import { BotDifficulty, BotUserGameResult, ELO_RANGE } from 'src/enum';
 import { FindAllBotsDto } from './dto/find-all-bots.dto';
 import { ICountAndListBots } from './interfaces/bot.interface';
+import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
 
 @Injectable()
 export class BotService {
@@ -198,6 +199,58 @@ export class BotService {
       await this.botRepository.update({ id }, { isActive: false });
 
       return `Bot soft-deleted successfully.`;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async updateHistoryByUser(
+    counterBotUserHistoryDto: CounterBotUserHistoryDto,
+  ) {
+    const { result, botId, userUid } = counterBotUserHistoryDto;
+
+    try {
+      const fetchedBot = await this.findOne(botId);
+
+      const botUserHistory = await this.botUserHistoryRepository.findOne({
+        where: { bot: { id: botId }, userUid },
+        relations: { bot: true },
+      });
+
+      let rowBotUser: BotUserHistory;
+      if (botUserHistory) {
+        rowBotUser = botUserHistory;
+      } else {
+        rowBotUser = this.botUserHistoryRepository.create({
+          bot: fetchedBot,
+          userUid,
+          gameWon: 0,
+          gameLost: 0,
+          gameTied: 0,
+        });
+      }
+
+      switch (result) {
+        case BotUserGameResult.GAME_WON:
+          rowBotUser.gameWon += 1;
+          break;
+        case BotUserGameResult.GAME_TIED:
+          rowBotUser.gameTied += 1;
+          break;
+        case BotUserGameResult.GAME_LOST:
+          rowBotUser.gameLost += 1;
+          break;
+
+        default:
+          break;
+      }
+
+      await this.botUserHistoryRepository.save(rowBotUser);
+
+      return 'Game bot counter for that user updated successfully';
     } catch (error) {
       throw new RpcException({
         status: 400,

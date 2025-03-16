@@ -5,6 +5,7 @@ import { BotService } from './bot.service';
 
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
 import { FindAllBotsDto } from './dto/find-all-bots.dto';
+import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
 
 @Controller()
 export class BotController {
@@ -33,5 +34,12 @@ export class BotController {
   @MessagePattern('bot.remove.one')
   remove(@Payload() id: number) {
     return this.botService.remove(id);
+  }
+
+  @MessagePattern('bot.user.updateHistory')
+  updateBotUserCounter(
+    @Payload() counterBotUserHistoryDto: CounterBotUserHistoryDto,
+  ) {
+    return this.botService.updateHistoryByUser(counterBotUserHistoryDto);
   }
 }

@@ -20,6 +20,7 @@ import { AdminGuard } from 'src/guards/admin.guard';
 import { AuthGuard } from 'src/guards/auth.guard';
 
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
+import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
 import { FindAllBotsDto } from './dto/find-all-bots.dto';
 
 @Controller('bot')
@@ -68,6 +69,26 @@ export class BotController {
     };
 
     return this.client.send('bot.update.one', data).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Patch('update-counter-by-user/:botId')
+  updateCounterByUser(
+    @Param('botId', ParseIntPipe) botId: string,
+    @Req() req: any,
+    @Body() counterBotUserHistoryDto: CounterBotUserHistoryDto,
+  ) {
+    const data = {
+      userUid: +req.user.uid,
+      botId: +botId,
+      ...counterBotUserHistoryDto,
+    };
+
+    return this.client.send('bot.user.updateHistory', data).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

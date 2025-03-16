@@ -24,3 +24,15 @@ export const botDifficultyArray = [
   BotDifficulty.MASTER,
   BotDifficulty.GRANDMASTER,
 ];
+
+export enum BotUserGameResult {
+  GAME_WON = 'game_won',
+  GAME_LOST = 'game_lost',
+  GAME_TIED = 'game_tied',
+}
+
+export const botUserGameResultArray = [
+  BotUserGameResult.GAME_WON,
+  BotUserGameResult.GAME_LOST,
+  BotUserGameResult.GAME_TIED,
+];
