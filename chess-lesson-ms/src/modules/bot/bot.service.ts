@@ -67,6 +67,7 @@ export class BotService {
 
   async findAll(findAllBotsDto: FindAllBotsDto): Promise<ICountAndListBots> {
     const {
+      userUid,
       limit = 10,
       page = 1,
       id = null,
@@ -102,12 +103,32 @@ export class BotService {
     }
 
     try {
-      const [bots, total] = await this.botRepository.findAndCount(findOptions);
+      const [bots, total] = await this.botRepository.findAndCount({
+        ...findOptions,
+        relations: { botUsersHistory: true },
+      });
+
+      // Map bots with user's game history
+      const botsWithHistory = bots.map((bot) => {
+        const userHistory = bot.botUsersHistory?.find(
+          (history) => history.userUid === userUid,
+        );
+        return {
+          id: bot.id,
+          name: bot.name,
+          difficulty: bot.difficulty,
+          description: bot.description,
+          elo: bot.elo,
+          gameWon: userHistory?.gameWon ?? 0,
+          gameLost: userHistory?.gameLost ?? 0,
+          gameTied: userHistory?.gameTied ?? 0,
+        };
+      });
 
       return {
         currentPage: page,
         total,
-        bots,
+        bots: botsWithHistory,
       };
     } catch (error) {
       throw new RpcException({

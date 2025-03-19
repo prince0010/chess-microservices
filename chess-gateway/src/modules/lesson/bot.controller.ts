@@ -39,8 +39,12 @@ export class BotController {
 
   @UseGuards(AuthGuard)
   @Get('/')
-  findAll(@Query() findAllBotsDto: FindAllBotsDto) {
-    return this.client.send('bot.find.all', findAllBotsDto).pipe(
+  findAll(@Query() findAllBotsDto: FindAllBotsDto, @Req() req: any) {
+    const payload = {
+      ...findAllBotsDto,
+      userUid: +req.user.uid,
+    };
+    return this.client.send('bot.find.all', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

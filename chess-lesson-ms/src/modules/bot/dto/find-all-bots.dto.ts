@@ -10,6 +10,11 @@ import {
 import { BotDifficulty, botDifficultyArray } from 'src/enum';
 
 export class FindAllBotsDto {
+  @IsNumber()
+  @IsPositive()
+  @Type(() => Number)
+  userUid: number;
+
   @IsOptional()
   @IsPositive()
   @Type(() => Number) // converts query parameter string to number here
