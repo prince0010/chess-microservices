@@ -4,41 +4,34 @@ services:
   # NATS
   nats:
     image: nats:latest
-    container_name: nats
-    ports:
-      - 8222:8222
+    container_name: nats-test
     networks:
-      - chess_development
+      - chess_testing
 
   # Gateway-MS
   chess-gateway:
-    container_name: chess-gateway-dev
-    build: ./chess-gateway
-    image: chess-gateway # Explicitly setting the image name
+    container_name: chess-gateway-test
+    build:
+      context: ./chess-gateway
+      dockerfile: Dockerfile.test
+    image: chess-gateway-test
     ports:
-      - ${CHESS_GATEWAY_PORT}:3000
-    command: npm run start:dev
-    env_file:
-      - .env
-    volumes:
-      - ./chess-gateway/src:/usr/src/app/src
+      - ${CHESS_GATEWAY_PORT}:${CHESS_GATEWAY_PORT}
     environment:
-      PORT: ${CHESS_GATEWAY_PORT}
-      NATS_SERVERS: "${NATS_SERVERS}"
+      - PORT=${CHESS_GATEWAY_PORT}
+      - NATS_SERVERS=${NATS_SERVERS}
     networks:
-      - chess_development
+      - chess_testing
 
   # Auth-ms
   auth-ms:
-    container_name: chess-auth-ms-dev
-    build: ./chess-auth-ms
-    image: auth-ms
-    ports:
-      - ${AUTH_MS_PORT}:3001
-    volumes:
-      - ./chess-auth-ms/src:/usr/src/app/src
+    container_name: auth-ms-test
+    build:
+      context: ./chess-auth-ms
+      dockerfile: Dockerfile.test
+    image: auth-ms-test
+    restart: always
     depends_on: [auth-mariadb]
-    command: npm run start:dev
     environment:
       PORT: ${AUTH_MS_PORT}
       NATS_SERVERS: "${NATS_SERVERS}"
@@ -53,18 +46,16 @@ services:
       AUTH_DB_PASSWORD: ${AUTH_DB_PASSWORD}
       JWT_SECRET: ${JWT_SECRET}
     networks:
-      - chess_development
+      - chess_testing
 
   lesson-ms:
-    container_name: chess-lesson-ms-dev
-    build: ./chess-lesson-ms
-    image: lesson-ms
-    ports:
-      - ${LESSON_MS_PORT}:3002
-    volumes:
-      - ./chess-lesson-ms/src:/usr/src/app/src
+    container_name: lesson-ms-test
+    build:
+      context: ./chess-lesson-ms
+      dockerfile: Dockerfile.test
+    image: lesson-ms-test
+    restart: always
     depends_on: [lesson-mariadb]
-    command: npm run start:dev
     environment:
       PORT: ${LESSON_MS_PORT}
       NATS_SERVERS: "${NATS_SERVERS}"
@@ -78,11 +69,11 @@ services:
       LESSON_DB_USERNAME: ${LESSON_DB_USERNAME}
       LESSON_DB_PASSWORD: ${LESSON_DB_PASSWORD}
     networks:
-      - chess_development
+      - chess_testing
 
   auth-mariadb:
     image: "mariadb:${MARIADB_VERSION:-10.11.2}"
-    container_name: ${AUTH_MARIADB_CONTAINER_NAME:-auth-mariadb-dev}
+    container_name: ${AUTH_MARIADB_CONTAINER_NAME:-auth-mariadb-test}
     env_file:
       - .env
     environment:
@@ -91,15 +82,16 @@ services:
       MARIADB_USER: ${AUTH_DB_USERNAME}
       MARIADB_PASSWORD: ${AUTH_DB_PASSWORD}
     ports:
-      - "63311:3306"
+      - "63321:3306"
+    restart: always
     networks:
-      - chess_development
+      - chess_testing
     volumes:
       - ./chess-auth-ms/auth-mysql-data:/var/lib/mysql
 
   lesson-mariadb:
     image: "mariadb:${MARIADB_VERSION:-10.11.2}"
-    container_name: ${LESSON_MARIADB_CONTAINER_NAME:-lesson-mariadb-dev}
+    container_name: ${LESSON_MARIADB_CONTAINER_NAME:-lesson-mariadb-test}
     env_file:
       - .env
     environment:
@@ -108,14 +100,15 @@ services:
       MARIADB_USER: ${LESSON_DB_USERNAME}
       MARIADB_PASSWORD: ${LESSON_DB_PASSWORD}
     ports:
-      - "63312:3306"
+      - "63322:3306"
+    restart: always
     networks:
-      - chess_development
+      - chess_testing
     volumes:
       - ./chess-lesson-ms/lesson-mysql-data:/var/lib/mysql
 
 networks:
-  chess_development:
+  chess_testing:
     driver: bridge
     driver_opts:
       com.docker.network.enable_ipv6: "false"

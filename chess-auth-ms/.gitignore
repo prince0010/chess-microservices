@@ -8,6 +8,7 @@
 .env.development.local
 .env.test.local
 .env.production
+.env.testing
 .env.production.local
 .env.local
 
