@@ -1,3 +1,5 @@
+import exp from 'constants';
+
 export enum SecurityRoles {
   SUPER_ADMIN = 'SUPER_ADMIN',
   ADMIN = 'ADMIN',
@@ -5,3 +7,5 @@ export enum SecurityRoles {
   TEACHER = 'TEACHER',
   //   GUEST = 'GUEST',
 }
+
+export const securityRolesArray = Object.values(SecurityRoles);

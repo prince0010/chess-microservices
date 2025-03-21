@@ -5,7 +5,11 @@ import { FindManyOptions, Repository } from 'typeorm';
 import { Lesson } from './entities/lesson.entity';
 import { FindAllLessonsDto } from './dto/find-all-lessons.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ICountAndListLessons } from './interfaces/lesson.interface';
+import {
+  ICountAndListLessons,
+  ILessonsList,
+} from './interfaces/lesson.interface';
+import { FindOneLessonDto } from './dto/find-one-lesson.dto';
 
 @Injectable()
 export class LessonService {
@@ -17,7 +21,13 @@ export class LessonService {
   async findAll(
     findAllLessonsDto: FindAllLessonsDto,
   ): Promise<ICountAndListLessons> {
-    const { limit = 10, page = 1, id = null, level = null } = findAllLessonsDto;
+    const {
+      limit = 10,
+      page = 1,
+      id = null,
+      level = null,
+      userUid,
+    } = findAllLessonsDto;
 
     const offset = (page - 1) * limit;
 
@@ -27,6 +37,7 @@ export class LessonService {
       order: {
         id: 'ASC',
       },
+      relations: { lessonsCompleted: true },
     };
 
     const whereConditions: any = {};
@@ -48,7 +59,7 @@ export class LessonService {
       return {
         currentPage: page,
         total,
-        lessons,
+        lessons: this.transformLessonsList(lessons, userUid),
       };
     } catch (error) {
       throw new RpcException({
@@ -58,19 +69,61 @@ export class LessonService {
     }
   }
 
-  async findOne(id: number): Promise<Lesson> {
+  async findOne(findOneLessonDto: FindOneLessonDto): Promise<ILessonsList> {
+    const { lessonId, userUid } = findOneLessonDto;
+
     try {
-      const lessonById = await this.lessonRepository.findOneBy({ id });
+      const lessonById = await this.lessonRepository.findOne({
+        where: { id: lessonId },
+        relations: { lessonsCompleted: true },
+      });
       if (!lessonById) {
-        throw new NotFoundException(`Lesson by ID: ${id} not found.`);
+        throw new NotFoundException(`Lesson by ID: ${lessonById} not found.`);
       }
 
-      return lessonById;
+      const { lessonsCompleted, ...restLesson } = lessonById;
+
+      const lessonWithCompletedProperty: ILessonsList = {
+        ...restLesson,
+        isCompleted: lessonById.lessonsCompleted.some(
+          (lesson) => lesson.userUid === userUid,
+        ),
+        moves: lessonById.moves.split(' '),
+      };
+
+      return lessonWithCompletedProperty;
     } catch (error) {
       throw new RpcException({
         status: 400,
         message: error.message,
       });
     }
+  }
+
+  private transformLessonsList(
+    lessons: Lesson[],
+    userUid: number,
+  ): ILessonsList[] {
+    return lessons.map((lesson) => ({
+      id: lesson.id,
+      level: lesson.level,
+      description: lesson.description,
+      moves: lesson.moves.split(' '),
+      pgnRaw: lesson.pgnRaw,
+      fen: lesson.fen,
+      points: lesson.points,
+      event: lesson.event,
+      site: lesson.site,
+      date: lesson.date,
+      round: lesson.round,
+      white: lesson.white,
+      black: lesson.black,
+      result: lesson.result,
+      setup: lesson.setup,
+      plyCount: lesson.plyCount,
+      isCompleted: lesson.lessonsCompleted.some(
+        (lesson) => lesson.userUid === userUid,
+      ),
+    }));
   }
 }

@@ -53,8 +53,12 @@ export class BotController {
 
   @UseGuards(AuthGuard)
   @Get('/:id')
-  findOne(@Param('id', ParseIntPipe) id: string) {
-    return this.client.send('bot.find.one', +id).pipe(
+  findOne(@Param('id', ParseIntPipe) id: string, @Req() req: any) {
+    const payload = {
+      botId: +id,
+      userUid: +req.user.uid,
+    };
+    return this.client.send('bot.find.one', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

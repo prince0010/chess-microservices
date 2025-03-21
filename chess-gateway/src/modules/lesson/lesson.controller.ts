@@ -48,8 +48,10 @@ export class LessonController {
 
   @UseGuards(AuthGuard)
   @Get('/')
-  findAll(@Query() findAllLessonsDto: FindAllLessonsDto) {
-    return this.client.send('lesson.find.all', findAllLessonsDto).pipe(
+  findAll(@Query() findAllLessonsDto: FindAllLessonsDto, @Req() req: any) {
+    const payload = { ...findAllLessonsDto, userUid: req.user.uid };
+
+    return this.client.send('lesson.find.all', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
@@ -58,8 +60,9 @@ export class LessonController {
 
   @UseGuards(AuthGuard)
   @Get('/:id')
-  findOne(@Param('id', ParseIntPipe) id: string) {
-    return this.client.send('lesson.find.one', id).pipe(
+  findOne(@Param('id', ParseIntPipe) id: string, @Req() req: any) {
+    const payload = { lessonId: id, userUid: req.user.uid };
+    return this.client.send('lesson.find.one', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

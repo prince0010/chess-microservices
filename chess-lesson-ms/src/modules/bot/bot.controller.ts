@@ -6,6 +6,7 @@ import { BotService } from './bot.service';
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
 import { FindAllBotsDto } from './dto/find-all-bots.dto';
 import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
+import { FindOneBotDto } from './dto/find-one-bot.dto';
 
 @Controller()
 export class BotController {
@@ -22,8 +23,8 @@ export class BotController {
   }
 
   @MessagePattern('bot.find.one')
-  findOne(@Payload() id: number) {
-    return this.botService.findOne(id);
+  findOne(@Payload() findOneBotDto: FindOneBotDto) {
+    return this.botService.findOne(findOneBotDto);
   }
 
   @MessagePattern('bot.update.one')

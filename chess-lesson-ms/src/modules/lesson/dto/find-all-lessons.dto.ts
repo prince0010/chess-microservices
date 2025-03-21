@@ -3,6 +3,11 @@ import { IsEnum, IsNumber, IsOptional, IsPositive, Min } from 'class-validator';
 import { LessonLevel, lessonLevelsArray } from 'src/enum';
 
 export class FindAllLessonsDto {
+  @IsNumber()
+  @IsPositive()
+  @Type(() => Number)
+  userUid: number;
+
   @IsOptional()
   @IsPositive()
   @Type(() => Number) // converts query parameter string to number here

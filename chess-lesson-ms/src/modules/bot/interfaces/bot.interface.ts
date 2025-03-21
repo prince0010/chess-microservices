@@ -1,5 +1,3 @@
-import { Bot } from '../entities/bot.entity';
-
 export interface ICountAndListBots {
   currentPage: number;
   total: number;
@@ -11,6 +9,7 @@ export interface IBotWithHistoryByUser {
   name: string;
   difficulty: string;
   description?: string;
+  isActive: boolean;
   elo: number;
   gameWon: number;
   gameLost: number;

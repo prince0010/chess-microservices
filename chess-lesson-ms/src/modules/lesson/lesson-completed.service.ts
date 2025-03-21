@@ -3,8 +3,8 @@ import { RpcException } from '@nestjs/microservices';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
+import { Lesson } from './entities/lesson.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
-import { LessonService } from './lesson.service';
 import { CompleteLessonDto } from './dto/complete-lesson.dto';
 
 @Injectable()
@@ -12,15 +12,15 @@ export class LessonCompletedService {
   constructor(
     @InjectRepository(LessonCompleted)
     private readonly lessonCompletedRepository: Repository<LessonCompleted>,
-
-    private readonly lessonService: LessonService,
+    @InjectRepository(Lesson)
+    private readonly lessonRepository: Repository<Lesson>,
   ) {}
 
   async completeOne(completeLessonDto: CompleteLessonDto): Promise<string> {
     const { lessonId, userUid } = completeLessonDto;
 
     try {
-      const lesson = await this.lessonService.findOne(lessonId);
+      const lesson = await this.lessonRepository.findOneBy({ id: lessonId });
       if (!lesson) {
         throw new BadRequestException(`Lesson with ID: ${lessonId} not found.`);
       }
@@ -35,9 +35,10 @@ export class LessonCompletedService {
         });
 
       if (alreadyExistsLessonUser) {
-        throw new BadRequestException(
-          `Estimated user, you already completed the Lesson with ID: ${lessonId}.`,
-        );
+        return 'Lesson completed successfully.';
+        // throw new BadRequestException(
+        //   `Estimated user, you already completed the Lesson with ID: ${lessonId}.`,
+        // );
       }
 
       const newCompletion = this.lessonCompletedRepository.create({
@@ -47,7 +48,7 @@ export class LessonCompletedService {
 
       await this.lessonCompletedRepository.save(newCompletion);
 
-      return `Lesson completed successfully.`;
+      return 'Lesson completed successfully.';
     } catch (error) {
       throw new RpcException({
         status: 400,

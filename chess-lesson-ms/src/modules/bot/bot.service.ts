@@ -9,8 +9,12 @@ import { BotUserHistory } from './entities/bot-user-history.entity';
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
 import { BotDifficulty, BotUserGameResult, ELO_RANGE } from 'src/enum';
 import { FindAllBotsDto } from './dto/find-all-bots.dto';
-import { ICountAndListBots } from './interfaces/bot.interface';
+import {
+  IBotWithHistoryByUser,
+  ICountAndListBots,
+} from './interfaces/bot.interface';
 import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
+import { FindOneBotDto } from './dto/find-one-bot.dto';
 
 @Injectable()
 export class BotService {
@@ -118,6 +122,7 @@ export class BotService {
           name: bot.name,
           difficulty: bot.difficulty,
           description: bot.description,
+          isActive: bot.isActive,
           elo: bot.elo,
           gameWon: userHistory?.gameWon ?? 0,
           gameLost: userHistory?.gameLost ?? 0,
@@ -138,14 +143,33 @@ export class BotService {
     }
   }
 
-  async findOne(id: number): Promise<Bot> {
+  async findOne(findOneBotDto: FindOneBotDto): Promise<IBotWithHistoryByUser> {
+    const { userUid, botId } = findOneBotDto;
     try {
-      const bot = await this.botRepository.findOneBy({ id });
+      const bot = await this.botRepository.findOne({
+        where: { id: botId },
+        relations: { botUsersHistory: true },
+      });
+
       if (!bot) {
-        throw new BadRequestException(`Bot with ID: ${id} not found.`);
+        throw new BadRequestException(`Bot with ID: ${botId} not found.`);
       }
 
-      return bot;
+      const botWithUserHistory = bot.botUsersHistory?.find(
+        (history) => history.userUid === userUid,
+      );
+
+      return {
+        id: bot.id,
+        name: bot.name,
+        difficulty: bot.difficulty,
+        description: bot.description,
+        isActive: bot.isActive,
+        elo: bot.elo,
+        gameWon: botWithUserHistory?.gameWon ?? 0,
+        gameLost: botWithUserHistory?.gameLost ?? 0,
+        gameTied: botWithUserHistory?.gameTied ?? 0,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -157,7 +181,10 @@ export class BotService {
   async update(id: number, updateBotDto: UpdateBotDto): Promise<string> {
     const { name, elo, difficulty, ...restBot } = updateBotDto;
     try {
-      const oldBot = await this.findOne(id);
+      const oldBot = await this.botRepository.findOneBy({ id });
+      if (!oldBot) {
+        throw new BadRequestException(`Bot with ID: ${id} not found.`);
+      }
 
       const existBotByName = await this.botRepository.findOneBy({ name });
       if (existBotByName && existBotByName.id !== id) {
@@ -215,7 +242,10 @@ export class BotService {
 
   async remove(id: number) {
     try {
-      await this.findOne(id);
+      const bot = await this.botRepository.findOneBy({ id });
+      if (!bot) {
+        throw new BadRequestException(`Bot with ID: ${id} not found.`);
+      }
 
       await this.botRepository.update({ id }, { isActive: false });
 
@@ -234,7 +264,10 @@ export class BotService {
     const { result, botId, userUid } = counterBotUserHistoryDto;
 
     try {
-      const fetchedBot = await this.findOne(botId);
+      const fetchedBot = await this.botRepository.findOneBy({ id: botId });
+      if (!fetchedBot) {
+        throw new BadRequestException(`Bot with ID: ${botId} not found.`);
+      }
 
       const botUserHistory = await this.botUserHistoryRepository.findOne({
         where: { bot: { id: botId }, userUid },

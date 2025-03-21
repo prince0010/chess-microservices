@@ -2,15 +2,15 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
-import * as bcryptjs from 'bcryptjs';
 import { Repository } from 'typeorm';
+import * as bcryptjs from 'bcryptjs';
 
 import { envs } from '../config/envs';
 import { Auth } from './entities/auth.entity';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
-import { JwtPayload } from './interfaces/jwt-payload.interface';
+import { JwtPayload, IOneUser } from './interfaces';
 
 @Injectable()
 export class AuthService {
@@ -124,7 +124,7 @@ export class AuthService {
     }
   }
 
-  async findOne(uid: number): Promise<Auth> {
+  async findOne(uid: number): Promise<IOneUser> {
     try {
       const user = await this.authRepository.findOneBy({ uid });
       if (!user) {
@@ -134,7 +134,9 @@ export class AuthService {
         });
       }
 
-      return user;
+      const { password, ...restUser } = user;
+
+      return restUser;
     } catch (error) {
       throw new RpcException({
         status: 400,

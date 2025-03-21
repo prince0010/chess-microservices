@@ -14,7 +14,10 @@ export class Lesson {
   description: string;
 
   @Column({ type: 'text', nullable: false })
-  pgn: string;
+  moves: string;
+
+  @Column({ type: 'text', nullable: false })
+  pgnRaw: string;
 
   @Column({ nullable: false })
   fen: string;

@@ -6,6 +6,7 @@ import { LessonSeederService } from './lesson-seeder.service';
 
 import { InsertLessonDto } from './dto/insert-lesson.dto';
 import { FindAllLessonsDto } from './dto/find-all-lessons.dto';
+import { FindOneLessonDto } from './dto/find-one-lesson.dto';
 
 @Controller()
 export class LessonController {
@@ -25,7 +26,7 @@ export class LessonController {
   }
 
   @MessagePattern('lesson.find.one')
-  findOne(@Payload() id: number) {
-    return this.lessonService.findOne(id);
+  findOne(@Payload() findOneLessonDto: FindOneLessonDto) {
+    return this.lessonService.findOne(findOneLessonDto);
   }
 }

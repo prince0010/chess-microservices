@@ -30,11 +30,30 @@ export const parsePgnFile = (filePath: string, levelName: string) => {
         {} as Record<string, string>,
       );
 
+      // Construct the PGN headers
+      const headerSection = game.headers
+        .map(({ name, value }) => `[${name} "${value}"]`)
+        .join('\n');
+
+      // Construct the moves section
+      let movesSection = '';
+      let moveNumber = 1;
+      for (let i = 0; i < game.moves.length; i += 2) {
+        const whiteMove = game.moves[i]?.move || '';
+        const blackMove = game.moves[i + 1]?.move || '';
+        movesSection += `${moveNumber}. ${whiteMove} ${blackMove} `;
+        moveNumber++;
+      }
+
+      // Construct the final PGN string
+      const pgnRaw = `${headerSection}\n\n${movesSection}${game.result}`;
+
       return {
         level: levelName,
         description:
           game.comments?.[0]?.text.trim() || 'No description available', // Extract first comment as description
-        pgn: game.moves.map((move) => move.move).join(' '), // Store only the PGN notation
+        moves: game.moves.map((move) => move.move).join(' '), // Store only the moves PGN notation
+        pgnRaw, // Manually constructed PGN string
         fen: headers['FEN'] || '',
         points,
         event: headers['Event'] || '?',

@@ -3,12 +3,13 @@ import {
   IsArray,
   IsDate,
   IsEnum,
+  IsIn,
   IsNotEmpty,
   IsOptional,
   IsString,
   MinLength,
 } from 'class-validator';
-import { Gender, genderArray } from 'src/enum';
+import { Gender, genderArray, securityRolesArray } from 'src/enum';
 
 export class RegisterAuthDto {
   @IsString()
@@ -37,6 +38,9 @@ export class RegisterAuthDto {
   @IsArray()
   @IsNotEmpty()
   @IsString({ each: true })
+  // TODO: changeMe! in production to only players and teachers
+  // now this way to facilitate database creation in development
+  @IsIn(securityRolesArray, { each: true })
   roles: string[]; // TEACHER or PLAYER
 
   @IsOptional()
