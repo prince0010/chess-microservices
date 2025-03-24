@@ -68,6 +68,8 @@ services:
       LESSON_DB_ROOT_PASSWORD: ${LESSON_DB_ROOT_PASSWORD}
       LESSON_DB_USERNAME: ${LESSON_DB_USERNAME}
       LESSON_DB_PASSWORD: ${LESSON_DB_PASSWORD}
+    volumes:
+      - ./chess-lesson-ms/files:/usr/src/app/files
     networks:
       - chess_production
 

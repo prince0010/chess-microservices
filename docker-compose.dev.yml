@@ -63,6 +63,7 @@ services:
       - ${LESSON_MS_PORT}:3002
     volumes:
       - ./chess-lesson-ms/src:/usr/src/app/src
+      - ./chess-lesson-ms/files:/usr/src/app/files
     depends_on: [lesson-mariadb]
     command: npm run start:dev
     environment:

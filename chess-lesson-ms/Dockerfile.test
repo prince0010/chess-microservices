@@ -14,8 +14,11 @@ RUN npm ci -f --only=production && npm cache clean --force
 
 FROM node:21-alpine3.19 as prod
 WORKDIR /usr/src/app
+
 COPY --from=build /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/dist ./dist
+COPY --from=build /usr/src/app/files ./files
+
 ENV NODE_ENV=production
 USER node
 EXPOSE 4002

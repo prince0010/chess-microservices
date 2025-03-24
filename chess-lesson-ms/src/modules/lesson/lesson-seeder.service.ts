@@ -19,7 +19,7 @@ export class LessonSeederService {
       const lessonRepository = this.dataSource.getRepository(Lesson);
       let pathFile: string = '';
       if (levelName === LessonLevel.LEVEL_1) {
-        pathFile = 'src/utils/lesson_level_1.pgn';
+        pathFile = '/usr/src/app/files/lesson_level_1.pgn';
       } else {
         pathFile = 'path file missing';
       }
