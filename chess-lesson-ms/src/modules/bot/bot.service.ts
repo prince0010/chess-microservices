@@ -1,24 +1,34 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
-import { RpcException } from '@nestjs/microservices';
+import { BadRequestException, Inject, Injectable } from '@nestjs/common';
+import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
 import { FindManyOptions, Repository } from 'typeorm';
+import { firstValueFrom } from 'rxjs';
+import { NATS_SERVICE } from 'src/config';
 
 import { Bot } from './entities/bot.entity';
 import { BotUserHistory } from './entities/bot-user-history.entity';
 
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
-import { BotDifficulty, BotUserGameResult, ELO_RANGE } from 'src/enum';
+import {
+  BotDefaultFormula,
+  BotDifficulty,
+  BotUserGameResult,
+  ELO_RANGE,
+} from 'src/enum';
 import { FindAllBotsDto } from './dto/find-all-bots.dto';
 import {
   IBotWithHistoryByUser,
   ICountAndListBots,
+  GameBotResponse,
 } from './interfaces/bot.interface';
 import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
 import { FindOneBotDto } from './dto/find-one-bot.dto';
+import { UpdateUserPointsDto } from './dto/update-user-points.dto';
 
 @Injectable()
 export class BotService {
   constructor(
+    @Inject(NATS_SERVICE) private readonly client: ClientProxy,
     @InjectRepository(Bot)
     private readonly botRepository: Repository<Bot>,
     @InjectRepository(BotUserHistory)
@@ -56,6 +66,14 @@ export class BotService {
         name,
         elo,
         description,
+        pointsWhenTied: this.calculatePointsWithBotFormula(
+          BotUserGameResult.GAME_TIED,
+          elo,
+        ),
+        pointsWhenWin: this.calculatePointsWithBotFormula(
+          BotUserGameResult.GAME_WON,
+          elo,
+        ),
       });
 
       await this.botRepository.save(newBot);
@@ -225,6 +243,14 @@ export class BotService {
         id,
         name,
         elo,
+        pointsWhenTied: this.calculatePointsWithBotFormula(
+          BotUserGameResult.GAME_TIED,
+          elo ?? oldBot.elo,
+        ),
+        pointsWhenWin: this.calculatePointsWithBotFormula(
+          BotUserGameResult.GAME_WON,
+          elo ?? oldBot.elo,
+        ),
         difficulty,
         ...restBot,
       });
@@ -260,7 +286,7 @@ export class BotService {
 
   async updateHistoryByUser(
     counterBotUserHistoryDto: CounterBotUserHistoryDto,
-  ) {
+  ): Promise<GameBotResponse> {
     const { result, botId, userUid } = counterBotUserHistoryDto;
 
     try {
@@ -304,7 +330,38 @@ export class BotService {
 
       await this.botUserHistoryRepository.save(rowBotUser);
 
-      return 'Game bot counter for that user updated successfully';
+      if (result === BotUserGameResult.GAME_LOST) {
+        const user = await firstValueFrom(
+          this.client.send('auth.findone.user', userUid),
+        );
+
+        return {
+          message:
+            'Bot game lost, no points earned. The next time you will beat it for sure.',
+          lastPoints: user.points,
+          earnedPoints: 0,
+          counter: user.points,
+        };
+      }
+
+      // Add bot result points to user counter
+      const dataPoints: UpdateUserPointsDto = {
+        uid: userUid,
+        points:
+          result === BotUserGameResult.GAME_WON
+            ? fetchedBot.pointsWhenWin
+            : fetchedBot.pointsWhenTied,
+      };
+      const { lastPoints, earnedPoints, counter } = await firstValueFrom(
+        this.client.send('update.points.user', dataPoints),
+      );
+
+      return {
+        message: 'Game bot counter for that user updated successfully',
+        lastPoints,
+        earnedPoints,
+        counter,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -320,5 +377,15 @@ export class BotService {
   ): boolean {
     const range = ELO_RANGE[difficulty];
     return elo >= range.min && elo <= range.max;
+  }
+
+  private calculatePointsWithBotFormula(result: string, elo: number): number {
+    return (
+      elo *
+      BotDefaultFormula.K_FACTOR *
+      (result === BotUserGameResult.GAME_WON
+        ? BotDefaultFormula.GAME_WON
+        : BotDefaultFormula.GAME_TIED)
+    );
   }
 }

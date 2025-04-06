@@ -15,3 +15,10 @@ export interface IBotWithHistoryByUser {
   gameLost: number;
   gameTied: number;
 }
+
+export interface GameBotResponse {
+  message: string;
+  lastPoints: number;
+  earnedPoints: number;
+  counter: number;
+}

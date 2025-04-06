@@ -24,6 +24,12 @@ export class Bot {
   @Column({ nullable: true, default: null })
   description?: string;
 
+  @Column({ nullable: false, default: 1 })
+  pointsWhenWin: number;
+
+  @Column({ nullable: false, default: 1 })
+  pointsWhenTied: number;
+
   // Relations
   @OneToMany(() => BotUserHistory, (botUser) => botUser.bot)
   botUsersHistory: BotUserHistory[];
