@@ -23,3 +23,10 @@ export interface ILessonsList {
   plyCount: number;
   isCompleted: boolean;
 }
+
+export interface CompleteLessonResponse {
+  message: string;
+  lastPoints: number;
+  earnedPoints: number;
+  counter: number;
+}

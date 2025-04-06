@@ -3,6 +3,7 @@ import { RpcException } from '@nestjs/microservices';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as pgnParser from 'pgn-parser';
+import { LessonDefaultPoints } from 'src/enum';
 
 export const parsePgnFile = (filePath: string, levelName: string) => {
   try {
@@ -16,7 +17,7 @@ export const parsePgnFile = (filePath: string, levelName: string) => {
 
     // Parse PGN file
     const parsedGames = pgnParser.parse(pgnContent);
-    let points: number = 10;
+    let points: number = LessonDefaultPoints.POINTS_PER_LESSON; // changeMe! to find a better balance
 
     return parsedGames.map((game: any) => {
       points += 4; // each lesson give more points

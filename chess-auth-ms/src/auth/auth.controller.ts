@@ -5,6 +5,7 @@ import { AuthService } from './auth.service';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
+import { UpdatePointsDto } from './dto/update-points.dto';
 
 @Controller()
 export class AuthController {
@@ -28,5 +29,10 @@ export class AuthController {
   @MessagePattern('auth.findone.user')
   findOne(@Payload() uid: string | number) {
     return this.authService.findOne(+uid);
+  }
+
+  @MessagePattern('update.points.user') // update counter points
+  updatePoints(@Payload() updatePointsDto: UpdatePointsDto) {
+    return this.authService.updatePoints(updatePointsDto);
   }
 }

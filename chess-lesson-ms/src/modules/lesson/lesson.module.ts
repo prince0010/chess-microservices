@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { NatsModule } from '../transports/nats.module';
+
 import { Lesson } from './entities/lesson.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
 
@@ -13,7 +15,7 @@ import { LessonSeederService } from './lesson-seeder.service';
 @Module({
   controllers: [LessonController, LessonCompletedController],
   providers: [LessonService, LessonSeederService, LessonCompletedService],
-  imports: [TypeOrmModule.forFeature([Lesson, LessonCompleted])],
+  imports: [TypeOrmModule.forFeature([Lesson, LessonCompleted]), NatsModule],
   exports: [TypeOrmModule],
 })
 export class LessonModule {}

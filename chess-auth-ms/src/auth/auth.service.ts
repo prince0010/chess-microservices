@@ -10,7 +10,8 @@ import { Auth } from './entities/auth.entity';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
-import { JwtPayload, IOneUser } from './interfaces';
+import { JwtPayload, IOneUser, IUpdatedPointsUser } from './interfaces';
+import { UpdatePointsDto } from './dto/update-points.dto';
 
 @Injectable()
 export class AuthService {
@@ -137,6 +138,34 @@ export class AuthService {
       const { password, ...restUser } = user;
 
       return restUser;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async updatePoints(
+    updatePointsDto: UpdatePointsDto,
+  ): Promise<IUpdatedPointsUser> {
+    const { uid, points } = updatePointsDto;
+
+    try {
+      const user = await this.findOne(uid);
+      const lastPoints = user.points;
+      await this.authRepository.update(
+        { uid },
+        {
+          points: user.points + points,
+        },
+      );
+
+      return {
+        lastPoints,
+        earnedPoints: points,
+        counter: lastPoints + points,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,

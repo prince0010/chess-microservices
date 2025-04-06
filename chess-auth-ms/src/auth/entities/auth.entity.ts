@@ -32,4 +32,7 @@ export class Auth {
 
   @Column({ type: 'boolean', nullable: false, default: true })
   isActive: boolean;
+
+  @Column({ nullable: false, default: 0 })
+  points: number;
 }
