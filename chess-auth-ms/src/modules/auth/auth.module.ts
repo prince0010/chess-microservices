@@ -2,9 +2,8 @@ import { Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { envs } from '../config/envs';
-
-import { PandaModule } from 'src/panda/panda.module';
+import { PandaModule } from 'src/modules/panda/panda.module';
+import { envs } from 'src/config';
 
 import { Auth } from './entities/auth.entity';
 import { AuthController } from './auth.controller';

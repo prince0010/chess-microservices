@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { NatsModule } from 'src/transports/nats.module';
+import { NatsModule } from 'src/modules/transports/nats.module';
 
 import { AuthPanda } from './entities/auth-panda.entity';
 import { PandaController } from './panda.controller';

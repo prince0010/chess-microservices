@@ -1,5 +1,5 @@
 import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { AuthPanda } from 'src/panda/entities/auth-panda.entity';
+import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
 
 import { Gender } from 'src/enum';
 

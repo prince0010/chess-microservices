@@ -5,8 +5,8 @@ import {
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Auth } from 'src/auth/entities/auth.entity';
 
+import { Auth } from 'src/modules/auth/entities/auth.entity';
 import { PandaState } from 'src/enum';
 
 @Entity('auth_panda')

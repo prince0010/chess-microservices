@@ -5,9 +5,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import * as bcryptjs from 'bcryptjs';
 
-import { envs } from '../config/envs';
+import { envs } from 'src/config';
 import { Auth } from './entities/auth.entity';
-import { AuthPanda } from 'src/panda/entities/auth-panda.entity';
+import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
