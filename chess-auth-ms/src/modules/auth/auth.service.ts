@@ -1,11 +1,12 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
-import { RpcException } from '@nestjs/microservices';
+import { BadRequestException, Inject, Injectable } from '@nestjs/common';
+import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { firstValueFrom } from 'rxjs';
 import * as bcryptjs from 'bcryptjs';
 
-import { envs } from 'src/config';
+import { envs, NATS_SERVICE } from 'src/config';
 import { Auth } from './entities/auth.entity';
 import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
 
@@ -29,6 +30,7 @@ export class AuthService {
     private readonly authPandaRepository: Repository<AuthPanda>,
 
     private readonly jwtService: JwtService, // default Nest Service to generate JWT
+    @Inject(NATS_SERVICE) private readonly client: ClientProxy,
   ) {}
 
   async register(registerAuthDto: RegisterAuthDto): Promise<any> {
@@ -138,8 +140,13 @@ export class AuthService {
 
       const { password: __, ...restUser } = userFromDB;
 
+      // STEP fetch current panda state
+      const pandaUpdated = await firstValueFrom(
+        this.client.send('find.one.panda', restUser.uid),
+      );
+
       return {
-        user: restUser,
+        user: { ...restUser, panda: pandaUpdated },
         token: await this.singJWT(userFromDB),
       };
     } catch (error) {

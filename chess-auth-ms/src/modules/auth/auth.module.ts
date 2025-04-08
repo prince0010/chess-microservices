@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { NatsModule } from '../transports/nats.module';
 import { PandaModule } from 'src/modules/panda/panda.module';
 import { envs } from 'src/config';
 
@@ -20,6 +21,7 @@ import { AuthService } from './auth.service';
     }),
     TypeOrmModule.forFeature([Auth]),
     PandaModule,
+    NatsModule,
   ],
   exports: [TypeOrmModule],
 })

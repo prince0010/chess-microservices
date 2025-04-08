@@ -17,8 +17,14 @@ export class AuthPanda {
   @Column({ length: 64, nullable: false, default: PandaState.HAPPY })
   state: string;
 
-  // @Column({ default: 100 }) // Could drop slowly if neglected
-  // happiness: number;
+  @Column({ default: 100 }) // Could drop slowly by time pass without feed
+  feedValue: number; // represent 1 - 100 the level of hunger
+
+  @Column({ default: 100 }) // Could drop slowly by time pass without sleep
+  sleepValue: number; // represent 1 - 100 the level of sleep
+
+  @Column({ default: 100 }) // Could drop slowly by time pass without bath
+  bathValue: number; // represent 1 - 100 the level of dirty
 
   @Column({
     type: 'timestamp',

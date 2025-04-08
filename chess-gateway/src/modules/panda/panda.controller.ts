@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Get,
   Inject,
   Patch,
   Req,
@@ -17,6 +18,16 @@ import { UpdatePandaDto } from './dto/update-panda.dto';
 @Controller('panda')
 export class PandaController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
+
+  @UseGuards(AuthGuard)
+  @Get('/')
+  findOne(@Req() req: any) {
+    return this.client.send('find.one.panda', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
 
   @UseGuards(AuthGuard)
   @Patch('/')

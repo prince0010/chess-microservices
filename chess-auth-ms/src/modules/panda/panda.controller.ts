@@ -7,13 +7,13 @@ import { UpdatePandaDto } from './dto/update-panda.dto';
 export class PandaController {
   constructor(private readonly pandaService: PandaService) {}
 
-  // @MessagePattern('find.one.panda')
-  // findOne(@Payload() id: number) {
-  //   return this.pandaService.findOne(id);
-  // }
+  @MessagePattern('find.one.panda')
+  findOne(@Payload() userUid: number) {
+    return this.pandaService.findOne(userUid);
+  }
 
   @MessagePattern('update.one.panda') // main endpoint to feed, sleep and bath panda
   update(@Payload() updatePandaDto: UpdatePandaDto) {
-    return this.pandaService.update(updatePandaDto);
+    return this.pandaService.updateByAction(updatePandaDto);
   }
 }
