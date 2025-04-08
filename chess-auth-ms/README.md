@@ -42,3 +42,6 @@ The file with name `Dockerfile.prod` is what we will use for Production environm
 ## Panda Logic
 
 1. The auth_panda entity is created only the first time when user is registered to keep consistency and a OneToOne relationship between Auth - AuthPanda
+2. The auth_panda entity handle 3 dates (lastFeedAt - lastSleepAt - lastBathAt) allowing track last dates when action panda is executed and also allow calculate state bar value.
+3. The auth_panda entity include 3 new columns (feedValue - sleepValue - bathValue) to track current state for any action. This allow modify increasing or decrementing values to enhance user experience and make them to take care of the pet Panda.
+4. Columns (feedValue - sleepValue - bathValue) are calculated based on last dates against current date (from 1 - 100)
