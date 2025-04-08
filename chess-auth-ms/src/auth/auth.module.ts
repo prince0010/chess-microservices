@@ -4,6 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { envs } from '../config/envs';
 
+import { PandaModule } from 'src/panda/panda.module';
+
 import { Auth } from './entities/auth.entity';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
@@ -18,6 +20,7 @@ import { AuthService } from './auth.service';
       signOptions: { expiresIn: '720h' }, // 1 month
     }),
     TypeOrmModule.forFeature([Auth]),
+    PandaModule,
   ],
   exports: [TypeOrmModule],
 })

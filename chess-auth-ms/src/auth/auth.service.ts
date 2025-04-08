@@ -7,10 +7,16 @@ import * as bcryptjs from 'bcryptjs';
 
 import { envs } from '../config/envs';
 import { Auth } from './entities/auth.entity';
+import { AuthPanda } from 'src/panda/entities/auth-panda.entity';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
-import { JwtPayload, IOneUser, IUpdatedPointsUser } from './interfaces';
+import {
+  JwtPayload,
+  IOneUser,
+  IUpdatedPointsUser,
+  ISubtractPointsUser,
+} from './interfaces';
 import { UpdatePointsDto } from './dto/update-points.dto';
 
 @Injectable()
@@ -18,6 +24,9 @@ export class AuthService {
   constructor(
     @InjectRepository(Auth)
     private readonly authRepository: Repository<Auth>,
+
+    @InjectRepository(AuthPanda)
+    private readonly authPandaRepository: Repository<AuthPanda>,
 
     private readonly jwtService: JwtService, // default Nest Service to generate JWT
   ) {}
@@ -44,7 +53,19 @@ export class AuthService {
 
       const savedUser = await this.authRepository.save(newUser);
 
-      const { password: leavePassword, ...restFrontendUser } = savedUser;
+      // STEP create panda user only the first time
+      const newPanda = this.authPandaRepository.create({
+        user: savedUser,
+      });
+
+      await this.authPandaRepository.save(newPanda);
+
+      const userWithPanda = await this.authRepository.findOne({
+        where: { uid: savedUser.uid },
+        relations: ['panda'],
+      });
+
+      const { password: leavePassword, ...restFrontendUser } = userWithPanda!;
 
       return {
         user: restFrontendUser,
@@ -64,6 +85,7 @@ export class AuthService {
     try {
       const user = await this.authRepository
         .createQueryBuilder('user')
+        .leftJoinAndSelect('user.panda', 'panda')
         .where('LOWER(user.username) = LOWER(:username)', { username })
         .getOne();
 
@@ -103,7 +125,10 @@ export class AuthService {
         secret: envs.jwtSecret,
       });
 
-      const userFromDB = await this.authRepository.findOneBy({ uid: user.uid });
+      const userFromDB = await this.authRepository.findOne({
+        where: { uid: user.uid },
+        relations: ['panda'],
+      });
       if (!userFromDB) {
         throw new RpcException({
           status: 401,
@@ -147,6 +172,7 @@ export class AuthService {
   }
 
   async updatePoints(
+    // add points by lesson completed or bot beaten
     updatePointsDto: UpdatePointsDto,
   ): Promise<IUpdatedPointsUser> {
     const { uid, points } = updatePointsDto;
@@ -165,6 +191,41 @@ export class AuthService {
         lastPoints,
         earnedPoints: points,
         counter: lastPoints + points,
+      };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  // subtract points by panda actions
+  async subtractPoints(
+    updatePointsDto: UpdatePointsDto,
+  ): Promise<ISubtractPointsUser> {
+    const { uid, points } = updatePointsDto;
+
+    try {
+      const user = await this.findOne(uid);
+      const lastPoints = user.points;
+      if (lastPoints < points) {
+        throw new BadRequestException(
+          `${user.name}, your account balance is insufficient to execute that action with the Panda.`,
+        );
+      }
+
+      await this.authRepository.update(
+        { uid },
+        {
+          points: user.points - points,
+        },
+      );
+
+      return {
+        lastPoints,
+        spentPoints: points,
+        counter: lastPoints - points,
       };
     } catch (error) {
       throw new RpcException({

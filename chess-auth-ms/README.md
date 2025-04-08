@@ -38,3 +38,7 @@ The file with name `Dockerfile.prod` is what we will use for Production environm
 
 9. Nats
    `npm i nats`
+
+## Panda Logic
+
+1. The auth_panda entity is created only the first time when user is registered to keep consistency and a OneToOne relationship between Auth - AuthPanda

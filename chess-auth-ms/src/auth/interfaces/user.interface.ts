@@ -15,3 +15,9 @@ export interface IUpdatedPointsUser {
   earnedPoints: number;
   counter: number; // lastPoints + earnedPoints
 }
+
+export interface ISubtractPointsUser {
+  lastPoints: number;
+  spentPoints: number;
+  counter: number; // lastPoints - spentPoints
+}

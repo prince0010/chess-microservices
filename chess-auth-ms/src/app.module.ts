@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AuthModule } from './auth/auth.module';
+import { PandaModule } from './panda/panda.module';
 import { ConfigDB } from './db/config';
 
 @Module({
@@ -22,6 +23,7 @@ import { ConfigDB } from './db/config';
       inject: [ConfigService],
     }),
     AuthModule,
+    PandaModule,
   ],
   controllers: [],
   providers: [],

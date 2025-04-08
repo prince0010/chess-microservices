@@ -1,4 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { AuthPanda } from 'src/panda/entities/auth-panda.entity';
+
 import { Gender } from 'src/enum';
 
 @Entity('auth')
@@ -35,4 +37,7 @@ export class Auth {
 
   @Column({ nullable: false, default: 0 })
   points: number;
+
+  @OneToOne(() => AuthPanda, (panda) => panda.user)
+  panda: AuthPanda;
 }

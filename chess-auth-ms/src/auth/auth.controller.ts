@@ -35,4 +35,9 @@ export class AuthController {
   updatePoints(@Payload() updatePointsDto: UpdatePointsDto) {
     return this.authService.updatePoints(updatePointsDto);
   }
+
+  @MessagePattern('subtract.points.user') // reduce counter points
+  reducePoints(@Payload() updatePointsDto: UpdatePointsDto) {
+    return this.authService.subtractPoints(updatePointsDto);
+  }
 }
