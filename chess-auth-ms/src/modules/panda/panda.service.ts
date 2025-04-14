@@ -92,6 +92,27 @@ export class PandaService {
           throw new BadRequestException(`Invalid panda action: ${action}`);
       }
 
+      if (spentPoints > pandaRow.user.points) {
+        return {
+          message: `Insufficient points to ${action} Panda`,
+          lastPoints: pandaRow.user.points,
+          spentPoints: 0,
+          counter: pandaRow.user.points,
+          panda: pandaRow,
+        };
+      }
+
+      // avoid subtract points to user and avoid update panda stateValues
+      if (someActionIsFull) {
+        return {
+          message: `Panda not needs to ${action}. So it is fully`,
+          lastPoints: pandaRow.user.points,
+          spentPoints: 0,
+          counter: pandaRow.user.points,
+          panda: pandaRow,
+        };
+      }
+
       pandaRow.state = this.getPandaState(pandaRow);
 
       // STEP update state values
@@ -100,17 +121,6 @@ export class PandaService {
       const savedPanda = await this.authPandaRepository.save(
         pandaUpdatedWithStateValues,
       );
-
-      // avoid subtract points to user
-      if (someActionIsFull) {
-        return {
-          message: `Panda not needs to ${action}. So it is fully`,
-          lastPoints: pandaRow.user.points,
-          spentPoints: 0,
-          counter: pandaRow.user.points,
-          panda: savedPanda,
-        };
-      }
 
       // STEP subtract points of user
       const dataPoints: UpdateUserPointsDto = {

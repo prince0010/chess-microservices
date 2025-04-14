@@ -11,6 +11,9 @@
 3. Build all docker images (For PRODUCTION )
    `docker compose -f docker-compose.prod.yml build --no-cache`
 
+   3.1. Build all docker images (For TESTING )
+   `docker compose -f docker-compose.test.yml build --no-cache`
+
 4. Up the container for this image created before (For PRODUCTION )
    `docker compose -f docker-compose.prod.yml up -d`
 
