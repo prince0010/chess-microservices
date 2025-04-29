@@ -12,6 +12,10 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Game Mysql Volumes
+/game-mysql-data/*
+!/game-mysql-data/.gitkeep
+
 # OS
 .DS_Store
 
@@ -39,6 +43,8 @@ lerna-debug.log*
 .env
 .env.development.local
 .env.test.local
+.env.production
+.env.testing
 .env.production.local
 .env.local
 

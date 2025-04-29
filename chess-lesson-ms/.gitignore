@@ -12,7 +12,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Auth Mysql Volumes
+# Lesson Mysql Volumes
 /lesson-mysql-data/*
 !/lesson-mysql-data/.gitkeep
 
