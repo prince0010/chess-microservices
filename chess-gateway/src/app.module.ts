@@ -5,6 +5,7 @@ import { HealthCheckModule } from './modules/health-check/health-check.module';
 import { PandaModule } from './modules/panda/panda.module';
 import { NatsModule } from './modules/transports/nats.module';
 import { LessonModule } from './modules/lesson/lesson.module';
+import { GameModule } from './modules/game/game.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { LessonModule } from './modules/lesson/lesson.module';
     NatsModule,
     LessonModule,
     PandaModule,
+    GameModule,
   ],
 })
 export class AppModule {}

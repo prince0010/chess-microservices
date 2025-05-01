@@ -73,6 +73,29 @@ services:
     networks:
       - chess_production
 
+  game-ms:
+    container_name: game-ms-prod
+    build:
+      context: ./chess-game-ms
+      dockerfile: Dockerfile.prod
+    image: game-ms-prod
+    restart: always
+    depends_on: [game-mariadb]
+    environment:
+      PORT: ${GAME_MS_PORT}
+      NATS_SERVERS: "${NATS_SERVERS}"
+      MARIADB_VERSION: ${MARIADB_VERSION}
+      GAME_MARIADB_CONTAINER_NAME: ${GAME_MARIADB_CONTAINER_NAME}
+      GAME_CONTAINER_NAME: ${GAME_CONTAINER_NAME}
+      GAME_DB_PORT: ${GAME_DB_PORT}
+      GAME_DB_HOST: ${GAME_DB_HOST}
+      GAME_DB_NAME: ${GAME_DB_NAME}
+      GAME_DB_ROOT_PASSWORD: ${GAME_DB_ROOT_PASSWORD}
+      GAME_DB_USERNAME: ${GAME_DB_USERNAME}
+      GAME_DB_PASSWORD: ${GAME_DB_PASSWORD}
+    networks:
+      - chess_production
+
   auth-mariadb:
     image: "mariadb:${MARIADB_VERSION:-10.11.2}"
     container_name: ${AUTH_MARIADB_CONTAINER_NAME:-auth-mariadb-prod}
@@ -108,6 +131,24 @@ services:
       - chess_production
     volumes:
       - ./chess-lesson-ms/lesson-mysql-data:/var/lib/mysql
+
+  game-mariadb:
+    image: "mariadb:${MARIADB_VERSION:-10.11.2}"
+    container_name: ${GAME_MARIADB_CONTAINER_NAME:-game-mariadb-prod}
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${GAME_DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${GAME_DB_NAME}
+      MARIADB_USER: ${GAME_DB_USERNAME}
+      MARIADB_PASSWORD: ${GAME_DB_PASSWORD}
+    ports:
+      - "63313:3306"
+    restart: always
+    networks:
+      - chess_production
+    volumes:
+      - ./chess-game-ms/game-mysql-data:/var/lib/mysql
 
 networks:
   chess_production:

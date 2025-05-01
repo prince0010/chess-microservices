@@ -81,6 +81,31 @@ services:
     networks:
       - chess_development
 
+  game-ms:
+    container_name: chess-game-ms-dev
+    build: ./chess-game-ms
+    image: game-ms
+    ports:
+      - ${GAME_MS_PORT}:3003
+    volumes:
+      - ./chess-game-ms/src:/usr/src/app/src
+    depends_on: [game-mariadb]
+    command: npm run start:dev
+    environment:
+      PORT: ${GAME_MS_PORT}
+      NATS_SERVERS: "${NATS_SERVERS}"
+      MARIADB_VERSION: ${MARIADB_VERSION}
+      GAME_MARIADB_CONTAINER_NAME: ${GAME_MARIADB_CONTAINER_NAME}
+      GAME_CONTAINER_NAME: ${GAME_CONTAINER_NAME}
+      GAME_DB_PORT: ${GAME_DB_PORT}
+      GAME_DB_HOST: ${GAME_DB_HOST}
+      GAME_DB_NAME: ${GAME_DB_NAME}
+      GAME_DB_ROOT_PASSWORD: ${GAME_DB_ROOT_PASSWORD}
+      GAME_DB_USERNAME: ${GAME_DB_USERNAME}
+      GAME_DB_PASSWORD: ${GAME_DB_PASSWORD}
+    networks:
+      - chess_development
+
   auth-mariadb:
     image: "mariadb:${MARIADB_VERSION:-10.11.2}"
     container_name: ${AUTH_MARIADB_CONTAINER_NAME:-auth-mariadb-dev}
@@ -114,6 +139,23 @@ services:
       - chess_development
     volumes:
       - ./chess-lesson-ms/lesson-mysql-data:/var/lib/mysql
+
+  game-mariadb:
+    image: "mariadb:${MARIADB_VERSION:-10.11.2}"
+    container_name: ${GAME_MARIADB_CONTAINER_NAME:-game-mariadb-dev}
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${GAME_DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${GAME_DB_NAME}
+      MARIADB_USER: ${GAME_DB_USERNAME}
+      MARIADB_PASSWORD: ${GAME_DB_PASSWORD}
+    ports:
+      - "63313:3306"
+    networks:
+      - chess_development
+    volumes:
+      - ./chess-game-ms/game-mysql-data:/var/lib/mysql
 
 networks:
   chess_development:
