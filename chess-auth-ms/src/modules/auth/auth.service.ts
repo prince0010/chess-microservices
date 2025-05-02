@@ -2,7 +2,7 @@ import { BadRequestException, Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { In, Repository } from 'typeorm';
 import { firstValueFrom } from 'rxjs';
 import * as bcryptjs from 'bcryptjs';
 
@@ -240,6 +240,16 @@ export class AuthService {
         message: error.message,
       });
     }
+  }
+
+  // fetch users by uids
+  async findUsersByUids(uids: number[]) {
+    const users = await this.authRepository.find({
+      where: { uid: In(uids) },
+      select: ['uid', 'name'],
+    });
+
+    return users;
   }
 
   // ==== private methods ====

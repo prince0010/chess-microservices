@@ -21,3 +21,7 @@ export interface ISubtractPointsUser {
   spentPoints: number;
   counter: number; // lastPoints - spentPoints
 }
+
+export interface IUserUidsArray {
+  uids: number[];
+}

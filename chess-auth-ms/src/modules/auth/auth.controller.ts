@@ -6,6 +6,7 @@ import { AuthService } from './auth.service';
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
 import { UpdatePointsDto } from './dto/update-points.dto';
+import { IUserUidsArray } from './interfaces';
 
 @Controller()
 export class AuthController {
@@ -39,5 +40,10 @@ export class AuthController {
   @MessagePattern('subtract.points.user') // reduce counter points
   reducePoints(@Payload() updatePointsDto: UpdatePointsDto) {
     return this.authService.subtractPoints(updatePointsDto);
+  }
+
+  @MessagePattern('auth.find.usersByUids')
+  findUsersByUidArray(@Payload() iUserUidsArray: IUserUidsArray) {
+    return this.authService.findUsersByUids(iUserUidsArray.uids);
   }
 }

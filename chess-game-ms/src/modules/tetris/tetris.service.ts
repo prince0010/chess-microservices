@@ -1,23 +1,91 @@
-import { Injectable } from '@nestjs/common';
-import { RpcException } from '@nestjs/microservices';
+import { BadRequestException, Inject, Injectable } from '@nestjs/common';
+import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
+import { firstValueFrom } from 'rxjs';
+import { NATS_SERVICE } from 'src/config';
 
 import { TetrisUserHistory } from './entities/tetris-user-history.entity';
 
 import { UpdateTetrisUserHistoryDto } from './dto/update-tetris-user-history.dto';
-import { BestScoreByUserResponse } from './interfaces/tetris-user-history.interface';
+import { BestScoreByUserResponse, IRankingResponse } from './interfaces/index';
 
 @Injectable()
 export class TetrisService {
   constructor(
+    @Inject(NATS_SERVICE) private readonly client: ClientProxy,
+
     @InjectRepository(TetrisUserHistory)
     private readonly tetrisUserHistoryRepository: Repository<TetrisUserHistory>,
   ) {}
 
-  findRanking() {
+  async findRanking(currentUserUid: number): Promise<IRankingResponse> {
     try {
-      // TODO: implement an optimize and efficient query to auth-ms here and add userName
+      // verify if user is on table history
+      const userRow = await this.tetrisUserHistoryRepository.findOneBy({
+        userUid: currentUserUid,
+      });
+      if (!userRow || userRow?.bestScore === 0) {
+        throw new BadRequestException(
+          `User have not played Chess-Tetris Pieces game yet.`,
+        );
+      }
+
+      const currentUserScore = userRow.bestScore;
+
+      // Step 1: Get current user's rank
+      const rawRank = await this.tetrisUserHistoryRepository.query(
+        `
+        SELECT COUNT(*) + 1 AS rank
+        FROM tetris_user_history
+        WHERE bestScore > ?
+        `,
+        [currentUserScore],
+      );
+
+      const currentRank = parseInt(rawRank[0]?.rank ?? '1', 10);
+
+      // Step 2: Get users around the current rank
+      const offset = Math.max(currentRank - 7, 0); // rank - 1 is 0-indexed
+      const limit = 13;
+
+      const nearbyUsers = await this.tetrisUserHistoryRepository.query(
+        `
+        SELECT * FROM tetris_user_history
+        ORDER BY bestScore DESC
+        LIMIT ? OFFSET ?
+        `,
+        [limit, offset],
+      );
+
+      // Filter nearby (TypeORM doesn't support RANK() filters directly, so we filter in JS)
+      const sliced = nearbyUsers.map((row: any, index: number) => ({
+        ...row,
+        position: offset + index + 1,
+      }));
+
+      // Step 3: Enrich with user names
+      const userUids = sliced.map((row: any) => row.userUid);
+
+      const users = await firstValueFrom(
+        this.client.send('auth.find.usersByUids', { uids: userUids }),
+      );
+
+      const userMap = new Map(
+        users.map((u: { uid: number; name: string }) => [u.uid, u.name]),
+      );
+
+      const result = sliced.map((row) => ({
+        userUid: row.userUid,
+        bestScore: row.bestScore,
+        userName: userMap.get(row.userUid) || 'Unknown',
+        position: +row.position,
+      }));
+
+      return {
+        userUid: currentUserUid,
+        ranking: result,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,

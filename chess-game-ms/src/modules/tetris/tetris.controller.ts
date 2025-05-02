@@ -9,10 +9,10 @@ import { UpdateTetrisUserHistoryDto } from './dto/update-tetris-user-history.dto
 export class TetrisController {
   constructor(private readonly tetrisService: TetrisService) {}
 
-  // @MessagePattern('tetris.find.ranking')
-  // findRanking() {
-  //   return this.tetrisService.findRanking();
-  // }
+  @MessagePattern('tetris.find.ranking')
+  findRanking(@Payload() userUid: number) {
+    return this.tetrisService.findRanking(userUid);
+  }
 
   @MessagePattern('tetris.find.scoreByUser')
   findOneScoreByUser(@Payload() userUid: number) {

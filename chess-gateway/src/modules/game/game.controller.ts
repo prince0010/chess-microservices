@@ -30,6 +30,16 @@ export class GameController {
   }
 
   @UseGuards(AuthGuard)
+  @Get('/tetris/ranking')
+  getTetrisRanking(@Req() req: any) {
+    return this.client.send('tetris.find.ranking', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
   @Patch('/tetris/update-score-by-user')
   updateTetrisScoreByUser(
     @Body() updateTetrisUserHistoryDto: UpdateTetrisUserHistoryDto,
