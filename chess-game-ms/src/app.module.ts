@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigDB } from './db/config';
 
 import { TetrisModule } from './modules/tetris/tetris.module';
+import { GuessPositionModule } from './modules/guess-position/guess-position.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { TetrisModule } from './modules/tetris/tetris.module';
     }),
 
     TetrisModule,
+    GuessPositionModule,
   ],
   controllers: [],
   providers: [],

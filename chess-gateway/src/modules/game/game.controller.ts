@@ -14,11 +14,13 @@ import { NATS_SERVICE } from 'src/config';
 import { AuthGuard } from 'src/guards/auth.guard';
 
 import { UpdateTetrisUserHistoryDto } from './dto/update-tetris-user-history.dto';
+import { UpdateGuessPositionUserHistoryDto } from './dto/update-guess-position-user-history.dto';
 
 @Controller('game')
 export class GameController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
+  /* TETRIS */
   @UseGuards(AuthGuard)
   @Get('/tetris/score-by-user')
   findOneTetrisScoreByUser(@Req() req: any) {
@@ -51,6 +53,48 @@ export class GameController {
     };
 
     return this.client.send('tetris.update.scoreByUser', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  /* GUESS POSITION */
+  @UseGuards(AuthGuard)
+  @Get('/guess-position/score-by-user')
+  findOneGuessPositionScoreByUser(@Req() req: any) {
+    return this.client
+      .send('guessPosition.find.scoreByUser', +req.user.uid)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/guess-position/ranking')
+  getGuessPositionRanking(@Req() req: any) {
+    return this.client.send('guessPosition.find.ranking', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Patch('/guess-position/update-score-by-user')
+  updateGuessPositionScoreByUser(
+    @Body()
+    updateGuessPositionUserHistoryDto: UpdateGuessPositionUserHistoryDto,
+    @Req() req: any,
+  ) {
+    const payload = {
+      ...updateGuessPositionUserHistoryDto,
+      userUid: +req.user.uid,
+    };
+
+    return this.client.send('guessPosition.update.scoreByUser', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
