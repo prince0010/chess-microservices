@@ -2,7 +2,7 @@ import { Type } from 'class-transformer';
 import { IsEnum, IsNumber, IsOptional, IsPositive, Min } from 'class-validator';
 import { LessonLevel, lessonLevelsArray } from 'src/enum';
 
-export class FindAllLessonsDto {
+export class FindAllLessonParentDto {
   @IsNumber()
   @IsPositive()
   @Type(() => Number)

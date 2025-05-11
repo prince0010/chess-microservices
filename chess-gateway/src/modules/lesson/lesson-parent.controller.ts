@@ -5,6 +5,7 @@ import {
   Inject,
   Param,
   ParseIntPipe,
+  Patch,
   Post,
   Query,
   Req,
@@ -14,9 +15,13 @@ import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { catchError } from 'rxjs';
 
 import { NATS_SERVICE } from 'src/config';
+import { AuthGuard } from 'src/guards/auth.guard';
 import { SuperAdminGuard } from 'src/guards/super-admin.guard';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
+import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
+import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
+import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
 
 @Controller('lesson-parent')
 export class LessonParentController {
@@ -27,6 +32,53 @@ export class LessonParentController {
   createOne(@Body() createLessonParentDto: CreateLessonParentDto) {
     return this.client
       .send('lessonParent.create.one', createLessonParentDto)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/')
+  findAll(
+    @Query() findAllLessonParentDto: FindAllLessonParentDto,
+    @Req() req: any,
+  ) {
+    const payload = { ...findAllLessonParentDto, userUid: req.user.uid };
+
+    return this.client.send('lessonParent.find.all', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/:id')
+  findOne(@Param('id', ParseIntPipe) lessonParentId: string, @Req() req: any) {
+    const payload: FindOneLessonParentDto = {
+      lessonParentId: +lessonParentId,
+      userUid: req.user.uid,
+    };
+
+    return this.client.send('lessonParent.find.one', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Patch('update-completed')
+  completeOne(
+    @Body() completeLessonParentDto: CompleteLessonParentDto,
+    @Req() req: any,
+  ) {
+    const payload = { ...completeLessonParentDto, userUid: req.user.uid };
+
+    return this.client
+      .send('lessonParent.update.lessonsCompleted', payload)
       .pipe(
         catchError((err) => {
           throw new RpcException(err);

@@ -2,7 +2,7 @@ import { Type } from 'class-transformer';
 import { IsEnum, IsNumber, IsOptional, IsPositive, Min } from 'class-validator';
 import { LessonLevel, lessonLevelsArray } from 'src/enum';
 
-export class FindAllLessonsDto {
+export class FindAllLessonParentDto {
   @IsOptional()
   @IsPositive()
   @Type(() => Number) // converts query parameter string to number here
@@ -14,7 +14,6 @@ export class FindAllLessonsDto {
   page?: number;
 
   @IsOptional()
-  @Type(() => Number)
   @IsNumber()
   id?: number;
 

@@ -1,10 +1,30 @@
-export interface ICountAndListLessons {
+import { Lesson } from '../entities/lesson.entity';
+
+export interface ICountAndListLessonParents {
   currentPage: number;
   total: number;
-  lessons: ILessonsList[];
+  parents: ILessonParent[];
 }
 
-export interface ILessonsList {
+export interface ILessonParent {
+  id: number;
+  level: string;
+  name: string;
+  lessonsCompleted: number;
+  lessonsLength: number;
+}
+
+export interface ILessonParentDetail {
+  id: number;
+  level: string;
+  name: string;
+  showHint: boolean;
+  lessonsCompleted: number;
+  lessonsLength: number;
+  lessons: Lesson[];
+}
+
+export interface ILessonList {
   id: number;
   level: string;
   description: string;
@@ -21,7 +41,12 @@ export interface ILessonsList {
   result: string;
   setup: string;
   plyCount: number;
-  isCompleted: boolean;
+  hints?: ILessonHint;
+}
+
+export interface ILessonHint {
+  squares?: string[]; // ['e4']
+  arrows?: string[]; // ['e2e4']
 }
 
 export interface CompleteLessonResponse {
