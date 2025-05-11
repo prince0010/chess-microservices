@@ -1,25 +1,25 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
-import { RpcException } from '@nestjs/microservices';
+import { BadRequestException, Inject, Injectable } from '@nestjs/common';
+import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
 import { FindManyOptions, Repository } from 'typeorm';
+import { firstValueFrom } from 'rxjs';
 
+import { NATS_SERVICE } from 'src/config';
 import { Lesson } from './entities/lesson.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
-import {
-  ICountAndListLessonParents,
-  ILessonList,
-  ILessonParentDetail,
-} from './interfaces';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
 import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
+import { UpdateUserPointsDto } from './dto/update-user-points.dto';
+import { ICountAndListLessonParents, ILessonParentDetail } from './interfaces';
 
 @Injectable()
 export class LessonParentService {
   constructor(
+    @Inject(NATS_SERVICE) private readonly client: ClientProxy,
     @InjectRepository(Lesson)
     private readonly lessonRepository: Repository<Lesson>,
     @InjectRepository(LessonCompleted)
@@ -178,6 +178,10 @@ export class LessonParentService {
         throw new BadRequestException(`One or more invalid Lesson ID`);
       }
 
+      const earnedPointsByUser = validatedLessons.reduce((total, lesson) => {
+        return total + (lesson.points || 0);
+      }, 0);
+
       const newCompletedLessonArray: Promise<LessonCompleted>[] = [];
       // iterate over array of lessons ids
       for (const lesson of validatedLessons) {
@@ -201,7 +205,16 @@ export class LessonParentService {
 
       await Promise.all(newCompletedLessonArray);
 
-      return 'Lessons completed updated.';
+      // Add lesson points to user counter
+      const dataPoints: UpdateUserPointsDto = {
+        uid: userUid,
+        points: earnedPointsByUser,
+      };
+      const { lastPoints, earnedPoints, counter } = await firstValueFrom(
+        this.client.send('update.points.user', dataPoints),
+      );
+
+      return { lastPoints, earnedPoints, counter };
     } catch (error) {
       throw new RpcException({
         status: 400,

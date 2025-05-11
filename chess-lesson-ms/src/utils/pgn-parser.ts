@@ -151,7 +151,7 @@ export const parseHintPgnFile = (
         moves: game.moves.map((move) => move.move).join(' '),
         pgnRaw,
         fen: headers['FEN'] || '',
-        points: 1,
+        points: 5,
         event: headers['Event'] || '?',
         site: headers['Site'] || '?',
         date: headers['Date'] || '????.??.??',
