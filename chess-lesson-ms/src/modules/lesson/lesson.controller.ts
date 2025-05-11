@@ -17,7 +17,9 @@ export class LessonController {
 
   @MessagePattern('lesson.insert.pgn')
   create(@Payload() insertLessonDto: InsertLessonDto) {
-    return this.lessonSeederService.insertLessons(insertLessonDto);
+    return this.lessonSeederService.chooseTypeOfLessonsToInsert(
+      insertLessonDto,
+    );
   }
 
   @MessagePattern('lesson.find.all')

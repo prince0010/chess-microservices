@@ -1,0 +1,280 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/3KP3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Ge4]} {Move the pawn to the marked square} 1. e4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/3KP3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Ge3]} {Move the pawn to the marked square} 1. e3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/3K3P/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gh3]} {Move the pawn to the marked square} 1. h3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/3K3P/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gh4]} {Move the pawn to the marked square} 1. h4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/1P1K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gb3]} {Move the pawn to the marked square} 1. b3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/1P1K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gb4]} {Move the pawn to the marked square} 1. b4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/P7/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Ga5]} {Move the pawn to the marked square} 1. a5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/1P6/8/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gb6]} {Move the pawn to the marked square} 1. b6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/5P2/8/8/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gf7]} {Move the pawn to the marked square} 1. f7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/4P3/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Ge4]} {Move the pawn to the marked square} 1. e4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/2PK4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gc4]} {Move the pawn to the marked square} 1. c4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/3P4/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gd5]} {Move the pawn to the marked square} 1. d5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/8/8/8/3P1K2/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gd4]} {Move the pawn to the marked square} 1. d4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/3K2P1/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gg4]} {Move the pawn to the marked square} 1. g4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/8/8/2K3P1/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gg5]} {Move the pawn to the marked square} 1. g5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k7/4P3/8/8/8/K7/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Ge7]} {Move the pawn to the marked square} 1. e7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5k2/8/5K2/8/5P2/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gf3]} {Move the pawn to the marked square} 1. f3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/2P5/8/8/8/6K1/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gc7]} {Move the pawn to the marked square} 1. c7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/5K1k/2P5/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gc5]} {Move the pawn to the marked square} 1. c5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the pawn "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/8/8/2KP4/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.08"]
+
+{[%csl Gd5]} {Move the pawn to the marked square} 1. d5 *
+

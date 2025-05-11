@@ -23,3 +23,13 @@ export const lessonLevelsArray = [
   LessonLevel.LEVEL_9,
   LessonLevel.LEVEL_10,
 ];
+
+export enum LessonParentName {
+  PAWN = 'pawn',
+  KING = 'king',
+  BISHOP = 'bishop',
+  KNIGHT = 'knight',
+  ROOK = 'rook',
+  QUEEN = 'queen',
+  TEST_LEVEL_1 = 'test level 1',
+}

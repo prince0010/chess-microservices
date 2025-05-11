@@ -1,7 +1,14 @@
-import { Entity, Column, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+  Index,
+} from 'typeorm';
 import { Lesson } from './lesson.entity';
 
 @Entity('lesson_completed')
+@Index(['lesson', 'userUid'], { unique: true })
 export class LessonCompleted {
   @PrimaryGeneratedColumn()
   id: number;

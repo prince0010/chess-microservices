@@ -1,0 +1,281 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/4Q3/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gg6]} {Move the Queen to marked square} 1. Qg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/4Q3/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Ga8]} {Move the Queen to marked square} 1. Qa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/4Q3/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gh4]} {Move the Queen to marked square} 1. Qh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/4Q3/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Ge1]} {Move the Queen to marked square} 1. Qe1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/3K4/1Q6 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gb8]} {Move the Queen to marked square} 1. Qb8 *
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5Q2/3k4/8/8/8/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gf1]} {Move the Queen to marked square} 1. Qf1 *
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/6Q1/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Ga3]} {Move the Queen to marked square} 1. Qa3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/7Q/8/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gd1]} {Move the Queen to marked square} 1. Qd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/8/2QK4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gc5]} {Move the Queen to marked square} 1. Qc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/Q7/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gf8]} {Move the Queen to marked square} 1. Qf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/8/8/6K1/3Q4/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gd8]} {Move the Queen to marked square} 1. Qd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4Q3/8/7k/8/8/5K2/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Ge3]} {Move the Queen to marked square} 1. Qe3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1Q6/8/8/1K6/6k1/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Ge6]} {Move the Queen to marked square} 1. Qe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3Q4/8/6k1/8/8/3K4/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Ga5]} {Move the Queen to marked square} 1. Qa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5Q2/8/K3k3/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gb3]} {Move the Queen to marked square} 1. Qb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/8/8/8/3Q1K2/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gd3]} {Move the Queen to marked square} 1. Qd3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6K1/8/2k5/8/8/8/7Q w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Ga8]} {Move the Queen to marked square} 1. Qa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1Q6/8/4K2k/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gg6]} {Move the Queen to marked square} 1. Qg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/8/8/8/8/8/1Q5K w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gg1]} {Move the Queen to marked square} 1. Qg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the Queen "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7k/8/1K6/8/5Q2/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.26"]
+
+{[%csl Gf6]} {Move the Queen to marked square} 1. Qf6 *
+

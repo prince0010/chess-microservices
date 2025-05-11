@@ -1,0 +1,280 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/3R4/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gh4]} {Move the rook to the marked square} 1. Rh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/3R4/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Ga4]} {Move the rook to the marked square} 1. Ra4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/3R4/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gd1]} {Move the rook to the marked square} 1. Rd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/3R4/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gd5]} {Move the rook to the marked square} 1. Rd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/8/8/4K3/R7 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Ga8]} {Move the rook to the marked square} 1. Ra8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2R5/4k3/8/8/8/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gh8]} {Move the rook to the marked square} 1. Rh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/7R/8/8/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gh1]} {Move the rook to the marked square} 1. Rh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1R6/1K1k4/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gh6]} {Move the rook to the marked square} 1. Rh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1K1k4/8/6R1/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Ga3]} {Move the rook to the marked square} 1. Ra3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/8/7R/8/2K5/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Ga5]} {Move the rook to the marked square} 1. Ra5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/4R3/8/8/6K1/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Ge1]} {Move the rook to the marked square} 1. Re1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2R5/1k6/8/4K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gc1]} {Move the rook to the marked square} 1. Rc1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/2KR4/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gh5]} {Move the rook to the marked square} 1. Rh5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/k7/8/K7/5R2 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gf7]} {Move the rook to the marked square} 1. Rf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3R4/4k3/7K/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Ga7]} {Move the rook to the marked square} 1. Ra7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/1R6/5K2/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gg4]} {Move the rook to the marked square} 1. Rg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5k2/4R3/8/3K4/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gd5]} {Move the rook to the marked square} 1. Rd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/8/8/8/8/6K1/R7 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Ga6]} {Move the rook to the marked square} 1. Ra6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/8/3K4/R7/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gf4]} {Move the rook to the marked square} 1. Rf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the rook "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K5/2R5/8/8/8/8/8/4k3 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.02.27"]
+
+{[%csl Gc2]} {Move the rook to the marked square} 1. Rc2 *
+

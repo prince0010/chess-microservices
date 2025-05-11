@@ -1,0 +1,279 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/3BK3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gh8]} {Move the bishop to the marked square} 1. Bh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/3BK3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Ga7]} {Move the bishop to the marked square} 1. Ba7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/3BK3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Ga1]} {Move the bishop to the marked square} 1. Ba1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/3BK3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gg1]} {Move the bishop to the marked square} 1. Bg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3K1k2/8/8/5B2/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gb6]} {Move the bishop to the marked square} 1. Bb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2BK1k2/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Ga3]} {Move the bishop to the marked square} 1. Ba3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3K1k2/8/8/8/8/8/B7 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Ge5]} {Move the bishop to the marked square} 1. Be5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1B6/1k6/8/1K6/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gg1]} {Move the bishop to the marked square} 1. Bg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/7B/1K6/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gd8]} {Move the bishop to the marked square} 1. Bd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/4B3/5K2/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gf4]} {Move the bishop to the marked square} 1. Bf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/3KB3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gh7]} {Move the bishop to the marked square} 1. Bh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/3KB3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Ga8]} {Move the bishop to the marked square} 1. Ba8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/3KB3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gb1]} {Move the bishop to the marked square} 1. Bb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/3KB3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gh1]} {Move the bishop to the marked square} 1. Bh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/8/2K5/8/1B6 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gh7]} {Move the bishop to the marked square} 1. Bh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5k2/8/8/8/2BK4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Ga4]} {Move the bishop to the marked square} 1. Ba4 *
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1B6/1K1k4/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gf1]} {Move the bishop to the marked square} 1. Bf1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6K1/4B3/8/1k6/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gg8]} {Move the bishop to the marked square} 1. Bg8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1B4k1/8/6K1/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gd7]} {Move the bishop to the marked square} 1. Bd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Move the bishop "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k6/8/1K6/8/8/5B2 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.03.01"]
+
+{[%csl Gh3]} {Move the bishop to the marked square} 1. Bh3 *
+

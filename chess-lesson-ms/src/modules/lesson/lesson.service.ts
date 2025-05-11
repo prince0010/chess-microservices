@@ -1,21 +1,25 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { FindManyOptions, Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
 
 import { Lesson } from './entities/lesson.entity';
-import { FindAllLessonsDto } from './dto/find-all-lessons.dto';
-import { InjectRepository } from '@nestjs/typeorm';
+import { LessonParent } from './entities/lesson-parent.entity';
 import {
   ICountAndListLessons,
   ILessonsList,
 } from './interfaces/lesson.interface';
 import { FindOneLessonDto } from './dto/find-one-lesson.dto';
+import { FindAllLessonsDto } from './dto/find-all-lessons.dto';
+import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 
 @Injectable()
 export class LessonService {
   constructor(
     @InjectRepository(Lesson)
     private readonly lessonRepository: Repository<Lesson>,
+    @InjectRepository(LessonParent)
+    private readonly lessonParentRepository: Repository<LessonParent>,
   ) {}
 
   async findAll(
