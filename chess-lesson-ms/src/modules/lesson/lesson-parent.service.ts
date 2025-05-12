@@ -9,12 +9,18 @@ import { Lesson } from './entities/lesson.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
 
+import { transformSingleLessons } from './helpers/transform-lesson.helper';
+
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
 import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
 import { UpdateUserPointsDto } from './dto/update-user-points.dto';
-import { ICountAndListLessonParents, ILessonParentDetail } from './interfaces';
+import {
+  ICountAndListLessonParents,
+  ILessonList,
+  ILessonParentDetail,
+} from './interfaces';
 
 @Injectable()
 export class LessonParentService {
@@ -71,7 +77,7 @@ export class LessonParentService {
         showHint: lessonParent.showHint,
         lessonsLength,
         lessonsCompleted,
-        lessons: lessonParent.lessons,
+        lessons: transformSingleLessons(lessonParent.lessons),
       };
 
       return result;

@@ -21,7 +21,7 @@ export interface ILessonParentDetail {
   showHint: boolean;
   lessonsCompleted: number;
   lessonsLength: number;
-  lessons: Lesson[];
+  lessons: ILessonList[];
 }
 
 export interface ILessonList {
@@ -41,6 +41,7 @@ export interface ILessonList {
   result: string;
   setup: string;
   plyCount: number;
+  showHint: boolean;
   hints?: ILessonHint;
 }
 
