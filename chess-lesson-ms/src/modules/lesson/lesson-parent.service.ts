@@ -10,17 +10,14 @@ import { LessonParent } from './entities/lesson-parent.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
 
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
+import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
 import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
 import { UpdateUserPointsDto } from './dto/update-user-points.dto';
-import {
-  ICountAndListLessonParents,
-  ILessonList,
-  ILessonParentDetail,
-} from './interfaces';
+import { ICountAndListLessonParents, ILessonParentDetail } from './interfaces';
 
 @Injectable()
 export class LessonParentService {
@@ -127,10 +124,26 @@ export class LessonParentService {
       const [lessonParents, total] =
         await this.lessonParentRepository.findAndCount(findOptions);
 
+      // store if previous lesson_parent is 50% completed at least or not
+      let previousIsCompletedEnough = true;
+
       const parents = await Promise.all(
-        lessonParents.map(async (lessonParent) => {
+        lessonParents.map(async (lessonParent, index) => {
           const { lessonsCompleted, lessonsLength } =
             await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
+
+          // determine if current lesson_parent should be disabled based on previous
+          let disabled = false;
+
+          if (index === 0) {
+            disabled = false; // First lessonParent is always enabled
+          } else {
+            disabled = !previousIsCompletedEnough;
+          }
+
+          // calculate 50% completion for this one for the *next* check
+          previousIsCompletedEnough =
+            lessonsLength > 0 && lessonsCompleted / lessonsLength >= 0.5;
 
           return {
             id: lessonParent.id,
@@ -138,6 +151,7 @@ export class LessonParentService {
             level: lessonParent.level,
             lessonsCompleted,
             lessonsLength,
+            disabled,
           };
         }),
       );
@@ -172,6 +186,10 @@ export class LessonParentService {
         throw new BadRequestException(
           `Parent lesson with ID: ${lessonParentId} not found.`,
         );
+      }
+
+      if (someLessonDuplicates(completedLessonIds)) {
+        throw new BadRequestException('Duplicate lesson IDs detected.');
       }
 
       // validate

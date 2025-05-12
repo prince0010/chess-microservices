@@ -1,5 +1,3 @@
-import { Lesson } from '../entities/lesson.entity';
-
 export interface ICountAndListLessonParents {
   currentPage: number;
   total: number;
@@ -12,6 +10,7 @@ export interface ILessonParent {
   name: string;
   lessonsCompleted: number;
   lessonsLength: number;
+  disabled: boolean;
 }
 
 export interface ILessonParentDetail {
