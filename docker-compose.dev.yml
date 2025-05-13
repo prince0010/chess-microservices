@@ -4,9 +4,10 @@ services:
   # NATS
   nats:
     image: nats:latest
-    container_name: nats
-    ports:
-      - 8222:8222
+    # container_name: nats
+    container_name: nats-dev
+    # ports:
+    #   - 8222:8222
     networks:
       - chess_development
 
@@ -14,7 +15,7 @@ services:
   chess-gateway:
     container_name: chess-gateway-dev
     build: ./chess-gateway
-    image: chess-gateway # Explicitly setting the image name
+    image: chess-gateway-dev # Explicitly setting the image name
     ports:
       - ${CHESS_GATEWAY_PORT}:3000
     command: npm run start:dev
@@ -32,7 +33,7 @@ services:
   auth-ms:
     container_name: chess-auth-ms-dev
     build: ./chess-auth-ms
-    image: auth-ms
+    image: auth-ms-dev
     ports:
       - ${AUTH_MS_PORT}:3001
     volumes:
@@ -58,7 +59,7 @@ services:
   lesson-ms:
     container_name: chess-lesson-ms-dev
     build: ./chess-lesson-ms
-    image: lesson-ms
+    image: lesson-ms-dev
     ports:
       - ${LESSON_MS_PORT}:3002
     volumes:
@@ -84,7 +85,7 @@ services:
   game-ms:
     container_name: chess-game-ms-dev
     build: ./chess-game-ms
-    image: game-ms
+    image: game-ms-dev
     ports:
       - ${GAME_MS_PORT}:3003
     volumes:
