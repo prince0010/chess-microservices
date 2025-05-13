@@ -1,7 +1,7 @@
 import { BadRequestException, Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
-import { FindManyOptions, Repository } from 'typeorm';
+import { FindManyOptions, MoreThan, Repository } from 'typeorm';
 import { firstValueFrom } from 'rxjs';
 
 import { NATS_SERVICE } from 'src/config';
@@ -17,7 +17,12 @@ import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
 import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
 import { UpdateUserPointsDto } from './dto/update-user-points.dto';
-import { ICountAndListLessonParents, ILessonParentDetail } from './interfaces';
+import {
+  CompleteLessonResponse,
+  ICountAndListLessonParents,
+  ILessonParent,
+  ILessonParentDetail,
+} from './interfaces';
 
 @Injectable()
 export class LessonParentService {
@@ -124,37 +129,37 @@ export class LessonParentService {
       const [lessonParents, total] =
         await this.lessonParentRepository.findAndCount(findOptions);
 
-      // store if previous lesson_parent is 50% completed at least or not
+      // Force consistent order by ID
+      lessonParents.sort((a, b) => a.id - b.id);
+
+      const parents: ILessonParent[] = [];
       let previousIsCompletedEnough = true;
 
-      const parents = await Promise.all(
-        lessonParents.map(async (lessonParent, index) => {
-          const { lessonsCompleted, lessonsLength } =
-            await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
+      for (const [index, lessonParent] of lessonParents.entries()) {
+        const { lessonsCompleted, lessonsLength } =
+          await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
 
-          // determine if current lesson_parent should be disabled based on previous
-          let disabled = false;
+        let disabled = false;
 
-          if (index === 0) {
-            disabled = false; // First lessonParent is always enabled
-          } else {
-            disabled = !previousIsCompletedEnough;
-          }
+        if (index === 0) {
+          disabled = false;
+        } else {
+          disabled = !previousIsCompletedEnough;
+        }
 
-          // calculate 50% completion for this one for the *next* check
-          previousIsCompletedEnough =
-            lessonsLength > 0 && lessonsCompleted / lessonsLength >= 0.5;
+        // Prepare for next iteration
+        previousIsCompletedEnough =
+          lessonsLength > 0 && lessonsCompleted / lessonsLength >= 0.5;
 
-          return {
-            id: lessonParent.id,
-            name: lessonParent.name,
-            level: lessonParent.level,
-            lessonsCompleted,
-            lessonsLength,
-            disabled,
-          };
-        }),
-      );
+        parents.push({
+          id: lessonParent.id,
+          name: lessonParent.name,
+          level: lessonParent.level,
+          lessonsCompleted,
+          lessonsLength,
+          disabled,
+        });
+      }
 
       return {
         currentPage: page,
@@ -171,7 +176,7 @@ export class LessonParentService {
 
   async updateLessonsCompleted(
     completeLessonParentDto: CompleteLessonParentDto,
-  ) {
+  ): Promise<CompleteLessonResponse> {
     const {
       userUid,
       lessonParentId,
@@ -179,8 +184,9 @@ export class LessonParentService {
     } = completeLessonParentDto;
     try {
       // verify lesson parent
-      const lessonParent = await this.lessonParentRepository.findOneBy({
-        id: lessonParentId,
+      const lessonParent = await this.lessonParentRepository.findOne({
+        where: { id: lessonParentId },
+        relations: { lessons: true },
       });
       if (!lessonParent) {
         throw new BadRequestException(
@@ -238,7 +244,50 @@ export class LessonParentService {
         this.client.send('update.points.user', dataPoints),
       );
 
-      return { lastPoints, earnedPoints, counter };
+      const { nextLessonParentId, nextLessonParentDisabled } =
+        await this.getNextLessonParentProps(lessonParent, userUid);
+
+      const response: CompleteLessonResponse = {
+        lastPoints,
+        earnedPoints,
+        counter,
+        nextLessonParentId,
+        nextLessonParentDisabled,
+      };
+
+      return response;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  private async getNextLessonParentProps(
+    lessonParent: LessonParent,
+    userUid: number,
+  ) {
+    try {
+      // STEP 1 get completed and length
+      const { lessonsLength, lessonsCompleted } =
+        await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
+
+      // STEP 2 verify is open to play
+      const lessonParentIsOpenToPlay =
+        lessonsLength > 0 && lessonsCompleted / lessonsLength >= 0.5;
+
+      // STEP 3 get next lessonParentId
+      const nextLessonParent = await this.lessonParentRepository.findOne({
+        where: { id: MoreThan(lessonParent.id) },
+        order: { id: 'ASC' },
+        select: ['id'], // We just need the ID
+      });
+
+      return {
+        nextLessonParentId: nextLessonParent?.id || null, // null if doesn't exist,
+        nextLessonParentDisabled: !lessonParentIsOpenToPlay,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,

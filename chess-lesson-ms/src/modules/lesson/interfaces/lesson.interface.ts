@@ -50,7 +50,8 @@ export interface ILessonHint {
 }
 
 export interface CompleteLessonResponse {
-  message: string;
+  nextLessonParentId: number | null;
+  nextLessonParentDisabled: boolean;
   lastPoints: number;
   earnedPoints: number;
   counter: number;
