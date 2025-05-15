@@ -19,6 +19,7 @@ export interface ILessonParentDetail {
   level: string;
   name: string;
   showHint: boolean;
+  isTest: boolean;
   lessonsCompleted: number;
   lessonsLength: number;
   lessons: ILessonList[];

@@ -72,14 +72,19 @@ export class LessonParentService {
       const { lessonsLength, lessonsCompleted } =
         await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
 
+      const lessonsArray = lessonParent.isTest
+        ? lessonParent.lessons.sort(() => 0.5 - Math.random())
+        : lessonParent.lessons;
+
       const result: ILessonParentDetail = {
         id: lessonParent.id,
         level: lessonParent.level,
         name: lessonParent.name,
         showHint: lessonParent.showHint,
+        isTest: lessonParent.isTest,
         lessonsLength,
         lessonsCompleted,
-        lessons: transformSingleLessons(lessonParent.lessons),
+        lessons: transformSingleLessons(lessonsArray),
       };
 
       return result;
