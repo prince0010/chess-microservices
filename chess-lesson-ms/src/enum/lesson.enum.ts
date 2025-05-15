@@ -9,7 +9,19 @@ export enum LessonParentName {
   KNIGHT = 'knight',
   ROOK = 'rook',
   QUEEN = 'queen',
-  TEST_LEVEL_1 = 'test level 1',
+}
+
+export enum LessonParentTestName {
+  TEST_LEVEL_1 = 'test 1',
+  TEST_LEVEL_2 = 'test 2',
+  TEST_LEVEL_3 = 'test 3',
+  TEST_LEVEL_4 = 'test 4',
+  TEST_LEVEL_5 = 'test 5',
+  TEST_LEVEL_6 = 'test 6',
+  TEST_LEVEL_7 = 'test 7',
+  TEST_LEVEL_8 = 'test 8',
+  TEST_LEVEL_9 = 'test 9',
+  TEST_LEVEL_10 = 'test 10',
 }
 
 export enum LessonFilename {

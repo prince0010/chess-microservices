@@ -15,6 +15,11 @@ export class LessonParent {
   @Column({ type: 'boolean', nullable: false, default: false })
   showHint: boolean; // to identify which of them are with hint
 
-  @OneToMany(() => Lesson, (lesson) => lesson.lessonParent)
+  @Column({ type: 'boolean', nullable: false, default: false })
+  isTest: boolean; // to identify which lesson parent is a test
+
+  @OneToMany(() => Lesson, (lesson) => lesson.lessonParent, {
+    cascade: ['insert'],
+  })
   lessons: Lesson[];
 }

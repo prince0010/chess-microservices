@@ -134,6 +134,7 @@ export class LessonParentService {
 
       const parents: ILessonParent[] = [];
       let previousIsCompletedEnough = true;
+      let previousLessonParent = lessonParents[0];
 
       for (const [index, lessonParent] of lessonParents.entries()) {
         const { lessonsCompleted, lessonsLength } =
@@ -147,14 +148,19 @@ export class LessonParentService {
           disabled = !previousIsCompletedEnough;
         }
 
+        // determine which factor (it helps with disabled or not)
+        const factor = previousLessonParent.isTest ? 0.7 : 0.5;
+        previousLessonParent = lessonParent;
+
         // Prepare for next iteration
         previousIsCompletedEnough =
-          lessonsLength > 0 && lessonsCompleted / lessonsLength >= 0.5;
+          lessonsLength > 0 && lessonsCompleted / lessonsLength >= factor;
 
         parents.push({
           id: lessonParent.id,
           name: lessonParent.name,
           level: lessonParent.level,
+          isTest: lessonParent.isTest,
           lessonsCompleted,
           lessonsLength,
           disabled,

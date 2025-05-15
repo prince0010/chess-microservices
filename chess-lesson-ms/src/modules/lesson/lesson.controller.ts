@@ -4,7 +4,10 @@ import { MessagePattern, Payload } from '@nestjs/microservices';
 import { LessonService } from './lesson.service';
 import { LessonSeederService } from './lesson-seeder.service';
 
-import { InsertLessonDto } from './dto/insert-lesson.dto';
+import {
+  GenerateLessonTestDto,
+  InsertLessonDto,
+} from './dto/insert-lesson.dto';
 import { FindOneLessonDto } from './dto/find-one-lesson.dto';
 
 @Controller()
@@ -19,6 +22,11 @@ export class LessonController {
     return this.lessonSeederService.chooseTypeOfLessonsToInsert(
       insertLessonDto,
     );
+  }
+
+  @MessagePattern('lesson.generate.test')
+  createTest(@Payload() generateLessonTestDto: GenerateLessonTestDto) {
+    return this.lessonSeederService.seedTestLessons(generateLessonTestDto);
   }
 
   @MessagePattern('lesson.find.one')

@@ -7,7 +7,10 @@ import { Lesson } from './entities/lesson.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
 import { parseHintPgnFile, parseNormalPgnFile } from 'src/utils/pgn-parser';
 
-import { InsertLessonDto } from './dto/insert-lesson.dto';
+import {
+  GenerateLessonTestDto,
+  InsertLessonDto,
+} from './dto/insert-lesson.dto';
 import { LessonFilename, LessonLevel, LessonParentName } from 'src/enum';
 
 @Injectable()
@@ -16,6 +19,8 @@ export class LessonSeederService {
     private dataSource: DataSource,
     @InjectRepository(LessonParent)
     private readonly lessonParentRepository: Repository<LessonParent>,
+    @InjectRepository(Lesson)
+    private readonly lessonRepository: Repository<Lesson>,
   ) {}
 
   async chooseTypeOfLessonsToInsert(
@@ -145,5 +150,89 @@ export class LessonSeederService {
     }
 
     return filename;
+  }
+
+  // TEST SEED CREATION
+  async seedTestLessons(
+    generateLessonTestDto: GenerateLessonTestDto,
+  ): Promise<string> {
+    const { levelName, testLessonsLength, lessonParentTestName } =
+      generateLessonTestDto;
+
+    try {
+      // STEP 0: make sure not lesson parent duplicate
+      const existsLessonParent = await this.lessonParentRepository.findOneBy({
+        name: lessonParentTestName,
+      });
+      if (existsLessonParent) {
+        throw new BadRequestException(
+          `Lesson Parent with name: ${lessonParentTestName} already exists.`,
+        );
+      }
+
+      // STEP 1: Get all lessons with this level
+      const allLessonsByLevel = await this.lessonRepository.find({
+        where: { level: levelName },
+      });
+
+      if (!allLessonsByLevel || allLessonsByLevel.length < testLessonsLength) {
+        throw new BadRequestException(
+          `Insufficient lessons with level "${levelName}" in database to create a test with ${testLessonsLength} lessons.`,
+        );
+      }
+
+      // STEP 2: Shuffle the lessons randomly
+      const shuffledLessons = allLessonsByLevel.sort(() => 0.5 - Math.random());
+
+      // STEP 3: Pick the first N from the shuffled list
+      const selectedLessons = shuffledLessons.slice(0, testLessonsLength);
+
+      // STEP 4: Create a new LessonParent for this test
+      const newLessonParentTest = this.lessonParentRepository.create({
+        level: levelName,
+        name: lessonParentTestName,
+        showHint: selectedLessons[0].showHint,
+        isTest: true,
+      });
+
+      // STEP 5: Create new Lesson entities copying values (except id and relations)
+      const newLessonsArray: Lesson[] = selectedLessons.map((lesson) => {
+        const newLesson = this.lessonRepository.create({
+          level: lesson.level,
+          description: lesson.description,
+          moves: lesson.moves,
+          pgnRaw: lesson.pgnRaw,
+          fen: lesson.fen,
+          points: lesson.points,
+          event: lesson.event,
+          site: lesson.site,
+          date: lesson.date,
+          round: lesson.round,
+          white: lesson.white,
+          black: lesson.black,
+          result: lesson.result,
+          setup: lesson.setup,
+          plyCount: lesson.plyCount,
+          showHint: lesson.showHint,
+          hints: lesson.hints,
+          // DO NOT assign lessonParent yet
+        });
+
+        return newLesson;
+      });
+
+      // STEP 6: Assign lessons to the new lesson parent
+      newLessonParentTest.lessons = newLessonsArray;
+
+      // STEP 7: Save lesson parent (TypeORM cascades will save child lessons too)
+      await this.lessonParentRepository.save(newLessonParentTest);
+
+      return `Test lesson parent with name: ${lessonParentTestName} and randomized lessons generated successfully.`;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
   }
 }

@@ -10,6 +10,7 @@ export interface ILessonParent {
   name: string;
   lessonsCompleted: number;
   lessonsLength: number;
+  isTest: boolean;
   disabled: boolean;
 }
 
