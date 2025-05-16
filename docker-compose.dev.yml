@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   # NATS
-  nats:
+  nats-dev:
     image: nats:latest
     # container_name: nats
     container_name: nats-dev
@@ -12,7 +12,7 @@ services:
       - chess_development
 
   # Gateway-MS
-  chess-gateway:
+  chess-gateway-dev:
     container_name: chess-gateway-dev
     build: ./chess-gateway
     image: chess-gateway-dev # Explicitly setting the image name
@@ -30,7 +30,7 @@ services:
       - chess_development
 
   # Auth-ms
-  auth-ms:
+  auth-ms-dev:
     container_name: chess-auth-ms-dev
     build: ./chess-auth-ms
     image: auth-ms-dev
@@ -56,7 +56,7 @@ services:
     networks:
       - chess_development
 
-  lesson-ms:
+  lesson-ms-dev:
     container_name: chess-lesson-ms-dev
     build: ./chess-lesson-ms
     image: lesson-ms-dev
@@ -82,7 +82,7 @@ services:
     networks:
       - chess_development
 
-  game-ms:
+  game-ms-dev:
     container_name: chess-game-ms-dev
     build: ./chess-game-ms
     image: game-ms-dev
@@ -107,7 +107,7 @@ services:
     networks:
       - chess_development
 
-  auth-mariadb:
+  auth-mariadb-dev:
     image: "mariadb:${MARIADB_VERSION:-10.11.2}"
     container_name: ${AUTH_MARIADB_CONTAINER_NAME:-auth-mariadb-dev}
     env_file:
@@ -124,7 +124,7 @@ services:
     volumes:
       - ./chess-auth-ms/auth-mysql-data:/var/lib/mysql
 
-  lesson-mariadb:
+  lesson-mariadb-dev:
     image: "mariadb:${MARIADB_VERSION:-10.11.2}"
     container_name: ${LESSON_MARIADB_CONTAINER_NAME:-lesson-mariadb-dev}
     env_file:
@@ -141,7 +141,7 @@ services:
     volumes:
       - ./chess-lesson-ms/lesson-mysql-data:/var/lib/mysql
 
-  game-mariadb:
+  game-mariadb-dev:
     image: "mariadb:${MARIADB_VERSION:-10.11.2}"
     container_name: ${GAME_MARIADB_CONTAINER_NAME:-game-mariadb-dev}
     env_file:
