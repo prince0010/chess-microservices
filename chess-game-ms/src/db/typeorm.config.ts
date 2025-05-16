@@ -6,7 +6,7 @@ dotenv.config();
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'mariadb',
-  host: 'game-mariadb', // Put here the mysql alias container when using Docker
+  host: process.env.GAME_DB_HOST, // Put here the mysql alias container when using Docker
   port: 3306,
   database: process.env.GAME_DB_NAME,
   username: process.env.GAME_DB_USERNAME,

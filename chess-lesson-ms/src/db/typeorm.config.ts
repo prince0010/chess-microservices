@@ -6,7 +6,7 @@ dotenv.config();
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'mariadb',
-  host: 'lesson-mariadb', // Put here the mysql alias container when using Docker
+  host: process.env.LESSON_DB_HOST, // Put here the mysql alias container when using Docker
   port: 3306,
   database: process.env.LESSON_DB_NAME,
   username: process.env.LESSON_DB_USERNAME,

@@ -38,7 +38,7 @@ services:
       - ${AUTH_MS_PORT}:3001
     volumes:
       - ./chess-auth-ms/src:/usr/src/app/src
-    depends_on: [auth-mariadb]
+    depends_on: [auth-mariadb-dev]
     command: npm run start:dev
     environment:
       PORT: ${AUTH_MS_PORT}
@@ -65,7 +65,7 @@ services:
     volumes:
       - ./chess-lesson-ms/src:/usr/src/app/src
       - ./chess-lesson-ms/files:/usr/src/app/files
-    depends_on: [lesson-mariadb]
+    depends_on: [lesson-mariadb-dev]
     command: npm run start:dev
     environment:
       PORT: ${LESSON_MS_PORT}
@@ -90,7 +90,7 @@ services:
       - ${GAME_MS_PORT}:3003
     volumes:
       - ./chess-game-ms/src:/usr/src/app/src
-    depends_on: [game-mariadb]
+    depends_on: [game-mariadb-dev]
     command: npm run start:dev
     environment:
       PORT: ${GAME_MS_PORT}

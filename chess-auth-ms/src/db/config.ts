@@ -5,7 +5,7 @@ export class ConfigDB {
   static getTypeOrmOptions(): TypeOrmModuleOptions {
     return {
       type: 'mariadb',
-      host: 'auth-mariadb', // Put here the mysql alias container when using Docker
+      host: envs.dbAuthHost, // Put here the mysql alias container when using Docker
       port: +envs.dbAuthPort,
       database: envs.dbAuthName,
       username: envs.dbAuthUsername,
