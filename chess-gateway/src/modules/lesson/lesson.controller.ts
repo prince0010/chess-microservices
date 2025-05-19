@@ -16,10 +16,7 @@ import { NATS_SERVICE } from 'src/config';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { SuperAdminGuard } from 'src/guards/super-admin.guard';
 
-import {
-  GenerateLessonTestDto,
-  InsertLessonDto,
-} from './dto/insert-lesson.dto';
+import { InsertLessonDto } from './dto/insert-lesson.dto';
 
 @Controller('lesson')
 export class LessonController {
@@ -29,16 +26,6 @@ export class LessonController {
   @Post('seed')
   insertLessonsByPgnFile(@Body() insertLessonDto: InsertLessonDto) {
     return this.client.send('lesson.insert.pgn', insertLessonDto).pipe(
-      catchError((err) => {
-        throw new RpcException(err);
-      }),
-    );
-  }
-
-  @UseGuards(SuperAdminGuard)
-  @Post('seed-test')
-  generateTestLessons(@Body() generateLessonTestDto: GenerateLessonTestDto) {
-    return this.client.send('lesson.generate.test', generateLessonTestDto).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

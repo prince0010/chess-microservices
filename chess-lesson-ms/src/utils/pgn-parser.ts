@@ -29,8 +29,6 @@ export const parseNormalPgnFile = (
     let points: number = LessonDefaultPoints.POINTS_PER_LESSON; // changeMe! to find a better balance
 
     return parsedGames.map((game: any) => {
-      points += 4; // each lesson give more points
-
       // Convert headers array to an object for easier access
       const headers = game.headers.reduce(
         (acc, { name, value }) => {
@@ -65,7 +63,7 @@ export const parseNormalPgnFile = (
         moves: game.moves.map((move) => move.move).join(' '), // Store only the moves PGN notation
         pgnRaw, // Manually constructed PGN string
         fen: headers['FEN'] || '',
-        points,
+        points: 1,
         event: headers['Event'] || '?',
         site: headers['Site'] || '?',
         date: headers['Date'] || '????.??.??',
@@ -151,7 +149,7 @@ export const parseHintPgnFile = (
         moves: game.moves.map((move) => move.move).join(' '),
         pgnRaw,
         fen: headers['FEN'] || '',
-        points: 5,
+        points: 1,
         event: headers['Event'] || '?',
         site: headers['Site'] || '?',
         date: headers['Date'] || '????.??.??',

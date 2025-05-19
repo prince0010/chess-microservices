@@ -6,6 +6,7 @@ import { NatsModule } from '../transports/nats.module';
 import { Lesson } from './entities/lesson.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
+import { LessonCompletedTest } from './entities/lesson-completed-test.entity';
 
 import { LessonController } from './lesson.controller';
 import { LessonCompletedController } from './lesson-completed.controller';
@@ -28,7 +29,12 @@ import { LessonParentService } from './lesson-parent.service';
     LessonParentService,
   ],
   imports: [
-    TypeOrmModule.forFeature([Lesson, LessonCompleted, LessonParent]),
+    TypeOrmModule.forFeature([
+      Lesson,
+      LessonCompleted,
+      LessonParent,
+      LessonCompletedTest,
+    ]),
     NatsModule,
   ],
   exports: [TypeOrmModule],
