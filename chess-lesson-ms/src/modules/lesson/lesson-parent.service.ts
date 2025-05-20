@@ -319,9 +319,7 @@ export class LessonParentService {
         throw new BadRequestException(`One or more invalid Lesson ID`);
       }
 
-      const earnedPointsByUser = validatedLessons.reduce((total, lesson) => {
-        return total + (lesson.points || 0);
-      }, 0);
+      let earnedPointsByUser = 0;
 
       const newCompletedLessonArray: Promise<LessonCompleted>[] = [];
       // iterate over array of lessons ids
@@ -341,6 +339,8 @@ export class LessonParentService {
           newCompletedLessonArray.push(
             this.lessonCompletedRepository.save(newLessonCompleted),
           );
+
+          earnedPointsByUser += lesson.points;
         }
       }
 
@@ -404,8 +404,6 @@ export class LessonParentService {
         },
       );
 
-      let earnedPointsByUser = 0;
-
       if (!testCompletedRow) {
         // create new test row
         const newTestRow = this.lessonCompletedTestRepository.create({
@@ -416,12 +414,8 @@ export class LessonParentService {
         });
 
         await this.lessonCompletedTestRepository.save(newTestRow);
-        earnedPointsByUser = completedLessonIds.length;
       } else {
         if (completedLessonIds.length > testCompletedRow.testCompleted) {
-          earnedPointsByUser =
-            completedLessonIds.length - testCompletedRow.testCompleted;
-
           // update test row
           await this.lessonCompletedTestRepository.update(
             { id: testCompletedRow.id },
@@ -433,7 +427,7 @@ export class LessonParentService {
       // STEP 4: Add lesson points to user counter
       const dataPoints: UpdateUserPointsDto = {
         uid: userUid,
-        points: earnedPointsByUser,
+        points: 0,
       };
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(
         this.client.send('update.points.user', dataPoints),
