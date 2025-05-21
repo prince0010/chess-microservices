@@ -1,5 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Lesson } from './lesson.entity';
+import { LessonPlayed } from './lesson-played.entity';
+import { LessonParentEnabled } from './lesson-parent-enabled.entity';
 
 @Entity('lesson_parent')
 export class LessonParent {
@@ -22,4 +24,13 @@ export class LessonParent {
     cascade: ['insert'],
   })
   lessons: Lesson[];
+
+  @OneToMany(() => LessonPlayed, (lessonPlayed) => lessonPlayed.lessonParent)
+  lessonsPlayed: LessonPlayed[];
+
+  @OneToMany(
+    () => LessonParentEnabled,
+    (lessonParentEnabled) => lessonParentEnabled.lessonParent,
+  )
+  lessonsParentsEnabled: LessonParentEnabled[];
 }

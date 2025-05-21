@@ -6,7 +6,9 @@ import { NatsModule } from '../transports/nats.module';
 import { Lesson } from './entities/lesson.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
+import { LessonParentEnabled } from './entities/lesson-parent-enabled.entity';
 import { LessonCompletedTest } from './entities/lesson-completed-test.entity';
+import { LessonPlayed } from './entities/lesson-played.entity';
 
 import { LessonController } from './lesson.controller';
 import { LessonCompletedController } from './lesson-completed.controller';
@@ -33,7 +35,9 @@ import { LessonParentService } from './lesson-parent.service';
       Lesson,
       LessonCompleted,
       LessonParent,
+      LessonParentEnabled,
       LessonCompletedTest,
+      LessonPlayed,
     ]),
     NatsModule,
   ],

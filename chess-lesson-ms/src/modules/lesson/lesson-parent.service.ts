@@ -7,8 +7,10 @@ import { firstValueFrom } from 'rxjs';
 import { NATS_SERVICE } from 'src/config';
 import { Lesson } from './entities/lesson.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
+import { LessonParentEnabled } from './entities/lesson-parent-enabled.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
 import { LessonCompletedTest } from './entities/lesson-completed-test.entity';
+import { LessonPlayed } from './entities/lesson-played.entity';
 
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
@@ -25,7 +27,7 @@ import {
   ILessonParent,
   ILessonParentDetail,
 } from './interfaces';
-import { LessonLevel } from 'src/enum';
+import { LessonLevel, LessonParentName } from 'src/enum';
 
 @Injectable()
 export class LessonParentService {
@@ -39,6 +41,10 @@ export class LessonParentService {
     private readonly lessonCompletedTestRepository: Repository<LessonCompletedTest>,
     @InjectRepository(LessonParent)
     private readonly lessonParentRepository: Repository<LessonParent>,
+    @InjectRepository(LessonParentEnabled)
+    private readonly lessonParentEnabledRepository: Repository<LessonParentEnabled>,
+    @InjectRepository(LessonPlayed)
+    private readonly lessonPlayedRepository: Repository<LessonPlayed>,
   ) {}
 
   async create(
@@ -82,9 +88,9 @@ export class LessonParentService {
       const { lessonsLength, lessonsCompleted } =
         await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
 
-      const lessonsArray = lessonParent.isTest
-        ? lessonParent.lessons.sort(() => 0.5 - Math.random())
-        : lessonParent.lessons;
+      const lastLessonPlayedId = await this.lessonPlayedRepository.findOne({
+        where: { userUid, lessonParent: { id: lessonParent.id } },
+      });
 
       const result: ILessonParentDetail = {
         id: lessonParent.id,
@@ -94,7 +100,9 @@ export class LessonParentService {
         isTest: lessonParent.isTest,
         lessonsLength,
         lessonsCompleted,
-        lessons: transformSingleLessons(lessonsArray),
+        lastLessonPlayedId:
+          lastLessonPlayedId?.lastLessonPlayed ?? lessonParent.lessons[0].id,
+        lessons: transformSingleLessons(lessonParent.lessons),
       };
 
       return result;
@@ -131,7 +139,77 @@ export class LessonParentService {
       const shuffledLessons = allLessonsByLevel.sort(() => 0.5 - Math.random());
 
       // STEP 3: Pick the first N from the shuffled list
-      const selectedLessons = shuffledLessons.slice(0, length);
+      let selectedLessons: Lesson[] = [];
+      if (lessonParent.level === LessonLevel.LEVEL_1) {
+        const restLessons = shuffledLessons.slice(0, 4);
+
+        // on this point select one lesson from each category (Pawn, Knight, Bishop, Rook, Queen, King)
+        const pawnLessons = await this.lessonRepository.find({
+          where: {
+            level: lessonParent.level,
+            lessonParent: { name: LessonParentName.PAWN },
+          },
+          relations: { lessonParent: true },
+        });
+        const kingLessons = await this.lessonRepository.find({
+          where: {
+            level: lessonParent.level,
+            lessonParent: { name: LessonParentName.KING },
+          },
+          relations: { lessonParent: true },
+        });
+        const knightLessons = await this.lessonRepository.find({
+          where: {
+            level: lessonParent.level,
+            lessonParent: { name: LessonParentName.KNIGHT },
+          },
+          relations: { lessonParent: true },
+        });
+        const bishopLessons = await this.lessonRepository.find({
+          where: {
+            level: lessonParent.level,
+            lessonParent: { name: LessonParentName.BISHOP },
+          },
+          relations: { lessonParent: true },
+        });
+        const rookLessons = await this.lessonRepository.find({
+          where: {
+            level: lessonParent.level,
+            lessonParent: { name: LessonParentName.ROOK },
+          },
+          relations: { lessonParent: true },
+        });
+        const queenLessons = await this.lessonRepository.find({
+          where: {
+            level: lessonParent.level,
+            lessonParent: { name: LessonParentName.QUEEN },
+          },
+          relations: { lessonParent: true },
+        });
+        const randomPawnLesson =
+          pawnLessons[Math.floor(Math.random() * pawnLessons.length)];
+        const randomKingLesson =
+          kingLessons[Math.floor(Math.random() * kingLessons.length)];
+        const randomKnightLesson =
+          knightLessons[Math.floor(Math.random() * knightLessons.length)];
+        const randomBishopLesson =
+          bishopLessons[Math.floor(Math.random() * bishopLessons.length)];
+        const randomRookLesson =
+          rookLessons[Math.floor(Math.random() * rookLessons.length)];
+        const randomQueenLesson =
+          queenLessons[Math.floor(Math.random() * queenLessons.length)];
+        selectedLessons = [
+          randomKnightLesson,
+          randomRookLesson,
+          randomBishopLesson,
+          randomQueenLesson,
+          randomPawnLesson,
+          randomKingLesson,
+          ...restLessons,
+        ];
+      } else {
+        selectedLessons = shuffledLessons.slice(0, length);
+      }
 
       // STEP 4: get amount of lessons test completed
       const testCompletedRow = await this.lessonCompletedTestRepository.findOne(
@@ -149,6 +227,7 @@ export class LessonParentService {
         lessonsLength: length,
         lessonsCompleted: 0,
         lessons: transformSingleLessons(selectedLessons),
+        lastLessonPlayedId: lessonParent.lessons[0].id,
       };
 
       if (testCompletedRow) {
@@ -206,8 +285,7 @@ export class LessonParentService {
       lessonParents.sort((a, b) => a.id - b.id);
 
       const parents: ILessonParent[] = [];
-      let previousIsCompletedEnough = true;
-      let previousLessonParent = lessonParents[0];
+      let previousLessonParentId = lessonParents[0].id;
 
       for (const [index, lessonParent] of lessonParents.entries()) {
         let lessonsCompleted: number = 0;
@@ -242,16 +320,15 @@ export class LessonParentService {
         if (index === 0) {
           disabled = false;
         } else {
-          disabled = !previousIsCompletedEnough;
+          const lastLessonParentEnabledRow =
+            await this.lessonParentEnabledRepository.findOne({
+              where: { userUid, lessonParent: { id: previousLessonParentId } },
+            });
+
+          disabled = lastLessonParentEnabledRow ? false : true;
+
+          previousLessonParentId = lessonParent.id;
         }
-
-        // determine which factor (it helps with disabled or not)
-        const factor = previousLessonParent.isTest ? 0.7 : 0.5;
-        previousLessonParent = lessonParent;
-
-        // Prepare for next iteration
-        previousIsCompletedEnough =
-          lessonsLength > 0 && lessonsCompleted / lessonsLength >= factor;
 
         parents.push({
           id: lessonParent.id,
@@ -277,6 +354,7 @@ export class LessonParentService {
     }
   }
 
+  // PRIMARY ENDPOINT
   async updateLessonsCompleted(
     completeLessonParentDto: CompleteLessonParentDto,
   ): Promise<CompleteLessonResponse> {
@@ -301,7 +379,7 @@ export class LessonParentService {
         throw new BadRequestException('Duplicate lesson IDs detected.');
       }
 
-      // validate if it is not test
+      // STEP: when lesson parent is test
       if (lessonParent.isTest) {
         return await this.completeTestLessons(
           completedLessonIds,
@@ -310,6 +388,7 @@ export class LessonParentService {
         );
       }
 
+      // STEP: validate valid lessonIds belongs to parent
       const { validIds, validatedLessons } =
         await this.validateLessonExistAndAlsoBelongsToParent(
           lessonParent,
@@ -319,8 +398,44 @@ export class LessonParentService {
         throw new BadRequestException(`One or more invalid Lesson ID`);
       }
 
+      // separate logic from Level 1 to rest of levels
+      // if (lessonParent.level === LessonLevel.LEVEL_1) {
+      //   return await this.completeLevelOneLessons(
+      //     userUid,
+      //     lessonParent,
+      //     completedLessonIds,
+      //     validatedLessons,
+      //   );
+      // } else {
+      //   // TODO: make logic of rest of levels
+      // }
+
+      // changeMe!
+      return await this.completeLevelOneLessons(
+        userUid,
+        lessonParent,
+        completedLessonIds,
+        validatedLessons,
+      );
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  // SECONDARY ENDPOINT
+  private async completeLevelOneLessons(
+    userUid: number,
+    lessonParent: LessonParent,
+    completedLessonIds: number[],
+    validatedLessons: Lesson[],
+  ): Promise<CompleteLessonResponse> {
+    try {
       let earnedPointsByUser = 0;
 
+      // STEP: update lessons completed and earned points
       const newCompletedLessonArray: Promise<LessonCompleted>[] = [];
       // iterate over array of lessons ids
       for (const lesson of validatedLessons) {
@@ -355,15 +470,37 @@ export class LessonParentService {
         this.client.send('update.points.user', dataPoints),
       );
 
-      const { nextLessonParentId, nextLessonParentDisabled } =
-        await this.getNextLessonParentProps(lessonParent, userUid);
+      // STEP: update last lesson id played
+      const lastLessonPlayedRow = await this.lessonPlayedRepository.findOne({
+        where: { userUid, lessonParent: { id: lessonParent.id } },
+      });
+      if (lastLessonPlayedRow) {
+        // update last lesson played id
+        await this.lessonPlayedRepository.update(
+          { id: lastLessonPlayedRow.id },
+          { lastLessonPlayed: Math.max(...completedLessonIds) },
+        );
+      } else {
+        // create new last lesson played row
+        const newLastLessonPlayed = this.lessonPlayedRepository.create({
+          userUid,
+          lessonParent: lessonParent,
+          lastLessonPlayed: Math.max(...completedLessonIds),
+        });
+
+        await this.lessonPlayedRepository.save(newLastLessonPlayed);
+      }
+
+      // STEP: update lessonParentEnabled row
+      const isCurrentLessonParentCompleted =
+        await this.handleLessonParentEnabled(userUid, lessonParent);
 
       const response: CompleteLessonResponse = {
         lastPoints,
         earnedPoints,
         counter,
-        nextLessonParentId,
-        nextLessonParentDisabled,
+        nextLessonParentId: await this.getNextLessonParentId(lessonParent),
+        nextLessonParentDisabled: !isCurrentLessonParentCompleted,
       };
 
       return response;
@@ -375,6 +512,7 @@ export class LessonParentService {
     }
   }
 
+  // SECONDARY ENDPOINT
   private async completeTestLessons(
     completedLessonIds: number[],
     lessonParent: LessonParent,
@@ -434,15 +572,15 @@ export class LessonParentService {
       );
 
       // STEP 5: get next lesson parent
-      const { nextLessonParentId, nextLessonParentDisabled } =
-        await this.getNextLessonParentProps(lessonParent, userUid);
+      const isCurrentLessonParentCompleted =
+        await this.handleLessonParentEnabled(userUid, lessonParent);
 
       const response: CompleteLessonResponse = {
         lastPoints,
         earnedPoints,
         counter,
-        nextLessonParentId,
-        nextLessonParentDisabled,
+        nextLessonParentId: await this.getNextLessonParentId(lessonParent),
+        nextLessonParentDisabled: !isCurrentLessonParentCompleted,
       };
 
       return response;
@@ -454,10 +592,49 @@ export class LessonParentService {
     }
   }
 
-  private async getNextLessonParentProps(
+  // SECONDARY ENDPOINT
+  private async handleLessonParentEnabled(
+    userUid: number,
+    lessonParent: LessonParent,
+  ): Promise<boolean> {
+    try {
+      const lessonParentEnabledRow =
+        await this.lessonParentEnabledRepository.findOne({
+          where: { userUid, lessonParent: { id: lessonParent.id } },
+        });
+      if (lessonParentEnabledRow) {
+        return true;
+      }
+
+      // calculate if this lesson parent is enabled
+      const lessonParentHasBeenCompleted =
+        await this.isCurrentLessonParentCompleted(lessonParent, userUid);
+      if (lessonParentHasBeenCompleted) {
+        // create new lesson parent enabled row
+        const newLessonParentEnabled =
+          this.lessonParentEnabledRepository.create({
+            userUid,
+            lessonParent,
+          });
+
+        await this.lessonParentEnabledRepository.save(newLessonParentEnabled);
+
+        return true;
+      }
+
+      return false;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  private async isCurrentLessonParentCompleted(
     lessonParent: LessonParent,
     userUid: number,
-  ) {
+  ): Promise<boolean> {
     try {
       // STEP 1 get completed and length
       let lessonsLength = 0;
@@ -482,22 +659,32 @@ export class LessonParentService {
         lessonsCompleted = resultFromNormalLessons.lessonsCompleted;
       }
 
+      // TODO: changeMe! when implementing rest of levels
       let factor = lessonParent.isTest ? 0.7 : 0.5;
       // STEP 2 verify is open to play
-      const lessonParentIsOpenToPlay =
+      const isCurrentLessonParentCompleted =
         lessonsLength > 0 && lessonsCompleted / lessonsLength >= factor;
 
-      // STEP 3 get next lessonParentId
+      return isCurrentLessonParentCompleted;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  private async getNextLessonParentId(
+    lessonParent: LessonParent,
+  ): Promise<number | null> {
+    try {
       const nextLessonParent = await this.lessonParentRepository.findOne({
         where: { id: MoreThan(lessonParent.id) },
         order: { id: 'ASC' },
         select: ['id'], // We just need the ID
       });
 
-      return {
-        nextLessonParentId: nextLessonParent?.id || null, // null if doesn't exist,
-        nextLessonParentDisabled: !lessonParentIsOpenToPlay,
-      };
+      return nextLessonParent?.id || null; // null if doesn't exist,
     } catch (error) {
       throw new RpcException({
         status: 400,

@@ -27,6 +27,7 @@ This repo in github will host all chess Microservices.
 1. Every lesson parent opened should track last lesson played, even if 20 lessons was completed. (Table => LessonPlayed)
 2. The first time one lesson is played and completed should be stored. (Table => LessonCompleted)
 3. Points earned by user should increment global score one time the lesson was completed.
+4. To verify if a lesson_parent is completed or not was created LessonParentEnabled (it helps to determine list of lessons parents disabled or not)
 
 # LESSONS LEVEL 2 LOGIC
 

@@ -23,6 +23,7 @@ export interface ILessonParentDetail {
   lessonsCompleted: number;
   lessonsLength: number;
   lessons: ILessonList[];
+  lastLessonPlayedId: number | null;
 }
 
 export interface ILessonList {
