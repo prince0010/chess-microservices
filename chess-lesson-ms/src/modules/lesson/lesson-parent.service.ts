@@ -15,6 +15,7 @@ import { LessonPlayed } from './entities/lesson-played.entity';
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 import { getTestLessonLengthByLevel } from './helpers/get-test-lesson-length-by-level.helper';
+import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
@@ -137,7 +138,7 @@ export class LessonParentService {
       }
 
       // STEP 2: Shuffle the lessons randomly
-      const shuffledLessons = allLessonsByLevel.sort(() => 0.5 - Math.random());
+      const shuffledLessons = shuffleRandomLessons(allLessonsByLevel);
 
       // STEP 3: Pick the first N from the shuffled list
       let selectedLessons: Lesson[] = [];
@@ -208,6 +209,8 @@ export class LessonParentService {
           randomKingLesson,
           ...restLessons,
         ];
+
+        selectedLessons = selectedLessons.sort(() => 0.5 - Math.random());
       } else {
         selectedLessons = shuffledLessons.slice(0, length);
       }
