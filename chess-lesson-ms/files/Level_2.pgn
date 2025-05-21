@@ -1,0 +1,3704 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7k/8/8/8/8/6K1/N7 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.01.08"]
+[SourceDate "2013.01.08"]
+
+{Find the shortest way for the knight to d7!} 1. Nb3 Kg6 2. Nc5 Kg5 3. Nd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6k1/8/8/2K5/8/4B3 w - - 0 1"]
+[PlyCount "3"]
+
+{Find the shortest way for the bishop to c7!} 1. Bg3 Kf5 2. Bc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/5k2/8/8/4K2R/8 w - - 0 1"]
+[PlyCount "3"]
+
+{Find the shortest possible way to get the rook to a4!} 1. Rh4 Kg5 2. Ra4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/8/P1k1K3/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceDate "2013.02.05"]
+
+{Try to make a queen from the a-pawn!} 1. a4 Kb3 2. a5 Kb4 3. a6 Kb5 4. a7 Kb6
+5. a8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/2p5/2P5/8/3K4/8/2Q5 w - - 0 1"]
+[PlyCount "1"]
+
+{Give a check in one move!} 1. Qg5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/8/8/R3K3 w Q - 0 1"]
+[PlyCount "1"]
+
+{Castle queenside!} 1. O-O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7k/8/3K4/8/8/5N2 w - - 0 1"]
+[PlyCount "3"]
+
+{Transfer your knight to d5 on the shortest way!} 1. Ne3 Kg5 2. Nd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3K3k/2B5/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+
+{Get your bishop to e8 on the shortest way!} 1. Bb5 Kg6 2. Be8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/4K3/4R3/8 w - - 0 1"]
+[PlyCount "3"]
+
+{Find the shortest way for the rook to c8!} 1. Rc2 Kd5 2. Rc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/4p3/8/8/4P3/3K4/8/4Q3 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.05"]
+
+{Give a check in one move!} 1. Qa5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/8/8/8/4K2R w K - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.05"]
+
+{Castle kingside!} 1. O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2P3k1/2p5/6K1/8/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.02.05"]
+
+{Promote your pawn faster than your opponent!} 1. c6 c3 2. c7 c2 3. c8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/8/5K1p/7k w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.05"]
+
+{Squeeze the Black king to the corner!} 1. Kf1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/5k2/3K4/3N4/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.02.05"]
+
+{Find the shortest way for the knight to a8!} 1. Nc4 Kf5 2. Nb6 Ke6 3. Na8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/3p4/8/8/3P4/3K4/1B6/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.05"]
+
+{Give a check in one move!} 1. d5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/k2PR3/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.05"]
+
+{Give a check in one move!} 1. d4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k3p2/8/8/8/1K3P2/8/7Q w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.05"]
+
+{Give a check in one move!} 1. f4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/k7/5P2/K7/8/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceDate "2013.02.05"]
+
+{Try to promote a queen!} 1. f5 Kb5 2. f6 Kc6 3. f7 Kd7 4. f8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/6p1/6P1/5K2/6Q1/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.05"]
+
+{Give a check in one move!} 1. Qc3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/8/3K4/2N5/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.02.06"]
+
+{Get the knight to g4 on the shortest way!} 1. Ne3 Kf6 2. Ng4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/3K4/2B5/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.02.06"]
+
+{Get the bishop to c5 on the shortest way!} 1. Bb4+ Ke6 2. Bc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7R/8/8/8/2k1K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Give a check in one move!} 1. Rc7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/3K4/8/Q7 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Move with the queen to a8!} 1. Qa8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/3K4/4P3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Give a check to the king!} 1. e4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/3K4/8/8/4Q3 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Move the queen to e5!} 1. Qe5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/4K3/8/8/5N2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.??.??"]
+[SourceDate "2013.02.06"]
+
+{Reach the d5 square with the knight on the shortest way!} 1. Ne3 Kf6 2. Nd5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1B6/6k1/8/8/4K3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Give a check in one move!} 1. Be5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/5k2/8/4K3/8/1R6 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Move the rook to b6!} 1. Rb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/3K3P/8/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.02.06"]
+
+{Try to promote the pawn!} 1. h6 Ke7 2. h7 Kf7 3. h8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/4K1k1/8/N7 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.02.06"]
+
+{Find the shortest way to d5 with the knight!} 1. Nc2 Kg4 2. Nb4 Kf5 3. Nd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/2K5/8/4B3/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.02.06"]
+
+{Get the bishop to a6 in two moves!} 1. Bd3 Kc8 2. Ba6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k1K2/8/8/8/6R1 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Give a check in one move!} 1. Rd1+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/4K3/1Q6/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Move the queen to g3!} 1. Qg3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2K4k/8/8/8/N7 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.02.06"]
+
+{Get the knight to a6 in three moves!} 1. Nc2 Kg5 2. Nb4 Kf5 3. Na6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/3K4/8/5B2/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.02.06"]
+
+{Get the bishop to h6 in two moves!} 1. Be3 Kf8 2. Bh6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/4K3/4R3/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.02.06"]
+
+{Get the rook to c6 in two moves!} 1. Rc4 Ke7 2. Rc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3K1k2/8/8/8/6Q1 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Move the queen to b6!} 1. Qb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/1P4k1/8/6K1/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceDate "2013.02.06"]
+
+{Try to make a queen!} 1. b5 Kf5 2. b6 Ke6 3. b7 Kd7 4. b8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5k2/8/3K4/8/8/6N1 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.02.06"]
+
+{Get the knight to v5 in three moves!} 1. Ne2 Kf5 2. Nc3 Ke6 3. Nb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/8/2K5/8/6B1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.02.06"]
+
+{Transfer the bishop to h8 in two moves!} 1. Bd4 Kd5 2. Bh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1k1K4/8/8/8/7R w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Give a check in one move!} 1. Rb1+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/6K1/8/8/8/8/6Q1 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Move your queen to d4!} 1. Qd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k1K1/8/8/5P2/8/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.02.06"]
+
+{Promote the pawn on the fastest way!} 1. f6 Kd7 2. f7 Ke6 3. f8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3K1k2/8/2N5/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.02.06"]
+
+{Find the shortest way to c7 for the knight!} 1. Nb5 Kf6 2. Nc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6k1/8/4K3/1B6/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.02.06"]
+
+{Drive the bishop to b7 in two moves!} 1. Bd5 Kf6 2. Bb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/5K1R/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.02.06"]
+
+{Get the rook to e6 in two moves!} 1. Rh6+ Kd5 2. Re6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/2K5/8/8/8/6Q1 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.06"]
+
+{Move the queen to g7!} 1. Qg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/p7/1k6/3K4/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.02.06"]
+
+{Run with the king to a1!} 1. Kc3 a5 2. Kb2 a4 3. Ka1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/8/K5kP/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceDate "2013.02.06"]
+
+{Try to make a queen from the h-pawn!} 1. h4 Kg3 2. h5 Kg4 3. h6 Kg5 4. h7 Kg6
+5. h8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7k/2K5/8/8/8/7N w - - 0 1"]
+[PlyCount "7"]
+[SourceDate "2013.02.06"]
+
+{Find the shortest way for the knight ot a6!} 1. Nf2 Kg5 2. Nd3 Kf5 3. Nb4 Ke5
+4. Na6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1P6/3k4/8/4K3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Promote the pawn into a knight!} 1. b8=N *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7P/8/4k3/2K5/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Promote the pawn into a bishop!} 1. h8=B+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5P2/2k5/8/8/8/8/4K3 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Promote the pawn into a rook!} 1. f8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p7/1P6/4k3/8/4K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Eat the black pawn!} 1. bxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/8/8/2K5/N7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Bring the knight to b3!} 1. Nb3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/8/8/8/2K5/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Take the white king to the a5 square on the shortest way!} 1. Kb4 Kf7 2. Ka5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6k1/8/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white king to d1!} 1. Kd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/8/8/4K3/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white king to f4!} 1. Kf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/8/2N1K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white knight to e4!} 1. Ne4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/2K5/8/6N1/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white knight to f4!} 1. Nf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/N5k1/8/6K1/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white knight to c8!} 1. Nc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/N4k2/8/5K2/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white knight to b6!} 1. Nb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k7/8/8/3N4/8/8/K7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white knight to e6!} 1. Ne6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6k1/8/3N4/8/8/2K5 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white knight to b5!} 1. Nb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/8/4K3/8/4B3 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Bring the white bishop to the b4 square!} 1. Bb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/3B4/2K5/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white bishop in two moves to the c1 square!} 1. Be3 Kd5 2. Bc1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/7B/8/3k4/8/3K4 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Give a check to the black king on the e2 square!} 1. Be2+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/3K4/8/8/3B4 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white bishop to h5!} 1. Bh5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/4k3/8/4K3/B7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white bishop to the h8 square!} 1. Bh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6k1/8/2K5/8/7B w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white bishop to the a8 square!} 1. Ba8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/8/8/8/4B3/4K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white bishop to b1!} 1. Bb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/8/8/B7/K7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white bishop to the f7 square!} 1. Bf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/5k1B/8/8/5K2 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white bishop to d8!} 1. Bd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5k2/8/B7/2K5/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white bishop to the e8 square!} 1. Be8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/8/8/8/8/8/R6K w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white rook to a7!} 1. Ra7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/8/8/8/8/8/1K5R w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white rook to h8!} 1. Rh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/8/8/6K1/8/4R3 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white rook to the e5 square!} 1. Re5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/8/6K1/8/6R1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white rook to the b1 square!} 1. Rb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/8/3K4/8/8/7R/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white rook to f3!} 1. Rf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/8/8/8/8/2KR4 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white rook to the d6 square!} 1. Rd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6k1/R7/8/8/6K1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Take the white rook to e4!} 1. Re4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/8/8/3k4/8/3K4/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white rook to h8!} 1. Rh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6k1/8/6K1/7R/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Take the white rook to c2!} 1. Rc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/4KQ2/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to d2!} 1. Qd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5k2/8/3K4/8/6Q1/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to g8!} 1. Qg8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/4K3/6Q1/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white queen to the a8 square!} 1. Qa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/2K5/8/8/Q7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to the h8 square!} 1. Qh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/Q7/8/5k2/8/6K1/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Take the white queen to the e3 square!} 1. Qe3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/3K4/8/8/7Q/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Take the white queen to the b8 square!} 1. Qb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/5k2/1Q6/5K2/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white queen to the d5 square!} 1. Qd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/k7/8/K7/8/3Q4 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to d7!} 1. Qd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/8/7Q/7K/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to b3!} 1. Qb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5N2/8/8/3k4/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white knight to h8!} 1. Nh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7B/8/k7/8/8/8/7K/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white bishop to c3!} 1. Bc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/8/8/7R/4K3 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white rook to a2!} 1. Ra2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/4N3/4K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white knight to the d2 square} 1. Nd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/2Q5/2K5/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to the g4 square!} 1. Qg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/k7/8/3P2K1/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white pawn to the d4 square!} 1. d4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/7k/8/7K/P7/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Promote the white pawn into a queen in only 5 moves!} 1. a4 Kg5 2. a5 Kf5 3.
+a6 Ke6 4. a7 Kd7 5. a8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1k6/8/8/K6P/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Bring the white pawn to the h4 square in only 1 move!} 1. h4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/4K3/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Bring the white king to h1 as fast as possible!} 1. Kf3 Kf5 2. Kg2 Kg4 3. Kh1
+*
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/3K4/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Bring the white king to a1 as fast as possible} 1. Kc3 Kc5 2. Kb2 Kb4 3. Ka1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/k7/8/8/2K5/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Take the white king to h8 as fast as possible!} 1. Kd4 Kb7 2. Ke5 Kc6 3. Kf6
+Kd7 4. Kg7 Ke8 5. Kh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6k1/4K3/8/8/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Bring the white king to a8 as fast as possible} 1. Kd5 Kf6 2. Kc6 Ke7 3. Kb7
+Kd8 4. Ka8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/8/8/5K2/8/8/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Transfer the white king to b8 on the shortest route} 1. Ke5 Kg8 2. Kd6 Kf7 3.
+Kc7 Ke8 4. Kb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/8/2K5/3B4/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Bring the white bishop to f8 in two moves} 1. Bh6 Kc6 2. Bf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k6/8/8/3K4/8/3B4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Bring the white bishop to g6 in two moves} 1. Bh5 Kc6 2. Bg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/8/6K1/5B2/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to g5 in two moves} 1. Be3 Kd5 2. Bg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/8/4K3/8/2B5/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to h4 in two moves} 1. Be1 Kc6 2. Bh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/8/1K6/B7/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to h7 in two moves} 1. Bc2 Kd6 2. Bh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5k2/8/3K4/8/4N3/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to b5 in two moves} 1. Nc3 Ke6 2. Nb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/8/8/8/2K5/N7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white knight to d4 in two moves} 1. Nb3 Ke6 2. Nd4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/4K3/8/5N2/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to c7 in two moves} 1. Nd5 Kf8 2. Nc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/1N6/3K4/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Drive the white knight to f3 in two moves} 1. Nd4 Kd6 2. Nf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/8/8/3N4/5K2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to h4 in two moves} 1. Nf5 Kc6 2. Nh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/8/4K3/8/3N4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Bring the white knight to g4 in two moves} 1. Nf2 Kd5 2. Ng4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/4K3/8/3N4/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to g5 in two moves} 1. Nf3 Ke7 2. Ng5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/8/1K6/3N4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to a7 in two moves} 1. Nc6 Kf6 2. Na7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/8/8/6K1/4N3/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white knight to g8 in two moves} 1. Nf6 Kc7 2. Ng8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k6/4K3/8/5N2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white knight to f7 in two moves} 1. Ng5 Kc6 2. Nf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/8/8/6N1/4K3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white knight to c2 in two moves} 1. Ne3 Ke6 2. Nc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/4K1R1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to a1 in two moves} 1. Rg1 Kd5 2. Ra1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6k1/8/5RK1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to h2 in two moves} 1. Rf2 Kg6 2. Rh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/3K4/3R4/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white rook to g7 in two moves} 1. Rg5 Ke8 2. Rg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/8/8/3KR3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Bring the white rook to a8 in two moves} 1. Re8 Kc6 2. Ra8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/4k3/8/8/RK6 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Take the white rook to h8 in two moves} 1. Ra8 Kf5 2. Rh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/4K3/8/4R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to h7 in two moves} 1. Rh1 Ke5 2. Rh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/8/4KR2/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to a3 in two moves} 1. Rf3 Ke4 2. Ra3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/2K5/2R5/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to a8 in two moves} 1. Ra2 Kd6 2. Ra8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/6K1/6R1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to b8 in two moves} 1. Rb3 Kc6 2. Rb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/7k/8/8/4K1R1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to c8 in two moves} 1. Rg8 Kh6 2. Rc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/1k6/8/2K4R/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white rook to b7 in two moves} 1. Rh7 Kb5 2. Rb7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/8/6KR/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to a1 in two moves} 1. Rh1 Kf4 2. Ra1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/3k4/8/8/1KR5 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to a6 in two moves} 1. Rc6 Ke5 2. Ra6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1RK5/8/3k4/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to h8 square in two moves} 1. Kb7 Ke5 2. Rh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/5k2/8/3RK3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to h1 in two moves} 1. Kd2 Ke4 2. Rh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/6k1/8/5K2/4B3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to h4 in two moves} 1. Ke3 Kf5 2. Bh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/8/1K6/B7/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to f5 in two moves} 1. Bb1 Kd4 2. Bf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/1k6/1B6/K7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to a1 in two moves} 1. Kb1 Kc4 2. Ka1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "B7/8/8/8/8/6k1/8/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white bishop to h1 in two moves} 1. Kg1 Kf4 2. Bh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "K7/8/1k6/8/4B3/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white bishop to a8 in two moves} 1. Kb8 Kc5 2. Ba8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7K/8/6k1/8/8/2B5/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white bishop to h8 in two moves} 1. Kg8 Kf5 2. Bh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/6k1/5N2/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to the h1 square in two moves} 1. Kg1 Kf3 2. Nh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/1N6/2k5/K7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to the a1 square in two moves} 1. Ka2 Kc3 2. Na1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "K7/2N5/1k6/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to the a8 square in two moves} 1. Kb8 Kc6 2. Na8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7K/5k2/6N1/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to the h8 square in two moves} 1. Kh7 Kf6 2. Nh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/8/8/8/4K2R w K - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Castle kingside} 1. O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/8/8/R3K3 w Q - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Castle queenside} 1. O-O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/8/2PK4/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white pawn to c5 in two moves} 1. c4 Kc6 2. c5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/6P1/8/3K4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Promote the white pawn into a bishop in two moves} 1. g7 Kd7 2. g8=B *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k5P/8/1K6/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Promote the white pawn into a knight in two moves} 1. h7 Kc6 2. h8=N *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/1P6/5K2/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Promote the white pawn into a rook in two moves} 1. b7 Ke7 2. b8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/1P6/5K2/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Promote the white pawn into a rook in two moves} 1. b7 Ke7 2. b8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2P5/8/7k/8/6K1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Promote the white pawn into a queen in two moves} 1. c7 Kg5 2. c8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4P3/k7/8/K7/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Promote the white pawn into a bishop in two moves} 1. e7 Kb6 2. e8=B *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/8/3K4/8/2N5/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to f6 in two moves} 1. Ne4 Kd7 2. Nf6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k6/8/8/8/5K2/7N w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to e4 in two moves} 1. Ng3 Kc5 2. Ne4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4N3/8/8/3k4/8/4K3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to h7 in two moves} 1. Nf6+ Ke6 2. Nh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1N6/7k/8/8/5K2/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to d4 in two moves} 1. Nc6 Kg6 2. Nd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/3K1N2/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to h8 in two moves} 1. Ng6 Ke6 2. Nh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/8/4KN2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to b1 in two moves} 1. Nd2 Kd5 2. Nb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/4K3/2N5/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to g3 in two moves} 1. Ne2 Kd6 2. Ng3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/8/8/8/KQ6 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to h7} 1. Qh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/8/8/8/8/8/1Q4K1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to b8} 1. Qb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/8/8/6K1/8/8/3Q4 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Transfer the white queen to d6} 1. Qd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/3K2Q1/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to d1} 1. Qd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/2QK4/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Transfer the white queen to g7} 1. Qg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6k1/8/7K/8/7Q w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Transfer the white queen to c6} 1. Qc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/2QK4/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to g1} 1. Qg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k1KQ/8/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to c1} 1. Qc1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/8/8/7Q/8/4K3 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white queen to a3} 1. Qa3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/Q7/1K6/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white queen to h4} 1. Qh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/4K3/8/8/7Q w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white queen to e1} 1. Qe1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/5k2/8/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to h1 in two moves} 1. Kh2 Kg4 2. Rh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/k7/8/1K5R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to a1 in two moves} 1. Kc2 Kb4 2. Ra1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/K7/2k5/8/R7/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to a8 in two moves} 1. Kb8 Kb6 2. Ra8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R3K3/8/3k4/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to g8 in two moves} 1. Kf7 Ke5 2. Rg8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3K1R2/8/4k3/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to c8 in two moves} 1. Kc7 Kd5 2. Rc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7R/7K/5k2/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to h4 in two moves} 1. Kg6 Ke3 2. Rh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/5k2/7K/7R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to h8 in two moves} 1. Kg1 Kg4 2. Rh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/6k1/8/5K2 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white king to a6 in the shortest way} 1. Ke2 Kf4 2. Kd3 Ke5 3. Kc4 Kd6
+4. Kb5 Kc7 5. Ka6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/4k3/8/4K3 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Transfer the white king to a1 on the shortest way} 1. Kd1 Kd3 2. Kc1 Kc3 3.
+Kb1 Kb3 4. Ka1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/3K4/8/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white king to a2 on the shortest way} 1. Kc4 Ke6 2. Kb3 Kd5 3. Ka2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/8/8/5k1K w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Transfer the white king to h8 on the shortest way} 1. Kh2 Kf2 2. Kh3 Kf3 3.
+Kh4 Kf4 4. Kh5 Kf5 5. Kh6 Kf6 6. Kh7 Kf7 7. Kh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/8/1Bk5/K7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to a1 in two moves} 1. Ka2 Kd3 2. Ba1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k2B1/8/4K3/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to c2 in two moves} 1. Bh7 Kc7 2. Bc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/2k5/8/3K4/4B3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white bishop to b8 in two moves} 1. Bg3 Kd5 2. Bb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/8/2K5/1B6/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white bishop to b4 in two moves} 1. Ba3 Kd7 2. Bb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6K1/7B/5k2/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white bishop to a3 in two moves} 1. Bc1 Ke4 2. Ba3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/8/8/8/8/8/R3K2R w KQ - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Castle to the kingside} 1. O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/4k3/8/8/R3K2R w KQ - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Castle to the queenside} 1. O-O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/8/8/8/8/8/4P3/4K3 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white pawn two squares forward} 1. e4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/1P6/8/8/8/4K3/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Promote the white pawn into a rook} 1. b7 Kf7 2. b8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/4R3/3K4/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to d3 in two moves} 1. Re3 Kd7 2. Rd3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/6KR/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to c1 in two moves} 1. Rh1 Kf6 2. Rc1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/8/3K3R/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to c6 in two moves} 1. Rh6 Kg7 2. Rc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6k1/8/2KR4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to b8 in two moves} 1. Rd8 Kf6 2. Rb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/7K/5k2/7R/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to h6 in two moves} 1. Kg6 Ke5 2. Rh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k6/8/RK6/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to g2 in two moves} 1. Ra2 Kc6 2. Rg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/8/2k5/4KR2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to e7 in two moves} 1. Rf7 Kd3 2. Re7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/8/8/RK6 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to h6 in two moves} 1. Ra6 Kf5 2. Rh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/4k3/8/4K1R1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white rook to b8 in two moves} 1. Rg8 Kd5 2. Rb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/8/8/8/8/5KR1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to e4 in two moves} 1. Rg4 Kc6 2. Re4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/6k1/8/3K3R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to a5 in two moves} 1. Rh5 Kg4 2. Ra5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5KR1/8/4k3/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to b8 in two moves} 1. Kg7 Kd7 2. Rb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/5k2/8/4K1R1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white rook to c1 in two moves} 1. Kd2 Ke4 2. Rc1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k6/5K2/6B1/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to e8 in two moves} 1. Bh5 Kc7 2. Be8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/8/5K2/4B3/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to g8 in two moves} 1. Bd5 Ke7 2. Bg8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/8/4K3/3B4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white bishop to f8 in two moves} 1. Bc5 Kc6 2. Bf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/3K4/8/8/6B1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white bishop to b8 in two moves} 1. Bh2 Kd7 2. Bb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/8/4K3/8/4B3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white bishop to a1 in two moves} 1. Bc3 Kd5 2. Ba1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/4B3/8/2K5 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white bishop to a3 in two moves} 1. Bc5 Kc6 2. Ba3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/5k2/7K/6B1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white bishop to d8 in two moves} 1. Bc7 Ke6 2. Bd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/8/1B1K4/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white bishop to f7 in two moves} 1. Be8 Kd8 2. Bf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/3k4/1K6/B7/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white bishop to c2 in two moves} 1. Bb1 Ke3 2. Bc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1k6/5K2/4B3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white bishop to h4 in two moves} 1. Bf2 Kc4 2. Bh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/2k5/4K3/8/N7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Move the white knight to e1 in two moves} 1. Nc2 Kc3 2. Ne1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/8/6K1/4N3/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to h8 in two moves} 1. Nf7 Kf8 2. Nh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/4K3/8/5N2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to c6 in two moves} 1. Nd4 Ke7 2. Nc6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/2K5/4N3/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to a2 in two moves} 1. Nc1 Ke4 2. Na2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/4K3/8/8/5N2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to h1 in two moves} 1. Ng3 Kf6 2. Nh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/8/6N1/4K3/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to c3 in two moves} 1. Ne4 Kd5 2. Nc3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k5/8/1K6/8/3N4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to a2 in two moves} 1. Nc3 Kd6 2. Na2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K2/3N4/8/8/3k4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white knight to h7 in two moves} 1. Nf6 Ke5 2. Nh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3K4/5N2/8/8/5k2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to b6 in two moves} 1. Nd5 Ke4 2. Nb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N4/5K2/8/8/8/5k2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Transfer the white knight to g7 in two moves} 1. Ne6 Ke4 2. Ng7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6k1/4K3/Q7/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to h4} 1. Qh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/6K1/8/2Q5 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to h6} 1. Qh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/1K6/1Q6/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to g8} 1. Qg8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/4K3/8/8/8/4Q3 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to h4} 1. Qh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/7K/8/8/7Q w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to c6} 1. Qc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/4k3/8/2K5/2Q5 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to g5} 1. Qg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/3K4/4Q3/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to e8} 1. Qe8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/3K4/2Q5/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to c8} 1. Qc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6k1/8/8/2K5/5Q2/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to a7} 1. Qa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/6K1/8/8/1Q6 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white queen to b8} 1. Qb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k3P2/8/2K5/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Promote the white pawn into a queen} 1. f7 Kc7 2. f8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7k/1P6/7K/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Promote the white pawn into a bishop} 1. b7 Kg7 2. b8=B *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6P1/8/6k1/8/6K1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Promote the white pawn into a rook} 1. g7 Kf5 2. g8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/8/8/8/2K5/4R3 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Move the white rook to e8} 1. Re8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6k1/8/6K1/8/6B1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.15"]
+[SourceDate "2013.04.15"]
+
+{Get the white bishop to b6} 1. Bb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/8/3KQ3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.04.16"]
+
+{Give a check with the queen on g5} 1. Qg5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3K4/5N2/8/5k2/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.04.16"]
+
+{Transfer the knight to a8 in the shortest way} 1. Ne6 Ke3 2. Nc7 Kd3 3. Na8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/5k2/7K/7R/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the rook to h8 in two moves} 1. Kg2 Kg4 2. Rh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/2K4P/8/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.04.16"]
+
+{Promote the pawn into a queen} 1. h6 Ke7 2. h7 Kf7 3. h8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3P4/1k1K4/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.04.16"]
+
+{Promote the pawn into a rook} 1. d6 Kb5 2. d7 Kc6 3. d8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/8/4PK2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the white king to e3 in two moves} 1. e4 Ke5 2. Ke3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/8/8/5KP1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Get the king to g3 in two moves} 1. g4 Kg6 2. Kg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/8/1KP5/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.04.16"]
+
+{Give a check to the black king in one move} 1. c6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/k7/8/PK6/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.19"]
+
+{Get the white king to a2 in two moves} 1. a3 Ka5 2. Ka2 *
