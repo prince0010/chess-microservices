@@ -18,4 +18,8 @@ export class CreateLessonParentDto {
   @IsBoolean()
   @IsNotEmpty()
   showHint: boolean;
+
+  @IsBoolean()
+  @IsNotEmpty()
+  isTest: boolean = false;
 }

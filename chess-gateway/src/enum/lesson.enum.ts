@@ -31,6 +31,7 @@ export enum LessonParentName {
   KNIGHT = 'knight',
   ROOK = 'rook',
   QUEEN = 'queen',
+  TEST_LEVEL_1 = 'test 1',
 }
 
 export enum LessonParentTestName {

@@ -101,7 +101,8 @@ export class LessonParentService {
         lessonsLength,
         lessonsCompleted,
         lastLessonPlayedId:
-          lastLessonPlayedId?.lastLessonPlayed ?? lessonParent.lessons[0].id,
+          lastLessonPlayedId?.lastLessonPlayed ??
+          lessonParent.lessons[0].id - 1,
         lessons: transformSingleLessons(lessonParent.lessons),
       };
 
@@ -226,8 +227,8 @@ export class LessonParentService {
         isTest: lessonParent.isTest,
         lessonsLength: length,
         lessonsCompleted: 0,
+        lastLessonPlayedId: 0,
         lessons: transformSingleLessons(selectedLessons),
-        lastLessonPlayedId: lessonParent.lessons[0].id,
       };
 
       if (testCompletedRow) {
