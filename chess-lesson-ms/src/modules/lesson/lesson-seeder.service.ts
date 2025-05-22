@@ -52,24 +52,20 @@ export class LessonSeederService {
     insertLessonDto: InsertLessonDto,
     lessonParent: LessonParent,
   ): Promise<string> {
-    const { levelName } = insertLessonDto;
+    const { levelName, lessonParentName } = insertLessonDto;
 
     try {
       const lessonRepository = this.dataSource.getRepository(Lesson);
-      let pathFile: string = '';
-      // changeMe! in the future
-      if (levelName === LessonLevel.LEVEL_1) {
-        pathFile = '/usr/src/app/files/lesson_level_1.pgn';
-      } else {
-        pathFile = 'path file missing';
-      }
+
+      const filename = this.getFilename(lessonParentName);
+      let pathFile: string = `/usr/src/app/files/${filename}`;
 
       // Parse PGN file
       const lessons = parseNormalPgnFile(pathFile, levelName, lessonParent);
 
       if (lessons.length === 0) {
         throw new BadRequestException(
-          'PGN Lessons file is empty. No content inside that PGN file',
+          `PGN Lessons with name: ${filename} file is empty. No content inside that PGN file`,
         );
       }
 
@@ -140,6 +136,9 @@ export class LessonSeederService {
         break;
       case LessonParentName.QUEEN:
         filename = LessonFilename.QUEEN;
+        break;
+      case LessonParentName.LEVEL_2:
+        filename = LessonFilename.LEVEL_2;
         break;
 
       default:

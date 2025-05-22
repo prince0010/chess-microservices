@@ -1,7 +1,3 @@
-export enum LessonDefaultPoints {
-  POINTS_PER_LESSON = 10,
-}
-
 export enum LessonParentTestName {
   TEST_LEVEL_1 = 'test 1',
   TEST_LEVEL_2 = 'test 2',
@@ -16,6 +12,7 @@ export enum LessonParentTestName {
 }
 
 export enum LessonParentName {
+  // Level 1
   PAWN = 'pawn',
   KING = 'king',
   BISHOP = 'bishop',
@@ -23,6 +20,9 @@ export enum LessonParentName {
   ROOK = 'rook',
   QUEEN = 'queen',
   TEST_LEVEL_1 = 'test 1',
+  // Level 2
+  LEVEL_2 = 'level 2',
+  TEST_LEVEL_2 = 'test 2',
 }
 
 export enum LessonFilename {
@@ -32,4 +32,5 @@ export enum LessonFilename {
   KNIGHT = 'Level_1_Knight.pgn',
   ROOK = 'Level_1_Rook.pgn',
   QUEEN = 'Level_1_Queen.pgn',
+  LEVEL_2 = 'Level_2.pgn',
 }

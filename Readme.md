@@ -31,6 +31,10 @@ This repo in github will host all chess Microservices.
 
 # LESSONS LEVEL 2 LOGIC
 
+## Important clarification
+
+1. The Table `LessonParentEnabled` means that lesson parent has been completed and and the next one lesson_parent disabled property is at false.
+
 ## Points logic
 
 1. Player has 30 seconds to solve the puzzle. Time is running down.

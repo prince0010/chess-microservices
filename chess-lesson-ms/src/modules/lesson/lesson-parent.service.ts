@@ -16,6 +16,7 @@ import { transformSingleLessons } from './helpers/transform-lesson.helper';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 import { getTestLessonLengthByLevel } from './helpers/get-test-lesson-length-by-level.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
+import { getFactorLesson } from './helpers/factor-lesson.helper';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
@@ -366,7 +367,10 @@ export class LessonParentService {
       userUid,
       lessonParentId,
       completedLessonIds = [],
+      earnedPoints = null,
+      challengeAchieved = null,
     } = completeLessonParentDto;
+
     try {
       // verify lesson parent
       const lessonParent = await this.lessonParentRepository.findOne({
@@ -403,24 +407,145 @@ export class LessonParentService {
       }
 
       // separate logic from Level 1 to rest of levels
-      // if (lessonParent.level === LessonLevel.LEVEL_1) {
-      //   return await this.completeLevelOneLessons(
-      //     userUid,
-      //     lessonParent,
-      //     completedLessonIds,
-      //     validatedLessons,
-      //   );
-      // } else {
-      //   // TODO: make logic of rest of levels
-      // }
+      if (lessonParent.level === LessonLevel.LEVEL_1) {
+        return await this.completeLevelOneLessons(
+          userUid,
+          lessonParent,
+          completedLessonIds,
+          validatedLessons,
+        );
+      }
 
-      // changeMe!
-      return await this.completeLevelOneLessons(
+      // Level 2, 3, 4, 5 ...
+      return await this.completeLessonsFromAllLevelsExceptLevel1(
         userUid,
         lessonParent,
         completedLessonIds,
         validatedLessons,
+        earnedPoints,
+        challengeAchieved,
       );
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  // SECONDARY ENDPOINT Level 2, 3, 4, 5 ...
+  private async completeLessonsFromAllLevelsExceptLevel1(
+    userUid: number,
+    lessonParent: LessonParent,
+    completedLessonIds: number[],
+    validatedLessons: Lesson[],
+    earnedPointsFromFrontend: number | null,
+    challengeAchieved: boolean | null,
+  ): Promise<CompleteLessonResponse> {
+    try {
+      if (
+        !earnedPointsFromFrontend ||
+        challengeAchieved === null ||
+        challengeAchieved === undefined
+      ) {
+        throw new BadRequestException(
+          `Properties earnedPoints and challengeAchieved are required in Body data for this level: ${lessonParent.level}.`,
+        );
+      }
+
+      // STEP 1: update lesson completed rows
+      const newCompletedLessonArray: Promise<LessonCompleted>[] = [];
+      for (const lesson of validatedLessons) {
+        const completedLessonExists =
+          await this.lessonCompletedRepository.findOne({
+            where: { lesson: { id: lesson.id }, userUid },
+          });
+
+        // only create a new row of lesson_completed if it was not completed yet
+        if (!completedLessonExists) {
+          const newLessonCompleted = this.lessonCompletedRepository.create({
+            lesson,
+            userUid,
+          });
+
+          newCompletedLessonArray.push(
+            this.lessonCompletedRepository.save(newLessonCompleted),
+          );
+        }
+      }
+
+      await Promise.all(newCompletedLessonArray);
+
+      // STEP 2: verify if data come with challenge achieved
+      // if challenge achieved we can not verify if lesson parent is completed for the same way we divide lessonsCompleted/lessonsLength because challenge was achieved
+      if (challengeAchieved) {
+        const lessonParentEnabledRow =
+          await this.lessonParentEnabledRepository.findOne({
+            where: { userUid, lessonParent: { id: lessonParent.id } },
+          });
+
+        if (!lessonParentEnabledRow) {
+          // create new lesson parent enabled row
+          const newLessonParentEnabled =
+            this.lessonParentEnabledRepository.create({
+              userUid,
+              lessonParent,
+            });
+
+          await this.lessonParentEnabledRepository.save(newLessonParentEnabled);
+        }
+      }
+
+      // STEP 3: in both cases we need to store last lesson played to track the progress
+      const lastLessonPlayedRow = await this.lessonPlayedRepository.findOne({
+        where: { userUid, lessonParent: { id: lessonParent.id } },
+      });
+      if (lastLessonPlayedRow) {
+        // update last lesson played id
+        await this.lessonPlayedRepository.update(
+          { id: lastLessonPlayedRow.id },
+          { lastLessonPlayed: Math.max(...completedLessonIds) },
+        );
+      } else {
+        // create new last lesson played row
+        const newLastLessonPlayed = this.lessonPlayedRepository.create({
+          userUid,
+          lessonParent: lessonParent,
+          lastLessonPlayed: Math.max(...completedLessonIds),
+        });
+
+        await this.lessonPlayedRepository.save(newLastLessonPlayed);
+      }
+
+      // TODO: not always add points
+      // STEP 4: Add lesson points to user counter
+      const dataPoints: UpdateUserPointsDto = {
+        uid: userUid,
+        points: earnedPointsFromFrontend,
+      };
+      const { lastPoints, earnedPoints, counter } = await firstValueFrom(
+        this.client.send('update.points.user', dataPoints),
+      );
+
+      let isCurrentLessonParentCompleted: boolean = challengeAchieved;
+
+      // STEP 5: in case challenge was not achieved update lessonParentEnabled row by calculating
+      if (!challengeAchieved) {
+        isCurrentLessonParentCompleted = await this.handleLessonParentEnabled(
+          userUid,
+          lessonParent,
+        );
+      }
+
+      const response: CompleteLessonResponse = {
+        lastPoints,
+        earnedPoints,
+        counter,
+        nextLessonParentId: await this.getNextLessonParentId(lessonParent),
+        nextLessonParentDisabled: !isCurrentLessonParentCompleted,
+      };
+
+      return response;
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -663,8 +788,7 @@ export class LessonParentService {
         lessonsCompleted = resultFromNormalLessons.lessonsCompleted;
       }
 
-      // TODO: changeMe! when implementing rest of levels
-      let factor = lessonParent.isTest ? 0.7 : 0.5;
+      let factor = getFactorLesson(lessonParent);
       // STEP 2 verify is open to play
       const isCurrentLessonParentCompleted =
         lessonsLength > 0 && lessonsCompleted / lessonsLength >= factor;

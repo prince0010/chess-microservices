@@ -25,6 +25,7 @@ export const lessonLevelsArray = [
 ];
 
 export enum LessonParentName {
+  // Level 1
   PAWN = 'pawn',
   KING = 'king',
   BISHOP = 'bishop',
@@ -32,6 +33,9 @@ export enum LessonParentName {
   ROOK = 'rook',
   QUEEN = 'queen',
   TEST_LEVEL_1 = 'test 1',
+  // Level 2
+  LEVEL_2 = 'level 2',
+  TEST_LEVEL_2 = 'test 2',
 }
 
 export enum LessonParentTestName {

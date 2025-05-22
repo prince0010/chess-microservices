@@ -6,8 +6,7 @@ import * as pgnParser from 'pgn-parser';
 
 import { LessonParent } from 'src/modules/lesson/entities/lesson-parent.entity';
 import { extractHintsFromComments } from './extractHintsFromComments';
-
-import { LessonDefaultPoints } from 'src/enum';
+import { pointsPerLesson } from 'src/modules/lesson/helpers/points-per-lesson.helper';
 
 // traditional with not hint
 export const parseNormalPgnFile = (
@@ -17,16 +16,20 @@ export const parseNormalPgnFile = (
 ) => {
   try {
     const fullPath = path.resolve(filePath);
-    const pgnContent = fs.readFileSync(fullPath, 'utf-8');
+    let pgnContent = fs.readFileSync(fullPath, 'utf-8');
     if (!pgnContent) {
       throw new BadRequestException(
         `No PGN File found in fs with that path: ${filePath}`,
       );
     }
 
+    // Remove UTF-8 BOM if present
+    if (pgnContent.charCodeAt(0) === 0xfeff) {
+      pgnContent = pgnContent.slice(1);
+    }
+
     // Parse PGN file
     const parsedGames = pgnParser.parse(pgnContent);
-    let points: number = LessonDefaultPoints.POINTS_PER_LESSON; // changeMe! to find a better balance
 
     return parsedGames.map((game: any) => {
       // Convert headers array to an object for easier access
@@ -63,7 +66,7 @@ export const parseNormalPgnFile = (
         moves: game.moves.map((move) => move.move).join(' '), // Store only the moves PGN notation
         pgnRaw, // Manually constructed PGN string
         fen: headers['FEN'] || '',
-        points: 1,
+        points: pointsPerLesson(lessonParent),
         event: headers['Event'] || '?',
         site: headers['Site'] || '?',
         date: headers['Date'] || '????.??.??',
