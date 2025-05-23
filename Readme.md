@@ -22,6 +22,10 @@ This repo in github will host all chess Microservices.
 1. Add points on LessonTestLength enum with the new test level length, ex: 10 | 12 | 20 | 30
 2. Create new Lesson Parent as a Test of course.
 
+# How to remove all content inside mysql-data volume or folder in Linux from the terminal (this help to clean database)
+
+`find . -mindepth 1 ! -name '.gitkeep' -exec rm -rf {} +`
+
 # LESSONS LEVEL 1 LOGIC
 
 1. Every lesson parent opened should track last lesson played, even if 20 lessons was completed. (Table => LessonPlayed)
