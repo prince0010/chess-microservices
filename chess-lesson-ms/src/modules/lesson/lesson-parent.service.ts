@@ -383,7 +383,7 @@ export class LessonParentService {
         );
       }
 
-      if (someLessonDuplicates(completedLessonIds)) {
+      if (!lessonParent.isTest && someLessonDuplicates(completedLessonIds)) {
         throw new BadRequestException('Duplicate lesson IDs detected.');
       }
 
@@ -453,6 +453,11 @@ export class LessonParentService {
         );
       }
 
+      // STEP 0: verify if user will increment points or not
+      const { lessonsLength, lessonsCompleted } =
+        await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
+      const stillLessonsToComplete = lessonsCompleted < lessonsLength;
+
       // STEP 1: update lesson completed rows
       const newCompletedLessonArray: Promise<LessonCompleted>[] = [];
       for (const lesson of validatedLessons) {
@@ -517,11 +522,10 @@ export class LessonParentService {
         await this.lessonPlayedRepository.save(newLastLessonPlayed);
       }
 
-      // TODO: not always add points
       // STEP 4: Add lesson points to user counter
       const dataPoints: UpdateUserPointsDto = {
         uid: userUid,
-        points: earnedPointsFromFrontend,
+        points: stillLessonsToComplete ? earnedPointsFromFrontend : 0,
       };
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(
         this.client.send('update.points.user', dataPoints),
