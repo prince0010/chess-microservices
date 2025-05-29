@@ -36,6 +36,8 @@ export enum LessonParentName {
   // Level 2
   LEVEL_2 = 'level 2',
   TEST_LEVEL_2 = 'test 2',
+  LEVEL_3 = 'Mate in One',
+  TEST_LEVEL_3 = 'test 3',
 }
 
 export enum LessonParentTestName {

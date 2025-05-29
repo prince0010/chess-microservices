@@ -23,6 +23,8 @@ export enum LessonParentName {
   // Level 2
   LEVEL_2 = 'level 2',
   TEST_LEVEL_2 = 'test 2',
+  LEVEL_3 = 'Mate in One',
+  TEST_LEVEL_3 = 'test 3',
 }
 
 export enum LessonFilename {
@@ -33,4 +35,5 @@ export enum LessonFilename {
   ROOK = 'Level_1_Rook.pgn',
   QUEEN = 'Level_1_Queen.pgn',
   LEVEL_2 = 'Level_2.pgn',
+  LEVEL_3 = 'Level_3.pgn',
 }

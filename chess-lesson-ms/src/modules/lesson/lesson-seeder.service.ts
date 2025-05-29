@@ -140,6 +140,9 @@ export class LessonSeederService {
       case LessonParentName.LEVEL_2:
         filename = LessonFilename.LEVEL_2;
         break;
+      case LessonParentName.LEVEL_3:
+        filename = LessonFilename.LEVEL_3;
+        break;
 
       default:
         break;

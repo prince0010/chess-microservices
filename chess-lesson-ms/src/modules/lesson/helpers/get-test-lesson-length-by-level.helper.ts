@@ -10,6 +10,9 @@ export const getTestLessonLengthByLevel = (level: LessonLevel): number => {
     case LessonLevel.LEVEL_2:
       result = LessonTestLength.LEVEL_TWO;
       break;
+    case LessonLevel.LEVEL_3:
+      result = LessonTestLength.LEVEL_THREE;
+      break;
 
     default:
       break;
