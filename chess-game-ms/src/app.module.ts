@@ -6,6 +6,7 @@ import { ConfigDB } from './db/config';
 
 import { TetrisModule } from './modules/tetris/tetris.module';
 import { GuessPositionModule } from './modules/guess-position/guess-position.module';
+import { PieceSquareModule } from './modules/guess-piece-square/piece-square.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { GuessPositionModule } from './modules/guess-position/guess-position.mod
 
     TetrisModule,
     GuessPositionModule,
+    PieceSquareModule,
   ],
   controllers: [],
   providers: [],

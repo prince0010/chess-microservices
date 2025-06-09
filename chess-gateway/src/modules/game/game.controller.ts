@@ -15,6 +15,7 @@ import { AuthGuard } from 'src/guards/auth.guard';
 
 import { UpdateTetrisUserHistoryDto } from './dto/update-tetris-user-history.dto';
 import { UpdateGuessPositionUserHistoryDto } from './dto/update-guess-position-user-history.dto';
+import { UpdatePieceSquareUserHistoryDto } from './dto/update-piece-square-user-history.dto';
 
 @Controller('game')
 export class GameController {
@@ -95,6 +96,45 @@ export class GameController {
     };
 
     return this.client.send('guessPosition.update.scoreByUser', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  /* GUESS PIECE SQUARE */
+  @UseGuards(AuthGuard)
+  @Get('/guess-piece-square/score-by-user')
+  findOnePieceSquareScoreByUser(@Req() req: any) {
+    return this.client.send('pieceSquare.find.scoreByUser', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/guess-piece-square/ranking')
+  getPieceSquareRanking(@Req() req: any) {
+    return this.client.send('pieceSquare.find.ranking', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Patch('/guess-piece-square/update-score-by-user')
+  updatePieceSquareScoreByUser(
+    @Body() updatePieceSquareUserHistoryDto: UpdatePieceSquareUserHistoryDto,
+    @Req() req: any,
+  ) {
+    const payload = {
+      ...updatePieceSquareUserHistoryDto,
+      userUid: +req.user.uid,
+    };
+
+    return this.client.send('pieceSquare.update.scoreByUser', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
