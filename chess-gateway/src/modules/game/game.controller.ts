@@ -3,7 +3,11 @@ import {
   Controller,
   Get,
   Inject,
+  Param,
+  ParseIntPipe,
   Patch,
+  Post,
+  Query,
   Req,
   UseGuards,
 } from '@nestjs/common';
@@ -12,10 +16,12 @@ import { catchError } from 'rxjs';
 
 import { NATS_SERVICE } from 'src/config';
 import { AuthGuard } from 'src/guards/auth.guard';
+import { AdminGuard } from 'src/guards/admin.guard';
 
 import { UpdateTetrisUserHistoryDto } from './dto/update-tetris-user-history.dto';
 import { UpdateGuessPositionUserHistoryDto } from './dto/update-guess-position-user-history.dto';
-import { UpdatePieceSquareUserHistoryDto } from './dto/update-piece-square-user-history.dto';
+import { FindAllPieceSquareLevelsDto } from './dto/find-all-piece-square-levels.dto';
+import { CompletePieceSquareLevelDto } from './dto/complete-piece-square-level.dto';
 
 @Controller('game')
 export class GameController {
@@ -103,10 +109,10 @@ export class GameController {
   }
 
   /* GUESS PIECE SQUARE */
-  @UseGuards(AuthGuard)
-  @Get('/guess-piece-square/score-by-user')
-  findOnePieceSquareScoreByUser(@Req() req: any) {
-    return this.client.send('pieceSquare.find.scoreByUser', +req.user.uid).pipe(
+  @UseGuards(AdminGuard)
+  @Post('/guess-piece-square/generate-32-levels')
+  generate32Levels() {
+    return this.client.send('pieceSquare.seed.level', {}).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
@@ -114,9 +120,9 @@ export class GameController {
   }
 
   @UseGuards(AuthGuard)
-  @Get('/guess-piece-square/ranking')
-  getPieceSquareRanking(@Req() req: any) {
-    return this.client.send('pieceSquare.find.ranking', +req.user.uid).pipe(
+  @Get('/guess-piece-square/:id')
+  findOnePieceSquareLevel(@Param('id', ParseIntPipe) levelId: number) {
+    return this.client.send('pieceSquare.findOne.level', levelId).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
@@ -124,17 +130,35 @@ export class GameController {
   }
 
   @UseGuards(AuthGuard)
-  @Patch('/guess-piece-square/update-score-by-user')
-  updatePieceSquareScoreByUser(
-    @Body() updatePieceSquareUserHistoryDto: UpdatePieceSquareUserHistoryDto,
+  @Get('/guess-piece-square')
+  findAllPieceSquareLevels(
+    @Query() findAllPieceSquareLevelsDto: FindAllPieceSquareLevelsDto,
+    @Req() req: any,
+  ) {
+    return this.client
+      .send('pieceSquare.findAll.level', {
+        ...findAllPieceSquareLevelsDto,
+        userUid: +req.user.uid,
+      })
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
+
+  @UseGuards(AuthGuard)
+  @Patch('/guess-piece-square/complete-level')
+  completePieceSquareLevelByUser(
+    @Body() completePieceSquareLevelDto: CompletePieceSquareLevelDto,
     @Req() req: any,
   ) {
     const payload = {
-      ...updatePieceSquareUserHistoryDto,
+      ...completePieceSquareLevelDto,
       userUid: +req.user.uid,
     };
 
-    return this.client.send('pieceSquare.update.scoreByUser', payload).pipe(
+    return this.client.send('pieceSquare.complete.level', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

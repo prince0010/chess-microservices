@@ -1,92 +1,130 @@
 import { BadRequestException, Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
-import { Repository } from 'typeorm';
+import { FindManyOptions, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { firstValueFrom } from 'rxjs';
 import { NATS_SERVICE } from 'src/config';
 
-import { GuessPieceSquareUserHistory } from './entities/guess-piece-square-user-history.entity';
+import { PieceSquareLevel } from './entities/piece-square-level.entity';
+import { PieceSquareLevelCompleted } from './entities/piece-square-level-completed.entity';
 
-import { UpdatePieceSquareUserHistoryDto } from './dto/update-piece-square-user-history.dto';
-import { BestScoreByUserResponse, IRankingResponse } from './interfaces/index';
+import { CompletePieceSquareLevelDto } from './dto/complete-piece-square-level.dto';
+import { FindAllPieceSquareLevelsDto } from './dto/find-all-piece-square-levels.dto';
+import {
+  CompletePieceSquareLevelResponse,
+  ICountAndListPieceSquareLevels,
+  IPieceSquareLevel,
+} from './interfaces';
+import { UpdateUserPointsDto } from 'src/interfaces';
 
 @Injectable()
 export class PieceSquareService {
   constructor(
     @Inject(NATS_SERVICE) private readonly client: ClientProxy,
 
-    @InjectRepository(GuessPieceSquareUserHistory)
-    private readonly guessPieceSquareUserHistoryRepository: Repository<GuessPieceSquareUserHistory>,
+    @InjectRepository(PieceSquareLevel)
+    private readonly pieceSquareLevelRepository: Repository<PieceSquareLevel>,
+
+    @InjectRepository(PieceSquareLevelCompleted)
+    private readonly pieceSquareLevelCompletedRepository: Repository<PieceSquareLevelCompleted>,
   ) {}
 
-  async findRanking(currentUserUid: number): Promise<IRankingResponse> {
+  async generate32Levels(): Promise<string> {
     try {
-      // verify if user is on table history
-      const userRow =
-        await this.guessPieceSquareUserHistoryRepository.findOneBy({
-          userUid: currentUserUid,
-        });
-      if (!userRow || userRow?.bestScore === 0) {
+      const pieceSquareLevelsExisting =
+        await this.pieceSquareLevelRepository.find({});
+
+      if (pieceSquareLevelsExisting && pieceSquareLevelsExisting.length) {
         throw new BadRequestException(
-          `User have not played Guess Piece-Square game yet.`,
+          'Not need to create 32 Levels again, they already exist.',
         );
       }
 
-      const currentUserScore = userRow.bestScore;
+      const arrPromises: Promise<PieceSquareLevel>[] = [];
+      for (let i = 0; i < 32; i++) {
+        const levelName = `Level ${i + 1}`;
+        const newPieceSquareLevel = this.pieceSquareLevelRepository.create({
+          level: levelName,
+          points: i + 1,
+        });
 
-      // Step 1: Get current user's rank
-      const rawRank = await this.guessPieceSquareUserHistoryRepository.query(
-        `
-        SELECT COUNT(*) + 1 AS rank
-        FROM guess_piece_square_user_history
-        WHERE bestScore > ?
-        `,
-        [currentUserScore],
-      );
-
-      const currentRank = parseInt(rawRank[0]?.rank ?? '1', 10);
-
-      // Step 2: Get users around the current rank
-      const offset = Math.max(currentRank - 7, 0); // rank - 1 is 0-indexed
-      const limit = 13;
-
-      const nearbyUsers =
-        await this.guessPieceSquareUserHistoryRepository.query(
-          `
-          SELECT * FROM guess_piece_square_user_history
-          ORDER BY bestScore DESC
-          LIMIT ? OFFSET ?
-        `,
-          [limit, offset],
+        arrPromises.push(
+          this.pieceSquareLevelRepository.save(newPieceSquareLevel),
         );
+      }
 
-      // Filter nearby (TypeORM doesn't support RANK() filters directly, so we filter in JS)
-      const sliced = nearbyUsers.map((row: any, index: number) => ({
-        ...row,
-        position: offset + index + 1,
-      }));
+      await Promise.all(arrPromises);
 
-      // Step 3: Enrich with user names
-      const userUids = sliced.map((row: any) => row.userUid);
+      return '32 Levels generated successfully';
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
 
-      const users = await firstValueFrom(
-        this.client.send('auth.find.usersByUids', { uids: userUids }),
-      );
+  async findAll(
+    findAllPieceSquareLevelsDto: FindAllPieceSquareLevelsDto,
+  ): Promise<ICountAndListPieceSquareLevels> {
+    const {
+      limit = 10,
+      page = 1,
+      userUid,
+      id = null,
+      level = null,
+    } = findAllPieceSquareLevelsDto;
 
-      const userMap = new Map(
-        users.map((u: { uid: number; name: string }) => [u.uid, u.name]),
-      );
+    const offset = (page - 1) * limit;
 
-      const result = sliced.map((row) => ({
-        userUid: row.userUid,
-        bestScore: row.bestScore,
-        userName: userMap.get(row.userUid) || 'Unknown',
-        position: +row.position,
-      }));
+    const findOptions: FindManyOptions<PieceSquareLevel> = {
+      take: limit,
+      skip: offset,
+      order: {
+        id: 'ASC',
+      },
+    };
+
+    const whereConditions: any = {};
+    if (id) {
+      whereConditions.id = id;
+    }
+    if (level) {
+      whereConditions.level = level;
+    }
+
+    if (Object.keys(whereConditions).length > 0) {
+      findOptions.where = whereConditions;
+    }
+
+    try {
+      const [pieceSquareLevels, total] =
+        await this.pieceSquareLevelRepository.findAndCount(findOptions);
+
+      const levelsObjects: IPieceSquareLevel[] = [];
+      let previousLevelWasCompleted: boolean = true;
+
+      for (const [index, levelEntity] of pieceSquareLevels.entries()) {
+        // verify if level completed or not
+        const levelWasCompleted =
+          await this.pieceSquareLevelCompletedRepository.findOne({
+            where: { userUid, pieceSquareLevel: { id: levelEntity.id } },
+            relations: { pieceSquareLevel: true },
+          });
+
+        levelsObjects.push({
+          id: levelEntity.id,
+          level: levelEntity.level,
+          disabled: !previousLevelWasCompleted,
+        });
+
+        previousLevelWasCompleted = levelWasCompleted ? true : false;
+      }
 
       return {
-        userUid: currentUserUid,
-        ranking: result,
+        currentPage: page,
+        total,
+        levels: levelsObjects,
       };
     } catch (error) {
       throw new RpcException({
@@ -96,16 +134,19 @@ export class PieceSquareService {
     }
   }
 
-  async findOneScore(userUid: number): Promise<BestScoreByUserResponse> {
+  async findOneLevel(pieceSquareLevelId: number): Promise<PieceSquareLevel> {
     try {
-      const guessPieceSquareUser =
-        await this.guessPieceSquareUserHistoryRepository.findOneBy({
-          userUid,
-        });
+      const pieceSquareLevel = await this.pieceSquareLevelRepository.findOneBy({
+        id: pieceSquareLevelId,
+      });
 
-      return {
-        bestScore: guessPieceSquareUser ? guessPieceSquareUser.bestScore : 0,
-      };
+      if (!pieceSquareLevel) {
+        throw new BadRequestException(
+          `Piece Square level with ID: ${pieceSquareLevelId} not found.`,
+        );
+      }
+
+      return pieceSquareLevel;
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -114,38 +155,48 @@ export class PieceSquareService {
     }
   }
 
-  async updateHistory(
-    updatePieceSquareUserHistoryDto: UpdatePieceSquareUserHistoryDto,
-  ): Promise<BestScoreByUserResponse> {
-    const { userUid, score } = updatePieceSquareUserHistoryDto;
+  async completeLevel(
+    completePieceSquareLevelDto: CompletePieceSquareLevelDto,
+  ): Promise<CompletePieceSquareLevelResponse> {
+    const { userUid, pieceSquareLevelId } = completePieceSquareLevelDto;
     try {
-      const pieceSquareUserHistoryRow =
-        await this.guessPieceSquareUserHistoryRepository.findOneBy({ userUid });
+      const pieceSquareLevelEntity =
+        await this.findOneLevel(pieceSquareLevelId);
 
-      // update
-      if (pieceSquareUserHistoryRow) {
-        // avoid unnecessary query update if score is less than their last score
-        if (pieceSquareUserHistoryRow.bestScore > score) {
-          return { bestScore: pieceSquareUserHistoryRow.bestScore };
-        }
-
-        await this.guessPieceSquareUserHistoryRepository.update(
-          { id: pieceSquareUserHistoryRow.id },
-          { bestScore: score },
-        );
-      } else {
-        // create a new row
-        const newRow = this.guessPieceSquareUserHistoryRepository.create({
-          bestScore: score,
-          userUid,
+      const completedLevelExisting =
+        await this.pieceSquareLevelCompletedRepository.findOne({
+          where: { userUid, pieceSquareLevel: { id: pieceSquareLevelId } },
+          relations: { pieceSquareLevel: true },
         });
 
-        await this.guessPieceSquareUserHistoryRepository.save(newRow);
+      let earnedPointByUser = 0;
+      if (!completedLevelExisting) {
+        // create new one row
+        const newCompletedLevel =
+          this.pieceSquareLevelCompletedRepository.create({
+            pieceSquareLevel: pieceSquareLevelEntity,
+            userUid,
+          });
+
+        await this.pieceSquareLevelCompletedRepository.save(newCompletedLevel);
+
+        earnedPointByUser = pieceSquareLevelEntity.points;
       }
 
-      // TODO: maybe update user panda points
+      // Add earned points to user counter
+      const dataPoints: UpdateUserPointsDto = {
+        uid: userUid,
+        points: earnedPointByUser,
+      };
+      const { lastPoints, earnedPoints, counter } = await firstValueFrom(
+        this.client.send('update.points.user', dataPoints),
+      );
 
-      return { bestScore: score };
+      return {
+        lastPoints,
+        earnedPoints,
+        counter,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,

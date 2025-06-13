@@ -26,9 +26,10 @@
 # Database migrations files inside the container
 
 1. Show all migrations status: `npx typeorm migration:show -d dist/db/typeorm.config.js`
-2. Run pending migration: `npx typeorm migration:run -d dist/db/typeorm.config.js`
+1. Run pending migration: `npx typeorm migration:run -d dist/db/typeorm.config.js`
+1. Revert (apply down) last migration file: `npx typeorm migration:revert -d dist/db/typeorm.config.js`
 
-3. Generate migration file(ONLY ON DEVELOPMENT)
+1. Generate migration file(ONLY ON DEVELOPMENT)
    `npx typeorm migration:generate src/db/migrations/migration -d dist/db/typeorm.config.js`
 
 # Configuration of Docker Service in VPS
