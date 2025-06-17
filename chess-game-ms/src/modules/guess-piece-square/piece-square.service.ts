@@ -40,7 +40,6 @@ export class PieceSquareService {
         );
       }
 
-      const arrPromises: Promise<PieceSquareLevel>[] = [];
       for (let i = 0; i < 32; i++) {
         const levelName = `Level ${i + 1}`;
         const newPieceSquareLevel = this.pieceSquareLevelRepository.create({
@@ -48,12 +47,8 @@ export class PieceSquareService {
           points: i + 1,
         });
 
-        arrPromises.push(
-          this.pieceSquareLevelRepository.save(newPieceSquareLevel),
-        );
+        await this.pieceSquareLevelRepository.save(newPieceSquareLevel);
       }
-
-      await Promise.all(arrPromises);
 
       return '32 Levels generated successfully';
     } catch (error) {
