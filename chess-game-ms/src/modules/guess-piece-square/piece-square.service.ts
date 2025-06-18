@@ -112,6 +112,7 @@ export class PieceSquareService {
         levelsObjects.push({
           id: levelEntity.id,
           level: levelEntity.level,
+          timesHasBeenCompleted: levelWasCompleted?.counter ?? 0,
           disabled: !previousLevelWasCompleted,
         });
 

@@ -7,5 +7,6 @@ export interface ICountAndListPieceSquareLevels {
 export interface IPieceSquareLevel {
   id: number;
   level: string;
+  timesHasBeenCompleted: number;
   disabled: boolean;
 }
