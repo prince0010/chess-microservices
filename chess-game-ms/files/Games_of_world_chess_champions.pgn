@@ -1,0 +1,287 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "1862.07.??"]
+[Round "?"]
+[White "Wilhelm Steinitz"]
+[Black "Augustus Mongredien"]
+[Result "1-0"]
+[ECO "B01"]
+[PlyCount "57"]
+
+1. e4 d5 2. exd5 Qxd5 3. Nc3 Qd8 4. d4 e6 5. Nf3 Nf6 6. Bd3 Be7 7. O-O O-O 8.
+Be3 b6 9. Ne5 Bb7 10. f4 Nbd7 11. Qe2 Nd5 12. Nxd5 exd5 13. Rf3 f5 14. Rh3 g6
+15. g4 fxg4 16. Rxh7 Nxe5 17. fxe5 Kxh7 18. Qxg4 Rg8 19. Qh5+ Kg7 20. Qh6+ Kf7
+21. Qh7+ Ke6 22. Qh3+ Kf7 23. Rf1+ Ke8 24. Qe6 Rg7 25. Bg5 Qd7 26. Bxg6+ Rxg6
+27. Qxg6+ Kd8 28. Rf8+ Qe8 29. Qxe8# 1-0
+
+[Event "St. Petersburg"]
+[Site "St. Petersburg  RUE"]
+[Date "1914.05.22"]
+[Round "?"]
+[White "Emanuel Lasker"]
+[Black "Frank James Marshall"]
+[Result "1-0"]
+[ECO "C42"]
+[PlyCount "57"]
+[EventDate "1914.04.21"]
+[SourceDate "2012.05.08"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. Qe2 Qe7 6. d3 Nf6 7. Bg5 Be6 8.
+Nc3 Nbd7 9. O-O-O h6 10. Bh4 g5 11. Bg3 Nh5 12. d4 Nxg3 13. hxg3 g4 14. Nh4 d5
+15. Qb5 O-O-O 16. Qa5 a6 17. Bxa6 bxa6 18. Qxa6+ Kb8 19. Nb5 Nb6 20. Rd3 Qg5+
+21. Kb1 Bd6 22. Rb3 Rhe8 23. a4 Bf5 24. Na7 Bd7 25. a5 Qd2 26. axb6 Re1+ 27.
+Ka2 c6 28. Nb5 cxb5 29. Qa7+ 1-0
+
+[Event "NYSCA ch playoff"]
+[Site "New York, NY USA"]
+[Date "1910.03.05"]
+[Round "?"]
+[White "Jose Raul Capablanca"]
+[Black "Charles Jaffe"]
+[Result "1-0"]
+[ECO "D30"]
+[PlyCount "39"]
+[EventDate "1910.??.??"]
+[SourceDate "2012.05.08"]
+
+1. d4 d5 2. Nf3 Nf6 3. e3 c6 4. c4 e6 5. Nc3 Nbd7 6. Bd3 Bd6 7. O-O O-O 8. e4
+dxe4 9. Nxe4 Nxe4 10. Bxe4 Nf6 11. Bc2 h6 12. b3 b6 13. Bb2 Bb7 14. Qd3 g6 15.
+Rae1 Nh5 16. Bc1 Kg7 17. Rxe6 Nf6 18. Ne5 c5 19. Bxh6+ Kxh6 20. Nxf7+ 1-0[Event "Munich"]
+[Site "Munich GER"]
+[Date "1941.09.18"]
+[Round "?"]
+[White "Peter Leepin"]
+[Black "Alexander Alekhine"]
+[Result "0-1"]
+[ECO "A22"]
+[PlyCount "40"]
+[EventDate "1941.09.08"]
+[SourceDate "2012.05.08"]
+
+1. c4 e5 2. Nc3 Nf6 3. g3 d5 4. cxd5 Nxd5 5. Bg2 Nb6 6. a4 a5 7. d3 Bb4 8. Nf3
+Nc6 9. O-O O-O 10. Be3 Bg4 11. Rc1 f5 12. Ng5 f4 {!} 13. Bxb6 Qxg5 14. Bxc7 Qh5
+15. Bxc6 bxc6 16. Rc2 Bxc3 17. Rxc3 Bxe2 18. Qb3+ Kh8 19. Re1 Qh3 20. Bxe5 f3
+0-1
+
+[Event "Zurich Candidates"]
+[Site "Zuerich SUI"]
+[Date "1953.08.31"]
+[Round "?"]
+[White "Efim Geller"]
+[Black "Max Euwe"]
+[Result "0-1"]
+[ECO "E28"]
+[PlyCount "52"]
+[EventDate "1953.08.30"]
+[SourceDate "2012.05.08"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 c5 5. a3 Bxc3+ 6. bxc3 b6 7. Bd3 Bb7 8. f3
+Nc6 9. Ne2 O-O 10. O-O Na5 11. e4 Ne8 12. Ng3 cxd4 13. cxd4 Rc8 14. f4 Nxc4 15.
+f5 f6 16. Rf4 b5 17. Rh4 Qb6 18. e5 Nxe5 19. fxe6 Nxd3 20. Qxd3 Qxe6 21. Qxh7+
+Kf7 22. Bh6 Rh8 23. Qxh8 Rc2 24. Rc1 Rxg2+ 25. Kf1 Qb3 26. Ke1 Qf3 0-1
+
+[Event "Monte Carlo"]
+[Site "Monte Carlo MNC"]
+[Date "1968.04.05"]
+[Round "?"]
+[White "Mikhail Botvinnik"]
+[Black "Nikola Padevsky"]
+[Result "1-0"]
+[ECO "E17"]
+[PlyCount "53"]
+[EventDate "1968.04.03"]
+[SourceDate "2012.05.08"]
+
+1. Nf3 Nf6 2. c4 e6 3. g3 d5 4. Bg2 Be7 5. O-O O-O 6. d4 Nbd7 7. b3 b6 8. Bb2
+Bb7 9. cxd5 exd5 10. Nc3 Re8 11. Ne5 Bd6 12. f4 Ne4 13. Nxe4 dxe4 14. e3 Nf6
+15. a3 c5 16. Qe2 cxd4 17. Bxd4 Qe7 18. b4 a5 19. b5 Bxe5 20. Bxe5 Nd7 21. Bd4
+Nc5 22. f5 Nd7 23. f6 Qe6 24. Qh5 Ne5 25. Rf5 Ng6 26. fxg7 Rad8 27. Qxh7+ 1-0
+
+[Event "Moscow-Prague"]
+[Site "Moscow URS"]
+[Date "1946.05.12"]
+[Round "?"]
+[White "Jaroslav Sajtar"]
+[Black "Vasily Smyslov"]
+[Result "0-1"]
+[ECO "D90"]
+[PlyCount "52"]
+[EventDate "1946.??.??"]
+[SourceDate "2012.05.08"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. Nf3 Bg7 5. Qa4+ Bd7 6. Qb3 Bc6 7. Bf4 dxc4 8.
+Qxc4 O-O 9. Rd1 Nbd7 10. Ne5 Nxe5 11. Bxe5 e6 12. Qd3 Qe7 13. Qc2 Bh6 14. f3
+Nd5 15. Qb3 a5 16. a4 Ne3 17. Rd3 Qb4 18. Qxb4 axb4 19. Ne4 Bxe4 20. fxe4 Rxa4
+21. Bxc7 f5 22. e5 Rc8 23. Bd6 Ng4 24. e3 Ra1+ 25. Ke2 Rc2+ 26. Rd2 b3 0-1
+
+[Event "URS-ch sf"]
+[Site "Riga URS"]
+[Date "1955.??.??"]
+[Round "?"]
+[White "Dmitry Osipovich Rovner"]
+[Black "Mikhail Tal"]
+[Result "0-1"]
+[ECO "C06"]
+[PlyCount "52"]
+[EventDate "1955.11.??"]
+[SourceDate "2012.05.08"]
+
+1. e4 e6 2. d4 d5 3. Nd2 Nf6 4. e5 Nfd7 5. Bd3 c5 6. c3 Nc6 7. Ne2 Qb6 8. Nf3
+cxd4 9. cxd4 f6 10. exf6 Nxf6 11. O-O Bd6 12. Nc3 O-O 13. Re1 Bd7 14. Nb5 Bb8
+15. Nc3 Bd6 16. Bg5 Rae8 17. Re2 Ng4 18. h3 Rxf3 19. gxf3 Nh2 20. Kg2 Nxd4 21.
+Re3 h6 22. Bh4 Bf4 23. Bg6 Bxe3 24. Bxe8 Nhxf3 25. Bxd7 Nxh4+ 26. Kf1 Qxb2 0-1
+
+[Event "USSR Championship"]
+[Site "Moscow URS"]
+[Date "1950.11.13"]
+[Round "?"]
+[White "Tigran Vartanovich Petrosian"]
+[Black "Alexander Kazimirovich Tolush"]
+[Result "1-0"]
+[ECO "D35"]
+[PlyCount "37"]
+[EventDate "1950.??.??"]
+[SourceDate "2012.05.08"]
+
+1. Nf3 Nf6 2. c4 e6 3. Nc3 d5 4. d4 c6 5. cxd5 exd5 6. Qc2 Bd6 7. Bg5 O-O 8. e3
+Bg4 9. Ne5 Bh5 10. f4 Qa5 11. Bd3 h6 12. Bxf6 gxf6 13. g4 fxe5 14. fxe5 Be7 15.
+O-O-O Bg5 16. gxh5 Kh8 17. Qf2 f5 18. h4 Be7 19. Qf4 1-0[Event "USSR Championship"]
+[Site "Leningrad URS"]
+[Date "1960.02.20"]
+[Round "?"]
+[White "Boris Spassky"]
+[Black "David Bronstein"]
+[Result "1-0"]
+[ECO "C36"]
+[PlyCount "45"]
+[EventDate "1960.??.??"]
+[SourceDate "2012.05.08"]
+
+1. e4 e5 2. f4 exf4 3. Nf3 d5 4. exd5 Bd6 5. Nc3 Ne7 6. d4 O-O 7. Bd3 Nd7 8.
+O-O h6 9. Ne4 Nxd5 10. c4 Ne3 11. Bxe3 fxe3 12. c5 Be7 13. Bc2 Re8 14. Qd3 e2
+15. Nd6 Nf8 16. Nxf7 exf1=Q+ 17. Rxf1 Bf5 18. Qxf5 Qd7 19. Qf4 Bf6 20. N3e5 Qe7
+21. Bb3 Bxe5 22. Nxe5+ Kh7 23. Qe4+ 1-0
+
+[Event "Varna ol (Men) fin-A"]
+[Site "Varna BUL"]
+[Date "1962.09.28"]
+[Round "?"]
+[White "Robert James Fischer"]
+[Black "Miguel Najdorf"]
+[Result "1-0"]
+[ECO "B90"]
+[PlyCount "47"]
+[EventDate "1962.??.??"]
+[SourceDate "2012.05.08"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. h3 b5 7. Nd5 Bb7 8.
+Nxf6+ gxf6 9. c4 bxc4 10. Bxc4 Bxe4 11. O-O d5 12. Re1 e5 13. Qa4+ Nd7 14. Rxe4
+dxe4 15. Nf5 Bc5 16. Ng7+ Ke7 17. Nf5+ Ke8 18. Be3 Bxe3 19. fxe3 Qb6 20. Rd1
+Ra7 21. Rd6 Qd8 22. Qb3 Qc7 23. Bxf7+ Kd8 24. Be6 1-0
+
+[Event "Karpov - Korchnoi Candidates Final"]
+[Site "Moscow URS"]
+[Date "1974.09.18"]
+[Round "?"]
+[White "Anatoly Karpov"]
+[Black "Viktor Korchnoi"]
+[Result "1-0"]
+[ECO "B78"]
+[PlyCount "53"]
+[EventDate "1974.09.16"]
+[SourceDate "2012.05.08"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 Nc6 8. Qd2
+O-O 9. Bc4 Bd7 10. h4 Rc8 11. Bb3 Ne5 12. O-O-O Nc4 13. Bxc4 Rxc4 14. h5 Nxh5
+15. g4 Nf6 16. Nde2 Qa5 17. Bh6 Bxh6 18. Qxh6 Rfc8 19. Rd3 R4c5 20. g5 Rxg5 21.
+Rd5 Rxd5 22. Nxd5 Re8 23. Nef4 Bc6 24. e5 Bxd5 25. exf6 exf6 26. Qxh7+ Kf8 27.
+Qh8+ 1-0
+
+[Event "URS-ch49"]
+[Site "Frunze URS"]
+[Date "1981.12.??"]
+[Round "?"]
+[White "Leonid Yudasin"]
+[Black "Garry Kasparov"]
+[Result "0-1"]
+[ECO "B96"]
+[PlyCount "48"]
+[EventDate "1981.??.??"]
+[SourceDate "2012.05.08"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Qc7 8. Bxf6
+gxf6 9. Be2 Nc6 10. Nb3 b5 11. Bh5 Bg7 12. Qg4 O-O 13. O-O-O Ne7 14. Nd4 b4 15.
+Nce2 f5 16. exf5 e5 17. fxe5 dxe5 18. Qg5 h6 19. Qg3 Nxf5 20. Nxf5 Bxf5 21. Rd2
+Rac8 22. Qb3 e4 23. Kb1 Be6 24. Qg3 Qa5 0-1
+
+[Event "Linares"]
+[Site "Linares ESP"]
+[Date "1998.03.07"]
+[Round "?"]
+[White "Vassily Ivanchuk"]
+[Black "Viswanathan Anand"]
+[Result "0-1"]
+[ECO "B63"]
+[PlyCount "54"]
+[EventDate "1998.02.22"]
+[SourceDate "2012.05.08"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 Be7 8.
+O-O-O O-O 9. f3 Nxd4 10. Qxd4 a6 11. h4 b5 12. Kb1 Qc7 13. h5 h6 14. Bh4 Bb7
+15. Ne2 Rac8 16. Qd2 Rfd8 17. Re1 e5 18. Bxf6 Bxf6 19. Nc3 Bg5 20. Qd1 Qa5 21.
+Nd5 Bxd5 22. exd5 Rxc2 23. Kxc2 Qxa2 24. f4 Rc8+ 25. Kd2 Bxf4+ 26. Ke2 Qxb2+
+27. Kf3 Rc1 0-1
+
+[Event "European Team Championship"]
+[Site "Heraklion GRE"]
+[Date "2007.10.30"]
+[Round "?"]
+[White "Hannes Hlifar Stefansson"]
+[Black "Magnus Carlsen"]
+[Result "0-1"]
+[ECO "D43"]
+[PlyCount "50"]
+[EventDate "2007.10.28"]
+[SourceDate "2012.05.08"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 d5 4. Nc3 c6 5. Bg5 h6 6. Bxf6 Qxf6 7. e3 Nd7 8. Bd3
+dxc4 9. Bxc4 g6 10. O-O Bg7 11. b4 O-O 12. a4 e5 13. a5 exd4 14. exd4 Rd8 15.
+Re1 Nf8 16. Qb3 Be6 17. Rad1 Bxc4 18. Qxc4 Ne6 19. Ne5 Qf5 20. Nxf7 Kxf7 21.
+Re3 Bxd4 22. Rf3 Qxf3 23. gxf3 Bxc3 24. Rxd8 Rxd8 25. f4 Rd4 0-1
+
+[Event "World Chess Team Championship"]
+[Site "Ningbo CHN"]
+[Date "2011.07.18"]
+[Round "?"]
+[White "Ding Liren"]
+[Black "Alexander Areshchenko"]
+[Result "1-0"]
+[ECO "E60"]
+[PlyCount "55"]
+[EventDate "2011.07.17"]
+[SourceDate "2012.05.08"]
+
+1. d4 Nf6 2. c4 g6 3. f3 Nc6 4. d5 Ne5 5. e4 d6 6. Nc3 Bg7 7. f4 Ned7 8. Nh3
+O-O 9. Be2 Nc5 10. Nf2 Re8 11. O-O e5 12. f5 gxf5 13. exf5 Bxf5 14. Ng4 Bxg4
+15. Bxg4 Nxg4 16. Qxg4 Qd7 17. Rf5 e4 18. Bh6 f6 19. b4 Na6 20. Bxg7 Qxg7 21.
+Qf4 Nxb4 22. Nxe4 Kh8 23. Rf1 Nd3 24. Qh4 Re5 25. R5f3 f5 26. Nf6 Nc5 27. Rh3
+Re7 28. Nxh7 1-0
+
+[Event "London Chess Classic 2023"]
+[Site "London ENG"]
+[Date "2023.12.03"]
+[Round "?"]
+[White "Dommaraju Gukesh"]
+[Black "Andrei Volokitin"]
+[Result "1-0"]
+[ECO "A34"]
+[PlyCount "55"]
+[EventDate "2023.12.01"]
+[SourceDate "2012.05.08"]
+
+1. c4 Nf6 2. Nc3 c5 3. g3 d5 4. cxd5 Nxd5 5. Bg2 Nc7 6. b3 e5 7. Bb2 Be7 8. Rc1
+O-O 9. Ne4 b6 10. Bxe5 Bb7 11. Ba1 Qc8 12. g4 Ne6 13. Nh3 Nc6 14. e3 Nb4 15.
+O-O Nxa2 16. Rb1 Nb4 17. f4 f6 18. Qf3 Bc6 19. f5 Nc7 20. g5 fxg5 21. Qg3 h6
+22. f6 gxf6 23. Bxf6 Bxe4 24. Nxg5 Bxf6 25. Rxf6 Rxf6 26. Nxe4+ Kh8 27. Nxf6
+Qf5 28. Rf1 1-0
+

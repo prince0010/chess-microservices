@@ -13,9 +13,11 @@ import { FindAllPieceSquareLevelsDto } from './dto/find-all-piece-square-levels.
 import {
   CompletePieceSquareLevelResponse,
   ICountAndListPieceSquareLevels,
+  IFindOnePieceSquareLevelResponse,
   IPieceSquareLevel,
 } from './interfaces';
 import { UpdateUserPointsDto } from 'src/interfaces';
+import { FindOnePieceSquareLevelByUserDto } from './dto/find-one-piece-square-level.dto';
 
 @Injectable()
 export class PieceSquareService {
@@ -129,10 +131,14 @@ export class PieceSquareService {
     }
   }
 
-  async findOneLevel(pieceSquareLevelId: number): Promise<PieceSquareLevel> {
+  async findOneLevel(
+    findOnePieceSquareLevelByUserDto: FindOnePieceSquareLevelByUserDto,
+  ): Promise<IFindOnePieceSquareLevelResponse> {
+    const { pieceSquareLevelId, userUid } = findOnePieceSquareLevelByUserDto;
     try {
-      const pieceSquareLevel = await this.pieceSquareLevelRepository.findOneBy({
-        id: pieceSquareLevelId,
+      const pieceSquareLevel = await this.pieceSquareLevelRepository.findOne({
+        where: { id: pieceSquareLevelId },
+        relations: { levelsCompleted: true },
       });
 
       if (!pieceSquareLevel) {
@@ -141,7 +147,18 @@ export class PieceSquareService {
         );
       }
 
-      return pieceSquareLevel;
+      const pieceSquareLevelCompletedByUserRow =
+        await this.pieceSquareLevelCompletedRepository.findOne({
+          where: { pieceSquareLevel: { id: pieceSquareLevelId }, userUid },
+          relations: { pieceSquareLevel: true },
+        });
+
+      return {
+        id: pieceSquareLevel.id,
+        level: pieceSquareLevel.level,
+        points: pieceSquareLevel.points,
+        timesHasBeenCompleted: pieceSquareLevelCompletedByUserRow?.counter ?? 0,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -156,7 +173,15 @@ export class PieceSquareService {
     const { userUid, pieceSquareLevelId } = completePieceSquareLevelDto;
     try {
       const pieceSquareLevelEntity =
-        await this.findOneLevel(pieceSquareLevelId);
+        await this.pieceSquareLevelRepository.findOneBy({
+          id: pieceSquareLevelId,
+        });
+
+      if (!pieceSquareLevelEntity) {
+        throw new BadRequestException(
+          `Piece Square level with ID: ${pieceSquareLevelId} not found.`,
+        );
+      }
 
       const completedLevelExisting =
         await this.pieceSquareLevelCompletedRepository.findOne({
@@ -171,11 +196,26 @@ export class PieceSquareService {
           this.pieceSquareLevelCompletedRepository.create({
             pieceSquareLevel: pieceSquareLevelEntity,
             userUid,
+            counter: 1,
           });
 
         await this.pieceSquareLevelCompletedRepository.save(newCompletedLevel);
 
         earnedPointByUser = pieceSquareLevelEntity.points;
+      } else if (completedLevelExisting.counter < 10) {
+        // update counter
+        await this.pieceSquareLevelCompletedRepository.update(
+          { id: completedLevelExisting.id },
+          { counter: completedLevelExisting.counter + 1 },
+        );
+
+        earnedPointByUser = pieceSquareLevelEntity.points;
+      } else {
+        // update counter
+        await this.pieceSquareLevelCompletedRepository.update(
+          { id: completedLevelExisting.id },
+          { counter: completedLevelExisting.counter + 1 },
+        );
       }
 
       // Add earned points to user counter

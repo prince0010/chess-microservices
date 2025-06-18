@@ -121,12 +121,20 @@ export class GameController {
 
   @UseGuards(AuthGuard)
   @Get('/guess-piece-square/:id')
-  findOnePieceSquareLevel(@Param('id', ParseIntPipe) levelId: number) {
-    return this.client.send('pieceSquare.findOne.level', levelId).pipe(
-      catchError((err) => {
-        throw new RpcException(err);
-      }),
-    );
+  findOnePieceSquareLevel(
+    @Param('id', ParseIntPipe) levelId: number,
+    @Req() req: any,
+  ) {
+    return this.client
+      .send('pieceSquare.findOne.level', {
+        pieceSquareLevelId: levelId,
+        userUid: +req.user.uid,
+      })
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
   }
 
   @UseGuards(AuthGuard)

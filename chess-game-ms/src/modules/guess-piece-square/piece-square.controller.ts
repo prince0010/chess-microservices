@@ -5,6 +5,7 @@ import { PieceSquareService } from './piece-square.service';
 
 import { CompletePieceSquareLevelDto } from './dto/complete-piece-square-level.dto';
 import { FindAllPieceSquareLevelsDto } from './dto/find-all-piece-square-levels.dto';
+import { FindOnePieceSquareLevelByUserDto } from './dto/find-one-piece-square-level.dto';
 
 @Controller()
 export class PieceSquareController {
@@ -21,8 +22,13 @@ export class PieceSquareController {
   }
 
   @MessagePattern('pieceSquare.findOne.level')
-  findOne(@Payload() pieceSquareLevelId: number) {
-    return this.pieceSquareService.findOneLevel(pieceSquareLevelId);
+  findOne(
+    @Payload()
+    findOnePieceSquareLevelByUserDto: FindOnePieceSquareLevelByUserDto,
+  ) {
+    return this.pieceSquareService.findOneLevel(
+      findOnePieceSquareLevelByUserDto,
+    );
   }
 
   @MessagePattern('pieceSquare.complete.level')

@@ -24,4 +24,7 @@ export class PieceSquareLevelCompleted {
 
   @Column({ type: 'int', nullable: false })
   userUid: number; // auth reference with column UID
+
+  @Column({ type: 'int', nullable: false, default: 0 })
+  counter: number; // how many times user complete this level
 }
