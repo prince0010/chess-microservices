@@ -90,6 +90,7 @@ services:
       - ${GAME_MS_PORT}:3003
     volumes:
       - ./chess-game-ms/src:/usr/src/app/src
+      - ./chess-game-ms/files:/usr/src/app/files
     depends_on: [game-mariadb-dev]
     command: npm run start:dev
     environment:

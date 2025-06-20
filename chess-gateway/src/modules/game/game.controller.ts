@@ -22,6 +22,10 @@ import { UpdateTetrisUserHistoryDto } from './dto/update-tetris-user-history.dto
 import { UpdateGuessPositionUserHistoryDto } from './dto/update-guess-position-user-history.dto';
 import { FindAllPieceSquareLevelsDto } from './dto/find-all-piece-square-levels.dto';
 import { CompletePieceSquareLevelDto } from './dto/complete-piece-square-level.dto';
+import { RunFileSeedWorldChessChampionDto } from './dto/run-file-seed-world-chess-champion.dto';
+import { FindOneWorldChessChampionLevelByUserDto } from './dto/find-one-world-chess-champion-level.dto';
+import { FindAllWorldChessChampionLevelsDto } from './dto/find-all-world-chess-champion-levels.dto';
+import { CompleteWorldChessChampionLevelDto } from './dto/complete-world-chess-champion-level.dto';
 
 @Controller('game')
 export class GameController {
@@ -167,6 +171,86 @@ export class GameController {
     };
 
     return this.client.send('pieceSquare.complete.level', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  /* WORLD CHESS CHAMPION GAME */
+  @UseGuards(AdminGuard)
+  @Post('/world-chess-champion/generate-57-levels')
+  generate57Levels() {
+    return this.client.send('worldChessChampion.seed.levels', {}).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AdminGuard)
+  @Post('/world-chess-champion/generate-pgn-file-games')
+  generateWorldChampionPGNGames(
+    @Body() runFileSeedWorldChessChampionDto: RunFileSeedWorldChessChampionDto,
+  ) {
+    return this.client
+      .send('worldChessChampion.seed.games', runFileSeedWorldChessChampionDto)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/world-chess-champion/:id')
+  findOneWorldChessChampionGame(
+    @Param('id', ParseIntPipe) worldChessChampionLevelId: number,
+    @Req() req: any,
+  ) {
+    const data: FindOneWorldChessChampionLevelByUserDto = {
+      worldChessChampionLevelId,
+      userUid: +req.user.uid,
+    };
+    return this.client.send('worldChessChampion.findOne.level', data).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/world-chess-champion')
+  findAllWorldChessChampionLevels(
+    @Query()
+    findAllWorldChessChampionLevelsDto: FindAllWorldChessChampionLevelsDto,
+    @Req() req: any,
+  ) {
+    return this.client
+      .send('worldChessChampion.findAll.levels', {
+        ...findAllWorldChessChampionLevelsDto,
+        userUid: +req.user.uid,
+      })
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
+
+  @UseGuards(AuthGuard)
+  @Patch('/world-chess-champion/complete-level')
+  completeWorldChessChampionLevelByUser(
+    @Body()
+    completeWorldChessChampionLevelDto: CompleteWorldChessChampionLevelDto,
+    @Req() req: any,
+  ) {
+    const payload = {
+      ...completeWorldChessChampionLevelDto,
+      userUid: +req.user.uid,
+    };
+
+    return this.client.send('worldChessChampion.complete.level', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

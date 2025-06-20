@@ -30,3 +30,9 @@
 ## Game Piece Square
 
 1. Run SEED endpoint to generate 32 Levels of this game
+
+## Game World Chess Champion
+
+1. Run SEED endpoint to generate 57 Levels.
+2. Run SEED endpoint to generate games with the filename as payload (exists enum with the existing filenames)
+3. When new world chess champion pgn file appears add it to existing Enum with the exact filename.

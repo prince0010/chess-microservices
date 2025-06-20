@@ -93,6 +93,8 @@ services:
       GAME_DB_ROOT_PASSWORD: ${GAME_DB_ROOT_PASSWORD}
       GAME_DB_USERNAME: ${GAME_DB_USERNAME}
       GAME_DB_PASSWORD: ${GAME_DB_PASSWORD}
+    volumes:
+      - ./chess-game-ms/files:/usr/src/app/files
     networks:
       - chess_testing
 
