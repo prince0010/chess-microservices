@@ -198,7 +198,9 @@ export class WorldChessChampionService {
         );
       }
 
-      const worldChessChampionGame = await this.findRandomGame();
+      const worldChessChampionGame = await this.findRandomGame(
+        worldChessChampionLevelId,
+      );
 
       const worldChessChampionLevelCompletedByUserRow =
         await this.worldChessChampionLevelCompletedRepository.findOne({
@@ -304,7 +306,9 @@ export class WorldChessChampionService {
     }
   }
 
-  private async findRandomGame(): Promise<WorldChessChampionGame> {
+  private async findRandomGame(
+    levelId: number,
+  ): Promise<WorldChessChampionGame> {
     // 1. Get the total count of all available challenges/games
     const totalChallenges = await this.worldChessChampionGameRepository.count();
 
@@ -314,24 +318,26 @@ export class WorldChessChampionService {
       );
     }
 
-    // 2. Generate a random index (offset) within the range of available challenges
-    // Math.floor(Math.random() * max) generates a random integer between 0 (inclusive) and max (exclusive)
-    const randomIndex = Math.floor(Math.random() * totalChallenges);
+    let suitableGame: WorldChessChampionGame | null = null;
 
-    // 3. Retrieve one record using the random offset
-    // TypeORM's findOne with skip and take simulates fetching a random row efficiently
-    const randomGame = await this.worldChessChampionGameRepository.find({
-      where: {},
-      take: 1,
-      skip: randomIndex,
-    });
+    while (!suitableGame) {
+      const randomIndex = Math.floor(Math.random() * totalChallenges);
 
-    if (!randomGame?.length) {
-      throw new BadRequestException(
-        'Could not retrieve a random world chess champion game. Please try again.',
-      );
+      const [game] = await this.worldChessChampionGameRepository.find({
+        take: 1,
+        skip: randomIndex,
+      });
+
+      if (!game) continue;
+
+      const moveCount = game.moves.split(' ').length;
+
+      // Ensure the game has at least as many moves as required by the levelId
+      if (moveCount >= levelId) {
+        suitableGame = game;
+      }
     }
 
-    return randomGame[0];
+    return suitableGame;
   }
 }
