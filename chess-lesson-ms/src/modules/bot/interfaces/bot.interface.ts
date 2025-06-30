@@ -7,6 +7,7 @@ export interface ICountAndListBots {
 export interface IBotWithHistoryByUser {
   id: number;
   name: string;
+  gender: string;
   difficulty: string;
   description?: string;
   isActive: boolean;

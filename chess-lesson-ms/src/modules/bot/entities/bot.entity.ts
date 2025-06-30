@@ -1,5 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { BotUserHistory } from './bot-user-history.entity';
+import { Gender } from 'src/enum';
 
 @Entity('bot')
 export class Bot {
@@ -14,6 +15,9 @@ export class Bot {
 
   @Column({ nullable: false })
   elo: number;
+
+  @Column({ length: 16, nullable: false, default: Gender.MALE })
+  gender: string;
 
   @Column({ nullable: false, default: true })
   isActive: boolean;

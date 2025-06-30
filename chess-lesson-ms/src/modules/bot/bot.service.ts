@@ -40,6 +40,7 @@ export class BotService {
       difficulty,
       name,
       elo,
+      gender,
       avatar, // missing to handle images,
       description,
     } = createBotDto;
@@ -64,6 +65,7 @@ export class BotService {
       const newBot = this.botRepository.create({
         difficulty,
         name,
+        gender,
         elo,
         description,
         pointsWhenTied: this.calculatePointsWithBotFormula(
@@ -138,6 +140,7 @@ export class BotService {
         return {
           id: bot.id,
           name: bot.name,
+          gender: bot.gender,
           difficulty: bot.difficulty,
           description: bot.description,
           isActive: bot.isActive,
@@ -180,6 +183,7 @@ export class BotService {
       return {
         id: bot.id,
         name: bot.name,
+        gender: bot.gender,
         difficulty: bot.difficulty,
         description: bot.description,
         isActive: bot.isActive,
