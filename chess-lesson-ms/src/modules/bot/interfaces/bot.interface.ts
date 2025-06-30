@@ -1,3 +1,5 @@
+import { Bot } from '../entities/bot.entity';
+
 export interface ICountAndListBots {
   currentPage: number;
   total: number;
@@ -22,4 +24,26 @@ export interface GameBotResponse {
   lastPoints: number;
   earnedPoints: number;
   counter: number;
+}
+
+/* Bot Games Record Endpoints */
+export interface ICountAndListBotRecordGames {
+  currentPage: number;
+  total: number;
+  games: IBotRecordGameByUser[];
+}
+export interface IBotRecordGameByUser {
+  id: number;
+  bot: Bot;
+  pgn: string;
+  whitePlayer: string;
+  blackPlayer: string;
+  result: string;
+  datePlayed: Date;
+  event: string;
+  site: string;
+  setup: string;
+  plyCount: number;
+  currentFen?: string;
+  isGameFinished: boolean;
 }

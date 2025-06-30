@@ -1,5 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { BotUserHistory } from './bot-user-history.entity';
+import { BotUserRecordGame } from './bot-user-record-game.entity';
 import { Gender } from 'src/enum';
 
 @Entity('bot')
@@ -37,4 +38,10 @@ export class Bot {
   // Relations
   @OneToMany(() => BotUserHistory, (botUser) => botUser.bot)
   botUsersHistory: BotUserHistory[];
+
+  @OneToMany(
+    () => BotUserRecordGame,
+    (botUserRecordGame) => botUserRecordGame.bot,
+  )
+  botUserRecordGame: BotUserRecordGame[];
 }
