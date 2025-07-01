@@ -1,5 +1,11 @@
 import { Type } from 'class-transformer';
-import { IsNotEmpty, IsNumber, IsString, MinLength } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsString,
+  MinLength,
+} from 'class-validator';
 
 export class UpdateAuthDto {
   @IsNotEmpty()
@@ -8,16 +14,16 @@ export class UpdateAuthDto {
   userUid: number;
 
   @IsString()
-  @IsNotEmpty()
+  @IsOptional()
   @MinLength(3)
   name: string;
 
   @IsString()
-  @IsNotEmpty()
+  @IsOptional()
   username: string; // or email, it is the same
 
   @IsString()
-  @IsNotEmpty()
+  @IsOptional()
   @MinLength(6)
   password: string;
 }

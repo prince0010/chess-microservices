@@ -88,29 +88,42 @@ export class AuthService {
   }
 
   async updateProfile(updateAuthDto: UpdateAuthDto): Promise<any> {
-    const { userUid, name, password: newPassword, username } = updateAuthDto;
+    const {
+      userUid,
+      name = null,
+      password: newPassword = null,
+      username = null,
+    } = updateAuthDto;
 
     try {
-      const existsUsername = await this.authRepository.findOneBy({
-        username: username.toLowerCase(),
-      });
-
-      if (existsUsername && existsUsername.uid !== userUid) {
-        throw new BadRequestException(
-          `Someone with the username: ${existsUsername.username} already exists.`,
-        );
+      const oldUser = await this.authRepository.findOneBy({ uid: userUid });
+      if (!oldUser) {
+        throw new BadRequestException(`User with UID: ${userUid} not found`);
       }
 
-      await this.authRepository.update(
-        { uid: userUid },
-        {
+      if (username && username !== oldUser.username) {
+        const existsUsername = await this.authRepository.findOneBy({
           username: username.toLowerCase(),
-          password: bcryptjs.hashSync(newPassword, 10),
-          name,
-        },
-      );
+        });
 
-      const savedUser = await this.authRepository.findOneBy({ uid: userUid });
+        if (existsUsername && existsUsername.uid !== userUid) {
+          throw new BadRequestException(
+            `Someone with the username: ${existsUsername.username} already exists.`,
+          );
+        }
+
+        oldUser.username = username.toLowerCase();
+      }
+
+      if (name && oldUser.name !== name) {
+        oldUser.name = name;
+      }
+
+      if (newPassword) {
+        oldUser.password = bcryptjs.hashSync(newPassword, 10);
+      }
+
+      const savedUser = await this.authRepository.save(oldUser);
       if (!savedUser) {
         throw new InternalServerErrorException(
           `Error not handled yet Updating User Profile`,

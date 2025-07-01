@@ -1,17 +1,17 @@
-import { IsNotEmpty, IsString, MinLength } from 'class-validator';
+import { IsNotEmpty, IsOptional, IsString, MinLength } from 'class-validator';
 
 export class UpdateAuthDto {
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @MinLength(3)
   name: string;
 
   @IsString()
-  @IsNotEmpty()
+  @IsOptional()
   username: string; // or email, it is the same
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
   @MinLength(6)
   password: string;
 }
