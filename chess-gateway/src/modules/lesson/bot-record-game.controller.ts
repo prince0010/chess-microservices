@@ -28,7 +28,7 @@ import { FindAllBotRecordGamesDto } from './dto/find-all-bot-record-games.dto';
 export class BotRecordGameController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
-  @UseGuards(AdminGuard)
+  @UseGuards(AuthGuard)
   @Post('save-one')
   saveOne(
     @Body() createRecordBotUserGameDto: CreateRecordBotUserGameDto,
@@ -75,7 +75,7 @@ export class BotRecordGameController {
       );
   }
 
-  @UseGuards(AdminGuard)
+  @UseGuards(AuthGuard)
   @Patch('update-one/:id')
   updateOne(
     @Param('id', ParseIntPipe) id: string,
