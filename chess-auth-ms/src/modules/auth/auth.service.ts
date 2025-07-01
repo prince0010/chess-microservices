@@ -1,4 +1,9 @@
-import { BadRequestException, Inject, Injectable } from '@nestjs/common';
+import {
+  BadRequestException,
+  Inject,
+  Injectable,
+  InternalServerErrorException,
+} from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -11,6 +16,7 @@ import { Auth } from './entities/auth.entity';
 import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
+import { UpdateAuthDto } from './dto/update-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
 import {
   JwtPayload,
@@ -71,6 +77,55 @@ export class AuthService {
 
       return {
         user: restFrontendUser,
+        token: await this.singJWT(savedUser),
+      };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async updateProfile(updateAuthDto: UpdateAuthDto): Promise<any> {
+    const { userUid, name, password: newPassword, username } = updateAuthDto;
+
+    try {
+      const existsUsername = await this.authRepository.findOneBy({
+        username: username.toLowerCase(),
+      });
+
+      if (existsUsername && existsUsername.uid !== userUid) {
+        throw new BadRequestException(
+          `Someone with the username: ${existsUsername.username} already exists.`,
+        );
+      }
+
+      await this.authRepository.update(
+        { uid: userUid },
+        {
+          username: username.toLowerCase(),
+          password: bcryptjs.hashSync(newPassword, 10),
+          name,
+        },
+      );
+
+      const savedUser = await this.authRepository.findOneBy({ uid: userUid });
+      if (!savedUser) {
+        throw new InternalServerErrorException(
+          `Error not handled yet Updating User Profile`,
+        );
+      }
+
+      const {
+        password: updatedPassword,
+        roles,
+        token,
+        ...restUser
+      } = savedUser;
+
+      return {
+        user: { ...restUser },
         token: await this.singJWT(savedUser),
       };
     } catch (error) {

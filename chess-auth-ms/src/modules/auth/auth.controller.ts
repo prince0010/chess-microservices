@@ -6,6 +6,7 @@ import { AuthService } from './auth.service';
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
 import { UpdatePointsDto } from './dto/update-points.dto';
+import { UpdateAuthDto } from './dto/update-auth.dto';
 import { IUserUidsArray } from './interfaces';
 
 @Controller()
@@ -15,6 +16,11 @@ export class AuthController {
   @MessagePattern('auth.register.user')
   create(@Payload() registerAuthDto: RegisterAuthDto) {
     return this.authService.register(registerAuthDto);
+  }
+
+  @MessagePattern('auth.update.user')
+  update(@Payload() updateAuthDto: UpdateAuthDto) {
+    return this.authService.updateProfile(updateAuthDto);
   }
 
   @MessagePattern('auth.login.user')

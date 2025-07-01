@@ -6,6 +6,7 @@ import {
   Param,
   ParseIntPipe,
   Post,
+  Req,
   UseGuards,
 } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
@@ -17,6 +18,7 @@ import { Token, User } from './decorators';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
+import { UpdateAuthDto } from './dto/update-auth.dto';
 import { ICurrentUser } from './interfaces/user.interface';
 
 @Controller('auth')
@@ -26,6 +28,20 @@ export class AuthController {
   @Post('register')
   registerUser(@Body() registerAuthDto: RegisterAuthDto) {
     return this.client.send('auth.register.user', registerAuthDto).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Post('update-profile')
+  updateUser(@Body() updateAuthDto: UpdateAuthDto, @Req() req: any) {
+    const data = {
+      ...updateAuthDto,
+      userUid: +req.user.uid,
+    };
+    return this.client.send('auth.update.user', data).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
