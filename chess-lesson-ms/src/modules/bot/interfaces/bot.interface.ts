@@ -35,6 +35,7 @@ export interface ICountAndListBotRecordGames {
 export interface IBotRecordGameByUser {
   id: number;
   bot: Bot;
+  moves: string[];
   pgn: string;
   whitePlayer: string;
   blackPlayer: string;

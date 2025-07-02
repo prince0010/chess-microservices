@@ -8,7 +8,10 @@ import { BotUserRecordGame } from './entities/bot-user-record-game.entity';
 
 import { CreateRecordBotUserGameDto } from './dto/create-record-bot-user-game.dto';
 import { FindAllBotRecordGamesDto } from './dto/find-all-bot-record-games.dto';
-import { ICountAndListBotRecordGames } from './interfaces/bot.interface';
+import {
+  IBotRecordGameByUser,
+  ICountAndListBotRecordGames,
+} from './interfaces/bot.interface';
 import { UpdateRecordBotUserGameDto } from './dto/update-record-bot-user-game.dto';
 
 @Injectable()
@@ -96,7 +99,7 @@ export class BotRecordGameService {
       return {
         currentPage: page,
         total,
-        games,
+        games: games.map((game) => ({ ...game, moves: game.moves.split(' ') })),
       };
     } catch (error) {
       throw new RpcException({
@@ -106,7 +109,7 @@ export class BotRecordGameService {
     }
   }
 
-  async findOne(recordId: number): Promise<BotUserRecordGame> {
+  async findOne(recordId: number): Promise<IBotRecordGameByUser> {
     try {
       const botGameRecord = await this.botUserRecordGameRepository.findOne({
         where: { id: recordId },
@@ -118,7 +121,7 @@ export class BotRecordGameService {
         );
       }
 
-      return botGameRecord;
+      return { ...botGameRecord, moves: botGameRecord.moves.split(' ') };
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -133,7 +136,15 @@ export class BotRecordGameService {
   ): Promise<string> {
     const { userUid, ...restBot } = updateRecordBotUserGameDto;
     try {
-      const existingBot = await this.findOne(botRecordGameId);
+      const existingBot = await this.botUserRecordGameRepository.findOneBy({
+        id: botRecordGameId,
+      });
+      if (!existingBot) {
+        throw new BadRequestException(
+          `Bot record game with ID: ${botRecordGameId} not found.`,
+        );
+      }
+
       if (existingBot.userUid !== userUid) {
         throw new BadRequestException(
           `This bot game is not property of this current authenticated user.`,
