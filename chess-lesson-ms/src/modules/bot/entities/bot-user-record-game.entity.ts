@@ -20,6 +20,9 @@ export class BotUserRecordGame {
   @Column({ type: 'text', nullable: false })
   pgn: string; // Full PGN notation (all moves, metadata, etc.)
 
+  @Column({ type: 'text', nullable: false })
+  moves: string;
+
   @Column({ nullable: false })
   whitePlayer: string;
 
@@ -33,8 +36,8 @@ export class BotUserRecordGame {
     type: 'timestamp',
     nullable: false,
     transformer: {
-      to: (value: string | null) => (value ? new Date(value) : null),
-      from: (value: Date | null) => value,
+      to: (value: Date | string) => new Date(value),
+      from: (value: Date) => value,
     },
   })
   datePlayed: Date;

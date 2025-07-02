@@ -3,11 +3,9 @@ import { MessagePattern, Payload } from '@nestjs/microservices';
 
 import { BotRecordGameService } from './bot-record-game.service';
 
-import {
-  CreateRecordBotUserGameDto,
-  UpdateRecordBotUserGameDto,
-} from './dto/create-record-bot-user-game.dto';
+import { CreateRecordBotUserGameDto } from './dto/create-record-bot-user-game.dto';
 import { FindAllBotRecordGamesDto } from './dto/find-all-bot-record-games.dto';
+import { UpdateRecordBotUserGameDto } from './dto/update-record-bot-user-game.dto';
 
 @Controller()
 export class BotRecordGameController {

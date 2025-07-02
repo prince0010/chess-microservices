@@ -9,7 +9,7 @@ export class Migration1751305500038 implements MigrationInterface {
       \`id\` int NOT NULL AUTO_INCREMENT,
       \`userUid\` int NOT NULL,
       \`botId\` int NOT NULL,
-      \`pgn\` text NOT NULL,
+      \`moves\` text NOT NULL,
       \`whitePlayer\` varchar(255) NOT NULL,
       \`blackPlayer\` varchar(255) NOT NULL,
       \`result\` varchar(16) NOT NULL DEFAULT '*',
@@ -20,6 +20,7 @@ export class Migration1751305500038 implements MigrationInterface {
       \`plyCount\` int NOT NULL DEFAULT '0',
       \`currentFen\` text NULL,
       \`isGameFinished\` tinyint NOT NULL DEFAULT 0,
+      \`pgn\` text NOT NULL,
       PRIMARY KEY (\`id\`)) ENGINE=InnoDB`,
     );
     await queryRunner.query(

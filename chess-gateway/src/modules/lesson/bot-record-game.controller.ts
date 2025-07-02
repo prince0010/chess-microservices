@@ -15,14 +15,11 @@ import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { catchError } from 'rxjs';
 
 import { NATS_SERVICE } from 'src/config';
-import { AdminGuard } from 'src/guards/admin.guard';
 import { AuthGuard } from 'src/guards/auth.guard';
 
-import {
-  CreateRecordBotUserGameDto,
-  UpdateRecordBotUserGameDto,
-} from './dto/create-record-bot-user-game.dto';
+import { CreateRecordBotUserGameDto } from './dto/create-record-bot-user-game.dto';
 import { FindAllBotRecordGamesDto } from './dto/find-all-bot-record-games.dto';
+import { UpdateRecordBotUserGameDto } from './dto/update-record-bot-user-game.dto';
 
 @Controller('bot-record-game')
 export class BotRecordGameController {
@@ -80,10 +77,14 @@ export class BotRecordGameController {
   updateOne(
     @Param('id', ParseIntPipe) id: string,
     @Body() updateRecordBotUserGameDto: UpdateRecordBotUserGameDto,
+    @Req() req: any,
   ) {
     const data = {
       id: +id,
-      updateRecordBotUserGameDto,
+      updateRecordBotUserGameDto: {
+        ...updateRecordBotUserGameDto,
+        userUid: +req.user.uid,
+      },
     };
 
     return this.client.send('botRecordGame.update.one', data).pipe(

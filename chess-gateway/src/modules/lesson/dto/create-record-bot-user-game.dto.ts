@@ -1,7 +1,9 @@
-import { PartialType } from '@nestjs/mapped-types';
 import { Type } from 'class-transformer';
 import {
+  ArrayMinSize,
+  IsArray,
   IsBoolean,
+  IsDate,
   IsEnum,
   IsNotEmpty,
   IsNumber,
@@ -17,12 +19,14 @@ export class CreateRecordBotUserGameDto {
   botId: number;
 
   @IsNotEmpty()
-  @IsString()
-  datePlayed: string;
+  @Type(() => Date)
+  @IsDate()
+  datePlayed: Date;
 
-  @IsString()
-  @IsNotEmpty()
-  pgn: string; // Full PGN game
+  @IsArray()
+  @ArrayMinSize(1)
+  @IsString({ each: true })
+  moves: string[];
 
   @IsString()
   @IsNotEmpty()
@@ -50,7 +54,3 @@ export class CreateRecordBotUserGameDto {
   @IsOptional()
   currentFen?: string; // Only if unfinished
 }
-
-export class UpdateRecordBotUserGameDto extends PartialType(
-  CreateRecordBotUserGameDto,
-) {}

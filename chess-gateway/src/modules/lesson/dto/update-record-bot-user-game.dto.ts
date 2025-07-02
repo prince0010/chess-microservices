@@ -1,11 +1,8 @@
-import { Type } from 'class-transformer';
 import {
   ArrayMinSize,
   IsArray,
   IsBoolean,
-  IsDate,
   IsEnum,
-  IsNotEmpty,
   IsNumber,
   IsOptional,
   IsPositive,
@@ -13,33 +10,11 @@ import {
 } from 'class-validator';
 import { GameResult } from 'src/enum';
 
-export class CreateRecordBotUserGameDto {
-  @IsPositive()
-  @IsNumber()
-  botId: number;
-
-  @IsNumber()
-  @IsPositive()
-  @Type(() => Number)
-  userUid: number;
-
-  @IsNotEmpty()
-  @Type(() => Date)
-  @IsDate()
-  datePlayed: Date;
-
+export class UpdateRecordBotUserGameDto {
   @IsArray()
   @ArrayMinSize(1)
   @IsString({ each: true })
   moves: string[];
-
-  @IsString()
-  @IsNotEmpty()
-  whitePlayer: string;
-
-  @IsString()
-  @IsNotEmpty()
-  blackPlayer: string;
 
   @IsString()
   @IsEnum(GameResult, {
