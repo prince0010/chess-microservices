@@ -59,3 +59,15 @@ export interface CompleteLessonResponse {
   earnedPoints: number;
   counter: number;
 }
+
+/* For Record Lesson */
+export interface ILessonListRecordByUser {
+  total: number;
+  lessons: IShortRecordLessonsByUser[];
+}
+export interface IShortRecordLessonsByUser {
+  lessonId: number;
+  level: string;
+  description: string;
+  completedAt: Date;
+}

@@ -1,4 +1,10 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Bot } from './bot.entity';
 
 import { GameResult } from 'src/enum';
@@ -35,14 +41,7 @@ export class BotUserRecordGame {
   @Column({ length: 16, default: GameResult.UNFINISHED })
   result: string;
 
-  @Column({
-    type: 'timestamp',
-    nullable: false,
-    transformer: {
-      to: (value: Date | string) => new Date(value),
-      from: (value: Date) => value,
-    },
-  })
+  @CreateDateColumn()
   datePlayed: Date;
 
   @Column({ type: 'varchar', length: 255, default: 'Online Bot Match' })

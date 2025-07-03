@@ -4,6 +4,7 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
   Index,
+  CreateDateColumn,
 } from 'typeorm';
 import { Lesson } from './lesson.entity';
 
@@ -20,4 +21,7 @@ export class LessonCompleted {
 
   @Column({ type: 'int', nullable: false })
   userUid: number; // auth reference with column UID
+
+  @CreateDateColumn()
+  completedAt: Date;
 }

@@ -37,7 +37,6 @@ export class BotRecordGameService {
       const game = this.botUserRecordGameRepository.create({
         bot,
         userUid,
-        datePlayed: dto.datePlayed,
         pgn: fullPgn,
         moves: dto.moves.join(' '),
         whitePlayer: dto.whitePlayer,
@@ -189,7 +188,7 @@ export class BotRecordGameService {
     const pgnHeaders = [
       `[Event "${'We Chess Bot Match'}"]`,
       `[Site "${'We Chess App'}"]`,
-      `[Date "${dto.datePlayed}"]`,
+      `[Date "${new Date().toISOString().split('T')[0]}"]`,
       `[Round "?"]`,
       `[White "${dto.whitePlayer}"]`,
       `[Black "${dto.blackPlayer}"]`,

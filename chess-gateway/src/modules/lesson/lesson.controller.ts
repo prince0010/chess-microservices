@@ -6,6 +6,7 @@ import {
   Param,
   ParseIntPipe,
   Post,
+  Query,
   Req,
   UseGuards,
 } from '@nestjs/common';
@@ -17,6 +18,7 @@ import { AuthGuard } from 'src/guards/auth.guard';
 import { SuperAdminGuard } from 'src/guards/super-admin.guard';
 
 import { InsertLessonDto } from './dto/insert-lesson.dto';
+import { FindAllHistoryRecordLessonDto } from './dto/find-all-history-record-lesson.dto';
 
 @Controller('lesson')
 export class LessonController {
@@ -26,6 +28,20 @@ export class LessonController {
   @Post('seed')
   insertLessonsByPgnFile(@Body() insertLessonDto: InsertLessonDto) {
     return this.client.send('lesson.insert.pgn', insertLessonDto).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('get-record')
+  getRecord(
+    @Query() findAllHistoryRecordLessonDto: FindAllHistoryRecordLessonDto,
+    @Req() req: any,
+  ) {
+    const payload = { ...findAllHistoryRecordLessonDto, userUid: req.user.uid };
+    return this.client.send('lesson.find.historyRecord', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

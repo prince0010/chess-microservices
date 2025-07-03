@@ -1,9 +1,7 @@
-import { Type } from 'class-transformer';
 import {
   ArrayMinSize,
   IsArray,
   IsBoolean,
-  IsDate,
   IsEnum,
   IsIn,
   IsNotEmpty,
@@ -18,11 +16,6 @@ export class CreateRecordBotUserGameDto {
   @IsPositive()
   @IsNumber()
   botId: number;
-
-  @IsNotEmpty()
-  @Type(() => Date)
-  @IsDate()
-  datePlayed: Date;
 
   @IsNotEmpty()
   @IsString()

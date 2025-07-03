@@ -29,11 +29,6 @@ export class CreateRecordBotUserGameDto {
   @IsIn(['white', 'black'])
   color: string; // which color player select to play against the bot
 
-  @IsNotEmpty()
-  @Type(() => Date)
-  @IsDate()
-  datePlayed: Date;
-
   @IsArray()
   @ArrayMinSize(1)
   @IsString({ each: true })
