@@ -46,6 +46,7 @@ export class BotRecordGameService {
         plyCount: dto.plyCount ?? 0,
         isGameFinished: dto.isGameFinished ?? false,
         currentFen: dto.currentFen,
+        color: dto.color,
       });
 
       await this.botUserRecordGameRepository.save(game);
@@ -76,7 +77,7 @@ export class BotRecordGameService {
       take: limit,
       skip: offset,
       order: {
-        id: 'ASC',
+        id: 'DESC',
       },
     };
 

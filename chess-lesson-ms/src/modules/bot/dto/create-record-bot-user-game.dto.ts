@@ -5,6 +5,7 @@ import {
   IsBoolean,
   IsDate,
   IsEnum,
+  IsIn,
   IsNotEmpty,
   IsNumber,
   IsOptional,
@@ -22,6 +23,11 @@ export class CreateRecordBotUserGameDto {
   @IsPositive()
   @Type(() => Number)
   userUid: number;
+
+  @IsNotEmpty()
+  @IsString()
+  @IsIn(['white', 'black'])
+  color: string; // which color player select to play against the bot
 
   @IsNotEmpty()
   @Type(() => Date)

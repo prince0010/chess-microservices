@@ -17,6 +17,9 @@ export class BotUserRecordGame {
   @Column({ type: 'int', nullable: false })
   userUid: number; // auth reference with column uid
 
+  @Column({ length: 8, nullable: false, default: 'white' })
+  color: string; // color of piece player choose
+
   @Column({ type: 'text', nullable: false })
   pgn: string; // Full PGN notation (all moves, metadata, etc.)
 
