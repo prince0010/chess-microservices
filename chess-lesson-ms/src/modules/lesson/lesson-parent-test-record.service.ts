@@ -92,7 +92,10 @@ export class LessonParentTestRecordService {
         name: record.lessonParent.name,
         playedAt: record.playedAt,
         result: record.lessons.length < 7 ? 'failed' : 'passed',
-        lessons,
+        lessons: lessons.map((lesson) => ({
+          ...lesson,
+          moves: lesson.moves.split(' '),
+        })),
       };
     } catch (error) {
       throw new RpcException({

@@ -33,5 +33,5 @@ export interface ISingleLessonTestRecord {
   name: string;
   playedAt: Date;
   result: string;
-  lessons: Lesson[];
+  lessons: any[]; // Lesson with moves as array
 }
