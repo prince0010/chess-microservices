@@ -1,3 +1,5 @@
+import { Lesson } from '../entities/lesson.entity';
+
 /* Normal lessons */
 export interface ILessonListRecordByUser {
   total: number;
@@ -23,4 +25,13 @@ export interface ILessonTestRecord {
   playedAt: Date;
   lessonIds: string[];
   result: string;
+}
+
+export interface ISingleLessonTestRecord {
+  id: number;
+  level: string;
+  name: string;
+  playedAt: Date;
+  result: string;
+  lessons: Lesson[];
 }

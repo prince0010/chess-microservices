@@ -40,18 +40,20 @@ export class LessonParentTestRecordController {
       );
   }
 
-  // @UseGuards(AuthGuard)
-  // @Get('/:id')
-  // findOne(@Param('id', ParseIntPipe) lessonParentId: string, @Req() req: any) {
-  //   const payload: FindOneLessonParentDto = {
-  //     lessonParentId: +lessonParentId,
-  //     userUid: req.user.uid,
-  //   };
+  @UseGuards(AuthGuard)
+  @Get('/:recordId')
+  findOne(@Param('recordId', ParseIntPipe) recordId: number, @Req() req: any) {
+    const payload = {
+      recordId,
+      userUid: +req.user.uid,
+    };
 
-  //   return this.client.send('lessonParent.find.one', payload).pipe(
-  //     catchError((err) => {
-  //       throw new RpcException(err);
-  //     }),
-  //   );
-  // }
+    return this.client
+      .send('lessonParent.testRecord.findOneByUser', payload)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
 }
