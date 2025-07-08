@@ -9,26 +9,31 @@ import { LessonParent } from './entities/lesson-parent.entity';
 import { LessonParentEnabled } from './entities/lesson-parent-enabled.entity';
 import { LessonCompletedTest } from './entities/lesson-completed-test.entity';
 import { LessonPlayed } from './entities/lesson-played.entity';
+import { LessonParentTestRecord } from './entities/lesson-parent-test-record.entity';
 
 import { LessonController } from './lesson.controller';
 import { LessonCompletedController } from './lesson-completed.controller';
 import { LessonParentController } from './lesson-parent.controller';
+import { LessonParentTestRecordController } from './lesson-parent-test-record.controller';
 import { LessonCompletedService } from './lesson-completed.service';
 import { LessonService } from './lesson.service';
 import { LessonSeederService } from './lesson-seeder.service';
 import { LessonParentService } from './lesson-parent.service';
+import { LessonParentTestRecordService } from './lesson-parent-test-record.service';
 
 @Module({
   controllers: [
     LessonController,
     LessonCompletedController,
     LessonParentController,
+    LessonParentTestRecordController,
   ],
   providers: [
     LessonService,
     LessonSeederService,
     LessonCompletedService,
     LessonParentService,
+    LessonParentTestRecordService,
   ],
   imports: [
     TypeOrmModule.forFeature([
@@ -38,6 +43,7 @@ import { LessonParentService } from './lesson-parent.service';
       LessonParentEnabled,
       LessonCompletedTest,
       LessonPlayed,
+      LessonParentTestRecord,
     ]),
     NatsModule,
   ],

@@ -11,6 +11,7 @@ import { LessonParentEnabled } from './entities/lesson-parent-enabled.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
 import { LessonCompletedTest } from './entities/lesson-completed-test.entity';
 import { LessonPlayed } from './entities/lesson-played.entity';
+import { LessonParentTestRecord } from './entities/lesson-parent-test-record.entity';
 
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
@@ -47,6 +48,8 @@ export class LessonParentService {
     private readonly lessonParentEnabledRepository: Repository<LessonParentEnabled>,
     @InjectRepository(LessonPlayed)
     private readonly lessonPlayedRepository: Repository<LessonPlayed>,
+    @InjectRepository(LessonParentTestRecord)
+    private readonly lessonParentTestRecordRepository: Repository<LessonParentTestRecord>,
   ) {}
 
   async create(
@@ -657,7 +660,7 @@ export class LessonParentService {
         lessonParent.level as LessonLevel,
       );
 
-      // STEP 2: validate valid lessonIds
+      // STEP 2: validate lessonIds
       for (const lessonId of completedLessonIds) {
         const lesson = await this.lessonRepository.findOne({
           where: { id: lessonId },
@@ -694,6 +697,19 @@ export class LessonParentService {
           );
         }
       }
+
+      // STEP 3.1: save new Lesson Parent Test Record
+      const newLessonParentTestRecord =
+        this.lessonParentTestRecordRepository.create({
+          lessonParent,
+          userUid,
+          lessons: completedLessonIds.map((completedLessonId) =>
+            completedLessonId.toString(),
+          ),
+        });
+      await this.lessonParentTestRecordRepository.save(
+        newLessonParentTestRecord,
+      );
 
       // STEP 4: Add lesson points to user counter
       const dataPoints: UpdateUserPointsDto = {
