@@ -68,14 +68,16 @@ export class BotService {
         gender,
         elo,
         description,
-        pointsWhenTied: this.calculatePointsWithBotFormula(
-          BotUserGameResult.GAME_TIED,
-          elo,
-        ),
-        pointsWhenWin: this.calculatePointsWithBotFormula(
-          BotUserGameResult.GAME_WON,
-          elo,
-        ),
+        pointsWhenTied: 1,
+        pointsWhenWin: 2,
+        // pointsWhenTied: this.calculatePointsWithBotFormula(
+        //   BotUserGameResult.GAME_TIED,
+        //   elo,
+        // ),
+        // pointsWhenWin: this.calculatePointsWithBotFormula(
+        //   BotUserGameResult.GAME_WON,
+        //   elo,
+        // ),
       });
 
       await this.botRepository.save(newBot);
@@ -247,14 +249,6 @@ export class BotService {
         id,
         name,
         elo,
-        pointsWhenTied: this.calculatePointsWithBotFormula(
-          BotUserGameResult.GAME_TIED,
-          elo ?? oldBot.elo,
-        ),
-        pointsWhenWin: this.calculatePointsWithBotFormula(
-          BotUserGameResult.GAME_WON,
-          elo ?? oldBot.elo,
-        ),
         difficulty,
         ...restBot,
       });
