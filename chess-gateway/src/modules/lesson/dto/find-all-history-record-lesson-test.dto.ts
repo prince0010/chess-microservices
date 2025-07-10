@@ -1,7 +1,12 @@
 import { Type } from 'class-transformer';
-import { IsOptional, IsPositive, Min } from 'class-validator';
+import { IsNumber, IsOptional, IsPositive, Min } from 'class-validator';
 
 export class FindAllHistoryRecordLessonTestDto {
+  @IsNumber()
+  @IsPositive()
+  @Type(() => Number)
+  lessonParentId: number;
+
   @IsOptional()
   @IsPositive()
   @Type(() => Number) // converts query parameter string to number here

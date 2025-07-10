@@ -4,6 +4,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { In, Repository } from 'typeorm';
 
 import { Lesson } from './entities/lesson.entity';
+import { LessonParent } from './entities/lesson-parent.entity';
 import { LessonParentTestRecord } from './entities/lesson-parent-test-record.entity';
 
 import {
@@ -20,19 +21,36 @@ export class LessonParentTestRecordService {
     private readonly lessonParentTestRecordRepository: Repository<LessonParentTestRecord>,
     @InjectRepository(Lesson)
     private readonly lessonRepository: Repository<Lesson>,
+    @InjectRepository(LessonParent)
+    private readonly lessonParentRepository: Repository<LessonParent>,
   ) {}
 
   async findAllByUser(
     findAllHistoryRecordLessonTestDto: FindAllHistoryRecordLessonTestDto,
   ): Promise<ILessonTestRecordListByUser> {
-    const { userUid, limit = 10, page = 1 } = findAllHistoryRecordLessonTestDto;
+    const {
+      userUid,
+      lessonParentId,
+      limit = 10,
+      page = 1,
+    } = findAllHistoryRecordLessonTestDto;
     const offset = (page - 1) * limit;
 
     try {
+      const existingLessonParent = await this.lessonParentRepository.findOneBy({
+        id: lessonParentId,
+      });
+      if (!existingLessonParent) {
+        throw new BadRequestException(
+          `Lesson Parent with ID: ${lessonParentId} not found.`,
+        );
+      }
+
       const [lessonTestRecords, total] =
         await this.lessonParentTestRecordRepository.findAndCount({
           where: {
             userUid,
+            lessonParent: { id: lessonParentId },
           },
           relations: { lessonParent: true },
           take: limit,

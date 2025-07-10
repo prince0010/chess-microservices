@@ -1,5 +1,13 @@
 import { Type } from 'class-transformer';
-import { IsEnum, IsNumber, IsOptional, IsPositive, Min } from 'class-validator';
+import {
+  IsEnum,
+  IsIn,
+  IsNumber,
+  IsOptional,
+  IsPositive,
+  IsString,
+  Min,
+} from 'class-validator';
 import { LessonLevel, lessonLevelsArray } from 'src/enum';
 
 export class FindAllLessonParentDto {
@@ -16,6 +24,11 @@ export class FindAllLessonParentDto {
   @IsOptional()
   @IsNumber()
   id?: number;
+
+  @IsOptional()
+  @IsString()
+  @IsIn(['YES', 'NO'])
+  isTest: string;
 
   @IsOptional()
   @IsEnum(LessonLevel, {

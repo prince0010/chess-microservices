@@ -7,6 +7,11 @@ export class FindAllHistoryRecordLessonTestDto {
   @Type(() => Number)
   userUid: number;
 
+  @IsNumber()
+  @IsPositive()
+  @Type(() => Number)
+  lessonParentId: number;
+
   @IsOptional()
   @IsPositive()
   @Type(() => Number) // converts query parameter string to number here

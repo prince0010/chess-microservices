@@ -1,9 +1,14 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { Lesson } from './entities/lesson.entity';
+import { LessonParent } from './entities/lesson-parent.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
 
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
@@ -17,6 +22,8 @@ export class LessonService {
   constructor(
     @InjectRepository(Lesson)
     private readonly lessonRepository: Repository<Lesson>,
+    @InjectRepository(LessonParent)
+    private readonly lessonParentRepository: Repository<LessonParent>,
     @InjectRepository(LessonCompleted)
     private readonly lessonCompletedRepository: Repository<LessonCompleted>,
   ) {}
@@ -48,12 +55,23 @@ export class LessonService {
       userUid,
       limit = 10,
       page = 1,
+      lessonParentId,
       // level = null,
     } = findAllHistoryRecordLessonDto;
 
     const offset = (page - 1) * limit;
 
     try {
+      // STEP 0: verify lessonParent exists
+      const existingLessonParent = await this.lessonParentRepository.findOneBy({
+        id: lessonParentId,
+      });
+      if (!existingLessonParent) {
+        throw new BadRequestException(
+          `Lesson Parent with ID: ${lessonParentId} not found.`,
+        );
+      }
+
       // STEP 1: build the SQL
       const [rawLessons, total] = await Promise.all([
         this.lessonCompletedRepository.query(
@@ -67,23 +85,26 @@ export class LessonService {
               lesson_completed
             JOIN
               lesson ON lesson_completed.lessonId = lesson.id
+            JOIN
+              lesson_parent ON lesson.lessonParentId = lesson_parent.id
             WHERE
-              lesson_completed.userUid = ?
+              lesson_completed.userUid = ? AND lesson_parent.id = ?
             ORDER BY
               lesson.level ASC,
               lesson.id ASC
             LIMIT ? OFFSET ?
           `,
-          [userUid, limit, offset],
+          [userUid, lessonParentId, limit, offset],
         ),
         this.lessonCompletedRepository.query(
           `
             SELECT COUNT(*) as total
             FROM lesson_completed
             JOIN lesson ON lesson_completed.lessonId = lesson.id
-            WHERE lesson_completed.userUid = ?
+            JOIN lesson_parent ON lesson.lessonParentId = lesson_parent.id
+            WHERE lesson_completed.userUid = ? AND lesson_parent.id = ?
           `,
-          [userUid],
+          [userUid, lessonParentId],
         ),
       ]);
 

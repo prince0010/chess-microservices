@@ -260,6 +260,7 @@ export class LessonParentService {
       id = null,
       level = null,
       userUid,
+      isTest = null,
     } = findAllLessonParentDto;
 
     const offset = (page - 1) * limit;
@@ -279,6 +280,10 @@ export class LessonParentService {
     }
     if (level) {
       whereConditions.level = level;
+    }
+    if (isTest) {
+      const isTestValue = isTest === 'YES';
+      whereConditions.isTest = isTestValue;
     }
 
     if (Object.keys(whereConditions).length > 0) {

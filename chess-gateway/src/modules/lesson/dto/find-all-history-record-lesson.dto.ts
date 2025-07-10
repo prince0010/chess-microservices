@@ -1,5 +1,5 @@
 import { Type } from 'class-transformer';
-import { IsEnum, IsOptional, IsPositive, Min } from 'class-validator';
+import { IsEnum, IsNumber, IsOptional, IsPositive, Min } from 'class-validator';
 import { LessonLevel, lessonLevelsArray } from 'src/enum';
 
 export class FindAllHistoryRecordLessonDto {
@@ -12,6 +12,11 @@ export class FindAllHistoryRecordLessonDto {
   @Min(1)
   @Type(() => Number) // converts query parameter string to number here
   page?: number;
+
+  @IsNumber()
+  @IsPositive()
+  @Type(() => Number)
+  lessonParentId: number;
 
   @IsOptional()
   @IsEnum(LessonLevel, {
