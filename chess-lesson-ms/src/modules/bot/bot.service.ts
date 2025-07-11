@@ -1,7 +1,7 @@
 import { BadRequestException, Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
-import { FindManyOptions, Repository } from 'typeorm';
+import { FindManyOptions, Like, Repository } from 'typeorm';
 import { firstValueFrom } from 'rxjs';
 import { NATS_SERVICE } from 'src/config';
 
@@ -118,7 +118,7 @@ export class BotService {
       whereConditions.id = id;
     }
     if (name) {
-      whereConditions.name = name;
+      whereConditions.name = Like(`%${name}%`);
     }
     if (difficulty) {
       whereConditions.difficulty = difficulty;
