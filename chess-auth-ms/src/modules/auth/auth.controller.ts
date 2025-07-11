@@ -7,6 +7,7 @@ import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
 import { UpdatePointsDto } from './dto/update-points.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
+import { FindAllUsersDto } from './dto/find-all-users.dto';
 import { IUserUidsArray } from './interfaces';
 
 @Controller()
@@ -36,6 +37,11 @@ export class AuthController {
   @MessagePattern('auth.findone.user')
   findOne(@Payload() uid: string | number) {
     return this.authService.findOne(+uid);
+  }
+
+  @MessagePattern('auth.findAll.users')
+  findAllPlayers(@Payload() findAllUsersDto: FindAllUsersDto) {
+    return this.authService.findAllUsers(findAllUsersDto);
   }
 
   @MessagePattern('update.points.user') // update counter points

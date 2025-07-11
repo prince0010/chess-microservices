@@ -3,9 +3,11 @@ import {
   Controller,
   Get,
   Inject,
+  InternalServerErrorException,
   Param,
   ParseIntPipe,
   Post,
+  Query,
   Req,
   UseGuards,
 } from '@nestjs/common';
@@ -13,12 +15,14 @@ import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { catchError } from 'rxjs';
 
 import { AuthGuard } from 'src/guards/auth.guard';
+import { TeacherGuard } from 'src/guards/teacher.guard';
 import { NATS_SERVICE } from 'src/config';
 import { Token, User } from './decorators';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
+import { FindAllUsersDto } from './dto/find-all-users.dto';
 import { ICurrentUser } from './interfaces/user.interface';
 
 @Controller('auth')
@@ -61,6 +65,26 @@ export class AuthController {
   @Get('verify')
   verifyToken(@User() user: ICurrentUser, @Token() token: string) {
     return { user, token };
+  }
+
+  @Get('logout')
+  @UseGuards(AuthGuard)
+  logout(@User() user: ICurrentUser) {
+    return user
+      ? { ok: true }
+      : new InternalServerErrorException(
+          'It is not allowed to close session if user is not previously authenticated, review --logs-- Admin',
+        );
+  }
+
+  @UseGuards(TeacherGuard)
+  @Get('/')
+  findAllUsers(@Query() findAllUsersDto: FindAllUsersDto) {
+    return this.client.send('auth.findAll.users', findAllUsersDto).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
   }
 
   @UseGuards(AuthGuard)

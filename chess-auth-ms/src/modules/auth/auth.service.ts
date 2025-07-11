@@ -7,7 +7,7 @@ import {
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
-import { In, Repository } from 'typeorm';
+import { FindManyOptions, In, Like, Repository } from 'typeorm';
 import { firstValueFrom } from 'rxjs';
 import * as bcryptjs from 'bcryptjs';
 
@@ -18,13 +18,16 @@ import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
+import { UpdatePointsDto } from './dto/update-points.dto';
+import { FindAllUsersDto } from './dto/find-all-users.dto';
+import { SecurityRoles } from 'src/enum';
 import {
   JwtPayload,
   IOneUser,
   IUpdatedPointsUser,
   ISubtractPointsUser,
+  ICountAndListUsers,
 } from './interfaces';
-import { UpdatePointsDto } from './dto/update-points.dto';
 
 @Injectable()
 export class AuthService {
@@ -238,6 +241,76 @@ export class AuthService {
       const { password, ...restUser } = user;
 
       return restUser;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async findAllUsers(
+    findAllUsersDto: FindAllUsersDto,
+  ): Promise<ICountAndListUsers> {
+    const {
+      limit = 10,
+      page = 1,
+      name = null,
+      username = null,
+      country = null,
+      isActive = null,
+      role = null,
+    } = findAllUsersDto;
+
+    const offset = (page - 1) * limit;
+
+    const findOptions: FindManyOptions<Auth> = {
+      take: limit,
+      skip: offset,
+      order: {
+        name: 'ASC',
+      },
+    };
+
+    const whereConditions: any = {
+      roles: Like(`%${SecurityRoles.PLAYER}%`),
+    };
+
+    if (name) {
+      whereConditions.name = Like(`%${name}%`);
+    }
+    if (username) {
+      whereConditions.username = Like(`%${username}%`);
+    }
+    if (country) {
+      whereConditions.country = Like(`%${country}%`);
+    }
+    if (isActive) {
+      const activeValue = isActive === 'YES';
+      whereConditions.isActive = activeValue;
+    }
+    if (role) {
+      whereConditions.roles = Like(`%${role}%`);
+    }
+
+    if (Object.keys(whereConditions).length > 0) {
+      findOptions.where = whereConditions;
+    }
+
+    try {
+      const [players, total] =
+        await this.authRepository.findAndCount(findOptions);
+
+      const transformedPlayers = players.map((player) => {
+        const { password, ...restPlayer } = player;
+        return restPlayer;
+      });
+
+      return {
+        total,
+        page,
+        users: transformedPlayers,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,

@@ -10,6 +10,29 @@ async function bootstrap() {
 
   const app = await NestFactory.create(AppModule);
 
+  const env = process.env.NODE_ENV;
+
+  if (env === 'production') {
+    app.enableCors({
+      origin: [
+        'https://your-production-domain.com',
+        'http://localhost:4200', // TODO: remove me when domain name is ready and production is ready
+        'https://we-chess-testing.netlify.app', // TODO: remove me when domain name is ready and production is ready
+      ],
+      credentials: true,
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+      optionsSuccessStatus: 204,
+    });
+  } else {
+    // development
+    app.enableCors({
+      origin: ['http://localhost:4200', 'https://we-chess-testing.netlify.app'],
+      credentials: true,
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+      optionsSuccessStatus: 204,
+    });
+  }
+
   app.setGlobalPrefix('api', {
     exclude: [
       {

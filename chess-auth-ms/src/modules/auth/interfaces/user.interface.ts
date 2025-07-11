@@ -1,3 +1,8 @@
+export interface ICountAndListUsers {
+  total: number;
+  page: number;
+  users: IOneUser[];
+}
 export interface IOneUser {
   uid: number;
   name: string;
