@@ -17,7 +17,7 @@ async function bootstrap() {
       origin: [
         'https://your-production-domain.com',
         'http://localhost:4200', // TODO: remove me when domain name is ready and production is ready
-        'https://we-chess-testing.netlify.app', // TODO: remove me when domain name is ready and production is ready
+        'https://test-we-chess.netlify.app', // TODO: remove me when domain name is ready and production is ready
       ],
       credentials: true,
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -26,7 +26,7 @@ async function bootstrap() {
   } else {
     // development
     app.enableCors({
-      origin: ['http://localhost:4200', 'https://we-chess-testing.netlify.app'],
+      origin: ['http://localhost:4200', 'https://test-we-chess.netlify.app'],
       credentials: true,
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       optionsSuccessStatus: 204,
