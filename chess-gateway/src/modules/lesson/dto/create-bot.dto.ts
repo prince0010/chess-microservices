@@ -10,7 +10,7 @@ import {
   Max,
   Min,
 } from 'class-validator';
-import { BotDifficulty, botDifficultyArray, Gender } from 'src/enum';
+import { BotDifficulty, botDifficultyArray } from 'src/enum';
 
 export class CreateBotDto {
   @IsString()
@@ -26,10 +26,7 @@ export class CreateBotDto {
 
   @IsString()
   @IsNotEmpty()
-  @IsEnum(Gender, {
-    message: `The available genders for bots are these one: [${Object.values(Gender)}]`,
-  })
-  gender: string;
+  animal: string;
 
   @IsNumber()
   @IsPositive()

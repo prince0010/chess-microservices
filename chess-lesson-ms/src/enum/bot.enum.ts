@@ -1,28 +1,25 @@
 export enum BotDifficulty {
-  BEGINNER = 'beginner', // (For new players learning the basics)
-  CASUAL = 'casual', // (For players with some experience but still improving)
-  INTERMEDIATE = 'intermediate', // (For those with a solid grasp of strategy and tactics)
-  ADVANCED = 'advanced', // (For strong players who compete regularly)
-  MASTER = 'master', // (For high-level players, including experts and titled players)
-  GRANDMASTER = 'grandmaster', // (for elite players at the highest level)
+  BEGINNER = 'Students of the game',
+  CASUAL = 'Casual player',
+  INTERMEDIATE = 'Top club player',
+  MASTER = 'Professional chess player',
+  GRAND_MASTER = 'Best of the best',
 }
 
 export const ELO_RANGE: Record<BotDifficulty, { min: number; max: number }> = {
-  [BotDifficulty.BEGINNER]: { min: 50, max: 500 },
-  [BotDifficulty.CASUAL]: { min: 501, max: 1000 },
-  [BotDifficulty.INTERMEDIATE]: { min: 1001, max: 1600 },
-  [BotDifficulty.ADVANCED]: { min: 1601, max: 2200 },
-  [BotDifficulty.MASTER]: { min: 2201, max: 2800 },
-  [BotDifficulty.GRANDMASTER]: { min: 2801, max: 3300 },
+  [BotDifficulty.BEGINNER]: { min: 50, max: 750 },
+  [BotDifficulty.CASUAL]: { min: 800, max: 1800 },
+  [BotDifficulty.INTERMEDIATE]: { min: 2000, max: 2200 },
+  [BotDifficulty.MASTER]: { min: 2300, max: 2400 },
+  [BotDifficulty.GRAND_MASTER]: { min: 2500, max: 2700 },
 };
 
 export const botDifficultyArray = [
   BotDifficulty.BEGINNER,
   BotDifficulty.CASUAL,
   BotDifficulty.INTERMEDIATE,
-  BotDifficulty.ADVANCED,
   BotDifficulty.MASTER,
-  BotDifficulty.GRANDMASTER,
+  BotDifficulty.GRAND_MASTER,
 ];
 
 export enum BotUserGameResult {

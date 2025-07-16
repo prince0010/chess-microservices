@@ -18,6 +18,7 @@ import { catchError } from 'rxjs';
 import { NATS_SERVICE } from 'src/config';
 import { AdminGuard } from 'src/guards/admin.guard';
 import { AuthGuard } from 'src/guards/auth.guard';
+import { SuperAdminGuard } from 'src/guards/super-admin.guard';
 
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
 import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
@@ -26,6 +27,16 @@ import { FindAllBotsDto } from './dto/find-all-bots.dto';
 @Controller('bot')
 export class BotController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
+
+  @UseGuards(SuperAdminGuard)
+  @Post('seed-animal-bots')
+  seedAnimalBots() {
+    return this.client.send('bot.seed.animals', {}).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
 
   @UseGuards(AdminGuard)
   @Post('create-one')

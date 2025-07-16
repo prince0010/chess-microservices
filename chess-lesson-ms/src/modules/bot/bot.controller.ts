@@ -12,6 +12,11 @@ import { FindOneBotDto } from './dto/find-one-bot.dto';
 export class BotController {
   constructor(private readonly botService: BotService) {}
 
+  @MessagePattern('bot.seed.animals')
+  seedAnimalBots() {
+    return this.botService.generateAnimalBots();
+  }
+
   @MessagePattern('bot.create.one')
   create(@Payload() createBotDto: CreateBotDto) {
     return this.botService.createOne(createBotDto);

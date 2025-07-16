@@ -7,6 +7,7 @@ import { NATS_SERVICE } from 'src/config';
 
 import { Bot } from './entities/bot.entity';
 import { BotUserHistory } from './entities/bot-user-history.entity';
+import { botsDataSeed } from './seed/bot-data-seed';
 
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
 import {
@@ -35,12 +36,27 @@ export class BotService {
     private readonly botUserHistoryRepository: Repository<BotUserHistory>,
   ) {}
 
+  async generateAnimalBots(): Promise<string> {
+    try {
+      // seed data animal bots
+      const data = botsDataSeed;
+      await this.botRepository.insert(data);
+
+      return 'All animal bots generated successfully';
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
   async createOne(createBotDto: CreateBotDto): Promise<string> {
     const {
       difficulty,
       name,
       elo,
-      gender,
+      animal,
       avatar, // missing to handle images,
       description,
     } = createBotDto;
@@ -62,22 +78,27 @@ export class BotService {
         throw new BadRequestException(`Bot with name: ${name} already exists.`);
       }
 
+      const existsBotByAnimal = await this.botRepository.findOneBy({ animal });
+      if (existsBotByAnimal) {
+        throw new BadRequestException(
+          `Bot with animal: ${animal} already exists.`,
+        );
+      }
+
+      // get the last row of bot repository to know how many points when win
+      const lastBot = await this.botRepository.findOne({
+        where: {},
+        order: { id: 'DESC' },
+      });
+
       const newBot = this.botRepository.create({
         difficulty,
         name,
-        gender,
+        animal,
         elo,
         description,
-        pointsWhenTied: 1,
-        pointsWhenWin: 2,
-        // pointsWhenTied: this.calculatePointsWithBotFormula(
-        //   BotUserGameResult.GAME_TIED,
-        //   elo,
-        // ),
-        // pointsWhenWin: this.calculatePointsWithBotFormula(
-        //   BotUserGameResult.GAME_WON,
-        //   elo,
-        // ),
+        pointsWhenTied: 0,
+        pointsWhenWin: lastBot ? lastBot.pointsWhenWin + 5 : 5,
       });
 
       await this.botRepository.save(newBot);
@@ -131,18 +152,28 @@ export class BotService {
     try {
       const [bots, total] = await this.botRepository.findAndCount({
         ...findOptions,
-        relations: { botUsersHistory: true },
+      });
+
+      const botUserHistory = await this.botUserHistoryRepository.find({
+        where: { userUid },
+        relations: { bot: true },
       });
 
       // Map bots with user's game history
+      let lastBotWasBeaten = true; // first bit needs to be enabled
       const botsWithHistory = bots.map((bot) => {
-        const userHistory = bot.botUsersHistory?.find(
-          (history) => history.userUid === userUid,
+        const currentBotDisabled = !lastBotWasBeaten;
+        const userHistory = botUserHistory.find(
+          (historyRow) => historyRow.bot.id === bot.id,
         );
+
+        // update control variable for the next bot
+        lastBotWasBeaten = userHistory ? userHistory.gameWon > 0 : false;
+
         return {
           id: bot.id,
           name: bot.name,
-          gender: bot.gender,
+          animal: bot.animal,
           difficulty: bot.difficulty,
           description: bot.description,
           isActive: bot.isActive,
@@ -150,6 +181,7 @@ export class BotService {
           gameWon: userHistory?.gameWon ?? 0,
           gameLost: userHistory?.gameLost ?? 0,
           gameTied: userHistory?.gameTied ?? 0,
+          disabled: currentBotDisabled,
         };
       });
 
@@ -169,23 +201,21 @@ export class BotService {
   async findOne(findOneBotDto: FindOneBotDto): Promise<IBotWithHistoryByUser> {
     const { userUid, botId } = findOneBotDto;
     try {
-      const bot = await this.botRepository.findOne({
-        where: { id: botId },
-        relations: { botUsersHistory: true },
-      });
+      const bot = await this.botRepository.findOneBy({ id: botId });
 
       if (!bot) {
         throw new BadRequestException(`Bot with ID: ${botId} not found.`);
       }
 
-      const botWithUserHistory = bot.botUsersHistory?.find(
-        (history) => history.userUid === userUid,
-      );
+      const botWithUserHistory = await this.botUserHistoryRepository.findOne({
+        where: { userUid, bot: { id: botId } },
+        relations: { bot: true },
+      });
 
       return {
         id: bot.id,
         name: bot.name,
-        gender: bot.gender,
+        animal: bot.animal,
         difficulty: bot.difficulty,
         description: bot.description,
         isActive: bot.isActive,
@@ -193,6 +223,11 @@ export class BotService {
         gameWon: botWithUserHistory?.gameWon ?? 0,
         gameLost: botWithUserHistory?.gameLost ?? 0,
         gameTied: botWithUserHistory?.gameTied ?? 0,
+        disabled: botWithUserHistory
+          ? botWithUserHistory.gameWon > 0
+            ? false
+            : true
+          : bot.elo !== 200, // if is the first time and the first bot (id = 1) needs to be enabled
       };
     } catch (error) {
       throw new RpcException({
@@ -203,7 +238,7 @@ export class BotService {
   }
 
   async update(id: number, updateBotDto: UpdateBotDto): Promise<string> {
-    const { name, elo, difficulty, ...restBot } = updateBotDto;
+    const { name, elo, animal, difficulty, ...restBot } = updateBotDto;
     try {
       const oldBot = await this.botRepository.findOneBy({ id });
       if (!oldBot) {
@@ -214,6 +249,13 @@ export class BotService {
       if (existBotByName && existBotByName.id !== id) {
         throw new BadRequestException(
           `Another Bot with name: ${name} already exists.`,
+        );
+      }
+
+      const existBotByAnimal = await this.botRepository.findOneBy({ animal });
+      if (existBotByAnimal && existBotByAnimal.id !== id) {
+        throw new BadRequestException(
+          `Another Bot with animal: ${animal} already exists.`,
         );
       }
 
@@ -248,6 +290,7 @@ export class BotService {
       const botToUpdate = await this.botRepository.preload({
         id,
         name,
+        animal,
         elo,
         difficulty,
         ...restBot,
@@ -347,7 +390,9 @@ export class BotService {
         uid: userUid,
         points:
           result === BotUserGameResult.GAME_WON
-            ? fetchedBot.pointsWhenWin
+            ? rowBotUser.gameWon > 1
+              ? 1
+              : fetchedBot.pointsWhenWin // only add points the first time this user beat the bot, otherwise only add 1 point
             : fetchedBot.pointsWhenTied,
       };
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(

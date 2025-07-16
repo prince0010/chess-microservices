@@ -25,7 +25,7 @@
 
 ## List of Bots
 
-1. Create as many bots as needed
+1. Run SEED endpoint to insert animal Bots in database `bot/seed-animal-bots`
 
 ## Game Piece Square
 

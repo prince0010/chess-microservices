@@ -1,4 +1,5 @@
 import { Bot } from '../entities/bot.entity';
+import { BotDifficulty } from 'src/enum';
 
 export interface ICountAndListBots {
   currentPage: number;
@@ -9,7 +10,7 @@ export interface ICountAndListBots {
 export interface IBotWithHistoryByUser {
   id: number;
   name: string;
-  gender: string;
+  animal: string;
   difficulty: string;
   description?: string;
   isActive: boolean;
@@ -17,6 +18,7 @@ export interface IBotWithHistoryByUser {
   gameWon: number;
   gameLost: number;
   gameTied: number;
+  disabled: boolean;
 }
 
 export interface GameBotResponse {
@@ -24,6 +26,14 @@ export interface GameBotResponse {
   lastPoints: number;
   earnedPoints: number;
   counter: number;
+}
+
+export interface IBotSeedData {
+  name: string;
+  elo: number;
+  animal: string;
+  difficulty: BotDifficulty;
+  pointsWhenWin: number;
 }
 
 /* Bot Games Record Endpoints */

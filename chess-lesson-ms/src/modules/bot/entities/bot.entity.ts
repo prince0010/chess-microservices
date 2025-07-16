@@ -1,7 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { BotUserHistory } from './bot-user-history.entity';
 import { BotUserRecordGame } from './bot-user-record-game.entity';
-import { Gender } from 'src/enum';
 
 @Entity('bot')
 export class Bot {
@@ -17,23 +16,23 @@ export class Bot {
   @Column({ nullable: false })
   elo: number;
 
-  @Column({ length: 16, nullable: false, default: Gender.MALE })
-  gender: string;
+  @Column({ nullable: false })
+  animal: string; // animal name
+
+  @Column({ nullable: false, default: 5 })
+  pointsWhenWin: number;
+
+  @Column({ nullable: false, default: 0 })
+  pointsWhenTied: number;
 
   @Column({ nullable: false, default: true })
   isActive: boolean;
 
   @Column({ nullable: true, default: null })
-  avatar?: string; // image url
+  avatar?: string; // NOT USED BY THE MOMENT image url
 
   @Column({ nullable: true, default: null })
-  description?: string;
-
-  @Column({ nullable: false, default: 1 })
-  pointsWhenWin: number;
-
-  @Column({ nullable: false, default: 1 })
-  pointsWhenTied: number;
+  description?: string; // NOT USED BY THE MOMENT
 
   // Relations
   @OneToMany(() => BotUserHistory, (botUser) => botUser.bot)
