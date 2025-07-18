@@ -4,3 +4,4 @@ export * from './lesson.enum';
 export * from './lesson-level.enum';
 export * from './lesson-test.enum';
 export * from './gender.enum';
+export * from './user.enum';

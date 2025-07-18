@@ -5,9 +5,10 @@ import { AuthService } from './auth.service';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
-import { UpdatePointsDto } from './dto/update-points.dto';
+import { UpdateUserPointsDto } from './dto/update-user-points.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 import { FindAllUsersDto } from './dto/find-all-users.dto';
+import { UpdatePandaUserPointsDto } from '../panda/dto/update-panda-user-points.dto';
 import { IUserUidsArray } from './interfaces';
 
 @Controller()
@@ -45,13 +46,13 @@ export class AuthController {
   }
 
   @MessagePattern('update.points.user') // update counter points
-  updatePoints(@Payload() updatePointsDto: UpdatePointsDto) {
-    return this.authService.updatePoints(updatePointsDto);
+  updatePoints(@Payload() updateUserPointsDto: UpdateUserPointsDto) {
+    return this.authService.updatePoints(updateUserPointsDto);
   }
 
   @MessagePattern('subtract.points.user') // reduce counter points
-  reducePoints(@Payload() updatePointsDto: UpdatePointsDto) {
-    return this.authService.subtractPoints(updatePointsDto);
+  reducePoints(@Payload() updatePandaUserPointsDto: UpdatePandaUserPointsDto) {
+    return this.authService.subtractPoints(updatePandaUserPointsDto);
   }
 
   @MessagePattern('auth.find.usersByUids')

@@ -8,7 +8,7 @@ import { NATS_SERVICE } from 'src/config';
 import { AuthPanda } from './entities/auth-panda.entity';
 
 import { UpdatePandaDto } from './dto/update-panda.dto';
-import { UpdateUserPointsDto } from './dto/update-user-points.dto';
+import { UpdatePandaUserPointsDto } from './dto/update-panda-user-points.dto';
 import { PandaAction, PandaPointsConsumedByAction, PandaState } from 'src/enum';
 import { PandaActionResponse } from './interfaces';
 
@@ -123,7 +123,7 @@ export class PandaService {
       );
 
       // STEP subtract points of user
-      const dataPoints: UpdateUserPointsDto = {
+      const dataPoints: UpdatePandaUserPointsDto = {
         uid: userUid,
         points: spentPoints,
       };

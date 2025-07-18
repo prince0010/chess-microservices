@@ -36,7 +36,19 @@ export class Auth {
   isActive: boolean;
 
   @Column({ nullable: false, default: 0 })
-  points: number;
+  points: number; // global counter
+
+  @Column({ nullable: false, default: 0 })
+  educationPoints: number; // education lessons counter
+
+  @Column({ nullable: false, default: 0 })
+  puzzlePoints: number; // puzzle lessons counter
+
+  @Column({ nullable: false, default: 0 })
+  endgamesPoints: number; // endgames lessons counter
+
+  @Column({ nullable: false, default: 0 })
+  animalPoints: number; // play game against animal bots counter
 
   @OneToOne(() => AuthPanda, (panda) => panda.user)
   panda: AuthPanda;

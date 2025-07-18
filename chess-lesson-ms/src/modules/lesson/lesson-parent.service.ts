@@ -18,19 +18,21 @@ import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 import { getTestLessonLengthByLevel } from './helpers/get-test-lesson-length-by-level.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
 import { getFactorLesson } from './helpers/factor-lesson.helper';
+import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
 import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
 import { UpdateUserPointsDto } from './dto/update-user-points.dto';
+
 import {
   CompleteLessonResponse,
   ICountAndListLessonParents,
   ILessonParent,
   ILessonParentDetail,
 } from './interfaces';
-import { LessonLevel, LessonParentName } from 'src/enum';
+import { LessonLevel, LessonParentName, LessonStoryName } from 'src/enum';
 
 @Injectable()
 export class LessonParentService {
@@ -542,6 +544,9 @@ export class LessonParentService {
       const dataPoints: UpdateUserPointsDto = {
         uid: userUid,
         points: stillLessonsToComplete ? earnedPointsFromFrontend : 0,
+        typeUserCounter: typeUserCounterByStoryLesson(
+          lessonParent.story as LessonStoryName,
+        ),
       };
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(
         this.client.send('update.points.user', dataPoints),
@@ -614,6 +619,9 @@ export class LessonParentService {
       const dataPoints: UpdateUserPointsDto = {
         uid: userUid,
         points: earnedPointsByUser,
+        typeUserCounter: typeUserCounterByStoryLesson(
+          lessonParent.story as LessonStoryName,
+        ),
       };
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(
         this.client.send('update.points.user', dataPoints),
@@ -728,6 +736,9 @@ export class LessonParentService {
       const dataPoints: UpdateUserPointsDto = {
         uid: userUid,
         points: 0,
+        typeUserCounter: typeUserCounterByStoryLesson(
+          lessonParent.story as LessonStoryName,
+        ),
       };
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(
         this.client.send('update.points.user', dataPoints),

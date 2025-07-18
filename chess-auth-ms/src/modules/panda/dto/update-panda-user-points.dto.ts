@@ -1,7 +1,7 @@
 import { Type } from 'class-transformer';
 import { IsNotEmpty, IsNumber } from 'class-validator';
 
-export class UpdateUserPointsDto {
+export class UpdatePandaUserPointsDto {
   @IsNotEmpty()
   @IsNumber()
   @Type(() => Number)

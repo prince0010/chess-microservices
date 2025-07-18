@@ -1,5 +1,6 @@
 import { Type } from 'class-transformer';
-import { IsNotEmpty, IsNumber } from 'class-validator';
+import { IsEnum, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { TypeUserCounter } from 'src/enum';
 
 export class UpdateUserPointsDto {
   @IsNotEmpty()
@@ -11,4 +12,10 @@ export class UpdateUserPointsDto {
   @IsNumber()
   @Type(() => Number)
   points: number;
+
+  // this argument is obligated here because lessons update other points columns user
+  @IsNotEmpty()
+  @IsString()
+  @IsEnum(TypeUserCounter)
+  typeUserCounter: TypeUserCounter; // typeUserCounter education | puzzle | endgames
 }

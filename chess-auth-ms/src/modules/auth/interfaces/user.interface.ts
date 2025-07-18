@@ -13,6 +13,10 @@ export interface IOneUser {
   roles: string[];
   isActive: boolean;
   points: number;
+  educationPoints: number;
+  puzzlePoints: number;
+  endgamesPoints: number;
+  animalPoints: number;
 }
 
 export interface IUpdatedPointsUser {

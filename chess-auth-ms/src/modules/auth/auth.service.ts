@@ -18,9 +18,10 @@ import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
-import { UpdatePointsDto } from './dto/update-points.dto';
+import { UpdateUserPointsDto } from './dto/update-user-points.dto';
 import { FindAllUsersDto } from './dto/find-all-users.dto';
-import { SecurityRoles } from 'src/enum';
+import { UpdatePandaUserPointsDto } from '../panda/dto/update-panda-user-points.dto';
+import { SecurityRoles, TypeUserCounter } from 'src/enum';
 import {
   JwtPayload,
   IOneUser,
@@ -320,20 +321,39 @@ export class AuthService {
   }
 
   async updatePoints(
-    // add points by lesson completed or bot beaten
-    updatePointsDto: UpdatePointsDto,
+    // add points by lesson completed or bot beaten or some game
+    updateUserPointsDto: UpdateUserPointsDto,
   ): Promise<IUpdatedPointsUser> {
-    const { uid, points } = updatePointsDto;
+    const { uid, points, typeUserCounter = null } = updateUserPointsDto;
 
     try {
       const user = await this.findOne(uid);
       const lastPoints = user.points;
-      await this.authRepository.update(
-        { uid },
-        {
-          points: user.points + points,
-        },
-      );
+
+      // global points
+      user.points = lastPoints + points;
+
+      if (typeUserCounter) {
+        switch (typeUserCounter) {
+          case TypeUserCounter.EDUCATION_LESSON_COUNTER:
+            user.educationPoints = user.educationPoints + points;
+            break;
+          case TypeUserCounter.PUZZLE_LESSON_COUNTER:
+            user.puzzlePoints = user.puzzlePoints + points;
+            break;
+          case TypeUserCounter.ENDGAMES_LESSON_COUNTER:
+            user.endgamesPoints = user.endgamesPoints + points;
+            break;
+          case TypeUserCounter.ANIMAL_BOT_COUNTER:
+            user.animalPoints = user.animalPoints + points;
+            break;
+
+          default:
+            break;
+        }
+      }
+
+      await this.authRepository.save(user);
 
       return {
         lastPoints,
@@ -350,9 +370,9 @@ export class AuthService {
 
   // subtract points by panda actions
   async subtractPoints(
-    updatePointsDto: UpdatePointsDto,
+    updatePandaUserPointsDto: UpdatePandaUserPointsDto,
   ): Promise<ISubtractPointsUser> {
-    const { uid, points } = updatePointsDto;
+    const { uid, points } = updatePandaUserPointsDto;
 
     try {
       const user = await this.findOne(uid);

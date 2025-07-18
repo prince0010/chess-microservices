@@ -15,16 +15,17 @@ import {
   BotDifficulty,
   BotUserGameResult,
   ELO_RANGE,
+  TypeUserCounter,
 } from 'src/enum';
 import { FindAllBotsDto } from './dto/find-all-bots.dto';
+import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
+import { FindOneBotDto } from './dto/find-one-bot.dto';
+import { UpdateUserPointsDto } from './dto/update-user-points.dto';
 import {
   IBotWithHistoryByUser,
   ICountAndListBots,
   GameBotResponse,
 } from './interfaces/bot.interface';
-import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
-import { FindOneBotDto } from './dto/find-one-bot.dto';
-import { UpdateUserPointsDto } from './dto/update-user-points.dto';
 
 @Injectable()
 export class BotService {
@@ -394,6 +395,7 @@ export class BotService {
               ? 1
               : fetchedBot.pointsWhenWin // only add points the first time this user beat the bot, otherwise only add 1 point
             : fetchedBot.pointsWhenTied,
+        typeUserCounter: TypeUserCounter.ANIMAL_BOT_COUNTER,
       };
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(
         this.client.send('update.points.user', dataPoints),
