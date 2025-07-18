@@ -8,6 +8,7 @@ export interface ILessonParent {
   id: number;
   level: string;
   name: string;
+  story: string;
   lessonsCompleted: number;
   lessonsLength: number;
   isTest: boolean;
@@ -18,6 +19,7 @@ export interface ILessonParentDetail {
   id: number;
   level: string;
   name: string;
+  story: string;
   showHint: boolean;
   isTest: boolean;
   lessonsCompleted: number;

@@ -12,6 +12,7 @@ import { pointsPerLesson } from 'src/modules/lesson/helpers/points-per-lesson.he
 export const parseNormalPgnFile = (
   filePath: string,
   levelName: string,
+  story: string,
   lessonParent: LessonParent,
 ) => {
   try {
@@ -61,6 +62,7 @@ export const parseNormalPgnFile = (
 
       return {
         level: levelName,
+        story,
         description:
           game.comments?.[0]?.text.trim() || 'No description available', // Extract first comment as description
         moves: game.moves.map((move) => move.move).join(' '), // Store only the moves PGN notation
@@ -91,6 +93,7 @@ export const parseNormalPgnFile = (
 export const parseHintPgnFile = (
   filePath: string,
   levelName: string,
+  story: string,
   lessonParent: LessonParent,
 ) => {
   try {
@@ -148,6 +151,7 @@ export const parseHintPgnFile = (
 
       return {
         level: levelName,
+        story,
         description,
         moves: game.moves.map((move) => move.move).join(' '),
         pgnRaw,

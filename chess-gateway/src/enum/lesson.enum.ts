@@ -52,3 +52,10 @@ export enum LessonParentTestName {
   TEST_LEVEL_9 = 'test 9',
   TEST_LEVEL_10 = 'test 10',
 }
+
+export enum LessonStoryName { // this enum separate the complexity of lessons on road-map
+  EDUCATION = 'Education',
+  PUZZLE = 'Puzzle',
+  ENDGAME = 'Endgame',
+  BOT_GAMES = 'Bot_games',
+}

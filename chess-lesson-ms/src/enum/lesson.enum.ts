@@ -37,3 +37,10 @@ export enum LessonFilename {
   LEVEL_2 = 'Level_2.pgn',
   LEVEL_3 = 'Level_3.pgn',
 }
+
+export enum LessonStoryName { // this enum separate the complexity of lessons on road-map
+  EDUCATION = 'Education',
+  PUZZLE = 'Puzzle',
+  ENDGAME = 'Endgame',
+  BOT_GAMES = 'Bot_games',
+}

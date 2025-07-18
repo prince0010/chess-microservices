@@ -1,11 +1,10 @@
+import { IsEnum, IsNotEmpty, IsString } from 'class-validator';
 import {
-  IsEnum,
-  IsNotEmpty,
-  IsNumber,
-  IsPositive,
-  IsString,
-} from 'class-validator';
-import { LessonLevel, lessonLevelsArray, LessonParentName } from 'src/enum';
+  LessonLevel,
+  lessonLevelsArray,
+  LessonParentName,
+  LessonStoryName,
+} from 'src/enum';
 
 export class InsertLessonDto {
   @IsNotEmpty()
@@ -20,4 +19,11 @@ export class InsertLessonDto {
     message: `lesson parent name must be a valid enum value: ${Object.values(LessonParentName).join(', ')}`,
   })
   lessonParentName: string;
+
+  @IsNotEmpty()
+  @IsString()
+  @IsEnum(LessonStoryName, {
+    message: `Story names allowed only these: [${Object.values(LessonStoryName)}]`,
+  })
+  story: string;
 }

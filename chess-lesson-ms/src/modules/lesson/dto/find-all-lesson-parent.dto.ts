@@ -8,7 +8,7 @@ import {
   IsString,
   Min,
 } from 'class-validator';
-import { LessonLevel, lessonLevelsArray } from 'src/enum';
+import { LessonLevel, lessonLevelsArray, LessonStoryName } from 'src/enum';
 
 export class FindAllLessonParentDto {
   @IsNumber()
@@ -30,6 +30,13 @@ export class FindAllLessonParentDto {
   @IsString()
   @IsIn(['YES', 'NO'])
   isTest: string;
+
+  @IsOptional()
+  @IsString()
+  @IsEnum(LessonStoryName, {
+    message: `Story names allowed only these: [${Object.values(LessonStoryName)}]`,
+  })
+  story?: string;
 
   @IsOptional()
   @IsNumber()

@@ -3,6 +3,7 @@ import { Lesson } from './lesson.entity';
 import { LessonPlayed } from './lesson-played.entity';
 import { LessonParentEnabled } from './lesson-parent-enabled.entity';
 import { LessonParentTestRecord } from './lesson-parent-test-record.entity';
+import { LessonStoryName } from 'src/enum';
 
 @Entity('lesson_parent')
 export class LessonParent {
@@ -14,6 +15,9 @@ export class LessonParent {
 
   @Column({ length: 128, nullable: false })
   name: string; // Pawn, King, Queen, Custom, etc.
+
+  @Column({ length: 32, nullable: false, default: LessonStoryName.EDUCATION })
+  story: string; // complexity of lessons and to differentiate them
 
   @Column({ type: 'boolean', nullable: false, default: false })
   showHint: boolean; // to identify which of them are with hint

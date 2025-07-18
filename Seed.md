@@ -14,7 +14,7 @@
 10. Create Lesson Parent level 3
 11. Create Lesson Parent test 3
 
-12. Run seed lesson Level_1_Pwn.pgn
+12. Run seed lesson Level_1_Pawn.pgn
 13. Run seed lesson Level_1_King.pgn
 14. Run seed lesson Level_1_Bishop.pgn
 15. Run seed lesson Level_1_Knight.pgn

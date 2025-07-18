@@ -8,7 +8,7 @@ import {
   IsString,
   Min,
 } from 'class-validator';
-import { LessonLevel, lessonLevelsArray } from 'src/enum';
+import { LessonLevel, lessonLevelsArray, LessonStoryName } from 'src/enum';
 
 export class FindAllLessonParentDto {
   @IsOptional()
@@ -20,6 +20,13 @@ export class FindAllLessonParentDto {
   @Min(1)
   @Type(() => Number) // converts query parameter string to number here
   page?: number;
+
+  @IsOptional()
+  @IsString()
+  @IsEnum(LessonStoryName, {
+    message: `Story names allowed only these: [${Object.values(LessonStoryName)}]`,
+  })
+  story?: string;
 
   @IsOptional()
   @IsNumber()

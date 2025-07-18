@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 import { LessonCompleted } from './lesson-completed.entity';
 import { LessonParent } from './lesson-parent.entity';
-import { LessonLevel } from 'src/enum';
+import { LessonLevel, LessonStoryName } from 'src/enum';
 
 @Entity('lesson')
 export class Lesson {
@@ -16,6 +16,9 @@ export class Lesson {
 
   @Column({ nullable: false, default: LessonLevel.LEVEL_1 })
   level: string;
+
+  @Column({ length: 32, nullable: false, default: LessonStoryName.EDUCATION })
+  story: string; // complexity of lessons and to differentiate them
 
   @Column({ type: 'text', nullable: false })
   description: string;

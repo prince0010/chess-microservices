@@ -52,7 +52,7 @@ export class LessonSeederService {
     insertLessonDto: InsertLessonDto,
     lessonParent: LessonParent,
   ): Promise<string> {
-    const { levelName, lessonParentName } = insertLessonDto;
+    const { levelName, lessonParentName, story } = insertLessonDto;
 
     try {
       const lessonRepository = this.dataSource.getRepository(Lesson);
@@ -61,7 +61,12 @@ export class LessonSeederService {
       let pathFile: string = `/usr/src/app/files/${filename}`;
 
       // Parse PGN file
-      const lessons = parseNormalPgnFile(pathFile, levelName, lessonParent);
+      const lessons = parseNormalPgnFile(
+        pathFile,
+        levelName,
+        story,
+        lessonParent,
+      );
 
       if (lessons.length === 0) {
         throw new BadRequestException(
@@ -86,7 +91,7 @@ export class LessonSeederService {
     insertLessonDto: InsertLessonDto,
     lessonParent: LessonParent,
   ): Promise<string> {
-    const { levelName, lessonParentName } = insertLessonDto;
+    const { levelName, lessonParentName, story } = insertLessonDto;
 
     try {
       const lessonRepository = this.dataSource.getRepository(Lesson);
@@ -95,7 +100,12 @@ export class LessonSeederService {
       let pathFile: string = `/usr/src/app/files/${filename}`;
 
       // Parse PGN file
-      const lessons = parseHintPgnFile(pathFile, levelName, lessonParent);
+      const lessons = parseHintPgnFile(
+        pathFile,
+        levelName,
+        story,
+        lessonParent,
+      );
 
       if (lessons.length === 0) {
         throw new BadRequestException(

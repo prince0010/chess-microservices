@@ -55,9 +55,10 @@ export class LessonParentService {
   async create(
     createLessonParentDto: CreateLessonParentDto,
   ): Promise<LessonParent> {
-    const { level, name, showHint } = createLessonParentDto;
+    const { level, name, story, showHint } = createLessonParentDto;
+
     try {
-      const newLessonParent = this.lessonParentRepository.create({
+      const newLessonParent: LessonParent = this.lessonParentRepository.create({
         ...createLessonParentDto,
       });
 
@@ -101,6 +102,7 @@ export class LessonParentService {
         id: lessonParent.id,
         level: lessonParent.level,
         name: lessonParent.name,
+        story: lessonParent.story,
         showHint: lessonParent.showHint,
         isTest: lessonParent.isTest,
         lessonsLength,
@@ -230,6 +232,7 @@ export class LessonParentService {
         id: lessonParent.id,
         level: lessonParent.level,
         name: lessonParent.name,
+        story: lessonParent.story,
         showHint: lessonParent.showHint,
         isTest: lessonParent.isTest,
         lessonsLength: length,
@@ -258,6 +261,7 @@ export class LessonParentService {
       limit = 10,
       page = 1,
       id = null,
+      story = null,
       level = null,
       userUid,
       isTest = null,
@@ -275,6 +279,9 @@ export class LessonParentService {
     };
 
     const whereConditions: any = {};
+    if (story) {
+      whereConditions.story = story;
+    }
     if (id) {
       whereConditions.id = id;
     }
@@ -346,6 +353,7 @@ export class LessonParentService {
         parents.push({
           id: lessonParent.id,
           name: lessonParent.name,
+          story: lessonParent.story,
           level: lessonParent.level,
           isTest: lessonParent.isTest,
           lessonsCompleted,
