@@ -8,11 +8,13 @@ import { envs } from 'src/config';
 
 import { Auth } from './entities/auth.entity';
 import { AuthController } from './auth.controller';
+import { AuthRankingController } from './auth-ranking.controller';
 import { AuthService } from './auth.service';
+import { AuthRankingService } from './auth-ranking.service';
 
 @Module({
-  controllers: [AuthController],
-  providers: [AuthService],
+  controllers: [AuthController, AuthRankingController],
+  providers: [AuthService, AuthRankingService],
   imports: [
     JwtModule.register({
       global: true,

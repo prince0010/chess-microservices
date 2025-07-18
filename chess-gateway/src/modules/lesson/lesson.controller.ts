@@ -48,6 +48,40 @@ export class LessonController {
     );
   }
 
+  // TOP 100
+  @UseGuards(AuthGuard)
+  @Get('top-one-hundred-by-education')
+  topOneHundredByEducation(@Req() req: any) {
+    return this.client
+      .send('auth.ranking.educationLessons', +req.user.uid)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('top-one-hundred-by-puzzle')
+  topOneHundredByPuzzle(@Req() req: any) {
+    return this.client.send('auth.ranking.puzzleLessons', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('top-one-hundred-by-endgames')
+  topOneHundredByEndgames(@Req() req: any) {
+    return this.client.send('auth.ranking.endgamesLessons', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+  // END TOP 100
+
   @UseGuards(AuthGuard)
   @Get('/:id')
   findOne(@Param('id', ParseIntPipe) id: string, @Req() req: any) {
