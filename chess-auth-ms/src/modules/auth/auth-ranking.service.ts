@@ -53,6 +53,9 @@ export class AuthRankingService {
       }));
 
       return {
+        currentUserUid: userUid,
+        currentUsername: userRow.username,
+        currentScore: userRow.educationPoints,
         currentPosition: currentRank,
         top100: result,
       };
@@ -103,6 +106,9 @@ export class AuthRankingService {
       }));
 
       return {
+        currentUserUid: userUid,
+        currentUsername: userRow.username,
+        currentScore: userRow.puzzlePoints,
         currentPosition: currentRank,
         top100: result,
       };
@@ -153,6 +159,9 @@ export class AuthRankingService {
       }));
 
       return {
+        currentUserUid: userUid,
+        currentUsername: userRow.username,
+        currentScore: userRow.endgamesPoints,
         currentPosition: currentRank,
         top100: result,
       };

@@ -1,5 +1,8 @@
 export interface IRankingResponse {
+  currentUserUid: number;
+  currentUsername: string;
   currentPosition: number;
+  currentScore: number;
   top100: IRankingResult[];
 }
 
