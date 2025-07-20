@@ -48,6 +48,17 @@ export class BotController {
     );
   }
 
+  // TOP 100
+  @UseGuards(AuthGuard)
+  @Get('top-one-hundred-by-animal-bots')
+  topOneHundredByAnimalBots(@Req() req: any) {
+    return this.client.send('auth.ranking.animalBots', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
   @UseGuards(AuthGuard)
   @Get('/')
   findAll(@Query() findAllBotsDto: FindAllBotsDto, @Req() req: any) {
