@@ -204,7 +204,7 @@ export const botsDataSeed: IBotSeedData[] = [
   },
   // GRAND_MASTER
   {
-    animal: 'Greazly Bear',
+    animal: 'Bear',
     name: 'Boss',
     elo: 2500,
     difficulty: BotDifficulty.GRAND_MASTER,
