@@ -307,7 +307,7 @@ export class LessonParentService {
       lessonParents.sort((a, b) => a.id - b.id);
 
       const parents: ILessonParent[] = [];
-      let previousLessonParentId = lessonParents[0].id;
+      let previousLessonParentId = lessonParents[0]?.id;
 
       for (const [index, lessonParent] of lessonParents.entries()) {
         let lessonsCompleted: number = 0;
