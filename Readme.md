@@ -54,17 +54,6 @@ This repo in github will host all chess Microservices.
 - After that again if 3 puzzles correct only 5 bonus points.
 - Idea-for strong players to quickly pass the level. Like this a strong player needs to solve a total of 10 puzzles and can go to the Level 3.
 
-## Hipotesis
+## Failed lesson logic to track in lessons record
 
-Let me ask you about this pgn with 250 lessons or puzzles. That means Level 2 takes 250 puzzles in a row ?
-
-So if it is 250 puzzles consecutively, it is impossible to reach that. Let me explain this logic to you or correct me. Suppose these scenarios:
-
-1. The strongest player plays 10 correct puzzles in a row and done, he passes Level 2 and opens Level 3
-2. Largest sequence:
-   > player assert 9 puzzles within 15 seconds (making the largest road) and then the 10th puzzle he assert but not in less than 15 seconds so he could not open Level 3 (counter === 10)
-   > player assert again 9 puzzles within 15 seconds (making the largest road) and then the 20th puzzle he assert but not in less than 15 seconds so he could not open Level 3 (counter === 20)
-   > .
-   > .
-   > .
-   > player assert again 9 puzzles and the last one to open Level 3 (counter === 100 played puzzles)
+- When Player is completing a lesson parent needs to pass certain lessons and have 3 lives. In case the player lost those 3 lives the database needs to store the lessonId where he lost the third 3 life.
