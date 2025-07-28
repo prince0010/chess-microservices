@@ -7,6 +7,7 @@ import * as pgnParser from 'pgn-parser';
 import { LessonParent } from 'src/modules/lesson/entities/lesson-parent.entity';
 import { extractHintsFromComments } from './extractHintsFromComments';
 import { pointsPerLesson } from 'src/modules/lesson/helpers/points-per-lesson.helper';
+import { timerPerLesson } from 'src/modules/lesson/helpers/timer-per-lesson.helper';
 
 // traditional with not hint
 export const parseNormalPgnFile = (
@@ -62,6 +63,7 @@ export const parseNormalPgnFile = (
 
       return {
         level: levelName,
+        timer: timerPerLesson(levelName),
         story,
         description:
           game.comments?.[0]?.text.trim() || 'No description available', // Extract first comment as description
@@ -151,6 +153,7 @@ export const parseHintPgnFile = (
 
       return {
         level: levelName,
+        timer: timerPerLesson(levelName),
         story,
         description,
         moves: game.moves.map((move) => move.move).join(' '),

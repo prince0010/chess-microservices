@@ -7,6 +7,7 @@ export interface ICountAndListLessonParents {
 export interface ILessonParent {
   id: number;
   level: string;
+  timer: number;
   name: string;
   story: string;
   lessonsCompleted: number;
@@ -18,6 +19,7 @@ export interface ILessonParent {
 export interface ILessonParentDetail {
   id: number;
   level: string;
+  timer: number;
   name: string;
   story: string;
   showHint: boolean;
@@ -31,6 +33,7 @@ export interface ILessonParentDetail {
 export interface ILessonList {
   id: number;
   level: string;
+  timer: number;
   description: string;
   moves: string[];
   pgnRaw: string;

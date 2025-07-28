@@ -18,6 +18,7 @@ import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 import { getTestLessonLengthByLevel } from './helpers/get-test-lesson-length-by-level.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
 import { getFactorLesson } from './helpers/factor-lesson.helper';
+import { timerPerLesson } from './helpers/timer-per-lesson.helper';
 import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
@@ -62,6 +63,7 @@ export class LessonParentService {
     try {
       const newLessonParent: LessonParent = this.lessonParentRepository.create({
         ...createLessonParentDto,
+        timer: timerPerLesson(level), // add timer to lesson parent
       });
 
       return await this.lessonParentRepository.save(newLessonParent);
@@ -102,6 +104,7 @@ export class LessonParentService {
 
       const result: ILessonParentDetail = {
         id: lessonParent.id,
+        timer: lessonParent.timer,
         level: lessonParent.level,
         name: lessonParent.name,
         story: lessonParent.story,
@@ -232,6 +235,7 @@ export class LessonParentService {
 
       let lessonsDetail: ILessonParentDetail = {
         id: lessonParent.id,
+        timer: lessonParent.timer,
         level: lessonParent.level,
         name: lessonParent.name,
         story: lessonParent.story,
@@ -354,6 +358,7 @@ export class LessonParentService {
 
         parents.push({
           id: lessonParent.id,
+          timer: lessonParent.timer,
           name: lessonParent.name,
           story: lessonParent.story,
           level: lessonParent.level,

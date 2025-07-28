@@ -1,0 +1,3826 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k2K1/6P1/4p1p1/5b1p/8/8/8 w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.01.08"]
+
+{Try to solve the study of Neuschwander. White to move and draw!} 1. Kf6 h3 2.
+g7 h2 3. g8=Q h1=Q 4. Qh7+ Qxh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6n1/3Rp3/rrNp1p1p/bkp1P1pP/1p1P1PP1/p1P5/PP2K3/3B4 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Amaker. White to move and draw!} 1. Ba4+ Kxa4 2. b3+
+Kb5 3. c4+ Kxc6 4. d5+ Kxd7 5. e6+ Kc7 6. f5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/pp6/P7/7K/1k6/R7 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Grinfeld. White to move and win!} 1. Ra3 Kxa3 2.
+axb5 Ka2 3. b6 a4 4. b7 a3 5. b8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/N5P1/7P/7K/2k5/2p5/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Holm. White to move and draw!} 1. Nb4 Kxb4 2. g7
+c1=Q 3. g8=Q Qh1+ 4. Kg5 Qg1+ 5. Kh6 Qxg8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5kr1/3Kp2p/8/1R4B1/8/8/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Troitzky. White to move and win!} 1. Bh6+ Kf7 2.
+Rf5+ Kg6 3. Rg5+ Kf7 4. Rxg8 Kxg8 5. Ke6 Kh8 6. Kf7 e5 7. Bg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1KP1R3/3r4/8/8/8/bk6 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Dehler. White to move and win!} 1. Re1+ Ka2 2. Rxa1+
+Kxa1 3. c7 Rd6+ 4. Kb5 Rd5+ 5. Kb4 Rd4+ 6. Kb3 Rd3+ 7. Kc2 Rd4 8. c8=R Ra4 9.
+Kb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7p/4pK1k/7b/8/4r1P1/7R/5B2 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kubbel. White to move and win!} 1. Be2 Rxe2 2. g4
+Rxh2 3. g5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/P2BK1p1/1r6/4kp2/2Pp1p1N/3P4/8/7b w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kuznetsov. White to move and win!} 1. a8=Q Bxa8 2.
+Bc6 Bxc6 3. Ng6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/P4p2/6p1/b3K1P1/7p/4P2P/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kok. White to move and draw!} 1. Kd5 Bb5 2. a7 Bxe2
+3. Ke4 Bf1 4. a8=Q Bg2+ 5. Kf5 Bxa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1K6/2r2p2/2Pk1P2/N4P2/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kubbel. White to move and win!} 1. Nb5+ Kxc4 2. Nc7
+Rxc7 3. Kxc7 Kd4 4. Kd6 Ke3 5. Ke5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7b/k7/8/N1p2q2/8/1R6/KP6/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kubbel. White to move and draw!} 1. Nc6+ Ka6 2. Nb8+
+Ka5 3. Nc6+ Ka4 4. Rb4+ cxb4 5. b3+ Kb5 6. Nd4+ Bxd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7r/8/1R6/5k2/R3r3/1P2p1P1/1K6 w - - 0 1"]
+[PlyCount "33"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kalandadze. White to move and win!} 1. Rb4+ Re4 2.
+g3+ Kf5 3. Ra5+ Re5 4. g4+ Kf6 5. Rb6+ Re6 6. g5+ Kf7 7. Ra7+ Re7 8. g6+ Kf8 9.
+Rb8+ Re8 10. Rxe8+ Kxe8 11. gxh7 e1=Q+ 12. Ka2 Qe6+ 13. b3 Qe2+ 14. Ka3 Qe5 15.
+h8=Q+ Qxh8 16. Ra8+ Kd7 17. Rxh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p1nB2q/6R1/3Bp3/k1K1P3/8/8/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Sochniev. White to move and draw!} 1. Ra6+ bxa6 2.
+Bc6+ Ka5 3. Bd8+ Nb6+ 4. Kc5 Qa7 5. Bc7 Qxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/NP2p3/8/8/4r2p/8/5K2/R7 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Rinck. White to move and win!} 1. Nc6+ Kxb7 2. Kf3
+Re6 3. Nd8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3B4/Pk1P4/8/5pK1/2r5/8/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Prokes. White to move and win!} 1. a8=Q+ Kxa8 2. Bb6
+Rg4+ 3. Kh6 Rg8 4. Kh7 Rf8 5. Kg7 Rb8 6. Bc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p5p1/4P3/7p/1P2k3/4rN2/3K2P1/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Rombach. White to move and win!} 1. Ne1 Kf4 2. g3+
+Rxg3 3. e7 Re3 4. Ng2+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/1p6/3K1P1N/3P4/8/7R/6q1/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kozlov. White to move and win!} 1. Nf7+ Ke8 2. Nd8
+Qxh3 3. f7+ Kf8 4. Ne6+ Kxf7 5. Ng5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1q1p4/p2k3B/8/R1P1P2P/3K4/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Sehwers. White to move and win!} 1. Rb4 Qc8 2. Rb8
+Qc6 3. Rb6 Qxb6 4. c5+ Qxc5 5. Bf8+ Kc6 6. Bxc5 Kxc5 7. h5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4K3/P7/Pk6/4R3/4P2q/8/4n3/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Hoch. White to move and draw!} 1. a8=Q Qh8+ 2. Kf7
+Qxa8 3. Re8 Qa7+ 4. Re7 Qb8 5. Rb7+ Qxb7+ 6. axb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4K3/8/4p3/8/4k3/6R1/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Averbach. White to move and win!} 1. Ke6 $1 e4 2.
+Rg5 $1 Kf3 3. Rf5+ $1 Kg2 4. Re5 Kf3 5. Kd5 e3 6. Kd4 e2 7. Kd3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/N7/8/7p/8/4K3/6Bk w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Pogosjants. White to move and win!} 1. Kf2 h3 2. Bh2
+$3 Kxh2 3. Nc5 Kh1 4. Ne4 Kh2 5. Nd2 Kh1 6. Nf1 h2 7. Ng3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k1r3/3pp3/K7/4P3/8/8/8/1R6 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Pogosjants. White to move and win!} 1. Ka7 Kc7 2.
+Rc1+ Kd8 3. e6 dxe6 4. Kb7 Kd7 5. Rd1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1B2K/2k1P2p/8/1PbPp3/8/3R4/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Makletsov. White to move and win!} 1. d6+ Bxd6 2.
+b6+ Kb8 3. Rxd6 Rxe8+ 4. Kg7 Rxe7+ 5. Kf8 Rb7 6. Rd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/1k6/2RR4/1p1p3K/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Olmutski. White to move and win!} 1. Rc7 b1=Q 2. Rd8
+d1=Q 3. Rb8+ Ka3 4. Ra7+ Qa4 5. Rxa4+ Kxa4 6. Rxb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1n1K4/pk6/pp4B1/8/P7/8/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Pogosjants. White to move and win!} 1. Be4+ Nc6+ 2.
+Kd7 a5 3. Bxc6+ Kb8 4. Bb5 Kb7 5. Ba6+ Kxa6 6. Kc6 b5 7. axb5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5Q2/6pk/4q2N/6PK/8/8/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kalinin. White to move and win!} 1. Qg8+ Qxg8 2. g6+
+Kh8 3. Nf7+ Qxf7 4. gxf7 g6+ 5. Kh6 g5 6. f8=Q# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4K2R/5N2/2k5/7p/8/8/p7/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Platov. White to move and win!} 1. Rh6+ Kb7 2. Nd8+
+Ka7 3. Nc6+ Ka8 4. Na5 a1=Q 5. Ra6+ Kb8 6. Nc6+ Kb7 7. Rxa1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/P1p3p1/2K2k2/4p2P/6qP/8/8/2R5 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Studenetski. White to move and win!} 1. a8=Q Qg2+ 2.
+Kd7 Qd2+ 3. Ke8 Qxc1 4. Qf3+ Qf4 5. Qc6+ Kf5 6. Qg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1n1K4/8/p1R5/k7/N7/4p3/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Heuacker. White to move and win!} 1. Rc4 e2 2. Nb2
+e1=Q 3. Rc5+ Kb6 4. Na4+ Kb7 5. Rc7+ Ka8 6. Nb6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4n2k/3K3p/6PN/5N1n/8/8/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Evreinov. White to move and win!} 1. g7+ Nexg7 2.
+Nf7+ Kg8 3. N5h6+ Kf8 4. Ng5 Nf6+ 5. Kd8 Nd5 6. Nxh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5K1n/8/3r1k2/6R1/6P1/3N4/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Pogosjants. White to move and win!} 1. Rf4+ Kg5 2.
+Ne4+ Kh6 3. Rh4+ Rh5 4. Rxh5+ Kxh5 5. Kg7 Ng5 6. Nf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/p1P5/K1Np4/8/6R1/2b1r3/8/5B1n w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Prokes. White to move and win!} 1. Ne7+ Rxe7 2. Bh3
+Kxc7 3. Rc4+ Kd8 4. Rc8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6K1/8/8/6B1/8/1p2N3/b7/qBk5 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Fritz. White to move and draw!} 1. Nc2+ Kxb1 2. Nxa1
+b2+ 3. Kg7 bxa1=Q+ 4. Bf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p3p3/K2PkP2/1P6/5b2/8/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Zachodjakin. White to move and win!} 1. f7 Kxf7 2.
+b6 axb6 3. d7 Bc7 4. Kb7 Bd8 5. Kc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3p3B/1n2P2r/8/8/7k/R4P2/7K w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Rinck. White to move and win!} 1. e7 Kg4+ 2. Kg2 Re6
+3. Re2 Rxe2 4. Be4 Rxe4 5. f3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K6/8/k2p4/p7/P1p3p1/5p2/2PP4/1R6 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Wotawa. White to move and win!} 1. c3 f2 2. d3 cxd3
+3. c4 g3 4. c5 dxc5 5. Rh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/3p1N2/3B4/2K5/5P2/5p2/P7/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Pogosjants. White to move and win!} 1. Be7 f2 2.
+Nd6+ Kxe7 3. Nf5+ Kf6 4. Ne3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q3k2/R3R3/5K2/8/4b3/8/1B6/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kits. White to move and win!} 1. Rf7+ Kg8 2. Rg7+
+Kh8 3. Rh7+ Bxh7 4. Ra8 Qxa8 5. Kf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/P7/7R/8/2q5/5K2/8/6k1 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.12"]
+
+{Try to solve the study of Kantorovic. White to move and win!} 1. Rh1+ Kxh1 2.
+a8=Q Qf1+ 3. Kg3+ Kg1 4. Qa7+ Kh1 5. Qh7+ Kg1 6. Qh2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4K2p/6pr/5pk1/1pB2R2/p4PP1/8/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Evreinov. White to move and win!} 1. Rg4+ fxg4 2.
+f4+ Kh5 3. Kf8 g5 4. Bf7+ Rg6 5. f5 a2 6. fxg6 a1=Q 7. g7+ Kh6 8. g8=N# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K1N/7k/5p2/8/Qp1q4/5Pp1/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Kubbel. White to move and win!} 1. Qc2+ Kxh8 2. Qc7
+f5 3. Qe7 g2 4. f4 g1=Q 5. Qh4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p3p1/4p1P1/1K2P3/8/8/kp2Q3/1q6 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Cook. White to move and draw!} 1. Qc4+ Ka1 2. Qa4+
+Qa2 3. Kc5 b1=Q 4. Qd4+ Qbb2 5. Qd1+ Qab1 6. Qa4+ Q2a2 7. Qd4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/R3P3/1Nk5/7b/1K6/8/1p6/8 w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Sehwers. White to move and draw!} 1. e8=Q+ Bxe8 2.
+Rc7+ Kxb6 3. Ka3 b1=Q 4. Rb7+ Kxb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1qr5/8/2p1R3/3k4/8/4K2Q/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Rinck. White to move and win!} 1. Qf4+ Kc3 2. Rxc5+
+Rxc5 3. Qc1+ Kd4 4. Qe3+ Kc4 5. Qd3+ Kb4 6. Qb1+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2P3P1/8/2k5/8/5p2/7p/5Kbr w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Koranyi. White to move and draw!} 1. c8=Q+ Kb4 2.
+Qc4+ Kxc4 3. g8=Q+ Kb4 4. Qg2 fxg2+ 5. Kxg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5n2/8/3P2PK/3k2p1/8/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Lapin. White to move and win!} 1. g6 Nd6 2. g7 Ne8
+3. g8=Q Nf6+ 4. Kg5 Nxg8 5. d6 g3 6. d7 g2 7. d8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p3K2/kp2P3/2P5/2b1B3/8/8/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Prokes. White to move and win!} 1. Bd3 Bxd3 2. c6
+bxc6 3. e7 Be2 4. Kg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1ppp4/8/1PPP4/2K5/6k1/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Kok. White to move and win!} 1. Kd2 Kf3 2. c5 dxc5
+3. b5 cxb5 4. d5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/8/2p5/4P3/4B3/6p1/8/2n3K1 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.02.18"]
+
+{Try to solve the study of Marwitz. White to move and win!} 1. Bd3 Kb7 2. Bc4
+Kb6 3. Kg2 Kc5 4. Kxg3 Kxc4 5. e6 Ne2+ 6. Kh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6bk/1P5p/4B3/8/K7/8/8/6r1 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.02.12"]
+[SourceDate "2013.02.18"]
+
+{Try to solve the study of Isenegger. White to move and draw!} 1. Ba2 Ra1 2.
+Kb4 Rxa2 3. Kc3 Ra3+ 4. Kb2 Rb3+ 5. Ka1 h5 6. b8=Q Rxb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5q2/rr6/1pkP4/8/pK6/1p1Q4/1P6/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+
+{Try to solve the study of Neustadt. White to move and draw!} 1. Qb5+ Kxd6 2.
+Qc5+ bxc5+ 3. Ka3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4Br2/8/8/8/8/p1P5/k1Kb4 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Gutman. White to move and win} 1. Bd6 Rf5 2. Bb4 Rf3
+3. Bc5 Rf4 4. Ba3 Rb4 5. Bxb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7b/8/8/7p/1pp5/7Q/k1K1N3 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Keres. White to move and win} 1. Nc2+ Ka2 2. Nb4+
+Ka1 3. Qa2+ bxa2 4. Nc6 h3 5. Nd4 h2 6. Nb3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2B2Q2/4pq1p/2p3k1/8/5pK1/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Troitzky. White to move and win} 1. Bd8 Qxd8 2. Qg7+
+Kf5 3. Qg4+ Ke5 4. Qf4+ Kd5 5. Qd2+ Kc6 6. Qxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k6/pP6/K7/Pn6/3B4/2b5 w - - 0 1"]
+[PlyCount "4"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Nadareishvili. White to move and make a draw} 1. Bb4
+axb4 2. axb4 Nd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N4/4kP2/8/8/8/2p2p1p/7P/7K w - - 0 2"]
+[PlyCount "8"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Rinck. White to move and make a draw} 2. Ne6 Kxf7 3.
+Ng5+ Ke7 4. Nxf3 c2 5. Ng1 c1=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5Q2/8/8/8/p7/1p6/7r/k1KR4 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.13"]
+
+{White to move and win} 1. Qa3+ Ra2 2. Rd2 Rxa3 3. Rb2 Ra2 4. Rb1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k2P3/8/4K3/8/r3B3/8/8 w - - 0 3"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mattison. White to move and win} 3. Ba7 Ra1 4. Kf4
+Rf1+ 5. Bf2 Rxf2+ 6. Ke3 Rf1 7. Ke2 Rh1 8. e8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/p7/P7/K1k5/P1Pp3R/3p4/4N3 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Afansiev. White to move and make a draw} 1. Rh4+
+Kxc3 2. Rc4+ Kxc4 3. Nc2 Kc3 4. Ne3 Kd4 5. Nd1 Kc4 6. Nc3 Kxc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6K1/8/B7/8/8/5P1p/5Rp1/7k w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Beasly. White to move and make a draw} 1. Rf1+
+gxf1=Q 2. Bxf1 h2 3. f4 Kg1 4. Bg2 Kxg2 5. f5 h1=Q 6. f6 Qh6 7. f7 Qg6+ 8. Kh8
+Qxf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p6/1Pp1B2P/p7/p3b3/2k5/K7/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Onate. White to move and win} 1. Bd7 Kd4 2. Bxc6
+Bxc6 3. h7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6K1/R7/8/8/8/3b2k1/3P3p/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kozlowski. White to move and make a draw} 1. Ra1 Kg2
+2. Kh8 Bf1 3. Ra7 $1 h1=Q+ 4. Rh7 Qg1 5. Rg7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1R6/3P4/8/8/2k3p1/P3r3/7K w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Halberstadt. White to move and win} 1. d7 Rh2+ 2.
+Kg1 Rd2 3. a3 Kc4 4. a4 Kc5 5. a5 Kc6 6. a6 g2 7. Kh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K6/R7/pk6/1P6/p4N2/8/8/r7 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Gorgiev. White to move and win} 1. Rb7+ Ka5 2. bxa6
+Kxa6 3. Ne6 Ka5 4. Nd4 Rc1 5. Ka7 Rc5 6. Rb5+ Rxb5 7. Nc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/2P1kpR1/7p/p4K2/P5B1/6bP/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Gurvitch. White to move and win} 1. Bh5 Bxc7 2.
+Rxf7+ Kd8 3. Rxc7 Rg8 4. Rc4 Rg5+ 5. Ke6 Rxh5 6. h4 Ke8 7. Rc8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k2q2/pp2R3/1pP5/1K5B/8/8/7p/8 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Bron. White to move and make a draw} 1. Bg4+ Kb8 2.
+c7+ Ka8 3. c8=Q+ Qxc8 4. Bxc8 h1=Q 5. Bxb7+ Qxb7 6. Re8+ Qb8 7. Ka6 Qxe8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "K1k5/7p/8/2P5/8/8/P7/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Gorgiev. White to move and make a draw} 1. c6 h6 2.
+a3 h5 3. a4 h4 4. a5 h3 5. a6 h2 6. a7 h1=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/b7/1p1Pp3/1P6/8/6K1/1B6/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Hasek. White to move and win} 1. d7+ Kxd7 2. Be5 Kc8
+3. Kf4 Bb8 4. Bxb8 Kxb8 5. Ke5 Kc7 6. Kxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/8/3bN3/7p/7K/p1k5/6p1/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Platov. White to move and make a draw} 1. Nf4 Bxf4
+2. Rxa3+ Kb2 3. Rg3 Bxg3+ 4. Kh3 g1=N+ 5. Kxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1R6/1p6/4K3/6k1/7r/2pP4/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Lazard. White to move and make a draw} 1. Rg7+ Kf3
+2. Rc7 Rh5+ 3. Kd4 Rc5 4. Rxc5 bxc5+ 5. Kd3 c1=B 6. Kc4 Ba3 7. d4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k1K5/8/8/8/2P1p1R1/8/1p2Bb2/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and make a draw} 1. Bd3 exd3
+2. c5 Bxc5 3. Ra4+ Ba7 4. Rb4 d2 5. Rxb2 d1=Q 6. Rb8+ Bxb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k1K/8/4R3/4p3/pb6/8/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Daniel. White to move and make a draw} 1. Rxe4 Bc2
+2. Kh8 a2 3. Re1 Bb1 4. Re5 a1=R 5. Ra5 Rxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4K2b/k1P5/7B/4p3/8/7p/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and make a draw} 1. c7 Kb7 2.
+Kd8 Bf5 3. Bg6 h1=Q 4. c8=Q+ Bxc8 5. Bxe4+ Qxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6B1/1r1P4/8/4K3/8/7b/2k5 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and make a draw} 1. Be5 Rb4+
+2. Kd5 Rb5+ 3. Kc6 Rxe5 4. d7 Re6+ 5. Kb7 Rd6 6. Kc8 Rc6+ 7. Kb7 Rc7+ 8. Ka8
+Rxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6b1/1B6/3P4/5n2/K1n5/8/4k3/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and make a draw} 1. d7 Nb6+ 2.
+Kb4 Nxd7 3. Bc8 Be6 4. Ba6+ Ke3 5. Bc4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3n4/6k1/6P1/1KP5/8/8/8/3b4 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Troitzky. White to move and make a draw} 1. c6 Bg4
+2. c7 Nb7 3. c8=N Bxc8 4. Kb6 Kxg6 5. Kc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/8/1K4p1/3p2P1/2pp4/8/1R6 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Weenink. White to move and make a draw} 1. Kc6 d2 2.
+Kd7 c2 3. Rb8+ Kf7 4. Re8 d1=Q 5. Re7+ Kf6 6. Re6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3R3K/8/8/7p/4kp2/8/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Chekhover. White to move and make a draw} 1. Kg8 f2
+2. Re7+ Kf3 3. Rf7+ Kg2 4. Rg7+ Kf1 5. Rh7 h3 6. Rxh3 Kg2 7. Rh7 f1=Q 8. Rg7+
+Kh3 9. Rh7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "q7/p7/4b3/B6p/7k/7P/5P1K/5B2 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Platov. White to move and make a draw} 1. f4 Bxh3 2.
+Be1+ Kg4 3. Bxh3+ Kxf4 4. Bd2+ Ke5 5. Bc3+ Kd6 6. Bb4+ Kc7 7. Ba5+ Kb8 8. Bg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5R2/4K3/5P2/4k1pp/1Pp5/2P1P2P/1P3q1P/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.17"]
+
+{White to move and make a draw} 1. Re8 Qxf6+ 2. Kd7+ Kf5 3. e4+ Kf4 4. Re6 Qf7+
+5. Re7 Qg8 6. Re8 Qh7+ 7. Re7 Qh6 8. Re6 Qf8 9. Re8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2PK2p1/7p/p1b2P2/P5P1/2P2kP1/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Moeller. White to move and make a draw} 1. g4 hxg4
+2. f5 gxf5 3. Kc5 Ba6 4. Kb6 Bc8 5. Kc7 Be6 6. Kd6 Bc4 7. Kc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q1r4/4k3/8/2R3K1/8/8/8/2Q5 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Rinck. White to move and win} 1. Rc7+ Rd7 2. Qc5+
+Kd8 3. Kh6 Rxc7 4. Qf8+ Kd7 5. Qxb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7b/P1k5/3N4/8/5PKp/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Reti. White to move and win} 1. Kh1 Bc1 2. Nb3+ Kb5
+3. Nxc1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p6/8/5N2/p1K4B/p7/2k5/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Troitzky. White to move and win} 1. Nd4+ Kb1 2. Nb5
+a2 3. Na3+ Kb2 4. Bf6+ Kxa3 5. Ba1 b5+ 6. Kc3 b4+ 7. Kc2 b3+ 8. Kc3 b2 9. Bxb2#
+*
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/1K6/8/4BR2/4p3/4p3/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Rinck. White to move and win} 1. Bf5+ Kd6 2. Rd4+
+Ke7 3. Re4+ Kd8 4. Bd7 e1=Q 5. Bb5 Qd2 6. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/5r2/8/8/2R5/8/K1B5 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Bianchetti. White to move and win} 1. Bb2 Rf8 2.
+Rc7+ Kg8 3. Rg7+ Kh8 4. Ka2 Ra8+ 5. Ra7+ Kg8 6. Rxa8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/3p3p/8/3P2P1/3k4/1p5p/1P1NKP1P/7q w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Kubbel. White to move and win} 1. g6 hxg6 2. Ra1 Qg2
+3. Rg1 Qxd5 4. Rg4+ Kc5 5. Rg5 Qxg5 6. Ne4+ Kd4 7. Nxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K6/1R1N4/2p1kp1p/p1P3pP/1n2P1P1/1p5P/8/8 w - - 0 1"]
+[PlyCount "21"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Lazard. White to move and win} 1. Ka8 b2 2. Nb8 b1=Q
+3. Nxc6 Qxe4 4. Re7+ Kd5 5. Rxe4 Kxe4 6. Nxb4 axb4 7. c6 b3 8. c7 b2 9. c8=Q
+b1=Q 10. Qf5+ Ke3 11. Qxb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/6K1/r6r/8/4P3/8/8/5R2 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Kozlowski. White to move and make a draw} 1. Rf8+
+Kd7 2. Rf7+ Ke6 3. Rf5 Rh4 4. Rf6+ Ke5 5. Rxa6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r6/4P1P1/8/7k/8/7N/8/4K3 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Lazard. White to move and win} 1. Nf4+ Kh6 2. Ne6
+Re8 3. g8=Q Rxg8 4. Nf8 Rg5 5. Ng6 Rxg6 6. e8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4B3/8/6N1/5p2/1r4p1/6pk/7b/4K2Q w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Troitzky. White to move and win} 1. Bc6 Rb1+ 2. Ke2
+Rxh1 3. Bg2+ Kxg2 4. Nf4+ Kg1 5. Ke1 g2 6. Ne2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4kr2/R4p2/6p1/8/1K6/3B4/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Hacek. White to move and win} 1. Bf5 gxf5 2. Kc5 f6
+3. Kd6 Rg8 4. Ke6 Kf8 5. Kxf6 Ke8 6. Ra8+ Kd7 7. Rxg8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k1p4/8/P1P5/p7/8/3K4 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Grigoriev. White to move and make a draw} 1. Kc2 Ka5
+2. Kb3 a2 3. Kb2 Kb4 4. Ka1 Kxa4 5. c5 dxc5 6. Kxa2 Kb4 7. Kb2 Kc4 8. Kc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k1P1/4p1p1/4K3/3P4/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Grigoriev. White to move and win} 1. g7 Kf7 2. Kf5
+Kg8 3. Kg4 Kf7 4. Kxg5 e4 5. Kh6 Kg8 6. dxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4p3/p1P2p2/8/P1P2R2/K1kr1P2/P7/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Salkind. White to move and win} 1. c7 a5 2. Rd4 Rxf3
+3. Rf4 Rg3 4. Rg4 Rh3 5. Rh4 Rg3 6. Rh3 Rxh3 7. c8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K2/k7/4P1p1/8/8/8/4b3/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Reti. White to move and make a draw} 1. Ke7 g5 2.
+Kd6 g4 3. e7 Bb5 4. Kc5 Bd7 5. Kd4 Kb6 6. Ke3 Kc7 7. Kf4 Kd6 8. e8=Q Bxe8 9.
+Kxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/1P6/2P5/P7/5ppp/8/6K1/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Behting. White to move and win} 1. Kg1 Ka7 2. b8=Q+
+Kxb8 3. a6 f3 4. Kf2 h3 5. Kg3 h2 6. Kxh2 f2 7. Kg2 g3 8. Kf1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/1bk5/2r5/1KP2B2/R7 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Kubbel. White to move and win} 1. Ra4 Ra3 2. Rxb4+
+Kxb4 3. Be1+ Ka4 4. Bc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/B7/3K4/8/6p1/7k/5R2 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Reti. White to move and win} 1. Rf3 g2 2. Bf1 g1=Q
+3. Rh3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1NBk4/p2p4/8/3K4/8/8/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Gunst. White to move and win} 1. Bb7 Kc7 2. Ba6 Kxb8
+3. Kd6 Ka8 4. Kc7 d5 5. Bb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5Pr1/3R4/pp6/8/k2B4/2K5 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Kasparian. White to move and win} 1. Bg5 b3 2. Rd2+
+Ka1 3. f7 Rxg5 4. f8=Q Rg1+ 5. Rd1 Rg2 6. Qa3+ Ra2 7. Rd2 Rxa3 8. Rb2 Ra2 9.
+Rb1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/6N1/8/4p3/4k3/6n1/7b/3K4 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Liburkin. White to move and win} 1. Ra2 Bg1 2. Rg2
+Kf3 3. Rxg1 Kf2 4. Re1 e4 5. Ne6 e3 6. Nc5 e2+ 7. Kd2 Nf1+ 8. Kc1 Kxe1 9. Nd3#
+*
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3b4/k2p3P/1p1K3P/1P4r1/8/3R4/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Troitzky. White to move and win} 1. h7 Rg5+ 2. Kxd6
+Rxh5 3. Kc7 Be6 4. Kb8 Bd5 5. Rxd5 Rxd5 6. h8=R Rd6 7. Kc7 Rg6 8. Ra8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6K1/2bP4/7B/4r3/8/1k6/8 w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Platov. White to move and make a draw} 1. Bf3 Rc4 2.
+Bd5 Bxd5 3. d7 Rc7 4. Kh8 Rxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/7p/8/8/K2R4/6p1/6b1/8 w - - 0 1"]
+[PlyCount "18"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Korterling. White to move and make a draw} 1. Rd8+
+Kg7 2. Rd3 Bc6+ 3. Kb4 g2 4. Rg3+ Kf6 5. Kc5 Bb7 6. Kd4 h5 7. Ke3 h4 8. Kf2
+hxg3+ 9. Kg1 Kg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/6P1/4pBP1/8/p7/8/8/1K6 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Prokop. White to move and win} 1. Be5 a3 2. Kc2 a2
+3. Kd3 a1=Q 4. Bxa1 e5 5. Ke4 Kxg7 6. Kf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2R5/8/p2r4/5r2/Pk3p2/3p4/1P6/K1R5 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Kubbel. White to move and win} 1. R1c4+ Ka5 2. R8c5+
+Rxc5 3. b4+ Kxa4 4. bxc5+ Kb3 5. cxd6 Kxc4 6. d7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4krN1/4p3/5P2/5p2/8/7R/7p/7K w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Kubbel. White to move and win} 1. Rh7 exf6 2. Re7+
+Kd8 3. Ra7 Ke8 4. Nh6 Kd8 5. Nf7+ Ke8 6. Nh8 f4 7. Ra8+ Ke7 8. Ng6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/5pp1/8/1K6/2pp1Q2/2k5 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Kubbel. White to move and win} 1. Qe3 f4 2. Qf2 d1=Q
+3. Kc3 f3 4. Qe3+ Kb1 5. Qb6+ Kc1 6. Qb2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3b1N2/2p1p3/5k1K/Q7/2P5/3q4 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Rinck. White to move and win} 1. Nd5+ Qxd5 2. Qg3+
+Kf5 3. Qg5+ Ke4 4. Qg2+ Kd4 5. c3+ Kc4 6. Qa2+ Kxc3 7. Qxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6p1/6pp/8/k4P2/6K1/6PP/8 w - - 0 1"]
+[PlyCount "25"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Mattison. White to move and win} 1. f5 Kb5 2. Kf4
+Kc6 3. Ke5 Kd7 4. f6 Ke8 5. fxg7 Kf7 6. g8=Q+ Kxg8 7. Kf6 Kh7 8. g4 g5 9. Kf7
+h5 10. h4 Kh6 11. Kf6 gxh4 12. g5+ Kh7 13. Kf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6bk/7p/2q1PP2/2Pp4/p2R4/5K2/8/B7 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Evreinov. White to move and win} 1. Re4 dxe4+ 2. Kg2
+e3+ 3. Kg1 Bf7 4. exf7 Qxc5 5. f8=Q+ Qxf8 6. f7+ Qg7+ 7. Kh2 Qxa1 8. f8=Q# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/N7/7p/4k2p/4p3/R4p1K/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Troitzky. White to move and make a draw} 1. Nc5+ Kf3
+2. Rxf2+ exf2 3. Ne4 Kxe4 4. Kg2 Ke3 5. Kf1 h3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r2/8/5p1p/5Kpk/3R4/3p4/P5P1/8 w - - 0 1"]
+[PlyCount "23"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Reti. White to move and win} 1. g3 Rg8 2. Rb4 g4 3.
+Rb1 Rg5+ 4. Kxf6 Rg6+ 5. Kf7 d2 6. a4 d1=Q 7. Rxd1 Rf6+ 8. Kg7 Rf5 9. Rb1 Kg5
+10. Rb6 Re5 11. Rb5 Rxb5 12. axb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2R5/3K4/4P3/2p1p1p1/2r5/8/6k1 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Troitzky. White to move and make a draw} 1. e6 Rd3+
+2. Ke5 e3 3. Rxc4 e2 4. Rxg4+ Kf2 5. Re4 Re3 6. Rxe3 Kxe3 7. e7 e1=Q 8. Ke6
+Kf4+ 9. Kf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4kr2/5p1K/3p1Q2/1p4P1/4P3/1PP5/7b/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.17"]
+
+{Try to solve the study of Reti. White to move and win} 1. Kh6 Be5 2. Kg7 Bh2
+3. c4 bxc4 4. e5 Bxe5 5. bxc4 Bxf6+ 6. gxf6 Rh8 7. Kxh8 Kd7 8. Kg8 Ke6 9. Kg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/kp1K4/p4p2/P2N4/2pp4/5P2/N7 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Godes. White to move and win} 1. Nac2 f4 2. Nb5 dxc2
+3. Kc7 c1=Q 4. Kb8 f3 5. Nc7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6n1/7K/3k4/2p1p2N/2P5/8 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Somov. White to move and make a draw} 1. Ng1 Nf4+ 2.
+Kg4 Ke4 3. Kg3 e2 4. Kf2 e1=Q+ 5. Kxe1 Ke3 6. Kd1 Kf2 7. Ne2 Nxe2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2N5/8/8/p7/8/1pKp4/kB6 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Prokes. White to move and make a draw} 1. Nb5 d1=Q+
+2. Kxd1 Kxb1 3. Na3+ Ka2 4. Kc2 Kxa3 5. Kb1 Kb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4N3/4p3/2B4p/5p1P/7k/5P2/1p4PK/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Platov. White to move and win} 1. Nf6 exf6 2. g3+
+Kg5 3. f4+ Kxh5 4. Be8+ Kg4 5. Bb5 b1=Q 6. Be2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3B4/N7/8/8/6p1/1k2p3/N6K w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Gorgiev. White to move and make a draw} 1. Nc2 Kxc2
+2. Nb4+ Kd2 3. Nd3 Kxd3 4. Bb5+ Ke3 5. Bxe2 Kf2 6. Bf1 Kxf1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/3p4/2P5/8/4B1K1/8/3p4/5n2 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Selezhniev. White to move and make a draw} 1. Bf3
+Nh2+ 2. Kh5 Nxf3 3. c7 d1=Q 4. c8=Q+ Kh7 5. Qxd7+ Qxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/NB6/8/5k2/2np3K/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Jespersen. White to move and make a draw} 1. Be8 Kg4
+2. Bd7+ Kf4 3. Bg4 $1 Kxg4 4. Nc4 d1=Q 5. Ne3+ Nxe3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1pp1p3/3pP3/1P1P3k/1PP1K3/8/8/2b5 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Isenegger. White to move and make a draw} 1. b6 cxb6
+2. c5 bxc5 3. bxc5 Ba3 4. c6 bxc6 5. dxc6 d5+ 6. Kf5 Bd6 7. c7 Bxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7B/8/3K2P1/2p3P1/8/6k1/3b4 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Eilazian. White to move and win} 1. Be4+ Kg3 2. Kxc4
+Kf4 3. g6 Kg5 4. g7 Kh6 5. Bf3 Bc2 6. g8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7B/1P6/8/3P4/1k3b1p/2N5/K7 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Gabovich. White to move and make a draw} 1. b7 Bxb7
+2. d5 Bxd5 3. Ne3 h2 4. Be4 Bxe4 5. Nf1 h1=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/8/8/P7/k1K2n2/pp6/8/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Prokes. White to move and make a draw} 1. Rb8 a2 2.
+Rb4+ Kxa5 3. Rb8 b2 4. Ra8+ Kb6 5. Rxa2 b1=Q 6. Rb2+ Qxb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k1Kp4/p7/N4R2/8/3n4/4p3/8 w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and make a draw} 1. Rd5 e1=Q
+2. Rxd7 Qxa5+ 3. Kc6+ Kb8 4. Rd8+ Qxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1R3B1p/5k1p/1p5P/2p4K/2p1P3/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Prokes. White to move and make a draw} 1. e4+ Kxe4
+2. Rxb4+ Kf5 3. Rf4+ Kxf4 4. Bxc3 c1=Q 5. Bd2+ Qxd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1R6/8/B7/8/8/1K6/1p2p3/k3n3 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Platov. White to move and make a draw} 1. Bd3 Nxd3
+2. Kc2 Nc1 3. Rxb2 e1=Q 4. Rb1+ Ka2 5. Ra1+ Kxa1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5K1k/7b/8/4p3/5p2/8/4R3 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Prokes. White to move and make a draw} 1. Rf1 e3 2.
+Rxf3 e2 3. Rg3 e1=Q 4. Rg7+ Kh8 5. Rg8+ Kh7 6. Rg7+ Bxg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6KB/8/5Pk1/8/8/6p1/2b4p/7R w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and make a draw} 1. f7 Bb3 2.
+Bd4 Bxf7+ 3. Kh8 Bd5 4. Be5 g2 5. Bxh2 gxh1=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K2/1p6/1P6/P7/1P2r3/8/6k1/8 w - - 0 1"]
+[PlyCount "18"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and make a draw} 1. b5 Rb4 2.
+Ke7 Rxb5 3. Kd6 Rf5 4. Kc7 Rf7+ 5. Kb8 Kf3 6. Ka7 Ke4 7. a6 Kd5 8. axb7 Kc6 9.
+Ka8 Rxb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K5/k1N5/2p5/r7/1B6/2p5/3p2N1/8 w - - 0 1"]
+[PlyCount "10"]
+
+{Try to solve the study of Filaretov. White to move and make a draw} 1. Ne3
+d1=Q 2. Nxd1 c2 3. Bd2 cxd1=Q 4. Be3+ c5 5. Bxc5+ Rxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1P2P3/8/8/nr2P3/1P3b2/K3k1N1 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Herbstmann. White to move and make a draw} 1. Nf3+
+Kd1 2. e7 Rxe3 3. b7 Bg3 4. Ne5 Bxe5 5. e8=Q Bxb2+ 6. Ka2 $1 Rxe8 7. b8=Q Rxb8
+*
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1bN1r3/2pp4/P7/kP2n3/P7/1K6/8/6B1 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and win} 1. Bb6+ cxb6 2. a7
+Bxa7 3. Nd6 Rb8 4. Ka3 Rc8 5. Nb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/8/2p2Pp1/2r5/pp1p4/7p/5K1P/4R3 w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.18"]
+
+{Try to solve the study of Zepler. White to move and make a draw} 1. Rh1 Rf5+
+2. Kg1 d3 3. f7 d2 4. f8=Q+ Rxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r6/8/8/4K3/N1N5/1k6/4R3/8 w - - 0 1"]
+[PlyCount "19"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Seletsky. White to move and win} 1. Na5+ Kxa4 2.
+Ra2+ Kb5 3. Rb2+ Kc5 4. Nb3+ Kb6 5. Nd4+ Kc7 6. Ne6+ Kc8 7. Rc2+ Kb7 8. Nc5+
+Ka7 9. Ra2+ Kb6 10. Nd7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7P/R2K1pp1/pp6/2k2p1n/7r/2P5/2N5 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Lazard. White to move and win} 1. Rc6+ Kd4 2. Ne2+
+Ke4 3. Ng1 Rh1 4. h8=Q Nf5+ 5. Kc5 Rxh8 6. Re6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r6k/6p1/4P1Pp/p7/P6B/P3b2p/2p4P/5R1K w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Duras. White to move and make a draw} 1. Bd8 Bc5 2.
+e7 Bxe7 3. Bxe7 Rb8 4. Bc5 Rb1 5. Bg1 Rxf1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4N3/2NRp3/6n1/4r2k/4r3/6K1/5R2 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kajev. White to move and win} 1. Nf5+ exf5 2. Rh6+
+Kg4 3. Ne5+ Rxe5 4. Rf4+ Kxf4 5. Rh4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4n3/3k1P2/3P4/5K1p/2R5/6q1/3B4/8 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Birnov. White to move and win} 1. f8=N+ Kxd6 2. Bb4+
+Kd5 3. Rc5+ Kd4 4. Ne6+ Ke3 5. Rc3+ Kf2 6. Bc5+ Kg2 7. Nf4+ Kh2 8. Bg1+ Qxg1 9.
+Rh3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2n1b3/2k1q3/7B/3P4/1N3R2/8/8/6K1 w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Sehwers. White to move and make a draw} 1. d6+ Qxd6
+2. Rf7+ Bxf7 3. Bf4 Qxf4 4. Nd5+ Bxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4K3/7P/6Pk/4N3/1n6/8/4r2B/4q2b w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mattison. White to move and make a draw} 1. Bf4+ Kg7
+2. h8=Q+ Kxh8 3. Kf8 Bd5 4. Nf7+ Bxf7 5. Be5+ Rxe5 6. gxf7 Qh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2ppk3/8/1N1P4/3Pp2b/7p/3B1q1P/1Q5K w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Troitzky. White to move and make a draw} 1. Qxe4+
+Kd8 2. Qxh4+ Qxh4 3. Nd6 cxd6 4. Bg5+ Qxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r2/4R3/5PP1/6kp/7p/p6P/8/2K5 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Gurgenidze. White to move and win} 1. g7 Rc8+ 2. Rc7
+a2 3. Kb2 Rb8+ 4. Rb7 a1=Q+ 5. Kxa1 Ra8+ 6. Ra7 Rxa7+ 7. Kb2 Rxg7 8. fxg7 Kh6
+9. g8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1K6/8/k1p5/PR6/8/p7/r1N5 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Bron. White to move and make a draw} 1. Rb5+ Kxa4 2.
+Rxc5 Rb1+ 3. Ka6 a1=Q 4. Ra5+ Kb4 5. Nd3+ Kc3 6. Nc5 Qb2 7. Na4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "N7/8/8/8/R2Kn1p1/3p4/8/1k6 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mitrofanov. White to move and win} 1. Rb4+ Kc2 2.
+Rc4+ Kd2 3. Kxe4 g3 4. Kf3 g2 5. Kxg2 Ke3 6. Rc3 Ke2 7. Nb6 d2 8. Nc4 d1=Q 9.
+Re3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/1p3pP1/2P5/K7/6P1/8/5k2/8 w - - 0 1"]
+[PlyCount "21"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kovalenko. White to move and win} 1. c7 f6 2. Kb6
+Rg8 3. Kc5 b5 4. Kd5 b4 5. Ke6 b3 6. Kf7 Rc8 7. g8=Q Rxg8 8. Kxg8 b2 9. c8=Q
+b1=Q 10. Qf5+ Qxf5 11. gxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7K/4r1P1/2k5/6r1/7N/3N4/8/8 w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Roche. White to move and make a draw} 1. Ng6 Rxg6 2.
+g8=N Re8 3. Ne5+ Rxe5 4. Ne7+ Rxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/N7/6b1/4p3/8/4KBkr/8 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Pogosjants. White to move and make a draw} 1. Nc5 e3
+2. Bxe3 Kh1+ 3. Bf2 Bh4 4. Ne4 Bxf2 5. Kf1 Bh4 6. Ng3+ Bxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/5P1K/5P1R/5P1p/8/1q5P/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Rumiantsev. White to move and make draw} 1. Kg6+ Kg8
+2. f7+ Kf8 3. Rh8+ Qxh8 4. f6 h3 5. f5 Qh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4pP2/p5p1/4r3/pp6/7p/1k2PK1P/3R4 w - - 0 1"]
+[PlyCount "12"]
+[EventDate "2013.04.17"]
+[SourceDate "2013.04.18"]
+
+{Try to solve the study of Gurgenidze. White to move and make a draw} 1. e4 Re6
+2. e5 Rxe5 3. Rh1 Rf5+ 4. Kg1 a3 5. f8=Q a2 6. Qf6+ Rxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/6p1/1p2p3/1P2P1P1/p5P1/6PK/7P/8 w - - 0 1"]
+[PlyCount "26"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kralin. White to move and make a draw} 1. g6 a3 2.
+g5 a2 3. Kg4 a1=Q 4. Kh5 Qxe5 5. h4 Qe1 6. g4 Qxh4+ 7. Kxh4 Kg8 8. Kg3 Kf8 9.
+Kf4 Ke7 10. Ke5 Kd7 11. Kd4 Kd6 12. Ke4 e5 13. Kf5 Kd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4b1k1/8/P4P2/1P1p4/6N1/8/5p2/2b2K2 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Bondarenko. White to move and win} 1. f7+ Kxf7 2. a7
+Be3 3. Nxe3 Bxb5+ 4. Nc4 Bc6 5. Ne5+ Ke6 6. Nxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "kb6/8/K2p1B2/3P4/8/8/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kovalenko. White to move and win} 1. Bd4 Ba7 2. Bb6
+Bb8 3. Ka5 Kb7 4. Kb5 Kc8 5. Ka6 Bc7 6. Bxc7 Kxc7 7. Ka7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K1k/3p2p1/5pPp/5p2/2p1P3/2p4P/8/6N1 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mozes. White to move and win} 1. e5 fxe5 2. Nf3 d6
+3. h4 c2 4. Ng5 hxg5 5. h5 c1=Q 6. h6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k1n3/2p3q1/3PP3/6p1/4K3/8/2PB4/5R2 w - - 0 1"]
+[PlyCount "23"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kralin. White to move and win} 1. d7+ Kd8 2. Rf8
+Qxf8 3. Bxg5+ Nf6+ 4. Ke5 Ke7 5. Kf5 c6 6. c3 c5 7. c4 Qh8 8. d8=Q+ Kxd8 9.
+Bxf6+ Qxf6+ 10. Kxf6 Ke8 11. e7 Kd7 12. Kf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5B2/3r4/8/4P3/8/5PKp/8/4k3 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kralin. White to move and win} 1. e6 Rd3 2. Bc5 h2
+3. Kxh2 Rxf3 4. e7 Kf1 5. Bg1 Ra3 6. e8=Q Rh3+ 7. Kxh3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/4r1p1/P7/6K1/p1pN4/P7/2P5/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Herbstmann. White to move and win} 1. Nc6 Rc7 2. a7
+Rc8 3. Nb8 Rc5+ 4. Kg6 Ra5 5. Nc6 Ra6 6. Kxg7 c3 7. Kg8 Kd7 8. Nb8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3R4/4B2B/4r2k/8/3p3K/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mattison. White to move and win} 1. Rd5 Rxd5 2. Be3
+Rg5 3. Bf7+ Kh6 4. Be8 d2 5. Bxd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p2q4/3pp1p1/6B1/6kP/1P1N4/1P2P2P/3K4 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and win} 1. Nf2+ Kf5 2. e4+
+Ke5 3. Ng4+ Kd4 4. Be3+ Kd3 5. Bc5 dxc5 6. Ne5+ Kxe4+ 7. Nxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5b1r/R2Pk3/4B3/8/3p4/3pp3/5R2/4K3 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Horwitz. White to move and win} 1. d8=Q+ Kxd8 2.
+Rxf8+ Rxf8 3. Bf7 d2+ 4. Ke2 d3+ 5. Kd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3K3k/p7/7P/3N1P2/1B6/6q1/8/8 w - - 0 1"]
+[PlyCount "23"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Platov. White to move and win} 1. Bc3+ Kg8 2. h7+
+Kxh7 3. Nf6+ Kh6 4. Bd2+ Qg5 5. Be3 a5 6. Kd7 Qxe3 7. Ng4+ Kg5 8. Nxe3 Kf6 9.
+Kd6 a4 10. Kd5 a3 11. Ke4 a2 12. Nc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4p3/1pkP3Q/5p2/1K3p2/5Pq1/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kubbel. White to move and win} 1. Qe6 exd6 2. Qc8+
+Kd5 3. Qxf5+ Kc6 4. Qc8+ Kd5 5. Qe8 Qxf3 6. Qa8+ Ke5 7. Qxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1B4b1/1P6/8/3pPp2/3k4/8/p3K3/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Platov. White to move and win} 1. Ba7+ Ke4 2. Bd4
+Kxd4 3. b8=Q a1=Q 4. Qb4+ Kxe5 5. Qe7+ Kf4 6. Qh4+ Ke5 7. Qh8+ Ke6 8. Qxa1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p2p2/p7/2p5/PP6/3KP3/8/5k2 w - - 0 1"]
+[PlyCount "31"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Riester. White to move and win} 1. b5 a5 2. e4 Kf2
+3. Kc4 Ke3 4. e5 Ke4 5. Kxc5 Kxe5 6. Kc6 f5 7. Kxc7 f4 8. b6 f3 9. b7 f2 10.
+b8=Q f1=Q 11. Qb5+ Qxb5 12. axb5 a4 13. b6 a3 14. b7 a2 15. b8=Q a1=Q 16. Qh8+
+*
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q6/3b4/3pk1K1/8/4N3/7p/4P3/7Q w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Troitzky. White to move and win} 1. Nc5+ dxc5 2.
+Qxh3+ Ke7 3. Qh4+ Ke6 4. Qf6+ Kd5 5. Qf3+ Ke6 6. Qf5+ Ke7 7. Qf6+ Ke8 8. Qh8+
+Ke7 9. Qxb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7q/3p1K2/7k/1Q3pp1/2p5/4N3/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Prokes. White to move and win} 1. Ng4+ fxg4 2. Qb6+
+Kh5 3. Qb1 g3 4. Qh1+ Kg4 5. Qxh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6Q1/8/p1rq4/5r2/k5NR/8/B7/7K w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Pogosjants. White to move and win} 1. Ne5+ Ka5 2.
+Qd8+ Kb5 3. Bc4+ Rxc4 4. Qa5+ Kxa5 5. Nxc4+ Kb5 6. Nxd6+ Kc5 7. Nxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3K4/7p/8/2N5/P1k5/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Shikril. White to move and win} 1. Nb2 h5 2. a4 Kb4
+3. Kc6 h4 4. Kb6 h3 5. a5 h2 6. Nd3+ Kc3 7. Nf2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N4/1p1P2rb/8/8/3p4/1K1P4/8/2k5 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Bent. White to move and make a draw} 1. Nf7 Rg8 2.
+d8=Q Rxd8 3. Nxd8 Bxd3 4. Nxb7 Bc2+ 5. Ka2 d3 6. Ka1 d2 7. Na5 d1=Q 8. Nb3+
+Bxb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4N2k/3n3p/8/3K4/8/8/3B4/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Pogosjants. White to move and win} 1. Ke6 Nc5+ 2.
+Kf7 Ne4 3. Bh6 Nd6+ 4. Ke7 Nf5+ 5. Kf8 Nxh6 6. Nd6 Ng4 7. Nf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3R4/p7/3N4/8/7p/Kp6/3k3p/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Reti. White to move and win} 1. Re8 h1=Q 2. Ne4+ Kc1
+3. Rc8+ Kb1 4. Nd2+ Ka1 5. Nxb3+ Kb1 6. Nd2+ Ka1 7. Rc2 Qh3+ 8. Nb3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "Nk6/pP6/P1K5/1P1P4/8/8/4p3/4b3 w - - 0 1"]
+[PlyCount "16"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Afek. White to move and make a draw} 1. Nb6 axb6 2.
+d6 Bg3 3. d7 Bh4 4. a7+ Kxa7 5. Kc7 Bg3+ 6. Kc8 e1=Q 7. d8=N Qe8 8. b8=Q+ Bxb8
+*
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/1R6/4K3/B7/3p4/8/p7/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kondratiev. White to move and win} 1. Bc7 a1=Q 2.
+Be5+ Kg8 3. Rg7+ Kf8 4. Rg2 Qe1 5. Rb2 Kg8 6. Rh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3p4/3P4/3p4/8/3P4/k6K w - - 0 1"]
+[PlyCount "21"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Jarmonov. White to move and make a draw} 1. Kg2 Kb2
+2. Kf3 Kb3 3. Kf4 Kb4 4. d3 Kb3 5. Kf5 Kc2 6. Ke6 Kxd3 7. Kxd6 Kc4 8. Kc6 d3 9.
+d6 d2 10. d7 d1=Q 11. Kc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6pq/2Q5/3K4/5p2/3k4/3B4 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mann. White to move and win} 1. Qa5+ Kxd1 2. Kd3 Qc1
+3. Qa4+ Ke1 4. Qh4+ f2 5. Qe4+ Kf1 6. Qh1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p5/1pP5/1P3k2/5p2/8/5KP1/8 w - - 0 1"]
+[PlyCount "25"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Neumann. White to move and win} 1. Kf3 Ke5 2. Kg4
+Ke4 3. Kg5 Ke5 4. Kg6 Ke6 5. Kg7 Ke7 6. Kg8 Ke8 7. Kh7 Kf7 8. Kh6 Kf6 9. Kh5
+Kf5 10. Kh4 Ke4 11. Kg4 Ke5 12. Kg5 Ke4 13. Kf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2p5/2Pp1k2/4n3/2Q1PK2/4r3/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Bouwmeester. White to move and make a draw} 1. Qb2
+Rd2 2. Qc2 Kg5 3. Qb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/6q1/6N1/8/8/8/2Q5/5K2 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Chekhover. White to move and win} 1. Qc8+ Kh7 2.
+Nf8+ Kh8 3. Ne6+ Qg8 4. Qc3+ Kh7 5. Qf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2PppK2/2bk3B/2r2p2/8/3PP3/5P2/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Bondarenko. White to move and win} 1. Bf4+ e5 2.
+Bxe5+ Kxe5 3. c8=Q Bd5+ 4. Ke7 Rxc8 5. f4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/pp6/3K4/pk6/1pb5/8/1N6/3B4 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Grzeban. White to move and win} 1. Ba4+ Ka6 2. Nxc4
+b5 3. Kc6 bxa4 4. Nb2 a3 5. Na4 b3 6. Nc5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/BB6/3p4/8/4K3/8/2r4p/7k w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mandler. White to move and win} 1. Kd3+ Rg2 2. Bf3
+d5 3. Bf2 d4 4. Ke2 d3+ 5. Kf1 d2 6. Bxg2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/q7/5p2/2p5/8/Qp6/p2r4/k1K1B3 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Pogosjants. White to move and win} 1. Qb2+ Rxb2 2.
+Bc3 Qa3 3. Bxf6 c4 4. Bc3 Qb4 5. Bxb2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4R3/8/3N1qn1/8/5k2/7K/6P1/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Pogosjants. White to move and make a draw} 1. Re4+
+Kg5 2. Re5+ Kh6 3. Rh5+ Kxh5 4. g4+ Kh6 5. g5+ Kxg5 6. Ne4+ Kf5 7. Nxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4RR2/K5p1/5r2/1k6/4P3/8/1r6/8 w - - 0 1"]
+[PlyCount "19"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Fritz. White to move and win} 1. Rb8+ Ka4 2. Rxf6
+Rxb8 3. Ra6+ Kb5 4. Kxb8 Kxa6 5. Kc7 g5 6. e5 g4 7. e6 g3 8. e7 g2 9. e8=Q g1=Q
+10. Qa4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/B7/1R2K3/8/7k/8/2p3Pp/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mitrofanov. White to move and win} 1. Kf5 c1=Q 2.
+Rh6+ Qxh6 3. Bf2+ Kh5 4. g4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5n2/pp2p3/k3P3/P4B2/1P6/8/8/6K1 w - - 0 1"]
+[PlyCount "19"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mees. White to move and win} 1. Bd3+ b5 2. Be4 Nxe6
+3. Bf5 Nd8 4. Bc8+ Nb7 5. Kf2 e5 6. Ke3 e4 7. Kd4 e3 8. Kd5 e2 9. Kc6 e1=Q 10.
+Bxb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/4rr2/bP2PR2/8/2B5/8/K7/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Comay. White to move and win} 1. Bd5+ Bb7 2. Bxb7+
+Kb8 3. exf7 Rxf7 4. Rf3 Rxb7 5. Rf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N1k2/8/2K5/8/p7/1p6/8/6B1 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mitrofanov. White to move and win} 1. Bc5+ Ke8 2.
+Nb7 b2 3. Nd6+ Kd8 4. Bd4 b1=Q 5. Bf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p6/7B/PkN5/7p/1K6/6p1/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mitrofanov. White to move and win} 1. Be3 h3 2. a6
+bxa6 3. Ne6 h2 4. Nd4+ Ka5 5. Bf4 g1=Q 6. Bc7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "K3b3/8/kPp5/8/pP5B/2P4p/8/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Herbstmann. White to move and win} 1. b7 c5 2. b5+
+Bxb5 3. b8=N+ Ka5 4. Bd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3K2k1/6q1/5pB1/3N4/3N4/8/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Fritz. White to move and win} 1. Ne7+ Kh8 2. Ndf5
+Qf8+ 3. Be8 Kh7 4. Kd7 Qh8 5. Bg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/1Q3K2/8/1B4b1/8/8/8/3q4 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mitrofanov. White to move and win} 1. Bd3 Qh5+ 2.
+Bg6 Qh4 3. Qb2+ Bf6 4. Qb5 Qg5 5. Qe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1n2/5R1P/5K1k/6n1/5N2/8/8/7N w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Fritz. White to move and win} 1. h8=Q+ Nfh7+ 2. Kf5
+Rxh8 3. Nf2 Nxf7 4. Ng4+ Kg7 5. Ne6+ Kg8 6. Kf4 Nf8 7. Nf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k1K5/5RR1/rpp1r3/7p/3P4/8/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Votava. White to move and win} 1. Kd7 Rh6 2. Rg8+
+Kb7 3. Ke8+ Kc8 4. Ke7+ Kc7 5. Kf8+ Kd6 6. Kg7 Re6 7. Rd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p1ppp1/6p1/P3kP1P/3p4/5P1K/8/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kalinin. White to move and win} 1. f6 exf6 2. h6
+gxh6 3. a6 d3 4. a7 d2 5. a8=Q d1=Q 6. Qe8+ Kf5 7. Qe4+ Kg5 8. Qg4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4B1K1/8/2N4k/8/2p3P1/1P6/6p1/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Pogosjants. White to move and win} 1. Ne5 g1=Q 2.
+Bh5 Qa7 3. Nf7+ Qxf7+ 4. Kxf7 cxb3 5. Kf6 b2 6. Bg6 b1=Q 7. g5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7B/6K1/7P/8/8/6p1/8/k5b1 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Razumenko. White to move and win} 1. Kf7+ Ka2 2. h7
+g2 3. Ba1 Bf2 4. h8=Q g1=Q 5. Qb2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6K1/8/2p2P2/7p/p7/4k2N/6B1/3b4 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Chicco. White to move and win} 1. Bd5 Bb3 2. Bxb3
+axb3 3. Nf2 Kd2 4. Nd3 Kxd3 5. f7 b2 6. f8=Q b1=Q 7. Qf5+ Kd2 8. Qxb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5R2/2K5/k7/r7/8/1P3n2/8 w - - 0 1"]
+[PlyCount "19"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Jonsson. White to move and win} 1. Ra7+ Kb4 2. Rb7+
+Ka5 3. b4+ Ka6 4. b5+ Ka5 5. Ra7+ Kb4 6. b6 Nd3 7. b7 Ne5+ 8. Kd6 Nf7+ 9. Kd5
+Rxa7 10. b8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4p3/8/1n1P4/2k4P/8/8/1N4K1 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Troitzky. White to move and win} 1. Na3+ Nxa3 2. d6
+exd6 3. h5 Nb5 4. h6 Nd4 5. h7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6B1/K6R/4p3/k3rp2/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Troitzky. White to move and make a draw} 1. Rh1 Re1
+2. Rf1 Rxf1 3. Bxe3 Kb2 4. Kb4 Kc2 5. Kc4 Kd1 6. Kd3 Ke1 7. Bd2+ Kd1 8. Be3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p3b3/3q4/2k5/K7/1p3R2/8/4R3 w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Duras. White to move and make a draw} 1. Rf5+ Kb6 2.
+Rb5+ Ka6 3. Re6 $1 Qxe6 4. Rb6+ axb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1QK3kq/6p1/8/6B1/8/8/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Richter. White to move and win} 1. Kb7+ Kh7 2. Qh2+
+Kg8 3. Qa2+ Kh7 4. Qf7 Qg8 5. Qh5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6p1/8/2P1k3/2p5/P7/1P6/1K6 w - - 0 1"]
+[PlyCount "23"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Zinar. White to move and make a draw} 1. Kc2 g5 2.
+Kc3 g4 3. Kd2 Kd5 4. Ke3 Kxc5 5. Kf4 Kb5 6. Kxg4 Ka4 7. Kf5 Kb3 8. a4 Kxb2 9.
+a5 c3 10. a6 c2 11. a7 c1=Q 12. a8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K5/k2N4/1p2p3/p7/8/8/2P5/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Zigman. White to move and make a draw} 1. Nf8 e5 2.
+Nd7 e4 3. Nf6 e3 4. Nd5 e2 5. Nc3 e1=Q 6. Nb5+ Ka6 7. Nc7+ Ka7 8. Nb5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "K7/1N6/1k6/8/1P6/1P4p1/2P5/8 w - - 0 1"]
+[PlyCount "21"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Sidorov. White to move and make a draw} 1. Nc5 g2 2.
+Na4+ Ka6 3. b5+ Ka5 4. b6 g1=Q 5. b7 Ka6 6. Nc5+ Qxc5 7. b8=N+ Kb5 8. c4+ Ka5
+9. b4+ Kxb4 10. Na6+ Kxc4 11. Nxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3p4/6b1/P1P5/k2P4/3p4/2P5/2K5 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Troitzky. White to move and win} 1. c6 dxc6 2. a6
+Be4 3. d5 cxd5 4. cxd3 Bf3 5. d4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/8/4N3/1K6/8/1R1nq3/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Jensch. White to move and make a draw} 1. Nc5 Qxc5+
+2. Ka6+ Kc8 3. Rb8+ Kd7 4. Rb7+ Kd6 5. Rb6+ Kd5 6. Rb5 Nb4+ 7. Ka5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "KB3Q2/5P2/kb6/8/8/8/8/q7 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Proskurowski. White to move and make a draw} 1. Qa3+
+Qxa3 2. f8=Q Qa1 3. Qh8 Qa5 4. Qe5 Qa2 5. Qg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/1pp5/8/KPP5/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Proskurowski. White to move and make a draw} 1. c3
+bxc3 2. b4 Kc6 3. Kb1 Kb5 4. Kc1 Kxb4 5. Kc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4K2k/4B3/8/8/8/4Q3/1q6/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Rinck. White to move and win} 1. Qh6+ Kg8 2. Qg6+
+Qg7 3. Qf5 Qd4 4. Qf7+ Kh8 5. Bf6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/3r4/1K6/p2q4/6p1/Q7/7R/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Rinck. White to move and win} 1. Rh8+ Rd8 2. Qg3+
+Ka8 3. Qg2 Qxg2 4. Rxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3q4/8/B3k2B/8/8/5R2/4K3 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Rinck. White to move and win} 1. Bc3+ Ke4 2. Bf3+
+Ke3 3. Ba8 Qg4 4. Rf3+ Qxf3 5. Bd2+ Kd3 6. Bxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4N3/8/pP5r/k7/P7/7p/PK6/1R6 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Rinck. White to move and win} 1. b7 Rb6+ 2. Ka3 Rxb1
+3. Nd6 Rxb7 4. Nc4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3B1N2/8/3k4/7P/1p3r2/8/4p3/4K3 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Rinck. White to move and win} 1. Bc7+ Kxc7 2. Ne6+
+Kd6 3. Nxf4 b3 4. Nd3 Ke6 5. Kxe2 b2 6. Nxb2 Kf5 7. Nd3 Kg5 8. Nf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1p3P1k/1r6/4K3/P3N3/1P6/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Rinck. White to move and win} 1. f7 Kg7 2. Nf5+ Kf8
+3. b4 Kxf7 4. Nd6+ Ke6 5. Nxb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r4n1/8/2R5/5p2/4kp2/2K2p2/5P2/6N1 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Kovalenko. White to move and win} 1. Kc4 Re8 2. Nh3
+Re7 3. Ng5+ Ke5 4. Nxf3+ Ke4 5. Ng5+ Ke5 6. f3 Nf6 7. Re6+ Rxe6 8. Nf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/6p1/4kp1p/8/5K1R w - - 0 1"]
+[PlyCount "8"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Prokes. White to move and make a draw} 1. Ke1 f2+ 2.
+Kf1 g3 3. Rxh3 Kf3 4. Rh2 gxh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4N3/5B1p/2k5/7K/8/3p1p2/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Platov. White to move and make a draw} 1. Nf6 f2 2.
+Bd5+ Kb5 3. Bc4+ Kxc4 4. Ng4 f1=N 5. Ne5+ Kd4 6. Nxd3 Kxd3 7. Kh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k4q2/8/8/2p5/8/2K4R/5r2/4Q3 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Cheron. White to move and win} 1. Qe4+ Kb8 2. Qe5+
+Ka7 3. Rh7+ Rf7 4. Qf6 Rxh7 5. Qxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5p1p/4p1p1/4P1P1/pk1P1P1P/8/8/2K5 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Salvioli. White to move and win} 1. d5 exd5 2. f5
+gxf5 3. e6 fxe6 4. h5 f4 5. g6 f3 6. Kd2 hxg6 7. h6 a3 8. h7 a2 9. h8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6pp/1K6/5P2/8/8/1kp3R1/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Timman. White to move and make a draw} 1. Kc7 h5 2.
+Kb8 h4 3. Rxg7 c1=Q 4. Rb7+ Ka3 5. Ra7+ Kb4 6. Rb7+ Ka5 7. Ra7+ Kb6 8. Rb7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q3k/4pKp1/8/6PN/8/8/8/4R3 w - - 0 1"]
+[PlyCount "25"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Matous. White to move and win} 1. Nf6 Qa8 2. Re2 Qb8
+3. Re3 Qc8 4. Re4 Qh3 5. Rb4 Qg3 6. Rb1 Qh2 7. Ra1 Qg2 8. Ra4 Qh1 9. Rd4 gxf6
+10. Rd8+ Kh7 11. g6+ Kh6 12. Rh8+ Kg5 13. Rxh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7r/6k1/4KpBp/5PbQ/8/8/2p3P1/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Benko. White to move and win} 1. Bh7 Rf8 2. Qg6+ Kh8
+3. Bg8 Rxg8 4. Kf7 Rxg6 5. fxg6 c1=Q 6. g7+ Kh7 7. g8=Q# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/3p4/8/8/8/B7/P7/7K w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Duras. White to move and win} 1. Bb4 Kf7 2. a4 Ke6
+3. a5 Kd5 4. a6 Kc6 5. Ba5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "qb2k3/2p2p2/p1P2Pp1/Pp4P1/1P2K3/6p1/6P1/4R3 w - - 0 1"]
+[PlyCount "14"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Herbstmann. White to move and make a draw} 1. Kd5+
+Kf8 2. Rh1 Kg8 3. Re1 Qa7 4. Re8+ Kh7 5. Re3 Qa8 6. Re8 Qa7 7. Re3 Qxe3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/P4KPk/8/8/8/7b w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Moravec. White to move and win} 1. a6 Bd5 2. g6 Kh6
+3. Ke5 Bg2 4. Kf6 Bd5 5. a7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2p5/8/8/B3pk2/P4P2/6K1 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Votava. White to move and win} 1. Be7 exf2+ 2. Kf1
+c5 3. a4 Ke4 4. a5 Kd5 5. a6 Kc6 6. Bd8 c4 7. Kxf2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/3p2pP/6P1/p6B/3P4/P7/4K3/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Stolk. White to move and win} 1. Kf2 a4 2. Be2 d5 3.
+Bc4 dxc4 4. d5 c3 5. d6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/P7/5kP1/K6P/8/7r/8/8 w - - 0 1"]
+[PlyCount "21"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Votava. White to move and win} 1. g7 Kxg7 2. h6+ Kf7
+3. h7 Rh1 4. Kb4 Rb1+ 5. Ka3 Rh1 6. Kb2 Rh2+ 7. Kb3 Rh3+ 8. Kb4 Rh4+ 9. Kb5
+Rh5+ 10. Kb6 Rh6+ 11. Kb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1r6/1N1Pp3/1P6/8/4k3/8/3K4 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Holm. White to move and win} 1. d7 Rb8 2. Nc8 Rxb5
+3. Nb6 Rb4 4. Nd5+ exd5 5. d8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k1NN4/2P5/5K2/1r6/8/8/8/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Prokes. White to move and win} 1. Nb6+ Rxb6+ 2. Ke7
+Rb8 3. Kd7 Ka7 4. Nc6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3P4/2r5/k7/7Q/3p1pK1/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mitrofanov. White to move and win} 1. Qg4+ Ka5 2. d7
+f1=Q+ 3. Kxf1 Rc1+ 4. Qd1 Rxd1+ 5. Ke2 Re1+ 6. Kxd2 Rh1 7. d8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/p7/8/2p2P2/8/1P6/4K3 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Prokop. White to move and win} 1. Kd2 Kd6 2. Kc3 Kd5
+3. f5 Ke5 4. Kxc4 Kxf5 5. Kd4 Ke6 6. Kc5 Ke5 7. b4 Ke6 8. Kb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k1r4/8/K4b1q/1PR5/8/B7/8/2R5 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Maklecov. White to move and win} 1. Rc8+ Rxc8 2.
+Bd6+ Rc7 3. Bxc7+ Ka8 4. b6 Be5 5. Bd6 Qxd6 6. Rc8+ Qb8 7. b7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1K6/2P5/k7/P4b2/7b/8/5N2 w - - 0 1"]
+[PlyCount "18"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Nadareishvili. White to move and make a draw} 1. Nh2
+Bxh2 2. c7 Bg2+ 3. Ka7 Bg1+ 4. Kb8 Bh2 5. Ka7 Bh3 6. Kb7 Bf1 7. Kc6 Bh3 8. Kb7
+Bg2+ 9. Ka7 Bxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k1P5/8/8/2r5/7R/1K2P3/2r5 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Herbstmann. White to move and make a draw} 1. c8=N+
+Rxc8 2. Ra3+ Kb6 3. Rb3+ Ka5 4. Ra3+ Kb4 5. Rb3+ Kc4 6. Rd3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/6p1/K3p3/P7/8/8/1R2p1R1/4q3 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Zachodjakin. White to move and win} 1. Rh2 Qxa5+ 2.
+Kxa5 e1=Q+ 3. Ka6 Qf1+ 4. Kb6 Qf8 5. Rh8 Qxh8 6. Kc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1pPK3b/8/8/8/5k2/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Sarychev. White to move and make a draw} 1. Kc8 b5
+2. Kd7 Bf5+ 3. Kd6 b4 4. Ke5 Kg4 5. Kd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "n7/P7/K7/5P2/3n2p1/8/8/4k3 w - - 0 1"]
+[PlyCount "17"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mitrofanov. White to move and make a draw} 1. Kb7 g3
+2. Kxa8 Nb5 3. Kb7 Nxa7 4. f6 Nb5 5. Kc6 Nd4+ 6. Kd5 Nf5 7. f7 Ne7+ 8. Ke4 Ng6
+9. Kf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k2K4/pp6/P3P3/8/8/8/1p6/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Proskurowski. White to move and win} 1. e7 b1=Q 2.
+e8=Q Qh7 3. Kc8 Qg7 4. Qd8 Qf7 5. Qh8 Qe7 6. Qg8 bxa6 7. Qg2+ Qb7+ 8. Qxb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2N5/4K3/6pk/8/6P1/3p4/8/8 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Leepin. White to move and make a draw} 1. Nd6 d2 2.
+Kf8 d1=Q 3. Nf7+ Kh7 4. Ng5+ Kh8 5. Nf7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6b1/4Kpk1/6p1/6B1/6PP/8/8 w - - 0 1"]
+[PlyCount "13"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Herbstmann. White to move and win} 1. Bf5+ Kh6 2.
+Ke7 g4 3. h4 Kh5 4. Kf7 Kh6 5. Kg8 Kh5 6. Kh7 Bh6 7. Bg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p4K/5k2/2p5/4R3/2p5/8/8 w - - 0 1"]
+[PlyCount "25"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Mugnos. White to move and win} 1. Re2 c4 2. Re4 c5
+3. Kh6 Kf5 4. Rxc4 Ke5 5. Kg5 Kd5 6. Rxc3 Kd4 7. Rc1 c4 8. Kf4 Kd3 9. Kf3 c3
+10. Rd1+ Kc2 11. Ke2 Kb2 12. Kd3 c2 13. Rd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K4k1/5p2/6p1/7N/1pR1P1P1/8/1p3b2/8 w - - 0 1"]
+[PlyCount "19"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Perkonoja. White to move and win} 1. Nf6+ Kg7 2. g5
+Bg3+ 3. Kb7 Bd6 4. Rc8 Bf8 5. Rc2 b1=Q 6. Rh2 Bc5 7. Rh7+ Kf8 8. Rh8+ Ke7 9.
+Re8+ Kd6 10. e5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K1k/6p1/N2R2P1/8/2r3P1/8/2p5/8 w - - 0 1"]
+[PlyCount "15"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Voja. White to move and win} 1. Rd8 Rc8 2. Rxc8 c1=Q
+3. Re8 Qc7 4. Nc5 Qd7 5. Ne4 Qe6 6. Ng5 Qxg6 7. Ke7+ Qxe8+ 8. Kxe8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1Kp3k1/p7/P1Pp2PB/n7/8 w - - 0 1"]
+[PlyCount "10"]
+[EventDate "2013.04.23"]
+
+{Try to solve the study of Troitzky. White to move and make a draw} 1. Bg2 Kg4
+2. Bf1 Nxc3+ 3. Kc4 d2 4. Kxc3 d1=Q 5. Be2+ Qxe2 *
