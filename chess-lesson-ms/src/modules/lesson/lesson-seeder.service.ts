@@ -34,6 +34,17 @@ export class LessonSeederService {
         );
       }
 
+      // validate level name to avoid duplicate insertion of PGN lessons
+      const existLessonsByThatLevel = await this.lessonRepository.findOne({
+        where: { level: levelName },
+        relations: { lessonParent: true },
+      });
+      if (levelName !== LessonLevel.LEVEL_1 && existLessonsByThatLevel) {
+        throw new BadRequestException(
+          `Already was inserted lessons with Level: ${levelName} and appears with Lesson Parent name: ${existLessonsByThatLevel.lessonParent.name}`,
+        );
+      }
+
       const result = lessonParent.showHint
         ? await this.insertHintLessons(insertLessonDto, lessonParent)
         : await this.insertNormalLessons(insertLessonDto, lessonParent);
@@ -152,6 +163,33 @@ export class LessonSeederService {
         break;
       case LessonParentName.LEVEL_3:
         filename = LessonFilename.LEVEL_3;
+        break;
+      case LessonParentName.LEVEL_4:
+        filename = LessonFilename.LEVEL_4;
+        break;
+      case LessonParentName.LEVEL_5:
+        filename = LessonFilename.LEVEL_5;
+        break;
+      case LessonParentName.LEVEL_6:
+        filename = LessonFilename.LEVEL_6;
+        break;
+      case LessonParentName.LEVEL_7:
+        filename = LessonFilename.LEVEL_7;
+        break;
+      case LessonParentName.LEVEL_8:
+        filename = LessonFilename.LEVEL_8;
+        break;
+      case LessonParentName.LEVEL_9:
+        filename = LessonFilename.LEVEL_9;
+        break;
+      case LessonParentName.LEVEL_10:
+        filename = LessonFilename.LEVEL_10;
+        break;
+      case LessonParentName.LEVEL_11:
+        filename = LessonFilename.LEVEL_11;
+        break;
+      case LessonParentName.LEVEL_12:
+        filename = LessonFilename.LEVEL_12;
         break;
 
       default:

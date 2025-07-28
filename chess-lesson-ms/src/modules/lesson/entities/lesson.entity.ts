@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 import { LessonCompleted } from './lesson-completed.entity';
 import { LessonParent } from './lesson-parent.entity';
-import { LessonLevel, LessonStoryName } from 'src/enum';
+import { LessonLevel, LessonStoryName, LessonTimer } from 'src/enum';
 
 @Entity('lesson')
 export class Lesson {
@@ -19,6 +19,13 @@ export class Lesson {
 
   @Column({ length: 32, nullable: false, default: LessonStoryName.EDUCATION })
   story: string; // complexity of lessons and to differentiate them
+
+  @Column({
+    type: 'int',
+    nullable: false,
+    default: LessonTimer.STORY_EDUCATION,
+  })
+  timer: number; // time countdown player has to solve it
 
   @Column({ type: 'text', nullable: false })
   description: string;

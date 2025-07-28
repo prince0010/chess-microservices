@@ -3,7 +3,7 @@ import { Lesson } from './lesson.entity';
 import { LessonPlayed } from './lesson-played.entity';
 import { LessonParentEnabled } from './lesson-parent-enabled.entity';
 import { LessonParentTestRecord } from './lesson-parent-test-record.entity';
-import { LessonStoryName } from 'src/enum';
+import { LessonStoryName, LessonTimer } from 'src/enum';
 
 @Entity('lesson_parent')
 export class LessonParent {
@@ -12,6 +12,13 @@ export class LessonParent {
 
   @Column({ length: 16, nullable: false })
   level: string; // LEVEL_1, LEVEL_2, etc.
+
+  @Column({
+    type: 'int',
+    nullable: false,
+    default: LessonTimer.STORY_EDUCATION,
+  })
+  timer: number; // time countdown player has to solve every lesson child as puzzle
 
   @Column({ length: 128, nullable: false })
   name: string; // Pawn, King, Queen, Custom, etc.

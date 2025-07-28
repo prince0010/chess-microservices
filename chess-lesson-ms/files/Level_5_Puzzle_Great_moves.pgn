@@ -1,0 +1,3618 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1n2r1k1/r3bppp/pN1p4/q1p5/3pBQ2/6P1/P3PP1P/1RR3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Nc8 Rxc8 2. Qf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r4k1/pp1nrpb1/2pNb1pp/4p3/P3Pq2/2P2N1P/1PB2PP1/R2QR1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Nf5 gxf5 2. g3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/4K1pp/8/4N3/3pN3/p1R5/P6r/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Nf6+ gxf6 2. Rg3+ Kh8 3. Nf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p4k2/Pb3p2/4p3/4b1N1/5qPQ/2r2B1P/5RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.01"]
+[SourceDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Nxe5+ fxe5 2. Bxb6 Rg2+ 3. Qxg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R1R2rk1/6p1/5r1p/4p1N1/3n4/7P/5PP1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Nh7 Rxc8 2. Nxf6+ gxf6 3. Rxc8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1nrk1/3bbppp/p2pp3/qp6/4PP2/2N1BB2/PPPQ2PP/3R1R1K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.01"]
+[SourceDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Nd5 Qd8 2. Bb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1rbr4/pq3pkp/2p2np1/2Pp2Q1/P2P4/6N1/5PPP/R3RBK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Nh5+ Nxh5 2. Qxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k2r2r1/p2n4/Q3R3/2p2p1b/5B2/1N3q2/PPB5/2K5 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Be4+ fxe4 2. Qc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rq1r1k/p3bp1p/1pn1bp2/2p1p2Q/7B/P1NP2P1/1P2PPBP/2R2RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.01"]
+[SourceDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Bxf6+ Bxf6 2. Be4 Rg8 3. Qxh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/5ppp/2P5/7b/P1Q5/2b1Pq2/3B1P1P/1R2KR2 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Qd3 Rxd3 2. Rb8+ Rd8 3. Rxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2br1rk1/1p2bpp1/p1p2n1p/q3Np2/PnBPP3/2N3B1/1P2Q1PP/R4RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.01"]
+[SourceDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Bxf7+ Rxf7 2. Nc4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1k/7p/4b2q/p2p3B/P2Pp3/6Q1/5P1P/6RK w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.01"]
+[SourceDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Bf7 Bxf7 2. Qe5+ Qf6 3. Qxf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rrk1/1pp4p/p1nbb3/4pNp1/1P2P3/P1B3Pq/2Q1BP1P/R4RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.01"]
+[SourceDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Bg4 Qxg4 2. Nh6+ Kh8 3. Nxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r4R/p2knrR1/1p1p4/2p1p1p1/2P1B3/2PP1P2/P5K1/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.01"]
+[SourceDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Bc6+ Kxc6 2. Rxc8+ Nxc8 3. Rxf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4bkr/pppq2pp/2n1R3/6N1/2pp2P1/5Q2/PP3P1P/R1B3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.01"]
+[SourceDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Re7 Qxe7 2. Qd5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3b3/pNR5/k7/3p1n2/P2p1B2/2P1p3/2P3r1/1R1K4 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rc6+ Bxc6 2. Nc5+ Ka5 3. Bc7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3b1rkn/p4qpp/1p6/3Np3/P2pP3/1Q3N2/1P3PPP/2R3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rc7 Bxc7 2. Ne7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/5ppq/7p/4R3/8/4Q2P/2r2PPK/3R4 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rd8 Rc8 2. Rxc8 Rxc8 3. Re8+ Rxe8 4.
+Qxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1k/p1p1npp1/1pq4p/4Bb2/2P5/1P3PP1/P2R1NKP/2Q5 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rd6 cxd6 2. Qxh6+ Kg8 3. Qxg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r2k/4qp1p/2p2npP/pp1p4/3P1Q2/PP3P2/2P3P1/3R1N1K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Re1 Qd8 2. Qxf6+ Qxf6 3. Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7r/5bp1/p4p2/2k2n1p/PNp2B2/2P5/1P5P/3R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rd6 Nxd6 2. Be3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1rr3k1/pp3pp1/1n1b2p1/2pBp1P1/2P3P1/P2PB2R/5PK1/R7 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rh8+ Kxh8 2. Bxf7 Rf8 3. Rh1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3rr1k1/ppp2ppq/4n2Q/7p/2P4P/1P4R1/PB4P1/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rxe6 Qxh6 2. Rxh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4r1k/5pp1/2R4p/4P3/1q2NP2/p3b3/2Q3PP/3R3K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rxh6+ gxh6 2. Nf6 Kg7 3. Qh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/pR1r3p/1n1rp1p1/8/8/6PB/P4P1P/1R4K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. R1xb6 axb6 2. Rxd7 Rxd7 3. Bxe6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1k/1b3B1p/1p1r4/2p3Q1/p2nq3/8/1P3RPP/2N2R1K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.01"]
+
+{Try to find the winning combination!} 1. Bd5 Rxf2 2. Qg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k2r3/1pb2Q1p/4q1p1/1pP5/7P/5B2/5PK1/3R4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rd8+ Bxd8 2. Qxb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r7/2p1r1bk/3p2pp/PP3p2/2Q5/2q2PP1/R3PNK1/7R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rxh6+ Kxh6 2. Qh4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r4k/3r1p1p/1p2pP2/p2pP2P/P2P1QR1/6P1/4B2K/2q5 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rg8+ Kxg8 2. Qg4+ Kf8 3. Qg7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r4k1/1q3p1p/1bQ3p1/p3pN2/2p1P3/P4P2/1P4PP/K2R4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rd8+ Bxd8 2. Qe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b5/pp2kp2/2p2p1P/4nP2/4N3/7P/PP4B1/2KR4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rd8 Kxd8 2. h7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4r2/1bqn1pkp/pp4p1/4p1Nn/P3P2Q/2NB4/1PP3PP/R4RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rxf7+ Rxf7 2. Ne6+ Kg8 3. Nxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4b1k1/5Rp1/4P1P1/r4B2/8/8/2K5/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. e7 Bxf7 2. Be6 Ra8 3. gxf7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r4k1/6pp/r1pn1p2/p1b1pq2/Q1P5/P1B1PN1P/5PP1/2RR2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rxd6 Bxd6 2. c5 Bxc5 3. Qc4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2b2rk1/1p1q2pp/8/p1R2pQN/P4P2/7P/6PK/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Rxc8 Rxc8 2. Nf6+ Kh8 3. Nxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r1k1/ppp2p2/2b1nPpQ/5q1p/3pN2P/3P4/PPP2PP1/4RBK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.02"]
+
+{Try to find the winning combination!} 1. Nd6 cxd6 2. Rxe6 Rxe6 3. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/pbq2pp1/1p1b4/4B2p/7P/2PBQ2R/PP3PP1/R3K3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.02"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qh6 gxh6 2. Rg3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rk2/p4pRp/2p2B2/3b4/1b1p4/3P3P/1PQ2PP1/q4NK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qc5+ Bxc5 2. Rxh7 Re1 3. Rh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3B2k1/pb3p1p/1p4p1/8/8/P1Q2PqP/1P2r1P1/3R2K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qh8+ Kxh8 2. Bf6+ Kg8 3. Rd8+ Re8 4.
+Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2b1r1nr/3q1p1k/pb1p2np/1p1PpN1N/2p1P3/2P5/PPBQ1PPK/R3R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qxh6+ Nxh6 2. Nf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4bk1r/4bp2/4pn1p/2p5/2Pp4/5N2/q1B1QPPP/2B2RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Bh7 Qxe2 2. Bxh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1k/3rbppp/p2p1n2/1p2q3/3QPN2/1B5R/PPP3PP/5R1K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Bxf7 Rxf7 2. Ng6+ Kg8 3. Nxe5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1n1k/p2P3p/1p3q2/2pQp3/2P3B1/1P4R1/P1b4P/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qg8+ Kxg8 2. Be6+ Kh8 3. Rg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2Rr2k1/2R4p/q2r2p1/3p4/3Pp1Q1/1p2P2P/1P3P2/1K6 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qe6+ Rxe6 2. Rxd8+ Re8 3. Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/5ppp/pB6/3br3/8/1P3QPq/P4P1P/2R3K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. g4 Re1+ 2. Rxe1 Qxf3 3. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/kpp1q1r1/7R/p3r2R/3p2p1/P2P4/1P1Q1PP1/1K6 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qxa5+ Rxa5 2. Rxa5+ Kb8 3. Rh8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r5k/1q3pp1/3b1N1p/4N3/3pP1Q1/3P2P1/5PKP/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qg6 fxg6 2. Nxg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q1b1r/1p1bk1p1/3p1pB1/1p1Pp2p/r3Q2P/2P1B3/PP3PP1/R3K3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qxe5+ dxe5 2. Bc5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr1b1r/pp1nqpp1/2p1bn1p/3p4/3P4/2N2N1P/PPP1QPPB/1K1R1B1R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Qa6 bxa6 2. Bxa6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/1ppP2pp/8/1q6/p7/8/P2Q1PP1/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.06"]
+[SourceDate "2013.03.06"]
+
+{Try to find the winning combination!} 1. Re8+ Rxe8 2. Qd5+ Qxd5 3. dxe8=Q# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r4k1/p4ppp/5q2/2R5/8/r3P1P1/3Q1PKP/3R4 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Qb4 Rb3 2. Qxb3 Rxb3 3. Rc8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q2k1/Rr3p1p/1p1n2pP/2p1p3/4P3/2P1BQ2/1P2KPP1/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.07"]
+[SourceDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Qf6 Qxf6 2. Ra8+ Ne8 3. Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2rk1/ppq2ppp/3b1n2/5N2/2B1p3/1P3Q2/PBP2PPP/R4R1K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.07"]
+[SourceDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Nh6+ Kh8 2. Qxf6 gxf6 3. Bxf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3qb1r/2pnpkpp/p1Q1bp2/2p1p3/4P3/2P2N2/PP2BPPP/2BRK2R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.07"]
+[SourceDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Qxe6+ Kxe6 2. Bc4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/4rqp1/2p4p/3b1p2/3B3P/2P2PQ1/6PK/4R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.07"]
+[SourceDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Qxg7+ Qxg7 2. Rxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/2b3pp/p2q4/8/2QB4/7P/P5P1/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.07"]
+[SourceDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Bc5 Bb6 2. Qf4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r3k/pp4q1/5p1p/3np3/3pQ3/3B2P1/PP3P2/2R3K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Qxd5 Rxd5 2. Rc8+ Qg8 3. Rxg8+ Kxg8
+4. Bc4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/pp3p1p/2b1pp1Q/8/4q3/3B4/PP3PPP/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.07"]
+[SourceDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Qxh7+ Qxh7 2. Bxh7+ Kxh7 3. Rxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rr4k1/R1Q2ppp/4pq2/8/8/8/5PPP/5RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.07"]
+[SourceDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Qb7 Qd8 2. Qxf7+ Kh8 3. Qxg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r1k1/p4n1p/1pq3pB/2p5/P2pR2Q/1P1P4/2P4P/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.07"]
+[SourceDate "2013.03.07"]
+
+{Try to find the winning combination!} 1. Qf6 Qxf6 2. Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3r1k1/1bqn1ppp/p2pp3/1pb3P1/3QPP1P/1PN5/PBP3B1/R4R1K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.08"]
+
+{Try to find the winning combination!} 1. Qxg7+ Kxg7 2. Nxb5+ Kg8 3. Nxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rr4/1p1R3p/5p1k/b1B2p2/p4P2/P7/1P5P/1K4R1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Bf8+ Rxf8 2. Rd3 Rg8 3. Rh3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4R3/8/pp6/k1r5/P3p3/K3PbB1/5P2/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.10"]
+[SourceDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Re5 Rxe5 2. Bxe5 b5 3. Bc7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5R2/6pp/p6k/Pp5P/2p2PP1/B1P2q2/4n2K/3R4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Rf6+ gxf6 2. Bf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r4/2b5/2p4p/1pn2k2/p1Bp1pNP/P4P2/1PP3P1/1K2R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.10"]
+[SourceDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Re6 Nxe6 2. Bd3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rk2/p3ppr1/1pQ5/1P6/P6p/8/1q3PP1/3RR2K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Rxe7 Rxe7 2. Rd8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7p/2p1r3/Qqkrp3/4R1P1/7P/1P1p4/4RK2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.10"]
+[SourceDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Rc4+ Kxc4 2. Qc3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3q2k/pp3p1p/2p2P2/3p2n1/3P2Q1/2P4R/PP4PP/6K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Rxh7+ Kxh7 2. Qh5+ Kg8 3. Qxg5+ Kh7
+4. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r6/5RR1/7p/3pr1p1/2p3k1/1p1P2P1/2P3K1/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.10"]
+[SourceDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Rf4+ Kh5 2. Rh4+ gxh4 3. g4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/pp3ppp/4p3/3p4/1P1R1P2/4P2P/PqrQ2PK/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Rc4 Rxc4 2. Qxb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5Q2/1p3ppk/2p3bp/3r4/1P1r3P/2q5/3BPP2/3RK1R1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.10"]
+[SourceDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Qxg7+ Kxg7 2. Bxc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/p4qrp/1p6/2p5/P5R1/1Q5P/6P1/4R2K w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Re7 Qxb3 2. Rgxg7+ Kh8 3. Rxh7+ Kg8
+4. Reg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r1k1/p2r2pp/1p2q3/2p5/P1Q1N3/8/2P2PPP/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.10"]
+[SourceDate "2013.03.10"]
+
+{Try to find the winning combination!} 1. Ng5 Qxc4 2. Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6rk/7p/pp1q1p1Q/2p2p2/8/1P3b2/P1P3RP/4R2K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.10"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Qg7+ Rxg7 2. Re8+ Rg8 3. Rexg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k4r/ppp3p1/5p2/1P6/r3P3/4K3/3R2B1/3R4 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Rd8+ Rxd8 2. Bh3+ Kb8 3. Rxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1b1kr/p3Qppp/1p6/6N1/3p4/P3P3/1q3PPP/R1R3K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Qxf7+ Bxf7 2. Rxc8+ Be8 3. Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bqr1k1/ppp2ppp/8/2n1p1PQ/3nP3/2B5/PPP2PBP/3RK1NR w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Bxd4 exd4 2. g6 hxg6 3. Qxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k1r/p2bpp2/3p4/2q2PN1/1p1p4/3P1B2/PPP3Qn/6RK w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Nh7+ Ke8 2. Qg8+ Rxg8 3. Rxg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q1k2/p2rRp2/1p4p1/2p1Q2p/3p4/3P3P/PPP2PP1/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Qf6 Rxe7 2. Qh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "q5rk/4pRrp/3p2B1/2n4Q/2P5/7P/6p1/5RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Qxh7+ Rxh7 2. Rxh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2q5/pR6/1p3pnk/1P4pp/8/5QPP/P2r2BK/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Qxh5+ Kxh5 2. Rh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1k/pp4p1/2b4p/8/6q1/P1QP4/1P4RP/4R2K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Qxc6 bxc6 2. Rxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1q1k/6b1/pr3p1p/1ppBpQpP/4P1P1/2P5/PP1R1PK1/3R4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Bg8 Rxd2 2. Qh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r1k1/p6p/2p5/2r3p1/1PP1p1P1/4Rp2/P4PbK/4R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Rxe4 Rxe4 2. Rxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/5Kbk/6Np/7P/8/8/p3r3/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Rh8+ Bxh8 2. Nf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r3r2/kppq2pp/4p3/P1bpP3/8/2P2N1P/1Q3PP1/RR4K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Qb6+ Ka8 2. Qxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/pp2rRbp/1np1q1p1/3pN3/3P4/2P3QP/PP4PB/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Nxg6+ hxg6 2. Qh4+ Kg8 3. Rxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3b4/5p2/1p1k2p1/rP5p/7P/4B1P1/5PK1/1R6 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Rd1+ Kc7 2. Rxd8 Kxd8 3. Bxb6+ Kd7 4.
+Bxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/P2P3p/3R2p1/5p2/8/6PP/r7/5K2 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Rf6 Rxa7 2. Rf8+ Kxd7 3. Rf7+ Ke6 4.
+Rxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4b3/5k1p/BK3p2/8/rp3P2/4R1P1/8/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.12"]
+[SourceDate "2013.03.12"]
+
+{Try to find the winning combination!} 1. Bc4+ Kf8 2. Rxe8+ Kxe8 3. Bb5+ Ke7 4.
+Bxa4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k4r1/1pp2pQp/pb3n2/4q3/4N3/P3P3/5PBP/5RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Nxf6 Rxg7 2. Nd7+ Ka7 3. Nxe5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/1pp5/p3Pq2/6r1/1PN3Q1/PKP5/8/8 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. e7+ Rxg4 2. e8=Q+ Qd8 3. Qe6+ Qd7 4.
+Qxd7+ Kxd7 5. Ne5+ Ke6 6. Nxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/pp3p1p/5np1/2q5/4p3/4P1N1/PP1Q1PPP/6K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Qd8+ Kg7 2. Qxf6+ Kxf6 3. Nxe4+ Ke5
+4. Nxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2Q4p/3nkp2/1p6/3Pq3/8/4N1PP/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. d5+ Ke5 2. Qe7+ Kxd5 3. Nc3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2rk1/1p2qpbp/2p3p1/2n1p3/1pP1Pn2/P1N1BN1P/2Q2PP1/R3RBK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Bxc5 Qxc5 2. axb4 Qxb4 3. Rxa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rn1qk2r/p3ppb1/1p4pp/2pb4/4N1Q1/3P2P1/PPP2PBP/R1B2RK1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Nd6+ Qxd6 2. Qc8+ Qd8 3. Qxd8+ Kxd8
+4. Bxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/1p3pp1/1b6/pN1p2p1/P2P4/1P5P/2rq1PP1/1Q2R2K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Re8+ Kh7 2. Rc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4r1k/p1b1q1pp/1p3n2/2p1N1Q1/2B1p3/P3P3/1P3PPP/R4RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Ng6+ hxg6 2. Qh4+ Nh7 3. Qxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r5/1r6/4pNpk/3pP1qp/8/2P1Q1P1/5PK1/R7 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Ng4+ hxg4 2. Rh1+ Kg7 3. Qxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r5/pp1bkp1p/3q1p2/3Pp3/7Q/1B6/P1P3PP/1K3R2 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Rxf6 Qxf6 2. d6+ Kxd6 3. Qxf6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r3k1/1p4pp/p1q2p2/4p3/2r5/1Q2P3/P4PPP/1RR3K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Rxc4 Qxc4 2. Rc1 Qxb3 3. Rxc8+ Kf7 4.
+axb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/pb3ppp/1p6/3Pn3/1Pq1N1Q1/P1B3P1/7P/2R3K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Qxg7+ Kxg7 2. Bxe5+ Kg6 3. Rxc4 Bxd5
+4. Rd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2Rr2k1/p4p1p/1p3qp1/8/1r6/4P1P1/1PQ2P1P/5RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Qc3 Qxc3 2. Rxd8+ Kg7 3. bxc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rn1qk1nr/pbp1b1pp/1p1pp3/3PNp2/8/6P1/PPP1PPBP/RNBQK2R w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Nf7 Kxf7 2. dxe6+ Kxe6 3. Bxb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/p2n1pbp/b2p1np1/qppP4/P7/2N3P1/1P1NPPBP/R1BQ1RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. axb5 Qxa1 2. Nb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3R1bk1/2p2ppp/1p2r3/p7/4r1P1/1qBQP2P/1P3P2/2K4R w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Rxf8+ Kxf8 2. Bxg7+ Kxg7 3. Qxb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/n1k2p2/pp4pp/7P/P2N2P1/4P3/6K1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. g5 hxg5 2. h6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r4/3qQbk1/p2P1p1p/2B2Pp1/6P1/7P/6K1/R7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Qxf6+ Kxf6 2. Bd4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/p3n3/1p2PP1r/2p3R1/3p4/P7/KPP5/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Rh5 Rxh5 2. fxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/1R3P2/2p5/1p6/r3PP2/5K2/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.13"]
+[SourceDate "2013.03.13"]
+
+{Try to find the winning combination!} 1. Rb8 Kxb8 2. f7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/p7/n1PK2kp/3N3p/8/6P1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Nb3 Nxb3 2. c6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/5p2/4P3/r2B4/p1KB3p/5P2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Bg7+ Kxg7 2. e7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/pp3p2/5p2/5p1P/1P1bk3/P5B1/2K5/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Bf4 Kxf4 2. h6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7N/p1n1k1pP/1p3p2/1Pp2P2/P1K5/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Ng5+ Kf6 2. Ne6 Kxe6 3. h7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/p3PRpk/1p5p/4b3/P7/1B4P1/3p2PK/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Bc2+ Kg8 2. Rf8+ Rxf8 3. Bb3+ Kh7 4.
+exf8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/p1P2pp1/pr2b3/Q7/2pN3P/4P3/P4q2/K1R5 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Qxb6 axb6 2. Nxe6 Qf6+ 3. Nd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5P2/4K1kP/4R3/8/8/8/5r2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Rg5+ Kxg5 2. h7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/3n4/3pN3/p1pPp3/Q1P1Pp2/PRb2P2/1P2q2r/1K6 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Rb8+ Nxb8 2. Qe8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r1k1/p4pbp/2p3p1/5b2/P1qp4/3P2P1/5PBP/1Q2NRK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. g4 Qxa4 2. gxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r3k1/1q1r1p1p/4pbp1/2R5/8/2P1BP2/RP2Q1KP/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Ra7 Rxc5 2. Rxb7 Rxb7 3. Bxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r4k1/1R3pp1/4p3/p3q2p/2Q5/4P1P1/5PKP/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Qd4 Qxd4 2. Rxb8+ Kh7 3. exd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/ppq1rpbp/4n1p1/4p3/8/Q1P1BN1P/PP3PP1/3RR1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Bb6 Qxb6 2. Qxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2r3k/1pp3pp/p6n/Pq6/1R3p2/P7/5PPP/B2Q1R1K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Bxg7+ Kxg7 2. Qa1+ Kg8 3. Rxb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k1r1br1/pp6/8/3q1p2/7p/4P3/1B3PPP/2RQ1RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Be5+ Bd6 2. Qxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/pq3pp1/np2p2p/8/4b3/P1R2NP1/1PQ1PPBP/2R3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Ng5 hxg5 2. Bxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k1r4/ppn3p1/1qpN3p/4P3/8/3Q4/PP4PP/3R3K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Nc4 Rxd3 2. Rxd3 Qc5 3. Rd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r3k/3r1R1p/8/1p5N/1R1n2P1/7P/7K/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Rxd4 Rxd4 2. Nf6 Rd2+ 3. Kg3 R8d3+ 4.
+Kh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k1r4/1p4pp/pP1q1p2/8/4PQ2/8/5PPP/2R3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Rd1 Qxf4 2. Rxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k2r4/1b6/pp6/4Q2p/P2qpB1P/1P3p2/5P1K/2R5 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Rc8+ Ka7 2. Qb8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r2k/pp4pp/3B4/2P3q1/1PQp1Rn1/P7/6PP/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Qe6 Qxf4 2. Qxe8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4q2k/2p3p1/Q2p1pPp/8/4P3/8/P1r3PP/1R4K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.14"]
+
+{Try to find the winning combination!} 1. Qa4 Qxa4 2. Rb8+ Qe8 3. Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1R2b1p1/5k1p/2pB3P/2P1K1P1/r7/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.20"]
+
+{Try to find the winning combination!} 1. g4+ hxg4 2. Rb5+ Bd5 3. Rxd5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr3r/pp1nbpQp/2p5/8/2P1pB2/2N5/PqP3PP/R4R1K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.20"]
+
+{Try to find the winning combination!} 1. Nb5 Qxg7 2. Nxa7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p3pk2/1p2p3/2p1P1Q1/8/P2r1qPP/8/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.20"]
+
+{Try to find the winning combination!} 1. Rf1 Rd1 2. Qh5+ Kg7 3. Qxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r3r/pR3pp1/3kp2p/2q5/P4PP1/Q3nB1P/8/5RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.20"]
+
+{Try to find the winning combination!} 1. Rc1 Qxa3 2. Rc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1b6/6Rp/4pk2/1R1p1p1r/1P1P3q/2P2P2/2B1nP1P/6QK w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.20"]
+
+{Try to find the winning combination!} 1. Rf7+ Kxf7 2. Rb7+ Kf6 3. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnb1kb1r/pp2nppp/3p4/2qNp3/4P3/5N2/PPP2PPP/R1BQKB1R w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.14"]
+[SourceDate "2013.03.20"]
+
+{Try to find the winning combination!} 1. b4 Qc6 2. Bb5 Qxb5 3. Nc7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1Rn1k/1p1q2pp/p2p4/5p2/8/1B4P1/P1P1QP1P/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.24"]
+
+{Try to find the winning combination!} 1. Qc4 Rxe8 2. Qg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/ppp2qpp/1b2N3/3Q1p2/3p4/8/PPP2PPP/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.24"]
+
+{Try to find the winning combination!} 1. Nd8 Qxd5 2. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r2k/ppp1r1pp/1b6/3q1P2/3PB2R/P3Q3/1PP1K3/R7 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.24"]
+
+{Try to find the winning combination!} 1. Rxh7+ Kxh7 2. Rh1+ Kg8 3. Bxd5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/1p3ppp/8/1q1pr3/r3n1Q1/P7/1P3PPP/3RR1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.24"]
+[SourceDate "2013.03.24"]
+
+{Try to find the winning combination!} 1. Rxd5 Qxd5 2. Qc8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/5ppp/p7/1p1rqQ2/8/1P6/P5PP/2R2R1K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.24"]
+[SourceDate "2013.03.24"]
+
+{Try to find the winning combination!} 1. Qxf7+ Rxf7 2. Rc8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k1r5/p2R4/N1P5/4p2p/6pP/KP6/4r3/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.24"]
+[SourceDate "2013.03.24"]
+
+{Try to find the winning combination!} 1. Rb7 Rc2 2. Rb8+ Rxb8 3. Nc7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6rk/7p/3Q1p2/p3p1q1/4P3/1BP4p/1P2bP2/5nRK w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.24"]
+[SourceDate "2013.03.24"]
+
+{Try to find the winning combination!} 1. Qxf6+ Qxf6 2. Rxg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4qk1/1b3p2/p4Pp1/1pp1B1Q1/3n4/7R/PP2r1PP/5RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.24"]
+[SourceDate "2013.03.24"]
+
+{Try to find the winning combination!} 1. Qxg6+ fxg6 2. f7+ Qxf7 3. Rh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k4rr/ppp2p2/2b5/2Np1q2/3P4/P5Qp/1P4PB/2R3K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Na6+ bxa6 2. Qxc7+ Ka8 3. Qxc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1nkr4/1pp2p1R/1P3P2/2b5/3q4/8/1P2Q3/R1B2K2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Qe6+ Rd7 2. Rh8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4qrk1/5ppp/5Bb1/4nNQ1/8/8/6PP/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Qh6 gxh6 2. Nxh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1k/5rpp/8/4q3/4P1Q1/2p4R/7P/6RK w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Qg6 h6 2. Rxh6+ gxh6 3. Qxh6+ Rh7 4.
+Qxf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1rnk/pp1n3p/1qp2pp1/5NQ1/4P3/1B1R4/PP3PPP/5RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Qxg6 hxg6 2. Rh3+ Nh6 3. Rxh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/pp1q2b1/2p4p/PP1pp3/2Pn2Q1/3P2nN/5PBP/1RB2RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Bxd5+ cxd5 2. Qxd7 Nde2+ 3. Kg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r3k/R4p1p/1Q2bqpP/2p5/8/3p1N2/5PPK/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Rxf7 Qxf7 2. Qxd8+ Qg8 3. Qf6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r2/2p4k/1r1p3p/p1q1p3/6R1/3P1p2/BPP2P2/2K3R1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Rg7+ Kh8 2. Bg8 Rxg8 3. Rxg8+ Kh7 4.
+R1g7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnbqkb1r/p1pnpppp/8/1NpP4/B7/8/PPPPQPPP/R1B1K2R w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. d6 Na6 2. dxc7 Nxc7 3. Nd6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4kr2/1pp3pp/1p1bP3/3Np1B1/8/P7/2K1B2P/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.26"]
+[SourceDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Nxc7+ Bxc7 2. Bb5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4B3/8/6p1/R7/P3Pn1p/3r3k/5P2/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Rd5 Nxd5 2. Bd7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6R1/5p1p/5bpk/8/3n1PQ1/1pq1B1PK/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.26"]
+
+{Try to find the winning combination!} 1. Qg5+ Bxg5 2. fxg5+ Kh5 3. g4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5B2/5Rbp/4p2k/6rP/2p3P1/3b2K1/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.27"]
+
+{Try to find the winning combination!} 1. Rxg7 Rxg7 2. Kh4 Bf5 3. g5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1kb1r/pp1n1pp1/2p1p2p/6B1/2PPQ3/3B1N2/Pq3PPP/R3K2R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.03.27"]
+
+{Try to find the winning combination!} 1. Qxe6+ fxe6 2. Bg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4Np2/7p/4b1pk/4P2P/1r1p1PP1/3R1K2/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.03.27"]
+[SourceDate "2013.03.27"]
+
+{Try to find the winning combination!} 1. g4+ Kxh4 2. Kg2 h5 3. Nf5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/bp3ppp/p7/3N4/1P6/P4bPq/1B1Q1P1P/R4RK1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.03.27"]
+[SourceDate "2013.03.27"]
+
+{Try to find the winning combination!} 1. Ne7+ Kh8 2. Bxg7+ Kxg7 3. Qg5+ Kh8 4.
+Qf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr1b1r/ppp2ppp/1n6/n3p3/8/P1NqPB2/1PQ2PPP/R1B2RK1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.02"]
+
+{Try to find the winning combination!} 1. Bg4+ Kb8 2. Rd1 Qxc2 3. Rxd8+ Nc8 4.
+Rxc8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2r2k1/pp3pbp/6p1/3q1p2/3P4/1Q3N2/PP3PPP/R3R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.02"]
+[SourceDate "2013.04.02"]
+
+{Try to find the winning combination!} 1. Re8+ Bf8 2. Qxd5 Rxd5 3. Rxa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/2p1q2p/3p2pP/8/4bQ2/1BP5/1P4P1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.02"]
+[SourceDate "2013.04.02"]
+
+{Try to find the winning combination!} 1. Be6 Qxe6 2. Qf8+ Qg8 3. Qf6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/pp3pp1/1b4p1/8/1P6/P2p1qP1/1B1QrP1P/2R3K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.02"]
+[SourceDate "2013.04.03"]
+
+{Try to find the winning combination!} 1. Rc8+ Kh7 2. Rh8+ Kxh8 3. Qh6+ Kg8 4.
+Qxg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/pppn1pp1/3pb3/4pNq1/4P1n1/2P2Q2/PPP2PP1/R3KB1R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.02"]
+[SourceDate "2013.04.03"]
+
+{Try to find the winning combination!} 1. Qxg4 Qxg4 2. Ne7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r6k/ppb1r1pp/2p1Bp2/2q1p3/4P3/2PP1PR1/P2QKP1P/6R1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.03"]
+
+{Try to find the winning combination!} 1. Qh6 gxh6 2. Rg8+ Rxg8 3. Rxg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/pp4np/2p3p1/3pN1q1/3P4/Q7/1r3rPP/2R2RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+
+{Try to find the winning combination!} 1. Qf8+ Rxf8 2. Rxf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1k/pp5p/2p2n2/5N2/4qP2/2Q5/1PP4K/3R4 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+
+{Try to find the winning combination!} 1. Qxf6+ Rxf6 2. Rd8+ Rf8 3. Rxf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2rk1/p1p1Qppp/2p5/8/8/1P2B1P1/P1P2K1P/qN2R3 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+
+{Try to find the winning combination!} 1. Qxf8+ Kxf8 2. Bc5+ Kg8 3. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bq2k1/2p2p1p/p1pp2pB/2n4r/8/2N2Q2/PPP2PPP/4RRK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qf6 Qxf6 2. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2r2k1/2q2ppp/8/pp1RP3/8/1pP1Q3/1P3PPP/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{\/Try to find the winning combination} 1. Qa7 Qxa7 2. Rxd8+ Rxd8 3. Rxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1kb1r/ppp2ppp/2n2n2/6B1/Q3q3/8/PPP2PPP/2KR1BNR w kq - 0 9"]
+[PlyCount "3"]
+[EventDate "2013.04.03"]
+[SourceDate "2013.04.10"]
+
+{Try to find the winning combination} 9. Rd8+ Kxd8 10. Qxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/3q1ppp/4p3/3N3Q/3B4/6P1/5PK1/8 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to find the winning combination} 1. Nf6+ gxf6 2. Qg4+ Kh8 3. Bxf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4qrk1/3p2p1/5b1p/3P1BN1/4Q3/6P1/5PK1/8 w - - 0 1"]
+[PlyCount "3"]
+
+{Try to find the winning combination} 1. Be6+ dxe6 2. Qh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3qr1rk/4bQ1p/7P/4N3/8/6P1/5PK1/8 w - - 0 1"]
+[PlyCount "3"]
+
+{Try to find the winning combination} 1. Qf6+ Bxf6 2. Nf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5qk1/5rp1/4RbQp/8/4N3/6P1/5PK1/8 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to find the winning combination} 1. Re8 Qxe8 2. Nxf6+ Rxf6 3. Qxe8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5q2/4k3/3p4/4pbp1/1B6/3P1P2/3K2P1/1Q6 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to find the winning combination} 1. Bxd6+ Kxd6 2. Qb4+ Ke6 3. Qxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6Q1/4p2p/5q1k/5PR1/6PK/2r1r2P/8 w - - 0 1"]
+[PlyCount "3"]
+
+{\/Try to find the winning combination} 1. Qg6+ Qxg6 2. Rh4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rk2/3qn1pp/6b1/3BQ1B1/8/6P1/5PK1/8 w - - 0 1"]
+[PlyCount "3"]
+
+{\/Try to find the winning combination} 1. Qf6+ gxf6 2. Bh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q1rk1/5p1p/5p2/3r1Nn1/3B1Q2/6P1/5PK1/8 w - - 0 1"]
+[PlyCount "3"]
+
+{Try to find the winning combination} 1. Qxg5+ fxg5 2. Nh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k1r4/1pp1q1p1/5p2/4b3/1N4Q1/6P1/5P1P/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to find the winning combination} 1. Nc6+ bxc6 2. Rb1+ Ka7 3. Qa4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q3k/3b1Q1p/5bp1/3B4/3nR3/6P1/5PK1/8 w - - 0 1"]
+[PlyCount "3"]
+
+{Try to find the winning combination} 1. Re8+ Qxe8 2. Qxf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rr4k1/1q3ppp/1bQRp3/8/4N3/5PP1/4RPK1/8 w - - 0 1"]
+[PlyCount "3"]
+
+{Try to find the winning combination} 1. Rd8+ Bxd8 2. Qe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4R3/6rk/3p2r1/p2q3p/P2B4/2P4P/1P1Q2P1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rh8+ Kxh8 2. Bxg7+ Rxg7 3. Qxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3rk2/2p1qp2/1p1n2p1/p6p/3N1P2/1P2P3/P5PP/Q2R1RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Nf5 Nxf5 2. Qh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1k3/ppP1r1pp/3R4/5R2/8/6P1/P4PP1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rd8+ Rxd8 2. Rf8+ Kxf8 3. cxd8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2Q5/1p3p1k/p2prPq1/8/7p/8/PP3RP1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qxe6 fxe6 2. f7 Qg7 3. f8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3kbnr/2p2ppp/p1q5/1p2p3/4P3/1P1Q4/1PP2PPP/RNBR2K1 w kq - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rxa6 Qxa6 2. Qd7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2q1rk1/ppp2ppp/3p4/3N4/3PQ3/4R3/PPP2PPP/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Ne7+ Kh8 2. Qxh7+ Kxh7 3. Rh3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r4k1/3r1ppp/1qp2b2/p7/2Q5/P1N2R1P/1P3PP1/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rxf6 gxf6 2. Qg4+ Kh8 3. Qxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N1k2/p5pp/1p1r4/2p3n1/6p1/1QP3Pq/PP3P2/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qg8+ Kxg8 2. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/2q2ppp/r3p3/8/1p6/6P1/PP3PQP/3R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qb7 Qxb7 2. Rd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5rpk/R7/1p1p1bPp/2p1q3/2P2N2/1P3PPK/3Q4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. g6+ Bxg6 2. Ng5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/2N1Qppp/8/3Pn3/3b3B/8/2q2PPP/1R4K1 w - - 0 34"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 34. Qxf8+ Kxf8 35. Rb8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2q2rk/6pp/8/1N2R3/7b/3Qp3/PPK4P/6R1 w - - 0 32"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 32. Qxh7+ Kxh7 33. Rh5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6rk/6pp/5p2/p7/P2Q1N2/4P1P1/2r2n1P/6K1 w - - 0 40"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 40. Ng6+ hxg6 41. Qh4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5p2/6p1/4R2p/2b2P1k/8/P2p2PK/8 w - - 0 41"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 41. Rg5 d1=Q 42. g3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2k2/ppp2npQ/3p3p/4R3/5q2/8/PPB2PPP/6K1 w - - 0 26"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 26. Qg8+ Kxg8 27. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3R4/1qp1rppk/3n3p/2p4Q/2PBp3/4P2P/5PPK/8 w - - 0 34"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 34. Rh8+ Kxh8 35. Qxh6+ Kg8 36. Qxg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1r1k/p4p1p/1pp2p2/2b2P1Q/3q1PR1/1PN2R1P/1P4P1/7K w - - 0 29"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 29. Qxh7+ Kxh7 30. Rh4+ Kg7 31. Rg3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p3Qb1/p5pk/P1p1p1p1/1P2P1P1/2P1N2n/5P1P/4qB1K w - - 0 34"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 34. Nf5+ gxf5 35. Qh5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6kr/pbR5/1p1r2p1/4p1Qp/4q3/8/P1P3PP/3R2K1 w - - 0 31"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 31. Qd8+ Rxd8 32. Rxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1rk1/1p3p1p/p2qp1p1/3n4/3R3Q/1P5P/PB3PP1/R5K1 w - - 0 24"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 24. Qxh7+ Kxh7 25. Rh4+ Kg8 26. Rh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5r1/p1b2p2/2p4p/1p2PB1k/5P1P/1P6/P7/1K4RR w - - 0 29"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 29. Rg5+ hxg5 30. hxg5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1qknr/pp2bp1p/1nb3p1/4P3/2pNpB2/5Q2/PPB2PPP/R2R2K1 w - - 0 20"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 20. Ne6+ fxe6 21. Bh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/1Q3ppp/8/8/8/1Br2NbP/P3q1P1/3R3K w - - 0 31"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 31. Qxf7+ Rxf7 32. Rd8+ Qe8 33. Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4q3/pp5k/2p3pb/2Pb3p/8/2Q2N1P/PB3PP1/6K1 w - - 0 29"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 29. Ng5+ Bxg5 30. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2qb2k/pp3p1p/3p1Np1/2pP2Q1/2P3P1/3B3P/PP3P2/6K1 w - - 0 22"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 22. Qh6 Qxf6 23. Qf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3Q1R2/pp4bk/6p1/6p1/2B1b1q1/P7/1P4P1/6K1 w - - 0 34"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 34. Rh8+ Bxh8 35. Qg8+ Kh6 36. Qxh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rq3k/3b1Q1p/p1n4p/1p1B4/2pP4/2P5/5PP1/4R1K1 w - - 0 30"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 30. Re8+ Qxe8 31. Qf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "b1r3rk/6pp/6q1/p4pN1/3B1P2/P3P2Q/1P4PP/5RK1 w - - 0 30"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 30. Qxh7+ Qxh7 31. Nf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1nR5/rR2B2k/3pr1p1/p1bp1p2/P7/4P1P1/1P3P1P/6K1 w - - 0 24"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 24. Bf6+ Rxb7 25. Rh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3R4/p3Qppk/5n2/1p3b1p/8/P1P4P/2P2q2/1K4R1 w - - 0 31"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 31. Rh8+ Kxh8 32. Qf8+ Kh7 33. Qxg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k1r/4npp1/p3p2p/3nP2P/3P3Q/3N4/qB2KPP1/2R5 w - - 0 27"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 27. Rc8+ Nxc8 28. Qd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3rr2k/pp4pp/3b4/4qp2/1PQ2N2/1B5P/P3n1P1/5R1K w - - 0 34"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 34. Ng6+ hxg6 35. Qh4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1kb1r/p1qn1pp1/2N1pn1p/2p5/1P6/3B4/P1P1QPPP/R1B1K1NR w KQkq - 0 13"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 13. Qxe6+ fxe6 14. Bg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p3r1/k1P5/pp1P1p2/2q2p1p/2P2P1P/R5PK/6Q1 w - - 0 39"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 39. Rxa5+ Kxa5 40. Qa7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r2k/pp4pp/2qn4/4Qp2/8/2PB1PP1/P1P3KP/4R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qxd6 Rxe1 2. Qf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r3k1/1p2Qpp1/p2Pq3/P1p5/2P4P/4p3/6P1/4R2K w - - 0 34"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 34. d7 Qxe7 35. dxc8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/ppq2ppp/4pn2/2n3N1/3R4/2P3NP/PP2QPP1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qe5 Qxe5 2. Rxd8+ Ne8 3. Rxe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r4/p1p4p/1pb3pk/4R3/2P3B1/2Q3PP/P2q1P2/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rh5+ gxh5 2. Qf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6R1/kp2qp2/p4p2/PP6/3br1P1/2PQ4/1K6/8 w - - 0 37"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 37. Qxd4+ Rxd4 38. b6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1kr2/pR5p/2q5/3p4/Q3bP2/8/PP4PP/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rc1 Qxa4 2. Rxc8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2rk1/2q1bppp/p2ppB2/6PQ/4P3/1Pp5/1PP2P1P/2KR2R1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qh6 gxh6 2. gxh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr2nr/1ppq2pp/p1pB4/4p3/6Q1/8/PP3PPP/RN1R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Be7 Qxg4 2. Rxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/r4p1R/p3pBp1/3bP1K1/2r5/3R3P/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rxd5 exd5 2. e6 fxe6 3. Rxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1q2rk1/ppp2pbp/1n1p2pQ/8/4PP2/1PN2R2/PBP3PP/3R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.03"]
+[SourceDate "2013.04.11"]
+
+{Try to find the winning combination} 1. Nd5 Bxh6 2. Ne7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2qr2k/ppp4p/3p1ppB/3Q4/1PP5/6P1/P4P1P/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qf7 Rxe1+ 2. Kg2 Qe7 3. Bg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1qN1k/1pp3p1/p2p3n/4p1B1/8/1BP4Q/PP3KPP/RN6 w - - 0 19"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 19. Qxh6+ gxh6 20. Bf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rk2/5pp1/3R3p/3QPqbB/6p1/6P1/5PKP/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.11"]
+
+{Try to find the winning combination} 1. Rf6 gxf6 2. Qxf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k3r2/1pp5/pb2Q1pP/4R3/1P6/P5BP/5P1K/5q2 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.11"]
+
+{Try to find the winning combination} 1. Qxb6 cxb6 2. Re1+ Kc8 3. Rxf1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5b2/4kB1p/rq2Pp2/2pQn3/2p1P3/8/1P4KP/3R4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.11"]
+
+{Try to find the winning combination} 1. Qd7+ Nxd7 2. Rxd7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4Rnk1/2R2r2/1p3qpQ/1r1P1p2/p7/6PP/PP4K1/8 w - - 0 37"]
+[PlyCount "3"]
+[EventDate "2013.04.11"]
+
+{Try to find the winning combination} 37. Rxf8+ Rxf8 38. Qh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/pp1R2pp/2p5/4P3/1bP2P1P/1P2pPq1/P1Q1P3/5K1R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rxg7+ Kxg7 2. Rg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/p4p2/4Nnp1/1p1q4/2p5/4Q2R/PP2KP1P/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+[SourceDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rh8+ Kxh8 2. Qh6+ Nh7 3. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/b6Q/p3kpn1/1p1q1b2/3PpP2/1P2P3/PB5P/6K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.12"]
+[SourceDate "2013.04.12"]
+
+{Try to find the winning combination} 1. Qg8+ Kd6 2. Ba3+ Kc6 3. Qa8+ Kc7 4.
+Qxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6Q1/4k3/p3p1p1/4Bn1p/5P2/6PK/8/3q4 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Bf6+ Kd7 2. Qd8+ Kc6 3. Qxd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r7/3q1k1p/p4p2/1p2p1p1/8/1P6/P5PP/1QR4K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rc7 Qxc7 2. Qxh7+ Ke6 3. Qxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5bk1/5p2/6pQ/8/2q4B/7R/r1r2PPP/5RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+[SourceDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qh8+ Kxh8 2. Bf6+ Kg8 3. Rh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/3r2np/6P1/4P3/5R1P/6PK/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+[SourceDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rf8+ Kxf8 2. gxh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1k3/1ppb1pp1/p1n5/6B1/7P/PP3BP1/2PR4/2K5 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rxd7 Kxd7 2. Bg4+ Kd6 3. Bxc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4Q1nk/2p1q3/4r2p/pp2p1p1/4B3/2P1PR2/PP5P/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Rf7 Qxe8 2. Rh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p7/Pp5b/1Pp2k2/2P5/8/8/4BK2 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Ba5 bxa5 2. b6 Bf4 3. bxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnb2rk1/pp2qpp1/2P2n1p/2b3N1/8/2NQ4/PPP1BPPP/R1B1K2R w KQ - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Nd5 Nxd5 2. Qh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/p5pp/Prpq2b1/3p4/B2Q1P2/7P/5PP1/2R3K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qxb6 axb6 2. a7 Qd8 3. Bxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2r1bk1/pb3p1p/4p1p1/qp2B3/2pP4/2P1P2Q/P1B2PPP/2R1R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Bxg6 fxg6 2. Qxe6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rrk1/1pq2p1p/p3bRpQ/2p5/P4b2/3B4/1BPP2P1/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qg7+ Kxg7 2. Rxg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q3k/p5pp/1p1n1n2/2p1N3/3b4/P1N2P2/BP4PP/4Q2K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+[SourceDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Ng6+ hxg6 2. Qh4+ Nh5 3. Qxd8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/p4pp1/Prp1p2p/8/5q2/1P1Q3P/5PP1/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.19"]
+
+{Try to find the winning combination} 1. Qd8+ Kh7 2. Qxb6 axb6 3. a7 *
