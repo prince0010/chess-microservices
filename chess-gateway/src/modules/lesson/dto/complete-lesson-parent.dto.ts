@@ -28,6 +28,11 @@ export class CompleteLessonParentDto {
   @IsOptional()
   @IsBoolean()
   challengeAchieved?: boolean; // this prop is useful to know if player achieve the challenge to solve 10 correct puzzles in a row and withing 15 seconds
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsNumber()
+  failedLessonId?: number; // this prop tell us the lessonId where player fails and lost their 3 lives
 }
 
 export class UserUidDto {

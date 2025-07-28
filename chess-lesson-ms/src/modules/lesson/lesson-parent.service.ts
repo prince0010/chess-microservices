@@ -387,6 +387,7 @@ export class LessonParentService {
       completedLessonIds = [],
       earnedPoints = null,
       challengeAchieved = null,
+      failedLessonId = null,
     } = completeLessonParentDto;
 
     try {
@@ -411,6 +412,7 @@ export class LessonParentService {
           completedLessonIds,
           lessonParent,
           userUid,
+          failedLessonId,
         );
       }
 
@@ -674,6 +676,7 @@ export class LessonParentService {
     completedLessonIds: number[],
     lessonParent: LessonParent,
     userUid: number,
+    failedLessonId: number | null,
   ): Promise<CompleteLessonResponse> {
     try {
       // STEP 1: get test length by level
@@ -689,6 +692,19 @@ export class LessonParentService {
 
         if (!lesson) {
           throw new BadRequestException('One or more Lesson Ids not found.');
+        }
+      }
+
+      // STEP 2.1: if failedLessonId validate that id exists
+      if (failedLessonId) {
+        const existsFailedLesson = await this.lessonRepository.findOne({
+          where: { id: failedLessonId },
+        });
+
+        if (!existsFailedLesson) {
+          throw new BadRequestException(
+            `Failed Lesson Id: ${failedLessonId} not found.`,
+          );
         }
       }
 
@@ -724,6 +740,7 @@ export class LessonParentService {
         this.lessonParentTestRecordRepository.create({
           lessonParent,
           userUid,
+          failedLessonId: failedLessonId ?? undefined,
           lessons: completedLessonIds.map((completedLessonId) =>
             completedLessonId.toString(),
           ),

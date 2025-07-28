@@ -9,6 +9,7 @@ import { LessonParentTestRecord } from './entities/lesson-parent-test-record.ent
 
 import {
   ILessonTestRecordListByUser,
+  ISingleChildLessonPuzzle,
   ISingleLessonTestRecord,
 } from './interfaces';
 import { FindAllHistoryRecordLessonTestDto } from './dto/find-all-history-record-lesson-test.dto';
@@ -104,16 +105,44 @@ export class LessonParentTestRecordService {
         where: { id: In(record.lessons.map((lessonId) => +lessonId)) },
       });
 
+      const transformedLessons: ISingleChildLessonPuzzle[] = lessons.map(
+        (lesson) => ({
+          ...lesson,
+          moves: lesson.moves.split(' '),
+          isFailure: false,
+        }),
+      );
+
+      // STEP verify if some failedLesson exists
+      let failedLesson: Lesson | null = null;
+      if (record.failedLessonId) {
+        const existsLessonFailed = await this.lessonRepository.findOneBy({
+          id: record.failedLessonId,
+        });
+        if (!existsLessonFailed) {
+          throw new BadRequestException(
+            `Failed lesson with ID: ${record.failedLessonId} not found at find one lesson test record endpoint.`,
+          );
+        }
+
+        failedLesson = existsLessonFailed;
+      }
+
+      if (failedLesson) {
+        transformedLessons.push({
+          ...failedLesson,
+          moves: failedLesson.moves.split(' '),
+          isFailure: true,
+        });
+      }
+
       return {
         id: record.id,
         level: record.lessonParent.level,
         name: record.lessonParent.name,
         playedAt: record.playedAt,
         result: record.lessons.length < 7 ? 'failed' : 'passed',
-        lessons: lessons.map((lesson) => ({
-          ...lesson,
-          moves: lesson.moves.split(' '),
-        })),
+        lessons: transformedLessons,
       };
     } catch (error) {
       throw new RpcException({

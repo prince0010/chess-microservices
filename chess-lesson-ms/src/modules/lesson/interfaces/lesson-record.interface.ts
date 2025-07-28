@@ -1,4 +1,4 @@
-import { Lesson } from '../entities/lesson.entity';
+import { ILessonList } from './lesson.interface';
 
 /* Normal lessons */
 export interface ILessonListRecordByUser {
@@ -33,5 +33,9 @@ export interface ISingleLessonTestRecord {
   name: string;
   playedAt: Date;
   result: string;
-  lessons: any[]; // Lesson with moves as array
+  lessons: ISingleChildLessonPuzzle[]; // Lesson with moves as array
+}
+
+export interface ISingleChildLessonPuzzle extends ILessonList {
+  isFailure: boolean; // to know if the lesson was failed or not
 }

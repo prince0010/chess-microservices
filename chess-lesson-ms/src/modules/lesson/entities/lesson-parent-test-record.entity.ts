@@ -29,4 +29,7 @@ export class LessonParentTestRecord {
 
   @CreateDateColumn()
   playedAt: Date;
+
+  @Column({ type: 'int', nullable: true, default: null })
+  failedLessonId?: number; // to track the lessonId player could failed when lost their 3rd live
 }
