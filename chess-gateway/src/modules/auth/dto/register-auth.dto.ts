@@ -1,15 +1,17 @@
 import { Type } from 'class-transformer';
 import {
+  ArrayContains,
+  ArrayMaxSize,
+  ArrayMinSize,
   IsArray,
   IsDate,
   IsEnum,
-  IsIn,
   IsNotEmpty,
   IsOptional,
   IsString,
   MinLength,
 } from 'class-validator';
-import { Gender, genderArray, securityRolesArray } from 'src/enum';
+import { Gender, genderArray, SecurityRoles } from 'src/enum';
 
 export class RegisterAuthDto {
   @IsString()
@@ -36,12 +38,11 @@ export class RegisterAuthDto {
   gender: string;
 
   @IsArray()
-  @IsNotEmpty()
+  @ArrayMinSize(1)
+  @ArrayMaxSize(1)
   @IsString({ each: true })
-  // TODO: changeMe! in production to only players and teachers
-  // now this way to facilitate database creation in development
-  @IsIn(securityRolesArray, { each: true })
-  roles: string[]; // TEACHER or PLAYER
+  @ArrayContains([SecurityRoles.PLAYER])
+  roles: string[]; // only player can be registered via regular endpoint
 
   @IsOptional()
   // @IsString() // Validate as a string (if received as a string)
