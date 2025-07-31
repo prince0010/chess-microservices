@@ -19,21 +19,6 @@ export const getLevelNumber = (lessonParent: LessonParent): string => {
   return `${levelParts[0]} ${numberLevel - differenceFactor(lessonParent)}`;
 };
 
-export const getLessonName = (lessonParent: LessonParent): string => {
-  if (
-    lessonParent.story === LessonStoryName.EDUCATION ||
-    !lessonParent.isTest
-  ) {
-    return lessonParent.name;
-  }
-
-  // just lesson parents are test
-  const nameParts = lessonParent.name.split(' ');
-  const numberTest = Number(nameParts[1]);
-
-  return `${nameParts[0]} ${numberTest - 3}`;
-};
-
 const differenceFactor = (lessonParent: LessonParent): number => {
   if (lessonParent.story === LessonStoryName.PUZZLE) {
     return 3; // puzzle start with 4

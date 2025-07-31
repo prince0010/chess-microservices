@@ -20,10 +20,7 @@ import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
 import { getFactorLesson } from './helpers/factor-lesson.helper';
 import { timerPerLesson } from './helpers/timer-per-lesson.helper';
 import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
-import {
-  getLessonName,
-  getLevelNumber,
-} from './helpers/adjust-level-name-lesson.helper';
+import { getLevelNumber } from './helpers/adjust-level-name-lesson.helper';
 import { lessonParentEducationPuzzleDataSeed } from './seed/lesson-parent-education-puzzle-data-seed';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
@@ -141,11 +138,11 @@ export class LessonParentService {
 
       const result: ILessonParentDetail = {
         id: lessonParent.id,
+        name: lessonParent.name,
         timer: lessonParent.timer,
         levelFrontend: lessonParent.levelFrontend,
         pointsPerLesson: lessonParent.pointsPerLesson,
         quantityToUnlockNext: lessonParent.quantityToUnlockNext,
-        name: getLessonName(lessonParent),
         level: getLevelNumber(lessonParent),
         story: lessonParent.story,
         showHint: lessonParent.showHint,
@@ -405,7 +402,7 @@ export class LessonParentService {
           levelFrontend: lessonParent.levelFrontend,
           pointsPerLesson: lessonParent.pointsPerLesson,
           quantityToUnlockNext: lessonParent.quantityToUnlockNext,
-          name: getLessonName(lessonParent),
+          name: lessonParent.name,
           story: lessonParent.story,
           level: getLevelNumber(lessonParent),
           isTest: lessonParent.isTest,
