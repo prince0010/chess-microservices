@@ -897,7 +897,7 @@ export class LessonParentService {
   ): Promise<number | null> {
     try {
       const nextLessonParent = await this.lessonParentRepository.findOne({
-        where: { id: MoreThan(lessonParent.id) },
+        where: { id: MoreThan(lessonParent.id), story: lessonParent.story },
         order: { id: 'ASC' },
         select: ['id'], // We just need the ID
       });
