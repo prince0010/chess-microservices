@@ -20,6 +20,10 @@ import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
 import { getFactorLesson } from './helpers/factor-lesson.helper';
 import { timerPerLesson } from './helpers/timer-per-lesson.helper';
 import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
+import {
+  getLessonName,
+  getLevelNumber,
+} from './helpers/adjust-level-name-lesson.helper';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
@@ -105,8 +109,8 @@ export class LessonParentService {
       const result: ILessonParentDetail = {
         id: lessonParent.id,
         timer: lessonParent.timer,
-        level: lessonParent.level,
-        name: lessonParent.name,
+        name: getLessonName(lessonParent),
+        level: getLevelNumber(lessonParent),
         story: lessonParent.story,
         showHint: lessonParent.showHint,
         isTest: lessonParent.isTest,
@@ -359,9 +363,9 @@ export class LessonParentService {
         parents.push({
           id: lessonParent.id,
           timer: lessonParent.timer,
-          name: lessonParent.name,
+          name: getLessonName(lessonParent),
           story: lessonParent.story,
-          level: lessonParent.level,
+          level: getLevelNumber(lessonParent),
           isTest: lessonParent.isTest,
           lessonsCompleted,
           lessonsLength,
