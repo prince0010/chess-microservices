@@ -26,6 +26,15 @@ export class LessonParent {
   @Column({ length: 32, nullable: false, default: LessonStoryName.EDUCATION })
   story: string; // complexity of lessons and to differentiate them
 
+  @Column({ type: 'int', nullable: false })
+  pointsPerLesson: number;
+
+  @Column({ type: 'int', nullable: false })
+  quantityToUnlockNext: number;
+
+  @Column({ length: 32, nullable: false })
+  levelFrontend: string;
+
   @Column({ type: 'boolean', nullable: false, default: false })
   showHint: boolean; // to identify which of them are with hint
 

@@ -24,6 +24,7 @@ import {
   getLessonName,
   getLevelNumber,
 } from './helpers/adjust-level-name-lesson.helper';
+import { lessonParentEducationPuzzleDataSeed } from './seed/lesson-parent-education-puzzle-data-seed';
 
 import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
@@ -58,6 +59,38 @@ export class LessonParentService {
     @InjectRepository(LessonParentTestRecord)
     private readonly lessonParentTestRecordRepository: Repository<LessonParentTestRecord>,
   ) {}
+
+  async seedEducationPuzzle(): Promise<string> {
+    try {
+      // verify if already exists
+      const someLessonParentEducation =
+        await this.lessonParentRepository.findOneBy({
+          story: LessonStoryName.EDUCATION,
+        });
+      if (someLessonParentEducation) {
+        throw new BadRequestException(
+          `Warning: seed of lesson parent Education-Puzzle already was generated.`,
+        );
+      }
+
+      const data: any = lessonParentEducationPuzzleDataSeed;
+
+      for (const lessonParentObject of data) {
+        const newLessonParent = this.lessonParentRepository.create({
+          ...lessonParentObject,
+        });
+
+        await this.lessonParentRepository.save(newLessonParent);
+      }
+
+      return 'SEED data of Lesson Parent for Education and Puzzle generated successfully.';
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
 
   async create(
     createLessonParentDto: CreateLessonParentDto,

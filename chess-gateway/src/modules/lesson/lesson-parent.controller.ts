@@ -28,6 +28,16 @@ export class LessonParentController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
   @UseGuards(SuperAdminGuard)
+  @Post('seed-data-education-puzzle')
+  seedDataEducationPuzzle() {
+    return this.client.send('lessonParent.seed.dataEducationPuzzle', {}).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(SuperAdminGuard)
   @Post('')
   createOne(@Body() createLessonParentDto: CreateLessonParentDto) {
     return this.client

@@ -1,4 +1,11 @@
-import { IsBoolean, IsEnum, IsNotEmpty, IsString } from 'class-validator';
+import {
+  IsBoolean,
+  IsEnum,
+  IsNotEmpty,
+  IsNumber,
+  IsPositive,
+  IsString,
+} from 'class-validator';
 import {
   LessonLevel,
   lessonLevelsArray,
@@ -26,6 +33,25 @@ export class CreateLessonParentDto {
     message: `lesson parent name must be a valid enum value: ${Object.values(LessonParentName).join(', ')}`,
   })
   name: string;
+
+  @IsNotEmpty()
+  @IsNumber()
+  @IsPositive()
+  timer: number;
+
+  @IsNotEmpty()
+  @IsNumber()
+  @IsPositive()
+  pointsPerLesson: number;
+
+  @IsNotEmpty()
+  @IsNumber()
+  @IsPositive()
+  quantityToUnlockNext: number;
+
+  @IsNotEmpty()
+  @IsString()
+  levelFrontend: string;
 
   @IsBoolean()
   @IsNotEmpty()

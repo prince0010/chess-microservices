@@ -12,6 +12,11 @@ import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
 export class LessonParentController {
   constructor(private readonly lessonParentService: LessonParentService) {}
 
+  @MessagePattern('lessonParent.seed.dataEducationPuzzle')
+  seedLessonParentsEducationPuzzle() {
+    return this.lessonParentService.seedEducationPuzzle();
+  }
+
   @MessagePattern('lessonParent.create.one')
   createLessonParent(@Payload() createLessonParentDto: CreateLessonParentDto) {
     return this.lessonParentService.create(createLessonParentDto);
