@@ -32,6 +32,9 @@
 1. Generate migration file(ONLY ON DEVELOPMENT)
    `npx typeorm migration:generate src/db/migrations/migration -d dist/db/typeorm.config.js`
 
+1. Create empty migration file(only use it on development)
+   `npx typeorm migration:create src/db/migrations/CreateAdminUser`
+
 # Configuration of Docker Service in VPS
 
 **Docker service will both start and set to start automatically when your VPS reboots**
