@@ -9,7 +9,6 @@ import { LessonStoryName } from 'src/enum';
 import { LessonParent } from '../entities/lesson-parent.entity';
 
 export const getLevelNumber = (lessonParent: LessonParent): string => {
-  console.log({ lessonParent });
   if (lessonParent.story === LessonStoryName.EDUCATION) {
     return lessonParent.level;
   }

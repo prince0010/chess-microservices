@@ -471,16 +471,24 @@ export class LessonParentService {
     earnedPointsFromFrontend: number | null,
     challengeAchieved: boolean | null,
   ): Promise<CompleteLessonResponse> {
+    const levelsAllowedToUseChallenge = [
+      LessonLevel.LEVEL_2 as string,
+      LessonLevel.LEVEL_3 as string,
+    ]; // just Level 2 and Level 3
+
     try {
       if (
-        !earnedPointsFromFrontend ||
-        challengeAchieved === null ||
-        challengeAchieved === undefined
+        levelsAllowedToUseChallenge.includes(lessonParent.level) &&
+        (!earnedPointsFromFrontend ||
+          challengeAchieved === null ||
+          challengeAchieved === undefined)
       ) {
         throw new BadRequestException(
           `Properties earnedPoints and challengeAchieved are required in Body data for this level: ${lessonParent.level}.`,
         );
       }
+
+      let earnedPointsByLessons = 0; // calculation in backend, not the points come from frontend
 
       // STEP 0: verify if user will increment points or not
       const { lessonsLength, lessonsCompleted } =
@@ -505,6 +513,8 @@ export class LessonParentService {
           newCompletedLessonArray.push(
             this.lessonCompletedRepository.save(newLessonCompleted),
           );
+
+          earnedPointsByLessons += lesson.points;
         }
       }
 
@@ -512,7 +522,10 @@ export class LessonParentService {
 
       // STEP 2: verify if data come with challenge achieved
       // if challenge achieved we can not verify if lesson parent is completed for the same way we divide lessonsCompleted/lessonsLength because challenge was achieved
-      if (challengeAchieved) {
+      if (
+        challengeAchieved &&
+        levelsAllowedToUseChallenge.includes(lessonParent.level)
+      ) {
         const lessonParentEnabledRow =
           await this.lessonParentEnabledRepository.findOne({
             where: { userUid, lessonParent: { id: lessonParent.id } },
@@ -554,7 +567,11 @@ export class LessonParentService {
       // STEP 4: Add lesson points to user counter
       const dataPoints: UpdateUserPointsDto = {
         uid: userUid,
-        points: stillLessonsToComplete ? earnedPointsFromFrontend : 0,
+        points: stillLessonsToComplete
+          ? levelsAllowedToUseChallenge.includes(lessonParent.level)
+            ? earnedPointsFromFrontend!
+            : earnedPointsByLessons
+          : 0,
         typeUserCounter: typeUserCounterByStoryLesson(
           lessonParent.story as LessonStoryName,
         ),
@@ -563,10 +580,13 @@ export class LessonParentService {
         this.client.send('update.points.user', dataPoints),
       );
 
-      let isCurrentLessonParentCompleted: boolean = challengeAchieved;
+      let isCurrentLessonParentCompleted: boolean = challengeAchieved ?? false;
 
       // STEP 5: in case challenge was not achieved update lessonParentEnabled row by calculating
-      if (!challengeAchieved) {
+      if (
+        !levelsAllowedToUseChallenge.includes(lessonParent.level) ||
+        !challengeAchieved
+      ) {
         isCurrentLessonParentCompleted = await this.handleLessonParentEnabled(
           userUid,
           lessonParent,
