@@ -7,6 +7,9 @@ export interface ICountAndListLessonParents {
 export interface ILessonParent {
   id: number;
   level: string;
+  levelFrontend: string;
+  pointsPerLesson: number;
+  quantityToUnlockNext: number;
   timer: number;
   name: string;
   story: string;
@@ -21,6 +24,9 @@ export interface ILessonParentDetail {
   level: string;
   timer: number;
   name: string;
+  pointsPerLesson: number;
+  quantityToUnlockNext: number;
+  levelFrontend: string;
   story: string;
   showHint: boolean;
   isTest: boolean;
