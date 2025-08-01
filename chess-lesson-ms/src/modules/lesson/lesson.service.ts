@@ -80,7 +80,8 @@ export class LessonService {
               lesson.id,
               lesson.level,
               lesson.description,
-              lesson_completed.completedAt
+              lesson_completed.completedAt,
+              lesson_parent.levelFrontend
             FROM
               lesson_completed
             JOIN
@@ -112,7 +113,7 @@ export class LessonService {
         total: Number(total[0].total),
         lessons: rawLessons.map((lesson) => ({
           lessonId: lesson.id,
-          level: lesson.level,
+          level: lesson.levelFrontend,
           description: lesson.description,
           completedAt: lesson.completedAt,
         })),
