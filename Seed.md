@@ -1,31 +1,20 @@
 # File to remember the SEED data to run in new database
 
-## List of LESSON SEED
+## List of LESSON PARENT SEED
 
-1. Create Lesson Parent pawn
-2. Create Lesson Parent king
-3. Create Lesson Parent bishop
-4. Create Lesson Parent knight
-5. Create Lesson Parent rook
-6. Create Lesson Parent queen
-7. Create Lesson Parent test 1
-8. Create Lesson Parent level 2
-9. Create Lesson Parent test 2
-10. Create Lesson Parent level 3
-11. Create Lesson Parent test 3
-12. Create Lesson Parent level 4
-13. Create Lesson Parent test 4
-    ... make the same with all lesson parent
+1. Run SEED of Lesson Parents education-puzzle with endpoint `lessonParent.seed.dataEducationPuzzle`
 
-14. Run seed lesson Level_1_Pawn.pgn
-15. Run seed lesson Level_1_King.pgn
-16. Run seed lesson Level_1_Bishop.pgn
-17. Run seed lesson Level_1_Knight.pgn
-18. Run seed lesson Level_1_Rook.pgn
-19. Run seed lesson Level_1_Queen.pgn
-20. Run seed lesson Level_2.pgn
-21. Run seed lesson Level_3.pgn
-    ... make the same with all pgn of puzzles and other stories
+## List of Single Lessons
+
+1. Run seed lesson Level_1_Pawn.pgn
+2. Run seed lesson Level_1_King.pgn
+3. Run seed lesson Level_1_Bishop.pgn
+4. Run seed lesson Level_1_Knight.pgn
+5. Run seed lesson Level_1_Rook.pgn
+6. Run seed lesson Level_1_Queen.pgn
+7. Run seed lesson Level_2.pgn
+8. Run seed lesson Level_3.pgn
+   ... make the same with all pgn of puzzles and other stories
 
 ## List of Bots
 
