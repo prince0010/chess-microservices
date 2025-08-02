@@ -6,7 +6,6 @@ import * as pgnParser from 'pgn-parser';
 
 import { LessonParent } from 'src/modules/lesson/entities/lesson-parent.entity';
 import { extractHintsFromComments } from './extractHintsFromComments';
-import { pointsPerLesson } from 'src/modules/lesson/helpers/points-per-lesson.helper';
 import { timerPerLesson } from 'src/modules/lesson/helpers/timer-per-lesson.helper';
 
 // traditional with not hint
@@ -70,7 +69,7 @@ export const parseNormalPgnFile = (
         moves: game.moves.map((move) => move.move).join(' '), // Store only the moves PGN notation
         pgnRaw, // Manually constructed PGN string
         fen: headers['FEN'] || '',
-        points: pointsPerLesson(lessonParent),
+        points: lessonParent.pointsPerLesson,
         event: headers['Event'] || '?',
         site: headers['Site'] || '?',
         date: headers['Date'] || '????.??.??',
@@ -159,7 +158,7 @@ export const parseHintPgnFile = (
         moves: game.moves.map((move) => move.move).join(' '),
         pgnRaw,
         fen: headers['FEN'] || '',
-        points: 1,
+        points: lessonParent.pointsPerLesson,
         event: headers['Event'] || '?',
         site: headers['Site'] || '?',
         date: headers['Date'] || '????.??.??',

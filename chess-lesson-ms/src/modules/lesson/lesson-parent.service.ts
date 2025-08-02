@@ -433,8 +433,6 @@ export class LessonParentService {
       userUid,
       lessonParentId,
       completedLessonIds = [],
-      earnedPoints = null,
-      challengeAchieved = null,
       failedLessonId = null,
     } = completeLessonParentDto;
 
@@ -490,8 +488,6 @@ export class LessonParentService {
         lessonParent,
         completedLessonIds,
         validatedLessons,
-        earnedPoints,
-        challengeAchieved,
       );
     } catch (error) {
       throw new RpcException({
@@ -507,27 +503,9 @@ export class LessonParentService {
     lessonParent: LessonParent,
     completedLessonIds: number[],
     validatedLessons: Lesson[],
-    earnedPointsFromFrontend: number | null,
-    challengeAchieved: boolean | null,
   ): Promise<CompleteLessonResponse> {
-    const levelsAllowedToUseChallenge = [
-      LessonLevel.LEVEL_2 as string,
-      LessonLevel.LEVEL_3 as string,
-    ]; // just Level 2 and Level 3
-
     try {
-      if (
-        levelsAllowedToUseChallenge.includes(lessonParent.level) &&
-        (!earnedPointsFromFrontend ||
-          challengeAchieved === null ||
-          challengeAchieved === undefined)
-      ) {
-        throw new BadRequestException(
-          `Properties earnedPoints and challengeAchieved are required in Body data for this level: ${lessonParent.level}.`,
-        );
-      }
-
-      let earnedPointsByLessons = 0; // calculation in backend, not the points come from frontend
+      let earnedPointsByLessons = 0;
 
       // STEP 0: verify if user will increment points or not
       const { lessonsLength, lessonsCompleted } =
@@ -559,30 +537,7 @@ export class LessonParentService {
 
       await Promise.all(newCompletedLessonArray);
 
-      // STEP 2: verify if data come with challenge achieved
-      // if challenge achieved we can not verify if lesson parent is completed for the same way we divide lessonsCompleted/lessonsLength because challenge was achieved
-      if (
-        challengeAchieved &&
-        levelsAllowedToUseChallenge.includes(lessonParent.level)
-      ) {
-        const lessonParentEnabledRow =
-          await this.lessonParentEnabledRepository.findOne({
-            where: { userUid, lessonParent: { id: lessonParent.id } },
-          });
-
-        if (!lessonParentEnabledRow) {
-          // create new lesson parent enabled row
-          const newLessonParentEnabled =
-            this.lessonParentEnabledRepository.create({
-              userUid,
-              lessonParent,
-            });
-
-          await this.lessonParentEnabledRepository.save(newLessonParentEnabled);
-        }
-      }
-
-      // STEP 3: in both cases we need to store last lesson played to track the progress
+      // STEP 2: store last lesson played to track the progress
       const lastLessonPlayedRow = await this.lessonPlayedRepository.findOne({
         where: { userUid, lessonParent: { id: lessonParent.id } },
       });
@@ -603,14 +558,10 @@ export class LessonParentService {
         await this.lessonPlayedRepository.save(newLastLessonPlayed);
       }
 
-      // STEP 4: Add lesson points to user counter
+      // STEP 3: Add lesson points to user counter
       const dataPoints: UpdateUserPointsDto = {
         uid: userUid,
-        points: stillLessonsToComplete
-          ? levelsAllowedToUseChallenge.includes(lessonParent.level)
-            ? earnedPointsFromFrontend!
-            : earnedPointsByLessons
-          : 0,
+        points: stillLessonsToComplete ? earnedPointsByLessons : 0,
         typeUserCounter: typeUserCounterByStoryLesson(
           lessonParent.story as LessonStoryName,
         ),
@@ -619,18 +570,9 @@ export class LessonParentService {
         this.client.send('update.points.user', dataPoints),
       );
 
-      let isCurrentLessonParentCompleted: boolean = challengeAchieved ?? false;
-
-      // STEP 5: in case challenge was not achieved update lessonParentEnabled row by calculating
-      if (
-        !levelsAllowedToUseChallenge.includes(lessonParent.level) ||
-        !challengeAchieved
-      ) {
-        isCurrentLessonParentCompleted = await this.handleLessonParentEnabled(
-          userUid,
-          lessonParent,
-        );
-      }
+      // STEP 4: update lessonParentEnabled row by calculating
+      const isCurrentLessonParentCompleted =
+        await this.handleLessonParentEnabled(userUid, lessonParent);
 
       const response: CompleteLessonResponse = {
         lastPoints,
