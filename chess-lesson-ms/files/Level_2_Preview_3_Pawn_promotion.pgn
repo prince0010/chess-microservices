@@ -1,0 +1,112 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Promote a pawn to a Queen"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/P3k3/8/8/8/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.20"]
+
+{[%csl Ga8][%cal Ga7a8] Promote a pawn to a Queen} 1. a8=Q *
+
+
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Promote a pawn to a rook"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1P6/4k3/8/4K3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.20"]
+
+{[%csl Gb8][%cal Gb7b8]} {Promote a pawn to a rook} 1. b8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Promote a pawn to a bishop"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2P2k2/8/8/5K2/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.20"]
+
+{[%csl Gc8][%cal Gc7c8]} {Promote a pawn to a bishop} 1. c8=B *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Promote a pawn to a knight"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3P4/5k2/8/5K2/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.20"]
+
+{[%csl Gd8][%cal Gd7d8]} {Promote a pawn to a knight} 1. d8=N *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Promote a pawn to a Queen"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4P3/1k6/8/1K6/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.20"]
+
+{[%csl Ge8][%cal Ge7e8]} {Promote a pawn to a Queen} 1. e8=Q *[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Promote a pawn to a rook"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5P2/1k6/8/1K6/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.20"]
+
+{[%csl Gf8][%cal Gf7f8]} {Promote a pawn to a rook} 1. f8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Promote a pawn to a bishop"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6P1/k7/8/K7/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.20"]
+
+{[%csl Gg8][%cal Gg7g8]} {Promote a pawn to a bishop} 1. g8=B *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Promote a pawn to a knight"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7P/2k5/8/2K5/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.20"]
+
+{[%csl Gh8][%cal Gh7h8]} {Promote a pawn to a knight} 1. h8=N *
+

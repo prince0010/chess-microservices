@@ -15,15 +15,11 @@ import { LessonParentTestRecord } from './entities/lesson-parent-test-record.ent
 
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
-import { getTestLessonLengthByLevel } from './helpers/get-test-lesson-length-by-level.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
-import { getFactorLesson } from './helpers/factor-lesson.helper';
-import { timerPerLesson } from './helpers/timer-per-lesson.helper';
 import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
 import { getLevelNumber } from './helpers/adjust-level-name-lesson.helper';
-import { lessonParentEducationPuzzleDataSeed } from './seed/lesson-parent-education-puzzle-data-seed';
+import { lessonParentDataSeed } from './seed/lesson-parent-data-seed';
 
-import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
 import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
@@ -34,6 +30,7 @@ import {
   ICountAndListLessonParents,
   ILessonParent,
   ILessonParentDetail,
+  ILessonParentSeed,
 } from './interfaces';
 import { LessonLevel, LessonParentName, LessonStoryName } from 'src/enum';
 
@@ -57,30 +54,29 @@ export class LessonParentService {
     private readonly lessonParentTestRecordRepository: Repository<LessonParentTestRecord>,
   ) {}
 
-  async seedEducationPuzzle(): Promise<string> {
+  async seedLessonsParents(): Promise<string> {
     try {
-      // verify if already exists
-      const someLessonParentEducation =
-        await this.lessonParentRepository.findOneBy({
-          story: LessonStoryName.EDUCATION,
-        });
-      if (someLessonParentEducation) {
-        throw new BadRequestException(
-          `Warning: seed of lesson parent Education-Puzzle already was generated.`,
-        );
-      }
-
-      const data: any = lessonParentEducationPuzzleDataSeed;
+      const insertedLessonParentsArray: string[] = [];
+      const data = lessonParentDataSeed as any; // needed to set any to avoid DeepPartial error
 
       for (const lessonParentObject of data) {
+        const existLessonParent = await this.lessonParentRepository.findOneBy({
+          name: lessonParentObject.name,
+        });
+        if (existLessonParent) {
+          continue;
+        }
+
         const newLessonParent = this.lessonParentRepository.create({
           ...lessonParentObject,
         });
 
         await this.lessonParentRepository.save(newLessonParent);
+
+        insertedLessonParentsArray.push(lessonParentObject.name);
       }
 
-      return 'SEED data of Lesson Parent for Education and Puzzle generated successfully.';
+      return `These Lesson Parents SEED data was inserted: [${insertedLessonParentsArray.join(', ')}]`;
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -89,25 +85,22 @@ export class LessonParentService {
     }
   }
 
-  async create(
-    createLessonParentDto: CreateLessonParentDto,
-  ): Promise<LessonParent> {
-    const { level, name, story, showHint } = createLessonParentDto;
+  // async create(
+  //   createLessonParentDto: CreateLessonParentDto,
+  // ): Promise<LessonParent> {
+  //   try {
+  //     const newLessonParent: LessonParent = this.lessonParentRepository.create({
+  //       ...createLessonParentDto,
+  //     });
 
-    try {
-      const newLessonParent: LessonParent = this.lessonParentRepository.create({
-        ...createLessonParentDto,
-        timer: timerPerLesson(level), // add timer to lesson parent
-      });
-
-      return await this.lessonParentRepository.save(newLessonParent);
-    } catch (error) {
-      throw new RpcException({
-        status: 400,
-        message: error.message,
-      });
-    }
-  }
+  //     return await this.lessonParentRepository.save(newLessonParent);
+  //   } catch (error) {
+  //     throw new RpcException({
+  //       status: 400,
+  //       message: error.message,
+  //     });
+  //   }
+  // }
 
   async findOne(
     findOneLessonParentDto: FindOneLessonParentDto,
@@ -169,19 +162,14 @@ export class LessonParentService {
     userUid: number,
   ): Promise<ILessonParentDetail> {
     try {
-      // STEP 0: Get test lesson length by level
-      const length = getTestLessonLengthByLevel(
-        lessonParent.level as LessonLevel,
-      );
-
       // STEP 1: Get all lessons with this level
       const allLessonsByLevel = await this.lessonRepository.find({
         where: { level: lessonParent.level },
       });
 
-      if (!allLessonsByLevel || allLessonsByLevel.length < length) {
+      if (!allLessonsByLevel || allLessonsByLevel.length < 10) {
         throw new BadRequestException(
-          `Insufficient lessons with level "${lessonParent.level}" in database to return ${length} random lessons.`,
+          `Insufficient lessons with level "${lessonParent.level}" in database to return ${10} random lessons.`,
         );
       }
 
@@ -308,7 +296,6 @@ export class LessonParentService {
       page = 1,
       id = null,
       story = null,
-      level = null,
       userUid,
       isTest = null,
     } = findAllLessonParentDto;
@@ -330,9 +317,6 @@ export class LessonParentService {
     }
     if (id) {
       whereConditions.id = id;
-    }
-    if (level) {
-      whereConditions.level = level;
     }
     if (isTest) {
       const isTestValue = isTest === 'YES';
@@ -366,9 +350,7 @@ export class LessonParentService {
 
           if (!resultFromTestCompleted) {
             // user has not played test at this moment
-            lessonsLength = getTestLessonLengthByLevel(
-              lessonParent.level as LessonLevel,
-            );
+            lessonsLength = 10;
           } else {
             lessonsCompleted = resultFromTestCompleted.testCompleted;
             lessonsLength = resultFromTestCompleted.testLength;
@@ -690,9 +672,7 @@ export class LessonParentService {
   ): Promise<CompleteLessonResponse> {
     try {
       // STEP 1: get test length by level
-      const lessonsLength = getTestLessonLengthByLevel(
-        lessonParent.level as LessonLevel,
-      );
+      const lessonsLength = 10;
 
       // STEP 2: validate lessonIds
       for (const lessonId of completedLessonIds) {
@@ -840,9 +820,7 @@ export class LessonParentService {
       let lessonsLength = 0;
       let lessonsCompleted = 0;
       if (lessonParent.isTest) {
-        lessonsLength = getTestLessonLengthByLevel(
-          lessonParent.level as LessonLevel,
-        );
+        lessonsLength = 10;
 
         const testLessonRow = await this.lessonCompletedTestRepository.findOne({
           where: { userUid, level: lessonParent.level },
@@ -859,10 +837,10 @@ export class LessonParentService {
         lessonsCompleted = resultFromNormalLessons.lessonsCompleted;
       }
 
-      let factor = getFactorLesson(lessonParent);
       // STEP 2 verify is open to play
       const isCurrentLessonParentCompleted =
-        lessonsLength > 0 && lessonsCompleted / lessonsLength >= factor;
+        lessonsLength > 0 &&
+        lessonsCompleted / lessonsLength >= lessonParent.lessonFactor;
 
       return isCurrentLessonParentCompleted;
     } catch (error) {

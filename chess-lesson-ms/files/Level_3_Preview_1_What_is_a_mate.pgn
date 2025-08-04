@@ -1,0 +1,21 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "What is a checkmate"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/8/1K6/8/8/8/7Q/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2018.03.29"]
+
+{[%csl Gc7][%cal Gh2c7] In this chapter, we are going to solve mate in one
+move problems. Checkmate occurs in a position in which a player's king is
+directly attacked by an opponent's piece or pawn and has no possible move to
+escape the check. There are three escaping possibilities: Going out from the
+check with the king, capturing the piece which gives the check, moving a piece
+in-between the king and the piece which gives the check. If none of them is
+possible, the side who gives the checkmate wins the game.} 1. Qc7# {[%csl Gc8]
+There is no way to escape from the check, therefore it is checkmate.} *
+

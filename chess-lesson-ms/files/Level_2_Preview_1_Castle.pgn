@@ -1,0 +1,140 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a short castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3k3/8/8/8/8/8/8/4K2R w Kq - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gg1][%cal Ge1g1] Play a short castle} 1. O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a short castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gg1][%cal Ge1g1] Play a short castle} 1. O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a short castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gg1][%cal Ge1g1]} {Play a short castle} 1. O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a short castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bqk2r/pppp1ppp/2n2n2/1B2p3/1b2P3/2N2N2/PPPP1PPP/R1BQK2R w KQkq - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gg1][%cal Ge1g1]} {Play a short castle} 1. O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a short castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bqkbnr/1pp2ppp/p1p5/4p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gg1][%cal Ge1g1]} {Play a short castle} 1. O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a long castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k2r/8/8/8/8/8/8/R3K3 w Qk - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gc1][%cal Ge1c1]} {Play a long castle} 1. O-O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a long castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bq1rk1/pppp1ppp/2n2n2/8/1b2P3/2N1Q3/PPPB1PPP/R3KBNR w KQ - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gc1][%cal Ge1c1]} {Play a long castle} 1. O-O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a long castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3k2r/pppq1ppp/1bnpbn2/4p3/4P3/1BNPBN2/PPPQ1PPP/R3K2R w KQkq - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gc1][%cal Ge1c1]} {Play a long castle} 1. O-O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a long castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr3r/1ppb1ppp/p1pb4/8/3NP3/2N1BP2/PPP3PP/R3K2R w KQ - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gc1][%cal Ge1c1]} {Play a long castle} 1. O-O-O *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Play a long castle"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bq1rk1/ppp1bppp/2np1n2/8/3NPB2/2N5/PPPQ1PPP/R3KB1R w KQ - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.19"]
+
+{[%csl Gc1][%cal Ge1c1]} {Play a long castle} 1. O-O-O *
+

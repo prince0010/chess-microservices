@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 import { LessonCompleted } from './lesson-completed.entity';
 import { LessonParent } from './lesson-parent.entity';
-import { LessonLevel, LessonStoryName, LessonTimer } from 'src/enum';
+import { LessonLevel, LessonStoryName } from 'src/enum';
 
 @Entity('lesson')
 export class Lesson {
@@ -23,7 +23,7 @@ export class Lesson {
   @Column({
     type: 'int',
     nullable: false,
-    default: LessonTimer.STORY_EDUCATION,
+    default: 30,
   })
   timer: number; // time countdown player has to solve it
 

@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
 import { DataSource, Repository } from 'typeorm';
@@ -6,9 +6,6 @@ import { DataSource, Repository } from 'typeorm';
 import { Lesson } from './entities/lesson.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
 import { parseHintPgnFile, parseNormalPgnFile } from 'src/utils/pgn-parser';
-
-import { InsertLessonDto } from './dto/insert-lesson.dto';
-import { LessonFilename, LessonLevel, LessonParentName } from 'src/enum';
 
 @Injectable()
 export class LessonSeederService {
@@ -20,36 +17,37 @@ export class LessonSeederService {
     private readonly lessonRepository: Repository<Lesson>,
   ) {}
 
-  async chooseTypeOfLessonsToInsert(
-    insertLessonDto: InsertLessonDto,
-  ): Promise<string> {
-    const { levelName, lessonParentName } = insertLessonDto;
+  async insertAllPgnFiles(): Promise<string> {
     try {
-      const lessonParent = await this.lessonParentRepository.findOneBy({
-        name: lessonParentName,
+      const lessonsParents = await this.lessonParentRepository.find({
+        where: {},
       });
-      if (!lessonParent) {
-        throw new BadRequestException(
-          `Parent lesson with name: ${lessonParentName} not found.`,
-        );
+
+      const insertedFilenamesArr: string[] = [];
+      for (const lessonParent of lessonsParents) {
+        // avoid duplicate insertion of PGN lessons
+        const existLessonsByThatParent = await this.lessonRepository.findOne({
+          where: { lessonParent: { id: lessonParent.id } },
+          relations: { lessonParent: true },
+        });
+
+        if (
+          existLessonsByThatParent ||
+          lessonParent.isTest ||
+          lessonParent.isBot ||
+          lessonParent.isGame
+        ) {
+          continue;
+        }
+
+        lessonParent.showHint
+          ? await this.insertHintLessons(lessonParent)
+          : await this.insertNormalLessons(lessonParent);
+
+        insertedFilenamesArr.push(lessonParent.pgnFilename!);
       }
 
-      // validate level name to avoid duplicate insertion of PGN lessons
-      const existLessonsByThatLevel = await this.lessonRepository.findOne({
-        where: { level: levelName },
-        relations: { lessonParent: true },
-      });
-      if (levelName !== LessonLevel.LEVEL_1 && existLessonsByThatLevel) {
-        throw new BadRequestException(
-          `Already was inserted lessons with Level: ${levelName} and appears with Lesson Parent name: ${existLessonsByThatLevel.lessonParent.name}`,
-        );
-      }
-
-      const result = lessonParent.showHint
-        ? await this.insertHintLessons(insertLessonDto, lessonParent)
-        : await this.insertNormalLessons(insertLessonDto, lessonParent);
-
-      return result;
+      return `These pgn filenames were inserted: [${insertedFilenamesArr.join(', ')}]`;
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -59,36 +57,23 @@ export class LessonSeederService {
   }
 
   // traditional pgn files with no hint
-  async insertNormalLessons(
-    insertLessonDto: InsertLessonDto,
-    lessonParent: LessonParent,
-  ): Promise<string> {
-    const { levelName, lessonParentName, story } = insertLessonDto;
-
+  async insertNormalLessons(lessonParent: LessonParent): Promise<void> {
     try {
       const lessonRepository = this.dataSource.getRepository(Lesson);
 
-      const filename = this.getFilename(lessonParentName);
-      let pathFile: string = `/usr/src/app/files/${filename}`;
+      let pathFile: string = `/usr/src/app/files/${lessonParent.pgnFilename}`;
 
       // Parse PGN file
-      const lessons = parseNormalPgnFile(
-        pathFile,
-        levelName,
-        story,
-        lessonParent,
-      );
+      const lessons = parseNormalPgnFile(pathFile, lessonParent);
 
       if (lessons.length === 0) {
-        throw new BadRequestException(
-          `PGN Lessons with name: ${filename} file is empty. No content inside that PGN file`,
+        console.error(
+          `PGN file with name: ${lessonParent.pgnFilename} is empty. No content inside that PGN file`,
         );
       }
 
       // Insert lessons into database
       await lessonRepository.insert(lessons);
-
-      return 'Normal lessons (with no hints) inserted on database successfully.';
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -98,104 +83,28 @@ export class LessonSeederService {
   }
 
   // new pgn files of Level 1 with hints
-  async insertHintLessons(
-    insertLessonDto: InsertLessonDto,
-    lessonParent: LessonParent,
-  ): Promise<string> {
-    const { levelName, lessonParentName, story } = insertLessonDto;
-
+  async insertHintLessons(lessonParent: LessonParent): Promise<void> {
     try {
       const lessonRepository = this.dataSource.getRepository(Lesson);
 
-      const filename = this.getFilename(lessonParentName);
-      let pathFile: string = `/usr/src/app/files/${filename}`;
+      let pathFile: string = `/usr/src/app/files/${lessonParent.pgnFilename}`;
 
       // Parse PGN file
-      const lessons = parseHintPgnFile(
-        pathFile,
-        levelName,
-        story,
-        lessonParent,
-      );
+      const lessons = parseHintPgnFile(pathFile, lessonParent);
 
       if (lessons.length === 0) {
-        throw new BadRequestException(
-          'PGN Lessons file is empty. No content inside that PGN file',
+        console.error(
+          `PGN ${lessonParent.pgnFilename} file is empty. No content inside that PGN file`,
         );
       }
 
       // Insert lessons into database
       await lessonRepository.insert(lessons);
-
-      return 'Lessons with hints inserted on database successfully.';
     } catch (error) {
       throw new RpcException({
         status: 400,
         message: error.message,
       });
     }
-  }
-
-  getFilename(lessonParentName: string): string {
-    let filename: string = '';
-
-    switch (lessonParentName) {
-      case LessonParentName.PAWN:
-        filename = LessonFilename.PAWN;
-        break;
-      case LessonParentName.KING:
-        filename = LessonFilename.KING;
-        break;
-      case LessonParentName.BISHOP:
-        filename = LessonFilename.BISHOP;
-        break;
-      case LessonParentName.KNIGHT:
-        filename = LessonFilename.KNIGHT;
-        break;
-      case LessonParentName.ROOK:
-        filename = LessonFilename.ROOK;
-        break;
-      case LessonParentName.QUEEN:
-        filename = LessonFilename.QUEEN;
-        break;
-      case LessonParentName.LEVEL_2:
-        filename = LessonFilename.LEVEL_2;
-        break;
-      case LessonParentName.LEVEL_3:
-        filename = LessonFilename.LEVEL_3;
-        break;
-      case LessonParentName.LEVEL_4:
-        filename = LessonFilename.LEVEL_4;
-        break;
-      case LessonParentName.LEVEL_5:
-        filename = LessonFilename.LEVEL_5;
-        break;
-      case LessonParentName.LEVEL_6:
-        filename = LessonFilename.LEVEL_6;
-        break;
-      case LessonParentName.LEVEL_7:
-        filename = LessonFilename.LEVEL_7;
-        break;
-      case LessonParentName.LEVEL_8:
-        filename = LessonFilename.LEVEL_8;
-        break;
-      case LessonParentName.LEVEL_9:
-        filename = LessonFilename.LEVEL_9;
-        break;
-      case LessonParentName.LEVEL_10:
-        filename = LessonFilename.LEVEL_10;
-        break;
-      case LessonParentName.LEVEL_11:
-        filename = LessonFilename.LEVEL_11;
-        break;
-      case LessonParentName.LEVEL_12:
-        filename = LessonFilename.LEVEL_12;
-        break;
-
-      default:
-        break;
-    }
-
-    return filename;
   }
 }

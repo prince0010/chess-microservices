@@ -8,7 +8,7 @@ import {
   IsString,
   Min,
 } from 'class-validator';
-import { LessonLevel, lessonLevelsArray, LessonStoryName } from 'src/enum';
+import { LessonStoryName } from 'src/enum';
 
 export class FindAllLessonParentDto {
   @IsOptional()
@@ -36,10 +36,4 @@ export class FindAllLessonParentDto {
   @IsString()
   @IsIn(['YES', 'NO'])
   isTest: string;
-
-  @IsOptional()
-  @IsEnum(LessonLevel, {
-    message: `Invalid level name. Try to send one of these valid one: [${[...lessonLevelsArray]}]`,
-  })
-  level?: string;
 }

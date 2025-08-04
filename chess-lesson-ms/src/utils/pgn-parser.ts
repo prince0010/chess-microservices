@@ -6,13 +6,10 @@ import * as pgnParser from 'pgn-parser';
 
 import { LessonParent } from 'src/modules/lesson/entities/lesson-parent.entity';
 import { extractHintsFromComments } from './extractHintsFromComments';
-import { timerPerLesson } from 'src/modules/lesson/helpers/timer-per-lesson.helper';
 
 // traditional with not hint
 export const parseNormalPgnFile = (
   filePath: string,
-  levelName: string,
-  story: string,
   lessonParent: LessonParent,
 ) => {
   try {
@@ -61,9 +58,9 @@ export const parseNormalPgnFile = (
       const pgnRaw = `${headerSection}\n\n${movesSection}${game.result}`;
 
       return {
-        level: levelName,
-        timer: timerPerLesson(levelName),
-        story,
+        level: lessonParent.level,
+        timer: lessonParent.timer,
+        story: lessonParent.story,
         description:
           game.comments?.[0]?.text.trim() || 'No description available', // Extract first comment as description
         moves: game.moves.map((move) => move.move).join(' '), // Store only the moves PGN notation
@@ -93,8 +90,6 @@ export const parseNormalPgnFile = (
 // with hint
 export const parseHintPgnFile = (
   filePath: string,
-  levelName: string,
-  story: string,
   lessonParent: LessonParent,
 ) => {
   try {
@@ -151,9 +146,9 @@ export const parseHintPgnFile = (
       const hints = extractHintsFromComments(game.comments);
 
       return {
-        level: levelName,
-        timer: timerPerLesson(levelName),
-        story,
+        level: lessonParent.level,
+        timer: lessonParent.timer,
+        story: lessonParent.story,
         description,
         moves: game.moves.map((move) => move.move).join(' '),
         pgnRaw,
