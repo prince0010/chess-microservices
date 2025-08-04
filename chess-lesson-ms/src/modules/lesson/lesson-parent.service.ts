@@ -17,7 +17,6 @@ import { transformSingleLessons } from './helpers/transform-lesson.helper';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
 import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
-import { getLevelNumber } from './helpers/adjust-level-name-lesson.helper';
 import { lessonParentDataSeed } from './seed/lesson-parent-data-seed';
 
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
@@ -30,7 +29,6 @@ import {
   ICountAndListLessonParents,
   ILessonParent,
   ILessonParentDetail,
-  ILessonParentSeed,
 } from './interfaces';
 import { LessonLevel, LessonParentName, LessonStoryName } from 'src/enum';
 
@@ -131,12 +129,13 @@ export class LessonParentService {
 
       const result: ILessonParentDetail = {
         id: lessonParent.id,
+        lessonFactor: lessonParent.lessonFactor,
         name: lessonParent.name,
         timer: lessonParent.timer,
         levelFrontend: lessonParent.levelFrontend,
         pointsPerLesson: lessonParent.pointsPerLesson,
         quantityToUnlockNext: lessonParent.quantityToUnlockNext,
-        level: getLevelNumber(lessonParent),
+        level: lessonParent.level,
         story: lessonParent.story,
         showHint: lessonParent.showHint,
         isTest: lessonParent.isTest,
@@ -162,9 +161,13 @@ export class LessonParentService {
     userUid: number,
   ): Promise<ILessonParentDetail> {
     try {
-      // STEP 1: Get all lessons with this level
+      // STEP 1: Get all lessons with this level but only from pgn 250 (isPreview:false)
       const allLessonsByLevel = await this.lessonRepository.find({
-        where: { level: lessonParent.level },
+        where: {
+          level: lessonParent.level,
+          story: lessonParent.story,
+          lessonParent: { isPreview: false },
+        },
       });
 
       if (!allLessonsByLevel || allLessonsByLevel.length < 10) {
@@ -248,7 +251,7 @@ export class LessonParentService {
 
         selectedLessons = selectedLessons.sort(() => 0.5 - Math.random());
       } else {
-        selectedLessons = shuffledLessons.slice(0, length);
+        selectedLessons = shuffledLessons.slice(0, 10);
       }
 
       // STEP 4: get amount of lessons test completed
@@ -260,6 +263,7 @@ export class LessonParentService {
 
       let lessonsDetail: ILessonParentDetail = {
         id: lessonParent.id,
+        lessonFactor: lessonParent.lessonFactor,
         timer: lessonParent.timer,
         level: lessonParent.level,
         levelFrontend: lessonParent.levelFrontend,
@@ -269,7 +273,7 @@ export class LessonParentService {
         story: lessonParent.story,
         showHint: lessonParent.showHint,
         isTest: lessonParent.isTest,
-        lessonsLength: length,
+        lessonsLength: 10, // is a test
         lessonsCompleted: 0,
         lastLessonPlayedId: 0,
         lessons: transformSingleLessons(selectedLessons),
@@ -380,14 +384,19 @@ export class LessonParentService {
 
         parents.push({
           id: lessonParent.id,
+          lessonFactor: lessonParent.lessonFactor,
           timer: lessonParent.timer,
           levelFrontend: lessonParent.levelFrontend,
           pointsPerLesson: lessonParent.pointsPerLesson,
           quantityToUnlockNext: lessonParent.quantityToUnlockNext,
           name: lessonParent.name,
           story: lessonParent.story,
-          level: getLevelNumber(lessonParent),
+          level: lessonParent.level,
           isTest: lessonParent.isTest,
+          isBot: lessonParent.isBot,
+          isGame: lessonParent.isGame,
+          isPreview: lessonParent.isPreview,
+          messageModal: lessonParent.messageModal ?? null,
           lessonsCompleted,
           lessonsLength,
           disabled,
