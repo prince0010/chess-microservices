@@ -149,7 +149,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     level: 'Level 2',
     quantityToUnlockNext: 5, // 5/10
     levelFrontend: 'Level 2',
-    showHint: false,
+    showHint: true,
     pointsPerLesson: 0,
     isTest: false,
     isGame: false,
@@ -166,7 +166,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     level: 'Level 2',
     quantityToUnlockNext: 5, // 5/10
     levelFrontend: 'Level 2',
-    showHint: false,
+    showHint: true,
     pointsPerLesson: 0,
     isTest: false,
     isGame: false,
@@ -183,7 +183,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     level: 'Level 2',
     quantityToUnlockNext: 5, // 5/8
     levelFrontend: 'Level 2',
-    showHint: false,
+    showHint: true,
     pointsPerLesson: 0,
     isTest: false,
     isGame: false,
@@ -200,7 +200,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     level: 'Level 2',
     quantityToUnlockNext: 5, // 5/10
     levelFrontend: 'Level 2',
-    showHint: false,
+    showHint: true,
     pointsPerLesson: 0,
     isTest: false,
     isGame: false,
@@ -217,7 +217,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     level: 'Level 2',
     quantityToUnlockNext: 5, // 5/10
     levelFrontend: 'Level 2',
-    showHint: false,
+    showHint: true,
     pointsPerLesson: 0,
     isTest: false,
     isGame: false,
@@ -234,7 +234,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     level: 'Level 2',
     quantityToUnlockNext: 5, // 5/10
     levelFrontend: 'Level 2',
-    showHint: false,
+    showHint: true,
     pointsPerLesson: 0,
     isTest: false,
     isGame: false,
@@ -285,7 +285,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     level: 'Level 3',
     quantityToUnlockNext: 1, // 1/1
     levelFrontend: 'Level 3',
-    showHint: false,
+    showHint: true,
     pointsPerLesson: 0,
     isTest: false,
     isGame: false,
@@ -302,7 +302,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     level: 'Level 3',
     quantityToUnlockNext: 5, // 5/42
     levelFrontend: 'Level 3',
-    showHint: false,
+    showHint: true,
     pointsPerLesson: 3,
     isTest: false,
     isGame: false,
@@ -319,7 +319,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     level: 'Level 3',
     quantityToUnlockNext: 5, // 5/42
     levelFrontend: 'Level 3',
-    showHint: false,
+    showHint: true,
     pointsPerLesson: 3,
     isTest: false,
     isGame: false,

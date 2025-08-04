@@ -12,8 +12,6 @@
 
 {[%csl Ga8][%cal Ga7a8] Promote a pawn to a Queen} 1. a8=Q *
 
-
-
 [Event "?"]
 [Site "?"]
 [Date "????.??.??"]
@@ -68,7 +66,8 @@
 [PlyCount "1"]
 [SourceDate "2025.05.20"]
 
-{[%csl Ge8][%cal Ge7e8]} {Promote a pawn to a Queen} 1. e8=Q *[Event "?"]
+{[%csl Ge8][%cal Ge7e8]} {Promote a pawn to a Queen} 1. e8=Q *
+[Event "?"]
 [Site "?"]
 [Date "????.??.??"]
 [Round "?"]
