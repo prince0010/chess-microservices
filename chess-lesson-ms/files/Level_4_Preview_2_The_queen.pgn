@@ -1,0 +1,19 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "The Queen"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/8/8/8/4Q3/8/8/2K5 w - - 0 1"]
+[PlyCount "0"]
+[SourceDate "2025.08.02"]
+
+{[%cal Ge4h7,Ge4h4,Ge4h1,Ge4e1,Ge4a4,Ge4a8,Ge4e8] Moves: Any number of squares
+in a straight line — vertically, horizontally, or diagonally.  When it’s
+strong:   • Very powerful in the middlegame and endgame, especially in open
+positions.   • Best placed in the center, where it controls many squares.  
+• Usually not moved early in the opening to avoid being attacked.  Value:
+About 9 pawns.}  *
+

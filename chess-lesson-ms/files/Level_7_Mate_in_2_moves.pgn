@@ -1,0 +1,3564 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/3BB3/1K6/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bd6+ Ka8 2. Bc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1kb5/8/1K6/1N2N2r/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nc6+ Ka8 2. Nc7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5K1k/8/6P1/8/4B3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. g6+ Kh8 2. Bd4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6q1/8/7p/5K1k/7p/8/8/Q7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qd1+ Qg4+ 2. Qxg4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7p/3B2p1/7k/7P/6PK/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. g3+ Kh5 2. Bf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3ppp2/3pkb2/r7/4K3/8/6B1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bh2+ Rf4 2. Bxf4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6pk/4K1p1/8/8/8/8/Q3R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rh1+ Kg8 2. Qa8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1prp3B/2k4B/K1p3N1/5P2/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Be2+ Kd4 2. Bf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3p1r2/2p2nR1/3k4/2N5/3K4/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rg5+ Ke6 2. Re5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4q3/2R5/3pk1p1/8/4PKP1/8/4N3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nd3+ Kf5 2. g4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5R2/R7/8/8/8/7p/2n1K2p/7k w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rf1+ Kg2 2. Rg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1prbp3/1p1k4/5P2/1PPKP3/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. e5+ Kc6 2. b5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4N1pp/8/5K1k/7p/8/4N3/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf4+ Kh6 2. Ng8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "b7/pk1r4/2p5/K3B3/8/8/8/6R1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rb1+ Kc8 2. Rb8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3K4/krN5/7R/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ra4+ Kb6 2. Ra6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/2pp1p2/4p2N/4P3/8/8/3K4/R7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ra8+ Ke7 2. Ng8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1r/5bkp/6p1/4P2P/3KN3/8/8/2B5 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. h6+ Kg8 2. Nf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p1p4/8/3k4/3P4/2K5/8/4Q3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qe5+ Kc6 2. Qc5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7Q/8/8/4B3/8/8/K1pp4/2k5 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qh1+ d1=Q 2. Bf4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5P1k/5K2/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. f8=R Kh6 2. Rh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/8/6K1/8/8/8/8/R7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Re1 Kg8 2. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/p7/5K2/8/7n/8/7p/Q7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Kf7+ Kh7 2. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3ppn2/2p1k3/4P3/2PPKP1r/8/4Q3/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. d5+ cxd5+ 2. cxd5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/4K2p/8/8/6N1/8/8/2B5 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bb2+ Kg8 2. Nh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "Q7/2N1pp2/3pp1p1/4k3/7P/4K3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qe4+ Kf6 2. Ne8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6pp/7k/4Pb2/B6K/6P1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. g4+ Kg5 2. Be7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/4rp2/1K6/4P3/4N3/8/8/R7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Ra8+ Kd7 2. Nc5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K5/4p3/4k3/4b3/8/8/5Q2/1B6 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ba2+ Kd6 2. Qb6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5kn1/3p2p1/8/3K4/8/8/5B2/5R2 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bc5+ Ke8 2. Rf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6bp/7k/8/5K2/8/8/2BR4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Kf5+ Kh5 2. Rh1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/kb6/p7/2K3B1/8/8/7Q w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bc8+ Ka7 2. Qb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r7/k7/p1K5/8/8/8/8/2B4R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Be3+ Kb8 2. Rh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4kbr1/2K1p3/8/8/4N3/8/8/3B4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bh5+ Rg6 2. Bxg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4K2R/8/1N6/B7/pq6/k7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rh1+ Qb1 2. Nc2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3rr3/8/4pk1K/2P1N3/3P4/3R4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rf1+ Ke5 2. Rf5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q4/4pp2/BN2kb2/2P5/4K3/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bc4+ Qd5+ 2. Bxd5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1kb2/2p5/4K1p1/4N3/8/5B2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bc6+ Kd8 2. Nf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1pp5/p1b5/k7/P6B/1PK5/R7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. b3+ Kb5 2. Bf1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k3q1/4K3/PP6/5P2/8/8/6B1/7Q w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bb7+ Kb8 2. a7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3rpb2/1K1k4/8/3P4/2N1P3/6B1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. e4+ Ke5 2. Bh2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/3K4/8/8/1q6/8/4Q3 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qe7+ Kc8 2. Qc7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p7/8/k7/8/K2N4/8/1R6 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nc5 a6 2. Nb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3K2k1/5ppp/8/8/8/8/2Q5/1B6 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qxh7+ Kf8 2. Qh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr4/1pp5/8/8/8/6P1/R4PB1/Q5K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bh3+ Kb8 2. Ra8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r3k1/5p2/2n2Pp1/8/8/P1P5/1P6/K6Q w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qh6 Re8 2. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6kr/5ppp/8/8/6N1/1P6/PKP5/6Q1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf6+ Kf8 2. Qc5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/5p1p/8/6N1/8/8/6K1/1Q6 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qxh7+ Kf8 2. Qxf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6r1/6pk/5pNp/8/8/8/6K1/1Q6 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf8+ Kh8 2. Qh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6rk/6p1/7p/6NP/8/8/1K6/R5Q1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf7+ Kh7 2. Qg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rk6/1p6/2p5/1PB5/8/8/1K2Q3/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qe8+ Kc7 2. b6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6kr/6p1/6Pp/2b3N1/8/5BK1/7Q/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qa2+ Kf8 2. Qf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1kbnr/pppp1ppp/2n5/4p3/2B1P2q/5Q2/PPPP1PPP/RNB1K1NR w KQkq - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qxf7+ Kd8 2. Qxf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bqkbnr/pppp3p/1n6/Q7/8/2P2B2/PP1P1PPP/RNB1K2R w KQkq - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bh5+ Ke7 2. Qe5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/4Bp1p/6p1/8/8/8/6K1/4R3 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bf6+ Kg8 2. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/2b4p/6p1/8/6N1/2K5/8/2B2R2 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rf8+ Kg7 2. Bh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/5p1p/5rn1/8/8/8/1Q4K1/B7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qxf6+ Kg8 2. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6nk/6p1/7p/7N/8/6P1/1B3P2/3B2K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bxg7+ Kh7 2. Bc2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5bk1/R7/8/6N1/8/8/6K1/3B4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bb3+ Kh8 2. Rh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/5N1p/8/8/8/6K1/R7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ra7 h5 2. Rh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r4/5pk1/5pp1/8/8/8/1K5Q/7R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qh6+ Kg8 2. Qh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5pk1/2N3p1/6P1/8/8/2K4Q/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qh6+ Kg8 2. Ne7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3Br3/5pk1/6p1/6P1/8/8/5K2/7R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bf6+ Kf8 2. Rh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rn1/3K2k1/5p2/5P2/5N2/8/8/7R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ne6+ Kf7 2. Rh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5b1k/6p1/5p2/4p3/4K3/8/4B3/5R2 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rh1+ Kg8 2. Bc4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p3R2/pkp5/8/1KPP4/4B3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. d5+ c5+ 2. Bxc5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/R7/8/4KN2/8/5B2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ra8+ Kf7 2. Bh5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/7R/8/3N4/3N4/8/8/6K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nb6+ Kb8 2. Nc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/3pkpp1/R7/4PP2/8/8/4K3/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. f6+ gxf6 2. exf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5p1p/4pkp1/4Npb1/8/8/1Q4K1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nc6+ e5 2. Qxe5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2R5/8/p7/1k1K4/p7/8/8/3R4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rb1+ Ka5 2. Rc5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/5K2/7k/2R1B3/4r3/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bg5+ Kh5 2. Rh3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6pp/6pk/3N4/7P/6PK/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. g4+ Kh4 2. Nf3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4b1kr/5p1p/8/8/8/5K2/4R3/4B3 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rg2+ Kf8 2. Bb4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5B2/8/8/qN6/8/1p6/pkp3K1/7R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bg7+ Qc3 2. Bxc3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/2pkp3/3n4/N7/q7/6K1/B2R4/4R3 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Be6+ Kd8 2. Nb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2bk4/8/2KPPPP1/7r/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. e7+ Ke8 2. f7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5K2/7k/7n/8/6N1/6Q1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf5+ Kh7 2. Qg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/pp6/k7/P1K5/1P1N4/2R5 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. b3+ Kxa3 2. Ra1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7p/6k1/6P1/8/6K1/8/Q7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qf6+ Kh5 2. Qh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/n7/k7/8/p7/4B3/3N4/1R4K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rb6+ Ka5 2. Nc4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3r4/7R/k7/2K5/1P6/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. b3+ Ka3 2. Ra5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1p6/kp6/1p6/7r/3BK3/6R1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ra1+ Ra3 2. Rxa3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7N/8/7p/5q1k/7P/6P1/8/R4BK1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Be2+ Qg4 2. Ra5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p1p3/2n1n3/4k3/4P3/3PK3/5R2/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rf5+ Kd6 2. Rd5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6pp/2B3k1/2n5/6K1/8/8/5R2 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Be8+ Kh6 2. Rh1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3ppp2/4kp2/8/1P2K3/2N2N2/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nd3+ Kd5 2. Ncb4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6pr/5pk1/1B3p2/8/6K1/5P2/7R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Be8+ Kg5 2. f4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/6pp/8/8/7N/6K1/6B1/7R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ng6+ Kg8 2. Bd5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1kr2/8/p3K2N/8/8/8/4Q3/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Kd6+ Kd8 2. Qe7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6B1/8/1N6/8/8/7R/2k1K3 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bb2+ Kb1 2. Nc3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r3k1/R7/3P1BK1/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rh7 Kf8 2. Rh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4kq2/Q7/2N2PP1/8/8/8/6K1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. f7+ Qxf7 2. Qxf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k1K5/8/P7/PP6/2N5/6B1/8/3r4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nb6+ Ka7 2. Bb8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2nkn3/q2r4/8/8/8/3Q4/3R3K/3R4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qxd7+ Qxd7 2. Rxd7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "B2N4/8/3pp3/2p5/2pk4/5P2/3KP3/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nc6+ Kd5 2. e4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2brk2r/1n1p1p1p/6p1/8/8/3N4/1Q3PPP/5RK1 w k - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Re1+ Kf8 2. Qxh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2R3b1/8/6kp/6rp/8/8/7K/Q4R2 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rxg8+ Kh7 2. Qh8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7R/2pk1p2/8/N3K3/2P2P2/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. c4+ Ke5 2. f4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/5bkr/7p/7p/B6P/8/5K1B/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Be5+ Kg6 2. Bc2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3pp3/N1p2p2/2pk1P2/6P1/3K4/5B2 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nc6+ Ke4 2. Bg2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1pp5/1p6/pk6/4P3/1K1R2n1/4B3 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rd4+ Kc5 2. Bb4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3r4/7R/2b1k3/3N4/4K3/8/3B4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Re6+ Kd5 2. Bb3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k1P5/8/K7/3q4/8/7B/1R6 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. c8=N+ Ka8 2. Rb8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/4p3/6N1/5K2/8/8/8/Q7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qh8+ Kf7 2. Qf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R3Nk2/5pp1/3p2p1/6P1/8/8/3K4/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf6+ Ke7 2. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3q4/7p/4N2k/3P3P/1B4P1/7K/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bd1+ Qg4 2. Bxg4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1ppp4/1nkb4/8/1PP5/2KP4/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. b5+ Kc5 2. d4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/5p2/6p1/3N2P1/8/6K1/7R/7R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rh8+ Kg7 2. R1h7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4Q2q/5K1k/8/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qe4+ Kh6 2. Qg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4B3/8/8/8/8/p7/2KN4/k7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bf7 a2 2. Nb3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/Nb5N/7b/2pppp2/2pk4/R5K1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nb5+ Ke4 2. Nf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1K1k4/4R3/3P4/4N3/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf6+ Kd8 2. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3K4/8/4k3/4p3/2R5/6Q1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qg5+ Kd4 2. Qc5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r6/1p2RR2/pk5r/N7/1K6/8/8/5B2 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rxb7+ Rxb7 2. Rxb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/R7/1B3Pk1/4P3/6K1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rg5+ Kh4 2. Be1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/1p6/1N6/P7/5K2/8/2R5/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rc8+ Ka7 2. Ra8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/p1p5/1p6/3N4/8/6P1/5PBP/3R2K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ne7+ Kb8 2. Rd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4N3/6pp/6p1/6k1/3P2P1/5BK1/R7/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ra5+ Kh6 2. g5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/4p3/PK6/1N6/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. a7 e5 2. Nc7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/k1K5/8/8/3b3R/8/8/r6R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rxa1+ Bxa1 2. Ra4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1N6/8/4ppp1/3r1kp1/8/B3K3/4B1P1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. g4+ Ke5 2. Nc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/4Kp1p/6p1/6P1/8/8/8/Q7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qa8+ Kg7 2. Qf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7R/k7/2K5/8/8/r7/7R w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. R1h6+ Ka5 2. Ra7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/8/p7/1p5R/pkp5/1P6/1K3B2/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bc5+ Ka5 2. b4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3pp3/1K1k4/4pP2/2P5/3PPN2/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. c4+ Kd4 2. e3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r4/2k5/1p1p4/2p5/2K5/8/8/Q6B w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qa7+ Kc8 2. Qb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N1q2/8/k7/4Q3/P2K4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qb5+ Ka7 2. Qb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6p1/8/6k1/5N2/2BR2K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rd3+ Kh4 2. Rh3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5brn/8/5p1k/5R2/6P1/8/2B3K1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rh5+ Kg7 2. Rh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4b1pp/4N1k1/5R2/4P3/6K1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf4+ Kh6 2. Rh5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/6p1/3Q4/7r/3B4/8/8/6K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qf8+ Kh7 2. Qxg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rk4/4p3/8/1P1N4/3K4/8/5Q2/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qf8+ Kd7 2. Qxe7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5R2/8/6p1/7k/8/6K1/6PP/5R2 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rh8+ Kg5 2. h4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1B5q/pp2R3/1k6/8/1P6/PK6/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Re5+ Kb4 2. a3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6kr/3K4/6PP/8/8/8/6B1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bd5+ Kf8 2. g7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4K2k/7P/5NPP/8/8/1B6/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. g6+ Kg8 2. h7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r7/1k6/8/2R5/8/6Q1/4K3/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qc7+ Ka6 2. Ra5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/5k2/6p1/8/8/2Q5/6K1/B7 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qf6+ Kg8 2. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/5k2/5p2/7N/6K1/8/5Q2/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qxf6+ Kg8 2. Qg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rk1r2/3p3R/8/8/8/6K1/3R4/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rdxd7+ Ke8 2. Rhe7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1k/R1R4p/8/8/8/8/6K1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rxh7+ Kg8 2. Rag7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k4r2/8/8/KP6/5BB1/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bf3+ Ka7 2. b6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1kr5/8/PKP5/8/8/8/6B1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. a7+ Ka8 2. c7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3N4/B7/5ppp/6k1/6P1/5P1P/6K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ne5+ Kh3 2. Bf1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r7/8/k7/p7/2K5/3N4/8/1R6 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nc5+ Ka7 2. Rb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6pp/6pk/8/5PK1/8/3B4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. f4+ g4 2. Bxg4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/2K4R/8/3N4/7N/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf6+ Kf8 2. Ng6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7R/kr6/1p6/4K3/1PPN4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nc6+ Ka6 2. b5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3N3k/8/8/3K4/8/3B2R1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf6+ Kh8 2. Rg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k5r/8/4K3/1PP5/8/5B2/R7/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ra8+ Kc7 2. b6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4K3/r7/2pp4/3k4/3P4/2PP4/4P2R/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. e4+ Ke6 2. Rh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/b6p/8/7k/3N1K2/8/8/4B1R1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rg5+ Kh6 2. Nf5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4q3/1p6/1k6/6Q1/1PP5/8/1K6/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qc5+ Ka6 2. Qa5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2N5/3p4/2br4/3k4/8/3P2R1/5Q2/6K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rg5+ Ke6 2. Qf5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4q2/3N2b1/2K5/8/2kp4/R4R2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nb6+ Kb4 2. Rfb3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4NK2/7k/R7/8/3b4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ng6+ Kh5 2. Rh3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3rk3/3r1p2/8/4N3/8/6K1/8/4R3 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ng6+ Re7 2. Rxe7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/Q3p1NK/3r4/4k3/4B3/4P3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qxe7+ Re6 2. Qxe6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/5p1p/7k/4P1p1/2b3P1/6N1/6K1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nf5+ Kg6 2. Rg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/5pp1/8/3N4/R7/6P1/5P1P/6K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ne7+ Kh7 2. Rh4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5bk1/6p1/8/Q7/8/6P1/5P1P/1B4K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ba2+ Kh7 2. Qh5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k2q4/pR6/1p6/8/8/2K2B2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Rxb6+ Qd5 2. Bxd5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N4/3p4/ppp5/1kp5/7R/2K5/8/3B4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Ba4+ Ka5 2. Nb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1pp5/3p4/P2k4/8/1PK4Q/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Qf4+ Kc5 2. b4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1nbr4/Pp1p1B2/1pkp4/2p5/2K5/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Bd5+ Kc7 2. a8=N# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rk6/4N2R/1P6/8/5b2/8/6K1/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.05.21"]
+
+{Give mate in two moves !!} 1. Nc6+ Kc8 2. b7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4n1n1/3Ppkpp/8/5K2/5N2/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves!!} 1. d8=N+ Kf8 2. Nfe6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4bbk1/7p/8/8/4K1N1/8/8/6R1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+[SourceDate "2013.06.19"]
+
+{Give mate in two moves !!} 1. Nh6+ Kh8 2. Rg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6rk/6p1/R7/R3N3/8/5P2/5PK1/1q6 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves!!} 1. Nf7+ Kh7 2. Rh5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/3N4/K1P5/8/4Q3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves!!} 1. Qe6+ Kc5 2. Qc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/bppp4/p1k5/8/PPK1N3/3N4/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves!!} 1. Ne5+ Kb6 2. a5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2bppp2/4kp2/1P4p1/1P2K3/4B3/4B3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+[SourceDate "2013.06.19"]
+
+{Give mate in two moves!!} 1. Bc3+ Kd5 2. Bc4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7p/5pp1/4p1k1/8/3B2K1/8/6B1 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Be3+ Kh5 2. Be2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5ppq/1B2p1kp/5p2/5K2/5BPP/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. h4+ Kf5 2. Bd7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2Pr4/4p3/3k4/3P4/3K4/2R5/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Rc5+ Kd6 2. c8=N# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2r5/1pp4R/p1k1p1p1/P4p2/2K1P3/3P2B1/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. d4+ exd4+ 2. exd4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/p7/8/k1KN4/8/1B6/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Nb3 a5 2. Nc5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5bpp/2B1p2k/4P3/5p1K/6P1/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. g4+ Kg5 2. Be3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/7p/5K2/8/R4Nk1 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Ng3+ Kh2 2. Rh1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/6r1/8/5K2/8/6r1/3R4/3R4 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Rd8+ Kf7 2. R1d7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1kr5/7R/P7/8/NK6/8/6b1/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. a7+ Ka8 2. Nb6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4p1p1/8/4k3/4P3/8/Q4K2/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Qd5+ Kf4 2. Qf5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1K6/7Q/k7/8/P2q4/8/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Qb6+ Ka4 2. Qb4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7p/6pk/8/7P/B3K3/q7/5Q2 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Qf4+ Kg7 2. Qf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3R4/6kp/8/4N3/6pK/4r3/6r1/5R2 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Rf7+ Kh6 2. Rd6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5b1k/7p/8/5B1r/4KB2/8/8/R7 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Be5+ Kg8 2. Be6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1n2P3/5R2/8/3Pk3/2K5/7q/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. e8=Q+ Kd5 2. Qc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3kB3/3P4/3P4/8/6K1/4q3/1BR5 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Rc7+ Ke8 2. Bg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/R7/4k3/2P2p1P/3K1P2/6q1/4B3 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Bc3+ Kf5 2. Rf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r4k/8/5K2/8/3B4/8/8/R7 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Kf7+ Kh7 2. Rh1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/6K1/2B2N2/8/8/r7/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Nh6+ Kh8 2. Bd4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/5pkp/5p2/8/6P1/6NK/3q4/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Nf5+ Kg6 2. Rg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5br1/7k/5p2/5R2/6P1/3B4/6K1/8 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Rh5+ Kg7 2. Rh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5b1r/6kn/5p2/7P/5pP1/6NK/4B3/4R3 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Nf5+ Kf7 2. Bc4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/B2pb3/2p1b1P1/3k4/3P4/2KP3r/8/4R3 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Re5+ Kd6 2. Bb8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/1B3p1k/4p2P/7K/8/3p4/3q4/R7 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Be4+ f5 2. R1a7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5p1k/7P/5p1K/5r2/7P/7r/R5R1 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Rg7+ Kh8 2. Ra8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6p1/BR5p/6k1/3qP3/6K1/5N2/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Nh3+ Kh5 2. Be2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3q1p2/5k2/8/5P2/5K2/8/6Q1 w - - 0 0"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Qg5+ Ke6 2. Qe5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k1r4/4r3/3q4/1P3P2/P1KP4/5Q2/6B1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.05.27"]
+
+{Give mate in two moves !!} 1. Qa8+ Kc7 2. Qb7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/2NB4/1K6/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.18"]
+
+{Give mate in two moves!} 1. Na6+ Ka8 2. Bc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/k2K4/7R/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Give mate in two moves!} 1. Kc7 Ka7 2. Ra5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k5B/8/1K2B3/8/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Be5+ Ka8 2. Bd5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3n4/p7/k2N4/2K5/1P6/1P6/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. b5+ Ka5 2. Nc4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/q7/k1p5/2P5/1PK5/8/6Q1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Qxc6+ Qb6 2. Qxb6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5q2/2p5/2k5/2P5/2KR4/7B/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Bg2+ Qf3 2. Bxf3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/7p/3N1K2/7k w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Nf1 h2 2. Ng3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3qp3/1P2kp2/8/4K3/8/8/6Q1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Qg8+ Kd6 2. Qd5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/1B5p/5K1k/8/6P1/6P1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. g5+ Kh5 2. Bf3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q4/8/4KNk1/2B5/8/8/5R2/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Rg2+ Kh6 2. Be3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4B3/2p5/1p1pb3/p1k1p3/4P3/PPPP4/2K5/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. b4+ axb4 2. axb4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4Kp2/5Nk1/8/5q2/8/4Q3/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Qh5+ Kg7 2. Qh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1r5r/3K4/k7/3RR3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Ra3+ Kb5 2. Reb3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3R3p/5pk1/8/6K1/q7/4Q3/1b6 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Qe8+ Kh6 2. Qh5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "BB1r4/7p/5K1k/8/8/6P1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Bf4+ Kh5 2. Bf3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/B2pp3/2pk1r2/8/3PK3/5N2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Bb8+ Ke6 2. Ng5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4N3/8/k1K4B/p7/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Nc5+ Ka5 2. Bd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3r3r/4N1Nk/5K2/6P1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Give mate in two moves!} 1. g3+ Kh3 2. Nef2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/R6r/6k1/4K2p/8/8/R7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find mate in two moves!} 1. Rg1+ Kh5 2. Ra5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7p/5K1k/5P1q/8/1Q6/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Qe2+ Qg4+ 2. Qxg4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/p4q2/1k1K4/8/2P1Q3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Qc5+ Ka4 2. Qb4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2q5/7R/p1kp4/8/PKPP4/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. d4+ Kb5 2. a4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6p1/8/3B1N1k/5K2/6P1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Bf6+ g5 2. g3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2r1kpb1/5p2/1B1K4/8/8/5R2/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Re2+ Kd8 2. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/5p2/5Np1/6K1/8/q7/8/4R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Re8+ Kg7 2. Rg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/7b/5K1B/8/6N1/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Bg7+ Kg8 2. Nh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "Q4q1k/6p1/3bB3/8/3K4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Qh1+ Bh2 2. Qxh2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4B1pp/7k/3r4/7K/4R3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Re6+ g6 2. Bf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3B2pp/5pk1/8/6K1/2r3N1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Be8+ Kh6 2. Nf5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4Q2q/5K1k/8/7p/8/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Qe4+ Kh6 2. Qg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4q3/7p/8/7k/5P2/3Q2K1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Qf5+ Kh6 2. Qg5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R5R1/8/3bb3/8/3K4/8/3k4/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Rg2+ Ke1 2. Ra1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p2B4/8/k1P5/2K5/8/3Nr3/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Nb3+ Ka6 2. Bc8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4R1rk/7p/6pb/2B3N1/5K2/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Bd4+ Bg7 2. Nf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/2Q5/pp6/k6K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Qd4 Kb1 2. Qd1# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1B6/8/8/8/8/5R2/pp6/k6K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Rf1+ b1=Q 2. Be5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2pp1N2/1bk2P2/7n/2KPP3/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Nd8+ Kd6 2. e5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4R3/4Bnkp/8/3r2P1/6K1/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Bf6+ Kg6 2. Rg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/5p2/5N2/4PqP1/8/8/6K1/7R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Rh8+ Ke7 2. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k4r2/8/BK6/8/3B4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Bb7+ Kb8 2. Be5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4r2p/1R6/7k/5K2/6P1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. g3+ Kh3 2. Rh5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1r6/8/4R3/1k1K4/8/PP6/2B2r2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Bd2+ Ka4 2. Ra5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N4/6pp/4Nb1k/5K2/8/6P1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Nf7+ Kh5 2. Nf4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1k6/p2K4/B4Q2/2q5/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Qb7+ Ka5 2. Bb4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3pp3/2p5/2bk3B/2N5/3KP3/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Bf7+ e6 2. e4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1p6/p1p1R3/Pk6/1P3r2/1K6/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Re4+ c4 2. Rxc4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6pp/3q3k/7P/6K1/1Q6 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Qe1+ Qf2+ 2. Qxf2# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/8/8/2b1K3/8/6R1/6R1/3r4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Give mate in two moves!} 1. Rg8+ Kf7 2. R2g7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/8/4K3/1pq5/8/1P6/8/5Q2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. Qf7+ Kd8 2. Qd7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/pppn4/1k1p4/3P4/PPP5/KN6/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Find the mate in two moves!} 1. a4+ Ka5 2. b4# *
+

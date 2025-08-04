@@ -1,0 +1,19 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "The Pawn"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/8/8/8/4P3/8/8/2K5 w - - 0 1"]
+[PlyCount "0"]
+[SourceDate "2025.08.02"]
+
+{[%cal Ge4e5] Moves: One square forward (or two squares on its first move);
+captures one square diagonally.  When it’s strong:   • In the opening, it
+helps control the center and opens lines for your pieces.   • In the
+middlegame, it can create strong structures or passed pawns.   • In the
+endgame, it can promote to a queen or other piece if it reaches the last rank.
+Value: 1 pawn, but a passed pawn can become very powerful.}  *
+

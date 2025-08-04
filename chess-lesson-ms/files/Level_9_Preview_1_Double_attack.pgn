@@ -1,0 +1,597 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Double attack"]
+[Black "sample 1"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p2npn1p/1pk3p1/2p1P3/2P5/1PB2N2/P3K1PP/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2018.03.29"]
+
+{Double attack is one of the most important motif in chess. Double attack is
+called when we attack two pieces of the opponent in one move!} 1. e6 {The pawn
+moves forward and attacks both knights, creating a double attack, White wins
+material. This kind of double attack is also called as "fork" as the pawn
+creates a fork by threatening to take to both directions.} Nd6 2. exd7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Double attack"]
+[Black "sample 2"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6kp/1pBbnpp1/p1p5/4K3/1P3NP1/P1P2P1P/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2018.03.29"]
+
+{Double attacks can be executed with all the pieces. Sometimes it is even
+possible with the king. For example in this position with plays} 1. Kd5 {
+double attacks the knight and the bishop and one of the pieces gets lost.} Kf7
+2. Kxd6 $18 {In this chapter, you will need to find a lot of hidden double
+attack to win material.} *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3r1k1/pp1bqpbp/2p3p1/3p1P2/3P4/2PB1Q2/PP1B2PP/R4R1K w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. f6 Bxf6 2. Qxf6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p1k2r1b/1ppp4/4p1P1/8/2PB4/PPK1R3/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. g6 Bxg6 2. Bxg6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/ppq2ppp/3p4/n2Qp3/7b/2P5/PPB2PPP/R1B2RK1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Qe4 f5 (1... Bf6 2. Qxh7#) 2. Qxh4 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/2q1bppp/8/pn1p1p2/8/2P2NP1/1P1N1P1P/R2QR1K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Qe2 Nd6 (1... Bf6 2. Qxb5 $18) 2. Qxe7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1R4pk/p6p/5K1P/PP3B1b/7r/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Kg3 Rd2 2. Kxh3 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1k2r/pp2bppp/2qp1n2/3Np3/4P3/8/PPP2PPP/R1BQKB1R w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Bb5 Qxb5 2. Nc7+ Kf8 3. Nxb5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rr4/1p4pp/p2b1k2/5p2/4P3/1B5P/P4PP1/3RR1K1 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Rxd6+ Rxd6 2. e5+ Ke7 3. exd6+ $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1b3r1k/1b2Nppp/3q4/1np5/1p6/1P3N2/1BP2PPP/3QR1K1 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Bxg7+ Kxg7 2. Nf5+ Kg8 3. Nxd6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4kn1/ppp2pp1/1b6/3P3p/6q1/PP1N2P1/1B1PQ2P/3K1R2 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Rxf7+ Kxf7 2. Ne5+ Kf8 3. Nxg4 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/Q5b1/6k1/4r2p/8/6PP/5PK1/1r6 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+{Smiley} 1. Qa6+ Bf6 (1... Kf7 2. Qa2+ $18) (1... Kh7 2. Qd3+ $18) 2. Qd3+ Kg7
+3. Qxb1 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/pp3ppp/2q3r1/2p5/3p4/1B3N2/PPP2PPP/3QR1K1 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Bxf7+ Kxf7 2. Ne5+ Kg8 3. Nxc6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/4P2p/3pq1p1/8/7Q/8/6PP/6K1 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+{Smiley} 1. Qxh7+ Kxh7 2. exf8=N+ Kg8 3. Nxe6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/p4pp1/bpn1p2p/2n5/P7/2P2NNP/1PB2PP1/R2R2K1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. b4 Nb7 2. b5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/1pp2ppp/8/pn5b/3p4/P2P3P/1PPB1PP1/R3RBK1 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Re5 Nd6 (1... Bg6 2. Rxb5 $18) 2. Rxh5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4b1k1/R4pp1/7p/2pPn3/2Pp4/3P1P2/6PP/6K1 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Re7 Nxd3 2. Rxe8+ $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rn1qk2r/pb1p1ppp/1p1bp3/7n/2P1P3/1NN5/PPQ2PPP/R1B1KB1R w KQkq - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+{Smiley} 1. Qd1 Nf6 (1... Bb4 2. Qxh5 $18) 2. Qxd6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r2/1p4pk/p4n1p/3p1p2/1n1P4/1P3N1P/P4PPB/3R2K1 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Bd6 Re8 2. Bxb4 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/rpr5/8/1K6/8/1P6/4Q3 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Kb5 Ra5+ 2. Kxc6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1b1r2k1/5pp1/7p/3p1q2/5P1n/Q3P2P/6P1/B2R1BK1 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Qe7 Rc8 2. Qxh4 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/p4p1p/6p1/3p4/Q6P/6P1/P2r1PK1/8 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Qa5 Rc8 2. Qxd2 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1bk1/2p3p1/p4p2/1p1b1P1p/7P/P4Nq1/1PP1Q1P1/1KBR4 w - - 0 0"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Rxd5 Rxd5 2. Qe6+ Kh7 3. Qxd5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4R3/5pk1/3r4/b4b1p/3p3P/6P1/5PBK/5N2 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Re5 Kg6 2. Rxa5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r2bk1/q4pp1/3p3p/p2P4/6n1/1P1B1NP1/4QPKP/4R3 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Bf5 Rb8 2. Bxg4 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5pkp/4b1p1/1n4q1/8/pN3B1P/P3RPP1/4R1K1 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Re5 Qf4 2. Rxb5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3r3/1pn1bkpp/5p2/p1pP4/P7/2N2B1P/1P3PP1/3RR1K1 w - - 0 0"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Rxe7+ Rxe7 (1... Kxe7 2. d6+ Kd7 3. dxc7+ $18) 2. d6 Rd7 3. dxc7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4n3/2k1nrp1/8/2p1K3/5N2/2N3PP/3R4 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+{Smiley} 1. Ke5 Ng8 2. Rd6+ Kc5 3. Rxe6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1rk1/p3bpp1/7p/2p4n/2NpB3/P5P1/1PP2P1P/3RR1K1 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Bf3 Bf6 (1... Nf6 2. Rxe7 $18) 2. Bxh5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r3rk1/5ppp/p2b4/2pN4/6b1/2P3P1/1P1R1PBP/4R1K1 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+{Smiley} 1. Ne3 Bh5 (1... Be7 2. Nxg4 $18) 2. Rxd6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/p3rpp1/RpB2b1p/8/6n1/2P3B1/RKP2PPP/3r4 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Bf3 Ne5 (1... Rd2 2. Bxg4 $18) 2. Bxd1 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/5pp1/7p/3p1b2/8/1rP2NPP/5PK1/4R3 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Nd4 Be4+ (1... Rb1 2. Re8+ Kh7 3. Nxf5 $18) 2. Rxe4 dxe4 3. Nxb3 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/1p3pp1/p1b3np/2Qp4/3B3P/P4qPN/1PP1rP2/2KR4 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+{Smiley} 1. Ng1 Qe4 2. Nxe2 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2R5/5pk1/7p/6p1/PK6/6P1/b3nP2/8 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Rc2 Bd5 2. Rxe2 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/p2b1ppp/Qp3b2/8/5q2/5N2/PPB2PPP/4R1K1 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Qd3 g6 (1... Bc6 2. Qxh7#) 2. Qxd7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3r1k1/ppn2pp1/7p/3pn3/3N2q1/B1P3Pb/PPQ2P1P/R3R1KB w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+1. Bd6 f6 2. Bxc7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/ppn2pp1/2p4p/7Q/8/2Pq1NP1/bP3PBP/4R1K1 w - - 0 1"]
+[PlyCount "7"]
+[SourceDate "2013.04.12"]
+
+{Smiley} 1. Qa5 Bd5 2. Qxc7 Bxf3 3. Bxf3 Qxf3 4. Qxd8+ $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r1k1/pp4p1/2b5/3pnpr1/8/1B4P1/PPP5/2KRR1N1 w - - 0 0"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Rxe5 Rxe5 2. Nf3 f4 (2... Rxg3 3. Nxe5 $18) 3. gxf4 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/pr3pp1/2p1n2p/3pn2b/1P6/1PP1P1PP/1N1R1PB1/R4NK1 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. g4 Bg6 2. f4 Nd7 3. f5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2q2k1/b1p2ppp/8/3pr3/1P6/1N5P/2PQ1PP1/R4RK1 w - - 0 0"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. Rxa7 Rxa7 2. Qd4 Re2 3. Qxa7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2B3k1/p4p1p/5q2/n1b5/8/6P1/1P2QP2/5NK1 w - - 0 0"]
+[PlyCount "5"]
+[SourceDate "2013.04.12"]
+
+1. b4 Bxb4 2. Qg4+ Qg6 3. Qxb4 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/p2p1rpp/b2Rp3/q1b5/P1p5/2P2NB1/1P2QPPP/R5K1 w - - 0 0"]
+[PlyCount "3"]
+[SourceDate "2013.04.12"]
+
+{Smiley} 1. b4 cxb3 2. Rxa6 $18 *
+

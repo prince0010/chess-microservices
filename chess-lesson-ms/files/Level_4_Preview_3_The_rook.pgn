@@ -1,0 +1,18 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "The Rook"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/8/8/8/4R3/8/8/2K5 w - - 0 1"]
+[PlyCount "0"]
+[SourceDate "2025.08.02"]
+
+{[%cal Ge4e8,Ge4h4,Ge4e1,Ge4a4] Moves: Any number of squares vertically or
+horizontally.  When it’s strong:   • Works best in the endgame and on open
+or semi-open files.   • Two rooks together (doubled rooks) can be very
+dangerous.   • Often used to attack the opponent’s back rank or support
+passed pawns.  Value: About 5 pawns.}  *
+

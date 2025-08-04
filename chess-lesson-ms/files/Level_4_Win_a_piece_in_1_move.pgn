@@ -1,0 +1,3375 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/p7/1P3K2/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.08"]
+
+{Win the black pawn !} 1. bxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/8/5n2/4P3/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.08"]
+
+{Win material in one move!} 1. exf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/3K4/4N3/6r1/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Nxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3r4/7k/4N3/1K6/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Capture the black rook!} 1. Nxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/3N4/1q6/6K1/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Nxb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K2/8/8/8/2k5/6p1/8/7N w - - 0 1"]
+[PlyCount "1"]
+
+{Grab the pawn!} 1. Nxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "B7/2k5/8/5K2/8/8/8/7q w - - 0 1"]
+[PlyCount "1"]
+
+{Capture the queen!} 1. Bxh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/4K1B1/8/4p3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Avoid the promotion of the pawn!} 1. Bxe2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K6/5r2/8/8/2B3k1/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6K1/1b6/8/6k1/4B3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p7/8/1k6/8/8/8/5KB1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the pawn!} 1. Bxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/5r2/1K6/3B4/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/5B1K/8/8/8/1q6/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2B4K/8/8/2k5/6b1 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k2r/8/8/8/8/8/8/4K2R w Kk - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Rxh8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4k3/8/4K3/8/r6R w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Rxa1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/6K1/1r3R2/2k5/8/8 w - - 0 1"]
+[PlyCount "2"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Trade off the rooks!} 1. Rxb4 Kxb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2n5/6k1/8/8/1K6/8/2R5 w - - 0 1"]
+[PlyCount "1"]
+
+{Capture the knight!} 1. Rxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/q7/6k1/4K3/8/4Q3 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3Q4/8/8/1k6/7q/1K6/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxh3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2Q5/6k1/8/8/8/7p/1K6 w - - 0 1"]
+[PlyCount "1"]
+
+{Grab the black pawn!} 1. Qxh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6K1/2r5/8/6k1/8/8/2Q5 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/5k2/5p1p/4K1P1/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Capture the pawn, which gives you check!} 1. gxf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1pkn4/2P5/2K5/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Capture that piece, which gives you check!} 1. cxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3r1b2/4P3/4k3/8/3K4 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. exd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/K7/8/8/2k5/4b1n1/5P2/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. fxe3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/8/2K2r1q/6P1/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. gxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/3r1b2/8/4N3/2K5/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4n3/1q4k1/3N4/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3K4/8/4Nk2/6q1/3r4 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6k1/1r3b2/3N4/8/2K5/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/8/3q3b/8/5B2/4K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/5n2/2r5/3BK3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxf5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6r1/5B2/8/8/8/kp6/2K5/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/1q5b/8/8/4B3/3K4/6n1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/6r1/8/8/8/3q2R1/6K1/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxg7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5r2/1k6/b4R2/8/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2K5/8/6n1/2r3Rq/8/8/5k2 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxc4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k3n1/8/1K4Rr/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxh3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4K3/8/4R2b/3k4/8/4r3 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxe1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/K6q/8/8/8/4k3/8/1b5R w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/2b3r1/8/4Q3/5K2/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxc7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3r4/6q1/8/8/3Q4/3K4/6k1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/2K5/4n3/8/2Q5/1r6/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k4/1n6/2Kb4/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/r7/5n2/8/3Q4/8/8/K7 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2b1rk2/3P4/8/8/5K2/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. dxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/4n1p1/5P2/6K1/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. fxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/8/8/3q1r2/4P3/8/1K6 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. exd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/q7/8/1K6/5r2/4B3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Bxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/1n6/4r3/3B4/8/3K4 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Bxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5n2/3k4/4N3/6r1/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Nxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/4b3/1p6/3N4/8/8/8/4K3 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Nxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/5p2/2q5/4NK2/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Nxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3q4/5N2/2K5/6r1/2k5/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Nxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/2p3r1/4N3/8/4K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Nxg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6k1/8/2N5/8/1q1b4/6K1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Nxb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k2r/8/8/8/8/8/4K3/1q5R w k - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Rxb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/3b4/8/8/3R1p2/8/8/1K6 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Rxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r4/8/k7/b2R4/8/8/8/6K1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Rxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/1K6/8/4p3/2b1R2r/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Rxh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K3k1/q3R2p/8/8/8/8/4r3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Rxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/q7/8/8/3Q4/8/8/1K4b1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Qxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/4b3/8/8/r3Q3/8/8/6K1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Qxa4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/1p3n2/8/3Q4/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take the piece with higher value!} 1. Qxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p6/P3k3/8/4K3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. axb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/k4p2/6P1/8/2K5/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. gxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/5p2/4P3/2k5/8/4K3 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. exf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/3N4/1b6/4K3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Nxb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/5N2/8/1K4p1/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Nxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7r/5N2/2k5/6K1/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Nxh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4K3/8/6N1/8/5q2/2k5/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Nxf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5b2/8/6k1/2B5/8/8/2K5 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3K4/2B5/6k1/n7/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxa2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1K2B3/8/6p1/4k3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/7n/3k4/8/3K4/3B4 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxh5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2q5/8/4B3/8/8/4K3/8/6k1 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4B3/5K2/8/8/p7/2k5/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxa3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2r5/4k3/8/4KB2/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/3B4/8/8/6p1/2K5/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Bxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2r5/4k3/8/4K3/8/8/2R5 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Rxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/3k4/1r3R2/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Rxb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5K2/r5R1/8/8/4k3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Rxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/5b2/8/4K3/8/5R2 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Rxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/3k3r/8/4K3/4Q3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxh5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3Q4/5k2/1n6/8/3K4/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/5Q2/8/8/2q5/8/6K1 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k1K3/8/r7/8/8/3Q4/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxa6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/4Q3/8/3K4/8/4q3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxe2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1k6/8/8/8/1K1Q2q1 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p3k1/8/8/5QK1/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxc7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/2Q5/8/1K6/8/8/2p5/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/6Q1/4K3/8/3p4/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Win material in one move!} 1. Qxd3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2b1r3/3P4/2k5/8/6K1/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. dxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/4r1q1/5P2/8/8/2K5/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. fxg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1q1b4/2P5/6k1/8/5K2 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. cxb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/8/8/2n1r3/3P4/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. dxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1r1b4/2P5/8/6K1/3k4/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. cxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/5K2/8/4n1q1/5P2/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. fxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K5/8/8/3r1q2/4P3/3k4/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. exf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6K1/8/8/4k3/5N2/3b4/6r1/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4N3/K5r1/5q2/8/5k2/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "b7/2N5/n7/4k3/8/8/8/7K w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/8/2q5/4N3/2b5/K4r2/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4kn2/2r3b1/4N3/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxg5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4K1n1/6k1/5N2/3q4/4r3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxe3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2K2k2/8/5N2/3p4/4q1b1/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3n4/8/2N5/2k5/1r1p4/4K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "b7/3q4/1N2k3/8/4K3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6q1/1bk5/8/3B4/8/5K2/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/4K3/8/2B5/1n6/4r3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxe2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k2b2/8/1p6/2B5/3q4/K7/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/3p4/4K3/3B4/8/5q2 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/3n4/4B3/8/8/1r2K3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4p3/3B2k1/8/1r6/6n1/4K3 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/4K3/3B4/8/1b3q2/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/8/8/q1R1K3/8/8/8/2r5 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/8/8/2nR3b/8/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxh5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3K4/5n2/8/8/8/6k1/8/1q3R2 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/1K6/4n3/8/8/1r2R3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1b6/8/4k3/8/5K2/8/1R3n2 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/8/8/b3R2q/8/4n3/8/4K3 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6b1/4k3/2p5/1K4R1/6r1/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/3R2q1/8/8/8/3n4/5K2 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K6/8/8/5p2/8/2r2Rb1/8/k7 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2n4R/8/3pK2r/8/5k2/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxh5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2q5/8/6K1/5Q2/8/4k3/8/1b6 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/7b/4n3/5Q2/8/8/2K5 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K5/8/4Q3/8/6q1/6k1/r7/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxg4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6r1/5k2/8/5n2/6Q1/8/8/6K1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxg8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1q4QK/k7/4n3/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxb7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1k6/3b4/K1Q1r3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxe3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q6/6k1/8/8/8/1Q2r3/8/1K6 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/4Q1n1/8/8/1r2K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/2KQ3r/4p3/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxh6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5K2/5Q2/8/7n/8/5q2/4k3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxf3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "K3n3/8/1rQ5/k7/8/8/6b1/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k4/1r6/8/1Q1p4/8/1K1b4 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5qk1/4Q1b1/8/2K1p3/4B3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxf7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/b3k3/3r4/4n3/3Q4/4K3 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxa5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7k/3p2n1/8/8/2r3QK/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r2/8/2q2Q2/5K2/4n3/8/8/3k4 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5BK1/8/8/5nQb/8/8/6q1/5k2 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxg2+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4K1k1/3Q4/3bn3/8/q7/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxa4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2KQ1r2/4b3/8/3p4/3k4/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2q1Q1K1/5n2/4b3/8/5k2/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/4p1b1/3k1P2/2n5/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. fxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/4Kn2/8/3p4/4P3/8/4r3 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2b3k1/1P6/8/5rK1/6p1/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/2Kn4/2p5/8/8/8/2r5 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1q3k2/4p3/3P4/4Kp2/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/8/4Kn2/1r6/2P5/8/b7 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/3p2p1/r3P1K1/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/8/3N4/1b3p2/2p5/1K6/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3K2k1/4n3/8/b2n4/1P6/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. bxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/4n3/3K1b2/3pP3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. exf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/3r1b2/4P3/4p3/5K2/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Kxe3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p6/4bk2/2N5/4r3/1K6/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5n2/5k2/4N3/2r4K/3q4/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxc4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k4K2/4N3/6q1/8/1b1N4/8/4r3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxe2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K4k1/8/8/4N3/6N1/3r4/7q/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4q3/4N1k1/6r1/3n4/8/2N1K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Ncxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/r1N2K2/8/1r1q4/8/4N3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nexd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k2N1/4n2b/6N1/8/4K2p/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. N8xe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/8/6b1/2r5/5p2/B2N4/2K5/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/3q4/8/4N3/1r4BK/8/4b3 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1K2n2B/1bN5/2k5/4q3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k2K3/8/6n1/4N3/7B/3q4/8/4r3 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxe1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k2b3/8/2B5/3q4/KN4r1/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxe8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K6/4r3/2NB4/8/1q6/6b1/8/5k2 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k3b1/2B5/4N3/3K4/3p1r2/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3K1k2/5b2/2p2B2/3B4/5N2/3r4/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/8/8/2q5/8/8/1B6/K1R4r w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/K3R3/1N6/3b4/8/4bk2 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxe1+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/b7/2p4k/2R4b/3KRn2/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3n4/3R1K2/6Rp/5bpk/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1K6/2N5/1R1b4/3n4/8/2k5/1r6/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/8/6k1/8/3b1n2/4B3/8/3RK3 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7k/1KR3r1/2R2b2/8/8/2n2q2/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Rxg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/8/1b5r/5N2/8/r3BK2/8/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Nxh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/2r2p2/1b6/8/8/6Q1/1r3R2/6K1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/r7/2k5/1p2b3/8/8/1Q6/K5B1 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Bxa7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2K3k1/6p1/4N3/8/2Q2nb1/8/8/2r5 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxc1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r2/1k6/2p5/KB5r/1Q6/8/4b3/8 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/3K4/4Rp2/r2Q4/6b1/8/3r4 w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1b2k3/8/8/8/1Q5r/6B1/5n1K w - - 0 1"]
+[PlyCount "1"]
+
+{Take that piece, which one you can!} 1. Qxh3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3r1rk1/8/3R1Rb1/8/8/8/2K5 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Rxg5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4b3/5k2/8/8/p1n5/1K6/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.21"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Kxc4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/8/6b1/3q4/8/3Qn3/8/1K6 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Qxg6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k6/8/8/5b2/8/4q3/1K3Q1r/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Qxh2+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/1p3b2/3N4/3K1p2/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Nxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/1q1rb1n1/2P2P2/8/7p/6K1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Kxh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p2k2/8/6b1/5B2/8/7n/2K5 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Bxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3n2k1/8/8/8/1K1R3r/3r4 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Rxh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/3n1p2/4K1P1/4n3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. gxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/1p3p2/3N4/1n3b2/8/3K4/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Nxf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/q6k/8/3br3/3K4/2n5/8/R7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Rxa7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k1q/r7/8/8/3B4/8/1K6/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Bxh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/5n2/3N4/6K1/4r3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+[SourceDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Nxf6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/8/3q4/8/3Q4/3K4/4nr2/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.05.22"]
+
+{Take that piece, which one you can!} 1. Qxd6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7k/8/4B3/8/7K/8/r7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.01.08"]
+[SourceDate "2013.01.08"]
+
+{Win material in one move!} 1. Bxa1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/1p5k/2P5/5K2/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceDate "2013.02.05"]
+
+{Win material and promote the pawn to queen!} 1. cxb4 Kg5 2. b5 Kf6 3. b6 Ke7
+4. b7 Kd7 5. b8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1r6/2k5/8/4K3/8/1R6 w - - 0 1"]
+[PlyCount "2"]
+[SourceDate "2013.02.05"]
+
+{Trade off the rooks!} 1. Rxb6 Kxb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7q/8/4k3/8/2K5/8/8/Q7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.??.??"]
+[SourceDate "2013.02.05"]
+
+{Capture the Black queen!} 1. Qxh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6k1/n1q5/1P6/3K4/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.05"]
+
+{Take the piece with higher value!} 1. bxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5k2/3b1r2/4P3/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2013.02.05"]
+
+{Take the piece with higher value!} 1. exf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6q1/4k3/2r5/3B4/5K2/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Bxg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5pk1/2q5/4N3/8/5P2/6K1/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Grab the queen!} 1. Nxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/7r/5k2/q6R/8/6K1/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Rxa4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "q7/8/8/8/4k3/8/6K1/Q7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Get rid of the queen!} 1. Qxa8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6k1/8/3n1n2/4K3/5r2/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Kxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1K6/p7/2k5/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Catch the pawn!} 1. Kxa4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3k3p/6P1/3K4/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take and promote the pawn to queen!} 1. gxh6 Ke6 2. h7 Kf7 3. h8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p5/3b2k1/8/4N3/1K6/3n4/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece, which gives you check!} 1. Nxd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/2b3q1/4N3/8/6K1/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece, which gives you check!} 1. Nxg5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1q1k4/4b3/3B4/4K3/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take that piece, which one you can!} 1. Bxb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7q/8/8/1k6/8/8/7K/B7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the queen!} 1. Bxh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1k6/R6r/8/7K/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the rook!} 1. Rxh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/R7/5k2/8/r3K3 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the rook!} 1. Rxa1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "K6Q/8/8/8/8/8/8/q5k1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the queen!} 1. Qxa1+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/q5K1/8/8/8/8/k7/6Q1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the queen!} 1. Qxa7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/k7/r1p5/1PK5/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. bxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/1k6/1p6/2P4K/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Capture the pawn!} 1. cxb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2b5/4N2k/6r1/5K2/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece, which gives you check!} 1. Nxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/4N2k/2b3r1/5K2/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Nxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/4r3/1n6/2B5/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece, which gives you check!} 1. Bxe6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k1K/7B/8/8/8/8/2q5 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Capture the queen!} 1. Bxc1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p6R/6K1/8/5k2/8/8/7r w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Rxh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2K5/r6R/8/1k5p/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Rxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2q5/2k5/4Q3/8/8/7K w - - 0 1"]
+[PlyCount "2"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.18"]
+
+{Trade off the queens!} 1. Qxc6+ Kxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r6/8/8/4Q3/k7/6q1/1b1K4/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Qxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r6/8/3Q2n1/3b4/8/8/4K3/k7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Qxb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2r5/3Qp3/1k6/3b4/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Qxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/1k1r4/3bK3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the stronger piece!} 1. Kxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/5K2/4p3/8/5k2/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Catch the pawn!} 1. Kxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/3r4/2K1P3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the rook!} 1. exd5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/5k2/5q2/4PK2/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the queen!} 1. exf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k5/5Kb1/4N3/2q5/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Nxc4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k1b3/4K3/6N1/8/7r/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Nxh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/6K1/6n1/5B2/8/7r/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Bxh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7r/8/4k3/4B3/8/3K4/8/q7 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Bxa1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k6/3K3p/r6R/7p/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece with higher value!} 1. Rxa4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1k6/q7/8/8/4K3/4Q3/8 w - - 0 1"]
+[PlyCount "2"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Trade queens!} 1. Qxa6+ Kxa6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k5/4Q3/4K3/6n1/1q6/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece, which gives you the check!} 1. Qxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1q6/4K3/8/2b1Q3/8/5k2/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece, which gives you the check!} 1. Qxc4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1k5q/p6Q/1K6/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece, which gives you the check!} 1. Qxa5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/p7/1P3k2/8/4K3/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the pawn and then promote it to queen!} 1. bxa5 Ke5 2. a6 Kd6 3. a7 Kc7
+4. a8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2r5/3kN3/6n1/4K3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece, which gives you the check!} 1. Nxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/3p4/2K5/5Q1q/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+
+{Take the piece, which gives you the check!} 1. Qxd5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/3p1R2/4K3/5r2/8/8 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.18"]
+[SourceDate "2013.02.18"]
+
+{Take the piece, which gives you the check!} 1. Rxd5 *
+
