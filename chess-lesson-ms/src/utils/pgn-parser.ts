@@ -39,12 +39,52 @@ export const parseNormalPgnFile = (
         {} as Record<string, string>,
       );
 
-      // Construct the PGN headers
+      // ==================== OLD SOLUTION ====================
+      // // Construct the PGN headers
+      // const headerSection = game.headers
+      //   .map(({ name, value }) => `[${name} "${value}"]`)
+      //   .join('\n');
+
+      // // Construct the moves section
+      // let movesSection = '';
+      // let moveNumber = 1;
+      // for (let i = 0; i < game.moves.length; i += 2) {
+      //   const whiteMove = game.moves[i]?.move || '';
+      //   const blackMove = game.moves[i + 1]?.move || '';
+      //   movesSection += `${moveNumber}. ${whiteMove} ${blackMove} `;
+      //   moveNumber++;
+      // }
+
+      // // Construct the final PGN string
+      // const pgnRaw = `${headerSection}\n\n${movesSection}${game.result}`;
+
+      // ==================== NEW SOLUTION => THE SAME AS PARSE WITH HINTS ====================
+      // Collect ALL comments from both game and moves
+      const allComments: any[] = [];
+
+      // 1. Add game-level comments if they exist
+      if (Array.isArray(game.comments)) {
+        allComments.push(...game.comments);
+      }
+
+      // 2. Add move-level comments
+      game.moves?.forEach((move: any) => {
+        if (Array.isArray(move.comments)) {
+          allComments.push(...move.comments);
+        }
+      });
+
+      // Extract description from different scenarios
+      const description = extractCompleteDescription(allComments);
+
+      // Extract hints from all comments
+      const hints = extractHintsFromComments(allComments);
+
+      // Build PGN string
       const headerSection = game.headers
-        .map(({ name, value }) => `[${name} "${value}"]`)
+        .map(({ name, value }: any) => `[${name} "${value}"]`)
         .join('\n');
 
-      // Construct the moves section
       let movesSection = '';
       let moveNumber = 1;
       for (let i = 0; i < game.moves.length; i += 2) {
@@ -54,17 +94,16 @@ export const parseNormalPgnFile = (
         moveNumber++;
       }
 
-      // Construct the final PGN string
-      const pgnRaw = `${headerSection}\n\n${movesSection}${game.result}`;
-
       return {
         level: lessonParent.level,
         timer: lessonParent.timer,
         story: lessonParent.story,
-        description:
-          game.comments?.[0]?.text.trim() || 'No description available', // Extract first comment as description
+        description,
+        // description:
+        //   game.comments?.[0]?.text.trim() || 'No description available', // Extract first comment as description
         moves: game.moves.map((move) => move.move).join(' '), // Store only the moves PGN notation
-        pgnRaw, // Manually constructed PGN string
+        // pgnRaw, // Manually constructed PGN string
+        pgnRaw: `${headerSection}\n\n${movesSection}${game.result}`,
         fen: headers['FEN'] || '',
         points: lessonParent.pointsPerLesson,
         event: headers['Event'] || '?',
@@ -76,6 +115,7 @@ export const parseNormalPgnFile = (
         result: headers['Result'] || '*',
         setup: headers['SetUp'] || '1',
         plyCount: parseInt(headers['PlyCount'], 10) || 0,
+        hints,
         lessonParent,
       };
     });
