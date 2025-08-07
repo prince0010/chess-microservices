@@ -15,6 +15,7 @@ import {
   BotDifficulty,
   BotUserGameResult,
   ELO_RANGE,
+  LessonNameAsBot,
   TypeUserCounter,
 } from 'src/enum';
 import { FindAllBotsDto } from './dto/find-all-bots.dto';
@@ -400,6 +401,28 @@ export class BotService {
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(
         this.client.send('update.points.user', dataPoints),
       );
+
+      // STEP: verify if enable lessonParent isBot with name "Defeat to Tik and Shelly"
+      const [historyRows, count] =
+        await this.botUserHistoryRepository.findAndCountBy({
+          userUid,
+        });
+      let botsDefeated = 0;
+      for (const botHistory of historyRows) {
+        if (botHistory.gameWon > 0) {
+          botsDefeated += 1;
+        }
+      }
+
+      if (botsDefeated >= 2 && historyRows.length < 4) {
+        const dataEnableLessonParent = {
+          lessonParentName: LessonNameAsBot.DEFEAT_TO_TIK_AND_SHELLY,
+          userUid,
+        };
+        await firstValueFrom(
+          this.client.send('lessonParent.enable.one', dataEnableLessonParent),
+        );
+      }
 
       return {
         message: 'Game bot counter for that user updated successfully',
