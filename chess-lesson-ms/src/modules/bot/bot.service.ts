@@ -161,7 +161,7 @@ export class BotService {
       });
 
       // Map bots with user's game history
-      let lastBotWasBeaten = true; // first bit needs to be enabled
+      let lastBotWasBeaten = true; // first bot needs to be enabled
       const botsWithHistory = bots.map((bot) => {
         const currentBotDisabled = !lastBotWasBeaten;
         const userHistory = botUserHistory.find(
@@ -407,6 +407,27 @@ export class BotService {
         earnedPoints,
         counter,
       };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async countHowManyBotsDefeated(userUid: number): Promise<number> {
+    try {
+      let counter = 0;
+      const [rowBots, count] =
+        await this.botUserHistoryRepository.findAndCountBy({ userUid });
+
+      for (const bot of rowBots) {
+        if (bot.gameWon > 0) {
+          counter += 1;
+        }
+      }
+
+      return counter;
     } catch (error) {
       throw new RpcException({
         status: 400,

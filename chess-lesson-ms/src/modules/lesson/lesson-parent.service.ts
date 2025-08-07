@@ -19,6 +19,7 @@ import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
 import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
 import { lessonParentDataSeed } from './seed/lesson-parent-data-seed';
 import { getLessonsCompletedAsGame } from './helpers/get-lessons-completed-as-game.helper';
+import { getLessonsCompletedAsBot } from './helpers/get-lessons-completed-as-bot.helper';
 
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
@@ -412,8 +413,10 @@ export class LessonParentService {
             userUid,
           );
         } else if (lessonParent.isBot) {
-          lessonsCompleted = 0;
-          // TODO: check
+          lessonsCompleted = await getLessonsCompletedAsBot(
+            this.client,
+            userUid,
+          );
         } else {
           const resultFromNormalCompleted =
             await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
