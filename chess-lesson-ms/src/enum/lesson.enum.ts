@@ -21,3 +21,7 @@ export enum LessonNameAsGame {
   RIGHT_PIECE_ON_RIGHT_SQUARE_GAME = 'Right piece on right square game',
   MEMORY_TESTER_GAME = 'Memory tester game', // world chess champions
 }
+
+export enum LessonNameAsBot {
+  DEFEAT_TO_TIK_AND_SHELLY = 'Defeat to Tik and Shelly',
+}

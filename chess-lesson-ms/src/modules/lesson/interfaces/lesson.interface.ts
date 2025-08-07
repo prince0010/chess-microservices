@@ -36,6 +36,9 @@ export interface ILessonParentDetail {
   story: string;
   showHint: boolean;
   isTest: boolean;
+  isBot: boolean;
+  isGame: boolean;
+  isPreview: boolean;
   lessonsCompleted: number;
   lessonsLength: number;
   lessons: ILessonList[];

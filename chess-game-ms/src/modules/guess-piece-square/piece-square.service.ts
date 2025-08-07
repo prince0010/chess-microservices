@@ -18,6 +18,7 @@ import {
 } from './interfaces';
 import { UpdateUserPointsDto } from 'src/interfaces';
 import { FindOnePieceSquareLevelByUserDto } from './dto/find-one-piece-square-level.dto';
+import { LessonNameAsGame } from 'src/enum';
 
 @Injectable()
 export class PieceSquareService {
@@ -168,6 +169,22 @@ export class PieceSquareService {
     }
   }
 
+  async countHowManyLevelsCompleted(userUid: number): Promise<number> {
+    try {
+      const [levels, count] =
+        await this.pieceSquareLevelCompletedRepository.findAndCountBy({
+          userUid,
+        });
+
+      return count;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
   async completeLevel(
     completePieceSquareLevelDto: CompletePieceSquareLevelDto,
   ): Promise<CompletePieceSquareLevelResponse> {
@@ -227,6 +244,21 @@ export class PieceSquareService {
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(
         this.client.send('update.points.user', dataPoints),
       );
+
+      // STEP: enable lessonParent isGame with name "Right Piece on right Square Game"
+      const [levels, count] =
+        await this.pieceSquareLevelCompletedRepository.findAndCountBy({
+          userUid,
+        });
+      if (count >= 2) {
+        const dataEnableLessonParent = {
+          lessonParentName: LessonNameAsGame.RIGHT_PIECE_ON_RIGHT_SQUARE_GAME,
+          userUid,
+        };
+        await firstValueFrom(
+          this.client.send('lessonParent.enable.one', dataEnableLessonParent),
+        );
+      }
 
       return {
         lastPoints,

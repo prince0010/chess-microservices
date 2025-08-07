@@ -9,6 +9,7 @@ import { TetrisUserHistory } from './entities/tetris-user-history.entity';
 
 import { UpdateTetrisUserHistoryDto } from './dto/update-tetris-user-history.dto';
 import { BestScoreByUserResponse, IRankingResponse } from './interfaces/index';
+import { LessonNameAsGame } from 'src/enum';
 
 @Injectable()
 export class TetrisService {
@@ -138,6 +139,17 @@ export class TetrisService {
         });
 
         await this.tetrisUserHistoryRepository.save(newRow);
+      }
+
+      // STEP: enable lessonParent isGame with name "Tetris game"
+      if (score >= 70) {
+        const dataEnableLessonParent = {
+          lessonParentName: LessonNameAsGame.TETRIS_GAME,
+          userUid,
+        };
+        await firstValueFrom(
+          this.client.send('lessonParent.enable.one', dataEnableLessonParent),
+        );
       }
 
       // TODO: maybe update user panda points

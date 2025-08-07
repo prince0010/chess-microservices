@@ -58,4 +58,9 @@ export class WorldChessChampionController {
       completeWorldChessChampionLevelDto,
     );
   }
+
+  @MessagePattern('worldChessChampion.counter.completedLevels')
+  counterOfLevelsCompleted(@Payload() userUid: number) {
+    return this.worldChessChampionService.countHowManyLevelsCompleted(userUid);
+  }
 }

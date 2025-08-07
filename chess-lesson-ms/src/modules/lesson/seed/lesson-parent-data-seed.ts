@@ -1,4 +1,4 @@
-import { LessonNameAsGame } from 'src/enum';
+import { LessonNameAsBot, LessonNameAsGame } from 'src/enum';
 import { ILessonParentSeed } from '../interfaces';
 
 export const lessonParentDataSeed: ILessonParentSeed[] = [
@@ -585,13 +585,13 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   },
   {
     timer: 0,
-    name: 'Defeat to Tik and Shelly',
+    name: LessonNameAsBot.DEFEAT_TO_TIK_AND_SHELLY,
     pgnFilename: null,
     lessonFactor: 0,
     story: 'Education',
-    level: 'Play',
+    level: 'Play chess',
     quantityToUnlockNext: 2, // defeat bot N1 and N2
-    levelFrontend: 'Play',
+    levelFrontend: 'Play chess',
     showHint: false,
     pointsPerLesson: 0,
     isTest: false,

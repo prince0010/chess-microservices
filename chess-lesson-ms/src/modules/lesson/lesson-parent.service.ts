@@ -18,6 +18,7 @@ import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
 import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
 import { lessonParentDataSeed } from './seed/lesson-parent-data-seed';
+import { getLessonsCompletedAsGame } from './helpers/get-lessons-completed-as-game.helper';
 
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
@@ -100,6 +101,45 @@ export class LessonParentService {
   //   }
   // }
 
+  /*
+    some lessonParent isGame or isBot was completed and mark it as enabled
+  */
+  async markAsEnabledSomeLessonParentFromGameOrBot(
+    lessonParentName: string,
+    userUid: number,
+  ): Promise<void> {
+    try {
+      const lessonParent = await this.lessonParentRepository.findOne({
+        where: { name: lessonParentName },
+      });
+      if (!lessonParent) {
+        throw new BadRequestException(
+          `Lesson parent with Name: ${lessonParentName} not found`,
+        );
+      }
+
+      const existLessonParentEnableRow =
+        await this.lessonParentEnabledRepository.findOne({
+          where: { lessonParent: { id: lessonParent.id }, userUid },
+        });
+
+      if (existLessonParentEnableRow) return; // already completed by isGame or isBot
+
+      const newLessonParentEnabledRow =
+        this.lessonParentEnabledRepository.create({
+          lessonParent,
+          userUid,
+        });
+
+      await this.lessonParentEnabledRepository.save(newLessonParentEnabledRow);
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
   async findOne(
     findOneLessonParentDto: FindOneLessonParentDto,
   ): Promise<ILessonParentDetail> {
@@ -139,6 +179,9 @@ export class LessonParentService {
         story: lessonParent.story,
         showHint: lessonParent.showHint,
         isTest: lessonParent.isTest,
+        isBot: lessonParent.isBot,
+        isGame: lessonParent.isGame,
+        isPreview: lessonParent.isPreview,
         lessonsLength,
         lessonsCompleted,
         lastLessonPlayedId:
@@ -273,6 +316,9 @@ export class LessonParentService {
         story: lessonParent.story,
         showHint: lessonParent.showHint,
         isTest: lessonParent.isTest,
+        isBot: lessonParent.isBot,
+        isGame: lessonParent.isGame,
+        isPreview: lessonParent.isPreview,
         lessonsLength: 10, // is a test
         lessonsCompleted: 0,
         lastLessonPlayedId: 0,
@@ -359,6 +405,15 @@ export class LessonParentService {
             lessonsCompleted = resultFromTestCompleted.testCompleted;
             lessonsLength = resultFromTestCompleted.testLength;
           }
+        } else if (lessonParent.isGame) {
+          lessonsCompleted = await getLessonsCompletedAsGame(
+            this.client,
+            lessonParent,
+            userUid,
+          );
+        } else if (lessonParent.isBot) {
+          lessonsCompleted = 0;
+          // TODO: check
         } else {
           const resultFromNormalCompleted =
             await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
@@ -398,7 +453,10 @@ export class LessonParentService {
           isPreview: lessonParent.isPreview,
           messageModal: lessonParent.messageModal ?? null,
           lessonsCompleted,
-          lessonsLength,
+          lessonsLength:
+            lessonParent.isGame || lessonParent.isBot
+              ? lessonParent.quantityToUnlockNext
+              : lessonsLength,
           disabled,
         });
       }

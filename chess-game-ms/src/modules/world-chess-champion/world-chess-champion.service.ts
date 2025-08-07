@@ -23,6 +23,7 @@ import {
   IFindOneWorldChessChampionLevelResponse,
   IWorldChessChampionLevel,
 } from './interfaces';
+import { LessonNameAsGame } from 'src/enum';
 
 @Injectable()
 export class WorldChessChampionService {
@@ -227,6 +228,22 @@ export class WorldChessChampionService {
     }
   }
 
+  async countHowManyLevelsCompleted(userUid: number): Promise<number> {
+    try {
+      const [levels, count] =
+        await this.worldChessChampionLevelCompletedRepository.findAndCountBy({
+          userUid,
+        });
+
+      return count;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
   async completeLevel(
     completeWorldChessChampionLevelDto: CompleteWorldChessChampionLevelDto,
   ): Promise<CompleteWorldChessChampionLevelResponse> {
@@ -292,6 +309,21 @@ export class WorldChessChampionService {
       const { lastPoints, earnedPoints, counter } = await firstValueFrom(
         this.client.send('update.points.user', dataPoints),
       );
+
+      // STEP: enable lessonParent isGame with name "World Chess Champion Game"
+      const [levels, count] =
+        await this.worldChessChampionLevelCompletedRepository.findAndCountBy({
+          userUid,
+        });
+      if (count > 2) {
+        const dataEnableLessonParent = {
+          lessonParentName: LessonNameAsGame.MEMORY_TESTER_GAME,
+          userUid,
+        };
+        await firstValueFrom(
+          this.client.send('lessonParent.enable.one', dataEnableLessonParent),
+        );
+      }
 
       return {
         lastPoints,

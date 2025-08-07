@@ -32,6 +32,20 @@ export class LessonParentController {
     return this.lessonParentService.findOne(findOneLessonParentDto);
   }
 
+  /*
+    This endpoint only will be called from game MS and bot game
+    It allow me to set some lessonParent isGame or isBot as enabled
+  */
+  @MessagePattern('lessonParent.enable.one')
+  createLessonParentEnableRowFromGameOrBotLesson(
+    @Payload() data: { lessonParentName: string; userUid: number },
+  ) {
+    return this.lessonParentService.markAsEnabledSomeLessonParentFromGameOrBot(
+      data.lessonParentName,
+      data.userUid,
+    );
+  }
+
   @MessagePattern('lessonParent.update.lessonsCompleted')
   updateLessonsCompleted(
     @Payload() completeLessonParentDto: CompleteLessonParentDto,
