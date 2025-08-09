@@ -386,7 +386,9 @@ export class LessonParentService {
       lessonParents.sort((a, b) => a.id - b.id);
 
       const parents: ILessonParent[] = [];
+      const disabledArray: boolean[] = [false]; // first alway false
       let previousLessonParentId = lessonParents[0]?.id;
+      let previousLessonIsBotOrIsGame = false;
 
       for (const [index, lessonParent] of lessonParents.entries()) {
         let lessonsCompleted: number = 0;
@@ -426,6 +428,10 @@ export class LessonParentService {
         }
 
         let disabled = false;
+        let antepenultimateDisabled = false; // know if lesson previous to lesson is game or bot is disabled
+        if (index > 2) {
+          antepenultimateDisabled = disabledArray[index - 1];
+        }
 
         if (index === 0) {
           disabled = false;
@@ -435,10 +441,21 @@ export class LessonParentService {
               where: { userUid, lessonParent: { id: previousLessonParentId } },
             });
 
-          disabled = lastLessonParentEnabledRow ? false : true;
+          // verify if it is a game and is a bot (so they can be completed before any)
+          if (previousLessonIsBotOrIsGame) {
+            disabled =
+              lastLessonParentEnabledRow && !antepenultimateDisabled
+                ? false
+                : true;
+          } else {
+            disabled = lastLessonParentEnabledRow ? false : true;
+          }
 
           previousLessonParentId = lessonParent.id;
         }
+
+        previousLessonIsBotOrIsGame = lessonParent.isBot || lessonParent.isGame;
+        disabledArray.push(disabled);
 
         parents.push({
           id: lessonParent.id,
