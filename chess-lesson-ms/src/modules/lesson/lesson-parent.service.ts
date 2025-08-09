@@ -171,6 +171,7 @@ export class LessonParentService {
       const result: ILessonParentDetail = {
         id: lessonParent.id,
         lessonFactor: lessonParent.lessonFactor,
+        canBeSkipped: lessonParent.canBeSkipped,
         name: lessonParent.name,
         timer: lessonParent.timer,
         levelFrontend: lessonParent.levelFrontend,
@@ -308,6 +309,7 @@ export class LessonParentService {
       let lessonsDetail: ILessonParentDetail = {
         id: lessonParent.id,
         lessonFactor: lessonParent.lessonFactor,
+        canBeSkipped: lessonParent.canBeSkipped,
         timer: lessonParent.timer,
         level: lessonParent.level,
         levelFrontend: lessonParent.levelFrontend,
@@ -460,6 +462,7 @@ export class LessonParentService {
         parents.push({
           id: lessonParent.id,
           lessonFactor: lessonParent.lessonFactor,
+          canBeSkipped: lessonParent.canBeSkipped,
           timer: lessonParent.timer,
           levelFrontend: lessonParent.levelFrontend,
           pointsPerLesson: lessonParent.pointsPerLesson,

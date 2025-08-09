@@ -56,6 +56,9 @@ export class LessonParent {
   @Column({ type: 'boolean', nullable: false, default: false })
   isBot: boolean; // player needs to defeat specific bots
 
+  @Column({ type: 'boolean', nullable: false, default: false })
+  canBeSkipped: boolean; // player can go to next level so lessons are only information
+
   @Column({ length: 255, nullable: true, default: null })
   messageModal?: string; // some message modal as instruction to complete
 

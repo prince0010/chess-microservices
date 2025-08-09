@@ -14,4 +14,5 @@ export interface ILessonParentSeed {
   isPreview: boolean;
   isBot: boolean;
   messageModal: string | null;
+  canBeSkipped: boolean;
 }

@@ -22,6 +22,7 @@ export interface ILessonParent {
   isPreview: boolean;
   disabled: boolean;
   messageModal: string | null;
+  canBeSkipped: boolean;
 }
 
 export interface ILessonParentDetail {
@@ -39,6 +40,7 @@ export interface ILessonParentDetail {
   isBot: boolean;
   isGame: boolean;
   isPreview: boolean;
+  canBeSkipped: boolean;
   lessonsCompleted: number;
   lessonsLength: number;
   lessons: ILessonList[];

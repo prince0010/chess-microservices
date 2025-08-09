@@ -18,6 +18,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: true,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal:
       'Reach at least Level 3 in Tetris game to unlock Level 1. Good luck!',
   },
@@ -36,6 +37,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -53,6 +55,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -70,6 +73,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -87,6 +91,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -104,6 +109,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -121,6 +127,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -138,6 +145,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -155,6 +163,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -172,6 +181,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -189,6 +199,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -206,6 +217,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -223,6 +235,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -240,6 +253,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -257,6 +271,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -274,6 +289,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -291,6 +307,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -308,6 +325,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -325,6 +343,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -342,6 +361,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -359,6 +379,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -376,6 +397,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: true,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal:
       'Reach at least Level 3 in Guess the square game to unlock Level 4. Good luck!',
   },
@@ -394,6 +416,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -411,6 +434,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -428,6 +452,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -445,6 +470,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -462,6 +488,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -479,6 +506,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: true,
     messageModal: null,
   },
   {
@@ -496,6 +524,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -513,6 +542,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -530,6 +560,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -547,6 +578,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -564,6 +596,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -581,6 +614,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -598,6 +632,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: true,
+    canBeSkipped: false,
     messageModal:
       'Play chess against Tik and Shelly animal and defeat them. Go to Plays screen and complete the mission to unlock Level 7. Good luck!',
   },
@@ -616,6 +651,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -633,6 +669,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -650,6 +687,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -667,6 +705,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -684,6 +723,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -701,6 +741,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -718,6 +759,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: true,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal:
       'Reach at least Level 3 in Right piece on right square game to unlock Level 9. Good luck!',
   },
@@ -736,6 +778,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -753,6 +796,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -770,6 +814,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: true,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -787,6 +832,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -804,6 +850,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -821,6 +868,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: true,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal:
       'Reach at least Level 3 in Memory Tester game to unlock Level 10. Good luck!',
   },
@@ -839,6 +887,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -856,6 +905,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   // PUZZLE
@@ -874,6 +924,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -891,6 +942,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -908,6 +960,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -925,6 +978,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -942,6 +996,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -959,6 +1014,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -976,6 +1032,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -993,6 +1050,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1010,6 +1068,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1027,6 +1086,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1044,6 +1104,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1061,6 +1122,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1078,6 +1140,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1095,6 +1158,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1112,6 +1176,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1129,6 +1194,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1146,6 +1212,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
   {
@@ -1163,6 +1230,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isGame: false,
     isPreview: false,
     isBot: false,
+    canBeSkipped: false,
     messageModal: null,
   },
 ];
