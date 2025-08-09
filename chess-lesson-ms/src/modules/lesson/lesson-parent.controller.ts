@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { MessagePattern, Payload } from '@nestjs/microservices';
+import { EventPattern, MessagePattern, Payload } from '@nestjs/microservices';
 
 import { LessonParentService } from './lesson-parent.service';
 
@@ -36,7 +36,7 @@ export class LessonParentController {
     This endpoint only will be called from game MS and bot game
     It allow me to set some lessonParent isGame or isBot as enabled
   */
-  @MessagePattern('lessonParent.enable.one')
+  @EventPattern('lessonParent.enable.one')
   createLessonParentEnableRowFromGameOrBotLesson(
     @Payload() data: { lessonParentName: string; userUid: number },
   ) {
