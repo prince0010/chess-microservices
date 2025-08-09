@@ -6,13 +6,10 @@ import * as pgnParser from 'pgn-parser';
 
 import { LessonParent } from 'src/modules/lesson/entities/lesson-parent.entity';
 import { extractHintsFromComments } from './extractHintsFromComments';
-import { timerPerLesson } from 'src/modules/lesson/helpers/timer-per-lesson.helper';
 
 // traditional with not hint
 export const parseNormalPgnFile = (
   filePath: string,
-  levelName: string,
-  story: string,
   lessonParent: LessonParent,
 ) => {
   try {
@@ -42,12 +39,52 @@ export const parseNormalPgnFile = (
         {} as Record<string, string>,
       );
 
-      // Construct the PGN headers
+      // ==================== OLD SOLUTION ====================
+      // // Construct the PGN headers
+      // const headerSection = game.headers
+      //   .map(({ name, value }) => `[${name} "${value}"]`)
+      //   .join('\n');
+
+      // // Construct the moves section
+      // let movesSection = '';
+      // let moveNumber = 1;
+      // for (let i = 0; i < game.moves.length; i += 2) {
+      //   const whiteMove = game.moves[i]?.move || '';
+      //   const blackMove = game.moves[i + 1]?.move || '';
+      //   movesSection += `${moveNumber}. ${whiteMove} ${blackMove} `;
+      //   moveNumber++;
+      // }
+
+      // // Construct the final PGN string
+      // const pgnRaw = `${headerSection}\n\n${movesSection}${game.result}`;
+
+      // ==================== NEW SOLUTION => THE SAME AS PARSE WITH HINTS ====================
+      // Collect ALL comments from both game and moves
+      const allComments: any[] = [];
+
+      // 1. Add game-level comments if they exist
+      if (Array.isArray(game.comments)) {
+        allComments.push(...game.comments);
+      }
+
+      // 2. Add move-level comments
+      game.moves?.forEach((move: any) => {
+        if (Array.isArray(move.comments)) {
+          allComments.push(...move.comments);
+        }
+      });
+
+      // Extract description from different scenarios
+      const description = extractCompleteDescription(allComments);
+
+      // Extract hints from all comments
+      const hints = extractHintsFromComments(allComments);
+
+      // Build PGN string
       const headerSection = game.headers
-        .map(({ name, value }) => `[${name} "${value}"]`)
+        .map(({ name, value }: any) => `[${name} "${value}"]`)
         .join('\n');
 
-      // Construct the moves section
       let movesSection = '';
       let moveNumber = 1;
       for (let i = 0; i < game.moves.length; i += 2) {
@@ -57,17 +94,16 @@ export const parseNormalPgnFile = (
         moveNumber++;
       }
 
-      // Construct the final PGN string
-      const pgnRaw = `${headerSection}\n\n${movesSection}${game.result}`;
-
       return {
-        level: levelName,
-        timer: timerPerLesson(levelName),
-        story,
-        description:
-          game.comments?.[0]?.text.trim() || 'No description available', // Extract first comment as description
+        level: lessonParent.level,
+        timer: lessonParent.timer,
+        story: lessonParent.story,
+        description,
+        // description:
+        //   game.comments?.[0]?.text.trim() || 'No description available', // Extract first comment as description
         moves: game.moves.map((move) => move.move).join(' '), // Store only the moves PGN notation
-        pgnRaw, // Manually constructed PGN string
+        // pgnRaw, // Manually constructed PGN string
+        pgnRaw: `${headerSection}\n\n${movesSection}${game.result}`,
         fen: headers['FEN'] || '',
         points: lessonParent.pointsPerLesson,
         event: headers['Event'] || '?',
@@ -79,6 +115,7 @@ export const parseNormalPgnFile = (
         result: headers['Result'] || '*',
         setup: headers['SetUp'] || '1',
         plyCount: parseInt(headers['PlyCount'], 10) || 0,
+        hints,
         lessonParent,
       };
     });
@@ -93,17 +130,13 @@ export const parseNormalPgnFile = (
 // with hint
 export const parseHintPgnFile = (
   filePath: string,
-  levelName: string,
-  story: string,
   lessonParent: LessonParent,
 ) => {
   try {
     const fullPath = path.resolve(filePath);
     let pgnContent = fs.readFileSync(fullPath, 'utf-8');
     if (!pgnContent) {
-      throw new BadRequestException(
-        `No PGN File found in fs with that path: ${filePath}`,
-      );
+      throw new BadRequestException(`No PGN File found at: ${filePath}`);
     }
 
     // Remove UTF-8 BOM if present
@@ -115,15 +148,34 @@ export const parseHintPgnFile = (
 
     return parsedGames.map((game: any) => {
       const headers = game.headers.reduce(
-        (acc, { name, value }) => {
-          acc[name] = value;
-          return acc;
-        },
+        (acc, { name, value }) => ({ ...acc, [name]: value }),
         {} as Record<string, string>,
       );
 
+      // Collect ALL comments from both game and moves
+      const allComments: any[] = [];
+
+      // 1. Add game-level comments if they exist
+      if (Array.isArray(game.comments)) {
+        allComments.push(...game.comments);
+      }
+
+      // 2. Add move-level comments
+      game.moves?.forEach((move: any) => {
+        if (Array.isArray(move.comments)) {
+          allComments.push(...move.comments);
+        }
+      });
+
+      // Extract description from different scenarios
+      const description = extractCompleteDescription(allComments);
+
+      // Extract hints from all comments
+      const hints = extractHintsFromComments(allComments);
+
+      // Build PGN string
       const headerSection = game.headers
-        .map(({ name, value }) => `[${name} "${value}"]`)
+        .map(({ name, value }: any) => `[${name} "${value}"]`)
         .join('\n');
 
       let movesSection = '';
@@ -135,28 +187,13 @@ export const parseHintPgnFile = (
         moveNumber++;
       }
 
-      const pgnRaw = `${headerSection}\n\n${movesSection}${game.result}`;
-
-      // Extract description and comments
-      const allComments = Array.isArray(game.comments)
-        ? game.comments
-            .filter((c) => typeof c?.text === 'string')
-            .map((c) => c.text.trim())
-        : [];
-      const description =
-        allComments.find((c) => !c.startsWith('[%')) ||
-        'No description available';
-
-      // extract hints
-      const hints = extractHintsFromComments(game.comments);
-
       return {
-        level: levelName,
-        timer: timerPerLesson(levelName),
-        story,
+        level: lessonParent.level,
+        timer: lessonParent.timer,
+        story: lessonParent.story,
         description,
-        moves: game.moves.map((move) => move.move).join(' '),
-        pgnRaw,
+        moves: game.moves.map((move: any) => move.move).join(' '),
+        pgnRaw: `${headerSection}\n\n${movesSection}${game.result}`,
         fen: headers['FEN'] || '',
         points: lessonParent.pointsPerLesson,
         event: headers['Event'] || '?',
@@ -169,7 +206,7 @@ export const parseHintPgnFile = (
         setup: headers['SetUp'] || '1',
         plyCount: parseInt(headers['PlyCount'], 10) || 0,
         showHint: true,
-        hints, // JSON object containing squares and arrows
+        hints,
         lessonParent,
       };
     });
@@ -179,4 +216,31 @@ export const parseHintPgnFile = (
       message: error.message,
     });
   }
+};
+
+const extractCompleteDescription = (comments: any[] = []): string => {
+  if (!comments.length) return 'No description available';
+
+  // Process each comment individually
+  const descriptionParts = comments
+    .map((comment) => {
+      if (!comment.text) return '';
+
+      const text = comment.text.trim();
+
+      // Case 1: Pure text comment
+      if (!text.includes('[%')) return text;
+
+      // Case 2: ChessBase-style comment
+      const lastBracket = text.lastIndexOf(']');
+      if (lastBracket > 0) {
+        return text.slice(lastBracket + 1).trim();
+      }
+
+      return '';
+    })
+    .filter((text) => text); // Remove empty strings
+
+  // Combine with paragraph breaks
+  return descriptionParts.join('\n\n') || 'No description available';
 };

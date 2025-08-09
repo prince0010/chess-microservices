@@ -1,0 +1,19 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "The Knight"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/8/8/8/4N3/8/8/2K5 w - - 0 1"]
+[PlyCount "0"]
+[SourceDate "2025.08.02"]
+
+{[%cal Ge4e6,Ge6f6,Ge4g4,Gg4g3,Ge4e2,Ge2f2,Ge2d2,Gg4g5,Ge6d6,Ge4c4,Gc4c5,Gc4c3]
+Moves: In an L-shape — two squares in one direction, then one square to the
+side; can jump over pieces.  When it’s strong:   • Great in closed
+positions where other pieces are blocked.   • Very strong on outposts,
+especially in the center.   • In endgames, it can be a bit slow compared to
+bishops.  Value: About 3 pawns.}  *
+

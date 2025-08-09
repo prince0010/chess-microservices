@@ -1,0 +1,143 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/7p/4K2P/8/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Gf7][%cal Ge6f7] Stalemate the black king} 1. Kf7 {Stalemate is a
+situation where the player whose turn it is to move is not in check but has no
+legal move to continue the game. The rules of chess provide that when
+stalemate occurs, the game ends as a draw (i.e. having no winner).} *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/Q7/8/8/8/3K4/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Gf7][%cal Ga7f7]} {Stalemate the black king} 1. Qf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/7K/8/8/8/P7/R7 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Gg1][%cal Ga1g1]} {Stalemate the black king} 1. Rg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/8/K7/8/8/8/3B4/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Gf4][%cal Gd2f4]} {Stalemate the black king} 1. Bf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/8/K7/8/1N6/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Gc6][%cal Gb4c6]} {Stalemate the black king} 1. Nc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/6KP/8/8/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Gh7][%cal Gh6h7]} {Stalemate the black king} 1. h7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/Q7/8/8/8/8/8/2K4k w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Gf2][%cal Ga7f2]} {Stalemate the black king} 1. Qf2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/8/8/K7/6B1/k7 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Ge4][%cal Gg2e4]} {Stalemate the black king} 1. Be4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/7K/8/4N3/8/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Gf6][%cal Ge4f6]} {Stalemate the black king} 1. Nf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Stalemate "]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/8/K7/8/8/8/8/R7 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.06.14"]
+
+{[%csl Gb1][%cal Ga1b1]} {Stalemate the black king} 1. Rb1 *
+

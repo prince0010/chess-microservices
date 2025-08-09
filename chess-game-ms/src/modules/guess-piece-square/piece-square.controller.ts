@@ -35,4 +35,9 @@ export class PieceSquareController {
   update(@Payload() completePieceSquareLevelDto: CompletePieceSquareLevelDto) {
     return this.pieceSquareService.completeLevel(completePieceSquareLevelDto);
   }
+
+  @MessagePattern('pieceSquare.counter.completedLevels')
+  counterOfLevelsCompleted(@Payload() userUid: number) {
+    return this.pieceSquareService.countHowManyLevelsCompleted(userUid);
+  }
 }

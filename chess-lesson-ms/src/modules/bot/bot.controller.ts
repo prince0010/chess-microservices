@@ -48,4 +48,9 @@ export class BotController {
   ) {
     return this.botService.updateHistoryByUser(counterBotUserHistoryDto);
   }
+
+  @MessagePattern('bot.count.howManyDefeated')
+  howManyDefeated(@Payload() userUid: number) {
+    return this.botService.countHowManyBotsDefeated(userUid);
+  }
 }

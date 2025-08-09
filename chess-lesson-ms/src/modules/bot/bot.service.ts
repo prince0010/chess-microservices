@@ -15,6 +15,7 @@ import {
   BotDifficulty,
   BotUserGameResult,
   ELO_RANGE,
+  LessonNameAsBot,
   TypeUserCounter,
 } from 'src/enum';
 import { FindAllBotsDto } from './dto/find-all-bots.dto';
@@ -161,7 +162,7 @@ export class BotService {
       });
 
       // Map bots with user's game history
-      let lastBotWasBeaten = true; // first bit needs to be enabled
+      let lastBotWasBeaten = true; // first bot needs to be enabled
       const botsWithHistory = bots.map((bot) => {
         const currentBotDisabled = !lastBotWasBeaten;
         const userHistory = botUserHistory.find(
@@ -401,12 +402,55 @@ export class BotService {
         this.client.send('update.points.user', dataPoints),
       );
 
+      // STEP: verify if enable lessonParent isBot with name "Defeat to Tik and Shelly"
+      const [historyRows, count] =
+        await this.botUserHistoryRepository.findAndCountBy({
+          userUid,
+        });
+      let botsDefeated = 0;
+      for (const botHistory of historyRows) {
+        if (botHistory.gameWon > 0) {
+          botsDefeated += 1;
+        }
+      }
+
+      if (botsDefeated >= 2 && historyRows.length < 4) {
+        const dataEnableLessonParent = {
+          lessonParentName: LessonNameAsBot.DEFEAT_TO_TIK_AND_SHELLY,
+          userUid,
+        };
+        await firstValueFrom(
+          this.client.send('lessonParent.enable.one', dataEnableLessonParent),
+        );
+      }
+
       return {
         message: 'Game bot counter for that user updated successfully',
         lastPoints,
         earnedPoints,
         counter,
       };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async countHowManyBotsDefeated(userUid: number): Promise<number> {
+    try {
+      let counter = 0;
+      const [rowBots, count] =
+        await this.botUserHistoryRepository.findAndCountBy({ userUid });
+
+      for (const bot of rowBots) {
+        if (bot.gameWon > 0) {
+          counter += 1;
+        }
+      }
+
+      return counter;
     } catch (error) {
       throw new RpcException({
         status: 400,

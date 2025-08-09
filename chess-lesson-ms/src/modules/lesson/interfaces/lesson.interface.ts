@@ -6,6 +6,7 @@ export interface ICountAndListLessonParents {
 
 export interface ILessonParent {
   id: number;
+  lessonFactor: number;
   level: string;
   levelFrontend: string;
   pointsPerLesson: number;
@@ -16,11 +17,17 @@ export interface ILessonParent {
   lessonsCompleted: number;
   lessonsLength: number;
   isTest: boolean;
+  isBot: boolean;
+  isGame: boolean;
+  isPreview: boolean;
   disabled: boolean;
+  messageModal: string | null;
+  canBeSkipped: boolean;
 }
 
 export interface ILessonParentDetail {
   id: number;
+  lessonFactor: number;
   level: string;
   timer: number;
   name: string;
@@ -30,6 +37,10 @@ export interface ILessonParentDetail {
   story: string;
   showHint: boolean;
   isTest: boolean;
+  isBot: boolean;
+  isGame: boolean;
+  isPreview: boolean;
+  canBeSkipped: boolean;
   lessonsCompleted: number;
   lessonsLength: number;
   lessons: ILessonList[];

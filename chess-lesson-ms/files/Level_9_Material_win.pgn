@@ -1,0 +1,3656 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/pp1R2bp/4p1p1/2q3N1/3nPp2/2N4P/PP3PP1/3Q2K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxg7+ Kxg7 2. Qxd4+ Qxd4 3. Nxe6+
+Kf7 4. Nxd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r7/1b1nk1pp/1p4r1/4p3/2N1Pp2/P4P2/3R2PP/1R3BK1 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Rxd7+ Kxd7 2. Nxe5+ Kc7 3. Nxg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k1r1b1r/pppb1q1p/5p2/n3p2R/4P3/2P1BNQ1/PP2BPP1/R3K3 w Q - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Nxe5 fxe5 2. Qxe5 Bg7 3. Qxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/ppq2ppp/3p4/n2Qp3/7b/2P5/PPB2PPP/R1B2RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qe4 f5 2. Qxh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k4r/ppp2ppp/2p1bn2/3NN3/3qP3/8/PP3PPP/R4RK1 w - - 0 1"]
+[PlyCount "7"]
+
+{Try to win material!} 1. Ne7+ Kb8 2. N7xc6+ bxc6 3. Nxc6+ Kb7 4. Nxd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/Q5b1/6k1/4r2p/8/6PP/5PK1/1r6 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+[SourceDate "2013.06.10"]
+
+{Try to win material!} 1. Qa6+ Bf6 2. Qd3+ Kg7 3. Qxb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/5r1p/p2N4/nppP2q1/2P5/1P2N3/PQ5P/7K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qh8+ Kxh8 2. Nxf7+ Kg7 3. Nxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2r2k1/1p3pp1/1np1p1p1/p3N1q1/2PP4/bPB4R/4QPPP/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Rh8+ Kxh8 2. Nxf7+ Kg8 3. Nxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5n2/p2p1kbp/1p1qpN2/8/2P3QP/1P2B1P1/P7/5K2 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Qxg7+ Kxg7 2. Ne8+ Kg6 3. Nxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3r1k1/pp4p1/1n1q2p1/2bp2N1/6P1/4B3/PPP2PP1/R2QK2R w KQ - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Rh8+ Kxh8 2. Nf7+ Kg8 3. Nxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1qr1k/p1p3pp/2p5/4ppN1/2P5/4Q1P1/PP2PP1P/3RR1K1 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Qxe5 Qxe5 2. Nf7+ Kg8 3. Nxe5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3rrnk1/1p3p1p/p4np1/2bP1N2/5P2/2N3P1/PB4KP/3R1R2 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Ne4 Rxe4 2. Bxf6 gxf5 3. Bxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r2/6k1/p5p1/3pNp2/2bPnqpQ/P7/1P3PPP/4R1K1 w - - 0 1"]
+[PlyCount "7"]
+
+{Try to win material!} 1. Qe7+ Kg8 2. Qxf8+ Kxf8 3. Nxg6+ Kg7 4. Nxf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "b7/2q2k2/p3ppr1/1pPpP2Q/1P1N3P/6P1/P7/6K1 w - - 0 1"]
+[PlyCount "7"]
+
+{Try to win material!} 1. Qh7+ Rg7 2. Qxg7+ Kxg7 3. Nxe6+ Kf7 4. Nxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3Q4/pp3pk1/6p1/P3qpNp/8/8/5PPP/6K1 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Qh8+ Kxh8 2. Nxf7+ Kg7 3. Nxe5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6r1/1p1k1qR1/2p5/3pQ3/3P4/1P2P3/6K1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+[SourceDate "2013.06.10"]
+
+{Try to win material!} 1. Qf5+ Kd6 2. Qxf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3kb1r/ppqb1pp1/2n4p/2ppP3/8/2P3Q1/P1PNB1PP/R1B2RK1 w kq - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. e6 Qxg3 2. exd7+ Kxd7 3. hxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/6pp/4R3/1p6/4B3/1r4bP/6P1/7K w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Bd5 Rb1+ 2. Re1+ Kf8 3. Rxb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/3qbppp/p7/1p1pPN2/5B2/8/PP2QPPP/2R3K1 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Qg4 g6 2. Nh6+ Kh8 3. Qxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/pp2b1pp/8/n2n4/5PP1/4B2P/PPP1Q3/2K4R w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bd2 Nc6 2. Qe6+ Kh8 3. Qxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "q4rk1/5ppp/p7/1p1b4/1br5/5NP1/PP3PBP/RQ1R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+[SourceDate "2013.06.10"]
+
+{Try to win material!} 1. Ng5 Bxg2 2. Qxh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4np2/4pk1p/RNr4P/P3KP2/1P6/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+[SourceDate "2013.06.10"]
+
+{Try to win material!} 1. Nd5 Rxa4 2. Ne7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rk2/2rb1p2/1p3q1p/pP2p1p1/PbNpP3/3P2QP/2R1NPP1/5R1K w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Nxe5 Rxc2 2. Nxd7+ Kg7 3. Nxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/pb1pk1p1/3q1p2/5PnQ/1r1B3R/8/4N1PP/3R2K1 w - - 0 1"]
+[PlyCount "3"]
+
+{Try to win material!} 1. Bxf6+ Qxf6 2. Rxb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1r1k/pp4pp/8/6N1/4R3/3Q4/PPn2qPP/R6K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rd4 g6 2. Rxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3rr3/1pk2p2/p3bQ2/4R3/P4P2/2q4P/6P1/4R2K w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Rxe6 Qxf6 2. Rc1+ Kb8 3. Rxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rbk1/3q1ppp/r7/p2p1N2/1n2PB2/6RP/1P3PP1/3QR1K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.06.10"]
+[SourceDate "2013.06.10"]
+
+{Try to win material!} 1. Rxg7+ Bxg7 2. Qg4 Rg6 3. Nh6+ Bxh6 4. Qxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3b1pk1/p3P1pp/1pq4n/3N4/1P6/P4QPP/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Nf5+ Qxf5 2. Qxf5 gxf5 3. exd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3kb1r/pp1n1ppp/2p1p1B1/4q1B1/8/7P/PPP1QPP1/3R1RK1 w kq - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Bxf7+ Kxf7 2. Rxd7+ Ke8 3. Qxe5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3b2k1/1b1P2qp/pp6/4p2B/2P2rn1/1P4R1/P2Q2PP/2R4K w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Qxf4 exf4 2. Rxg4 Bg5 3. Rd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3Rrk1r/p4n2/1pn1pPp1/2p3Np/2P2P2/4N3/PP4PP/2K5 w - - 0 1"]
+[PlyCount "3"]
+
+{Try to win material!} 1. Nxe6+ Kg8 2. Rxe8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1b2/1pR3pk/p3q2p/3p4/P2B4/1P6/6PP/5QK1 w - - 0 1"]
+[PlyCount "11"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qxf8 Rxf8 2. Rxg7+ Kh8 3. Rg6+ Rf6
+4. Rxf6 Qe1+ 5. Rf1+ Kh7 6. Rxe1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bq1r1k/ppp2p2/5np1/4p1N1/2P1N1n1/6P1/PP2PPB1/R2QK3 w Q - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Nxf7+ Rxf7 2. Qxd8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b5/pp4Pk/4p2n/1q6/3p2n1/P6Q/1PPB3r/2KR2R1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. g8=Q+ Kxg8 2. Qxh2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1nq1n2/3b2k1/p2p1p1R/Pp1Pp1p1/1Pp1P1P1/2P1BPN1/2BQ2K1/8 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Rxf6 Qxf6 2. Nh5+ Kg6 3. Nxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rq4/pp3p1k/2np1b1p/2pN1P2/2P5/3B2Q1/PP4PP/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Re8 Qxe8 2. Nxf6+ Kh8 3. Nxe8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1brq1rk1/1p1n1p1p/p5p1/3N4/5P2/4P3/PPQ3PP/3R1RK1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qxc8 Qxc8 2. Ne7+ Kg7 3. Nxc8 Rxc8
+4. Rxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1r1k/pp4b1/1n1R1p2/2p1pNp1/2P1P3/1P3qB1/P1Q1R3/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qd1 Rxd6 2. Rh2+ Kg8 3. Qxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/5p2/3qbnp1/1pR1b2p/1Pp1P3/2P1B1P1/2B3PN/4Q1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxe5 Qxe5 2. Bf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rn2/pp4k1/5qp1/5p1P/P1Pp3N/6Q1/1B3PP1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bxd4 Qxd4 2. Nxf5+ Kg8 3. Nxd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5b2/2qb1kp1/7p/1p2r2P/n3P3/2PR1N2/5PP1/5QK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxd7+ Qxd7 2. Nxe5+ Ke8 3. Nxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2b4k/ppq2rpp/3b3r/n3Np2/Q2PpP1B/2P1R3/PP5P/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bd8 Qxd8 2. Nxf7+ Kg8 3. Nxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/1p2nrpp/p7/2Q5/P4P2/1P2P3/5KPP/3r4 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qh5 Rd2+ 2. Ke1 Rd8 3. Qxf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r4k1/R4ppp/1qr5/4pB2/1pb5/5P2/1P1Q2PP/3R3K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rb7 Qxb7 2. Qd8+ Rxd8 3. Rxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/3n2bp/p1qN1ppn/P1ppP3/1pB2P2/5N2/1PP1Q1PP/R1B3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qe4 Kh8 2. Bxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rn1r2k1/p5pp/8/2pq4/4p3/BQP3P1/P3PP1P/5RK1 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Rd1 Qxb3 2. Rxd8+ Kf7 3. axb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6rk/1bq4p/p3R3/1p4Q1/3p4/3B4/PPP4P/1K6 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qf6+ Qg7 2. Re7 Qxf6 3. Rxh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2nk3r/2qb1p2/4pNp1/Q2pP3/8/PR6/1PP3P1/1K6 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rb7 Qxa5 2. Rxd7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnb1k2r/pp1p1p1p/4p1p1/q2nP3/1b1N2Q1/P1N5/1PP2PPP/R1B1KB1R w KQkq - 0 1"]
+[PlyCount "3"]
+
+{Try to win material!} 1. axb4 Qxa1 2. Nb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bqk1nr/pppnppbp/3p2p1/8/2BPP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Bxf7+ Kxf7 2. Ng5+ Ke8 3. Ne6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rb2nrk1/pb2q1pp/2n1pp2/1Np5/8/1B3N2/PP2QPPP/2RR2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bxe6+ Kh8 2. Rd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr1b1r/1b3pp1/p2ppn1p/qp1N4/3NPP2/3B3Q/PPP3PP/2KRR3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Nb3 Qxa2 2. Nc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rn1n3r/pbppkp2/1p2pp2/3P3p/2P2PqN/2PBP3/P4QPP/R3K2R w KQ - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Ng6+ fxg6 2. h3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/ppp2pbp/2np2p1/7n/2BNq1b1/P1P1BN2/1P3PPP/R2QR1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bg5 Bxf3 2. gxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rr2k1/p3bpp1/1p2pn1p/4B2q/2BP4/5R1P/PP2QPP1/R5K1 w - - 0 1"]
+[PlyCount "3"]
+
+{Try to win material!} 1. Ba6 Rc6 2. Bb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnb2rk1/4ppbp/2pp1np1/pp1P4/NqP5/6P1/PP1NPPBP/R1BQ1RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. a3 Qxa4 2. b3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5r1/4q2k/p2p3p/5p2/4p3/3QR3/1PP2PPP/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.11"]
+[SourceDate "2013.06.11"]
+
+{Try to win material!} 1. Rxe4 fxe4 2. Rxe4 Qd7 3. Re7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/p1q1bppp/4n3/2p2N2/Q7/6P1/PP2PP1P/R1B3K1 w - - 0 1"]
+[PlyCount "5"]
+
+{Try to win material!} 1. Qc6 Qxc6 2. Nxe7+ Kf8 3. Nxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/6pp/8/p1qp1N2/1p4n1/1P4P1/P3P2P/3Q1R1K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qd4 Qxd4 2. Ne7+ Kh8 3. Rxf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2q1rk1/pb1p1pb1/1pn1pn2/6Q1/2P5/1P4P1/PB2PPBP/RN1R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+[SourceDate "2013.06.10"]
+
+{Try to win material!} 1. Rxd7 Qxd7 2. Bxf6 Qd1+ 3. Bf1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4Pk2/2R5/pp1r4/1P2r1BK/P6P/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Re6 Rxe6 2. Bxe6+ Kxe7 3. Bxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7r/4qpkp/Q4n2/3p2p1/1npP4/2N1P3/2P1BPPP/1R4K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxb4 Qxb4 2. Qxf6+ Kxf6 3. Nxd5+
+Ke6 4. Nxb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1nN1b1kp/3pP1p1/3P1P2/2N3K1/8/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. f5+ Bxf5 2. Ne7+ Kf7 3. Nxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k2r3/ppb5/8/6Q1/3q2pp/P2P4/1P3pBP/5R1K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qb5 Qb6 2. Qxe8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/pp3ppp/1n4b1/2q1P1Nn/6r1/1BN5/PP4PP/R3QR1K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Ne6 fxe6 2. Bxe6+ Bf7 3. Bxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/pp2p2p/3nrn1P/7R/2pP1B2/2P3P1/PP6/3K4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Re5 Rxe5 2. dxe5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/2q1bppp/8/pn1p1p2/8/2P2NP1/1P1N1P1P/R2QR1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qe2 Nd6 2. Qxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2q2k2/pp2b3/3p4/PP1QpN2/4P3/8/5P2/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qg8+ Kxg8 2. Nxe7+ Kf7 3. Nxc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3r1k1/3RBpbp/4p1p1/1pp1P3/8/5Q2/2q2PPP/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bd8 Rf8 2. Qxa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q4k1/4pR2/p3r1p1/2pp2P1/8/P1P2Q2/KP5P/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qh3 Kxf7 2. Qh7+ Ke8 3. Qg8+ Kd7
+4. Qxb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2r1k/pp3Rpp/2p5/2q5/2P2p2/1B6/P3QPPP/1R4K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qe5 Qxe5 2. Rxf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2b4k/2p1q1pp/1pP5/p3p3/5r2/P1Q2B1P/5PP1/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qxe5 Qxe5 2. Rd8+ Rf8 3. Rxf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/ppp1rRbp/3nq1p1/3pN3/3Pp3/2P1P1QP/PP4PB/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Nxg6+ hxg6 2. Qh4+ Kg8 3. Rxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1bk1/pp1r1qp1/2n4p/3Np3/4Q3/P2RB3/1P3PPP/3R2K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Nf6+ gxf6 2. Rxd7 Rxd7 3. Qg4+ Qg7
+4. Qxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/4rppp/1p2n3/3qNQ2/8/4P3/P4PPP/1R3RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Ng6 Qxf5 2. Nxe7+ Kf8 3. Nxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3R4/1r3pk1/6p1/p1p2n2/4q1N1/1Pp5/P4QPP/7K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rg8+ Kxg8 2. Nf6+ Kg7 3. Nxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3rb2/1p1q1k2/2p1Rpnp/1pPp2p1/3P2P1/1P1Q1N1P/P2B1P2/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Qxg6+ Kxg6 2. Ne5+ Kg7 3. Nxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r7/pp2prkp/2n1bpp1/qNQ1p3/8/6P1/PP2PPBP/R4RK1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bxc6 bxc6 2. Nd4 Qxc5 3. Nxe6+ Kg8
+4. Nxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r1rbk2/npq1b1p1/4Qn1p/p2p2N1/3P1p2/2P3P1/1B1N1PBP/R4RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qxf6+ Bxf6 2. Ne6+ Kf7 3. Nxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2qr1k1/ppp2ppp/8/2n3PQ/3pP3/P2B4/1PP2P1P/1K1R3R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. g6 hxg6 2. Qxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/1p1bn1p1/pN5p/3pq3/1P6/P2BP3/5QPP/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Qf8+ Kxf8 2. Nxd7+ Ke8 3. Nxe5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N1r1k/ppq3pp/2p5/4bp2/4P3/3R2Q1/PPP2PPP/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Qxe5 Qxe5 2. Nf7+ Rxf7 3. Rd8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3b4/4k1pp/1p3p2/r7/7P/4B1P1/5PK1/3R4 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rxd8 Kxd8 2. Bxb6+ Kd7 3. Bxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rq1rk1/1b3ppp/pbp1p1n1/3p4/N1P5/1P2PN2/PBQ2PPP/R4RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Qc3 f6 2. Qb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r2k/1q2r1pp/p4p2/1pp5/4R1Q1/1P3P2/P1P2KPP/3R4 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rd7 Qxd7 2. Qxd7 Rxe4 3. fxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1q1r1k1/1ppb4/3p1Pp1/p4n1p/2P1n3/5NPP/PP3Q1K/2BRRB2 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. f7+ Kxf7 2. Rxe4 Rxe4 3. Ng5+ Kg7
+4. Nxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3b4/1p4k1/2n2pp1/p1pr4/P3NP2/2BPP3/1P2K3/7R w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Bxf6+ Bxf6 2. Rh7+ Kxh7 3. Nxf6+ Kg7 4. Nxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/2pq2pp/3n4/2Q2p2/1PpR4/4PB1P/r4PP1/4B1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxd6 cxd6 2. Qxc4+ Qf7 3. Bd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1q1k1/p4ppp/1pn5/3N4/6Q1/6P1/Pb4BP/2R4K w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qxc8 Qxc8 2. Rxc6 Qe8 3. Rc8 Qxc8
+4. Ne7+ Kf8 5. Nxc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r2bk1/5ppp/8/4pN2/q3P3/5Q1P/5PP1/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Nh6+ gxh6 2. Qg4+ Kh8 3. Qxc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2b5/pk2rpp1/2p3r1/2Rp4/1P1NpP1p/2P1P2P/5KP1/R7 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxc6 Rxc6 2. Rxa7+ Kxa7 3. Nxc6+
+Kb6 4. Nxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1brk3r/p1q3pp/4pp2/1Q1nN3/3P4/B1p4P/P4PP1/R1R3K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+[SourceDate "2013.06.10"]
+
+{Try to win material!} 1. Bd6 Qxd6 2. Nf7+ Ke7 3. Nxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/1pp2p1P/6p1/8/Pp1p3q/3P1B2/1KP3P1/R7 w - - 0 1"]
+[PlyCount "9"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rh1 Qxh1 2. Bg4+ Kb8 3. Bh3 Qe1 4.
+h8=Q+ Ka7 5. Qxd4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/1p2bppp/p2pp3/P7/1q6/1BN5/1P1B1PPP/R2Q2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Nd5 Qh4 2. g3 Qd4 3. Nxe7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r3k/6p1/3q3p/3Bp3/4Qn2/2P4P/3R2P1/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Bg8 Qxd2 2. Qh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rr2k1/p4bpp/5p2/1qBn4/3p2Q1/P5P1/5PBP/2R2RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bf8 Kxf8 2. Rxc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/1p3ppp/8/3N4/3Q2n1/8/1PP1PR2/4Kbq1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Ne7+ Kh8 2. Rxf7 Qxd4 3. Rxf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6rk/1b2q1pp/3R4/5p2/5N2/Q5PP/5P1K/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rh6 Qxa3 2. Ng6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r1rb1kb/pp2pp1p/4nnpB/q1p1p3/8/2NP2PP/PPPQNPB1/R4RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Nd5 Qxd2 2. Nxe7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1rqr2k1/pp2pp1p/5bp1/1b1Bn3/8/BQP1P2P/P2R1PP1/3R2K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bxf7+ Nxf7 2. Rxd8+ Qxd8 3. Rxd8+
+Rxd8 4. Qxb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/pp2b3/1k2r2p/1Pr1Bp1P/8/P3Q3/2P3PK/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Bc7+ Kxc7 2. Qxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1k1r4/ppn5/1qpN2p1/4P2p/8/8/PP4PP/3R1Q1K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Nc4 Rxd1 2. Qxd1 Qc5 3. Qd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/1pr2p2/p1N3pp/P7/2Q2P2/6P1/2P2qPK/R7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qd4 Qxd4 2. Nxd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3b3/ppq1b2k/4pr1p/2p1Np2/2Pp4/3P2Q1/PP3PBP/R3R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Ng4 Qxg3 2. Nxf6+ Bxf6 3. hxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3k1r1/1p1n1ppp/p1pbq3/3p1b1B/4N3/PP2P3/1BPQ1PPP/R3K2R w KQq - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Bxf7+ Kxf7 2. Ng5+ Ke8 3. Nxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1r1k1/p1p3pp/nq6/1p2Np2/3R1B2/P1P2pP1/1PP4P/3QR1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Nc4 Rxe1+ 2. Qxe1 bxc4 3. Qe8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/6pp/2p5/3n1P2/1q2N1P1/2QPP2P/6BK/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Nf6+ Kh8 2. Nxd5 Qxc3 3. Nxc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/p4pp1/1p4q1/2pBr2p/P1Q1p1b1/4P3/1PPR1PPP/7K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Bxf7+ Qxf7 2. Rd8+ Kh7 3. Qxf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7r/p5p1/1p1kqp2/2r1p3/2PpP1Q1/P2P2PP/1R4K1/1R6 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rxb6+ axb6 2. Rxb6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4r1k/5ppq/4n2Q/7p/7P/6R1/1B1P2PK/4R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rxe6 Qxh6 2. Rxh6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1kn5/2R5/1q1p4/1Q1Pp2p/1P6/5PrP/1K6/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+[SourceDate "2013.06.10"]
+
+{Try to win material!} 1. Rxc8+ Kxc8 2. Qxb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rr1k/3b2bp/1pppn3/5q2/1PP2P2/2B3P1/1Q4BP/4RR1K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rxe6 Bxc3 2. Qxc3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/7p/p1N2kp1/1P6/2B1bP2/6PP/2n2K2/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bd3 Bxd3 2. b6 Be4 3. b7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r5k1/ppb3p1/2n1q1np/5R2/2P1p1Q1/2B3P1/PP4BP/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rf8+ Nxf8 2. Qxg7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q1r2k1/6Pn/p4pQ1/1p3P2/2p1B3/2Ppp3/PP6/6RK w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qe8+ Rxe8 2. Bd5+ Re6 3. Bxe6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5pp1/7k/5Q1P/3q1p2/2p5/3r1PP1/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Re6+ g6 2. Rxg6+ fxg6 3. Qxg6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3r1k1/1b1nqp1p/2p2bp1/p3p3/P3N3/4P2P/1PQ2PPB/R2R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxd7 Qxd7 2. Nxf6+ Kg7 3. Nxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1kb1r/3n1ppp/p1ppp3/6B1/2B1P3/q1N2Q2/P1P2PPP/RR4K1 w kq - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Nd5 Qxf3 2. Nc7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3kb2/1p1q2pp/p1n1p3/8/3Qp3/4B3/PPP3PP/2N2RK1 w q - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxf8+ Kxf8 2. Qxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/2p1q1pp/2r5/2P1P3/1p1Q1R2/7P/6P1/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qd7 Qxd7 2. Rf8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/1p3rp1/n1pr2p1/4p1N1/p7/P3B1P1/1P6/6KR w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rh8+ Kxh8 2. Nxf7+ Kg8 3. Nxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r4k/R6p/1p3pp1/3Nn3/2p1P1q1/6P1/PQ3PKP/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxh7+ Kxh7 2. Nxf6+ Kh8 3. Nxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4R3/6rk/3p2r1/3q3p/3B4/7P/3Q2P1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rh8+ Kxh8 2. Bxg7+ Kxg7 3. Qxd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4kr1/6p1/p3p2p/P2bPpP1/1q1N2Q1/n2B4/5PP1/2R3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Nxe6+ Bxe6 2. Qxb4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r1k1/1bp2pb1/p6p/1pq2B1Q/5p2/2P4P/PP3PP1/2NR2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Bh7+ Kxh7 2. Qxc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k2r/4npp1/1pq1p2p/p1p1P1B1/Q7/2P4P/PP3PP1/3R2K1 w k - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rd8+ Kxd8 2. Qxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4q1k1/pb4r1/1p3ppQ/2p1n3/4p2R/2P1P2P/P5B1/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rd8 Qxd8 2. Qh8+ Kf7 3. Qxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2R5/7k/5rb1/8/4pN1q/2Q3p1/6P1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rh8+ Kxh8 2. Nxg6+ Kg7 3. Nxh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1qb1/6k1/2pR1p2/4pQ1p/7P/2B5/6PK/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxf6 Qxf6 2. Bxe5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rn1qk1nr/pp3ppp/4p3/2bpP3/6b1/2P2N2/PP1N1PPP/R1BQKB1R w KQkq - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Qa4+ Nc6 2. Qxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/3r1p1p/4pP2/4P2p/2p2Q2/6R1/3q2PK/8 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rg8+ Kxg8 2. Qg3+ Kf8 3. Qg7+ Ke8 4. Qg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r1qk2r/pR1n1pp1/4p3/4pb1p/Q1p5/B1P2B2/P4PPP/6K1 w k - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qxd7+ Qxd7 2. Rxb8+ Qd8 3. Bc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6rk/5pb1/7p/5p2/4pP2/7R/1qQ3PP/4N1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxh6+ Bxh6 2. Qxb2+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4rrk1/7p/4b1p1/4pN2/4P3/6Pq/2Q1BP1P/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Bg4 Qxg4 2. Nh6+ Kg7 3. Nxg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k2r/5pp1/Q1n1p2p/3q4/2p5/2P3NP/5PP1/4R1K1 w k - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Qa8+ Qd8 2. Qxc6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rn1q1rk1/pp3pb1/2p2np1/3p3p/N2P4/Q3P3/PP2BPPP/R2RB1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Nb6 Qxb6 2. Ba5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "Q7/3q1ppk/2R4p/3Np3/3b2P1/7P/1r3PK1/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rxh6+ gxh6 2. Nf6+ Kg7 3. Nxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/1R3pkp/6p1/3q4/4Q3/6Pb/5P1P/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxf7+ Qxf7 2. Qxe8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/5pb1/7p/5Pp1/3pN1q1/4nR2/2P1Q1PP/6NK w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Rxe3 Qxe2 2. Rxe2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5nk1/5qp1/4p1Np/3p1r2/3P4/8/2Q2PPP/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Ne7+ Qxe7 2. Qxf5 exf5 3. Rxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1r1k1/1ppq1p1p/p5p1/8/3bNB2/3Q4/PP3PPP/3R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Nf6+ Bxf6 2. Qxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r3rk1/1R4bp/p5p1/2p1n3/2q5/2B5/1PQ3PP/1B3RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxg7+ Kxg7 2. Bxe5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4Q3/5p1p/1B1p1kp1/3P4/8/7P/1q3rPK/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bd4+ Qxd4 2. Qh8+ Ke7 3. Qxd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rbq3k1/pp1r2pp/5p2/3p1N2/4nPQ1/1P2P3/PB4PP/5RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Ne7+ Rxe7 2. Qxc8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rn3q1k/1bp2ppp/p7/3P4/P1QP4/2N5/1P4PP/2K1R3 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qb4 Qc8 2. Qxb7 Qxb7 3. Re8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5k2/8/4p3/8/4pqPQ/7P/3r1RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Qh5+ Ke7 2. Qxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1R1r2kp/6p1/p7/Pb5Q/5pPP/2P2P1K/3q4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.10"]
+
+{Try to win material!} 1. Qd8 Rxb7 2. Qxd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r3k1/6pp/5p2/1p6/2q5/1Q5P/P4PP1/1R4K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. Rc1 Qxb3 2. Rxc8+ Kf7 3. axb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr1br1/pp1q1p1p/5Bn1/2p5/4p3/P4NP1/1P3PBP/3QR1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Bh3 Qxh3 2. Qxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r3k2/1p3npp/p2q1p2/8/5Q2/4P3/1B3PPP/2R3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. Ba3 Qxa3 2. Qxb8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/6r1/7Q/4p3/3pP2p/5rqP/6P1/3R2RK w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qxg7+ Kxg7 2. gxf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2q1b1k1/2nrbppp/p7/N1p1P3/2Pp1PP1/1R6/PP3QBP/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bb7 Qd8 2. Nc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnb1kb1r/pp3ppp/2p2n2/3p1N1q/4P3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Be2 Qg6 2. Nh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bqkn1r/ppb2ppp/2pp4/4p3/4n2N/P1NP4/1PP1BPPP/R1BQ1RK1 w kq - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Nxe4 Qxh4 2. Bg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2rnk2r/bppn1p2/3pq1pp/p2Np3/P2PP3/2P2N1P/1P3PP1/R1BQR1K1 w k - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Bxh6 Rxh6 2. Ng5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6n1/3Rbp1k/1p4np/6r1/1P5q/6NP/1BQ2PP1/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rd4 Qxd4 2. Bxd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2kr1br1/ppp4p/2n2np1/4p1qP/8/P1NPP3/1P1B1P2/R2QKB1R w KQ - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. e4 Qg4 2. Bh3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rk5r/1ppb2pp/p1n1p3/3pP1P1/1b1P3q/2N2R2/PPP3P1/R1BQ1BK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rf4 Qxg5 2. Rf8+ Rxf8 3. Bxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.06.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2rk1/pp2pp1p/2np1bp1/8/1qNP4/4PN2/P3BPPP/2RQ1RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. Rb1 Qc3 2. Rb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1bb2rk1/1p4p1/2n3np/4p3/Q1PpN3/3q2P1/6BP/1R2R2K w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rbd1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnb1k2r/pp2nppp/2p5/3p4/2qPpN2/4P1P1/PP1Q1PBP/RN2K2R w KQkq - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. Bf1 Qa4 2. b3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5bk1/p4pp1/3p2np/2pP4/2PqNP2/6Pb/P2B1N1P/3Q2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Qc1 f5 2. Be3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/p5p1/np2ppn1/3pP1Bp/P2Pq2P/QP6/4NPP1/2RR2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. f3 Qxe2 2. Rd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p1p2kp1/2p1bn1p/5p2/2P1pP2/PP2N2P/1BP1r1P1/3R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. Kf1 Rxe3 2. Kf2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "b7/p7/1p3pkq/1P1p2p1/3Pp1P1/P3B2P/5P1Q/6K1 w - - 0 1"]
+[PlyCount "7"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. Qb8 Qxh3 2. Qg8+ Kh6 3. Qh8+ Kg6 4. Qxh3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/pp3pp1/3b4/2pP1P1p/3pPnq1/6Q1/PP1B1P1P/1K3B2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. f3 Qxg3 2. hxg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2rk1/p4ppp/2p1p3/2p1q2n/2Pp4/3P4/PP2NPPP/R1BQ1RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. g4 Nf6 2. Bf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2rk1/1p3p2/1b2pBpp/p3P3/1Q6/2R1q3/P2R2PP/7K w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to find the win!} 1. Qxf8+ Kxf8 2. Rxe3 Bxe3 3. Rd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r4/1p1r4/p2Pkpp1/4np2/4p3/1P5P/P1PRBPP1/2K1R3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. f4 exf3 2. Bc4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1r3/4qkpp/n7/4P3/5P2/4B1P1/2Q4P/2R3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. Qf5+ Kg8 2. Rxc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/5p1p/2b1pp1Q/8/4q3/3B4/5PPP/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.06.11"]
+
+{Try to win material!} 1. Qxh7+ Qxh7 2. Bxh7+ Kxh7 3. Rxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3R1r2/4r1k1/2p2q1p/6p1/2B5/2Q3PP/1P3P2/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.19"]
+
+{Try to get decisive material advantage!} 1. Rxf8 Qxc3 2. Rg8+ Kf6 3. bxc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1r1k/2p3pp/1p1p2q1/p4nQ1/2P5/1PB2R2/P4PPP/5RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rxf5 Rxf5 2. Qxd8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2p3r1/1p5p/5K1k/8/R5P1/1P4P1/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. g4+ Rxg4 2. Rh3+ Rh4 3. g4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rkr/5ppp/7q/5P2/4N1R1/6R1/6PP/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rxg7+ Qxg7 2. Nf6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3rkn2/3b3R/3b1PP1/8/4p3/4Pp2/5P2/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Re7+ Bxe7 2. f7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2q4/2p2pK1/1p1r1R2/2kp3p/3N4/2PP3P/Q4P2/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qxd5+ Kxd5 2. Rf5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/P1n1K1p1/1r4P1/1N1b4/1R6/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Nd6+ Rxd6 2. Rb8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bq1nkb/2p4p/2pp3Q/5NpN/p2P4/2P5/PP4PP/5RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qe6+ Bxe6 2. Nh6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7r/3RQ2n/6pk/6N1/2b2pPP/2b5/6K1/4q3 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qxh7+ Rxh7 2. Rxh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/R7/5p1k/5Pp1/2b1P3/4p2P/1q3bK1/3Q4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qh5+ Kxh5 2. Rh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q1rB1/8/2b1rbk1/3pp3/7P/5QK1/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qf5+ Kxf5 2. Bh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q4/4np1b/4pk2/8/2n2B1K/4QB2/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Be5+ Nxe5 2. Qg5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7R/8/7p/3rb3/3pkpP1/5N2/4KP2/1n6 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Ng5+ hxg5 2. f3# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1N1q4/1b6/4R3/k2N4/p1PK4/8/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Ra6+ Bxa6 2. Nc6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1brk/5Rpp/R7/4p1N1/5p1P/8/5PPK/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rh6 gxh6 2. Rxh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6R1/5p2/4p3/4Pk1p/5P1b/5K1P/r2rN3/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Ng3+ Bxg3 2. Rg5# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4K3/4R3/6pk/2p1p1pp/4P3/2q2b2/2r5/5Q1R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rxh5+ gxh5 2. Qa6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N4/7p/6p1/4Bn1k/6R1/7K/6P1/2b1q3 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rg5+ Bxg5 2. g4+ Kh6 3. Nf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r1k/5r1p/1qp2PpQ/3pB3/8/8/5PPP/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qxf8+ Rxf8 2. f7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2k1r/ppN1nppp/2nQ4/8/8/8/qPP2PPP/2KR1B1R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qd8+ Nxd8 2. Rxd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r4/2rk1n1p/3bp1p1/1P1p3B/3P3B/8/1q3PPP/4Q1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qxe6+ Kxe6 2. Bg4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3N4/8/6n1/1pk5/1p2PP2/3P1rq1/3K4/Q7 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qd4+ Kxd4 2. Ne6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4q3/K1b5/2k5/p1nb1N2/2Q5/PP6/8/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qb5+ Kxb5 2. Nd4# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k2r1r/3R1Q2/2P5/3Pb3/8/7P/5qP1/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Rd8+ Kxd8 2. Qd7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3R1r1k/6bp/6p1/3Q1q2/2B2r2/8/6PP/7K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qg8+ Rxg8 2. Rxg8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6kr/1r3ppp/5q2/5NQ1/8/B7/5PPP/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Nh6+ Qxh6 2. Qd8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1qrbbk2/5p1Q/4p3/4N1N1/3P4/8/5PPP/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Ng6+ fxg6 2. Nxe6# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/6P1/5PBK/3b4/8/8/8/6q1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. f7+ Bxf7 2. Bh7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/6p1/6Q1/7B/8/1q4P1/6K1/7R w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.04.10"]
+[SourceDate "2013.06.12"]
+
+{Try to find the win!} 1. Qh7+ Kxh7 2. Bf7# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r3r2/5k1p/1p2n1p1/p1p2p2/P1N5/1P2PP2/6PP/2RR2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Try to win material!} 1. Ne5+ Kg8 2. Nd7 Rfd8 3. Nxb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1rk1/pb2qppp/1p2p3/8/P3P3/1P3P2/1B2Q1PP/R2R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Try to win material!} 1. Ba3 Rxd1+ 2. Qxd1 Qf6 3. Bxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "q7/3r4/ppk1p3/2p2p2/P1PP1Pp1/4P1P1/1Q6/3R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Qg2+ Kc7 2. Qxa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r5/6pk/6Np/2p4P/5PP1/p7/8/1B4K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Ne7+ Kh8 2. Nxc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/kpP1r2p/p1b3p1/5p2/5B2/8/PP3PPP/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. c8=N+ Ka8 2. Nxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1rbq1rk1/2p1bppp/2np1n2/1p2p3/3PP3/1BP2N1P/1P3PP1/R1BQR1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. d5 Bd7 2. dxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r2b1k/5pp1/p2p1n1p/1p1Pp3/4P3/6RP/1PB2PP1/q1BQ2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.05"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Ra3 Qxa3 2. bxa3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r3k1/3bppb1/p2p1np1/1p1Pq2p/4P3/N1P4P/1P3PP1/2BQRBK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. f4 Qxe4 2. Rxe4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/4qpp1/p1r1n1bp/1p6/3Pp3/P3B1NP/1P2QPP1/R3R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. d5 Rc4 2. dxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4pr1k/1p1p2p1/p1rP1n1p/2P5/1P4NP/5PP1/3RR1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Ne4 Rc7 2. Ng5+ Kg8 3. Nxf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r6k/1b1r1pp1/1pn1p3/2p4q/R7/2P1Q1B1/1P2NPPP/5RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Rh4 Qxh4 2. Bxh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/p1b1q1pp/bpn2p2/4p3/2p1P3/2P1BN1P/PPB2PP1/R2QR1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Qd5+ Kh8 2. Qxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q3rk1/p3nppp/1p2p3/7b/Q7/2N3P1/PP2PPBP/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Qh4 Bg6 2. Qxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r2rk1/5ppp/5n2/7b/5P2/1p2N1PP/1P4B1/R3R2K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. g4 Bg6 2. f5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q2k1/5pp1/3r3p/1p6/2p5/2P2BP1/1P3P1P/R3R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Ra8 Qxa8 2. Bxa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5r2/2q3pk/p1n5/1p1p1p1p/2pP4/2P2N1P/PP1Q1PP1/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Ng5+ Kg8 2. Ne6 Qd7 3. Nxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/5p2/p1n2n1p/1p6/2p5/2P2NBP/1P3PP1/3R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Rd6 Ne4 2. Rxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5bb1/p7/3k2p1/5p1p/P1p4P/5BP1/2PB1PK1/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Bb4+ Kd7 2. Bxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r2k1/5pb1/1r4p1/1pn4p/2p5/5N1P/1PPB1PP1/1R2RK2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Ba5 Rbd6 2. Bxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/6kp/1pBbnpp1/p1p5/4K3/1P3NP1/P1P2P1P/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Kd5 Kf7 2. Kxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/1R4pk/p6p/5K1P/PP3B1b/7r/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Kg3 Rd2 2. Kxh3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1r2/pp1q1ppk/4p3/b7/2p5/2P3NP/PP3PP1/R2Q1RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Qh5+ Kg8 2. Qxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5bk1/3r1pp1/3q3p/1p6/2p3R1/2P2N1P/1P1Q1PP1/6K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Rd4 Qe6 2. Rxd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/5pp1/pbq1p2p/1p6/8/2P4P/PPBQ1PP1/3RR1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Be4 Qc7 2. Bxa8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r2r1k1/5ppp/pbn5/1pq5/2p5/1PP2B1P/P1NQ1PP1/3R1RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. b4 Qf5 2. Bxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r4rk1/p4pp1/bpn1p2p/2n5/P7/2P2NNP/1PB2PP1/R2R2K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. b4 Nb7 2. b5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r2rk1/pp3pp1/7p/b6b/2pN4/2P4P/PP1N1PP1/R3R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Re5 Bb6 2. Rxh5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2nr1pp1/4kp1p/1p6/p6P/Pb1BN1P1/1P3PK1/3R4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Bf5+ Ke7 2. Rxd7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5rk1/5pp1/2n5/8/7R/7P/2B2KP1/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Bh7+ Kh8 2. Be4+ Kg8 3. Bxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r2rbk1/5qpp/8/4pN2/8/6QP/5PP1/2R1R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Nh6+ Kh8 2. Nxf7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k6r/ppq3bp/1n4p1/2r2p2/1N6/5B1P/PP1Q1PP1/R3R1K1 w - - 0 1"]
+[PlyCount "1"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Na6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r4/7p/2pr1kp1/1p6/p3P1R1/P5P1/1P4K1/4R3 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. e5+ Kf5 2. Rf4+ Kg5 3. exd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k7/pp1r2pp/2b2p2/8/2N5/2P4P/1P3PP1/R5K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Nb6+ Kb8 2. Nxd7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p4pk1/1p4p1/7p/P1K5/2b2P1P/n1P3P1/3R4 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Kb3 Bf6 2. Kxa2 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/ppk2p1p/5bp1/2P5/4q3/7P/1PP3P1/3Q1B1K w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Qd6+ Kc8 2. Qxf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3n1b2/2q1Ppkp/6p1/8/8/7P/P4PP1/1R4K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. e8=N+ Kg8 2. Nxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3r1bk1/6pp/8/1p3N2/p7/P5RP/1Pr3P1/4R1K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Nh6+ Kh8 2. Nf7+ Kg8 3. Nxd8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5k2/1p3p1p/2b4q/8/p7/2Q3NP/2P2PP1/6K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Qh8+ Ke7 2. Nf5+ Ke6 3. Nxh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6k1/5pp1/B3pb1p/7r/6q1/P3Q1P1/5P1P/4R1K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Be2 Qh3 2. Bxh5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r1k1/5pp1/pp5p/q1n1p3/P3P3/1P2Q2P/1B3PP1/2R3K1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Bc3 Nxb3 2. Bxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/p4pp1/1pk1p2p/2p1P2n/8/1P2P3/P1N1KPPP/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. g4 Nf6 2. exf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "b5k1/p4p1p/Bp2p1p1/4P3/P7/1P6/2r2PPP/3R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Rd8+ Kg7 2. Rxa8 Rc1+ 3. Bf1 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r4k1/p4ppp/1p6/6b1/1q6/1P4P1/P3QPBP/5RK1 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Qe5 Rd8 2. Qxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/r4pp1/4pnk1/r1p4p/4P3/1PR1RNPP/5PK1/8 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Ne5+ Kh7 2. Nc6 R7a6 3. Nxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4q2k/6p1/6bp/1p6/2p1r2P/B5P1/1PPQ4/1K3R2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Rf8+ Qxf8 2. Bxf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3r3/1bp2pk1/p2p2pp/np1P4/7P/1PP2BP1/PB3P2/R2R2K1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. c4+ f6 2. Bc3 bxc4 3. Bxa5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r5/4rpkp/pp4p1/2b5/8/2P4P/BP3PP1/2RR1K2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. b4 Bxb4 2. cxb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/kpp5/pq4pn/8/2Q5/PB1N3b/KPP2P2/8 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+
+{Try to get decisive material advantage!} 1. Qh4 Bf5 2. Qxh6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r6/2r1k1p1/3p4/1p4p1/2p1p2p/2P1P2P/1P3RP1/5RK1 w - - 0 1"]
+[PlyCount "5"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.03.21"]
+
+{Try to get decisive material advantage!} 1. Rf7+ Kd8 2. Rf8+ Kd7 3. Rxb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1rN2rk1/5ppp/qn2p2b/1p6/8/1P4P1/1B1Q1PKP/2R2R2 w - - 0 1"]
+[PlyCount "3"]
+[EventDate "2013.02.19"]
+[SourceDate "2013.03.21"]
+
+{Try to get decisive material advantage!} 1. Ne7+ Kh8 2. Qxh6 *
+

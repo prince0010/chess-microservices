@@ -18,7 +18,6 @@ import { NATS_SERVICE } from 'src/config';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { SuperAdminGuard } from 'src/guards/super-admin.guard';
 
-import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
 import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
@@ -28,9 +27,9 @@ export class LessonParentController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
   @UseGuards(SuperAdminGuard)
-  @Post('seed-data-education-puzzle')
-  seedDataEducationPuzzle() {
-    return this.client.send('lessonParent.seed.dataEducationPuzzle', {}).pipe(
+  @Post('seed-data')
+  seedDataLessonParents() {
+    return this.client.send('lessonParent.seed.data', {}).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
@@ -39,14 +38,15 @@ export class LessonParentController {
 
   @UseGuards(SuperAdminGuard)
   @Post('')
-  createOne(@Body() createLessonParentDto: CreateLessonParentDto) {
-    return this.client
-      .send('lessonParent.create.one', createLessonParentDto)
-      .pipe(
-        catchError((err) => {
-          throw new RpcException(err);
-        }),
-      );
+  createOne() {
+    return 'This endpoint is not available at the moment. Seed of lessonParent was created to avoid this.';
+    // return this.client
+    //   .send('lessonParent.create.one', createLessonParentDto)
+    //   .pipe(
+    //     catchError((err) => {
+    //       throw new RpcException(err);
+    //     }),
+    //   );
   }
 
   @UseGuards(AuthGuard)

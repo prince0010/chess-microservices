@@ -17,7 +17,6 @@ import { NATS_SERVICE } from 'src/config';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { SuperAdminGuard } from 'src/guards/super-admin.guard';
 
-import { InsertLessonDto } from './dto/insert-lesson.dto';
 import { FindAllHistoryRecordLessonDto } from './dto/find-all-history-record-lesson.dto';
 
 @Controller('lesson')
@@ -25,9 +24,9 @@ export class LessonController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
   @UseGuards(SuperAdminGuard)
-  @Post('seed')
-  insertLessonsByPgnFile(@Body() insertLessonDto: InsertLessonDto) {
-    return this.client.send('lesson.insert.pgn', insertLessonDto).pipe(
+  @Post('seed-all-pgn-files')
+  insertLessonsByPgnFile() {
+    return this.client.send('lesson.insert.pgn', {}).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

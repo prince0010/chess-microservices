@@ -1,0 +1,18 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "The King"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/4k3/8/8/4K3/8/8 w - - 0 1"]
+[PlyCount "0"]
+[SourceDate "2025.08.02"]
+
+{[%cal Ge3f4,Ge3d4,Ge3e4,Ge3d3,Ge3f3,Ge3f2,Ge3e2,Ge3d2] Moves: One square in
+any direction — up, down, sideways, or diagonally.   • In the opening and
+middlegame, the king needs to be protected (usually by castling).   • In the
+endgame, the king becomes active and helps support pawns or control key
+squares.  Value: Priceless — if you lose the king, you lose the game.}  *
+

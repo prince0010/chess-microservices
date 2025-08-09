@@ -9,6 +9,7 @@ import { GuessPositionUserHistory } from './entities/guess-position-user-history
 
 import { UpdateGuessPositionUserHistoryDto } from './dto/update-guess-position-user-history.dto';
 import { BestScoreByUserResponse, IRankingResponse } from './interfaces/index';
+import { LessonNameAsGame } from 'src/enum';
 
 @Injectable()
 export class GuessPositionService {
@@ -139,6 +140,17 @@ export class GuessPositionService {
         });
 
         await this.guessPositionUserHistoryRepository.save(newRow);
+      }
+
+      // STEP: enable lessonParent isGame with name "Guess Square Game"
+      if (score > 29) {
+        const dataEnableLessonParent = {
+          lessonParentName: LessonNameAsGame.GUESS_SQUARE_GAME,
+          userUid,
+        };
+        await firstValueFrom(
+          this.client.emit('lessonParent.enable.one', dataEnableLessonParent),
+        );
       }
 
       // TODO: maybe update user panda points

@@ -1,0 +1,140 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/3p4/4P3/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Gd5][%cal Ge4d5]} {Pawn takes} 1. exd5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/5p2/4P3/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Gf5][%cal Ge4f5]} {Pawn takes} 1. exf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/8/1n6/P3K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Gb3][%cal Ga2b3]} {Pawn takes} 1. axb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/8/8/2b5/1P2K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Gc3][%cal Gb2c3]} {Pawn takes} 1. bxc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/8/1r6/2P5/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Gb5][%cal Gc4b5]} {Pawn takes} 1. cxb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4k3/2q5/3P4/8/8/4K3/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Gc6][%cal Gd5c6]} {Pawn takes} 1. dxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4n3/3P4/2k5/8/2K5/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Ge7][%cal Gd6e7]} {Pawn takes} 1. dxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3b4/4P3/2k5/8/2K5/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Gd7][%cal Ge6d7]} {Pawn takes} 1. exd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/8/2k3r1/5P2/2K5/8/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Gg5][%cal Gf4g5]} {Pawn takes} 1. fxg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pawn takes"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/8/8/6q1/3K3P/8 w - - 0 1"]
+[PlyCount "1"]
+[SourceDate "2025.05.23"]
+
+{[%csl Gg3][%cal Gh2g3]} {Pawn takes} 1. hxg3 *
+

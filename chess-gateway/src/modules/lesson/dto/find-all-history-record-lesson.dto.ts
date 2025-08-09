@@ -1,6 +1,5 @@
 import { Type } from 'class-transformer';
-import { IsEnum, IsNumber, IsOptional, IsPositive, Min } from 'class-validator';
-import { LessonLevel, lessonLevelsArray } from 'src/enum';
+import { IsNumber, IsOptional, IsPositive, Min } from 'class-validator';
 
 export class FindAllHistoryRecordLessonDto {
   @IsOptional()
@@ -17,10 +16,4 @@ export class FindAllHistoryRecordLessonDto {
   @IsPositive()
   @Type(() => Number)
   lessonParentId: number;
-
-  @IsOptional()
-  @IsEnum(LessonLevel, {
-    message: `Invalid level name. Try to send one of these valid one: [${[...lessonLevelsArray]}]`,
-  })
-  level?: string;
 }

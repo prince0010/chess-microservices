@@ -538,7 +538,7 @@
 [PlyCount "5"]
 [SourceDate "2013.02.06"]
 
-{Get the knight to b5 in three moves!} 1. Ne2 Kf5 2. Nc3 Ke6 3. Nb5 *
+{Get the knight to v5 in three moves!} 1. Ne2 Kf5 2. Nc3 Ke6 3. Nb5 *
 
 [Event "?"]
 [Site "?"]
@@ -3702,3 +3702,4 @@ Kh4 Kf4 4. Kh5 Kf5 5. Kh6 Kf6 6. Kh7 Kf7 7. Kh8 *
 [EventDate "2013.06.19"]
 
 {Get the white king to a2 in two moves} 1. a3 Ka5 2. Ka2 *
+

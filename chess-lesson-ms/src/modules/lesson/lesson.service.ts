@@ -56,7 +56,6 @@ export class LessonService {
       limit = 10,
       page = 1,
       lessonParentId,
-      // level = null,
     } = findAllHistoryRecordLessonDto;
 
     const offset = (page - 1) * limit;

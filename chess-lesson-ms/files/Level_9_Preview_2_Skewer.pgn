@@ -1,0 +1,561 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Skewer"]
+[Black "sample 1"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3p4/3k2q1/8/5K2/4Q3/8 w - - 0 1"]
+[PlyCount "3"]
+[SourceDate "2018.03.29"]
+
+{In chess, a skewer is an attack upon two pieces in a line and is similar to a
+pin. A skewer is sometimes described as a "reverse pin"; the difference is
+that in a skewer, the more valuable piece is in front of the piece of lesser
+value. The opponent is compelled to move the more valuable piece to avoid its
+capture, thereby exposing the less valuable piece which can then be captured.
+The current position is a typical skewer:} 1. Qb5+ {White gives a check and
+forces the king to go away, leaving the queen falling "for free".} Ke6 2. Qxg5
+$18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Skewer"]
+[Black "sample 2"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/P4k2/8/8/8/8/7K/r7 w - - 0 1"]
+[PlyCount "5"]
+[SourceDate "2018.03.29"]
+
+{If it was Black's turn, we would reach a theoretical drawn endgame after Kg7.
+However the current misplacement of the black king allows White to win the
+game by using the skewer motif!} 1. Rh8 {White intends to promote his pawn
+which would mean the end of the game and after} Rxa7 2. Rh7+ {The skewer!} Ke6
+3. Rxa7 $18 {Try to obtain decisive material advantage in each position by
+using the help of skewer!} *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/1P6/8/4q3/8/8/2K5/6R1 w - - 0 1"]
+[PlyCount "5"]
+
+1. b8=Q+ Qxb8 2. Rg8+ Kd7 3. Rxb8 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/6P1/8/8/8/1q6/p6Q/K7 w - - 0 0"]
+[PlyCount "5"]
+
+1. g8=Q+ Qxg8 2. Qb8+ Kd7 3. Qxg8 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4k3/r3P2R/8/8/8/1p6/5PK1/8 w - - 0 0"]
+[PlyCount "7"]
+
+1. Rh8+ Kxe7 2. Rh7+ Kd6 3. Rxa7 b2 4. Rb7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r6/2p5/p2k3B/8/1n4R1/8/1PP5/1K6 w - - 0 1"]
+[PlyCount "5"]
+
+1. Rxb4 Rxb4 2. Bf8+ Kd5 3. Bxb4 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q3n2/8/3k4/4p3/3p4/3P4/2PB4/4KQ2 w - - 0 0"]
+[PlyCount "5"]
+
+1. Qxf8+ Qxf8 2. Bb4+ Kd5 3. Bxf8 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/3k4/8/5q1p/PpB3pP/1N4P1/1KP5/8 w - - 0 0"]
+[PlyCount "5"]
+
+1. Be6+ Qxe6 (1... Kxe6 2. Nd4+ Ke5 3. Nxf5 $18) 2. Nc5+ Kd6 3. Nxe6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/R7/3p4/2p5/1p1q4/3P4/3KP3/7R w - - 0 1"]
+[PlyCount "5"]
+
+1. Rh8+ Qxh8 2. Ra8+ Kb7 3. Rxh8 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5R2/8/8/1k2q3/1Pp5/2P5/3KN3/8 w - - 0 1"]
+[PlyCount "5"]
+
+1. Rf5 Qxf5 2. Nd4+ Kb6 3. Nxf5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/B6R/3p1k2/1p1P4/2r4n/1KP5/8 w - - 0 1"]
+[PlyCount "5"]
+
+1. Rxh3 Rxh3 2. Bc8+ Ke4 3. Bxh3 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2r1k3/8/3P4/6p1/8/6PK/4B3 w - - 0 0"]
+[PlyCount "7"]
+
+{Smiley} 1. d6+ Kxd6 2. Bg3+ Kd7 3. Bxc7 Kxc7 4. Kg3 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2k1q3/8/p2P1p2/P4P2/2N5/KB6 w - - 0 0"]
+[PlyCount "5"]
+
+1. d5+ Kxd5 (1... Qxd5 2. Nb4+ Kc5 3. Nxd5 $18) 2. Ba2+ Ke5 3. Bxe6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/Bp2k3/4p3/7P/2q4n/2P5/5Q1K w - - 0 1"]
+[PlyCount "5"]
+
+1. Bc8+ Qxc8 (1... Kd6 2. Bxh3 $18) 2. Qxh3+ Kd5 3. Qxc8 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/pN1k1q2/4p3/1P2p3/P1B1P1p1/3PK1P1/8 w - - 0 0"]
+[PlyCount "5"]
+
+1. Bxe5+ Kxe5 (1... Qxe5 2. Nc4+ Ke6 3. Nxe5 $18) 2. Nd7+ Kf5 3. Nxf6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "Q7/1R5p/3r1p2/4p3/4q2k/1P6/1KP5/8 w - - 0 0"]
+[PlyCount "5"]
+
+{Smiley} 1. Rxh7+ Qxh7 2. Qh1+ Kg5 3. Qxh7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3q4/1pk5/8/2Bp4/1K6/Q7 w - - 0 0"]
+[PlyCount "5"]
+
+1. Bb4+ Kxb4 2. Qa3+ Kc4 3. Qxd6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/6p1/R7/3k4/4p3/1KP2q2/7R w - - 0 1"]
+[PlyCount "7"]
+
+{Smiley} 1. Rh4+ Qxh4 2. Ra4+ Ke5 3. Rxh4 e2 4. Rh1 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "Q7/7q/2R5/8/5P1k/8/3r1P2/6K1 w - - 0 0"]
+[PlyCount "5"]
+
+{Smiley} 1. Rh6+ Qxh6 2. Qh1+ Kg4 3. Qxh6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1q6/2kp2B1/2p1p3/3p4/3P4/2K5/Q7/8 w - - 0 0"]
+[PlyCount "7"]
+
+1. Be5+ d6 2. Bxd6+ Kxd6 3. Qh2+ Kd7 4. Qxb8 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R2b4/8/5k2/3r4/4qP2/1P6/1KP5/6Q1 w - - 0 0"]
+[PlyCount "5"]
+
+1. Rxd8 Rxd8 2. Qg5+ Kf7 3. Qxd8 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5q2/8/2pk2p1/p2p4/3P1n2/4p2P/6P1/1Q3RK1 w - - 0 0"]
+[PlyCount "5"]
+
+1. Rxf4 Qxf4 2. Qb8+ Ke6 3. Qxf4 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/P3kp2/6p1/3pP2p/7P/6P1/r4PK1/8 w - - 0 0"]
+[PlyCount "7"]
+
+1. e6 fxe6 (1... Kxe6 2. Re8+ Kf6 3. a8=Q Rxa8 4. Rxa8 $18) (1... d4 2. exf7
+Kxf7 3. Rh8 Rxa7 4. Rh7+ Kf6 5. Rxa7 $18) 2. Rg8 Rxa7 3. Rg7+ Kd6 4. Rxa7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/3p2p1/3q4/3N4/4P3/1RP5/1K1P1Q2/r6r w - - 0 0"]
+[PlyCount "3"]
+
+1. Qf8+ Qxf8 2. Rb8# *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3q4/8/3p4/3k2b1/3P4/2KP4/2P5/R5R1 w - - 0 0"]
+[PlyCount "5"]
+
+1. Rxg5+ Qxg5 2. Ra5+ Kc6 3. Rxg5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1p6/pk1r4/8/2P5/1KB5/6B1/8 w - - 0 0"]
+[PlyCount "5"]
+
+1. c5+ Kxc5 2. Bb4+ Kd4 3. Bxd6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/5q2/4kp2/2p1p3/3p4/3P2K1/6BQ/8 w - - 0 0"]
+[PlyCount "5"]
+
+1. Bd5+ Kxd5 2. Qa2+ Kd6 3. Qxf7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3n3r/2p3p1/p1b2k2/Pp2p3/1Pp1P3/2P2P1N/5BK1/3R4 w - - 0 0"]
+[PlyCount "7"]
+
+1. Rxd8 Rxd8 2. Bh4+ g5 3. Bxg5+ Ke6 4. Bxd8 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/4q1k1/3N4/5P2/8/5P2/6K1/4B3 w - - 0 0"]
+[PlyCount "5"]
+
+1. f6+ Kxf6 (1... Qxf6 2. Ne8+ Kg6 3. Nxf6 $18) 2. Bh4+ Ke6 3. Bxe7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k3r/7r/4p3/4N1p1/8/2P3P1/3P1PK1/R7 w - - 0 0"]
+[PlyCount "5"]
+
+1. Nf7+ Rxf7 (1... Ke7 2. Nxh8 $18) 2. Ra8+ Ke7 3. Rxh8 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "Q7/8/3p1q2/3pk3/2p5/8/2K2B2/8 w - - 0 0"]
+[PlyCount "5"]
+
+1. Bd4+ Kxd4 2. Qa1+ Kc5 3. Qxf6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "3k4/P2P3p/3R2p1/5p2/8/6PP/r7/5K2 w - - 0 1"]
+[PlyCount "7"]
+
+1. Rf6 Rxa7 2. Rf8+ Kxd7 3. Rf7+ Ke6 4. Rxa7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6r1/2q5/1p1k2p1/2pp3p/8/1P4PP/PB4P1/2Q3K1 w - - 0 1"]
+[PlyCount "5"]
+
+{Smiley} 1. Be5+ Kxe5 2. Qf4+ Ke6 3. Qxc7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/3q1k2/2p3p1/p2pP2p/4N2P/2P3P1/R5K1 w - - 0 1"]
+[PlyCount "5"]
+
+1. e5+ Qxe5 (1... Kxe5 2. Nc4+ Kd5 3. Nxd6 $18) 2. Ng4+ Ke6 3. Nxe5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "5N2/2p5/3q1k1p/3p4/4P3/2P3P1/5P2/2B3K1 w - - 0 0"]
+[PlyCount "5"]
+
+1. e5+ Kxe5 (1... Qxe5 2. Nd7+ Kf5 3. Nxe5 $18) 2. Bf4+ Ke4 3. Bxd6 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1bk1q3/8/8/5N2/5B2/5KP1/R7 w - - 0 0"]
+[PlyCount "7"]
+
+{Smiley} 1. Nd5+ Bxd5 2. Ra7+ Kd6 3. Rxe7 Kxe7 4. Bxd5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/8/2pk4/2pb2p1/1q2p2p/3B4/2P2B2/2K2Q2 w - - 0 1"]
+[PlyCount "5"]
+
+1. Bxc5+ Qxc5 (1... Kxc5 2. Qf8+ Kb6 3. Qxb4+ $18) 2. Qf8+ Ke6 3. Qxc5 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7Q/6R1/2p5/5p2/k2qb2p/7P/6P1/7K w - - 0 0"]
+[PlyCount "5"]
+
+{Smiley} 1. Ra7+ Qxa7 2. Qa1+ Kb5 3. Qxa7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/1Q6/3bN1k1/5pP1/P3rP1P/3K4/7q/8 w - - 0 1"]
+[PlyCount "5"]
+
+1. h5+ Kxh5 (1... Qxh5 2. Qg7#) 2. Qh7+ Kg4 3. Qxh2 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "R7/2qrk3/8/8/1p2p3/1PN1P3/1KP5/7R w - - 0 1"]
+[PlyCount "7"]
+
+{Smiley} 1. Nd5+ Rxd5 2. Rh7+ Kd6 3. Ra6+ Qc6 4. Rh6+ $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "8/2k4q/3r4/8/8/8/2P2R2/1K4Q1 w - - 0 0"]
+[PlyCount "5"]
+
+1. Rf7+ Qxf7 2. Qa7+ Kc6 3. Qxf7 $18 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r3/1q3k2/5r2/2p2N2/p1P2B2/1P1Q1P2/P1K5/8 w - - 0 0"]
+[PlyCount "5"]
+
+1. Nd6+ Rxd6 (1... Kf8 2. Nxb7 $18) 2. Qh7+ Kf6 3. Qxb7 $18 *
+

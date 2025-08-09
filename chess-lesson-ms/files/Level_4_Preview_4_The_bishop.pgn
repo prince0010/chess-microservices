@@ -1,0 +1,18 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "The Bishop"]
+[Black "?"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2k5/8/8/8/4B3/8/8/2K5 w - - 0 1"]
+[PlyCount "0"]
+[SourceDate "2025.08.02"]
+
+{[%cal Ge4h7,Ge4a8,Ge4b1,Ge4h1] Moves: Any number of squares diagonally, but
+only on one color for the whole game.  When it’s strong:   • Strong in
+open positions, where it has long diagonals to move.   • Two bishops
+together (the bishop pair) is a strong combination.   • Very useful in
+endgames, especially on both sides of the board.  Value: 3 pawns.}  *
+

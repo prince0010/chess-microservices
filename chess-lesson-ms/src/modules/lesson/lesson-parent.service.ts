@@ -15,15 +15,12 @@ import { LessonParentTestRecord } from './entities/lesson-parent-test-record.ent
 
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
-import { getTestLessonLengthByLevel } from './helpers/get-test-lesson-length-by-level.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
-import { getFactorLesson } from './helpers/factor-lesson.helper';
-import { timerPerLesson } from './helpers/timer-per-lesson.helper';
 import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
-import { getLevelNumber } from './helpers/adjust-level-name-lesson.helper';
-import { lessonParentEducationPuzzleDataSeed } from './seed/lesson-parent-education-puzzle-data-seed';
+import { lessonParentDataSeed } from './seed/lesson-parent-data-seed';
+import { getLessonsCompletedAsGame } from './helpers/get-lessons-completed-as-game.helper';
+import { getLessonsCompletedAsBot } from './helpers/get-lessons-completed-as-bot.helper';
 
-import { CreateLessonParentDto } from './dto/create-lesson-parent.dto';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
 import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
@@ -57,30 +54,29 @@ export class LessonParentService {
     private readonly lessonParentTestRecordRepository: Repository<LessonParentTestRecord>,
   ) {}
 
-  async seedEducationPuzzle(): Promise<string> {
+  async seedLessonsParents(): Promise<string> {
     try {
-      // verify if already exists
-      const someLessonParentEducation =
-        await this.lessonParentRepository.findOneBy({
-          story: LessonStoryName.EDUCATION,
-        });
-      if (someLessonParentEducation) {
-        throw new BadRequestException(
-          `Warning: seed of lesson parent Education-Puzzle already was generated.`,
-        );
-      }
-
-      const data: any = lessonParentEducationPuzzleDataSeed;
+      const insertedLessonParentsArray: string[] = [];
+      const data = lessonParentDataSeed as any; // needed to set any to avoid DeepPartial error
 
       for (const lessonParentObject of data) {
+        const existLessonParent = await this.lessonParentRepository.findOneBy({
+          name: lessonParentObject.name,
+        });
+        if (existLessonParent) {
+          continue;
+        }
+
         const newLessonParent = this.lessonParentRepository.create({
           ...lessonParentObject,
         });
 
         await this.lessonParentRepository.save(newLessonParent);
+
+        insertedLessonParentsArray.push(lessonParentObject.name);
       }
 
-      return 'SEED data of Lesson Parent for Education and Puzzle generated successfully.';
+      return `These Lesson Parents SEED data was inserted: [${insertedLessonParentsArray.join(', ')}]`;
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -89,18 +85,54 @@ export class LessonParentService {
     }
   }
 
-  async create(
-    createLessonParentDto: CreateLessonParentDto,
-  ): Promise<LessonParent> {
-    const { level, name, story, showHint } = createLessonParentDto;
+  // async create(
+  //   createLessonParentDto: CreateLessonParentDto,
+  // ): Promise<LessonParent> {
+  //   try {
+  //     const newLessonParent: LessonParent = this.lessonParentRepository.create({
+  //       ...createLessonParentDto,
+  //     });
 
+  //     return await this.lessonParentRepository.save(newLessonParent);
+  //   } catch (error) {
+  //     throw new RpcException({
+  //       status: 400,
+  //       message: error.message,
+  //     });
+  //   }
+  // }
+
+  /*
+    some lessonParent isGame or isBot was completed and mark it as enabled
+  */
+  async markAsEnabledSomeLessonParentFromGameOrBot(
+    lessonParentName: string,
+    userUid: number,
+  ): Promise<void> {
     try {
-      const newLessonParent: LessonParent = this.lessonParentRepository.create({
-        ...createLessonParentDto,
-        timer: timerPerLesson(level), // add timer to lesson parent
+      const lessonParent = await this.lessonParentRepository.findOne({
+        where: { name: lessonParentName },
       });
+      if (!lessonParent) {
+        throw new BadRequestException(
+          `Lesson parent with Name: ${lessonParentName} not found`,
+        );
+      }
 
-      return await this.lessonParentRepository.save(newLessonParent);
+      const existLessonParentEnableRow =
+        await this.lessonParentEnabledRepository.findOne({
+          where: { lessonParent: { id: lessonParent.id }, userUid },
+        });
+
+      if (existLessonParentEnableRow) return; // already completed by isGame or isBot
+
+      const newLessonParentEnabledRow =
+        this.lessonParentEnabledRepository.create({
+          lessonParent,
+          userUid,
+        });
+
+      await this.lessonParentEnabledRepository.save(newLessonParentEnabledRow);
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -138,15 +170,20 @@ export class LessonParentService {
 
       const result: ILessonParentDetail = {
         id: lessonParent.id,
+        lessonFactor: lessonParent.lessonFactor,
+        canBeSkipped: lessonParent.canBeSkipped,
         name: lessonParent.name,
         timer: lessonParent.timer,
         levelFrontend: lessonParent.levelFrontend,
         pointsPerLesson: lessonParent.pointsPerLesson,
         quantityToUnlockNext: lessonParent.quantityToUnlockNext,
-        level: getLevelNumber(lessonParent),
+        level: lessonParent.level,
         story: lessonParent.story,
         showHint: lessonParent.showHint,
         isTest: lessonParent.isTest,
+        isBot: lessonParent.isBot,
+        isGame: lessonParent.isGame,
+        isPreview: lessonParent.isPreview,
         lessonsLength,
         lessonsCompleted,
         lastLessonPlayedId:
@@ -169,19 +206,18 @@ export class LessonParentService {
     userUid: number,
   ): Promise<ILessonParentDetail> {
     try {
-      // STEP 0: Get test lesson length by level
-      const length = getTestLessonLengthByLevel(
-        lessonParent.level as LessonLevel,
-      );
-
-      // STEP 1: Get all lessons with this level
+      // STEP 1: Get all lessons with this level but only from pgn 250 (isPreview:false)
       const allLessonsByLevel = await this.lessonRepository.find({
-        where: { level: lessonParent.level },
+        where: {
+          level: lessonParent.level,
+          story: lessonParent.story,
+          lessonParent: { isPreview: false },
+        },
       });
 
-      if (!allLessonsByLevel || allLessonsByLevel.length < length) {
+      if (!allLessonsByLevel || allLessonsByLevel.length < 10) {
         throw new BadRequestException(
-          `Insufficient lessons with level "${lessonParent.level}" in database to return ${length} random lessons.`,
+          `Insufficient lessons with level "${lessonParent.level}" in database to return ${10} random lessons.`,
         );
       }
 
@@ -260,7 +296,7 @@ export class LessonParentService {
 
         selectedLessons = selectedLessons.sort(() => 0.5 - Math.random());
       } else {
-        selectedLessons = shuffledLessons.slice(0, length);
+        selectedLessons = shuffledLessons.slice(0, 10);
       }
 
       // STEP 4: get amount of lessons test completed
@@ -272,6 +308,8 @@ export class LessonParentService {
 
       let lessonsDetail: ILessonParentDetail = {
         id: lessonParent.id,
+        lessonFactor: lessonParent.lessonFactor,
+        canBeSkipped: lessonParent.canBeSkipped,
         timer: lessonParent.timer,
         level: lessonParent.level,
         levelFrontend: lessonParent.levelFrontend,
@@ -281,7 +319,10 @@ export class LessonParentService {
         story: lessonParent.story,
         showHint: lessonParent.showHint,
         isTest: lessonParent.isTest,
-        lessonsLength: length,
+        isBot: lessonParent.isBot,
+        isGame: lessonParent.isGame,
+        isPreview: lessonParent.isPreview,
+        lessonsLength: 10, // is a test
         lessonsCompleted: 0,
         lastLessonPlayedId: 0,
         lessons: transformSingleLessons(selectedLessons),
@@ -308,7 +349,6 @@ export class LessonParentService {
       page = 1,
       id = null,
       story = null,
-      level = null,
       userUid,
       isTest = null,
     } = findAllLessonParentDto;
@@ -331,9 +371,6 @@ export class LessonParentService {
     if (id) {
       whereConditions.id = id;
     }
-    if (level) {
-      whereConditions.level = level;
-    }
     if (isTest) {
       const isTestValue = isTest === 'YES';
       whereConditions.isTest = isTestValue;
@@ -351,7 +388,9 @@ export class LessonParentService {
       lessonParents.sort((a, b) => a.id - b.id);
 
       const parents: ILessonParent[] = [];
+      const disabledArray: boolean[] = [false]; // first alway false
       let previousLessonParentId = lessonParents[0]?.id;
+      let previousLessonIsBotOrIsGame = false;
 
       for (const [index, lessonParent] of lessonParents.entries()) {
         let lessonsCompleted: number = 0;
@@ -366,13 +405,22 @@ export class LessonParentService {
 
           if (!resultFromTestCompleted) {
             // user has not played test at this moment
-            lessonsLength = getTestLessonLengthByLevel(
-              lessonParent.level as LessonLevel,
-            );
+            lessonsLength = 10;
           } else {
             lessonsCompleted = resultFromTestCompleted.testCompleted;
             lessonsLength = resultFromTestCompleted.testLength;
           }
+        } else if (lessonParent.isGame) {
+          lessonsCompleted = await getLessonsCompletedAsGame(
+            this.client,
+            lessonParent,
+            userUid,
+          );
+        } else if (lessonParent.isBot) {
+          lessonsCompleted = await getLessonsCompletedAsBot(
+            this.client,
+            userUid,
+          );
         } else {
           const resultFromNormalCompleted =
             await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
@@ -382,6 +430,10 @@ export class LessonParentService {
         }
 
         let disabled = false;
+        let antepenultimateDisabled = false; // know if lesson previous to lesson is game or bot is disabled
+        if (index > 2) {
+          antepenultimateDisabled = disabledArray[index - 1];
+        }
 
         if (index === 0) {
           disabled = false;
@@ -391,23 +443,43 @@ export class LessonParentService {
               where: { userUid, lessonParent: { id: previousLessonParentId } },
             });
 
-          disabled = lastLessonParentEnabledRow ? false : true;
+          // verify if it is a game and is a bot (so they can be completed before any)
+          if (previousLessonIsBotOrIsGame) {
+            disabled =
+              lastLessonParentEnabledRow && !antepenultimateDisabled
+                ? false
+                : true;
+          } else {
+            disabled = lastLessonParentEnabledRow ? false : true;
+          }
 
           previousLessonParentId = lessonParent.id;
         }
 
+        previousLessonIsBotOrIsGame = lessonParent.isBot || lessonParent.isGame;
+        disabledArray.push(disabled);
+
         parents.push({
           id: lessonParent.id,
+          lessonFactor: lessonParent.lessonFactor,
+          canBeSkipped: lessonParent.canBeSkipped,
           timer: lessonParent.timer,
           levelFrontend: lessonParent.levelFrontend,
           pointsPerLesson: lessonParent.pointsPerLesson,
           quantityToUnlockNext: lessonParent.quantityToUnlockNext,
           name: lessonParent.name,
           story: lessonParent.story,
-          level: getLevelNumber(lessonParent),
+          level: lessonParent.level,
           isTest: lessonParent.isTest,
+          isBot: lessonParent.isBot,
+          isGame: lessonParent.isGame,
+          isPreview: lessonParent.isPreview,
+          messageModal: lessonParent.messageModal ?? null,
           lessonsCompleted,
-          lessonsLength,
+          lessonsLength:
+            lessonParent.isGame || lessonParent.isBot
+              ? lessonParent.quantityToUnlockNext
+              : lessonsLength,
           disabled,
         });
       }
@@ -690,9 +762,7 @@ export class LessonParentService {
   ): Promise<CompleteLessonResponse> {
     try {
       // STEP 1: get test length by level
-      const lessonsLength = getTestLessonLengthByLevel(
-        lessonParent.level as LessonLevel,
-      );
+      const lessonsLength = 10;
 
       // STEP 2: validate lessonIds
       for (const lessonId of completedLessonIds) {
@@ -840,9 +910,7 @@ export class LessonParentService {
       let lessonsLength = 0;
       let lessonsCompleted = 0;
       if (lessonParent.isTest) {
-        lessonsLength = getTestLessonLengthByLevel(
-          lessonParent.level as LessonLevel,
-        );
+        lessonsLength = 10;
 
         const testLessonRow = await this.lessonCompletedTestRepository.findOne({
           where: { userUid, level: lessonParent.level },
@@ -859,10 +927,10 @@ export class LessonParentService {
         lessonsCompleted = resultFromNormalLessons.lessonsCompleted;
       }
 
-      let factor = getFactorLesson(lessonParent);
       // STEP 2 verify is open to play
       const isCurrentLessonParentCompleted =
-        lessonsLength > 0 && lessonsCompleted / lessonsLength >= factor;
+        lessonsLength > 0 &&
+        lessonsCompleted / lessonsLength >= lessonParent.lessonFactor;
 
       return isCurrentLessonParentCompleted;
     } catch (error) {
