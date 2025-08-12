@@ -585,10 +585,10 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     timer: 45,
     name: 'Pin + Win material in one move',
     pgnFilename: 'Level_6_Pin_Win_Material_in_1_move.pgn',
-    lessonFactor: 0.04,
+    lessonFactor: 0.039,
     story: 'Education',
     level: 'Level 6',
-    quantityToUnlockNext: 10, // 10/250
+    quantityToUnlockNext: 10, // 10/252
     levelFrontend: 'Level 6',
     showHint: false,
     pointsPerLesson: 6,
