@@ -3,6 +3,7 @@ import { Lesson } from './lesson.entity';
 import { LessonPlayed } from './lesson-played.entity';
 import { LessonParentEnabled } from './lesson-parent-enabled.entity';
 import { LessonParentTestRecord } from './lesson-parent-test-record.entity';
+import { LessonCompletedTest } from './lesson-completed-test.entity';
 import { LessonStoryName } from 'src/enum';
 
 @Entity('lesson_parent')
@@ -75,6 +76,12 @@ export class LessonParent {
     (lessonParentEnabled) => lessonParentEnabled.lessonParent,
   )
   lessonsParentsEnabled: LessonParentEnabled[];
+
+  @OneToMany(
+    () => LessonCompletedTest,
+    (lessonCompletedTest) => lessonCompletedTest.lessonParent,
+  )
+  lessonsParentsTestCompleted: LessonCompletedTest[];
 
   @OneToMany(
     () => LessonParentTestRecord,

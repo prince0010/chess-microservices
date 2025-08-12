@@ -1,13 +1,19 @@
-import { Entity, Column, PrimaryGeneratedColumn, Index } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { LessonParent } from './lesson-parent.entity';
 
 @Entity('lesson_completed_test')
-@Index(['level', 'userUid'], { unique: true })
 export class LessonCompletedTest {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ length: 16, nullable: false })
-  level: string;
+  @ManyToOne(
+    () => LessonParent,
+    (lessonParent) => lessonParent.lessonsParentsTestCompleted,
+    {
+      nullable: false,
+    },
+  )
+  lessonParent: LessonParent;
 
   @Column({ type: 'int', nullable: false })
   userUid: number; // auth reference with column UID

@@ -302,7 +302,7 @@ export class LessonParentService {
       // STEP 4: get amount of lessons test completed
       const testCompletedRow = await this.lessonCompletedTestRepository.findOne(
         {
-          where: { userUid, level: lessonParent.level },
+          where: { userUid, lessonParent: { id: lessonParent.id } },
         },
       );
 
@@ -381,6 +381,7 @@ export class LessonParentService {
     }
 
     try {
+      // STEP 1: find all lesson parents
       const [lessonParents, total] =
         await this.lessonParentRepository.findAndCount(findOptions);
 
@@ -388,10 +389,9 @@ export class LessonParentService {
       lessonParents.sort((a, b) => a.id - b.id);
 
       const parents: ILessonParent[] = [];
-      const disabledArray: boolean[] = [false]; // first alway false
-      let previousLessonParentId = lessonParents[0]?.id;
-      let previousLessonIsBotOrIsGame = false;
+      const disabledArray: boolean[] = [false]; // first always false
 
+      // STEP 2: calculate progress
       for (const [index, lessonParent] of lessonParents.entries()) {
         let lessonsCompleted: number = 0;
         let lessonsLength: number = 0;
@@ -400,7 +400,7 @@ export class LessonParentService {
         if (lessonParent.isTest) {
           const resultFromTestCompleted =
             await this.lessonCompletedTestRepository.findOne({
-              where: { userUid, level: lessonParent.level },
+              where: { userUid, lessonParent: { id: lessonParent.id } },
             });
 
           if (!resultFromTestCompleted) {
@@ -429,34 +429,30 @@ export class LessonParentService {
           lessonsLength = resultFromNormalCompleted.lessonsLength;
         }
 
+        // STEP 3: determine if enabled
         let disabled = false;
-        let antepenultimateDisabled = false; // know if lesson previous to lesson is game or bot is disabled
-        if (index > 2) {
-          antepenultimateDisabled = disabledArray[index - 1];
-        }
-
         if (index === 0) {
           disabled = false;
         } else {
-          const lastLessonParentEnabledRow =
-            await this.lessonParentEnabledRepository.findOne({
-              where: { userUid, lessonParent: { id: previousLessonParentId } },
-            });
+          const prevEnabled = await this.lessonParentEnabledRepository.findOne({
+            where: {
+              userUid,
+              lessonParent: { id: lessonParents[index - 1].id },
+            },
+          });
 
-          // verify if it is a game and is a bot (so they can be completed before any)
-          if (previousLessonIsBotOrIsGame) {
-            disabled =
-              lastLessonParentEnabledRow && !antepenultimateDisabled
-                ? false
-                : true;
+          if (
+            lessonParents[index - 1].isBot ||
+            lessonParents[index - 1].isGame
+          ) {
+            // Can be unlocked if bot/game is done and antepenultimate isn't locked
+            const antepenultimateDisabled = disabledArray[index - 2] ?? false;
+            disabled = !prevEnabled || antepenultimateDisabled;
           } else {
-            disabled = lastLessonParentEnabledRow ? false : true;
+            disabled = !prevEnabled;
           }
-
-          previousLessonParentId = lessonParent.id;
         }
 
-        previousLessonIsBotOrIsGame = lessonParent.isBot || lessonParent.isGame;
         disabledArray.push(disabled);
 
         parents.push({
@@ -791,14 +787,14 @@ export class LessonParentService {
       // STEP 3: create new testRow if first time or update
       const testCompletedRow = await this.lessonCompletedTestRepository.findOne(
         {
-          where: { userUid, level: lessonParent.level },
+          where: { userUid, lessonParent: { id: lessonParent.id } },
         },
       );
 
       if (!testCompletedRow) {
         // create new test row
         const newTestRow = this.lessonCompletedTestRepository.create({
-          level: lessonParent.level,
+          lessonParent: lessonParent,
           userUid,
           testLength: lessonsLength,
           testCompleted: completedLessonIds.length,
@@ -913,7 +909,7 @@ export class LessonParentService {
         lessonsLength = 10;
 
         const testLessonRow = await this.lessonCompletedTestRepository.findOne({
-          where: { userUid, level: lessonParent.level },
+          where: { userUid, lessonParent: { id: lessonParent.id } },
         });
 
         if (testLessonRow) {
