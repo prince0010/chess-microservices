@@ -60,8 +60,11 @@ export class LessonParentService {
       const data = lessonParentDataSeed as any; // needed to set any to avoid DeepPartial error
 
       for (const lessonParentObject of data) {
-        const existLessonParent = await this.lessonParentRepository.findOneBy({
-          name: lessonParentObject.name,
+        const existLessonParent = await this.lessonParentRepository.findOne({
+          where: {
+            name: lessonParentObject.name,
+            story: lessonParentObject.story,
+          },
         });
         if (existLessonParent) {
           continue;
@@ -445,9 +448,9 @@ export class LessonParentService {
             lessonParents[index - 1].isBot ||
             lessonParents[index - 1].isGame
           ) {
-            // Can be unlocked if bot/game is done and antepenultimate isn't locked
-            const antepenultimateDisabled = disabledArray[index - 2] ?? false;
-            disabled = !prevEnabled || antepenultimateDisabled;
+            // Can be unlocked if bot/game is done and penultimate isn't locked
+            const penultimateDisabled = disabledArray[index - 1] ?? false;
+            disabled = !prevEnabled || penultimateDisabled;
           } else {
             disabled = !prevEnabled;
           }
@@ -520,7 +523,7 @@ export class LessonParentService {
         throw new BadRequestException('Duplicate lesson IDs detected.');
       }
 
-      // STEP: when lesson parent is test
+      // when lesson parent is test
       if (lessonParent.isTest) {
         return await this.completeTestLessons(
           completedLessonIds,
@@ -530,7 +533,7 @@ export class LessonParentService {
         );
       }
 
-      // STEP: validate valid lessonIds belongs to parent
+      // validate lessonIds belongs to parent
       const { validIds, validatedLessons } =
         await this.validateLessonExistAndAlsoBelongsToParent(
           lessonParent,
@@ -540,18 +543,7 @@ export class LessonParentService {
         throw new BadRequestException(`One or more invalid Lesson ID`);
       }
 
-      // separate logic from Level 1 to rest of levels
-      if (lessonParent.level === LessonLevel.LEVEL_1) {
-        return await this.completeLevelOneLessons(
-          userUid,
-          lessonParent,
-          completedLessonIds,
-          validatedLessons,
-        );
-      }
-
-      // Level 2, 3, 4, 5 ...
-      return await this.completeLessonsFromAllLevelsExceptLevel1(
+      return await this.completeLevelsFromNormalLessons(
         userUid,
         lessonParent,
         completedLessonIds,
@@ -565,102 +557,8 @@ export class LessonParentService {
     }
   }
 
-  // SECONDARY ENDPOINT Level 2, 3, 4, 5 ...
-  private async completeLessonsFromAllLevelsExceptLevel1(
-    userUid: number,
-    lessonParent: LessonParent,
-    completedLessonIds: number[],
-    validatedLessons: Lesson[],
-  ): Promise<CompleteLessonResponse> {
-    try {
-      let earnedPointsByLessons = 0;
-
-      // STEP 0: verify if user will increment points or not
-      const { lessonsLength, lessonsCompleted } =
-        await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
-      const stillLessonsToComplete = lessonsCompleted < lessonsLength;
-
-      // STEP 1: update lesson completed rows
-      const newCompletedLessonArray: Promise<LessonCompleted>[] = [];
-      for (const lesson of validatedLessons) {
-        const completedLessonExists =
-          await this.lessonCompletedRepository.findOne({
-            where: { lesson: { id: lesson.id }, userUid },
-          });
-
-        // only create a new row of lesson_completed if it was not completed yet
-        if (!completedLessonExists) {
-          const newLessonCompleted = this.lessonCompletedRepository.create({
-            lesson,
-            userUid,
-          });
-
-          newCompletedLessonArray.push(
-            this.lessonCompletedRepository.save(newLessonCompleted),
-          );
-
-          earnedPointsByLessons += lesson.points;
-        }
-      }
-
-      await Promise.all(newCompletedLessonArray);
-
-      // STEP 2: store last lesson played to track the progress
-      const lastLessonPlayedRow = await this.lessonPlayedRepository.findOne({
-        where: { userUid, lessonParent: { id: lessonParent.id } },
-      });
-      if (lastLessonPlayedRow) {
-        // update last lesson played id
-        await this.lessonPlayedRepository.update(
-          { id: lastLessonPlayedRow.id },
-          { lastLessonPlayed: Math.max(...completedLessonIds) },
-        );
-      } else {
-        // create new last lesson played row
-        const newLastLessonPlayed = this.lessonPlayedRepository.create({
-          userUid,
-          lessonParent: lessonParent,
-          lastLessonPlayed: Math.max(...completedLessonIds),
-        });
-
-        await this.lessonPlayedRepository.save(newLastLessonPlayed);
-      }
-
-      // STEP 3: Add lesson points to user counter
-      const dataPoints: UpdateUserPointsDto = {
-        uid: userUid,
-        points: stillLessonsToComplete ? earnedPointsByLessons : 0,
-        typeUserCounter: typeUserCounterByStoryLesson(
-          lessonParent.story as LessonStoryName,
-        ),
-      };
-      const { lastPoints, earnedPoints, counter } = await firstValueFrom(
-        this.client.send('update.points.user', dataPoints),
-      );
-
-      // STEP 4: update lessonParentEnabled row by calculating
-      const isCurrentLessonParentCompleted =
-        await this.handleLessonParentEnabled(userUid, lessonParent);
-
-      const response: CompleteLessonResponse = {
-        lastPoints,
-        earnedPoints,
-        counter,
-        nextLessonParentId: await this.getNextLessonParentId(lessonParent),
-        nextLessonParentDisabled: !isCurrentLessonParentCompleted,
-      };
-
-      return response;
-    } catch (error) {
-      throw new RpcException({
-        status: 400,
-        message: error.message,
-      });
-    }
-  }
-
   // SECONDARY ENDPOINT
-  private async completeLevelOneLessons(
+  private async completeLevelsFromNormalLessons(
     userUid: number,
     lessonParent: LessonParent,
     completedLessonIds: number[],
@@ -669,9 +567,8 @@ export class LessonParentService {
     try {
       let earnedPointsByUser = 0;
 
-      // STEP: update lessons completed and earned points
+      // STEP 1: update lessons completed and earned points
       const newCompletedLessonArray: Promise<LessonCompleted>[] = [];
-      // iterate over array of lessons ids
       for (const lesson of validatedLessons) {
         const completedLessonExists =
           await this.lessonCompletedRepository.findOne({
@@ -695,7 +592,7 @@ export class LessonParentService {
 
       await Promise.all(newCompletedLessonArray);
 
-      // Add lesson points to user counter
+      // STEP 2: Add lesson points to user counter
       const dataPoints: UpdateUserPointsDto = {
         uid: userUid,
         points: earnedPointsByUser,
@@ -707,12 +604,11 @@ export class LessonParentService {
         this.client.send('update.points.user', dataPoints),
       );
 
-      // STEP: update last lesson id played
+      // STEP 3: update last lesson id played
       const lastLessonPlayedRow = await this.lessonPlayedRepository.findOne({
         where: { userUid, lessonParent: { id: lessonParent.id } },
       });
       if (lastLessonPlayedRow) {
-        // update last lesson played id
         await this.lessonPlayedRepository.update(
           { id: lastLessonPlayedRow.id },
           { lastLessonPlayed: Math.max(...completedLessonIds) },
@@ -728,7 +624,7 @@ export class LessonParentService {
         await this.lessonPlayedRepository.save(newLastLessonPlayed);
       }
 
-      // STEP: update lessonParentEnabled row
+      // STEP 4: update lessonParentEnabled row
       const isCurrentLessonParentCompleted =
         await this.handleLessonParentEnabled(userUid, lessonParent);
 
