@@ -389,7 +389,7 @@ export class LessonParentService {
       lessonParents.sort((a, b) => a.id - b.id);
 
       const parents: ILessonParent[] = [];
-      const disabledArray: boolean[] = [false]; // first always false
+      const disabledArray: boolean[] = [];
 
       // STEP 2: calculate progress
       for (const [index, lessonParent] of lessonParents.entries()) {
