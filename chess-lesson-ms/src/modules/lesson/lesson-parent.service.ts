@@ -229,7 +229,10 @@ export class LessonParentService {
 
       // STEP 3: Pick the first N from the shuffled list
       let selectedLessons: Lesson[] = [];
-      if (lessonParent.level === LessonLevel.LEVEL_1) {
+      if (
+        lessonParent.level === LessonLevel.LEVEL_1 &&
+        lessonParent.story === LessonStoryName.EDUCATION
+      ) {
         const restLessons = shuffledLessons.slice(0, 4);
 
         // on this point select one lesson from each category (Pawn, Knight, Bishop, Rook, Queen, King)
