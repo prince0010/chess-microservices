@@ -9,12 +9,18 @@ import { envs } from 'src/config';
 import { Auth } from './entities/auth.entity';
 import { AuthController } from './auth.controller';
 import { AuthRankingController } from './auth-ranking.controller';
+import { AuthStoryUnlockedController } from './auth-story-unlocked.controller';
 import { AuthService } from './auth.service';
 import { AuthRankingService } from './auth-ranking.service';
+import { AuthStoryUnlockedService } from './auth-story-unlocked.service';
 
 @Module({
-  controllers: [AuthController, AuthRankingController],
-  providers: [AuthService, AuthRankingService],
+  controllers: [
+    AuthController,
+    AuthRankingController,
+    AuthStoryUnlockedController,
+  ],
+  providers: [AuthService, AuthRankingService, AuthStoryUnlockedService],
   imports: [
     JwtModule.register({
       global: true,
