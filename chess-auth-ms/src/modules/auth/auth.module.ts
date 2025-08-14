@@ -7,6 +7,7 @@ import { PandaModule } from 'src/modules/panda/panda.module';
 import { envs } from 'src/config';
 
 import { Auth } from './entities/auth.entity';
+import { AuthStoryUnlocked } from './entities/auth-story-unlocked.entity';
 import { AuthController } from './auth.controller';
 import { AuthRankingController } from './auth-ranking.controller';
 import { AuthStoryUnlockedController } from './auth-story-unlocked.controller';
@@ -27,7 +28,7 @@ import { AuthStoryUnlockedService } from './auth-story-unlocked.service';
       secret: envs.jwtSecret,
       signOptions: { expiresIn: '720h' }, // 1 month
     }),
-    TypeOrmModule.forFeature([Auth]),
+    TypeOrmModule.forFeature([Auth, AuthStoryUnlocked]),
     PandaModule,
     NatsModule,
   ],

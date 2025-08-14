@@ -1,16 +1,20 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { AuthStoryUnlocked } from './entities/auth-story-unlocked.entity';
+import { Auth } from './entities/auth.entity';
 
 import { StoriesUnlockedResponse, StoryUnlocked } from './interfaces';
-import { LessonStoryName } from 'src/enum/index';
+import { LessonStoryName, ModeSomeStoryCanBeUnlocked } from 'src/enum/index';
+import { UnlockStoryDto } from './dto/unlock-story.dto';
 
 @Injectable()
 export class AuthStoryUnlockedService {
   constructor(
+    @InjectRepository(Auth)
+    private readonly authRepository: Repository<Auth>,
     @InjectRepository(AuthStoryUnlocked)
     private readonly authStoryUnlockedRepository: Repository<AuthStoryUnlocked>,
   ) {}
@@ -20,7 +24,6 @@ export class AuthStoryUnlockedService {
   ): Promise<StoriesUnlockedResponse> {
     try {
       const availableStories = [
-        LessonStoryName.EDUCATION,
         LessonStoryName.PUZZLE,
         LessonStoryName.ENDGAME,
         LessonStoryName.BOTGAME,
@@ -48,6 +51,36 @@ export class AuthStoryUnlockedService {
       return {
         stories: storiesResult,
       };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  public async unlockStory(unlockStoryDto: UnlockStoryDto): Promise<void> {
+    const { userUid, story } = unlockStoryDto;
+    try {
+      const user = await this.authRepository.findOneBy({ uid: userUid });
+      if (!user) {
+        throw new BadRequestException(`Not user found with UID: ${userUid}.`);
+      }
+
+      const unlockedStoryAlready =
+        await this.authStoryUnlockedRepository.findOne({
+          where: { user: { uid: userUid }, story },
+        });
+      if (unlockedStoryAlready || story === LessonStoryName.EDUCATION) return;
+
+      // create new unlocked story row
+      const newStoryUnlocked = this.authStoryUnlockedRepository.create({
+        story,
+        user,
+        modeWasUnlocked: ModeSomeStoryCanBeUnlocked.COMPLETING_LESSONS,
+      });
+
+      await this.authStoryUnlockedRepository.save(newStoryUnlocked);
     } catch (error) {
       throw new RpcException({
         status: 400,
