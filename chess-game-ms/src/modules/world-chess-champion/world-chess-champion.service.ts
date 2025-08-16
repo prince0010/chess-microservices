@@ -315,7 +315,7 @@ export class WorldChessChampionService {
         await this.worldChessChampionLevelCompletedRepository.findAndCountBy({
           userUid,
         });
-      if (count > 2) {
+      if (count >= 2) {
         const dataEnableLessonParent = {
           lessonParentName: LessonNameAsGame.MEMORY_TESTER_GAME,
           userUid,
