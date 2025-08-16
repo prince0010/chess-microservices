@@ -10,7 +10,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     lessonFactor: 0,
     story: 'Education',
     level: 'Game',
-    quantityToUnlockNext: 3, // complete Level 3 of Tetris game
+    quantityToUnlockNext: 2, // complete Level 2 of Tetris game
     levelFrontend: 'Game',
     showHint: false,
     pointsPerLesson: 0,
@@ -389,7 +389,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     lessonFactor: 0,
     story: 'Education',
     level: 'Game',
-    quantityToUnlockNext: 3, // complete Level 3 of Guess the square game
+    quantityToUnlockNext: 2, // complete Level 3 of Guess the square game
     levelFrontend: 'Game',
     showHint: false,
     pointsPerLesson: 0,
@@ -679,7 +679,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     lessonFactor: 0.04,
     story: 'Education',
     level: 'Level 7',
-    quantityToUnlockNext: 5, // 10/250
+    quantityToUnlockNext: 10, // 10/250
     levelFrontend: 'Level 7',
     showHint: false,
     pointsPerLesson: 7,
@@ -715,7 +715,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     lessonFactor: 0.04,
     story: 'Education',
     level: 'Level 8',
-    quantityToUnlockNext: 5, // 10/250
+    quantityToUnlockNext: 10, // 10/250
     levelFrontend: 'Level 8',
     showHint: false,
     pointsPerLesson: 8,
@@ -751,7 +751,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     lessonFactor: 0,
     story: 'Education',
     level: 'Game',
-    quantityToUnlockNext: 3, // complete Level 3 of Right piece on right square
+    quantityToUnlockNext: 2, // complete Level 2 of Right piece on right square
     levelFrontend: 'Game',
     showHint: false,
     pointsPerLesson: 0,
@@ -767,10 +767,10 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     timer: 75,
     name: 'Double attack',
     pgnFilename: 'Level_9_Preview_1_Double_attack.pgn',
-    lessonFactor: 0.25,
+    lessonFactor: 0.125,
     story: 'Education',
     level: 'Level 9',
-    quantityToUnlockNext: 10, // 10/40
+    quantityToUnlockNext: 5, // 5/40
     levelFrontend: 'Level 9',
     showHint: false,
     pointsPerLesson: 9,
@@ -785,10 +785,10 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     timer: 75,
     name: 'Skewer',
     pgnFilename: 'Level_9_Preview_2_Skewer.pgn',
-    lessonFactor: 0.25,
+    lessonFactor: 0.119,
     story: 'Education',
     level: 'Level 9',
-    quantityToUnlockNext: 10, // 10/40
+    quantityToUnlockNext: 5, // 5/42
     levelFrontend: 'Level 9',
     showHint: false,
     pointsPerLesson: 9,
@@ -803,10 +803,10 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     timer: 75,
     name: 'The Pin',
     pgnFilename: 'Level_9_Preview_3_The_pin.pgn',
-    lessonFactor: 0.25,
+    lessonFactor: 0.125,
     story: 'Education',
     level: 'Level 9',
-    quantityToUnlockNext: 10, // 10/40
+    quantityToUnlockNext: 5, // 5/40
     levelFrontend: 'Level 9',
     showHint: false,
     pointsPerLesson: 9,
@@ -824,7 +824,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     lessonFactor: 0.04,
     story: 'Education',
     level: 'Level 9',
-    quantityToUnlockNext: 5, // 10/250
+    quantityToUnlockNext: 10, // 10/250
     levelFrontend: 'Level 9',
     showHint: false,
     pointsPerLesson: 9,
@@ -860,7 +860,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     lessonFactor: 0,
     story: 'Education',
     level: 'Game',
-    quantityToUnlockNext: 3, // complete Level 3 of Memory Tester
+    quantityToUnlockNext: 2, // complete Level 3 of Memory Tester
     levelFrontend: 'Game',
     showHint: false,
     pointsPerLesson: 0,
@@ -879,7 +879,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     lessonFactor: 0.04,
     story: 'Education',
     level: 'Level 10',
-    quantityToUnlockNext: 5, // 10/250
+    quantityToUnlockNext: 10, // 10/250
     levelFrontend: 'Level 10',
     showHint: false,
     pointsPerLesson: 10,

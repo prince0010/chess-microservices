@@ -36,4 +36,9 @@ export class FindAllLessonParentDto {
   @IsString()
   @IsIn(['YES', 'NO'])
   isTest: string;
+
+  @IsOptional()
+  @IsString()
+  @IsIn(['YES', 'NO'])
+  onlyLessons: string;
 }

@@ -358,6 +358,7 @@ export class LessonParentService {
       story = null,
       userUid,
       isTest = null,
+      onlyLessons = null,
     } = findAllLessonParentDto;
 
     const offset = (page - 1) * limit;
@@ -381,6 +382,10 @@ export class LessonParentService {
     if (isTest) {
       const isTestValue = isTest === 'YES';
       whereConditions.isTest = isTestValue;
+    }
+    if (onlyLessons && onlyLessons === 'YES') {
+      whereConditions.isGame = false;
+      whereConditions.isBot = false;
     }
 
     if (Object.keys(whereConditions).length > 0) {

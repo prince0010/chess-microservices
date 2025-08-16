@@ -33,6 +33,11 @@ export class FindAllLessonParentDto {
 
   @IsOptional()
   @IsString()
+  @IsIn(['YES', 'NO'])
+  onlyLessons: string;
+
+  @IsOptional()
+  @IsString()
   @IsEnum(LessonStoryName, {
     message: `Story names allowed only these: [${Object.values(LessonStoryName)}]`,
   })
