@@ -420,7 +420,7 @@ export class BotService {
           userUid,
         };
         await firstValueFrom(
-          this.client.send('lessonParent.enable.one', dataEnableLessonParent),
+          this.client.emit('lessonParent.enable.one', dataEnableLessonParent),
         );
       }
 
