@@ -62,6 +62,16 @@ export class AuthController {
   }
 
   @UseGuards(AuthGuard)
+  @Get('list-stories')
+  getListUnlockedStories(@User() user: ICurrentUser) {
+    return this.client.send('auth.findAll.stories', user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
   @Get('verify')
   verifyToken(@User() user: ICurrentUser, @Token() token: string) {
     return { user, token };

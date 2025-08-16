@@ -1,5 +1,12 @@
-import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
+import { AuthStoryUnlocked } from './auth-story-unlocked.entity';
 
 import { Gender } from 'src/enum';
 
@@ -52,4 +59,10 @@ export class Auth {
 
   @OneToOne(() => AuthPanda, (panda) => panda.user)
   panda: AuthPanda;
+
+  @OneToMany(
+    () => AuthStoryUnlocked,
+    (authStoryUnlocked) => authStoryUnlocked.user,
+  )
+  storiesUnlocked: AuthStoryUnlocked[];
 }

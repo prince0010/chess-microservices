@@ -1,3 +1,10 @@
+# Story documentation
+
+1. It is the second story player see on the roadmap.
+2. To unlock this story player needs to complete all the lesson parents Education story contains.
+3. The name is "Puzzle".
+4. When player pass the Test Level 10 unlock this story.
+
 # Puzzle Story gameplay :
 
 - 9 Levels

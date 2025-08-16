@@ -20,6 +20,7 @@ import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-sto
 import { lessonParentDataSeed } from './seed/lesson-parent-data-seed';
 import { getLessonsCompletedAsGame } from './helpers/get-lessons-completed-as-game.helper';
 import { getLessonsCompletedAsBot } from './helpers/get-lessons-completed-as-bot.helper';
+import { verifyToUnlockNextStory } from './helpers/verify-to-unlock-story.helper';
 
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
@@ -747,6 +748,9 @@ export class LessonParentService {
         nextLessonParentId: await this.getNextLessonParentId(lessonParent),
         nextLessonParentDisabled: !isCurrentLessonParentCompleted,
       };
+
+      // STEP 6: verify to unlock next story
+      await verifyToUnlockNextStory(this.client, userUid, lessonParent);
 
       return response;
     } catch (error) {
