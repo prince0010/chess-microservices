@@ -13,6 +13,7 @@ import { LessonCompletedTest } from './entities/lesson-completed-test.entity';
 import { LessonPlayed } from './entities/lesson-played.entity';
 import { LessonParentTestRecord } from './entities/lesson-parent-test-record.entity';
 
+import { LessonService } from './lesson.service';
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
@@ -53,6 +54,7 @@ export class LessonParentService {
     private readonly lessonPlayedRepository: Repository<LessonPlayed>,
     @InjectRepository(LessonParentTestRecord)
     private readonly lessonParentTestRecordRepository: Repository<LessonParentTestRecord>,
+    private readonly lessonService: LessonService,
   ) {}
 
   async seedLessonsParents(): Promise<string> {
@@ -557,6 +559,7 @@ export class LessonParentService {
         lessonParent,
         completedLessonIds,
         validatedLessons,
+        failedLessonId,
       );
     } catch (error) {
       throw new RpcException({
@@ -572,6 +575,7 @@ export class LessonParentService {
     lessonParent: LessonParent,
     completedLessonIds: number[],
     validatedLessons: Lesson[],
+    failedLessonId: number | null = null,
   ): Promise<CompleteLessonResponse> {
     try {
       let earnedPointsByUser = 0;
@@ -644,6 +648,14 @@ export class LessonParentService {
         nextLessonParentId: await this.getNextLessonParentId(lessonParent),
         nextLessonParentDisabled: !isCurrentLessonParentCompleted,
       };
+
+      // STEP 5: update lesson single records
+      await this.lessonService.updateLessonSingleRecord(
+        userUid,
+        lessonParent,
+        validatedLessons,
+        failedLessonId,
+      );
 
       return response;
     } catch (error) {

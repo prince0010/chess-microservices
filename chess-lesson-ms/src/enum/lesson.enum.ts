@@ -25,3 +25,8 @@ export enum LessonNameAsGame {
 export enum LessonNameAsBot {
   DEFEAT_TO_TIK_AND_SHELLY = 'Defeat to Tik and Shelly',
 }
+
+export enum LessonSingleRecordStatus {
+  SUCCEEDED = 'SUCCEEDED',
+  FAILED = 'FAILED',
+}

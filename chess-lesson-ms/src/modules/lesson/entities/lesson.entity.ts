@@ -7,6 +7,7 @@ import {
 } from 'typeorm';
 import { LessonCompleted } from './lesson-completed.entity';
 import { LessonParent } from './lesson-parent.entity';
+import { LessonSingleRecord } from './lesson-single-record.entity';
 import { LessonLevel, LessonStoryName } from 'src/enum';
 
 @Entity('lesson')
@@ -82,6 +83,12 @@ export class Lesson {
   // Relations
   @OneToMany(() => LessonCompleted, (lessonCompleted) => lessonCompleted.lesson)
   lessonsCompleted: LessonCompleted[];
+
+  @OneToMany(
+    () => LessonSingleRecord,
+    (lessonSingleRecord) => lessonSingleRecord.lesson,
+  )
+  lessonsSingleRecords: LessonSingleRecord[];
 
   @ManyToOne(() => LessonParent, (lessonParent) => lessonParent.lessons, {
     nullable: false,
