@@ -75,50 +75,22 @@ export class LessonService {
         );
       }
 
-      // STEP 1: build the SQL
-      const [rawLessons, total] = await Promise.all([
-        this.lessonCompletedRepository.query(
-          `
-            SELECT
-              lesson.id,
-              lesson.level,
-              lesson.description,
-              lesson_completed.completedAt,
-              lesson_parent.levelFrontend
-            FROM
-              lesson_completed
-            JOIN
-              lesson ON lesson_completed.lessonId = lesson.id
-            JOIN
-              lesson_parent ON lesson.lessonParentId = lesson_parent.id
-            WHERE
-              lesson_completed.userUid = ? AND lesson_parent.id = ?
-            ORDER BY
-              lesson.level ASC,
-              lesson.id ASC
-            LIMIT ? OFFSET ?
-          `,
-          [userUid, lessonParentId, limit, offset],
-        ),
-        this.lessonCompletedRepository.query(
-          `
-            SELECT COUNT(*) as total
-            FROM lesson_completed
-            JOIN lesson ON lesson_completed.lessonId = lesson.id
-            JOIN lesson_parent ON lesson.lessonParentId = lesson_parent.id
-            WHERE lesson_completed.userUid = ? AND lesson_parent.id = ?
-          `,
-          [userUid, lessonParentId],
-        ),
-      ]);
+      const [singleLessonRecords, total] =
+        await this.lessonSingleRecordRepository.findAndCount({
+          where: { userUid, lesson: { lessonParent: { id: lessonParentId } } },
+          relations: { lesson: true },
+          take: limit,
+          skip: offset,
+        });
 
       return {
-        total: Number(total[0].total),
-        lessons: rawLessons.map((lesson) => ({
-          lessonId: lesson.id,
-          level: lesson.levelFrontend,
-          description: lesson.description,
-          completedAt: lesson.completedAt,
+        total: total,
+        lessons: singleLessonRecords.map((record) => ({
+          lessonId: record.lesson.id,
+          level: record.lesson.level,
+          description: record.lesson.description,
+          playedAt: record.playedAt,
+          status: record.status,
         })),
       };
     } catch (error) {
