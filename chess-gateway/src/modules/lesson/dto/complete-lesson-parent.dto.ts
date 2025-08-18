@@ -2,7 +2,6 @@ import { Type } from 'class-transformer';
 import {
   ArrayMinSize,
   IsArray,
-  IsBoolean,
   IsNotEmpty,
   IsNumber,
   IsOptional,
@@ -15,7 +14,7 @@ export class CompleteLessonParentDto {
   lessonParentId: number;
 
   @IsArray()
-  @ArrayMinSize(1)
+  @ArrayMinSize(0) // maybe player fails on the first lesson
   @IsNumber({}, { each: true }) // Validate each element is a number
   @Type(() => Number)
   completedLessonIds: number[]; // [1, 2, 3, 5, 6 ...]

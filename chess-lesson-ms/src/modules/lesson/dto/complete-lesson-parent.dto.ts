@@ -19,7 +19,7 @@ export class CompleteLessonParentDto {
   lessonParentId: number;
 
   @IsArray()
-  @ArrayMinSize(1)
+  @ArrayMinSize(0) // maybe player fails on the first lesson
   @IsNumber({}, { each: true })
   @Type(() => Number)
   completedLessonIds: number[]; // [1, 2, 3, 5, 6 ...]

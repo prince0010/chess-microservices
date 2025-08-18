@@ -621,12 +621,12 @@ export class LessonParentService {
       const lastLessonPlayedRow = await this.lessonPlayedRepository.findOne({
         where: { userUid, lessonParent: { id: lessonParent.id } },
       });
-      if (lastLessonPlayedRow) {
+      if (lastLessonPlayedRow && completedLessonIds.length) {
         await this.lessonPlayedRepository.update(
           { id: lastLessonPlayedRow.id },
           { lastLessonPlayed: Math.max(...completedLessonIds) },
         );
-      } else {
+      } else if (completedLessonIds.length) {
         // create new last lesson played row
         const newLastLessonPlayed = this.lessonPlayedRepository.create({
           userUid,
