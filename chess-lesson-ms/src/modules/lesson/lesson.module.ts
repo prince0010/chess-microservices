@@ -10,11 +10,13 @@ import { LessonParentEnabled } from './entities/lesson-parent-enabled.entity';
 import { LessonCompletedTest } from './entities/lesson-completed-test.entity';
 import { LessonPlayed } from './entities/lesson-played.entity';
 import { LessonParentTestRecord } from './entities/lesson-parent-test-record.entity';
+import { LessonSingleRecord } from './entities/lesson-single-record.entity';
 
 import { LessonController } from './lesson.controller';
 import { LessonCompletedController } from './lesson-completed.controller';
 import { LessonParentController } from './lesson-parent.controller';
 import { LessonParentTestRecordController } from './lesson-parent-test-record.controller';
+
 import { LessonCompletedService } from './lesson-completed.service';
 import { LessonService } from './lesson.service';
 import { LessonSeederService } from './lesson-seeder.service';
@@ -44,6 +46,7 @@ import { LessonParentTestRecordService } from './lesson-parent-test-record.servi
       LessonCompletedTest,
       LessonPlayed,
       LessonParentTestRecord,
+      LessonSingleRecord,
     ]),
     NatsModule,
   ],

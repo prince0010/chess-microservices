@@ -9,7 +9,8 @@ export interface IShortRecordLessonsByUser {
   lessonId: number;
   level: string;
   description: string;
-  completedAt: Date;
+  playedAt: Date;
+  status: string;
 }
 
 /* Test lessons */
