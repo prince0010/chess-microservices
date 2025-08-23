@@ -761,7 +761,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isBot: false,
     canBeSkipped: false,
     messageModal:
-      'Reach at least Level 3 in Right piece on right square game to unlock Level 9. Good luck!',
+      'Reach at least Level 3 in Piece + Square game to unlock Level 9. Good luck!',
   },
   {
     timer: 75,
@@ -870,7 +870,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isBot: false,
     canBeSkipped: false,
     messageModal:
-      'Reach at least Level 3 in Memory Tester game to unlock Level 10. Good luck!',
+      'Reach at least Level 3 in Memory Tester WC game to unlock Level 10. Good luck!',
   },
   {
     timer: 75,
