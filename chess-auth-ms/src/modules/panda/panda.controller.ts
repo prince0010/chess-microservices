@@ -16,4 +16,9 @@ export class PandaController {
   update(@Payload() updatePandaDto: UpdatePandaDto) {
     return this.pandaService.updateByAction(updatePandaDto);
   }
+
+  @MessagePattern('decrement.pandaPoints.dueToHelp') // at frontend sometimes panda help player
+  subtractPointsDueToPandaHelp(@Payload() userUid: number) {
+    return this.pandaService.subtractPointsDueToPandaHelp(userUid);
+  }
 }

@@ -11,6 +11,7 @@ import { UpdatePandaDto } from './dto/update-panda.dto';
 import { UpdatePandaUserPointsDto } from './dto/update-panda-user-points.dto';
 import { PandaAction, PandaPointsConsumedByAction, PandaState } from 'src/enum';
 import { PandaActionResponse } from './interfaces';
+import { ISubtractPointsUser } from '../auth/interfaces';
 
 @Injectable()
 export class PandaService {
@@ -199,5 +200,31 @@ export class PandaService {
     const chosen = worstStates[Math.floor(Math.random() * worstStates.length)];
 
     return chosen.state;
+  }
+
+  async subtractPointsDueToPandaHelp(
+    userUid: number,
+  ): Promise<ISubtractPointsUser> {
+    try {
+      const dataPoints: UpdatePandaUserPointsDto = {
+        uid: userUid,
+        points: 9, // changeMe! in case more points are needed
+      };
+
+      const { lastPoints, spentPoints, counter } = await firstValueFrom(
+        this.client.send('subtract.points.user', dataPoints),
+      );
+
+      return {
+        lastPoints,
+        spentPoints,
+        counter,
+      };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
   }
 }

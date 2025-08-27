@@ -30,6 +30,18 @@ export class PandaController {
   }
 
   @UseGuards(AuthGuard)
+  @Patch('/help-player')
+  applyHelpPlayer(@Req() req: any) {
+    return this.client
+      .send('decrement.pandaPoints.dueToHelp', +req.user.uid)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
+
+  @UseGuards(AuthGuard)
   @Patch('/')
   update(@Body() updatePandaDto: UpdatePandaDto, @Req() req: any) {
     const payload = {
