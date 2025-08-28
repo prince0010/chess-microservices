@@ -1,7 +1,7 @@
 export interface ICountAndListTeachers {
   total: number;
   page: number;
-  users: IOneTeacher[];
+  teachers: IOneTeacher[];
 }
 export interface IOneTeacher {
   uid: number;

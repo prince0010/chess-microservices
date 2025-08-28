@@ -177,7 +177,7 @@ export class AuthTeacherService {
     };
 
     const whereConditions: any = {
-      roles: Like(`%${SecurityRoles.PLAYER}%`),
+      // roles: Like(`%${SecurityRoles.TEACHER}%`),
     };
 
     if (name) {
@@ -210,7 +210,7 @@ export class AuthTeacherService {
       return {
         total,
         page,
-        users: transformedTeachers,
+        teachers: transformedTeachers,
       };
     } catch (error) {
       throw new RpcException({

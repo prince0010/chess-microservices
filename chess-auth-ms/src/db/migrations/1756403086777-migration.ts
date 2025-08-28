@@ -11,6 +11,7 @@ export class Migration1756403086777 implements MigrationInterface {
       \`username\` varchar(255) NOT NULL,
       \`password\` varchar(255) NOT NULL,
       \`country\` varchar(128) NOT NULL,
+      \`roles\` text NOT NULL DEFAULT 'TEACHER',
       \`isActive\` tinyint NOT NULL DEFAULT 1,
       \`gender\` varchar(64) NOT NULL DEFAULT 'private',
       \`birthday\` date NULL,

@@ -8,7 +8,7 @@ import {
 
 import { Auth } from './auth.entity';
 
-import { Gender } from 'src/enum';
+import { Gender, SecurityRoles } from 'src/enum';
 
 @Entity('auth_teacher') // only for teachers
 export class AuthTeacher {
@@ -26,6 +26,10 @@ export class AuthTeacher {
 
   @Column({ length: 128, nullable: false })
   country: string;
+
+  // always it will be a teacher
+  @Column({ type: 'simple-array', default: SecurityRoles.TEACHER })
+  roles: string[];
 
   @Column({ type: 'boolean', nullable: false, default: true })
   isActive: boolean;
