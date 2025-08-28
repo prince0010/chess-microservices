@@ -10,7 +10,7 @@ import { AuthStoryUnlocked } from './auth-story-unlocked.entity';
 
 import { Gender } from 'src/enum';
 
-@Entity('auth')
+@Entity('auth') // only for players and admin
 export class Auth {
   @PrimaryGeneratedColumn()
   uid: number;
