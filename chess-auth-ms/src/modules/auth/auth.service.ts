@@ -13,6 +13,7 @@ import * as bcryptjs from 'bcryptjs';
 
 import { envs, NATS_SERVICE } from 'src/config';
 import { Auth } from './entities/auth.entity';
+import { AuthTeacher } from './entities/auth-teacher.entity';
 import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
@@ -35,6 +36,9 @@ export class AuthService {
   constructor(
     @InjectRepository(Auth)
     private readonly authRepository: Repository<Auth>,
+
+    @InjectRepository(AuthTeacher)
+    private readonly authTeacherRepository: Repository<AuthTeacher>,
 
     @InjectRepository(AuthPanda)
     private readonly authPandaRepository: Repository<AuthPanda>,
@@ -157,11 +161,24 @@ export class AuthService {
     const { username, password } = loginAuthDto;
 
     try {
-      const user = await this.authRepository
+      let user: Auth | AuthTeacher | null = null;
+      const userAuth = await this.authRepository
         .createQueryBuilder('user')
         .leftJoinAndSelect('user.panda', 'panda')
         .where('LOWER(user.username) = LOWER(:username)', { username })
         .getOne();
+
+      if (userAuth) {
+        user = userAuth;
+      } else {
+        const userTeacher = await this.authTeacherRepository.findOneBy({
+          username: username.toLowerCase(),
+        });
+
+        if (userTeacher) {
+          user = userTeacher;
+        }
+      }
 
       if (!user) {
         throw new RpcException({
@@ -199,10 +216,33 @@ export class AuthService {
         secret: envs.jwtSecret,
       });
 
-      const userFromDB = await this.authRepository.findOne({
-        where: { uid: user.uid },
+      let userFromDB: Auth | AuthTeacher | null = null;
+      let isUserPlayer: boolean = true;
+
+      const userAuth = await this.authRepository.findOne({
+        where: {
+          uid: user.uid,
+          username: user.username,
+        },
         relations: ['panda'],
       });
+
+      if (userAuth) {
+        userFromDB = userAuth;
+      } else {
+        const userTeacher = await this.authTeacherRepository.findOne({
+          where: {
+            uid: user.uid,
+            username: user.username,
+          },
+        });
+
+        if (userTeacher) {
+          userFromDB = userTeacher;
+          isUserPlayer = false;
+        }
+      }
+
       if (!userFromDB) {
         throw new RpcException({
           status: 401,
@@ -213,12 +253,17 @@ export class AuthService {
       const { password: __, ...restUser } = userFromDB;
 
       // STEP fetch current panda state
-      const pandaUpdated = await firstValueFrom(
-        this.client.send('find.one.panda', restUser.uid),
-      );
+      const pandaUpdated =
+        isUserPlayer &&
+        (await firstValueFrom(
+          this.client.send('find.one.panda', restUser.uid),
+        ));
 
       return {
-        user: { ...restUser, panda: pandaUpdated },
+        user: {
+          ...restUser,
+          panda: isUserPlayer ? pandaUpdated : null,
+        },
         token: await this.singJWT(userFromDB),
       };
     } catch (error) {
@@ -414,7 +459,7 @@ export class AuthService {
   }
 
   // ==== private methods ====
-  private getJwtPayload(user: Auth): JwtPayload {
+  private getJwtPayload(user: Auth | AuthTeacher): JwtPayload {
     return {
       uid: user.uid,
       name: user.name,
@@ -422,7 +467,7 @@ export class AuthService {
     };
   }
 
-  private async singJWT(user: Auth) {
+  private async singJWT(user: Auth | AuthTeacher) {
     return this.jwtService.sign(this.getJwtPayload(user));
   }
 }

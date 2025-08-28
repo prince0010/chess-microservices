@@ -43,13 +43,17 @@ export class AuthTeacherService {
     const { password, username, ...restTeacher } = registerAuthTeacherDto;
 
     try {
-      const existsUsername = await this.authTeacherRepository.findOneBy({
+      const existsUsernameInAuthTeacher =
+        await this.authTeacherRepository.findOneBy({
+          username: username.toLowerCase(),
+        });
+      const existsUsernameInAuth = await this.authRepository.findOneBy({
         username: username.toLowerCase(),
       });
 
-      if (existsUsername) {
+      if (existsUsernameInAuthTeacher || existsUsernameInAuth) {
         throw new BadRequestException(
-          `Some teacher with the username: ${existsUsername.username} already exists.`,
+          `Someone with the username: ${username} already exists.`,
         );
       }
 
@@ -91,13 +95,22 @@ export class AuthTeacherService {
       }
 
       if (username && username !== oldTeacher.username) {
-        const existsUsername = await this.authTeacherRepository.findOneBy({
+        const existsUsernameInAuthTeacher =
+          await this.authTeacherRepository.findOneBy({
+            username: username.toLowerCase(),
+          });
+
+        const existsUsernameInAuth = await this.authRepository.findOneBy({
           username: username.toLowerCase(),
         });
 
-        if (existsUsername && existsUsername.uid !== teacherUid) {
+        if (
+          (existsUsernameInAuthTeacher &&
+            existsUsernameInAuthTeacher.uid !== teacherUid) ||
+          (existsUsernameInAuth && existsUsernameInAuth.uid !== teacherUid)
+        ) {
           throw new BadRequestException(
-            `Someone with the username: ${existsUsername.username} already exists.`,
+            `Someone with the username: ${username} already exists.`,
           );
         }
 
