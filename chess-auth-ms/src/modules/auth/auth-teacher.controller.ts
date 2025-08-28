@@ -7,6 +7,7 @@ import {
   RegisterAuthTeacherDto,
   UpdateAuthTeacherDto,
   FindAllTeachersDto,
+  AddStudentsToTeacherDto,
 } from './dto';
 
 @Controller()
@@ -32,5 +33,10 @@ export class AuthTeacherController {
   @MessagePattern('auth.findAll.teachers')
   findAllTeachers(@Payload() findAllTeachersDto: FindAllTeachersDto) {
     return this.authTeacherService.findAllTeachers(findAllTeachersDto);
+  }
+
+  @MessagePattern('auth.addStudents.teacher')
+  addStudents(@Payload() addStudentsToTeacherDto: AddStudentsToTeacherDto) {
+    return this.authTeacherService.addStudents(addStudentsToTeacherDto);
   }
 }

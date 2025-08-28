@@ -6,3 +6,4 @@ export * from './find-all-users.dto';
 export * from './register-auth-teacher.dto';
 export * from './update-auth-teacher.dto';
 export * from './find-all-teachers.dto';
+export * from './add-students-to-teacher.dto';

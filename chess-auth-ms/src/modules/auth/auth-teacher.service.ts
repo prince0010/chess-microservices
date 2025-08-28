@@ -7,25 +7,30 @@ import {
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
-import { FindManyOptions, Like, Repository } from 'typeorm';
+import { FindManyOptions, In, Like, Repository } from 'typeorm';
 import * as bcryptjs from 'bcryptjs';
 
 import { NATS_SERVICE } from 'src/config';
+import { AuthTeacher } from './entities/auth-teacher.entity';
+import { Auth } from './entities/auth.entity';
 
 import {
+  AddStudentsToTeacherDto,
   FindAllTeachersDto,
   RegisterAuthTeacherDto,
   UpdateAuthTeacherDto,
 } from './dto';
 import { SecurityRoles } from 'src/enum';
 import { JwtPayload, IOneTeacher, ICountAndListTeachers } from './interfaces';
-import { AuthTeacher } from './entities/auth-teacher.entity';
 
 @Injectable()
 export class AuthTeacherService {
   constructor(
     @InjectRepository(AuthTeacher)
     private readonly authTeacherRepository: Repository<AuthTeacher>,
+
+    @InjectRepository(Auth)
+    private readonly authRepository: Repository<Auth>,
 
     private readonly jwtService: JwtService,
     @Inject(NATS_SERVICE) private readonly client: ClientProxy,
@@ -207,6 +212,49 @@ export class AuthTeacherService {
         page,
         users: transformedTeachers,
       };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async addStudents(
+    addStudentsToTeacherDto: AddStudentsToTeacherDto,
+  ): Promise<string> {
+    const { teacherUid, studentUids } = addStudentsToTeacherDto;
+
+    try {
+      // STEP 1: validate teacher exists
+      const teacherEntity = await this.authTeacherRepository.findOneBy({
+        uid: teacherUid,
+      });
+      if (!teacherEntity) {
+        throw new RpcException({
+          status: 404,
+          message: `Teacher not found with UID: ${teacherUid}`,
+        });
+      }
+
+      // STEP 2: validate students length
+      const studentEntitiesArray = await this.authRepository.find({
+        where: { uid: In(studentUids) },
+      });
+
+      if (studentEntitiesArray.length !== studentUids.length) {
+        throw new RpcException({
+          status: 404,
+          message: `Some students not found`,
+        });
+      }
+
+      // STEP 3: update students of that teacher
+      teacherEntity.students = studentEntitiesArray;
+
+      await this.authTeacherRepository.save(teacherEntity);
+
+      return `Students of teacher ${teacherEntity.name} updated successfully`;
     } catch (error) {
       throw new RpcException({
         status: 400,

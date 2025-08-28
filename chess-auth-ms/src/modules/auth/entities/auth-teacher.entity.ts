@@ -39,7 +39,9 @@ export class AuthTeacher {
   @Column({ length: 128, nullable: true, default: null })
   token?: string; // if it is needed to implement forgot password
 
-  @ManyToMany(() => Auth, (auth) => auth.teachers)
+  @ManyToMany(() => Auth, (auth) => auth.teachers, {
+    cascade: ['insert', 'update'],
+  })
   @JoinTable({
     name: 'auth_teacher_student', // Name of the junction table
     joinColumn: {
