@@ -1,0 +1,3825 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "1965.??.??"]
+[Round "?"]
+[White "Lommer"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7K/7P/7P/8/n1k5/p7/PP4P1/6r1 w - - 0 1"]
+[PlyCount "43"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,43,324,332,618,384,207,207,202,232,198,198,198,220,224,176,255,255,328,425,422,514,608,554,628,550,628,645,630,630,630,612,800,1124,1226,1341,1894,2122,1914,28349,1954,1628,27845,28011,29979,29980] [#]} 1. b3+ Kb5 2. Kg7 Rxg2+ 3. Kf7 Rf2+ 4. Ke7 Re2+ 5. Kd8 Rd2+ 6. Kc7 Nb6 7. h8=Q Rd7+ 8. Kb8 Ka6 9. Qg7 Rxg7 10. hxg7 Nd7+ 11. Kc7 Nf6 12. Kc6 Ka5 13. Kc5 Ne4+ 14. Kc4 Nf6 15. b4+ Ka4 16. b5 Ka5 17. Kc5 Ng8 18. b6 Ka6 19. Kc6 Ne7+ 20. Kc7 Nd5+ 21. Kd6 Nf6 22. Kc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1936.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1P2Pk2/Pr3P1K/8/8/8/6b1/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. e8=Q+ Kxe8 2. Kg7 Bd5 3. f7+ Bxf7 4. a7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1965.??.??"]
+[Round "?"]
+[White "Kellstrem"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "k6b/p2P4/P1P3P1/8/7P/7K/p1prp3/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,-773,0,0,0,0,0,0,-617,440,657,29987,29988,29989,29990,29991,29992,29993,29994,29995,29996] [#]} 1. g7 Rd3+ (1... Bxg7 2. c7 Rd3+ 3. Kg4 Rd4+ 4. Kf5 Rd5+ 5. Kg6 Rd6+ 6. Kh7 Rh6+ 7. Kg8 Rh8+ 8. Kf7 Rf8+ 9. Kg6 Rf6+ 10. Kxg7) 2. Kg4 Rd4+ 3. Kf5 Rd5+ 4. Kg6 Rd6+ 5. Kh7 Bxg7 (5... Rh6+ 6. Kg8) 6. c7 Rh6+ 7. Kg8 Rh8+ 8. Kf7 Rf8+ 9. Kg6 Rf6+ 10. Kxg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1966.??.??"]
+[Round "?"]
+[White "Lommer"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "b6K/PR5P/7P/8/8/7r/6B1/k5r1 w - - 0 1"]
+[PlyCount "37"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,37,180,87,106,338,338,438,505,505,505,505,505,505,505,505,505,505,505,505,938,972,972,982,982,992,992,992,992,1002,1012,1012,1012,1016,1012,1032,1032,1032,1032,1032] [#]} 1. Rg7 Rxg2 2. Rxg2 Bxg2 3. a8=Q+ Bxa8 4. Kg7 Rg3+ 5. Kf8 Rf3+ 6. Ke7 Re3+ 7. Kd8 Rd3+ 8. Kc7 Rc3+ 9. Kb8 Rb3+ 10. Kxa8 Ra3+ 11. Kb7 Rb3+ 12. Kc7 Rc3+ 13. Kd7 Rd3+ 14. Ke7 Re3+ 15. Kf7 Rf3+ 16. Kg6 Rg3+ 17. Kh5 Rh3+ 18. Kg5 Rg3+ 19. Kh4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1968.??.??"]
+[Round "?"]
+[White "Pochtarev"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6kb/p2K4/PpP5/1Pp5/8/1P1P4/6P1/7r w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,0,0,0,0,0,0,0,128,209,281,286,286,286,264,262,262,262,555] [#]} 1. c7 Rh7+ 2. Kc6 Rh6+ 3. Kd5 Rh5+ 4. Kc4 Rh4+ 5. g4 Rxg4+ 6. Kd5 Rg5+ 7. Kc6 Rg6+ 8. Kb7 Rg7 9. Kb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1971.??.??"]
+[Round "?"]
+[White "Gurgenidze"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1b6/p7/5P1P/8/8/8/K3P3/6rk w - - 0 1"]
+[PlyCount "31"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,136,137,131,244,244,244,252,356,458,456,458,457,218,671,668,667,722,723] [#]} 1. h7 Ra1+ 2. Kb3 Rb1+ 3. Ka4 Ra1+ 4. Kb5 a6+ (4... Rb1+ 5. Ka6 Ra1+ 6. Kb7 Rb1+ 7. Ka8) 5. Kb6 Rb1+ 6. Kxa6 Ra1+ 7. Kb5 Rb1+ 8. Ka4 Ra1+ 9. Kb3 Rb1+ 10. Kc2 Rb2+ 11. Kxb2 Be5+ 12. Kc2 Bxf6 13. Kd3 Kg2 14. Ke4 Kf2 15. Kf5 Bh8 16. e4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1907.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4N3/8/1P6/K7/3rk3/8/8/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,485,485,485,485,485,485,485,495,503,505] [#]} 1. b7 Rd5+ 2. Kb6 Rd8 3. Nd6+ Kf3 (3... Rxd6+ 4. Kc7) 4. Nc8 Rd1 5. Nd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1911.??.??"]
+[Round "?"]
+[White "Karstedt"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1KP1N3/7r/8/8/8/k7 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c7 Rh8 2. Nd8 Rh6+ 3. Kb5 Rh5+ 4. Kb4 Rh4+ 5. Kb3 Rh3+ 6. Kc2 Rh2+ 7. Kd3 Rh3+ 8. Kd4 Rh4+ 9. Kd5 Rh5+ 10. Kd6 Rh6+ 11. Ke7 Rh7+ 12. Nf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1913.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/7N/1k2PK2/7r/8/8/8/8 w - - 0 1"]
+[PlyCount "27"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,27,3,515,505,505,505,505,505,505,505,505,505,505,505,515,515,515,515,515,515,515,515,515,515,515,525,525,525,525] [#]} 1. e7 Rh6+ 2. Kf5 Rh5+ 3. Kf4 Rh4+ 4. Kf3 Rh3+ 5. Ke2 Rh2+ 6. Kd3 Rh3+ 7. Kd4 Rh4+ 8. Kd5 Rh5+ 9. Kd6 Rh6+ 10. Nf6 Rxf6+ (10... Rh8 11. Nd7+ Kb5 12. Nf8 Rh6+ 13. Kd7) 11. Kd5 Rf5+ 12. Kd4 Rf4+ 13. Kd3 Rf3+ 14. Ke2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1925.??.??"]
+[Round "?"]
+[White "Vanchura"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7N/6P1/2k3K1/8/8/4r3/8/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,485,505,505,515,515,515,515,515,525,525,525,525,525,525,792,802] [#]} 1. Kh5 Re8 2. Ng6 Kd6 (2... Ra8 3. Kh6 Kb5 4. Nf8 Ra6+ 5. Kh5 Ra1 6. Ne6) 3. Nf8 Re1 4. Ne6 Re5+ 5. Kg4 Re1 6. Kf5 Rf1+ 7. Kg6 Rg1+ 8. Ng5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1932.??.??"]
+[Round "?"]
+[White "Fritz"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "K7/8/3P3k/8/1r6/6N1/8/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,485,505,505,505,505,505,515,515,772,772,29959,29974] [#]} 1. Nf5+ Kg5 (1... Kg6 2. d7 Ra4+ 3. Kb7 Rb4+ 4. Kc6 Rb8 5. Ne7+ Kf7 6. Nc8) (1... Kh7 2. d7 Rg4 3. Nd6 Rg8+ 4. Ne8) (1... Kh5 2. d7 Rg4 (2... Ra4+ 3. Kb7 Rb4+ 4. Kc7 Rc4+ 5. Kd6) 3. d8=Q Rg8 4. Ng7+) 2. d7 Ra4+ 3. Kb7 Rb4+ 4. Kc6 Rb8 5. Nd6 Rd8 6. Nf7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1949.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2r1kB2/8/1P3KN1/8/8/8/8/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,288,296,812,812,822,822,822,962,1032,1032] [#]} 1. Ne5 Kxf8 2. b7 Re8 (2... Rd8 3. Nd7+ Ke8 4. Ke6) 3. Ng6+ Kg8 4. Ne7+ Kf8 5. Nc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1910.??.??"]
+[Round "?"]
+[White "Neistadtl"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "k7/6r1/3P2P1/2K5/3N4/8/8/8 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Ne6 Rxg6 2. d7 Rg8 3. Nc7+ Kb7 4. Ne8 Rg5+ 5. Kc4 Rg4+ 6. Kd3 Rg1 7. Kd2 Rg2+ 8. Ke3 Rg3+ 9. Ke4 Rg4+ 10. Ke5 Rg5+ 11. Ke6 Rg6+ 12. Ke7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1925.??.??"]
+[Round "?"]
+[White "Leik"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3N2K1/1Pk3P1/8/8/8/3r4/8/8 w - - 0 1"]
+[PlyCount "25"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,25,363,369,515,515,515,515,525,525,525,525,525,525,525,525,525,525,525,525,525,525,525,525,533,535,535,535] [#]} 1. Ne6+ Kb8 2. Kh7 Rg3 3. Nd8 Rh3+ 4. Kg6 Rg3+ 5. Kf7 Rf3+ 6. Ke7 Rg3 (6... Re3+ 7. Kf8 Rf3+ 8. Nf7 Rg3 9. Nd6) 7. Kf8 Rf3+ 8. Nf7 Rg3 9. Nd6 Rf3+ 10. Ke7 Rg3 11. Kf7 Rf3+ 12. Nf5 Rxf5+ 13. Kg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1940.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/5Pk1/3P4/2N1K3/8/8/8/5r2 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,525,535,535,535,29979,29980,29981,29982,29983,29984,29985,29986] [#]} 1. d7 Rd1 2. Ke6 Kf8 (2... Re1+ 3. Ne4 Rxe4+ 4. Kd5 Re1 5. f8=Q+ Kxf8 6. d8=Q+) 3. d8=Q+ Rxd8 4. Kf6 Rd6+ 5. Ne6+ Rxe6+ 6. Kxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1941.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1N6/1P6/5P2/7k/8/3r4/K7 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,23,525,525,525,515,525,525,782,782,782,782,792,792,792,792,782,792,792,792,792,802,802,802,29979,29982] [#]} 1. f6 Rf2 2. Nd6 Rxf6 3. b7 Rf8 4. Nc8 Rf1+ 5. Kb2 Rf2+ 6. Kc3 Rf3+ 7. Kc4 Rf4+ 8. Kc5 Rf5+ 9. Kc6 Rf6+ 10. Kd7 Rf7+ 11. Ne7 Rf8 12. Ng6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1945.??.??"]
+[Round "?"]
+[White "Kotov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/P4PK1/8/6N1/8/8/r6k w - - 0 1"]
+[PlyCount "25"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,25,32,792,792,792,792,792,792,792,792,792,792,792,792,792,802,802,794,792,801,802,802,802,802,822,868,920] [#]} 1. f7 Rxa6+ 2. Nf6 Ra8 3. Ne8 Ra6+ 4. Kg5 Ra5+ 5. Kg4 Ra4+ 6. Kf3 Ra1 7. Ke2 Ra2+ 8. Ke3 Ra3+ 9. Ke4 Ra4+ 10. Ke5 Ra5+ 11. Ke6 Ra6+ 12. Kd7 Ra7+ 13. Nc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1949.??.??"]
+[Round "?"]
+[White "Voia"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1K6/1P6/8/6k1/3P4/8/3r2N1/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Ne1 Rd1 2. Nc2 Rd2 3. Ka8 Rxc2 4. b8=Q Ra2+ 5. Qa7 Rxa7+ 6. Kxa7 Kf5 7. Kb6 Ke4 8. Kc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1906.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2k5/8/P3P3/3K4/p4N2/8/8/6r1 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,53,525,525,535,535,535,535,535,535,535] [#]} 1. a7 Kb7 (1... Rg5+ 2. Kc6 Ra5 3. e7 Ra6+ 4. Kb5) 2. a8=Q+ Kxa8 3. e7 Rd1+ (3... Rg8 4. Ne6 a3 5. Nf8) 4. Nd3 Rxd3+ 5. Ke4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1906.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/5N2/pp6/5pP1/2k2r2/K1P5/3P1P2/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,217,239,249,245,238,251,355,366] [#]} 1. g6 Rxf2 (1... Kb5 2. Ne5) 2. Ne5+ Kd5 3. Ng4 fxg4 (3... Rf4 4. Nf6+ Ke6 5. g7) (3... Re2 4. g7 Re8 5. Nf6+) 4. g7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1907.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/p1P3k1/8/K6P/8/2N5/7r w - - 0 1"]
+[PlyCount "25"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,25,0,403,403,404,505,525,525,525,762,762,762,762,772,772,772,772,772,782,792,792,822,812,982,982,992,1032] [#]} 1. c7 Rxh4+ 2. Nd4 Rh8 3. Nc6 Kf6 4. Nd8 Rh4+ 5. Kb3 Rh3+ 6. Kc2 Rh2+ 7. Kd3 Rh3+ 8. Kd4 Rh4+ 9. Kd5 Rh5+ 10. Kd6 Rh1 11. c8=Q Rd1+ 12. Kc7 Rc1+ 13. Nc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1911.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2K5/p6p/8/rp1k2PP/8/8/PP6/4N3 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,23,0,0,127,45,126,152,198,214,218,220,221,221,221,221,225,224,227,213,232,233,234,234,236,237] [#]} 1. g6 hxg6 2. h6 Ra4 3. Ng2 Rc4+ 4. Kd7 Rc1 5. Nf4+ Ke4 6. Nh5 Rd1+ 7. Ke7 Rc1 8. h7 Rc7+ 9. Kd6 Rxh7 (9... Rc8 10. Nf6+ Kd3 11. Ng8) 10. Nf6+ Kd3 11. Nxh7 Kc4 12. Ng5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1914.??.??"]
+[Round "?"]
+[White "Matisson"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5k2/N7/pP6/8/1K6/3r4/8/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b7 Rd8 2. Nc8 Rd1 3. Nb6 Rd8 4. Ka3 a5 5. Nc8 Rd3+ 6. Ka4 Rd1 7. Nb6 Rd8 8. Kb5 (8. Kxa5) 8... a4 9. Nc8 Rd1 10. Ka6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1914.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1K6/p7/r1k1p3/6P1/P7/5N2/8/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,-30,-78,355,392,457,444,480,459,485,485,485,485,485,485,485,485] [#]} 1. g6 Rb6+ 2. Kc8 Rb2 (2... Rb7 3. Ne5+ Kb6 4. Nd7+ Kc6 5. Nb8+ Kb6 6. a5+) 3. Ne5+ Kd5 4. Ng4 Rc2+ 5. Kb8 Rb2+ 6. Ka8 Rb4 7. Ne3+ Ke4 8. g7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1917.??.??"]
+[Round "?"]
+[White "Kholm"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1r6/1N1Pp3/1P6/8/4k3/8/3K4 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,328,343,340,336,336,341,341,348,356,356] [#]} 1. d7 Rb8 2. Nc8 Rxb5 3. Nb6 Rb4 4. Nd5+ exd5 5. d8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1925.??.??"]
+[Round "?"]
+[White "Havashi"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7r/5P2/p1k2K2/5N2/p7/8/P7/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,176,200,159,0,0,442,876,944,1021,1043,1085,1115,1155,1403,1914,29982,29983,29984,29985,29986] [#]} 1. Ne7+ Kd7 2. Ng8 Rh1 3. Nh6 Rf1+ 4. Nf5 Rxf5+ 5. Kxf5 Ke7 6. Kg6 Kf8 7. Kf6 a3 8. Ke6 a5 9. Kf6 a4 10. Ke6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1926.??.??"]
+[Round "?"]
+[White "Matisson"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/p2P2k1/N1P4p/5K2/8/8/3r4 w - - 0 1"]
+[PlyCount "29"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,29,0,0,0,0,0,391,409,409,399,403,403,403,413,408,454,408,403,403,505,598,619,650,717,760,782,792,792,812,872,872] [#]} 1. c6 Rxd6 2. c7 Rf6+ 3. Ke3 Re6+ 4. Kf2 Rf6+ 5. Kg1 Rf8 6. Nc6 Re8 7. Kf2 Rf8+ 8. Ke3 Re8+ 9. Kf4 Rf8+ 10. Ke5 Re8+ 11. Kd6 Kf6 12. Nd8 Re1 13. c8=Q Rd1+ 14. Kc7 Rc1+ 15. Nc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1926.??.??"]
+[Round "?"]
+[White "Didrikhson"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/4pK1p/8/1PN5/6P1/4rk2/8/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b6 Re1 2. Nb3 Rd1 3. b7 Rd8 4. Nd4+ Kxg4 (4... Ke4 5. Nc6 Rh8 6. Kxe7 Rg8 7. Kf7 Rh8 8. g5 Kf5 9. Ne7+) 5. Nc6 Rh8 6. Kxe7 Rg8 7. Nd8 Rg7+ 8. Nf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1932.??.??"]
+[Round "?"]
+[White "Kaminer"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/7p/1P5K/8/1N6/4k3/6P1/5r2 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,113,497,513,515,595,636,636,671,671,734,671,782,790,792,792,812] [#]} 1. b7 Rf8 2. Nc6 Kf4 3. g4 Kxg4 (3... Rg8 4. g5) 4. Kg7 Re8 5. Kf7 Rh8 6. Ke7 Rg8 7. Nd8 Rg7+ 8. Nf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1927.??.??"]
+[Round "?"]
+[White "Matison"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3r4/1p5k/3PP3/2N5/8/8/5K2 w - - 0 1"]
+[PlyCount "29"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,29,0,0,0,0,0,0,0,0,0,0,393,412,412,421,421,420,421,421,417,421,443,445,435,435,448,498,502,502,502,502] [#]} 1. e6 Re7 2. d6 Rxe6 3. d7 Rf6+ 4. Kg2 Rg6+ (4... Rf8 5. Nd6) 5. Kf3 Rf6+ 6. Kg4 Rg6+ 7. Kf5 Rg5+ 8. Ke6 Rg6+ 9. Kd5 Rg5+ 10. Kc6 Rc5+ 11. Kd6 Rxc4 12. Ke5 Rc5+ 13. Ke4 Rc4+ 14. Ke3 Rc3+ 15. Kd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1927.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/6N1/P7/1p2k3/2p5/K7/3P2r1/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,5,341,330,407,409,434,434] [#]} 1. a7 Rg3+ 2. Ka2 b4 3. d4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1933.??.??"]
+[Round "?"]
+[White "Sarva"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/4p3/3k3P/2p2r2/2PP1N2/7p/8/7K w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,207,207,186,164,92,495,495,495,495,495,515,549,563,571,584,575,592,581,585,638] [#]} 1. h7 Rf8 2. dxc5+ Kd7 3. c6+ Kd6 4. c5+ Kxc6 5. Ng6 Rd8 6. Nxe7+ Kxc5 7. Ng8 Rd1+ 8. Kh2 Rd2+ 9. Kg3 Rd3+ 10. Kf2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Nevitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4K3/8/NP1p2n1/8/5k2/2B3r1/4P3/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b7 Ne5 2. Bxe5+ Kxe5 (2... dxe5 3. e3+ Kxe3 4. Kf7) 3. Nc5 Rg8+ 4. Kf7 Rd8 5. Ke7 Rg8 6. Nd7+ Kd4 7. e4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p2p4/P1p1p2p/4PPp1/8/1P6/5K2/k1r1N3 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,255,286,286,329,352,360,394,344,432,442,462,485] [#]} 1. f6 Rc5 2. f7 Rxe5 3. Nc2+ Kb2 4. Nd4 Re4 5. Ne2 Re5 6. Ng3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1939.??.??"]
+[Round "?"]
+[White "Galberstadt"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3k3K/p5P1/P3r3/8/1N6/8/8/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,507,535,525,535,535,663,768,928,959,1032,1259,1332] [#]} 1. Kh7 Re8 2. Nd5 Kc8 3. Kg6 Rd8 (3... Kb8 4. Kf7 Rc8 (4... Rd8 5. Nf6) 5. Ne7) 4. Kf7 Kb8 (4... Kd7 5. Nf6+ Kc6 6. Ke7 Kc7 7. Ne8+) 5. Nf6 Kc8 6. Ke7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1942.??.??"]
+[Round "?"]
+[White "Renner"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/pK6/pP6/8/8/r6N/8/5k2 w - - 0 1"]
+[PlyCount "25"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,25,315,364,368,396,395,396,415,414,414,485,485,485,485,485,485,485,485,485,485,485,485,485,485,485,485,485] [#]} 1. bxa7 Rb3+ 2. Kc7 Rc3+ 3. Kd7 Rd3+ 4. Ke7 Re3+ 5. Kf7 Rf3+ 6. Kg7 Rg3+ 7. Ng5 Rxg5+ 8. Kf7 Rf5+ 9. Ke7 Re5+ 10. Kd7 Rd5+ 11. Kc7 Rc5+ 12. Kb7 Rb5+ 13. Kc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1943.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/P6P/5nKN/8/r7/k7/8 w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,21,22,410,505,505,505,505,752,772,772,772,772,772,772,772,772,772,772,780,782,782,782,782] [#]} 1. h7 Nh6 (1... Nd6 2. Kg6) 2. Kxh6 Rxa6+ 3. Nf6 Ra8 4. Ng8 Ra3 (4... Ra6+ 5. Kg5 Ra5+ 6. Kg4 Ra4+ 7. Kg3 Ka3 8. Kg2) 5. Kg5 Rg3+ 6. Kh4 Rg1 7. Nh6 Rh1+ 8. Kg5 Rg1+ 9. Kf4 Rf1+ 10. Kg3 Rf8 11. Ng8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1946.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6r1/3K4/1N1Pp1P1/8/1k6/8/8/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Ke7 Rxg6 2. Kf7 Rh6 3. Kg7 Rh2 4. Nd5+ exd5 5. d7 Rg2+ 6. Kf7 Rf2+ 7. Ke7 Re2+ 8. Kd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1946.??.??"]
+[Round "?"]
+[White "Kok"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p5K1/P7/pP6/8/8/7N/rk6 w - - 0 1"]
+[PlyCount "41"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,31,300,262,276,276,208,205,301,532,513,547,547,528,571,642,642,791,810,810,810,807,815,982,982,982,982,982,982,1002,1002,1002,1002,1002] [#]} 1. b6 Ra2 2. bxa7 Rg2+ 3. Kf7 Rf2+ 4. Ke7 Re2+ 5. Kd7 Rd2+ 6. Kc7 Rc2+ 7. Kb6 Rb2+ 8. Kxa5 Ra2+ 9. Kb6 Rb2+ 10. Kc7 Rc2+ 11. Kd7 Rd2+ 12. Ke7 Re2+ 13. Kf7 Rf2+ 14. Kg7 Rg2+ 15. Ng4 Rxg4+ 16. Kf7 Rf4+ 17. Ke7 Re4+ 18. Kd7 Rd4+ 19. Kc7 Rc4+ 20. Kb6 Rc8 21. Kb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1rP3k1/7p/7K/3P4/2N3P1/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,5,163,230,467,471,485,485] [#]} 1. Nd4 Rb4 (1... Rb8 2. c7 Rc8 3. Nb5) (1... Rb1 2. c7 Rh1+ 3. Kg3 Rc1 4. Nb5) 2. c7 Rxd4+ 3. g4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1960.??.??"]
+[Round "?"]
+[White "Begkhein"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "N4k1K/5r1P/1P6/8/1p6/8/1P6/8 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,337,344,356,354,356,392,390,394,397,397,403,409,403,427,441,459,1157,1385] [#]} 1. Nc7 Rf6 2. b7 Rb6 3. Ne6+ Kf7 4. Nd8+ Kf8 5. b3 Rb5 6. Ne6+ Kf7 7. Nc5 Rb6 8. Ne4 Kf8 9. Nd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Herberg"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7K/8/1PP1p1k1/8/8/1r6/8/4N3 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,353,391,525,525,525,525,525,535,535,535] [#]} 1. Nf3 Kf7 (1... Rxf3 2. Kg8 Ra3 3. b7) (1... Rxb6 2. c7) 2. Ne5+ Kf8 3. Kh7 Rxb6 4. c7 Rb7 5. Nd7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Khortov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5K2/6P1/3r4/8/2P3p1/1k3N2/8/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Nd4+ Rxd4 2. Ke7 Re4+ 3. Kd7 Rd4+ 4. Kc7 Rxc4+ 5. Kd7 Rd4+ 6. Ke7 Re4+ 7. Kf7 Rf4+ 8. Kg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1966.??.??"]
+[Round "?"]
+[White "Voit"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1N2p2K/4PP2/8/3k4/8/2r5 w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,21,0,0,79,0,0,0,0,0,0,0,692,920,920,1016,1016,1022,1032,1279,29967,29972,29973,29976] [#]} 1. f6 Rc7 (1... Rf1 2. Kg6 Ke4 3. Nd7) 2. Nd5 Ra7 (2... exd5 3. Kg6 Ke4 4. e6) (2... Rc8 3. Ne7 Ra8 4. f7 Ke4 5. Ng6) 3. Ne7 Ke4 4. f7 Ra8 5. Ng6 Kf5 6. Kg7 Ra7 7. Kg8 Ra8+ 8. f8=Q+ Rxf8+ 9. Kxf8 Kxg6 10. Ke7 Kf5 11. Kd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1912.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/4N2r/PK6/8/3k4/8/2P2P2/n7 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,51,51,146,162,415,438,477,464,453,483,483,473,495,495,516,565] [#]} 1. a7 Rh8 2. Nc6+ Kc4 (2... Kc3 3. Nb8 Rh6+ 4. Kb5 Rh5+ 5. Ka4 Rh4+ 6. f4 Rxf4+ 7. Kb5 Rf5+ 8. Kb6 Rf6+ 9. Kc7 Rf7+ 10. Nd7) 3. Nb8 Rh6+ 4. Ka5 Rh3 5. f3 Rxf3 6. Kb6 Rf6+ 7. Kc7 Rf7+ 8. Nd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1948.??.??"]
+[Round "?"]
+[White "Carlsson"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3r1n2/2N5/2PP4/4P3/3k4/8/3K4/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,119,0,485,485,485,485,485,485,485,485,485,485] [#]} 1. e6 Nxe6 (1... Rxd6 2. e7 Ne6 3. Nxe6+ Rxe6 4. c7) 2. Nxe6+ Ke5 3. c7 Rxd6+ 4. Nd4 Rxd4+ 5. Kc3 Rd1 6. Kc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1963.??.??"]
+[Round "?"]
+[White "Proskurovsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "n7/r5N1/5P2/8/4K3/8/p4R2/7k w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,21,58,67,159,505,515,515,505,505,505,505,505,505,505,525,525,525,535,525,545,545,545,545] [#]} 1. Rxa2 Rxa2 2. f7 Ra4+ 3. Kf3 Ra3+ 4. Kg4 Ra4+ 5. Kg5 Ra5+ 6. Kg6 Ra6+ 7. Ne6 Rxe6+ 8. Kg5 Re5+ 9. Kg4 Re4+ 10. Kf3 Re1 11. Kf2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1968.??.??"]
+[Round "?"]
+[White "Kalandadze"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/PK6/5R1N/P7/8/8/n1r1k2p/8 w - - 0 1"]
+[PlyCount "29"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Rf2+ Kxf2 2. Ng4+ Ke1 3. Nxh2 Rb2+ 4. Kc7 Rc2+ 5. Kd7 Rd2+ 6. Ke7 Re2+ 7. Kf7 Rf2+ 8. Kg7 Rg2+ 9. Ng4 Rxg4+ 10. Kf7 Rf4+ 11. Ke7 Re4+ 12. Kd7 Rd4+ 13. Kc7 Rc4+ 14. Kb7 Rb4+ 15. Ka6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1973.??.??"]
+[Round "?"]
+[White "Kralin"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "K7/8/7P/1r3k1P/8/8/6N1/2n5 w - - 0 1"]
+[PlyCount "33"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,33,610,610,243,333,302,333,341,292,455,386,386,446,715,705,705,715,715,715,715,725,725,725,725,735,735,735,735,735,735,735,744,735,745,735] [#]} 1. h7 Ra5+ 2. Kb7 Rb5+ 3. Kc7 Rc5+ 4. Kd7 Nd3 5. Ne3+ Ke4 6. Ng4 Rxh5 7. Nf6+ Kf5 8. Nxh5 Ne5+ 9. Ke8 Ng6 10. Kf7 Kg5 11. Nf6 Kh6 12. Kg8 Ne7+ 13. Kf8 Ng6+ 14. Kf7 Ne5+ 15. Kg8 Ng6 16. Ng4+ Kg5 17. Kg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1974.??.??"]
+[Round "?"]
+[White "Studenetsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3n4/1P3p2/4P1p1/K1k1PP1p/8/8/1r6/2N5 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,216,78,29,297,431,470,470,493,490,490,490,484,497,496,507,504,544,546] [#]} 1. Nd3+ Kc6 2. Nb4+ Rxb4 3. Kxb4 Kxb7 4. exf7 Nxf7 5. e6 Nd8 6. e7 Nc6+ 7. Ka3 Nxe7 8. f6 Kc7 9. f7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1914.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6k1/3p1r2/2P3KP/1P6/8/2b5/8/6N1 w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,21,0,0,205,225,243,249,249,270,268,268,284,302,302,302,302,293,279,279,293,279,308,308] [#]} 1. h7+ Rxh7 2. c7 Rg7+ 3. Kh5 Rh7+ 4. Kg4 Rg7+ 5. Kh3 Rh7+ 6. Kg2 Rg7+ 7. Kh1 Rh7+ 8. Nh3 Rxh3+ 9. Kg2 Rg3+ 10. Kh2 Be5 11. c8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1915.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5K2/7p/P2Pp3/4P1k1/6P1/1r6/8/5bN1 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,139,373,358,358,384,432,613,625] [#]} 1. a7 Bg2 2. d7 Rd3 3. Nh3+ Kh4 4. Nf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1930.??.??"]
+[Round "?"]
+[White "Prokop"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3B4/1K6/P6N/8/1k6/8/r7/N3b3 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Nc2+ Rxc2 2. Ba5+ Kxa5 3. a7 Rb2+ 4. Kc8 Rc2+ 5. Kd7 Rd2+ 6. Ke8 Re2+ 7. Kf7 Rf2+ 8. Kg8 Rg2+ 9. Kh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1933.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "k7/4pN2/Kp1PP1pP/1p6/p6b/7r/8/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,-18,-246,-206,-84,751,945,1173,1202,1752,2008] [#]} 1. d7 Rd3 2. Ne5 Rd1 (2... Rd6 3. Ng4 Be1 4. Nf6 Bc3 5. Ne4) 3. Ng4 Be1 4. Nf2 Bxf2 5. h7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1944.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1r5k/1P6/3bKNP1/8/P7/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,5,495,495,505,505,505,557] [#]} 1. g7+ Kxg7 2. Ne8+ Rxe8+ 3. Kxd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1917.??.??"]
+[Round "?"]
+[White "Vennik"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/P7/4k3/7B/8/1K6/6r1 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,485,485,485,485,485,485,485,485,485,495,495,505,505,505] [#]} 1. a7 Rg2+ (1... Rg8 2. Bg3+) 2. Kb1 Rg1+ 3. Be1 Rxe1+ 4. Kb2 Re2+ 5. Kb3 Re3+ 6. Kb4 Re4+ 7. Kb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1945.??.??"]
+[Round "?"]
+[White "Liungmann"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/6K1/7P/8/5B2/k7/r7 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,13,17,21,535,505,505,505,515,515,515,515,515,815,815,962,992,992,1002] [#]} 1. h6 Rg1+ 2. Kf5 Rf1 3. Kf4 Rf2 4. Kg3 Rd2 5. h7 Rd8 6. Bd5+ Ka3 7. Bg8 Rd3+ 8. Kg4 Rd4+ 9. Kg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1941.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3r4/1P6/6K1/8/8/N7/kB6/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Be5 Kxa3 2. Bc7 Rh8 3. Kg7 Re8 4. Kf7 Rh8 5. Bd6+ Ka4 6. Bf8 Rh7+ 7. Bg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Richter"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7r/1P3K2/7p/8/1k6/5Pr1/8/5RB1 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,74,40,42,0,0,722,775,785,785,480,805,805,1012,1012] [#]} 1. Bh2 Rxf3+ 2. Kg7 Rxf1 3. Kxh8 Rf8+ 4. Kg7 Re8 5. Kf7 Rd8 6. Bc7 Rh8 7. Bd6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1969.??.??"]
+[Round "?"]
+[White "Ellison"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1k4B1/6P1/2K5/8/8/8/4r3/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,17,805,805,835,835,835,835,835,962,1002,1002,1292] [#]} 1. Bd5 Re8 2. Kd7 Rc8 3. Bf7 Kb7 (3... Rc7+ 4. Kd6 Rc8 5. Be6) 4. Ke7 Kb6 5. Be8 Rc7+ 6. Bd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1973.??.??"]
+[Round "?"]
+[White "Zakhodiakin"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "K4kr1/1P6/8/8/8/8/8/7B w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,505,515,515,525,525,525,525,525,525,535,535,535] [#]} 1. Bd5 Rh8 2. Be6 Ke7+ 3. Bc8 Rh1 4. b8=Q Ra1+ 5. Ba6 Rxa6+ 6. Kb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1973.??.??"]
+[Round "?"]
+[White "Tavariani&Matsonashvili"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/BP6/8/6k1/K7/8/2r5 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,0,9,505,505,515,505,515,515,515,515,515,525,525,525,815,815] [#]} 1. Bc4 Rc3+ (1... Rb1 2. Bb3 Ra1+ 3. Ba2 Rf1 4. b7 Rf8 5. Be6+ Kg5 6. Bc8) 2. Kb4 Re3 3. b7 Re8 4. Be6+ Kf3 5. Bc8 Re1 6. Be6 Re4+ 7. Kc5 Re5+ 8. Bd5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1864.??.??"]
+[Round "?"]
+[White "Kling"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/k7/2PK4/3B4/8/8/8/r7 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c7 Rc1 2. Bc6 Rd1+ 3. Ke7 Re1+ 4. Kf7 Rf1+ 5. Kg7 Rg1+ 6. Kh7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Galberstadt"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/2P5/4K3/8/1B5k/6r1/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,7,6,815,815,815,835,1252,1292,1312,1312,27540,29956] [#]} 1. c7 Re2+ 2. Kf6 Re8 3. Ba4 Rg8 4. Kf7 Rh8 5. Kg7 Ra8 6. Bc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1928.??.??"]
+[Round "?"]
+[White "Aleksandrov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3K4/3P4/7B/8/8/8/7k/4r3 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,16,773,795,795,835,962,962,1022] [#]} 1. Bf4+ Kh3 2. Bd6 Rg1 (2... Ra1 3. Kc8 Ra8+ 4. Bb8) 3. Ke8 Rg8+ 4. Bf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1948.??.??"]
+[Round "?"]
+[White "Mesmann"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4K3/8/3P4/8/8/8/k5B1/2r5 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,775,775,795,815,525,525,545,545,545,545,545,545] [#]} 1. Bd5+ Ka1 2. d7 Rb1 3. Bb3 Rh1 4. Kf8 Rf1+ 5. Ke7 Re1+ 6. Kd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1862.??.??"]
+[Round "?"]
+[White "Steinitz"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6k1/4K3/6PP/8/7B/8/8/7r w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,29981,29982,29983,29984,29985,29986,29987,29988,29989,29990,29991,29992] [#]} 1. h7+ Kg7 2. h8=Q+ Kxh8 3. Kf7 Rf1+ 4. Bf6+ Rxf6+ 5. Kxf6 Kg8 6. g7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1941.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/3PB3/4P3/K4k2/8/8/7r w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. d7 Rd1 (1... Ra1+ 2. Ba2 Rxa2+ 3. Kb3) (1... Rh8 2. Bg8 Rxg8 3. e6) 2. Bd5 Rxd5 3. e6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1949.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/6k1/8/1P5r/2P5/8/7B/2K5 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,0,0,485,485,495,495,505,505,505,505] [#]} 1. b6 Rc5 (1... Rxh2 2. b7 Rh8 3. c5) 2. Be5+ Kf7 3. b7 Rxc4+ 4. Bc3 Rxc3+ 5. Kb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1952.??.??"]
+[Round "?"]
+[White "Fritz"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7B/8/2r1P3/8/K7/5P2/8/5k2 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,136,136,431,493,505,505,505,515,515,515,515,515,515,515] [#]} 1. e7 Re6 (1... Rc8 2. Bc3 Ke2 3. f4 Kd3 4. f5 Kxc3 (4... Kc4 5. f6 Ra8+ 6. Ba5) 5. Kb5) 2. Bf6 Kf2 3. f4 Kf3 4. f5 Re4+ 5. Kb3 Kf4 6. Be5+ Rxe5 7. f6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1952.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/2K5/5r2/3B1P1P/6P1/7k/8/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,515,515,525,525,525,525,815,815,815,825,835,972,992,1242] [#]} 1. g5 Rxf5 2. h6 Rxg5 3. Bf7 Ra5 (3... Rc5+ 4. Kb6) 4. h7 Ra8 5. Be6+ Kg3 6. Bc8 Ra7+ 7. Bb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1907.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5K2/8/8/1P2P3/8/4r3/k1B5/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,525,525,515,515,515,515,555,545,1022,1282,1282,1302] [#]} 1. b6 Rxe5 2. Bd3 Rh5 3. Bc4+ Ka1 4. b7 Rh7 5. Bf7 Rh8+ 6. Bg8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1914.??.??"]
+[Round "?"]
+[White "Matison"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/k7/4P3/4K3/5B2/P7/8/r7 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Be3+ Kb7 2. e7 Rxa3 3. Ba7 Ra1 (3... Kxa7 4. Kf4 Ra4+ 5. Kf5 Ra5+ 6. Kf6 Ra6+ 7. Kf7) 4. Kf4 Rf1+ 5. Bf2 Rxf2+ 6. Ke3 Rf1 7. Ke2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1924.??.??"]
+[Round "?"]
+[White "Matison"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1P6/3K4/1k6/5rB1/8/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,4,1,0,505,515,525,525,525,795,795,795,803,805,815,815,815,815,815,890,972] [#]} 1. b7 Rd3+ 2. Ke6 Rd8 3. Bc7 Rh8 4. Be5 Rd8 5. Ke7 Rg8 6. Kf7 Rd8 7. Bc7 Rh8 8. Bd6+ Kc4 9. Bf8 Rh7+ 10. Bg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1924.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/3P4/7B/8/1k2r3/1P6/3K4 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,545,545,795,815,815,835,981,1002] [#]} 1. Bg6 Rh3 (1... Re5 2. Bf7+ Kxb2 3. d7) 2. d7 Rh8 3. Be8 Rh1+ 4. Ke2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1929.??.??"]
+[Round "?"]
+[White "Votava"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4K3/8/P7/4k3/8/5r2/3P4/4B3 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,5,482,485,485,485,775,775] [#]} 1. d3 Rxd3 2. Bb4 Re3 3. a7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Votava"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4K3/Pk5P/8/8/2r5/8/8/3B4 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,545,545,545,545,1012,1032,1012,1529,29971,29972,29973,29974] [#]} 1. a8=Q+ Kxa8 2. Bg4 Re4+ (2... Rb4 3. Kd8 Rd4+ 4. Kc7) 3. Kd7 Rd4+ 4. Kc7 Rc4+ 5. Kb6 Rb4+ 6. Ka6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1966.??.??"]
+[Round "?"]
+[White "Rossi"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/7P/2P1k1K1/B7/8/8/7r/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bd8 Kd6 2. c7 Kd7 3. Kg7 Rg2+ 4. Bg5 Rxg5+ 5. Kh6 Rg1 6. c8=Q+ Kxc8 7. h8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1967.??.??"]
+[Round "?"]
+[White "Onate"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5K1B/7r/8/5P1P/8/8/6kP/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,0,430,449,492,515,515,515,525,525,525,535,535,549,559] [#]} 1. f6 Rxh5 (1... Rxh8+ 2. Kg7 Rxh5 3. f7 Rf5 4. h4) 2. f7 Rf5 3. Be5 Rxe5 4. Kg7 Rg5+ 5. Kf6 Rg4 6. Ke5 Rg5+ 7. Kf4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1969.??.??"]
+[Round "?"]
+[White "Ellison"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2k5/8/2K5/1PBP4/8/8/8/r7 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,962,1002,1022,1461,1469,1828,29945,29946,29947,29948,29949,29946,29947,29948] [#]} 1. b6 Rb1 2. d6 Rb2 3. d7+ Kd8 4. Bd4 Rc2+ 5. Kd6 Rd2 6. b7 Rxd4+ 7. Kc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1945.??.??"]
+[Round "?"]
+[White "Kivi"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/6P1/3B2k1/8/2r3P1/8/K7 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,23,57,63,81,81,81,81,2,0,2,0,0,174,184,368,372,372,391,394,394,494,494,494,1242,439] [#]} 1. g7 Rc8 2. g4 Rb8 3. Be6 Kf4 4. Ka2 Kg5 5. Ka3 Kf4 6. Ka4 Kg5 7. Ka5 Kf4 8. Ka6 Kg5 9. Ka7 Re8 10. Bf7 Rd8 (10... Re7+ 11. Kb6 Kh6 12. g8=N+) 11. Kb6 Kh6 12. g8=R *
+
+[Event "?"]
+[Site "?"]
+[Date "1906.??.??"]
+[Round "?"]
+[White "V.Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/6P1/8/5p2/1B5K/8/8/2kr4 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,400,399,505,505,505,505,513,515,515,515,515,523,525,525,525,525,525,525,525,525] [#]} 1. Bd6 Rh1+ (1... Rd4+ 2. Kh5 Rg4 3. Bf4+) 2. Bh2 Rxh2+ 3. Kg3 Rh1 4. Kf2 Rh2+ 5. Kf3 Rh3+ 6. Kf4 Rh4+ 7. Kxf5 Rh5+ 8. Kf4 Rh4+ 9. Kf3 Rh3+ 10. Kg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1933.??.??"]
+[Round "?"]
+[White "Feyter"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1K4PR/2p5/2B5/8/5kp1/5r2 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Rh2 Rd1 2. Kc6 Kg3 3. Rxg2+ Kxg2 4. g7 Rd8 5. Kc7 Re8 6. Bf7 Ra8 7. Bd5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1918.??.??"]
+[Round "?"]
+[White "Vilnev-Esklapon"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1B2p2K/1P5p/6r1/8/7b/7k/2R5 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Rh1+ Kg3 2. Rxh3+ Kxh3 3. Bc6 Rg3 4. Bd5 Rg1 5. Be4 Rg3 6. Bc2 Rg5 7. Bd3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1897.??.??"]
+[Round "?"]
+[White "Neistadtl"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/2r3pP/6P1/8/K7/7k/3B4 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bh5 Kg3 2. Bxg6 Kf4 3. h7 Rc3+ (3... Rc8 4. Be8) 4. Kb4 Rh3 5. Bh5 Rxh5 6. g6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1927.??.??"]
+[Round "?"]
+[White "Matison"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p7/K5P1/8/2k1rP2/8/8/B7 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Be5 Re2 2. g7 Rg2 3. Bf6 Rg6 4. Kb7 Kd5 5. f5 Rg1 6. Kc8 Ke4 7. Bg5 Rxg5 8. f6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1928.??.??"]
+[Round "?"]
+[White "Betinsh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4K3/8/p2B2P1/8/4kP2/8/r7/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Be7 Kxf4 2. Bg5+ Kxg5 3. g7 Re2+ 4. Kd7 Rd2+ 5. Kc7 Rc2+ 6. Kb7 Rb2+ 7. Ka7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Richter"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/Kp6/1B1r2P1/8/1k6/7P/8/8 w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. g7 Rg6 2. Bd4 Kc4 3. Bb2 Kd5 4. h4 Ke6 5. h5 Kf7 6. hxg6+ Kg8 7. Kb8 b5 8. Kc7 b4 9. Kd6 b3 10. Ke5 Kxg7 11. Kf5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1969.??.??"]
+[Round "?"]
+[White "Vandekastelle"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/6pK/rP4B1/8/6k1/8/P7/8 w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b7 Rb6 2. Be4 Kf4 3. Bg2 Ke5 4. a4 Kd6 5. a5 Kc7 6. axb6+ Kb8 7. Kg8 g5 8. Kf7 g4 9. Ke6 g3 10. Kd5 Kxb7 11. Kc5+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1908.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/Pk6/4K2P/8/6p1/8/8/r4B2 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. a8=Q+ Kxa8 2. h7 Re1+ 3. Kd7 Rd1+ 4. Kc7 Rc1+ 5. Bc4 Rxc4+ 6. Kd7 Rd4+ 7. Ke7 Re4+ 8. Kf7 Rf4+ 9. Kg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1909.??.??"]
+[Round "?"]
+[White "Kubbel"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/P7/3p3r/3k3B/3P4/5K2/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. a7 Rf5+ 2. Ke2 Re5+ (2... Rf8 3. Bf6+ Kc5 4. Be7+) 3. Kd2 Re8 4. Bf2+ Ke5 5. Bg3+ Kf5 6. Bb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1916.??.??"]
+[Round "?"]
+[White "Vanchura"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1kr5/4P1Pp/8/8/8/B7/7K/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. e8=Q Rxe8 2. Bf8 Re2+ 3. Kh3 Re3+ 4. Kh4 Re4+ (4... Re1 5. Bd6+ Kb7 6. g8=Q Rh1+ 7. Kg4 Rg1+ 8. Bg3) 5. Kh5 Re5+ 6. Kh6 Re1 7. Bc5 Re8 8. Kxh7 Rd8 9. Be7 Rc8 10. Bf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1967.??.??"]
+[Round "?"]
+[White "Klausen"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2k5/8/2p5/1PKP4/2B5/8/8/2r5 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. bxc6 Kc7 2. d6+ Kc8 3. Kb5 Kd8 4. Bd3 Rc3 5. Bf5 Rc1 6. Kb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Fritz"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "B7/P7/P7/k6K/8/8/7p/r7 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bh1 Rxh1 2. a8=Q Rd1 3. Qh1 Rxh1 4. a7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1909.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6B1/8/1P6/2p1r1p1/K5k1/3P4/8/8 w - - 0 1"]
+[PlyCount "29"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b7 Re8 2. Be6+ Kf3 3. Bc8 Re1 4. Be6 Ra1+ 5. Ba2 Rxa2+ 6. Kb3 Ra1 (6... Rd2 7. Kc3 Ke3 8. b8=Q Rxd3+ 9. Kc4 Rd4+ 10. Kxc5) 7. Kc2 Ra2+ 8. Kc3 Ra3+ 9. Kc4 Ra4+ 10. Kxc5 Ra5+ 11. Kc4 Ra4+ 12. Kc3 Ra3+ 13. Kc2 Ra2+ 14. Kb3 Rd2 15. Kc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1926.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3k4/8/P4P2/5Kp1/6Bp/8/6r1/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Kg6 Ra2 (1... Rxg4 2. f7 Ke7 3. a7 Ra4 4. Kg7) (1... Rf2 2. a7 Ra2 3. f7 Ra6+ 4. Be6 Ke7 5. Kg7) 2. Be2 Rxe2 3. f7 Re6+ 4. Kf5 Ke7 5. f8=Q+ Kxf8 6. Kxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Korolkov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1p2pk1B/2P4r/6P1/p7/8/8/3K4 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. g6+ Kg7 2. cxb7 Rh1+ 3. Kc2 Rh2+ 4. Kc1 Rh1+ 5. Kb2 Rh2+ (5... a3+ 6. Ka2) 6. Ka3 Rh3+ 7. Kxa4 Rh1 (7... Rh4+ 8. Kb3 Rh3+ 9. Kc4 Rh4+ 10. Kc5) 8. Bg8 e6 9. Bxe6 Rh8 (9... Ra1+ 10. Ba2 Rxa2+ 11. Kb3 Ra1 12. Kb2) 10. Bc8 Rh1 11. Bf5 Rh8 12. Kb5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1971.??.??"]
+[Round "?"]
+[White "Korani"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/5p2/1p6/3k3P/7K/7P/4B3/7r w - - 0 1"]
+[PlyCount "25"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. h6 Rc1 2. Bg4 Re1 3. Bh5 Re4+ 4. Kg3 Re3+ 5. Kg2 Kd6 6. Bxf7 Re2+ 7. Kg3 Re3+ 8. Kg4 Re4+ 9. Kg5 Re5+ 10. Kf6 Re4 11. Bh5 Ra4 12. h7 Ra8 13. Bf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1896.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2K5/8/3p1pP1/8/2P5/1B5k/1r5P/8 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c5 dxc5 (1... Rxb3 2. g7) 2. Bd5 Re2 (2... Rb1 3. Bg2+ Kxg2 4. g7) 3. g7 Re8+ 4. Kd7 Rb8 5. Kc7 Re8 6. Bf7 Ra8 7. Be6+ Kxh2 8. Bc8 Ra7+ 9. Bb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1907.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3k4/p6r/P2BP3/1P6/8/1p6/3K4/8 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b6 axb6 2. e7+ Rxe7 3. Bxe7+ Kc7 4. Bd6+ Kc6 5. Kc3 b5 6. Bc5 Kc7 7. Ba7 Kc6 8. Kxb3 b4 9. Kxb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1909.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/5p2/2P2p1p/4P3/k2r4/8/1P6/5B1K w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. e6 fxe6 (1... Rh4+ 2. Bh3 Rxh3+ 3. Kg2 Rb3 4. c7) 2. c7 Rh4+ 3. Bh3 Rc4 4. b3+ Kxb3 5. Bxe6 *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Betinsh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3p4/3B2Pp/8/4kP2/8/1KP5/7r w - - 0 1"]
+[PlyCount "6"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Be7 Rg1 (1... Kxf4 2. Bg5+) 2. Bg5 hxg5 3. f5 Kxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3B4/3Pp3/2P2k2/4pP2/1K6/8/3p4/3r4 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Kc3 Rc1+ 2. Kxd2 Rxc6 3. Bc7 Rc4 4. Bb6 Rc6 5. Bc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Gunst"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5k2/4p3/2P1Bp2/5p1P/r7/8/4K3/8 w - - 0 1"]
+[PlyCount "25"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c7 Ra8 2. h6 f4 3. Ke1 Ra1+ (3... f3 4. Kf2 f5 5. Kg3 f4+ 6. Kf2) 4. Kd2 Ra8 5. Ke2 f3+ 6. Kf2 f5 7. Kg3 f4+ 8. Kf2 Re8 9. Kxf3 Ra8 10. Kxf4 Ra4+ 11. Kf5 Ra5+ 12. Kg6 Rc5 13. h7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4B3/k5pp/4pP2/Kp6/4r3/1P6/7P/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bg6 Rg4 2. Bf5 Rg5 3. h4 Rxf5 4. fxg7 b4+ 5. Ka4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1966.??.??"]
+[Round "?"]
+[White "Balach"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "k5r1/p1Bp1p2/P1P5/3K2P1/8/8/8/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. cxd7 Rxg5+ 2. Ke4 Rg4+ 3. Ke3 Rg8 4. Kf4 Rf8 5. Kg4 f5+ (5... Rg8+ 6. Kh5 Rh8+ 7. Kg5 Rg8+ 8. Kh6 Rg6+ 9. Kh7) (5... Rh8 6. Kg5 Rg8+ 7. Kh6) 6. Kf4 Rg8 7. Ke5 f4 8. Kf6 f3 9. Kf7 Rh8 10. Kg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1970.??.??"]
+[Round "?"]
+[White "Vandekastelle"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/r2p1k2/2BP4/1P6/8/8/P7/6K1 w - - 0 1"]
+[PlyCount "27"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b6 Ra6 2. b7 Rb6 3. Be4 Ke6 4. a4 Kxd6 5. a5 Kc7 6. axb6+ Kb8 7. Bd5 d6 8. Bc6 d5 9. Kf2 d4 10. Bf3 d3 11. Ke3 d2 12. Kd4 d1=Q+ 13. Bxd1 Kxb7 14. Kc5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1958.??.??"]
+[Round "?"]
+[White "Akchurin"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2r1k3/4P1B1/2p3P1/2p5/P7/8/K7/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bf8 Ra8 (1... Rb8 2. a5 c4 3. a6 c3 4. a7 Ra8 5. g7 Kf7 6. Kb3) 2. Ka3 c4 3. g7 Kf7 4. Kb4 c5+ 5. Kc3 Kg8 6. a5 Kf7 7. Kxc4 Kg8 8. a6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Korolkov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5b1B/6rP/8/7P/4N2K/1r5p/1k5P/8 w - - 0 1"]
+[PlyCount "31"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. h6 Be7+ 2. Ng5 Bxg5+ 3. Kh5 Bxh6 4. Kxh6 Rb6+ 5. Kh5 Rb5+ 6. Kh4 Rb4+ 7. Kxh3 Rb3+ 8. Kh4 Rb4+ 9. Kh5 Rb5+ 10. Kh6 Rb6+ 11. Kxg7 Kc2 12. Kg8 Rb8+ 13. Kf7 Rxh8 14. Kg7 Ra8 15. h8=Q Rxh8 16. Kxh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1966.??.??"]
+[Round "?"]
+[White "Ban"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5B2/K2p4/7P/6P1/7k/7P/pr3P2/r7 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. h7 Rb7+ 2. Ka6 Rb6+ 3. Ka5 Rab1 (3... Rh6 4. gxh6 Rb1 5. h8=Q a1=Q+ 6. Qxa1 Rxa1+ 7. Kb5 Ra8 8. Bg7 Kxh3 9. h7 Kg2 10. f4) 4. h8=Q+ Kxg5 5. Qe5+ Kg6 6. Qg7+ Kf5 7. Qxd7+ Kg6 8. Qg7+ Kf5 9. Qg4+ Kf6 10. Bg7+ Kf7 11. Qd7+ Kg6 12. Bd4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1948.??.??"]
+[Round "?"]
+[White "Farago"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6n1/1r4p1/4K3/2PP2B1/4k3/8/8/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. d6 Kd4 2. c6 Rb6 3. c7 Rc6 4. Kf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1955.??.??"]
+[Round "?"]
+[White "Korani"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5k2/B5p1/8/2P4B/7p/8/1r6/2nK4 w - - 0 1"]
+[PlyCount "35"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c6 Nb3 2. Bc5+ Nxc5 3. c7 Rb1+ 4. Ke2 Rb2+ 5. Kf1 Rb1+ 6. Kg2 Rb2+ 7. Kh3 Rb3+ 8. Kxh4 g5+ 9. Kg4 Rb4+ 10. Kf5 Rf4+ 11. Kg6 Rf6+ 12. Kxf6 Nd7+ 13. Ke6 Nb6 14. Bg4 Nc8 15. Ke5 Ne7 (15... Na7 16. Kd5 Ke7 17. Kc5) 16. Kd6 Kf7 17. Kd7 Kf6 18. Ke8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1909.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4B3/8/P2P4/p5r1/6b1/K7/8/3k4 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. a7 Bf3 2. d7 Rd5 3. Bh5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1935.??.??"]
+[Round "?"]
+[White "Feyter"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4K1B1/4P3/7P/2k5/8/5r2/7b/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. h7 Be5 2. Kd7 Rd3+ 3. Bd5 Rxd5+ 4. Kc8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1936.??.??"]
+[Round "?"]
+[White "Feyter"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/P1P4b/kB1K4/p7/P7/2r5/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. a7 Rd2+ 2. Ke6 Rd8 3. c7 Rf8 4. Be8 Rxe8+ 5. Kd7 Ra8 6. c8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1946.??.??"]
+[Round "?"]
+[White "Bron"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1bk5/p7/3PK1P1/8/8/3r4/2N5/1B6 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Nd4 Rxd4 2. Bf5 Rxd6+ 3. Ke7+ Kc7 4. g7 Rd8 5. Be6 a5 6. Bf7 Kc8 (6... Rd7+ 7. Kf8 Rd8+ 8. Be8) 7. Be8 Bd6+ 8. Kf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1946.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "k3r3/4P3/4P3/3b1P2/8/8/3K4/5B2 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bg2 Bxg2 2. f6 Rxe7 3. f7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Kopelomiaki"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "k7/b7/2P3K1/P7/8/r6B/P7/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c7 Rg3+ 2. Kf7 Rf3+ 3. Ke8 Re3+ 4. Kd8 Rd3+ 5. Ke7 Bc5+ 6. Ke8 Re3+ 7. Kd8 Be7+ 8. Kd7 Rc3 9. Bg2+ Ka7 10. Bc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1965.??.??"]
+[Round "?"]
+[White "Dobrescu"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5B2/2p5/2r4P/8/3P3K/8/8/4kb2 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. h7 Rc2 2. Bh6 Rh2+ 3. Kg5 Rg2+ 4. Kf6 Rf2+ 5. Ke7 Re2+ 6. Kd7 Bh3+ 7. Kd8 Ra2 8. Bf8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1966.??.??"]
+[Round "?"]
+[White "Dolgov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2B5/8/6P1/8/8/1K6/6Pb/r4k2 w - - 0 1"]
+[PlyCount "35"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. g7 Rb1+ 2. Ka4 Ra1+ 3. Kb5 Rb1+ 4. Ka6 Ra1+ 5. Kb7 Rb1+ 6. Ka7 Bg1+ 7. Ka8 Ra1+ 8. Kb8 Bh2+ (8... Rb1+ 9. Bb7 Bh2+ 10. Kc8 Rc1+ 11. Kd8 Rd1+ 12. Ke7 Re1+ 13. Kf7) 9. g3 Bxg3+ 10. Kb7 Rb1+ 11. Ka6 Ra1+ 12. Kb5 Rb1+ 13. Ka4 Ra1+ 14. Kb3 Rb1+ 15. Kc2 Rb2+ 16. Kd3 Rb3+ 17. Ke4 Rb4+ 18. Kf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1972.??.??"]
+[Round "?"]
+[White "Krzhivitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1b6/8/K1p3Pp/4P2k/7r/8/6P1/5B2 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. g7 Ra4+ 2. Kb6 Ra8 3. Be2+ Kh4 4. g3+ Kh3 5. Bg4+ Kg2 6. Bc8 Ba7+ 7. Kb7 Rb8+ 8. Kc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1972.??.??"]
+[Round "?"]
+[White "Maksimovskikh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3k4/3p4/1P1Pp1P1/7r/8/2B5/b1P5/4K3 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. g7 e5 2. b7 Rh1+ 3. Kd2 Rb1 4. Bb4 Rxb4 5. c4 Bxc4 6. Kc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1909.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1K4p1/1p4P1/8/3kN2B/8/3P4/r7 w - - 0 1"]
+[PlyCount "3"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bf6+ gxf6 2. Ng5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1921.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "K3N3/8/1k2P1r1/8/6B1/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Nf6 Rxf6 2. e7 Kc7 3. e8=N+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1922.??.??"]
+[Round "?"]
+[White "Vilnev&Esklapon"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7K/7p/1P6/8/6rB/8/4k3/5N2 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Ne3 Rd4 (1... Kxe3 2. Be7 Rg2 3. Ba3) 2. Be7 Rd7 3. Nf5 Rb7 4. Bd8 Rb8 5. Nd4+ Kf1 6. Nc6 Rb7 7. Bc7 h5 8. Na5 Rxb6 9. Bxb6 h4 10. Bc7 h3 11. Nc4 Kg2 12. Ne3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1923.??.??"]
+[Round "?"]
+[White "Prokop"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1k6/1P1r4/1K1N4/8/8/8/3B4/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bf4 Rc7 2. Be5 Re7 3. Nf7+ Rxe5 4. Nd8 Re6+ 5. Nc6+ Rxc6+ 6. Kxc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1928.??.??"]
+[Round "?"]
+[White "Kaminer"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6r1/PNpP1p2/3p4/5P2/8/7K/5k1p/3B4 w - - 0 1"]
+[PlyCount "39"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bf3 Kxf3 2. Kxh2 Rh8+ 3. Kg1 Rg8+ 4. Kf1 Rh8 5. Ke1 Ke3 6. Kd1 Kd3 7. Kc1 Kc3 8. Kb1 Kb3 (8... Rh1+ 9. Ka2 Rh2+ 10. Ka3 Rh1 11. Ka4) 9. Na5+ Ka4 10. Nc6 Kb3 11. Kc1 Kc3 12. Kd1 Kd3 13. Ke1 Ke3 14. Kf1 Kf3 15. Nd4+ Ke4 16. Nb5 Kf3 17. Ke1 Ke3 18. Kd1 Kd3 19. Kc1 Kc4 20. Nxc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1B6/8/N7/P6K/3r4/1k6/8/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Nc7 Rb4 2. Ba7 Rb7 3. Bb6 Ka4 4. a6 Rxb6 5. a7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1940.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p1K1N3/1r5P/p1p5/8/5k2/8/5B2 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Nc6 Rb2 2. Ne5+ Kg3 3. Ng4 Kxg4 4. Bh3+ Kxh3 5. h7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1947.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3r4/4k2P/5N1p/4B3/2K5/8/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. h7 Rd8 (1... Rc7+ 2. Kd3) 2. Bd5+ Kxd5 (2... Kxf5 3. Bg8) 3. Ne7+ Ke6 4. Ng8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1956.??.??"]
+[Round "?"]
+[White "Iakimchik"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/2p5/pk6/N2P4/rP6/2K5/B7 w - - 0 1"]
+[PlyCount "25"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Nc3+ Kb4 2. Nd5+ cxd5 3. Bc3+ Kb5 4. Kb2 Ra4 5. bxa4+ Kc4 6. Bxa5 Kxd4 7. Bb6+ Kc4 8. Ka3 d4 9. Bxd4 Kd5 (9... Kxd4 10. Kb4) 10. a5 Kc6 11. a6 Kc7 12. Ba7 Kc6 13. Kb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "I.Taimanov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1Pr5/8/8/8/KN6/5Bk1 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b7 Rb6 2. Ba6 Rxa6+ 3. Na4 Rxa4+ 4. Kb3 Ra1 5. Kb2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Votava"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3k3P/8/B7/8/7K/N7/r7 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Nc1 Rxc1 2. Bc7 Kxc7 3. Kg2 Rc2+ 4. Kg3 Rc3+ 5. Kg4 Rc4+ 6. Kg5 Rc5+ 7. Kg6 Rc6+ 8. Kg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Weinberger"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3K4/8/6P1/7B/8/6r1/8/2N2k2 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,0,505,505,505,505,505,515,515,515,515,515,525,525,525,525,525] [#]} 1. Ke7 Rg5 2. Kf6 Rxh5 3. g7 Rh6+ 4. Kf5 Rh5+ 5. Kf4 Rh4+ 6. Kg3 Rh1 7. Ne2 Kxe2 8. Kg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1970.??.??"]
+[Round "?"]
+[White "Sobei"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3B4/5K2/2P5/4k3/r7/N7/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,485,495,505,505,505,505,505,505,505,505,505,505] [#]} 1. c6 Rxa2 (1... Ra6 2. Nb4 Rb6 3. Be6) 2. c7 Rf2+ 3. Kg6 Rg2+ 4. Bg4 Rxg4+ 5. Kf7 Rf4+ 6. Ke7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1970.??.??"]
+[Round "?"]
+[White "Krikheli"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/Pk6/5P2/1K6/7B/5r2/N7/8 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,8,0,0,0,3,0,577,577,792,802,812,812,812,812,812,822,822,822] [#]} 1. a8=Q+ Kxa8 2. Nb4 Rf5+ 3. Kb6 Rf4 4. Nd5 Rxh4 5. f7 Rh6+ 6. Kb5 Rh8 7. Ka6 Kb8 (7... Rf8 8. Nb6+ Kb8 9. Nd7+) (7... Rd8 8. Nc7+ Kb8 9. Ne8) 8. Nf6 Kc7 9. Ng8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1906.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7K/8/3P3B/k7/3n4/8/3N3P/4r3 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,5,257,269,265,285,294,308] [#]} 1. Nb3+ Nxb3 2. Bd2+ Nxd2 3. d7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1955.??.??"]
+[Round "?"]
+[White "Gretzer"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p7/2B2P2/8/6N1/1bP4p/1Pk4K/r7 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c4 Bxc4 2. Ne3+ Kb3 3. Nxc4 Kxc4 4. Bf3 Ra5 5. Bg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1965.??.??"]
+[Round "?"]
+[White "Shtenichka"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1r6/7P/6Kp/8/6P1/8/1B6/2Nb2k1 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,235,286,439,439,460,502,495,505,812,962] [#]} 1. Kh5 Rb4 2. Bd4+ Rxd4 3. h8=Q Rxg4 4. Qa1 Ra4+ 5. Ne2+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1963.??.??"]
+[Round "?"]
+[White "Kellstrem"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "K7/P6B/6P1/8/2r5/1k4b1/b7/6N1 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,500,501,577,577,577,587,630,655,638,692,692,721,732,732,863,962] [#]} 1. g7 Rg4 2. g8=Q+ Rxg8+ 3. Bxg8+ Kb2 4. Kb7 Bxg8 5. Kc6 Bh7 6. Kd5 Bg8+ 7. Ke4 Bh7+ 8. Kf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1923.??.??"]
+[Round "?"]
+[White "Havashi"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/4N3/5P2/r7/p3N3/7k/8/6K1 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,19,19,27,772,962,992,992,992] [#]} 1. f7 Ra8 2. Nf5 Kg4 3. Nf6+ Kxf5 4. Ne8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1923.??.??"]
+[Round "?"]
+[White "Havashi"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6N1/5p2/7P/1r6/2N5/8/7K/4k3 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,295,422,453,496,525,525,677,722,705,786,802,812,812,544,524,812,982,1022] [#]} 1. Ne5 Rxe5 2. Nf6 Re2+ 3. Kg3 Kf1 4. h7 Rg2+ 5. Kh3 Kg1 6. Nh5 Rh2+ 7. Kg4 Rg2+ 8. Kf3 Rf2+ 9. Ke3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1924.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p4N2/1kr1P3/8/8/8/2NK4/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. e7 Re6 2. Nd6 Rxd6+ (2... a5 3. e8=Q Rxe8 4. Nxe8 a4 5. Na3 Kc5 6. Kc3) 3. Nd4 Rxd4+ 4. Ke3 Rd1 5. Ke2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1926.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1N6/8/P7/8/4r2k/K6N/8/8 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,534,772,772,772,782,782,782,782,782,782,782,792,792,802,802,802,812,812] [#]} 1. Nf4 Rxf4 2. a7 Rf1 3. Kb2 Rf2+ 4. Kb3 Rf3+ 5. Kb4 Rf4+ 6. Kb5 Rf5+ 7. Kb6 Rf6+ 8. Kc7 Rf7+ 9. Nd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Kubbel"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1N6/4KPk1/2P5/8/8/8/4Nr2/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,485,485,485,485,505,505,505,505,992,1002,1002,1022,1032,28693] [#]} 1. Nf4 Rxf4 2. Nd7 Re4+ (2... Rxf7+ 3. Kd6 Rf1 4. c7 Rd1+ 5. Kc6) 3. Kd6 Kxf7 4. Ne5+ Ke8 (4... Kf6 5. c7) 5. c7 Rd4+ 6. Kc6 Rd8 7. Kb7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1946.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "k1NN4/2P5/5K2/1r6/8/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,5,1022,1022,1022,1022,1299,29972] [#]} 1. Nb6+ Rxb6+ 2. Ke7 Rb8 3. Kd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1P6/8/1rN1k2K/7N/2P5/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,495,505,505,505,505,505,505,505,505,505] [#]} 1. c3 Rxc4 2. b7 Kf5+ (2... Kf3+ 3. Kh5 Rc5+ 4. Ng5+) 3. Nf4 Rxf4+ 4. Kh3 Rf3+ 5. Kg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1943.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/7P/8/5k1K/8/3N1p2/8/4Nr2 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,485,485,485,485,495,505,505,505] [#]} 1. Nxf3 Rxf3 2. Kh4 Rf1 3. Nf2 Rxf2 4. Kg3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1947.??.??"]
+[Round "?"]
+[White "Gunst"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7N/8/3P3N/6pK/8/8/8/1rk5 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,292,258,313,341,381,377,560,633,694,772,772,772] [#]} 1. d7 Rb8 2. N8f7 g4 3. Kh4 g3 4. Kh3 g2 5. Kh2 g1=Q+ 6. Kxg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Rossi"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1K3N2/5P2/8/8/4k3/8/2r5/1N6 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,750,772,792,792,812,822,1244,1259] [#]} 1. Nc3+ Kd3 (1... Rxc3 2. Nh7 Rb3+ 3. Kc7 Rc3+ 4. Kd7 Rd3+ 5. Ke7 Kf3) 2. Nd1 Rc5 3. Nf2+ Ke2 4. Ne6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1965.??.??"]
+[Round "?"]
+[White "Bunka"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1KN5/P7/8/8/8/2r1N1k1/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,384,495,505,505,752,772,782,782,792,792,792,792] [#]} 1. Nc3 Rxc3 2. a7 Ra3 (2... Rb3+ 3. Nb5 Rxb5+ 4. Ka6) 3. Na6 Rb3+ 4. Kc6 Rc3+ 5. Kb5 Rc8 6. Nb8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1972.??.??"]
+[Round "?"]
+[White "Miller"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "N7/2pk4/7P/8/1N6/r7/2P3K1/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,397,467,473,475,505,515,505,515,515,515,525,525] [#]} 1. Nb6+ cxb6 2. Nd5 Kd6 3. Nxb6 Ra2 4. h7 Rxc2+ 5. Kg3 Rc3+ 6. Kg4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1925.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5N2/2N5/PK6/7p/5k1P/3r1P1r/5P2/8 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. a7 Ra3 2. Na6 Rxa6+ 3. Kxa6 Rxf3 4. Ng6+ Kf5 5. Ne7+ Kg4 (5... Ke6 6. Nc6 Rf8 7. Kb6) 6. Nc6 Rf8 7. f3+ Kxh4 8. Nb8 Rxf3 9. Kb5 Rf5+ (9... Rb3+ 10. Ka4 Rb1 11. Na6) 10. Kb6 Rf6+ 11. Kc7 Rf7+ 12. Nd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3n2N1/4p1P1/4pp2/7p/P2r4/Pk6/1P4K1/1N6 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,114,157,165,-169,279,299,281,324,333,315,328,358] [#]} 1. Nh6 Rd5 2. Nf5 Rxf5 3. Nd2+ Kxb2 4. Ne4 Rf4 5. Nf2 Rf5 6. Nh3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1962.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4n3/3p3p/4N1pk/3P1r2/7P/4N2K/6P1/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,-11,674,683,695,757,750,768,758,763,785,823,887,1156,1291] [#]} 1. Ng4+ Kh5 2. Ng7+ Nxg7 3. Nf6+ Rxf6 4. g4+ Kh6 5. g5+ Kh5 6. gxf6 Kh6 7. f7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1907.??.??"]
+[Round "?"]
+[White "Troitsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/3P3P/kp3p2/8/N1r5/K7/4bN2 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,0,262,290,300,362,364,627,685] [#]} 1. Nc4+ Rxc4 (1... bxc4 2. h7 Rh3 3. d7) 2. d7 Rd4 (2... Bh4 3. h7) 3. h7 Bc3 4. h8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1933.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/pP1p3p/Pr3P1P/5p1K/5k2/5P1p/2N2b1P/N7 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,18,-248,340,549,726,760,913,833] [#]} 1. Nb3 Rxb3 2. Ne1 Bxe1 (2... Ke5 3. f7 Bc5 4. Nd3+ Kf6 5. Nxc5) 3. f7 Bb4 4. b8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1933.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1b6/1P6/1p3P2/1N1p4/p6k/3r4/KP6/5N2 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Nh2 Bxh2 2. Nd4 Rxd4 3. f7 Bd6 (3... Rf4 4. b8=Q) 4. b8=Q Bxb8 5. f8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1956.??.??"]
+[Round "?"]
+[White "Peronase"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2b5/5p2/4PN2/p5k1/8/8/2r5/K6N w - - 0 1"]
+[PlyCount "31"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,31,0,0,0,0,0,0,0,0,228,407,407,407,412,412,412,407,463,482,482,482,482,482,542,542,525,534,556,573,585,599,599,672] [#]} 1. exf7 Ra2+ 2. Kb1 Bf5+ 3. Kc1 Rc2+ 4. Kd1 Rc8 5. Ne8 Rd8+ (5... Bc2+ 6. Kd2) 6. Kc1 Rc8+ 7. Kd2 Rd8+ 8. Kc3 Rd3+ (8... Rc8+ 9. Kd4 Rc4+ 10. Ke5 Re4+ 11. Kd6 Re6+ 12. Kd5) 9. Kb2 Rb3+ 10. Kc1 Rb1+ 11. Kd2 Rb2+ 12. Ke3 Rb3+ 13. Kd4 Rd3+ 14. Kc5 Rc3+ 15. Kb6 Rb3+ 16. Ka7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1915.??.??"]
+[Round "?"]
+[White "Salkind"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1r2B1k1/4P3/p6P/2p5/8/8/1B4K1/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,319,393,400,398,398,402,401,401,407,407,407,407] [#]} 1. h7+ Kxh7 2. Ba4 Rxb2+ 3. Bc2+ Rxc2+ 4. Kf3 Rc3+ 5. Kf4 Rc4+ 6. Kf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1927.??.??"]
+[Round "?"]
+[White "Gorgiev"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3rP3/4p2B/8/4B3/8/3pK3/k7 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,96,525,525,525,525,525,525,525,525,525,535,535] [#]} 1. Bg7+ e5 2. Bxe5+ Ka2 3. Bd6 d1=Q+ 4. Kxd1 Rxd6+ 5. Bd3 Rxd3+ 6. Ke2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1943.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/6K1/p1B5/1P6/8/8/5B1r/5k2 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,13,0,369,395,406,406,406,416,406,406,414,485,485,495,505,505] [#]} 1. b6 Rxf2 2. Bb5+ axb5 3. b7 Rg2+ 4. Kf7 Rf2+ 5. Ke7 Re2+ 6. Kd7 Rd2+ 7. Kc7 Rc2+ 8. Kb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1945.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/K7/7P/6k1/B7/2B5/6r1 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. h6 Ra1 2. h7 Rxa3+ 3. Ba4 Rxa4+ 4. Kb7 Rb4+ 5. Kc7 Rc4+ 6. Kd7 Rd4+ 7. Ke7 Re4+ 8. Kf7 Rf4+ 9. Kg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1949.??.??"]
+[Round "?"]
+[White "Votava"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5r2/6k1/1P4B1/8/K6B/8/8/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,5,0,505,505,505,505,505,505,505,505,505,505,505,505,505,505,505,515,515,515] [#]} 1. Bh5 Rf4+ 2. Kb3 Rxh4 3. b7 Rh1 4. Kc2 Rh2+ 5. Kc3 Rh3+ 6. Kc4 Rh4+ 7. Bg4 Rxg4+ 8. Kc5 Rg5+ 9. Kc6 Rg6+ 10. Kc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1B2r3/8/1P3k2/K7/4B3/8/8/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,1,657,773,763,805,805,795,805,805,805,815,815,815,815,823,835,835,835,962,982] [#]} 1. Bc7 Rxe4 2. Bd8+ Kf7 3. b7 Re1 4. Ka6 Ra1+ 5. Ba5 Rb1 6. Bb6 Ra1+ 7. Kb5 Rb1+ 8. Kc5 Rc1+ 9. Kd4 Rd1+ 10. Kc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1962.??.??"]
+[Round "?"]
+[White "Genov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/ppr2k1K/5P2/1P6/B7/8/8/4B3 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,105,0,0,0,0,264,765,795,792,785,785,805,821,831] [#]} 1. b6 axb6 2. Bh4 Rc3 3. Bd1 Rh3 4. Bh5+ Kf8 5. Be1 Rxh5+ 6. Kg6 Rb5 (6... Rh8 7. Bb4+ Ke8 8. Kg7) 7. Bd2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1968.??.??"]
+[Round "?"]
+[White "Vandekastelle"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p4p2/1r1Pp3/p7/P7/k1K5/B7/B7 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,0,329,616,708,662,661,776,909,1186,985,1714,1864,29973,29974,29975,29986,29977,29982,29983,29988] [#]} 1. d7 Rd6 (1... Rb8 2. Bc4) 2. Bb3 Rc6+ 3. Bc4 Rd6 4. Bb5 a6 5. Bb2+ Ka2 6. Bc4+ Kb1 7. Bd3+ Ka2 8. Kc2 Rc6+ 9. Bc4+ Rxc4+ 10. Bc3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Korolkov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6KB/4p2P/8/3P4/8/1r2P2k/7p/1B5r w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bf5+ Kg2 (1... Kg3 2. Be5+ Kf2 3. Kf7) 2. Be4+ Kf2 (2... Kg1 3. Be5) 3. Bxh1 Rb8+ 4. Kf7 Rxh8 5. Kg7 Rd8 6. h8=Q Rxh8 7. Kxh8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1964.??.??"]
+[Round "?"]
+[White "Kasparian"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2r5/b6P/7B/3B3P/8/2k5/8/2K5 w - - 0 1"]
+[PlyCount "25"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,25,210,130,161,161,164,145,140,153,153,164,164,164,164,167,164,135,677,687,697,697,925,1022,1022,1282,1292,1312] [#]} 1. Bg7+ Bd4 2. h6 Kd3+ 3. Kb1 Rb8+ 4. Ka2 Rh8 5. Bf7 Ra8+ 6. Kb3 Rb8+ 7. Ka4 Rh8 8. Ba2 Kc3 (8... Ke4 9. Bb1+ Kd5 10. Kb3 Be5 11. Bf5) 9. Bg8 Kd3 10. Kb5 Ke4 11. Kc6 Be5 12. Kd7 Kf5 13. Ke7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1965.??.??"]
+[Round "?"]
+[White "Pekkover"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5K2/1B6/1bPB4/8/2P5/4k2r/8/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,116,294,294,365,421,485,495,505,505,505,505,505,785,795,815,815] [#]} 1. c5 Ba5 2. c7 Bxc7 3. Bxc7 Rh7 4. Bd6 Rxb7 5. c6 Rh7 (5... Rb2 6. Bc5+ Ke4 7. c7) 6. Kg8 Rh4 7. Bc5+ Kd3 8. c7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1962.??.??"]
+[Round "?"]
+[White "Kralin"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/B7/8/5P2/B3P3/K2k4/4r1b1/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,224,487,532,656,657,657,682,692,692,712,712,712] [#]} 1. Bb5+ Kxe4 2. f6 Ra2+ 3. Kxa2 Ke5 4. Bd4+ Kxd4 5. Bc4 Kxc4 6. f7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1957.??.??"]
+[Round "?"]
+[White "Bondarenko&Kakovin"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1b6/4p2B/1p1P4/3rB3/8/8/3P1k2/K7 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,357,361,361,361,386,391,391,391,344,398,398,396,402,409,412,416,515,525,992,1012] [#]} 1. Bd4+ Rxd4 2. dxe7 Ra4+ 3. Kb1 Rb4+ 4. Ka2 Ra4+ 5. Kb3 Rb4+ 6. Kc3 Be5+ 7. d4 Bxd4+ 8. Kd3 Rb3+ 9. Kxd4 Re3 10. Be4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1929.??.??"]
+[Round "?"]
+[White "Gorgiev"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "k7/4P3/P3r3/7p/2N5/8/2K1b3/4NB2 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bg2+ Kb8 2. a7+ Kxa7 3. Nd6 Bd1+ 4. Kxd1 Rxd6+ 5. Bd5 Rxd5+ 6. Nd3 Rxd3+ 7. Ke2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Kvel"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "r3k1K1/P1bpB2N/8/p2P4/1N6/8/8/8 w q - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,532,557,571,582,574,600,600,622,641,641,641,641] [#]} 1. d6 Bxd6 2. Nd5 Be5 3. Nhf6+ Bxf6 4. Nc7+ Kxe7+ 5. Nxa8 Bd4 6. Nb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Votava"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1B6/8/5kP1/8/8/7K/8/1r1B2N1 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,475,485,485,485,485,485,485,485,485,485] [#]} 1. Be5+ Kxe5 2. g7 Rb8 3. Bb3 Rxb3+ 4. Nf3+ Rxf3+ 5. Kg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Zepler"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/P7/8/4p3/2n1K2k/5R1p/8 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,58,188,705,715,715,725,725,735,735,735,735,735,735,735,735,735,735,735] [#]} 1. Rf5 h1=Q (1... Kg4 2. Rf1 Nb5 3. Kf2) 2. Rh5+ Kg2 3. Rxh1 Kxh1 4. a7 Nd5+ 5. Kxe4 Nc7 6. Kd3 Kg2 7. Kc4 Kf3 8. Kc5 Ke4 9. Kc6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1964.??.??"]
+[Round "?"]
+[White "Fritz"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3R4/2k1P3/8/8/3K3n/3p4/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,40,547,567,567,695,705,715,715,725,725,725,735] [#]} 1. Ke4 d1=Q 2. Rxd1 Nf2+ 3. Kf5 Nxd1 4. Kg6 Ne3 5. e7 Kd7 6. Kf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1971.??.??"]
+[Round "?"]
+[White "Krelin"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3R4/P7/1n6/7K/8/8/P4kp1/8 w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Rd2+ Kf3 2. Rd1 Kf2 3. Kg6 g1=Q+ 4. Rxg1 Kxg1 5. Kf7 Kf2 6. Ke8 Ke3 7. Kd8 Kd4 8. Kc7 Kc5 9. Kb7 Kb5 10. a3 Ka5 11. a4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1909.??.??"]
+[Round "?"]
+[White "Kubbel"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3p4/6P1/8/b4R2/8/K2p2Pk/8 w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,21,46,520,575,600,617,632,632,705,773,773,962,962,1002,1012,1012,1022,1022,1022,1032,1032,29143,28588] [#]} 1. Rh4+ Kg1 (1... Kxg2 2. Rd4 d1=Q 3. Rxd1 Bxd1 4. g7) 2. Rd4 d1=Q 3. Rxd1+ Bxd1 4. g7 Bg4 5. g8=Q Be6+ 6. Qxe6 dxe6 7. g4 e5 8. g5 e4 9. g6 e3 10. g7 e2 11. g8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1919.??.??"]
+[Round "?"]
+[White "Venink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/5b2/8/6kP/8/1pK4R/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,339,335,411,433,436,441,436,436,446,446,446,446,446,446,527,537] [#]} 1. h5 Kg5 2. h6 Bc3 (2... Kg6 3. h7 Bh8 4. Kb1) 3. h7 Bh8 4. Kb1 Kg6 5. Ka2 Kf7 (5... Kg7 6. Kxb2) (5... Kg5 6. Rxb2) 6. Rg2 Bg7 7. Kb1 Kf8 8. Rf2+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1965.??.??"]
+[Round "?"]
+[White "Zoltan"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/2p2p2/5P2/8/b5P1/8/pkP5/2RK4 w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,21,-190,-194,-199,-222,-217,214,216,224,224,78,216,167,591,616,616,616,688,426,450,500,500,499] [#]} 1. g5 Be8 (1... Kc3 2. g6 a1=Q 3. Rxa1 Bxc2+ 4. Ke2 Bxg6 5. Rg1) 2. Ra1 c6 (2... c5 3. Kd2 c4 4. c3 (4. Rxa2+ Kxa2 5. Kc3) 4... Ka3 5. Re1 Kb2 6. Rxe8) 3. Kd2 c5 4. c4 Kb3 5. Ke3 Kb2 6. Rg1 a1=Q (6... Kc3 7. Ra1 Kb2 8. Rxa2+ Kxa2 9. Ke4 Kb3 10. Kd5) 7. Rxa1 Kxa1 8. Ke4 Kb2 9. Ke5 Kc3 10. Kd6 Kxc4 11. Ke7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1967.??.??"]
+[Round "?"]
+[White "Kuznetsov&Sakharov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/4p3/4p3/7k/2ppb2P/7R/1P2P3/4K3 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,104,102,110,106,100,118,125,135,138,153,160,128] [#]} 1. Ra3 Bd5 (1... Kxh4 2. Ra4) 2. Ra4 e5 (2... Kxh4 3. e4 dxe3 4. b4 Kg5 5. b5 Kf5 6. b6 c3 (6... Ke5 7. Rxc4) 7. Ra3 c2 8. Rc3) 3. e4 dxe3 4. Ra7 e6 5. Rh7+ Kg4 6. Ke2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1959.??.??"]
+[Round "?"]
+[White "Kasparian"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/8/P1k1b3/n7/8/8/1R3K2 w - - 0 1"]
+[PlyCount "25"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. a6 Nb6 2. a7 Na8 3. Rb8 Ba1 4. Ke2 Kc6 5. Kd3 Kc5 6. Ke3 Kc6 (6... Bf6 7. Ke4 Ba1 8. Kd3 Kc6 9. Kc4) 7. Ke4 Nc7 8. Rc8 Kb7 9. Rxc7+ Ka8 10. Kd5 Bf6 11. Kc4 Bg5 12. Kb5 Be3 13. Ka6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1940.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/K7/1P3k2/2n5/1R6/1n6/8/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,507,517,527,527,695,695,695,703] [#]} 1. Rb5 Ke6 2. Ka8 Kd6 3. Rxb3 Nxb3 4. b7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1971.??.??"]
+[Round "?"]
+[White "Kovalenko"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4k3/8/8/P7/p3p3/p3K2R/n7/1n6 w - - 0 1"]
+[PlyCount "27"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,27,-19,407,407,407,480,695,695,695,695,695,695,695,695,695,568,715,715,715,715,725,715,735,745,745,996,996,29993,29994] [#]} 1. a6 Nb4 2. a7 Nd5+ 3. Kf2 Nb6 4. Rh6 e3+ 5. Ke1 Na8 6. Rh8+ Kd7 7. Rxa8 a2 8. Rd8+ Ke7 9. Re8+ Kf7 10. Rf8+ Kg7 11. Rg8+ Kh7 12. Rh8+ Kg7 13. a8=Q a1=Q 14. Qf8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1902.??.??"]
+[Round "?"]
+[White "Duras"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1K6/1P1k4/1P5B/8/8/8/4r1pR/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,488,507,527,527,992,1012,1000,547,547,1016,1016,1016] [#]} 1. Be3 Rxe3 2. Rxg2 Ra3 3. Rd2+ Ke7 4. Rd6 Rc3 5. Rc6 Rxc6 (5... Rd3 6. Rc1 Kd7 7. Ra1) 6. Ka7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1922.??.??"]
+[Round "?"]
+[White "Matison"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/kP6/2n3P1/r5p1/8/3R4/4K3/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,0,0,0,0,0,0,0,0,0,547,547,567] [#]} 1. b8=Q+ Kxb8 (1... Nxb8 2. g7 Re5+ 3. Re3) 2. g7 Re5+ (2... Ne7 3. Re3 Ra7 4. Kf3 Ng8 5. Re8+) 3. Kf1 Re8 (3... Ne7 4. Rd7) 4. Rf3 Rc8 5. Rf7 g4 6. Kg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1924.??.??"]
+[Round "?"]
+[White "kljatskin"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "rR6/p7/KnPk4/P7/8/8/8/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c7 Kxc7 2. axb6+ Kxb8 3. b7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1931.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1P3P2/8/r4n2/k7/1p6/1K1R4 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,505,505,505,505,505,505,505,505,505,505] [#]} 1. b7 Rb4 2. f7 Ne6 3. Rd3+ Ka4 4. Rd4 Nxd4 5. f8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Pshepjurka"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "n7/6R1/4k1pP/1P6/8/8/6K1/1r6 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,103,99,101,101,101,101,101,101,101,160,209,497,497,507,515,525] [#]} 1. Rxg6+ Kf7 2. h7 Rb2+ 3. Kg3 Rb3+ 4. Kg4 Rb4+ 5. Kg5 Rxb5+ 6. Kh6 Rb1 7. Rg7+ Kf6 8. Rg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1Pp5/nP5K/p7/8/8/PR6/2r4k w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,160,-2,-29,279,313,313,313,319] [#]} 1. b8=N Nxb8 (1... cxb6 2. Nxa6 b5 3. Kg5) 2. Rb1 Rxb1 (2... cxb6 3. Rxc1+ Kg2 4. Rc7) 3. bxc7 Rb6+ 4. Kh5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1943.??.??"]
+[Round "?"]
+[White "Farago"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p3k3/4P3/7P/7p/2n1r2P/2P3PK/R7 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,35,294,478,478,493,518,524,551] [#]} 1. h6 Re5 (1... Rxe6 2. Re1 Rxe1 3. h7) 2. h7 Rh5 3. Ra5 Rh6 4. Rxa7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1925.??.??"]
+[Round "?"]
+[White "Matison"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/6k1/1PPR4/2r5/7p/7b/3K4/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b7 Rb5 2. Rd8 Bg2 3. b8=Q Rxb8 4. c7 Rb2+ 5. Kc1 Rb6 6. Rg8+ Kh6 (6... Kxg8 7. c8=Q+ Kg7 8. Qc7+) 7. Rxg2 Rc6+ 8. Rc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1925.??.??"]
+[Round "?"]
+[White "Matison"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5R2/8/7P/p7/6P1/5K1b/1kP5/4r3 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,92,96,96,92,95,1,235,247,257,262,447,450] [#]} 1. Rb8+ Kxc2 2. h7 Rh1 (2... Bxg4+ 3. Kg2 Bh3+ (3... Bf3+ 4. Kxf3 Rh1 5. h8=Q Rxh8 6. Rxh8 a4 7. Ra8 Kb3 8. Ke2 a3 9. Kd2) 4. Kg3 Rg1+ 5. Kh2) 3. Rb2+ Kd3 4. Rh2 Rxh2 5. Kg3 Rh1 6. h8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1931.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/P3P3/7k/2bp3r/8/3KP3/4R3 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,195,195,473,515,515,525,601,1002] [#]} 1. a7 Bd5 2. Rh1 Bxh1 (2... Rxh1 3. e7) 3. e7 Re4 4. a8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1931.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/P3P3/4r2k/4p3/5P2/2b4K/5R2 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,8,20,346,327,511,515,722,795] [#]} 1. a7 Ra5 2. Ra1 Rxa1 (2... Ba4 3. Rxa4 Rxa4 4. e7) 3. e7 Ba4 4. a8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1931.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1pP1pR1P/3P4/6r1/1Pk5/8/2K4b w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,28,252,372,373,372,386,392,399,408,430,438,438] [#]} 1. Rf1 Bxd5 2. h7 Rh4 3. c7 Bb7 4. Rf3+ Kd4 5. Rf4+ Rxf4 6. h8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1934.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2k5/3R1P2/6P1/7p/8/8/1bP2r2/7K w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c3 Bxc3 (1... Kxd7 2. g7) 2. Rd2 Rf1+ 3. Kg2 Rf6 4. Rd6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1937.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7K/8/P1P3p1/1R6/8/3b4/8/r6k w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,5,388,471,525,525,525,525] [#]} 1. c7 Rc1 (1... Bxb5 2. c8=Q Bxa6 (2... Bf1 3. Qc6+ Bg2 4. Qxg6) 3. Qh3+ Kg1 4. Qg3+ Kf1 5. Qf4+ Kg2 6. Qg5+ Kh3 7. Qh6+ Kg2 8. Qxg6+ Kh1 9. Qh6+ Kg2 10. Qg7+) 2. a7 Be4 3. Rb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "1946.??.??"]
+[Round "?"]
+[White "Kellstrem"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6k1/6r1/P2P4/8/8/5R2/b7/4K3 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,485,495,495,495,505,505,1002,1002] [#]} 1. Rg3 Rxg3 2. d7 Rd3 3. a7 Bd5 4. d8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1971.??.??"]
+[Round "?"]
+[White "Koschakov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "K7/8/1kP3p1/pP6/4R1P1/P6p/P7/6br w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,-60,-194,0,0,0,0,228,312,351,312,385,414,431,548,641,646] [#]} 1. Rc4 Kc7 (1... Bh2 2. c7 Bxc7 3. a4) (1... Bc5 2. Rxc5) 2. Rc1 h2 3. a4 g5 (3... Kc8 4. c7 g5 5. a3 Bb6 6. Rxh1 Bg1 7. b6) 4. Rd1 Kc8 (4... Kb6 5. Kb8) 5. Re1 Kc7 6. Rc1 Bb6 (6... Kc8 7. c7) 7. Rxh1 Bg1 8. a3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1962.??.??"]
+[Round "?"]
+[White "Pogosiants"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/2P2n2/1k6/b7/3R4/KP6/6r1 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,254,41,40,294,305,305,309,306,451,475,529,551,571,542,1015,1015,1016,1016,1016,1016] [#]} 1. c7 Rg8 2. Rd8 Nd5 (2... Kb4 3. Rxg8) 3. Rxd5+ Kb6 4. Rd8 Bb3+ 5. Kxb3 Rg3+ 6. Rd3 Rxd3+ 7. Kc2 Rd6 (7... Rd5 8. c8=Q Rc5+ 9. Qxc5+ Kxc5 10. Kc3 Kb5 11. Kb3) 8. c8=N+ Kc5 9. Nxd6 Kxd6 10. Kb3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1953.??.??"]
+[Round "?"]
+[White "Korolkov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1k6/p7/1PP2p2/8/R2Ppr2/3P1n2/4P2r/5K2 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c7+ Kb7 (1... Kc8 2. bxa7) 2. c8=Q+ Kxc8 3. bxa7 Nxd4+ 4. Kg1 Nf3+ 5. exf3 Rg2+ 6. Kf1 Rf2+ 7. Ke1 Re2+ 8. Kd1 Rd2+ 9. Kc1 Rc2+ 10. Kb1 *
+
+[Event "?"]
+[Site "?"]
+[Date "1935.??.??"]
+[Round "?"]
+[White "Farago"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "k7/r5p1/1K3Pp1/1P3pn1/5R2/1b5p/8/5R2 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,-69,29988,29989,29990,29991,29992,29993,29994] [#]} 1. Ra1 Rxa1 2. Rh4 Nf7 3. Rh8+ Nxh8 4. fxg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1963.??.??"]
+[Round "?"]
+[White "Korolkov&Mitrofanov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2r4R/1b1K3R/PPr5/8/8/8/6k1/6b1 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,80,24,24,0,522,535,535,535,719,790,818,974,1002,1016,1022,1022] [#]} 1. Rg7+ Kf1 (1... Kf2 2. axb7) 2. Rxg1+ Kxg1 3. Rh1+ Kxh1 4. axb7 Rh8 5. Kxc6 Kg2 6. Kb5 Kf3 7. Ka6 Ke4 8. Ka7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1934.??.??"]
+[Round "?"]
+[White "Lazar"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2k1K2n/1p1p4/1Pp3p1/1N2b1P1/8/p4PR1/2P5/8 w - - 0 1"]
+[PlyCount "41"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,32,-54,-99,-51,-29,-46,-390,-398,-431,-453,-486,200,484,582,679,675,673,694,688,707,707,711,839,851,851,851,924,966,966,972,992,992,1002,1012] [#]} 1. f4 a2 2. Ra3 a1=Q 3. Ra8+ Qxa8 4. Na7+ Kb8 5. fxe5 c5 6. c4 Qxa7 7. bxa7+ Kxa7 8. Kxd7 Nf7 9. e6 Ne5+ 10. Kd6 Nc6 11. Kxc5 Ne7 12. Kd6 Nf5+ 13. Kd7 Kb6 14. e7 Nxe7 15. Kxe7 Kc5 16. Kf6 Kxc4 17. Kxg6 b5 18. Kf5 b4 19. g6 b3 20. g7 b2 21. g8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1909.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/4P3/k7/5r2/N4p2/1K5R/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,261,76,215,64,64,485,485,505,505,505,505,505] [#]} 1. e7 Re4 2. Nc4+ Kb4 (2... Ka6 3. Rh6+ Ka7 4. Nd6 f2 5. Rf6) 3. Ne5 Rxe5 4. Rh4+ Kc5 5. Rh5 Rxh5 6. e8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1941.??.??"]
+[Round "?"]
+[White "Prevorovsky"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2N4R/2Pr4/3p4/8/8/8/6k1/K7 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Rg8+ Kh2 (1... Kf3 2. Rg7) 2. Rg7 Rxg7 3. Ne7 Rg1+ 4. Kb2 Rg2+ 5. Kb3 Rg3+ 6. Kb4 Rg4+ 7. Kb5 Rg5+ 8. Kb6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1948.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2k5/2p3K1/8/2Pr4/6N1/8/8/6R1 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,29,55,54,44,35,32,34,1032,29953,29958,29967,29968,29969,29970,29971,29972,29973,29974,29975,29974] [#]} 1. c6 Rc5 2. Ne5 Rxe5 3. Kf6 Re8 4. Kf7 Rh8 5. Rg8+ Rxg8 6. Kxg8 Kb8 7. Kf7 Ka7 8. Ke7 Ka6 9. Kd8 Kb6 10. Kd7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/4P3/4r3/3k4/8/6Rp/N7/7K w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,207,28,28,517,972,1002,1012,1032] [#]} 1. Nb4+ Kd6 2. Nc6 Kxc6 (2... Re1+ 3. Rg1 Re2 4. Rg8) 3. Rg6 Rxg6 4. e8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1K1Pk2N/4p3/1R1p4/5r2/8/8/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,102,200,139,130,233,267,283,283,278,283,822,24610] [#]} 1. Nf6 Rxf6 2. Kc7 Rf8 3. Rb6 Ra8 (3... d4 4. Rd6 e5 5. d8=Q+ Rxd8 6. Rxd8 Ke6 7. Kc6) 4. Ra6 Rh8 5. Rd6 Rd8 6. Rxe6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1970.??.??"]
+[Round "?"]
+[White "Lamosh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7K/1p6/1P1P4/2P4R/2k1r2p/8/N1P3P1/r7 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,-6,-67,-116,-116,-136,-136,-115,366,380,382,401,404] [#]} 1. d7 Rd4 2. c6 bxc6 3. b7 Rb1 4. Nb4 Rxb4 5. Rc5+ Kxc5 6. c3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1882.??.??"]
+[Round "?"]
+[White "Koster"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p7/1pP3pp/n6k/7r/8/1P2KN2/R7 w - - 0 1"]
+[PlyCount "27"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. c7 Rc4 2. Rh1+ Kg5 3. Rc1 Rxc1 4. Ne4+ Kf4 5. Nc3 Rc2+ 6. Kd1 Nc4 7. c8=Q Ne3+ 8. Ke1 Ng2+ 9. Kf1 Ne3+ 10. Kg1 Rc1+ 11. Kh2 Ng4+ 12. Kh3 Rh1+ 13. Kg2 Rh2+ 14. Kg1 *
+
+[Event "?"]
+[Site "?"]
+[Date "1909.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1K2b3/6P1/1k6/7R/8/N1r5/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,116,29,0,32,2,0,0,485,485,485,485,485,485,485] [#]} 1. g7 Rg2 2. Nc3+ Kc5 3. Ne4+ Kd5 4. Ng5 Rxg5 5. Rh5 Rxh5 6. g8=Q+ Ke5 7. Qf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1929.??.??"]
+[Round "?"]
+[White "Eisenstatt"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2b4K/8/2pp1P1k/3N4/7p/8/3R4/4r3 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,260,260,271,286,308,328,336,346,345,353] [#]} 1. f7 Rf1 2. Nf6 Rxf6 3. Rxd6 Be6 4. Rxe6 Rxe6 5. f8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Blendford"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3k4/3p3p/7B/4RP1K/P1p5/8/5p2/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,0,410,57,555,617,688,706,804,1322,1350,1369,1392] [#]} 1. Bg5+ Kc7 2. Rc5+ Kd6 3. Bh6 Ke7 (3... Kxc5 4. Be3+ Kb4 5. Bxf2) 4. f6+ Ke6 5. Rf5 Kxf5 6. f7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1962.??.??"]
+[Round "?"]
+[White "Kakovin"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "K7/8/p7/8/3p4/1p1PR3/3k4/3B4 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,587,605,615,628,738,768,768,918,1015,1015,1015,1016,1022,29944,29941,29942,29955,29958,29965,29966] [#]} 1. Re2+ Kxd1 2. Rb2 Kc1 3. Rxb3 Kc2 4. Ra3 Kb2 5. Rxa6 Kc3 6. Ra3+ Kb2 7. Kb7 Kxa3 8. Kc6 Kb4 9. Kd5 Kc3 10. Ke4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1929.??.??"]
+[Round "?"]
+[White "Khaga"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/4K2k/7P/4R3/5B2/1P6/p1n5/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Ra5 a1=Q 2. Rxa1 Nxa1 3. b4 Nc2 4. b5 Na3 5. b6 Nc4 6. b7 Na5 7. b8=N *
+
+[Event "?"]
+[Site "?"]
+[Date "1943.??.??"]
+[Round "?"]
+[White "Prokop"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1RPk4/K7/8/2p5/B2n4/p7/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,507,507,507,527,527,527,755,614] [#]} 1. Bb2 Nxb2 2. Ka7 a1=Q+ (2... Kc8 3. Kb6 Na4+ (3... Kd7 4. Ra7) 4. Kc6) 3. Kb8 Kd6 4. c8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1970.??.??"]
+[Round "?"]
+[White "Iakimchik"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/7k/3K1Pp1/6pP/8/8/3bp2B/2R5 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,23,94,94,114,114,114,0,0,591,601,603,624,669,669,666,712,722,732,742,870,952,962,962,992,24202] [#]} 1. Rc7+ Kh6 2. Rc8 Kh7 (2... gxh5 3. Bg3 Bf4+ 4. Kd5) 3. Bg3 Bf4+ 4. Ke7 Bxg3 5. Rh8+ Kxh8 6. hxg6 e1=Q+ 7. Kf7 Qe4 8. g7+ Kh7 9. g8=Q+ Kh6 10. Qh8+ Qh7+ 11. Qg7+ Qxg7+ 12. fxg7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1961.??.??"]
+[Round "?"]
+[White "Kasparian"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/1k5B/2R5/8/4Kn2/7p/6P1/1n6 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,251,247,245,0,0,444,444,500,497,641,1016,1016,1016,1247,1312,1312,1312,19969] [#]} 1. Rc1 Nc3+ 2. Rxc3 h2 3. Rc1 Ne2 4. Rh1 Ng3+ 5. Kf3 Nxh1 6. Be4+ Kc7 7. g4 Kd6 8. Kg2 Ke5 9. Bf3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1970.??.??"]
+[Round "?"]
+[White "Afanasyev&Dvizov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1b6/4p3/3P4/7R/2B1b1k1/8/7K/8 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,33,497,682,692,692,712,712,722,722,722] [#]} 1. Be2+ Bf3 2. Bxf3+ Kxf3 3. Rf5+ Ke4 (3... Ke3 4. Re5+ Kd4 5. dxe7) 4. Rf4+ Kxf4 5. dxe7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1943.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/5K2/1PR5/8/Bk6/3p4/1r6/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. b7 Ka5 (1... Ka3 2. Bb3 Rxb3 3. Rc3) 2. Bb5 Rxb5 3. Rc5 Rxc5 4. b8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1948.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3p3k/4P1R1/1p6/8/2K5/1B6/7r w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,216,43,417,409,419,419,418,505,505,505] [#]} 1. exd7 Rd1 2. Rh6+ Kxh6 (2... Kg8 3. Rh8+ Kxh8 4. Kc2+) 3. Bc1+ Rxc1+ (3... Kg6 4. Bd2) 4. Kd2 Rc4 5. d8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1949.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/7K/1P1k4/6p1/1r6/5BR1/8 w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,5,242,352,377,379,384,389] [#]} 1. b6 Rb2 2. Bd4 Rxg2 3. b7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Votava"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/7K/5p1p/P6R/1k6/4r3/2B5/8 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,15,170,173,167,0,409,415,415,421,421,421,509,517,527,527,527,527] [#]} 1. a6 Ra3 2. Ba4 Kxa4 3. Rh3 Ra2 4. Rh2 Ra1 5. Rh1 Ra3 6. Rb1 Re3 7. Ra1+ Kb5 8. a7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Votava"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "7k/1P3p2/8/1r6/1B6/2K5/8/6R1 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,508,537,632,730,805,805,805,805] [#]} 1. Rh1+ Kg8 (1... Kg7 2. Rb1 Kg6 3. Bd6 Rxb1 4. Bb4) 2. Be7 Kg7 3. Rb1 Rxb1 4. Bb4 *
+
+[Event "?"]
+[Site "?"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p1B1pp2/2P5/6R1/8/2r5/2k5/7K w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Rg2+ Kb1 (1... Kd1 2. Rd2+ Kxd2 (2... Kc1 3. Bf4) (2... Ke1 3. Ba5) 3. Ba5) 2. Rb2+ Kc1 3. Bf4+ Kxb2 4. Be5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1959.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4k3/8/2P5/8/p1r5/8/K2B1R2/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,329,380,485,485,485,485,485,485] [#]} 1. Rf6 Rc2+ 2. Kb1 Rxd2 3. Rf8+ Kxf8 4. c7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1927.??.??"]
+[Round "?"]
+[White "Klausen"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "K5R1/7p/1B3PP1/1k6/8/8/6r1/7r w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,197,41,42,36,40,-2,489,489] [#]} 1. f7 Rf1 2. gxh7 Rh2 3. Bf2 Rfxf2 4. Rg2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1952.??.??"]
+[Round "?"]
+[White "Prokesh"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1rBr4/8/1PP3R1/8/8/7p/8/2k4K w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,152,459,545,795,833,825,962,874] [#]} 1. Bg4 Rxb6 2. c7 Rbb8 3. Rc6+ Kd2 (3... Kb2 4. Rb6+) 4. Rd6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1954.??.??"]
+[Round "?"]
+[White "Votava"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/6P1/1k6/8/1B6/1P6/3R2K1/1r5r w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,21,46,0,0,0,0,485,0,0,505,505,505,505,485,495,505,505,505,505,505,505,505,505] [#]} 1. Kg3 Rxb3+ 2. Kg2 Rbb1 3. Ba5+ Ka6 (3... Kxa5 4. Ra2+ Kb4 5. Rb2+ Rxb2+ 6. Kxh1 Rb1+ 7. Kg2 Rb2+ 8. Kf3 Rb3+ 9. Kf4) (3... Kc6 4. Rc2+ (4. Bb6) 4... Kd7 5. Bb6) 4. Bb6 Kxb6 5. Rb2+ Rxb2+ 6. Kxh1 Rb1+ 7. Kg2 Rb2+ 8. Kf3 Rb3+ 9. Kf4 Rb4+ 10. Kf5 Rb5+ 11. Kf6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1975.??.??"]
+[Round "?"]
+[White "Kasparian&Iakimchik"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/4p3/3n4/P7/8/3R1RBr/KP2r1k1/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. a6 Nc4 (1... Nb5 2. Rf5 Na7 3. Rg5) 2. Kb3 Nd2+ 3. Rxd2 Rxd2 (3... Kxf3 4. a7 Rxd2 5. Bb8) 4. a7 Rd8 5. Bb8 Rxf3+ (5... Rhh8 6. Rf8) 6. Kc2 *
+
+[Event "?"]
+[Site "?"]
+[Date "1912.??.??"]
+[Round "?"]
+[White "Rink"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/3p3B/1n2P2r/8/8/7k/R4P2/7K w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,96,41,33,44,31,470,485,464,613,626] [#]} 1. e7 Kg4+ 2. Kg2 Re6 3. Re2 Rxe2 4. Be4 Rxe4 5. f3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1931.??.??"]
+[Round "?"]
+[White "Khashek"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "n7/5Rp1/p4P2/P5B1/4r3/6k1/8/7K w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,88,69,628,683,696,717,748,748,748,713,798,809] [#]} 1. Bf4+ Rxf4 (1... Kh3 2. Re7 Rxf4 3. Re3+ Kh4 4. fxg7 Rg4 5. Re4) 2. fxg7 Rg4 3. Rf1 Rh4+ 4. Kg1 Rg4 5. Rf2 Kh3+ 6. Kh1 *
+
+[Event "?"]
+[Site "?"]
+[Date "1956.??.??"]
+[Round "?"]
+[White "Gorgiev"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/2P4K/3r4/4k1B1/2p4R/5n2/8 w - - 0 1"]
+[PlyCount "19"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,19,222,263,268,265,265,265,265,497,497,497,535,641,1252,1302,29955,29956,29957,29958,29959,29960] [#]} 1. Bf3+ Kd4 2. Rh4+ Ne4 3. Rxe4+ Kd3 4. Rc4 Rd6+ (4... Rd8 5. c7 Rc8 6. Bg4) 5. Kg5 Kxc4 (5... Rd8 6. Be2+ Kxe2 7. Rxc3 Kd2 8. Rc5) 6. c7 Rc6 7. Bxc6 c2 8. Bb5+ Kb3 9. c8=Q Kb2 10. Qh8+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1962.??.??"]
+[Round "?"]
+[White "Herbstmann"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/7p/8/1R1K4/8/1B3k2/1n5P/1r6 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,283,266,326,323,355,352,326,386,1252,1312,1322,22235,29949,29952] [#]} 1. Bc2 Nd1 2. Rxb1 Nc3+ 3. Ke6 Nxb1 4. Bxb1 Kg2 5. h4 Kg3 6. h5 Kg4 7. Bg6 *
+
+[Event "?"]
+[Site "?"]
+[Date "1909.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6b1/8/3P4/1r4p1/1k6/4R3/4K3/1B6 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Re4+ Ka5 (1... Kc5 2. d7 Rb8 3. Re8) 2. d7 Rd5 3. Re5 Rxe5+ 4. Be4 Rxe4+ 5. Kd3 Bh7 6. d8=Q+ Ka6 7. Qd6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1910.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1b6/8/p3P2p/7k/8/1B5K/1P1r4/R7 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,44,12,12,12,7,385,463,491,496,525] [#]} 1. Ra5+ Kg6 2. e7 Re2 3. Be6 Rxe6 4. Rxa6 Rxa6 5. e8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "Vidmar"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/2P1kpp1/1R2p3/1b3PP1/4B1K1/8/1r6 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,99,107,120,336,349,367,367,374,374,374] [#]} 1. f5+ gxf5 2. gxf5+ Kd6 (2... Kxf5 3. c7 Be1+ 4. Kf3 Rxb5 5. c8=Q+) 3. Rxb4 Rxb4 4. Bc5+ Kxc5 5. c7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1935.??.??"]
+[Round "?"]
+[White "Giginger"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "r7/P1P5/b1p1k3/8/p3K3/8/8/3B3R w - - 0 1"]
+[PlyCount "5"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,5,182,304,399,399,425,425] [#]} 1. Rh8 Rxh8 (1... Rxa7 2. Rh6+ Kd7 3. Rh7+ Kd6 4. c8=N+) 2. c8=Q+ Bxc8 (2... Rxc8 3. Bg4+) 3. a8=Q *
+
+[Event "?"]
+[Site "?"]
+[Date "1938.??.??"]
+[Round "?"]
+[White "Smyslov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1r3k2/5p2/p1P1b1p1/2p5/2p1PP2/8/P7/2KR1B2 w - - 0 1"]
+[PlyCount "21"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,21,-11,36,21,18,25,9,11,-14,0,0,0,0,0,604,169,765,832,832,906,912,982,1002] [#]} 1. f5 gxf5 2. Bh3 Re8 (2... Rb6 3. exf5 Rxc6 4. fxe6 fxe6 5. Kc2) 3. exf5 Bc8 4. f6 Bxh3 5. c7 c3 (5... Kg8 6. Rd8 Rf8 7. Kd2) 6. Rd8 Bf5 7. a4 a5 8. Kd1 c2+ 9. Kc1 c4 10. Kd2 c3+ 11. Kc1 *
+
+[Event "?"]
+[Site "?"]
+[Date "1939.??.??"]
+[Round "?"]
+[White "Fritz"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "R1B5/P6K/6r1/8/4b3/8/8/k7 w - - 0 1"]
+[PlyCount "15"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Bb7 Bxb7 (1... Rc6+ 2. Kg8 Bd5+ 3. Kh8 Rh6+ 4. Kg7 Bxb7 5. Rb8 Rb6 6. Kf8) 2. Rb8 Rb6 3. Kh8 Rh6+ 4. Kg7 Rb6 5. Kf8 Rf6+ 6. Ke7 Rb6 7. Kd8 Rd6+ 8. Kc7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1941.??.??"]
+[Round "?"]
+[White "Sevitov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6B1/5P2/7R/1k6/8/8/1b3r2/3K4 w - - 0 1"]
+[PlyCount "23"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,23,19,20,20,27,27,26,30,30,30,31,31,507,497,497,497,497,497,497,497,497,497,497,827,827] [#]} 1. Rh2 Rf1+ 2. Ke2 Rf4 3. Rh4 Rf6 4. Rh5+ Ka4 5. Rh6 Rf5 6. Rh4+ Ka3 7. Rh5 Rf6 8. Rh6 Rf5 9. Ra6+ Kb4 10. Rb6+ Kc3 11. Rb8 Ba3 12. Rb3+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1948.??.??"]
+[Round "?"]
+[White "Guliaev"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5B2/Kpp5/4P3/k7/P5r1/1b2p3/8/5R2 w - - 0 1"]
+[PlyCount "17"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,17,15,-174,-39,-10,-37,0,0,0,0,0,0,0,0,0,507,516,516,552] [#]} 1. e7 Re4 2. Rf4 Re6 3. Rf5+ Kxa4 4. Rf6 Re5 (4... Rxe7 5. Bxe7 e2 6. Rf4+ Kb5 7. Rb4+) 5. Rf4+ Bc4 6. Rxc4+ Kb3 7. Rc3+ Ka4 8. Ra3+ Kb5 9. Rd3 *
+
+[Event "?"]
+[Site "?"]
+[Date "1949.??.??"]
+[Round "?"]
+[White "M.Botvinnik"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "5B2/K7/4P3/k7/2r5/1b2p3/8/2R5 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,-14,-36,-41,-31,-26,0,797,807,29989,29990] [#]} 1. e7 Re4 2. Rc5+ Ka4 3. Rf5 e2 (3... Re6 4. Rf6 Re5 5. Rf4+ Ka5 6. Rf5) 4. Rf4 e1=Q 5. e8=Q+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1950.??.??"]
+[Round "?"]
+[White "Voja"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "1r2R2K/1k1B4/3P4/8/5p2/8/8/2b5 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,313,357,343,507,507,507,527,527,527,537,537,527,742,1032] [#]} 1. Bc8+ Rxc8 (1... Ka7 2. d7 Bb2+ 3. Kg8 Bf6 4. Kf7) (1... Kb6 2. d7 Bb2+ 3. Kg8 Bf6 4. Re6+) 2. d7 Rd8 3. Rxd8 Bb2+ 4. Kg8 Kc7 5. Rb8 Bf6 6. Kf7 Bd8 7. Ke8 *
+
+[Event "?"]
+[Site "?"]
+[Date "1951.??.??"]
+[Round "?"]
+[White "Votava"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/p7/4r2P/1k4B1/8/b7/8/K5R1 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. h7 Bb2+ 2. Kxb2 Re2+ 3. Kb3 Rh2 4. Bh6 Rh3+ 5. Rg3 Rxh6 6. Rg5+ Kc6 7. Rg6+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1953.??.??"]
+[Round "?"]
+[White "Lindner"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2k5/2p3p1/P1P5/5P1B/5P2/b2K3p/1R6/r7 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,56,-9,-9,4,432,587,593,631,689,848,2204,2487,29979,29984] [#]} 1. Rb1 Rxb1 2. a7 Rb3+ (2... Rb8 3. f6 Ra8 4. fxg7) 3. Ke2 Rb2+ 4. Kf1 Rb1+ 5. Bd1 Rb8 6. f6 gxf6 7. Bg4+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1958.??.??"]
+[Round "?"]
+[White "Lesnik"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "2rk1b2/R7/3P4/8/8/6KB/8/8 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,7,992,1262,1272,1282,1282,23743,24712,29958] [#]} 1. Rd7+ Ke8 2. Re7+ Kd8 3. Re8+ Kxe8 4. d7+ *
+
+[Event "?"]
+[Site "?"]
+[Date "1958.??.??"]
+[Round "?"]
+[White "Shtenicka"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "4R3/4P3/2r1k1B1/1b6/8/4PK2/8/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,11,53,421,556,570,577,597,594,665,786,814,1016,29948] [#]} 1. Bf5+ Kxf5 (1... Kf7 2. Rb8 Rc5 3. Rxb5 Rxb5 4. Bd7 Re5 5. e8=Q+ Rxe8 6. Bxe8+ Kxe8 7. Ke4 Ke7 8. Ke5) 2. Rb8 Rf6 (2... Re6 3. Rxb5+ Kf6 4. Rb6 Kxe7 5. Rxe6+ Kxe6 6. e4) 3. Rxb5+ Ke6+ 4. Rf5 Rxf5+ (4... Kxe7 5. Rxf6 Kxf6 6. Kf4) 5. Kg4 Kxe7 6. Kxf5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1967.??.??"]
+[Round "?"]
+[White "Badai"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "3B4/1b6/3P4/7K/6p1/6R1/2k2r2/8 w - - 0 1"]
+[PlyCount "13"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,13,15,1,1,1,1,10,4,245,245,253,253,252,258,266] [#]} 1. d7 Rd2 2. Rc3+ Kd1 3. Rc1+ Ke2 (3... Kxc1 4. Bg5) 4. Re1+ Kf3 (4... Kxe1 5. Ba5) 5. Re3+ Kg2 6. Re2+ Rxe2 7. Bg5 *
+
+[Event "?"]
+[Site "?"]
+[Date "1974.??.??"]
+[Round "?"]
+[White "Aitov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/5r2/B2Kbk2/1R6/4P3/8/8/8 w - - 0 1"]
+[PlyCount "11"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. e5+ Kf5 2. Bc8 Bxc8 3. e6+ Kg6 4. Rg5+ Kf6 5. Rf5+ Kxf5 6. exf7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1970.??.??"]
+[Round "?"]
+[White "Lazar"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "8/8/1p6/rNP4K/1N6/8/7k/6R1 w - - 0 1"]
+[PlyCount "7"]
+[SourceVersionDate "2023.06.21"]
+
+{[#]} 1. Rg5 Rxb5 2. c6 Rxb4 3. Rc5 bxc5 4. c7 *
+
+[Event "?"]
+[Site "?"]
+[Date "1911.??.??"]
+[Round "?"]
+[White "V&M Platov"]
+[Black "?"]
+[Result "*"]
+[Annotator "Rook and Minor Pieces"]
+[SetUp "1"]
+[FEN "6k1/1p1B4/3P1rp1/8/8/2pp4/5BR1/6K1 w - - 0 1"]
+[PlyCount "9"]
+[SourceVersionDate "2023.06.21"]
+
+{[%evp 0,9,157,173,173,173,333,333,344,380,398,400] [#]} 1. Be6+ Rxe6 2. d7 Rd6 3. Rxg6+ Rxg6+ 4. Bg3 Rxg3+ 5. Kf2 *
+
