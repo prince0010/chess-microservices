@@ -1241,7 +1241,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     lessonFactor: 0.28,
     story: 'Endgame',
     level: 'Level 1',
-    quantityToUnlockNext: 20, // 20/70
+    quantityToUnlockNext: 20, // 20/69
     levelFrontend: 'Level 1',
     showHint: false,
     pointsPerLesson: 1,
