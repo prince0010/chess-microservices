@@ -16,12 +16,18 @@ import { Auth } from './entities/auth.entity';
 
 import {
   AddStudentsToTeacherDto,
+  FindAllStudentsByTeacherDto,
   FindAllTeachersDto,
   RegisterAuthTeacherDto,
   UpdateAuthTeacherDto,
 } from './dto';
 import { SecurityRoles } from 'src/enum';
-import { JwtPayload, IOneTeacher, ICountAndListTeachers } from './interfaces';
+import {
+  JwtPayload,
+  IOneTeacher,
+  ICountAndListTeachers,
+  ICountAndListStudentsByTeacher,
+} from './interfaces';
 
 @Injectable()
 export class AuthTeacherService {
@@ -271,6 +277,58 @@ export class AuthTeacherService {
       await this.authTeacherRepository.save(teacherEntity);
 
       return `Students of teacher ${teacherEntity.name} updated successfully`;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async findStudents(
+    findAllStudentsByTeacherDto: FindAllStudentsByTeacherDto,
+  ): Promise<ICountAndListStudentsByTeacher> {
+    const {
+      teacherUid,
+      limit = 10,
+      page = 1,
+      name = null,
+      username = null,
+    } = findAllStudentsByTeacherDto;
+
+    const offset = (page - 1) * limit;
+
+    const queryBuilder = this.authRepository
+      .createQueryBuilder('auth')
+      .leftJoinAndSelect('auth.teachers', 'teacher')
+      .where('teacher.uid = :teacherUid', { teacherUid })
+      .andWhere('auth.roles LIKE :role', { role: `%${SecurityRoles.PLAYER}%` })
+      .take(limit)
+      .skip(offset)
+      .orderBy('auth.name', 'ASC');
+
+    if (name) {
+      queryBuilder.andWhere('auth.name LIKE :name', { name: `%${name}%` });
+    }
+    if (username) {
+      queryBuilder.andWhere('auth.username LIKE :username', {
+        username: `%${username}%`,
+      });
+    }
+
+    try {
+      const [students, total] = await queryBuilder.getManyAndCount();
+
+      const transformedStudents = students.map((student) => {
+        const { password, ...restStudent } = student;
+        return restStudent;
+      });
+
+      return {
+        total,
+        page,
+        students: transformedStudents,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,

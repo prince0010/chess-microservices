@@ -1,3 +1,5 @@
+import { IOneUser } from './user.interface';
+
 export interface ICountAndListTeachers {
   total: number;
   page: number;
@@ -11,4 +13,10 @@ export interface IOneTeacher {
   gender: string;
   birthday: Date | null;
   isActive: boolean;
+}
+
+export interface ICountAndListStudentsByTeacher {
+  total: number;
+  page: number;
+  students: IOneUser[];
 }
