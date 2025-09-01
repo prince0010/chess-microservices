@@ -16,17 +16,20 @@ async function bootstrap() {
     app.enableCors({
       origin: [
         'https://your-production-domain.com',
-        'http://localhost:4200', // TODO: remove me when domain name is ready and production is ready
-        'https://test-we-chess.netlify.app', // TODO: remove me when domain name is ready and production is ready
+        'http://localhost:4200', // TODO: remove me when domain name and production is ready
+        'https://test-we-chess.netlify.app', // TODO: remove me when domain name and production is ready
       ],
       credentials: true,
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       optionsSuccessStatus: 204,
     });
   } else {
-    // development
     app.enableCors({
-      origin: ['http://localhost:4200', 'https://test-we-chess.netlify.app'],
+      origin: [
+        'http://localhost:4200',
+        'http://localhost:3000',
+        'https://test-we-chess.netlify.app',
+      ],
       credentials: true,
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
       optionsSuccessStatus: 204,

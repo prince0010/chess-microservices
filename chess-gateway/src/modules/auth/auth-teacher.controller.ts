@@ -40,16 +40,6 @@ export class AuthTeacherController {
       );
   }
 
-  @UseGuards(AdminGuard)
-  @Get('/')
-  findAllTeachers(@Query() findAllTeachersDto: FindAllTeachersDto) {
-    return this.client.send('auth.findAll.teachers', findAllTeachersDto).pipe(
-      catchError((err) => {
-        throw new RpcException(err);
-      }),
-    );
-  }
-
   @UseGuards(TeacherGuard)
   @Get('/students')
   getAllStudentsByTeacher(
@@ -62,6 +52,16 @@ export class AuthTeacherController {
     };
 
     return this.client.send('auth.findStudents.teacher', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AdminGuard)
+  @Get('/')
+  findAllTeachers(@Query() findAllTeachersDto: FindAllTeachersDto) {
+    return this.client.send('auth.findAll.teachers', findAllTeachersDto).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
