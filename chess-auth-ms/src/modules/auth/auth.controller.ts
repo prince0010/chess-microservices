@@ -3,11 +3,13 @@ import { MessagePattern, Payload } from '@nestjs/microservices';
 
 import { AuthService } from './auth.service';
 
-import { RegisterAuthDto } from './dto/register-auth.dto';
-import { LoginAuthDto } from './dto/login-auth.dto';
-import { UpdateUserPointsDto } from './dto/update-user-points.dto';
-import { UpdateAuthDto } from './dto/update-auth.dto';
-import { FindAllUsersDto } from './dto/find-all-users.dto';
+import {
+  RegisterAuthDto,
+  LoginAuthDto,
+  UpdateUserPointsDto,
+  UpdateAuthDto,
+  FindAllUsersDto,
+} from './dto';
 import { UpdatePandaUserPointsDto } from '../panda/dto/update-panda-user-points.dto';
 import { IUserUidsArray } from './interfaces';
 

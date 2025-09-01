@@ -1,16 +1,19 @@
 import {
   Column,
   Entity,
+  ManyToMany,
   OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+
+import { AuthTeacher } from './auth-teacher.entity';
 import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
 import { AuthStoryUnlocked } from './auth-story-unlocked.entity';
 
 import { Gender } from 'src/enum';
 
-@Entity('auth')
+@Entity('auth') // only for players and admin
 export class Auth {
   @PrimaryGeneratedColumn()
   uid: number;
@@ -65,4 +68,7 @@ export class Auth {
     (authStoryUnlocked) => authStoryUnlocked.user,
   )
   storiesUnlocked: AuthStoryUnlocked[];
+
+  @ManyToMany(() => AuthTeacher, (authTeacher) => authTeacher.students)
+  teachers: AuthTeacher[];
 }
