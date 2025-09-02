@@ -358,12 +358,14 @@ export class LessonParentService {
       page = 1,
       id = null,
       story = null,
-      userUid,
+      userUid: userAuthenticatedUid,
+      studentUid = null,
       isTest = null,
       onlyLessons = null,
     } = findAllLessonParentDto;
 
     const offset = (page - 1) * limit;
+    const userUid = studentUid ?? userAuthenticatedUid;
 
     const findOptions: FindManyOptions<LessonParent> = {
       take: limit,

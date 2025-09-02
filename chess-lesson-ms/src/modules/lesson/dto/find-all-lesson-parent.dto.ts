@@ -17,6 +17,12 @@ export class FindAllLessonParentDto {
   userUid: number;
 
   @IsOptional()
+  @IsNumber()
+  @IsPositive()
+  @Type(() => Number)
+  studentUid?: number; // when teacher see student progress on web system panel
+
+  @IsOptional()
   @IsPositive()
   @Type(() => Number) // converts query parameter string to number here
   limit?: number;

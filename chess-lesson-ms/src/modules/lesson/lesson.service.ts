@@ -56,13 +56,15 @@ export class LessonService {
     findAllHistoryRecordLessonDto: FindAllHistoryRecordLessonDto,
   ): Promise<ILessonListRecordByUser> {
     const {
-      userUid,
+      userUid: userAuthenticatedUid,
       limit = 10,
       page = 1,
       lessonParentId,
+      studentUid = null,
     } = findAllHistoryRecordLessonDto;
 
     const offset = (page - 1) * limit;
+    const userUid = studentUid ?? userAuthenticatedUid;
 
     try {
       // STEP 0: verify lessonParent exists

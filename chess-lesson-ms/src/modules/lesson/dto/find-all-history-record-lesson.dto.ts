@@ -7,6 +7,12 @@ export class FindAllHistoryRecordLessonDto {
   @Type(() => Number)
   userUid: number;
 
+  @IsOptional()
+  @IsNumber()
+  @IsPositive()
+  @Type(() => Number)
+  studentUid?: number; // when teacher see student progress on web system panel
+
   @IsNumber()
   @IsPositive()
   @Type(() => Number)
