@@ -1,5 +1,4 @@
 export * from './add-students-to-teacher.dto';
-export * from './find-all-students-by-teacher.dto';
 export * from './find-all-teachers.dto';
 export * from './find-all-users.dto';
 export * from './login-auth.dto';

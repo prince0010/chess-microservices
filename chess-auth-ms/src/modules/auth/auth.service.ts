@@ -299,6 +299,7 @@ export class AuthService {
     findAllUsersDto: FindAllUsersDto,
   ): Promise<ICountAndListUsers> {
     const {
+      user,
       limit = 10,
       page = 1,
       name = null,
@@ -309,10 +310,12 @@ export class AuthService {
     } = findAllUsersDto;
 
     const offset = (page - 1) * limit;
+    const isTeacher = user.roles.includes(SecurityRoles.TEACHER);
 
     const findOptions: FindManyOptions<Auth> = {
       take: limit,
       skip: offset,
+      relations: { teachers: true },
       order: {
         name: 'ASC',
       },
@@ -322,6 +325,9 @@ export class AuthService {
       roles: Like(`%${SecurityRoles.PLAYER}%`),
     };
 
+    if (isTeacher) {
+      whereConditions.teachers = { uid: user.uid };
+    }
     if (name) {
       whereConditions.name = Like(`%${name}%`);
     }

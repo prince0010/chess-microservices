@@ -89,8 +89,15 @@ export class AuthController {
 
   @UseGuards(TeacherGuard)
   @Get('/')
-  findAllUsers(@Query() findAllUsersDto: FindAllUsersDto) {
-    return this.client.send('auth.findAll.users', findAllUsersDto).pipe(
+  findAllUsers(
+    @Query() findAllUsersDto: FindAllUsersDto,
+    @User() user: ICurrentUser,
+  ) {
+    const payload = {
+      ...findAllUsersDto,
+      user,
+    };
+    return this.client.send('auth.findAll.users', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

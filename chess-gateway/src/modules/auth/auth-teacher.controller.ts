@@ -22,7 +22,6 @@ import { RegisterAuthTeacherDto } from './dto/register-auth-teacher.dto';
 import { FindAllTeachersDto } from './dto/find-all-teachers.dto';
 import { UpdateAuthTeacherDto } from './dto/update-auth-teacher.dto';
 import { AddStudentsToTeacherDto } from './dto/add-students-to-teacher.dto';
-import { FindAllStudentsByTeacherDto } from './dto/find-all-students-by-teacher.dto';
 
 @Controller('auth-teacher')
 export class AuthTeacherController {
@@ -38,24 +37,6 @@ export class AuthTeacherController {
           throw new RpcException(err);
         }),
       );
-  }
-
-  @UseGuards(TeacherGuard)
-  @Get('/students')
-  getAllStudentsByTeacher(
-    @Query() findAllStudentsByTeacherDto: FindAllStudentsByTeacherDto,
-    @Req() req: any,
-  ) {
-    const payload = {
-      ...findAllStudentsByTeacherDto,
-      teacherUid: +req.user.uid,
-    };
-
-    return this.client.send('auth.findStudents.teacher', payload).pipe(
-      catchError((err) => {
-        throw new RpcException(err);
-      }),
-    );
   }
 
   @UseGuards(AdminGuard)

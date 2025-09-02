@@ -8,7 +8,6 @@ import {
   UpdateAuthTeacherDto,
   FindAllTeachersDto,
   AddStudentsToTeacherDto,
-  FindAllStudentsByTeacherDto,
 } from './dto';
 
 @Controller()
@@ -39,12 +38,5 @@ export class AuthTeacherController {
   @MessagePattern('auth.addStudents.teacher')
   addStudents(@Payload() addStudentsToTeacherDto: AddStudentsToTeacherDto) {
     return this.authTeacherService.addStudents(addStudentsToTeacherDto);
-  }
-
-  @MessagePattern('auth.findStudents.teacher')
-  findListStudentsByTeacher(
-    @Payload() findAllStudentsByTeacherDto: FindAllStudentsByTeacherDto,
-  ) {
-    return this.authTeacherService.findStudents(findAllStudentsByTeacherDto);
   }
 }

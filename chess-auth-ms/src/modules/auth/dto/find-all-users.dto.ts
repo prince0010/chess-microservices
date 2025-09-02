@@ -2,14 +2,19 @@ import { Type } from 'class-transformer';
 import {
   IsEnum,
   IsIn,
+  IsNotEmpty,
   IsOptional,
   IsPositive,
   IsString,
   Min,
 } from 'class-validator';
 import { SecurityRoles } from 'src/enum';
+import { ICurrentUser } from '../interfaces';
 
 export class FindAllUsersDto {
+  @IsNotEmpty()
+  user: ICurrentUser;
+
   @IsOptional()
   @IsPositive()
   @Type(() => Number) // converts query parameter string to number here

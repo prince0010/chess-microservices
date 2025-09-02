@@ -34,3 +34,14 @@ export interface ISubtractPointsUser {
 export interface IUserUidsArray {
   uids: number[];
 }
+
+// this interface is from auth validation in gateway
+export interface ICurrentUser {
+  uid: number;
+  name: string;
+  username: string; // or email, it is the same
+  country: string;
+  roles: string[];
+  age?: number;
+  gender?: string;
+}
