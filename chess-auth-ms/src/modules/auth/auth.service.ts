@@ -276,7 +276,10 @@ export class AuthService {
 
   async findOne(uid: number): Promise<IOneUser> {
     try {
-      const user = await this.authRepository.findOneBy({ uid });
+      const user = await this.authRepository.findOne({
+        where: { uid },
+        relations: { teachers: true },
+      });
       if (!user) {
         throw new RpcException({
           status: 401,
