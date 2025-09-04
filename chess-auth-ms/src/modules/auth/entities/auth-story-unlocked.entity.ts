@@ -15,7 +15,7 @@ export class AuthStoryUnlocked {
   id: number;
 
   @Column({ length: 32, nullable: false })
-  story: string; // Puzzle | Endgame | Botgame
+  story: string; // Puzzle | Endgame
 
   @ManyToOne(() => Auth, (auth) => auth.storiesUnlocked, { nullable: false })
   user: Auth;

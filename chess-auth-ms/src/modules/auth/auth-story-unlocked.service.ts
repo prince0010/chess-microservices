@@ -26,7 +26,6 @@ export class AuthStoryUnlockedService {
       const availableStories = [
         LessonStoryName.PUZZLE,
         LessonStoryName.ENDGAME,
-        LessonStoryName.BOTGAME,
       ];
       const storiesResult: StoryUnlocked[] = [
         {

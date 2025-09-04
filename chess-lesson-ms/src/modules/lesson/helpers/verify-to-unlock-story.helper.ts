@@ -31,6 +31,4 @@ export const verifyToUnlockNextStory = async (
       client.emit('auth.unlock.story', payloadToUnlockEndgameStory),
     );
   }
-
-  // changeMe! add here second validation to unlock Botgame in future
 };

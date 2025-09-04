@@ -36,5 +36,4 @@ export enum LessonStoryName { // this enum separate the complexity of lessons on
   EDUCATION = 'Education',
   PUZZLE = 'Puzzle',
   ENDGAME = 'Endgame',
-  BOTGAME = 'Botgame',
 }
