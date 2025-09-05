@@ -26,4 +26,9 @@ export class AuthRankingController {
   rankingByAnimalBots(@Payload() userUid: number) {
     return this.authRankingService.rankingByAnimalBots(userUid);
   }
+
+  @MessagePattern('auth.ranking.totalScore')
+  rankingByTotalScore(@Payload() userUid: number) {
+    return this.authRankingService.rankingByTotalScore(userUid);
+  }
 }

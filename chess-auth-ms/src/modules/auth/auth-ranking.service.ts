@@ -223,4 +223,55 @@ export class AuthRankingService {
       });
     }
   }
+
+  public async rankingByTotalScore(userUid: number): Promise<IRankingResponse> {
+    try {
+      // verify if user is on table history
+      const userRow = await this.authRepository.findOneBy({ uid: userUid });
+      if (!userRow) {
+        throw new BadRequestException(`User with UID: ${userUid} not found.`);
+      }
+
+      const currentUserScore = userRow.totalScore;
+
+      // Step 1: Get current user's rank
+      const rawRank = await this.authRepository.query(
+        `
+        SELECT COUNT(*) + 1 AS rank
+        FROM auth
+        WHERE totalScore > ?
+        `,
+        [currentUserScore],
+      );
+
+      const currentRank = parseInt(rawRank[0]?.rank ?? '1', 10);
+
+      // Step 2: get top 100
+      const listUsers = await this.authRepository.find({
+        where: {},
+        order: { totalScore: 'DESC' },
+        take: 100,
+      });
+
+      const result = listUsers.map((user, index) => ({
+        userUid: user.uid,
+        score: user.totalScore,
+        username: user.name,
+        position: index + 1,
+      }));
+
+      return {
+        currentUserUid: userUid,
+        currentUsername: userRow.username,
+        currentScore: userRow.totalScore,
+        currentPosition: currentRank,
+        top100: result,
+      };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
 }
