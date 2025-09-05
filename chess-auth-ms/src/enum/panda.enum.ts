@@ -19,7 +19,7 @@ export const pandaActionsArray = [
 ];
 
 export enum PandaPointsConsumedByAction {
-  POINTS_BY_FEED = 20,
-  POINTS_BY_SLEEP = 16,
-  POINTS_BY_BATH = 12,
+  POINTS_BY_FEED = 10,
+  POINTS_BY_SLEEP = 10,
+  POINTS_BY_BATH = 10,
 }
