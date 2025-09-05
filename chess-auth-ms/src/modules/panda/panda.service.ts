@@ -208,7 +208,7 @@ export class PandaService {
     try {
       const dataPoints: UpdatePandaUserPointsDto = {
         uid: userUid,
-        points: 9, // changeMe! in case more points are needed
+        points: 10, // changeMe! in case more points are needed
       };
 
       const { lastPoints, spentPoints, counter } = await firstValueFrom(
