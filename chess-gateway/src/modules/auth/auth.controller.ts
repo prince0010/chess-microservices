@@ -105,6 +105,16 @@ export class AuthController {
   }
 
   @UseGuards(AuthGuard)
+  @Get('top-one-hundred-by-totalScore')
+  topOneHundredByTotalScore(@Req() req: any) {
+    return this.client.send('auth.ranking.totalScore', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
   @Get('/:id')
   findOne(@Param('id', ParseIntPipe) id: string) {
     return this.client.send('auth.findone.user', id).pipe(

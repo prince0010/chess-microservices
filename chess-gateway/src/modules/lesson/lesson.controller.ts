@@ -79,16 +79,6 @@ export class LessonController {
       }),
     );
   }
-
-  @UseGuards(AuthGuard)
-  @Get('top-one-hundred-by-totalScore')
-  topOneHundredByTotalScore(@Req() req: any) {
-    return this.client.send('auth.ranking.totalScore', +req.user.uid).pipe(
-      catchError((err) => {
-        throw new RpcException(err);
-      }),
-    );
-  }
   // END TOP 100
 
   @UseGuards(AuthGuard)
