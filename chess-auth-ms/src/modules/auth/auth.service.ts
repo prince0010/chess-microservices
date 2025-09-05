@@ -383,9 +383,11 @@ export class AuthService {
     try {
       const user = await this.findOne(uid);
       const lastPoints = user.points;
+      const lastTotalScore = user.totalScore;
 
-      // global points
+      // global panda points and total score
       user.points = lastPoints + points;
+      user.totalScore = lastTotalScore + points;
 
       if (typeUserCounter) {
         switch (typeUserCounter) {

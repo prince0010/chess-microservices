@@ -46,7 +46,10 @@ export class Auth {
   isActive: boolean;
 
   @Column({ nullable: false, default: 0 })
-  points: number; // global counter
+  totalScore: number; // total high score player earn by solving puzzles, beating bots and playing games
+
+  @Column({ nullable: false, default: 0 })
+  points: number; // global counter used for panda points
 
   @Column({ nullable: false, default: 0 })
   educationPoints: number; // education lessons counter

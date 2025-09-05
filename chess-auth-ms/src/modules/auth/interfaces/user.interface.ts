@@ -13,6 +13,7 @@ export interface IOneUser {
   roles: string[];
   isActive: boolean;
   points: number;
+  totalScore: number;
   educationPoints: number;
   puzzlePoints: number;
   endgamesPoints: number;
