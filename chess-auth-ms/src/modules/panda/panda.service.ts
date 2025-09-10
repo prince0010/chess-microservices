@@ -204,11 +204,12 @@ export class PandaService {
 
   async subtractPointsDueToPandaHelp(
     userUid: number,
+    points: number,
   ): Promise<ISubtractPointsUser> {
     try {
       const dataPoints: UpdatePandaUserPointsDto = {
         uid: userUid,
-        points: 10, // changeMe! in case more points are needed
+        points,
       };
 
       const { lastPoints, spentPoints, counter } = await firstValueFrom(

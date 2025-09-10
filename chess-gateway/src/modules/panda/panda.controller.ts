@@ -3,7 +3,9 @@ import {
   Controller,
   Get,
   Inject,
+  ParseIntPipe,
   Patch,
+  Query,
   Req,
   UseGuards,
 } from '@nestjs/common';
@@ -31,14 +33,20 @@ export class PandaController {
 
   @UseGuards(AuthGuard)
   @Patch('/help-player')
-  applyHelpPlayer(@Req() req: any) {
-    return this.client
-      .send('decrement.pandaPoints.dueToHelp', +req.user.uid)
-      .pipe(
-        catchError((err) => {
-          throw new RpcException(err);
-        }),
-      );
+  applyHelpPlayer(
+    @Query('points', ParseIntPipe) points: number,
+    @Req() req: any,
+  ) {
+    const payload = {
+      points,
+      userUid: +req.user.uid,
+    };
+
+    return this.client.send('decrement.pandaPoints.dueToHelp', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
   }
 
   @UseGuards(AuthGuard)

@@ -18,7 +18,12 @@ export class PandaController {
   }
 
   @MessagePattern('decrement.pandaPoints.dueToHelp') // at frontend sometimes panda help player
-  subtractPointsDueToPandaHelp(@Payload() userUid: number) {
-    return this.pandaService.subtractPointsDueToPandaHelp(userUid);
+  subtractPointsDueToPandaHelp(
+    @Payload() data: { userUid: number; points: number },
+  ) {
+    return this.pandaService.subtractPointsDueToPandaHelp(
+      data.userUid,
+      data.points,
+    );
   }
 }
