@@ -30,12 +30,15 @@ export class LessonParentTestRecordService {
     findAllHistoryRecordLessonTestDto: FindAllHistoryRecordLessonTestDto,
   ): Promise<ILessonTestRecordListByUser> {
     const {
-      userUid,
+      userUid: userAuthenticatedUid,
       lessonParentId,
       limit = 10,
       page = 1,
+      studentUid = null,
     } = findAllHistoryRecordLessonTestDto;
+
     const offset = (page - 1) * limit;
+    const userUid = studentUid ?? userAuthenticatedUid;
 
     try {
       const existingLessonParent = await this.lessonParentRepository.findOneBy({
