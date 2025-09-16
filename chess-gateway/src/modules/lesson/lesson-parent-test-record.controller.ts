@@ -42,10 +42,15 @@ export class LessonParentTestRecordController {
 
   @UseGuards(AuthGuard)
   @Get('/:recordId')
-  findOne(@Param('recordId', ParseIntPipe) recordId: number, @Req() req: any) {
+  findOne(
+    @Param('recordId', ParseIntPipe) recordId: number,
+    @Req() req: any,
+    @Query('studentUid') studentUid?: number,
+  ) {
     const payload = {
       recordId,
       userUid: +req.user.uid,
+      studentUid: studentUid ?? null, // when teacher see student progress on web system panel
     };
 
     return this.client

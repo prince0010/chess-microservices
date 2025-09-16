@@ -1,7 +1,13 @@
 import { Type } from 'class-transformer';
-import { IsNumber, IsPositive } from 'class-validator';
+import { IsNumber, IsOptional, IsPositive } from 'class-validator';
 
 export class FindOneLessonRecordTestDto {
+  @IsOptional()
+  @IsNumber()
+  @IsPositive()
+  @Type(() => Number)
+  studentUid?: number; // when teacher see student progress on web system panel
+
   @IsNumber()
   @IsPositive()
   @Type(() => Number)

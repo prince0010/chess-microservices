@@ -87,7 +87,13 @@ export class LessonParentTestRecordService {
   async findOneByUser(
     findOneLessonRecordTestDto: FindOneLessonRecordTestDto,
   ): Promise<ISingleLessonTestRecord> {
-    const { userUid, recordId } = findOneLessonRecordTestDto;
+    const {
+      userUid: userAuthenticatedUid,
+      recordId,
+      studentUid = null,
+    } = findOneLessonRecordTestDto;
+
+    const userUid = studentUid ?? userAuthenticatedUid;
 
     try {
       const record = await this.lessonParentTestRecordRepository.findOne({
