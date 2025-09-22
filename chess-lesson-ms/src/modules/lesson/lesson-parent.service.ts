@@ -659,6 +659,11 @@ export class LessonParentService {
         failedLessonId,
       );
 
+      // STEP 6: update lastCorrectPuzzleAt property in AuthPanda
+      await firstValueFrom(
+        this.client.emit('update.lastCorrectPuzzleAt.panda', userUid),
+      );
+
       return response;
     } catch (error) {
       throw new RpcException({
@@ -770,6 +775,13 @@ export class LessonParentService {
 
       // STEP 6: verify to unlock next story
       await verifyToUnlockNextStory(this.client, userUid, lessonParent);
+
+      // STEP 7: update lastCorrectPuzzleAt property in AuthPanda
+      if (completedLessonIds.length > 6) {
+        await firstValueFrom(
+          this.client.emit('update.lastCorrectPuzzleAt.panda', userUid),
+        );
+      }
 
       return response;
     } catch (error) {

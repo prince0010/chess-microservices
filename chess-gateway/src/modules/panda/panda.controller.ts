@@ -15,7 +15,7 @@ import { catchError } from 'rxjs';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { NATS_SERVICE } from 'src/config';
 
-import { UpdatePandaDto } from './dto/update-panda.dto';
+import { UpdatePandaDto, UpdatePandaFunctionDto } from './dto/update-panda.dto';
 
 @Controller('panda')
 export class PandaController {
@@ -25,6 +25,16 @@ export class PandaController {
   @Get('/')
   findOne(@Req() req: any) {
     return this.client.send('find.one.panda', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/get-state-values')
+  getStateValues(@Req() req: any) {
+    return this.client.send('find.stateValues.panda', +req.user.uid).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
@@ -43,6 +53,25 @@ export class PandaController {
     };
 
     return this.client.send('decrement.pandaPoints.dueToHelp', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  // called from frontend when user spent extra life or extra time playing puzzles
+  @UseGuards(AuthGuard)
+  @Patch('/update-by-function')
+  updateByFunction(
+    @Body() updatePandaFunctionDto: UpdatePandaFunctionDto,
+    @Req() req: any,
+  ) {
+    const payload = {
+      ...updatePandaFunctionDto,
+      userUid: +req.user.uid,
+    };
+
+    return this.client.send('update.oneDueToFunction.panda', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

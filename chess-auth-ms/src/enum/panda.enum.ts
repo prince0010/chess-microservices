@@ -12,6 +12,13 @@ export enum PandaAction {
   BATH = 'bath',
 }
 
+export enum PandaFunction {
+  ADD_EXTRA_LIFE = 'Add extra life',
+  ADD_EXTRA_TIME = 'Add extra time',
+  SPEND_EXTRA_LIFE = 'Spend extra life',
+  SPEND_EXTRA_TIME = 'Spend extra time',
+}
+
 export const pandaActionsArray = [
   PandaAction.FEED,
   PandaAction.SLEEP,

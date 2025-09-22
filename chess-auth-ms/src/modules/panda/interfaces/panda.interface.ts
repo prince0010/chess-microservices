@@ -7,3 +7,8 @@ export interface PandaActionResponse {
   counter: number;
   panda: AuthPanda;
 }
+
+export interface PandaFunctionResponse {
+  extraLive: number;
+  extraTime: number;
+}
