@@ -166,21 +166,18 @@ export class PandaService {
           case PandaAction.FEED:
             if (pandaRow.feedValue < 30) {
               spentPoints = PandaPointsConsumedByAction.POINTS_BY_FEED;
-              pandaRow.feedValue = Math.min(30, pandaRow.feedValue + 10);
               actionIsFull = false;
             }
             break;
           case PandaAction.SLEEP:
             if (pandaRow.sleepValue < 30) {
               spentPoints = PandaPointsConsumedByAction.POINTS_BY_SLEEP;
-              pandaRow.sleepValue = Math.min(30, pandaRow.sleepValue + 10);
               actionIsFull = false;
             }
             break;
           case PandaAction.BATH:
             if (pandaRow.bathValue < 30) {
               spentPoints = PandaPointsConsumedByAction.POINTS_BY_BATH;
-              pandaRow.bathValue = Math.min(30, pandaRow.bathValue + 10);
               actionIsFull = false;
             }
             break;
