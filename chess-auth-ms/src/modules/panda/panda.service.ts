@@ -7,10 +7,15 @@ import { Repository } from 'typeorm';
 import { NATS_SERVICE } from 'src/config';
 import { AuthPanda } from './entities/auth-panda.entity';
 
-import { UpdatePandaDto } from './dto/update-panda.dto';
+import { UpdatePandaDto, UpdatePandaFunctionDto } from './dto/update-panda.dto';
 import { UpdatePandaUserPointsDto } from './dto/update-panda-user-points.dto';
-import { PandaAction, PandaPointsConsumedByAction, PandaState } from 'src/enum';
-import { PandaActionResponse } from './interfaces';
+import {
+  PandaAction,
+  PandaFunction,
+  PandaPointsConsumedByAction,
+  PandaState,
+} from 'src/enum';
+import { PandaActionResponse, PandaFunctionResponse } from './interfaces';
 import { ISubtractPointsUser } from '../auth/interfaces';
 
 @Injectable()
@@ -46,6 +51,96 @@ export class PandaService {
     }
   }
 
+  // this method is called from frontend when init SingleLessonXScreen component
+  async getStateValues(userUid: number): Promise<PandaFunctionResponse> {
+    try {
+      const pandaRow = await this.findOne(userUid);
+
+      return {
+        extraLive: Math.min(3, Math.floor(pandaRow.feedValue / 10)),
+        extraTime: Math.min(3, Math.floor(pandaRow.sleepValue / 10)),
+      };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async updateByFunction(
+    updatePandaFunctionDto: UpdatePandaFunctionDto,
+  ): Promise<PandaFunctionResponse> {
+    const { userUid, function: pandaFunction } = updatePandaFunctionDto;
+    try {
+      // STEP 1: update state values
+      const pandaRow = await this.findOne(userUid);
+
+      // STEP 2: update feed and sleep values
+      switch (pandaFunction) {
+        case PandaFunction.SPEND_EXTRA_LIFE:
+          if (pandaRow.feedValue > 9) {
+            pandaRow.feedValue -= 10;
+          }
+          break;
+        case PandaFunction.SPEND_EXTRA_TIME:
+          if (pandaRow.sleepValue > 9) {
+            pandaRow.sleepValue -= 10;
+          }
+          break;
+        case PandaFunction.ADD_EXTRA_LIFE:
+          if (pandaRow.feedValue < 21) {
+            pandaRow.feedValue += 10;
+          }
+          break;
+        case PandaFunction.ADD_EXTRA_TIME:
+          if (pandaRow.sleepValue < 21) {
+            pandaRow.sleepValue += 10;
+          }
+          break;
+
+        default:
+          break;
+      }
+
+      const updatedPanda = await this.authPandaRepository.save(pandaRow);
+
+      return {
+        extraLive: Math.min(3, Math.floor(updatedPanda.feedValue / 10)),
+        extraTime: Math.min(3, Math.floor(updatedPanda.sleepValue / 10)),
+      };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async updateLastCorrectPuzzleAt(userUid: number): Promise<void> {
+    try {
+      const pandaRow = await this.authPandaRepository.findOne({
+        where: { user: { uid: userUid } },
+        relations: { user: true },
+      });
+
+      if (!pandaRow) {
+        throw new BadRequestException(
+          `Panda user with UserUid: ${userUid} not found in database.`,
+        );
+      }
+
+      pandaRow.lastCorrectPuzzleAt = new Date();
+
+      await this.authPandaRepository.save(pandaRow);
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
   async updateByAction(
     updatePandaDto: UpdatePandaDto,
   ): Promise<PandaActionResponse> {
@@ -64,47 +159,48 @@ export class PandaService {
         );
       }
 
-      const now = new Date();
       let spentPoints = 0;
-      let someActionIsFull = false; // to avoid spent user points
-      switch (action) {
-        case PandaAction.FEED:
-          pandaRow.lastFeedAt = now;
-          spentPoints = PandaPointsConsumedByAction.POINTS_BY_FEED;
-          if (pandaRow.feedValue === 100) {
-            someActionIsFull = true;
-          }
-          break;
-        case PandaAction.SLEEP:
-          pandaRow.lastSleepAt = now;
-          spentPoints = PandaPointsConsumedByAction.POINTS_BY_SLEEP;
-          if (pandaRow.sleepValue === 100) {
-            someActionIsFull = true;
-          }
-          break;
-        case PandaAction.BATH:
-          pandaRow.lastBathAt = now;
-          spentPoints = PandaPointsConsumedByAction.POINTS_BY_BATH;
-          if (pandaRow.bathValue === 100) {
-            someActionIsFull = true;
-          }
-          break;
-        default:
-          throw new BadRequestException(`Invalid panda action: ${action}`);
-      }
-
-      if (spentPoints > pandaRow.user.points) {
-        return {
-          message: `Insufficient points to ${action} Panda`,
-          lastPoints: pandaRow.user.points,
-          spentPoints: 0,
-          counter: pandaRow.user.points,
-          panda: pandaRow,
-        };
+      let actionIsFull = true;
+      if (pandaRow.user.points > 10) {
+        switch (action) {
+          case PandaAction.FEED:
+            if (pandaRow.feedValue < 30) {
+              spentPoints = PandaPointsConsumedByAction.POINTS_BY_FEED;
+              pandaRow.feedValue = Math.min(30, pandaRow.feedValue + 10);
+              actionIsFull = false;
+            }
+            break;
+          case PandaAction.SLEEP:
+            if (pandaRow.sleepValue < 30) {
+              spentPoints = PandaPointsConsumedByAction.POINTS_BY_SLEEP;
+              pandaRow.sleepValue = Math.min(30, pandaRow.sleepValue + 10);
+              actionIsFull = false;
+            }
+            break;
+          case PandaAction.BATH:
+            if (pandaRow.bathValue < 30) {
+              spentPoints = PandaPointsConsumedByAction.POINTS_BY_BATH;
+              pandaRow.bathValue = Math.min(30, pandaRow.bathValue + 10);
+              actionIsFull = false;
+            }
+            break;
+          default:
+            throw new BadRequestException(`Invalid panda action: ${action}`);
+        }
+      } else {
+        if (spentPoints > pandaRow.user.points) {
+          return {
+            message: `Insufficient points to ${action} Panda`,
+            lastPoints: pandaRow.user.points,
+            spentPoints: 0,
+            counter: pandaRow.user.points,
+            panda: pandaRow,
+          };
+        }
       }
 
       // avoid subtract points to user and avoid update panda stateValues
-      if (someActionIsFull) {
+      if (actionIsFull) {
         return {
           message: `Panda not needs to ${action}. So it is fully`,
           lastPoints: pandaRow.user.points,
@@ -152,37 +248,39 @@ export class PandaService {
   }
 
   public updateStateValues(pandaRow: AuthPanda): AuthPanda {
-    pandaRow.feedValue = this.calculateTimeBasedValue(pandaRow.lastFeedAt);
-    pandaRow.sleepValue = this.calculateTimeBasedValue(pandaRow.lastSleepAt);
-    pandaRow.bathValue = this.calculateTimeBasedValue(pandaRow.lastBathAt);
+    const now = new Date();
+    const MS_IN_DAY = 24 * 60 * 60 * 1000;
+
+    const diffMs =
+      now.getTime() - new Date(pandaRow.lastCorrectPuzzleAt).getTime();
+    if (diffMs <= 0) return pandaRow;
+
+    const periods = Math.floor(diffMs / MS_IN_DAY);
+    if (periods > 0) {
+      const deduction = periods * 10;
+
+      pandaRow.feedValue = Math.max(0, pandaRow.feedValue - deduction);
+      pandaRow.sleepValue = Math.max(0, pandaRow.sleepValue - deduction);
+    }
 
     return pandaRow;
-  }
-
-  private calculateTimeBasedValue(lastActionAt: Date): number {
-    const now = new Date();
-    const hoursPassed =
-      (now.getTime() - new Date(lastActionAt).getTime()) / (1000 * 60 * 60);
-
-    const value = 100 - hoursPassed * (100 / 24);
-    return Math.max(0, Math.round(value)); // Clamp to 0 and round
   }
 
   private getPandaState(panda: AuthPanda): string {
     let pandaState = PandaState.HAPPY;
 
-    // Build an array of state-value pairs only for values below 50
+    // Build an array of state-value pairs only for values below 10
     const stateValues: { state: string; value: number }[] = [];
 
-    if (panda.feedValue < 50) {
+    if (panda.feedValue < 10) {
       stateValues.push({ state: PandaState.HUNGRY, value: panda.feedValue });
     }
 
-    if (panda.sleepValue < 50) {
+    if (panda.sleepValue < 10) {
       stateValues.push({ state: PandaState.SLEEPY, value: panda.sleepValue });
     }
 
-    if (panda.bathValue < 50) {
+    if (panda.bathValue < 10) {
       stateValues.push({ state: PandaState.DIRTY, value: panda.bathValue });
     }
 

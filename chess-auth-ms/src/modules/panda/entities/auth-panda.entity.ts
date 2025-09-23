@@ -17,35 +17,21 @@ export class AuthPanda {
   @Column({ length: 64, nullable: false, default: PandaState.HAPPY })
   state: string;
 
-  @Column({ default: 100 }) // Could drop slowly by time pass without feed
-  feedValue: number; // represent 1 - 100 the level of hunger
+  @Column({ default: 30 })
+  feedValue: number; // represent 1 - 30 the level of hunger
 
-  @Column({ default: 100 }) // Could drop slowly by time pass without sleep
-  sleepValue: number; // represent 1 - 100 the level of sleep
+  @Column({ default: 30 })
+  sleepValue: number; // represent 1 - 30 the level of sleep
 
-  @Column({ default: 100 }) // Could drop slowly by time pass without bath
-  bathValue: number; // represent 1 - 100 the level of dirty
-
-  @Column({
-    type: 'timestamp',
-    nullable: false,
-    default: () => 'CURRENT_TIMESTAMP',
-  })
-  lastFeedAt: Date;
+  @Column({ default: 30 })
+  bathValue: number; // represent 1 - 30 the level of dirty
 
   @Column({
     type: 'timestamp',
     nullable: false,
     default: () => 'CURRENT_TIMESTAMP',
   })
-  lastSleepAt: Date;
-
-  @Column({
-    type: 'timestamp',
-    nullable: false,
-    default: () => 'CURRENT_TIMESTAMP',
-  })
-  lastBathAt: Date;
+  lastCorrectPuzzleAt: Date;
 
   @OneToOne(() => Auth, (auth) => auth.panda, { nullable: false })
   @JoinColumn()
