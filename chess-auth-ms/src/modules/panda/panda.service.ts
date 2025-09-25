@@ -7,15 +7,14 @@ import { Repository } from 'typeorm';
 import { NATS_SERVICE } from 'src/config';
 import { AuthPanda } from './entities/auth-panda.entity';
 
-import { UpdatePandaDto, UpdatePandaFunctionDto } from './dto/update-panda.dto';
+import { UpdatePandaFunctionDto } from './dto/update-panda.dto';
 import { UpdatePandaUserPointsDto } from './dto/update-panda-user-points.dto';
 import {
-  PandaAction,
   PandaFunction,
   PandaPointsConsumedByAction,
   PandaState,
 } from 'src/enum';
-import { PandaActionResponse, PandaFunctionResponse } from './interfaces';
+import { PandaFunctionResponse } from './interfaces';
 import { ISubtractPointsUser } from '../auth/interfaces';
 
 @Injectable()
@@ -32,6 +31,7 @@ export class PandaService {
     try {
       const authPanda = await this.authPandaRepository.findOne({
         where: { user: { uid: userUid } },
+        relations: { user: true },
       });
 
       if (!authPanda) {
@@ -51,28 +51,13 @@ export class PandaService {
     }
   }
 
-  // this method is called from frontend when init SingleLessonXScreen component
-  async getStateValues(userUid: number): Promise<PandaFunctionResponse> {
-    try {
-      const pandaRow = await this.findOne(userUid);
-
-      return {
-        extraLive: Math.min(3, Math.floor(pandaRow.feedValue / 10)),
-        extraTime: Math.min(3, Math.floor(pandaRow.sleepValue / 10)),
-      };
-    } catch (error) {
-      throw new RpcException({
-        status: 400,
-        message: error.message,
-      });
-    }
-  }
-
   async updateByFunction(
     updatePandaFunctionDto: UpdatePandaFunctionDto,
   ): Promise<PandaFunctionResponse> {
     const { userUid, function: pandaFunction } = updatePandaFunctionDto;
     try {
+      let spentPoints = 0;
+
       // STEP 1: update state values
       const pandaRow = await this.findOne(userUid);
 
@@ -91,11 +76,13 @@ export class PandaService {
         case PandaFunction.ADD_EXTRA_LIFE:
           if (pandaRow.feedValue < 21) {
             pandaRow.feedValue += 10;
+            spentPoints = PandaPointsConsumedByAction.POINTS_BY_FEED;
           }
           break;
         case PandaFunction.ADD_EXTRA_TIME:
           if (pandaRow.sleepValue < 21) {
             pandaRow.sleepValue += 10;
+            spentPoints = PandaPointsConsumedByAction.POINTS_BY_SLEEP;
           }
           break;
 
@@ -103,9 +90,27 @@ export class PandaService {
           break;
       }
 
+      // STEP subtract points of user
+      const dataPoints: UpdatePandaUserPointsDto = {
+        uid: userUid,
+        points: spentPoints,
+      };
+      const {
+        lastPoints,
+        spentPoints: usedPoints,
+        counter,
+      } = await firstValueFrom(
+        this.client.send('subtract.points.user', dataPoints),
+      );
+
       const updatedPanda = await this.authPandaRepository.save(pandaRow);
 
       return {
+        message: `Panda function executed successfully`,
+        lastPoints,
+        spentPoints,
+        counter,
+        panda: updatedPanda,
         extraLive: Math.min(3, Math.floor(updatedPanda.feedValue / 10)),
         extraTime: Math.min(3, Math.floor(updatedPanda.sleepValue / 10)),
       };
@@ -133,109 +138,6 @@ export class PandaService {
       pandaRow.lastCorrectPuzzleAt = new Date();
 
       await this.authPandaRepository.save(pandaRow);
-    } catch (error) {
-      throw new RpcException({
-        status: 400,
-        message: error.message,
-      });
-    }
-  }
-
-  async updateByAction(
-    updatePandaDto: UpdatePandaDto,
-  ): Promise<PandaActionResponse> {
-    const { userUid, action } = updatePandaDto;
-
-    try {
-      // STEP update auth_panda
-      const pandaRow = await this.authPandaRepository.findOne({
-        where: { user: { uid: userUid } },
-        relations: { user: true },
-      });
-
-      if (!pandaRow) {
-        throw new BadRequestException(
-          `Panda user with UserUid: ${userUid} not found in database.`,
-        );
-      }
-
-      let spentPoints = 0;
-      let actionIsFull = true;
-      if (pandaRow.user.points > 10) {
-        switch (action) {
-          case PandaAction.FEED:
-            if (pandaRow.feedValue < 30) {
-              spentPoints = PandaPointsConsumedByAction.POINTS_BY_FEED;
-              actionIsFull = false;
-            }
-            break;
-          case PandaAction.SLEEP:
-            if (pandaRow.sleepValue < 30) {
-              spentPoints = PandaPointsConsumedByAction.POINTS_BY_SLEEP;
-              actionIsFull = false;
-            }
-            break;
-          case PandaAction.BATH:
-            if (pandaRow.bathValue < 30) {
-              spentPoints = PandaPointsConsumedByAction.POINTS_BY_BATH;
-              actionIsFull = false;
-            }
-            break;
-          default:
-            throw new BadRequestException(`Invalid panda action: ${action}`);
-        }
-      } else {
-        if (spentPoints > pandaRow.user.points) {
-          return {
-            message: `Insufficient points to ${action} Panda`,
-            lastPoints: pandaRow.user.points,
-            spentPoints: 0,
-            counter: pandaRow.user.points,
-            panda: pandaRow,
-          };
-        }
-      }
-
-      // avoid subtract points to user and avoid update panda stateValues
-      if (actionIsFull) {
-        return {
-          message: `Panda not needs to ${action}. So it is fully`,
-          lastPoints: pandaRow.user.points,
-          spentPoints: 0,
-          counter: pandaRow.user.points,
-          panda: pandaRow,
-        };
-      }
-
-      pandaRow.state = this.getPandaState(pandaRow);
-
-      // STEP update state values
-      const pandaUpdatedWithStateValues = this.updateStateValues(pandaRow);
-
-      const savedPanda = await this.authPandaRepository.save(
-        pandaUpdatedWithStateValues,
-      );
-
-      // STEP subtract points of user
-      const dataPoints: UpdatePandaUserPointsDto = {
-        uid: userUid,
-        points: spentPoints,
-      };
-      const {
-        lastPoints,
-        spentPoints: usedPoints,
-        counter,
-      } = await firstValueFrom(
-        this.client.send('subtract.points.user', dataPoints),
-      );
-
-      return {
-        message: `Panda action ${action} executed successfully`,
-        lastPoints,
-        spentPoints,
-        counter,
-        panda: savedPanda,
-      };
     } catch (error) {
       throw new RpcException({
         status: 400,

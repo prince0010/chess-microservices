@@ -1,7 +1,7 @@
 import { Controller } from '@nestjs/common';
 import { EventPattern, MessagePattern, Payload } from '@nestjs/microservices';
 import { PandaService } from './panda.service';
-import { UpdatePandaDto, UpdatePandaFunctionDto } from './dto/update-panda.dto';
+import { UpdatePandaFunctionDto } from './dto/update-panda.dto';
 
 @Controller()
 export class PandaController {
@@ -15,13 +15,14 @@ export class PandaController {
   // get values of extra life (feedValue) or extra time(sleepValue)
   @MessagePattern('find.stateValues.panda')
   getStateValues(@Payload() userUid: number) {
-    return this.pandaService.getStateValues(userUid);
+    return 'Not implemented at the moment';
   }
 
-  @MessagePattern('update.one.panda') // main endpoint to feed, sleep and bath panda
-  update(@Payload() updatePandaDto: UpdatePandaDto) {
-    return this.pandaService.updateByAction(updatePandaDto);
-  }
+  // NOT USED ANYMORE - INSTEAD ALL IS HANDLED IN updateFunction
+  // @MessagePattern('update.one.panda') // main endpoint to feed, sleep and bath panda
+  // update(@Payload() updatePandaDto: UpdatePandaDto) {
+  //   return this.pandaService.updateByAction(updatePandaDto);
+  // }
 
   // called from frontend when user spent extra life or extra time playing puzzles
   @MessagePattern('update.oneDueToFunction.panda')

@@ -8,7 +8,7 @@ export interface PandaActionResponse {
   panda: AuthPanda;
 }
 
-export interface PandaFunctionResponse {
+export interface PandaFunctionResponse extends PandaActionResponse {
   extraLive: number;
   extraTime: number;
 }
