@@ -232,6 +232,8 @@ const extractCompleteDescription = (
     return headersWhite && headersWhite !== '?'
       ? headersWhite
       : 'No description available';
+  } else if (comments.some((textObject) => textObject.text === '[#]')) {
+    return headersWhite;
   }
 
   // Process each comment individually
