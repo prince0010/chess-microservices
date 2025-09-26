@@ -75,7 +75,10 @@ export const parseNormalPgnFile = (
       });
 
       // Extract description from different scenarios
-      const description = extractCompleteDescription(allComments);
+      const description = extractCompleteDescription(
+        allComments,
+        headers['White'],
+      );
 
       // Extract hints from all comments
       const hints = extractHintsFromComments(allComments);
@@ -168,7 +171,10 @@ export const parseHintPgnFile = (
       });
 
       // Extract description from different scenarios
-      const description = extractCompleteDescription(allComments);
+      const description = extractCompleteDescription(
+        allComments,
+        headers['White'],
+      );
 
       // Extract hints from all comments
       const hints = extractHintsFromComments(allComments);
@@ -218,8 +224,15 @@ export const parseHintPgnFile = (
   }
 };
 
-const extractCompleteDescription = (comments: any[] = []): string => {
-  if (!comments.length) return 'No description available';
+const extractCompleteDescription = (
+  comments: any[] = [],
+  headersWhite: any,
+): string => {
+  if (!comments.length) {
+    return headersWhite && headersWhite !== '?'
+      ? headersWhite
+      : 'No description available';
+  }
 
   // Process each comment individually
   const descriptionParts = comments
