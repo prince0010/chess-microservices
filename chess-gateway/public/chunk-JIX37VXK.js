@@ -1,0 +1,1 @@
+import{y as e}from"./chunk-4YI4SF3F.js";var i=new e("CHESS_BOARD_DEFAULTS"),a={orientation:"white",draggable:!0,highlightMoves:!0,showCoordinates:!0,pieceTheme:o=>`/assets/chesspieces/wikipedia/${o}.png`,animationDurationMs:200};export{i as a,a as b};
