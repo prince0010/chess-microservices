@@ -20,6 +20,8 @@ services:
     environment:
       - PORT=${CHESS_GATEWAY_PORT}
       - NATS_SERVERS=${NATS_SERVERS}
+    volumes:
+      - ./chess-gateway/public:/usr/src/app/public
     networks:
       - chess_production
 

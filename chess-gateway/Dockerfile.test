@@ -17,9 +17,6 @@ WORKDIR /usr/src/app
 # copy --from=deps origin destination
 COPY --from=deps /usr/src/app/node_modules ./node_modules
 
-# copy public folder to serve website
-COPY public ./public
-
 # copy all source code of the application excluding files from .dockerignore
 COPY . .
 
@@ -37,8 +34,7 @@ WORKDIR /usr/src/app
 
 COPY --from=build /usr/src/app/node_modules ./node_modules
 
-# copy only the DIST and public folder
-COPY --from=build /usr/src/app/public ./public
+# copy only the DIST folder
 COPY --from=build /usr/src/app/dist ./dist
 
 ENV NODE_ENV=production
