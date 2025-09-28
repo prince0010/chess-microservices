@@ -767,10 +767,10 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     timer: 75,
     name: 'Double attack',
     pgnFilename: 'Level_9_Preview_1_Double_attack.pgn',
-    lessonFactor: 0.125,
+    lessonFactor: 0.119,
     story: 'Education',
     level: 'Level 9',
-    quantityToUnlockNext: 5, // 5/40
+    quantityToUnlockNext: 5, // 5/42
     levelFrontend: 'Level 9',
     showHint: false,
     pointsPerLesson: 9,
