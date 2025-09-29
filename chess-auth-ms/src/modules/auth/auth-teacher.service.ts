@@ -19,11 +19,17 @@ import {
   AddStudentsToTeacherDto,
   FindAllTeachersDto,
   RegisterAuthTeacherDto,
+  RequestJoinFindAllDto,
   RequestJoinTeacherDto,
   UpdateAuthTeacherDto,
 } from './dto';
 
-import { JwtPayload, IOneTeacher, ICountAndListTeachers } from './interfaces';
+import {
+  JwtPayload,
+  IOneTeacher,
+  ICountAndListTeachers,
+  ICountAndListRequests,
+} from './interfaces';
 import { IMessage } from 'src/interfaces';
 import { UpdateApplicationStatusDto } from './dto/request-join-teacher.dto';
 import { SecurityRoles, TeacherRequestStatus } from 'src/enum';
@@ -392,6 +398,60 @@ export class AuthTeacherService {
       }
 
       return { msg: 'Teacher request application rejected successfully.' };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async findAllRequests(
+    requestJoinFindAllDto: RequestJoinFindAllDto,
+  ): Promise<ICountAndListRequests> {
+    const {
+      limit = 10,
+      page = 1,
+      name = null,
+      username = null,
+      country = null,
+    } = requestJoinFindAllDto;
+
+    const offset = (page - 1) * limit;
+
+    const findOptions: FindManyOptions<AuthTeacherRequest> = {
+      take: limit,
+      skip: offset,
+      order: {
+        name: 'ASC',
+      },
+    };
+
+    const whereConditions: any = {};
+
+    if (name) {
+      whereConditions.name = Like(`%${name}%`);
+    }
+    if (username) {
+      whereConditions.username = Like(`%${username}%`);
+    }
+    if (country) {
+      whereConditions.country = Like(`%${country}%`);
+    }
+
+    if (Object.keys(whereConditions).length > 0) {
+      findOptions.where = whereConditions;
+    }
+
+    try {
+      const [requests, total] =
+        await this.authTeacherRequestRepository.findAndCount(findOptions);
+
+      return {
+        total,
+        page,
+        requests,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,

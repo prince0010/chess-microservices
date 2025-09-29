@@ -31,6 +31,7 @@ import {
   RequestJoinTeacherDto,
   UpdateApplicationStatusDto,
 } from './dto/request-join-teacher.dto';
+import { RequestJoinFindAllDto } from './dto/request-join-find-all.dto';
 
 @Controller('auth-teacher')
 export class AuthTeacherController {
@@ -87,6 +88,18 @@ export class AuthTeacherController {
   ) {
     return this.client
       .send('auth.updateApplication.teacher', updateApplicationStatusDto)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
+
+  @UseGuards(AdminGuard)
+  @Get('/all-requests-to-join')
+  findAllRequests(@Query() requestJoinFindAllDto: RequestJoinFindAllDto) {
+    return this.client
+      .send('auth.findAll.requestJoin', requestJoinFindAllDto)
       .pipe(
         catchError((err) => {
           throw new RpcException(err);

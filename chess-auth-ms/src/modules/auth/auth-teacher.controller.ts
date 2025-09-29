@@ -10,6 +10,7 @@ import {
   AddStudentsToTeacherDto,
   RequestJoinTeacherDto,
   UpdateApplicationStatusDto,
+  RequestJoinFindAllDto,
 } from './dto';
 
 @Controller()
@@ -46,6 +47,11 @@ export class AuthTeacherController {
   @MessagePattern('auth.requestJoin.teacher')
   requestJoin(@Payload() requestJoinTeacherDto: RequestJoinTeacherDto) {
     return this.authTeacherService.requestJoin(requestJoinTeacherDto);
+  }
+
+  @MessagePattern('auth.findAll.requestJoin')
+  findAllRequests(@Payload() requestJoinFindAllDto: RequestJoinFindAllDto) {
+    return this.authTeacherService.findAllRequests(requestJoinFindAllDto);
   }
 
   // admin accept or reject teacher application

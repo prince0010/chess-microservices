@@ -1,3 +1,4 @@
+import { AuthTeacherRequest } from '../entities/auth-teacher-request.entity';
 import { IOneUser } from './user.interface';
 
 export interface ICountAndListTeachers {
@@ -19,4 +20,10 @@ export interface ICountAndListStudentsByTeacher {
   total: number;
   page: number;
   students: IOneUser[];
+}
+
+export interface ICountAndListRequests {
+  total: number;
+  page: number;
+  requests: AuthTeacherRequest[];
 }
