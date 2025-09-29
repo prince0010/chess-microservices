@@ -24,6 +24,7 @@ import {
 } from './dto';
 
 import { JwtPayload, IOneTeacher, ICountAndListTeachers } from './interfaces';
+import { IMessage } from 'src/interfaces';
 import { UpdateApplicationStatusDto } from './dto/request-join-teacher.dto';
 import { SecurityRoles, TeacherRequestStatus } from 'src/enum';
 
@@ -288,15 +289,21 @@ export class AuthTeacherService {
 
   async requestJoin(
     requestJoinTeacherDto: RequestJoinTeacherDto,
-  ): Promise<string> {
+  ): Promise<IMessage> {
     const {
       mobile,
       email,
-      listExperience = [],
+      files = [], // array of fs paths
+      listExperience = null,
       ...restDto
     } = requestJoinTeacherDto;
 
     try {
+      // Validate file count
+      if (files.length > 6) {
+        throw new BadRequestException('Maximum 6 files allowed');
+      }
+
       // Check in both pending applications and active teachers
       const [existingApplication, existingTeacher] = await Promise.all([
         this.authTeacherRequestRepository.findOne({
@@ -316,13 +323,16 @@ export class AuthTeacherService {
       const newApplication = this.authTeacherRequestRepository.create({
         email: email.toLowerCase(),
         mobile,
-        listExperience,
+        listExperience: listExperience ? JSON.parse(listExperience) : null,
+        documents: files, // store only path urls
         ...restDto,
       });
 
       await this.authTeacherRequestRepository.save(newApplication);
 
-      return 'Thanks for applying, we will let you know as soon as possible.';
+      return {
+        msg: 'Thanks for applying, we will let you know as soon as possible.',
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -333,7 +343,7 @@ export class AuthTeacherService {
 
   async updateApplicationStatus(
     updateApplicationStatusDto: UpdateApplicationStatusDto,
-  ) {
+  ): Promise<IMessage> {
     const { status, applicationId } = updateApplicationStatusDto;
 
     try {
@@ -351,7 +361,9 @@ export class AuthTeacherService {
           { status: status },
         );
 
-        return 'Teacher request application marked as PENDING successfully.';
+        return {
+          msg: 'Teacher request application marked as PENDING successfully.',
+        };
       }
 
       // STEP 1: update status application
@@ -374,10 +386,12 @@ export class AuthTeacherService {
 
         await this.authTeacherRepository.save(newTeacher);
 
-        return `Teacher with username: ${application.email} created successfully with a temporary password: 123456`;
+        return {
+          msg: `Teacher with username: ${application.email} created successfully with a temporary password: 123456`,
+        };
       }
 
-      return 'Teacher request application rejected successfully.';
+      return { msg: 'Teacher request application rejected successfully.' };
     } catch (error) {
       throw new RpcException({
         status: 400,

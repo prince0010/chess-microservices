@@ -9,14 +9,19 @@ import {
   Post,
   Query,
   Req,
+  UploadedFiles,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
+import { FilesInterceptor } from '@nestjs/platform-express';
+import { diskStorage } from 'multer';
 import { catchError } from 'rxjs';
 
 import { AdminGuard } from 'src/guards/admin.guard';
 import { TeacherGuard } from 'src/guards/teacher.guard';
 import { NATS_SERVICE } from 'src/config';
+import { cleanupFiles, generateName, myFileFilter } from 'src/common/files';
 
 import { RegisterAuthTeacherDto } from './dto/register-auth-teacher.dto';
 import { FindAllTeachersDto } from './dto/find-all-teachers.dto';
@@ -45,14 +50,34 @@ export class AuthTeacherController {
 
   // public endpoint
   @Post('request-join')
-  requestApplication(@Body() requestJoinTeacherDto: RequestJoinTeacherDto) {
-    return this.client
-      .send('auth.requestJoin.teacher', requestJoinTeacherDto)
-      .pipe(
-        catchError((err) => {
-          throw new RpcException(err);
-        }),
-      );
+  @UseInterceptors(
+    FilesInterceptor('files', 6, {
+      fileFilter: myFileFilter,
+      storage: diskStorage({
+        destination: '/usr/src/app/uploads',
+        filename: generateName,
+      }),
+    }),
+  )
+  requestApplication(
+    @UploadedFiles() files: Array<Express.Multer.File>,
+    @Body() requestJoinTeacherDto: RequestJoinTeacherDto,
+  ) {
+    const pathFiles: string[] = files.map((file) => {
+      return file.path;
+    });
+
+    const payload = {
+      ...requestJoinTeacherDto,
+      files: pathFiles || [],
+    };
+
+    return this.client.send('auth.requestJoin.teacher', payload).pipe(
+      catchError((err) => {
+        cleanupFiles(files);
+        throw new RpcException(err);
+      }),
+    );
   }
 
   @UseGuards(AdminGuard)

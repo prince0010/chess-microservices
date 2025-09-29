@@ -22,6 +22,7 @@ services:
       - NATS_SERVERS=${NATS_SERVERS}
     volumes:
       - ./chess-gateway/public:/usr/src/app/public
+      - ./chess-gateway/uploads:/usr/src/app/uploads
     networks:
       - chess_testing
 

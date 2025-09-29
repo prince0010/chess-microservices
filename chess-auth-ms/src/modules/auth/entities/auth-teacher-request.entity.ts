@@ -49,6 +49,9 @@ export class AuthTeacherRequest {
   @Column({ type: 'simple-array', nullable: true, default: null })
   listExperience: string[];
 
+  @Column({ type: 'simple-array', nullable: true, default: null })
+  documents: string[]; // Store file URLs
+
   @CreateDateColumn()
   createdAt: Date;
 

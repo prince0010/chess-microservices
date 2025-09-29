@@ -24,6 +24,7 @@ services:
     volumes:
       - ./chess-gateway/src:/usr/src/app/src
       - ./chess-gateway/public:/usr/src/app/public
+      - ./chess-gateway/uploads:/usr/src/app/uploads
     environment:
       PORT: ${CHESS_GATEWAY_PORT}
       NATS_SERVERS: "${NATS_SERVERS}"

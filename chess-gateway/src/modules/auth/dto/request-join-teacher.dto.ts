@@ -1,6 +1,5 @@
+import { Type } from 'class-transformer';
 import {
-  ArrayMinSize,
-  IsArray,
   IsEmail,
   IsEnum,
   IsNotEmpty,
@@ -13,37 +12,39 @@ import {
 import { Gender, genderArray } from 'src/enum';
 
 export class RequestJoinTeacherDto {
-  @IsString()
   @IsNotEmpty()
+  @IsString()
   @MinLength(2)
   name: string;
 
-  @IsString()
   @IsNotEmpty()
+  @IsString()
   @MinLength(2)
   lastName: string;
 
-  @IsString()
   @IsNotEmpty()
+  @IsString()
   @IsEmail()
   email: string;
 
-  @IsString()
   @IsNotEmpty()
+  @IsString()
   mobile: string;
 
-  @IsString()
   @IsNotEmpty()
+  @IsString()
   country: string;
 
+  @IsNotEmpty()
   @IsNumber()
   @IsPositive()
-  @IsNotEmpty()
+  @Type(() => Number)
   yearsExperience: number;
 
+  @IsNotEmpty()
   @IsNumber()
   @IsPositive()
-  @IsNotEmpty()
+  @Type(() => Number)
   age: number;
 
   @IsNotEmpty()
@@ -57,9 +58,8 @@ export class RequestJoinTeacherDto {
   details?: string;
 
   @IsOptional()
-  @ArrayMinSize(0)
-  @IsArray()
-  listExperience: string[];
+  @IsString()
+  listExperience: string;
 }
 
 export class UpdateApplicationStatusDto {
