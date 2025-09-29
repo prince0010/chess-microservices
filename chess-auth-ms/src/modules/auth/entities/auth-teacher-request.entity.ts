@@ -10,7 +10,7 @@ import {
 @Entity('auth_teacher_request')
 export class AuthTeacherRequest {
   @PrimaryGeneratedColumn()
-  id: string;
+  id: number;
 
   @Column({
     length: 16,

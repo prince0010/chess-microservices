@@ -61,3 +61,13 @@ export class RequestJoinTeacherDto {
   @IsArray()
   listExperience: string[];
 }
+
+export class UpdateApplicationStatusDto {
+  @IsNotEmpty()
+  @IsNumber()
+  applicationId: number;
+
+  @IsNotEmpty()
+  @IsString()
+  status: string;
+}

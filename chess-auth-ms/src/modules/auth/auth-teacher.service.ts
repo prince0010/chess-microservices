@@ -24,6 +24,8 @@ import {
 } from './dto';
 
 import { JwtPayload, IOneTeacher, ICountAndListTeachers } from './interfaces';
+import { UpdateApplicationStatusDto } from './dto/request-join-teacher.dto';
+import { SecurityRoles, TeacherRequestStatus } from 'src/enum';
 
 @Injectable()
 export class AuthTeacherService {
@@ -321,6 +323,61 @@ export class AuthTeacherService {
       await this.authTeacherRequestRepository.save(newApplication);
 
       return 'Thanks for applying, we will let you know as soon as possible.';
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async updateApplicationStatus(
+    updateApplicationStatusDto: UpdateApplicationStatusDto,
+  ) {
+    const { status, applicationId } = updateApplicationStatusDto;
+
+    try {
+      const application = await this.authTeacherRequestRepository.findOneBy({
+        id: applicationId,
+      });
+      if (!application) {
+        throw new BadRequestException(
+          `Application with ID: ${applicationId} not found.`,
+        );
+      }
+      if (status === TeacherRequestStatus.pending) {
+        await this.authTeacherRequestRepository.update(
+          { id: application.id },
+          { status: status },
+        );
+
+        return 'Teacher request application marked as PENDING successfully.';
+      }
+
+      // STEP 1: update status application
+      await this.authTeacherRequestRepository.update(
+        { id: application.id },
+        { status: status },
+      );
+
+      // STEP 2: in case approved create the teacher with the email as username and temporary password 123456
+      if (status === TeacherRequestStatus.approved) {
+        const newTeacher = this.authTeacherRepository.create({
+          name: application.name,
+          username: application.email,
+          password: '123456',
+          country: application.country,
+          roles: [SecurityRoles.TEACHER as string],
+          gender: application.gender,
+          mobile: application.mobile,
+        });
+
+        await this.authTeacherRequestRepository.save(newTeacher);
+
+        return `Teacher with username: ${application.email} created successfully with a temporary password: 123456`;
+      }
+
+      return 'Teacher request application rejected successfully.';
     } catch (error) {
       throw new RpcException({
         status: 400,

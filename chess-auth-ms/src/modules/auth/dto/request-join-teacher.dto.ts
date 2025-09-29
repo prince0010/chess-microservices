@@ -10,7 +10,7 @@ import {
   IsString,
   MinLength,
 } from 'class-validator';
-import { Gender, genderArray } from 'src/enum';
+import { Gender, genderArray, TeacherRequestStatus } from 'src/enum';
 
 export class RequestJoinTeacherDto {
   @IsString()
@@ -60,4 +60,16 @@ export class RequestJoinTeacherDto {
   @ArrayMinSize(0)
   @IsArray()
   listExperience: string[];
+}
+
+export class UpdateApplicationStatusDto {
+  @IsNotEmpty()
+  @IsNumber()
+  applicationId: number;
+
+  @IsNotEmpty()
+  @IsEnum(TeacherRequestStatus, {
+    message: `Valid status to update teacher application only these one: [${Object.values(TeacherRequestStatus)}]`,
+  })
+  status: string;
 }

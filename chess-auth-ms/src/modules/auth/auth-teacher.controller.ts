@@ -9,6 +9,7 @@ import {
   FindAllTeachersDto,
   AddStudentsToTeacherDto,
   RequestJoinTeacherDto,
+  UpdateApplicationStatusDto,
 } from './dto';
 
 @Controller()
@@ -19,12 +20,6 @@ export class AuthTeacherController {
   @MessagePattern('auth.register.teacher')
   create(@Payload() registerAuthTeacherDto: RegisterAuthTeacherDto) {
     return this.authTeacherService.register(registerAuthTeacherDto);
-  }
-
-  // public endpoint where possible teacher submit data info
-  @MessagePattern('auth.requestJoin.teacher')
-  requestJoin(@Payload() requestJoinTeacherDto: RequestJoinTeacherDto) {
-    return this.authTeacherService.requestJoin(requestJoinTeacherDto);
   }
 
   @MessagePattern('auth.update.teacher')
@@ -45,5 +40,21 @@ export class AuthTeacherController {
   @MessagePattern('auth.addStudents.teacher')
   addStudents(@Payload() addStudentsToTeacherDto: AddStudentsToTeacherDto) {
     return this.authTeacherService.addStudents(addStudentsToTeacherDto);
+  }
+
+  // public endpoint where possible teacher submit data info
+  @MessagePattern('auth.requestJoin.teacher')
+  requestJoin(@Payload() requestJoinTeacherDto: RequestJoinTeacherDto) {
+    return this.authTeacherService.requestJoin(requestJoinTeacherDto);
+  }
+
+  // admin accept or reject teacher application
+  @MessagePattern('auth.updateApplication.teacher')
+  updateApplicationStatus(
+    @Payload() updateApplicationStatusDto: UpdateApplicationStatusDto,
+  ) {
+    return this.authTeacherService.updateApplicationStatus(
+      updateApplicationStatusDto,
+    );
   }
 }
