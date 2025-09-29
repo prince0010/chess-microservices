@@ -1,14 +1,19 @@
+import * as fs from 'fs';
+import * as path from 'path';
+import { Response } from 'express';
 import {
   Body,
   Controller,
   Get,
   Inject,
+  NotFoundException,
   Param,
   ParseIntPipe,
   Patch,
   Post,
   Query,
   Req,
+  Res,
   UploadedFiles,
   UseGuards,
   UseInterceptors,
@@ -115,6 +120,50 @@ export class AuthTeacherController {
         throw new RpcException(err);
       }),
     );
+  }
+
+  @UseGuards(AdminGuard)
+  @Get('/files/:filename')
+  async downloadFile(
+    @Param('filename') filename: string,
+    @Res() res: Response,
+  ) {
+    try {
+      const filePath = path.join('/usr/src/app/uploads', filename);
+
+      if (!fs.existsSync(filePath)) {
+        throw new NotFoundException('File not found');
+      }
+
+      res.setHeader(
+        'Content-Disposition',
+        `attachment; filename="${filename}"`,
+      );
+
+      // Determine content type based on file extension
+      const ext = path.extname(filename).toLowerCase();
+      const mimeTypes = {
+        '.pdf': 'application/pdf',
+        '.doc': 'application/msword',
+        '.docx':
+          'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        '.txt': 'text/plain',
+      };
+
+      const contentType = mimeTypes[ext] || 'application/octet-stream';
+      res.setHeader('Content-Type', contentType);
+
+      // Stream the file to the response
+      const fileStream = fs.createReadStream(filePath);
+
+      fileStream.on('error', (error) => {
+        throw new NotFoundException('Error reading file');
+      });
+
+      fileStream.pipe(res);
+    } catch (error) {
+      throw new NotFoundException('File not found or unable to download');
+    }
   }
 
   @UseGuards(AdminGuard)
