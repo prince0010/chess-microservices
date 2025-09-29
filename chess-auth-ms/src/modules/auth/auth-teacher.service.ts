@@ -413,7 +413,7 @@ export class AuthTeacherService {
       limit = 10,
       page = 1,
       name = null,
-      username = null,
+      email = null,
       country = null,
     } = requestJoinFindAllDto;
 
@@ -432,8 +432,8 @@ export class AuthTeacherService {
     if (name) {
       whereConditions.name = Like(`%${name}%`);
     }
-    if (username) {
-      whereConditions.username = Like(`%${username}%`);
+    if (email) {
+      whereConditions.email = Like(`%${email}%`);
     }
     if (country) {
       whereConditions.country = Like(`%${country}%`);

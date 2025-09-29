@@ -18,7 +18,7 @@ export class RequestJoinFindAllDto {
 
   @IsOptional()
   @IsString()
-  username?: string;
+  email?: string;
 
   @IsOptional()
   @IsString()
