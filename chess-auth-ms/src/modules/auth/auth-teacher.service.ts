@@ -460,6 +460,39 @@ export class AuthTeacherService {
     }
   }
 
+  async findOneRequest(requestId: number): Promise<AuthTeacherRequest> {
+    try {
+      const request = await this.authTeacherRequestRepository.findOneBy({
+        id: requestId,
+      });
+      if (!request) {
+        throw new BadRequestException(
+          `Request Application with ID: ${requestId} not found.`,
+        );
+      }
+
+      const transformedRequest = {
+        ...request,
+        documents: request.documents
+          ? request.documents.map((path) => {
+              if (path.includes('usr/src/app/uploads')) {
+                return path.split('usr/src/app/uploads/')[1];
+              }
+
+              return path;
+            })
+          : [],
+      };
+
+      return transformedRequest;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
   // ==== private methods ====
   private getJwtPayload(teacher: AuthTeacher): JwtPayload {
     return {

@@ -54,6 +54,11 @@ export class AuthTeacherController {
     return this.authTeacherService.findAllRequests(requestJoinFindAllDto);
   }
 
+  @MessagePattern('auth.findOne.requestJoin')
+  findOneRequest(@Payload() requestId: number) {
+    return this.authTeacherService.findOneRequest(requestId);
+  }
+
   // admin accept or reject teacher application
   @MessagePattern('auth.updateApplication.teacher')
   updateApplicationStatus(

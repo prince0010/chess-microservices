@@ -108,6 +108,16 @@ export class AuthTeacherController {
   }
 
   @UseGuards(AdminGuard)
+  @Get('/request/:id')
+  findOneRequest(@Param('id', ParseIntPipe) requestId: number) {
+    return this.client.send('auth.findOne.requestJoin', requestId).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AdminGuard)
   @Get('/')
   findAllTeachers(@Query() findAllTeachersDto: FindAllTeachersDto) {
     return this.client.send('auth.findAll.teachers', findAllTeachersDto).pipe(
