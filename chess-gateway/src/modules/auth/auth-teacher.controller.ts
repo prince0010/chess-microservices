@@ -56,7 +56,7 @@ export class AuthTeacherController {
   }
 
   @UseGuards(AdminGuard)
-  @Post('update-application')
+  @Patch('update-application')
   updateApplication(
     @Body() updateApplicationStatusDto: UpdateApplicationStatusDto,
   ) {

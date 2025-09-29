@@ -363,7 +363,7 @@ export class AuthTeacherService {
       // STEP 2: in case approved create the teacher with the email as username and temporary password 123456
       if (status === TeacherRequestStatus.approved) {
         const newTeacher = this.authTeacherRepository.create({
-          name: application.name,
+          name: `${application.name} ${application.lastName}`,
           username: application.email,
           password: '123456',
           country: application.country,
@@ -372,7 +372,7 @@ export class AuthTeacherService {
           mobile: application.mobile,
         });
 
-        await this.authTeacherRequestRepository.save(newTeacher);
+        await this.authTeacherRepository.save(newTeacher);
 
         return `Teacher with username: ${application.email} created successfully with a temporary password: 123456`;
       }
