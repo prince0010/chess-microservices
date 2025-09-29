@@ -7,3 +7,4 @@ export * from './register-auth.dto';
 export * from './update-auth-teacher.dto';
 export * from './update-auth.dto';
 export * from './update-user-points.dto';
+export * from './request-join-teacher.dto';

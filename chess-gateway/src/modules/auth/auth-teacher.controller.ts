@@ -22,6 +22,7 @@ import { RegisterAuthTeacherDto } from './dto/register-auth-teacher.dto';
 import { FindAllTeachersDto } from './dto/find-all-teachers.dto';
 import { UpdateAuthTeacherDto } from './dto/update-auth-teacher.dto';
 import { AddStudentsToTeacherDto } from './dto/add-students-to-teacher.dto';
+import { RequestJoinTeacherDto } from './dto/request-join-teacher.dto';
 
 @Controller('auth-teacher')
 export class AuthTeacherController {
@@ -32,6 +33,18 @@ export class AuthTeacherController {
   registerTeacher(@Body() registerAuthTeacherDto: RegisterAuthTeacherDto) {
     return this.client
       .send('auth.register.teacher', registerAuthTeacherDto)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
+  }
+
+  // public endpoint
+  @Post('request-join')
+  requestApplication(@Body() requestJoinTeacherDto: RequestJoinTeacherDto) {
+    return this.client
+      .send('auth.requestJoin.teacher', requestJoinTeacherDto)
       .pipe(
         catchError((err) => {
           throw new RpcException(err);

@@ -11,22 +11,19 @@ import { FindManyOptions, In, Like, Repository } from 'typeorm';
 import * as bcryptjs from 'bcryptjs';
 
 import { NATS_SERVICE } from 'src/config';
-import { AuthTeacher } from './entities/auth-teacher.entity';
 import { Auth } from './entities/auth.entity';
+import { AuthTeacher } from './entities/auth-teacher.entity';
+import { AuthTeacherRequest } from './entities/auth-teacher-request.entity';
 
 import {
   AddStudentsToTeacherDto,
   FindAllTeachersDto,
   RegisterAuthTeacherDto,
+  RequestJoinTeacherDto,
   UpdateAuthTeacherDto,
 } from './dto';
-import { SecurityRoles } from 'src/enum';
-import {
-  JwtPayload,
-  IOneTeacher,
-  ICountAndListTeachers,
-  ICountAndListStudentsByTeacher,
-} from './interfaces';
+
+import { JwtPayload, IOneTeacher, ICountAndListTeachers } from './interfaces';
 
 @Injectable()
 export class AuthTeacherService {
@@ -36,6 +33,9 @@ export class AuthTeacherService {
 
     @InjectRepository(Auth)
     private readonly authRepository: Repository<Auth>,
+
+    @InjectRepository(AuthTeacherRequest)
+    private readonly authTeacherRequestRepository: Repository<AuthTeacherRequest>,
 
     private readonly jwtService: JwtService,
     @Inject(NATS_SERVICE) private readonly client: ClientProxy,
@@ -276,6 +276,51 @@ export class AuthTeacherService {
       await this.authTeacherRepository.save(teacherEntity);
 
       return `Students of teacher ${teacherEntity.name} updated successfully`;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async requestJoin(
+    requestJoinTeacherDto: RequestJoinTeacherDto,
+  ): Promise<string> {
+    const {
+      mobile,
+      email,
+      listExperience = [],
+      ...restDto
+    } = requestJoinTeacherDto;
+
+    try {
+      // Check in both pending applications and active teachers
+      const [existingApplication, existingTeacher] = await Promise.all([
+        this.authTeacherRequestRepository.findOne({
+          where: [{ email: email.toLowerCase() }, { mobile }],
+        }),
+        this.authTeacherRepository.findOne({
+          where: [{ username: email.toLowerCase() }, { mobile }],
+        }),
+      ]);
+
+      if (existingApplication || existingTeacher) {
+        throw new BadRequestException(
+          `An application already exists with this email or mobile number.`,
+        );
+      }
+
+      const newApplication = this.authTeacherRequestRepository.create({
+        email: email.toLowerCase(),
+        mobile,
+        listExperience,
+        ...restDto,
+      });
+
+      await this.authTeacherRequestRepository.save(newApplication);
+
+      return 'Thanks for applying, we will let you know as soon as possible.';
     } catch (error) {
       throw new RpcException({
         status: 400,

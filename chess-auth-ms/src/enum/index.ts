@@ -3,3 +3,4 @@ export * from './security-roles.enum';
 export * from './panda.enum';
 export * from './user.enum';
 export * from './story-unlocked.enum';
+export * from './teacher.enum';

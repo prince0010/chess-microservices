@@ -8,6 +8,7 @@ import {
   UpdateAuthTeacherDto,
   FindAllTeachersDto,
   AddStudentsToTeacherDto,
+  RequestJoinTeacherDto,
 } from './dto';
 
 @Controller()
@@ -18,6 +19,12 @@ export class AuthTeacherController {
   @MessagePattern('auth.register.teacher')
   create(@Payload() registerAuthTeacherDto: RegisterAuthTeacherDto) {
     return this.authTeacherService.register(registerAuthTeacherDto);
+  }
+
+  // public endpoint where possible teacher submit data info
+  @MessagePattern('auth.requestJoin.teacher')
+  requestJoin(@Payload() requestJoinTeacherDto: RequestJoinTeacherDto) {
+    return this.authTeacherService.requestJoin(requestJoinTeacherDto);
   }
 
   @MessagePattern('auth.update.teacher')
