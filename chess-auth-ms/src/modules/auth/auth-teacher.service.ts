@@ -300,13 +300,13 @@ export class AuthTeacherService {
       mobile,
       email,
       files = [], // array of fs paths
-      listExperience = null,
+      languages = null,
       ...restDto
     } = requestJoinTeacherDto;
 
     try {
-      // Validate file count
-      if (files.length > 6) {
+      // Validate no more than 6 files and image selected
+      if (files.length > 7) {
         throw new BadRequestException('Maximum 6 files allowed');
       }
 
@@ -329,7 +329,7 @@ export class AuthTeacherService {
       const newApplication = this.authTeacherRequestRepository.create({
         email: email.toLowerCase(),
         mobile,
-        listExperience: listExperience ? JSON.parse(listExperience) : null,
+        languages: languages ? JSON.parse(languages) : null,
         documents: files, // store only path urls
         ...restDto,
       });
@@ -383,10 +383,9 @@ export class AuthTeacherService {
         const newTeacher = this.authTeacherRepository.create({
           name: `${application.name} ${application.lastName}`,
           username: application.email,
+          fideId: application.fideId ?? null,
           password: '123456',
-          country: application.country,
           roles: [SecurityRoles.TEACHER as string],
-          gender: application.gender,
           mobile: application.mobile,
         });
 

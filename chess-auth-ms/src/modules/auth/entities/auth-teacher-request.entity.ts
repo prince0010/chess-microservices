@@ -31,23 +31,11 @@ export class AuthTeacherRequest {
   @Column({ length: 32, nullable: false })
   mobile: string;
 
-  @Column({ length: 32, nullable: false })
-  country: string;
-
-  @Column({ type: 'int', nullable: false })
-  yearsExperience: number;
-
-  @Column({ type: 'int', nullable: false })
-  age: number;
-
-  @Column({ length: 16, nullable: false })
-  gender: string;
-
-  @Column({ type: 'text', nullable: true, default: null })
-  details?: string;
+  @Column({ length: 32, nullable: true, default: null })
+  fideId?: string;
 
   @Column({ type: 'simple-array', nullable: true, default: null })
-  listExperience: string[];
+  languages: string[];
 
   @Column({ type: 'simple-array', nullable: true, default: null })
   documents: string[]; // Store file URLs

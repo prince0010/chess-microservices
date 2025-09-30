@@ -43,6 +43,9 @@ export class AuthTeacher {
   @Column({ length: 16, nullable: true, default: null })
   mobile?: string;
 
+  @Column({ length: 32, nullable: true, default: null })
+  fideId: string;
+
   @Column({ length: 128, nullable: true, default: null })
   token?: string; // if it is needed to implement forgot password
 

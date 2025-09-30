@@ -31,38 +31,16 @@ export class RequestJoinTeacherDto {
   @IsString()
   mobile: string;
 
-  @IsNotEmpty()
+  @IsOptional()
   @IsString()
-  country: string;
-
-  @IsNotEmpty()
-  @IsNumber()
-  @IsPositive()
-  @Type(() => Number)
-  yearsExperience: number;
-
-  @IsNotEmpty()
-  @IsNumber()
-  @IsPositive()
-  @Type(() => Number)
-  age: number;
-
-  @IsNotEmpty()
-  @IsEnum(Gender, {
-    message: `gender must be a valid enum value: [${[...genderArray]}]`,
-  })
-  gender: string;
+  fideId?: string;
 
   @IsOptional()
   files: string[];
 
   @IsOptional()
   @IsString()
-  details?: string;
-
-  @IsOptional()
-  @IsString()
-  listExperience?: string;
+  languages?: string;
 }
 
 export class UpdateApplicationStatusDto {

@@ -5,15 +5,20 @@ export const myFileFilter = (
   files: Express.Multer.File,
   callback: Function,
 ) => {
-  if (!files) return callback(new BadRequestException('Imagen falta'), false);
+  if (!files) return callback(new BadRequestException('Missing files'), false);
 
   const fileExtension = files.mimetype.split('/')[1];
 
   const allowedMimeTypes = [
+    // Images
+    'image/jpeg',
+    'image/jpg',
+    'image/png',
+    'image/webp',
+    // Documents
     'application/pdf',
     'application/msword',
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    'text/plain',
   ];
 
   if (allowedMimeTypes.includes(files.mimetype)) {
@@ -22,7 +27,7 @@ export const myFileFilter = (
 
   return callback(
     new BadRequestException(
-      `La extensión ${fileExtension} no es permitida, solo estas [${allowedMimeTypes}]`,
+      `Extension ${fileExtension} not allowed, use only these: [${allowedMimeTypes}]`,
     ),
     false,
   );
