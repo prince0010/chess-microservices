@@ -18,6 +18,14 @@ export class RequestJoinFindAllDto {
 
   @IsOptional()
   @IsString()
+  lastName?: string;
+
+  @IsOptional()
+  @IsString()
+  status?: string;
+
+  @IsOptional()
+  @IsString()
   email?: string;
 
   @IsOptional()
