@@ -420,39 +420,52 @@ export class AuthTeacherService {
 
     const offset = (page - 1) * limit;
 
-    const findOptions: FindManyOptions<AuthTeacherRequest> = {
-      take: limit,
-      skip: offset,
-      order: {
-        name: 'ASC',
-      },
-    };
+    const queryBuilder = this.authTeacherRequestRepository
+      .createQueryBuilder('request')
+      .take(limit)
+      .skip(offset);
 
-    const whereConditions: any = {};
+    queryBuilder.orderBy(
+      `
+    CASE 
+      WHEN request.status = 'pending' THEN 1
+      WHEN request.status = 'approved' THEN 2
+      WHEN request.status = 'rejected' THEN 3
+      ELSE 4
+    END`,
+      'ASC',
+    );
+
+    queryBuilder.addOrderBy('request.createdAt', 'DESC');
 
     if (name) {
-      whereConditions.name = Like(`%${name}%`);
-    }
-    if (lastName) {
-      whereConditions.lastName = Like(`%${lastName}%`);
-    }
-    if (status) {
-      whereConditions.status = status;
-    }
-    if (email) {
-      whereConditions.email = Like(`%${email}%`);
-    }
-    if (country) {
-      whereConditions.country = Like(`%${country}%`);
+      queryBuilder.andWhere('request.name LIKE :name', { name: `%${name}%` });
     }
 
-    if (Object.keys(whereConditions).length > 0) {
-      findOptions.where = whereConditions;
+    if (lastName) {
+      queryBuilder.andWhere('request.lastName LIKE :lastName', {
+        lastName: `%${lastName}%`,
+      });
+    }
+
+    if (status) {
+      queryBuilder.andWhere('request.status = :status', { status });
+    }
+
+    if (email) {
+      queryBuilder.andWhere('request.email LIKE :email', {
+        email: `%${email}%`,
+      });
+    }
+
+    if (country) {
+      queryBuilder.andWhere('request.country LIKE :country', {
+        country: `%${country}%`,
+      });
     }
 
     try {
-      const [requests, total] =
-        await this.authTeacherRequestRepository.findAndCount(findOptions);
+      const [requests, total] = await queryBuilder.getManyAndCount();
 
       return {
         total,
