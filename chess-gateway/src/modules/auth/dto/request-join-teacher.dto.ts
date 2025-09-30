@@ -1,5 +1,6 @@
 import {
   IsEmail,
+  IsIn,
   IsNotEmpty,
   IsNumber,
   IsOptional,
@@ -26,6 +27,16 @@ export class RequestJoinTeacherDto {
   @IsNotEmpty()
   @IsString()
   mobile: string;
+
+  @IsNotEmpty()
+  @IsString()
+  @IsIn(['YES', 'NO'])
+  hasStudentsUsingApp: string;
+
+  @IsNotEmpty()
+  @IsString()
+  @IsIn(['YES', 'NO'])
+  wantToBePresentedAsACoach: string;
 
   @IsOptional()
   @IsString()

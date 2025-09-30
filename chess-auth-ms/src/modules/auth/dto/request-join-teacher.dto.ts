@@ -2,10 +2,10 @@ import { Type } from 'class-transformer';
 import {
   IsEmail,
   IsEnum,
+  IsIn,
   IsNotEmpty,
   IsNumber,
   IsOptional,
-  IsPositive,
   IsString,
   MinLength,
 } from 'class-validator';
@@ -30,6 +30,16 @@ export class RequestJoinTeacherDto {
   @IsNotEmpty()
   @IsString()
   mobile: string;
+
+  @IsNotEmpty()
+  @IsString()
+  @IsIn(['YES', 'NO'])
+  hasStudentsUsingApp: string;
+
+  @IsNotEmpty()
+  @IsString()
+  @IsIn(['YES', 'NO'])
+  wantToBePresentedAsACoach: string;
 
   @IsOptional()
   @IsString()

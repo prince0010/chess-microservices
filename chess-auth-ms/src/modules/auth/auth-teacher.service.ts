@@ -300,6 +300,8 @@ export class AuthTeacherService {
       mobile,
       email,
       files = [], // array of fs paths
+      hasStudentsUsingApp,
+      wantToBePresentedAsACoach,
       languages = null,
       ...restDto
     } = requestJoinTeacherDto;
@@ -329,6 +331,8 @@ export class AuthTeacherService {
       const newApplication = this.authTeacherRequestRepository.create({
         email: email.toLowerCase(),
         mobile,
+        hasStudentsUsingApp: hasStudentsUsingApp === 'YES',
+        wantToBePresentedAsACoach: wantToBePresentedAsACoach === 'YES',
         languages: languages ? JSON.parse(languages) : null,
         documents: files, // store only path urls
         ...restDto,
