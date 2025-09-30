@@ -10,7 +10,7 @@ export interface IOneTeacher {
   uid: number;
   name: string;
   username: string;
-  country: string;
+  country?: string;
   gender: string;
   birthday: Date | null;
   isActive: boolean;

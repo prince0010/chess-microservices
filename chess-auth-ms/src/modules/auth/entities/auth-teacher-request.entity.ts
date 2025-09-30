@@ -45,4 +45,16 @@ export class AuthTeacherRequest {
 
   @UpdateDateColumn()
   updatedAt: Date;
+
+  @Column({ nullable: false, default: false })
+  hasStudentsUsingApp: boolean;
+
+  @Column({ nullable: false, default: false })
+  wantToBePresentedAsACoach: boolean;
+
+  @Column({ nullable: false, default: false })
+  wasWelcomeEmailSent: boolean; // welcome email after submit request
+
+  @Column({ nullable: false, default: false })
+  wasDecisionEmailSent: boolean; // decision response email after admin approve or reject
 }
