@@ -14,6 +14,7 @@ import { NATS_SERVICE } from 'src/config';
 import { Auth } from './entities/auth.entity';
 import { AuthTeacher } from './entities/auth-teacher.entity';
 import { AuthTeacherRequest } from './entities/auth-teacher-request.entity';
+import { NodemailerService } from '../shared/services/nodemailer.service';
 
 import {
   AddStudentsToTeacherDto,
@@ -47,6 +48,7 @@ export class AuthTeacherService {
     private readonly authTeacherRequestRepository: Repository<AuthTeacherRequest>,
 
     private readonly jwtService: JwtService,
+    private readonly nodemailerService: NodemailerService,
     @Inject(NATS_SERVICE) private readonly client: ClientProxy,
   ) {}
 
@@ -338,10 +340,19 @@ export class AuthTeacherService {
         ...restDto,
       });
 
-      await this.authTeacherRequestRepository.save(newApplication);
+      const storedApplication =
+        await this.authTeacherRequestRepository.save(newApplication);
+
+      // SEND welcome email
+      await this.nodemailerService.sendWelcomeCoachEmail(storedApplication);
+
+      await this.authTeacherRequestRepository.update(
+        { id: storedApplication.id },
+        { wasWelcomeEmailSent: true },
+      );
 
       return {
-        msg: 'Thanks for applying, we will let you know as soon as possible.',
+        msg: 'Thanks for applying, we will review the application and notify you as soon as possible.',
       };
     } catch (error) {
       throw new RpcException({

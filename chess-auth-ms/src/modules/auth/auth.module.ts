@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { NatsModule } from '../transports/nats.module';
 import { PandaModule } from 'src/modules/panda/panda.module';
+import { SharedModule } from '../shared/shared.module';
 import { envs } from 'src/config';
 
 import { Auth } from './entities/auth.entity';
@@ -48,6 +49,7 @@ import { AuthStoryUnlockedService } from './auth-story-unlocked.service';
     ]),
     PandaModule,
     NatsModule,
+    SharedModule,
   ],
   exports: [TypeOrmModule],
 })

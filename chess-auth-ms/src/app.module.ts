@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AuthModule } from './modules/auth/auth.module';
 import { PandaModule } from './modules/panda/panda.module';
+import { SharedModule } from './modules/shared/shared.module';
 import { ConfigDB } from './db/config';
 
 @Module({
@@ -24,6 +25,7 @@ import { ConfigDB } from './db/config';
     }),
     AuthModule,
     PandaModule,
+    SharedModule,
   ],
   controllers: [],
   providers: [],

@@ -48,6 +48,10 @@ services:
       AUTH_DB_USERNAME: ${AUTH_DB_USERNAME}
       AUTH_DB_PASSWORD: ${AUTH_DB_PASSWORD}
       JWT_SECRET: ${JWT_SECRET}
+      WE_CHESS_EMAIL_USERNAME: ${WE_CHESS_EMAIL_USERNAME}
+      WE_CHESS_EMAIL_PASSWORD: ${WE_CHESS_EMAIL_PASSWORD}
+    volumes:
+      - ./seed:/usr/src/app/seed
     networks:
       - chess_testing
 

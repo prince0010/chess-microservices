@@ -14,6 +14,8 @@ interface EnvVars {
   AUTH_DB_USERNAME: string;
   AUTH_DB_PASSWORD: string;
   JWT_SECRET: string;
+  WE_CHESS_EMAIL_USERNAME: string;
+  WE_CHESS_EMAIL_PASSWORD: string;
 }
 
 const envsSchema = joi
@@ -30,6 +32,8 @@ const envsSchema = joi
     AUTH_DB_PASSWORD: joi.string().required(),
     JWT_SECRET: joi.string().required(),
     NATS_SERVERS: joi.string().required(),
+    WE_CHESS_EMAIL_USERNAME: joi.string().required(),
+    WE_CHESS_EMAIL_PASSWORD: joi.string().required(),
   })
   .unknown(true);
 
@@ -57,4 +61,6 @@ export const envs = {
   dbAuthUsername: envVars.AUTH_DB_USERNAME,
   dbAuthPassword: envVars.AUTH_DB_PASSWORD,
   jwtSecret: envVars.JWT_SECRET,
+  weChessEmailUsername: envVars.WE_CHESS_EMAIL_USERNAME,
+  weChessEmailPassword: envVars.WE_CHESS_EMAIL_PASSWORD,
 };
