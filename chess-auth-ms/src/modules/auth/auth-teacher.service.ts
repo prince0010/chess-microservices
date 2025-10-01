@@ -254,7 +254,7 @@ export class AuthTeacherService {
 
   async addStudents(
     addStudentsToTeacherDto: AddStudentsToTeacherDto,
-  ): Promise<string> {
+  ): Promise<IMessage> {
     const { teacherUid, studentUids } = addStudentsToTeacherDto;
 
     try {
@@ -286,7 +286,9 @@ export class AuthTeacherService {
 
       await this.authTeacherRepository.save(teacherEntity);
 
-      return `Students of teacher ${teacherEntity.name} updated successfully`;
+      return {
+        msg: `Students of teacher ${teacherEntity.name} updated successfully`,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,

@@ -22,7 +22,7 @@ import { Token, User } from './decorators';
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
-import { FindAllUsersDto } from './dto/find-all-users.dto';
+import { FindAllStudentsDto, FindAllUsersDto } from './dto/find-all-users.dto';
 import { ICurrentUser } from './interfaces/user.interface';
 
 @Controller('auth')
@@ -85,6 +85,17 @@ export class AuthController {
       : new InternalServerErrorException(
           'It is not allowed to close session if user is not previously authenticated, review --logs-- Admin',
         );
+  }
+
+  /* endpoint where teacher needs all students to find and select them */
+  @UseGuards(TeacherGuard)
+  @Get('/all-students')
+  findAllStudents(@Query() findAllStudentsDto: FindAllStudentsDto) {
+    return this.client.send('auth.findAll.students', findAllStudentsDto).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
   }
 
   @UseGuards(TeacherGuard)

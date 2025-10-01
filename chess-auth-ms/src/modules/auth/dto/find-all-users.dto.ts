@@ -49,3 +49,27 @@ export class FindAllUsersDto {
   @IsString()
   country?: string;
 }
+
+export class FindAllStudentsDto {
+  @IsOptional()
+  @IsPositive()
+  @Type(() => Number) // converts query parameter string to number here
+  limit?: number;
+
+  @IsOptional()
+  @Min(1)
+  @Type(() => Number) // converts query parameter string to number here
+  page?: number;
+
+  @IsOptional()
+  @IsString()
+  name?: string;
+
+  @IsOptional()
+  @IsString()
+  username?: string;
+
+  @IsOptional()
+  @IsString()
+  country?: string;
+}

@@ -20,7 +20,7 @@ import { RegisterAuthDto } from './dto/register-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
 import { LoginAuthDto } from './dto/login-auth.dto';
 import { UpdateUserPointsDto } from './dto/update-user-points.dto';
-import { FindAllUsersDto } from './dto/find-all-users.dto';
+import { FindAllStudentsDto, FindAllUsersDto } from './dto/find-all-users.dto';
 import { UpdatePandaUserPointsDto } from '../panda/dto/update-panda-user-points.dto';
 import { SecurityRoles, TypeUserCounter } from 'src/enum';
 import {
@@ -29,6 +29,7 @@ import {
   IUpdatedPointsUser,
   ISubtractPointsUser,
   ICountAndListUsers,
+  ICountAndListStudents,
 } from './interfaces';
 
 @Injectable()
@@ -365,6 +366,68 @@ export class AuthService {
         total,
         page,
         users: transformedPlayers,
+      };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  /* endpoint where teacher needs all students to select them */
+  async findAllStudents(
+    findAllStudentsDto: FindAllStudentsDto,
+  ): Promise<ICountAndListStudents> {
+    const {
+      limit = 10,
+      page = 1,
+      name = null,
+      username = null,
+      country = null,
+    } = findAllStudentsDto;
+
+    const offset = (page - 1) * limit;
+
+    const findOptions: FindManyOptions<Auth> = {
+      take: limit,
+      skip: offset,
+      order: {
+        name: 'ASC',
+      },
+    };
+
+    const whereConditions: any = {
+      roles: Like(`%${SecurityRoles.PLAYER}%`),
+    };
+
+    if (name) {
+      whereConditions.name = Like(`%${name}%`);
+    }
+    if (username) {
+      whereConditions.username = Like(`%${username}%`);
+    }
+    if (country) {
+      whereConditions.country = Like(`%${country}%`);
+    }
+
+    if (Object.keys(whereConditions).length > 0) {
+      findOptions.where = whereConditions;
+    }
+
+    try {
+      const [students, total] =
+        await this.authRepository.findAndCount(findOptions);
+
+      const transformedStudents = students.map((student) => {
+        const { password, ...restStudent } = student;
+        return restStudent;
+      });
+
+      return {
+        total,
+        page,
+        students: transformedStudents,
       };
     } catch (error) {
       throw new RpcException({

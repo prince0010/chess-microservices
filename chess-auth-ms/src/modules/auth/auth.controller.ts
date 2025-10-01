@@ -9,6 +9,7 @@ import {
   UpdateUserPointsDto,
   UpdateAuthDto,
   FindAllUsersDto,
+  FindAllStudentsDto,
 } from './dto';
 import { UpdatePandaUserPointsDto } from '../panda/dto/update-panda-user-points.dto';
 import { IUserUidsArray } from './interfaces';
@@ -45,6 +46,12 @@ export class AuthController {
   @MessagePattern('auth.findAll.users')
   findAllPlayers(@Payload() findAllUsersDto: FindAllUsersDto) {
     return this.authService.findAllUsers(findAllUsersDto);
+  }
+
+  /* endpoint where teacher needs all students to select them */
+  @MessagePattern('auth.findAll.students')
+  findAllStudents(@Payload() findAllStudentsDto: FindAllStudentsDto) {
+    return this.authService.findAllStudents(findAllStudentsDto);
   }
 
   @MessagePattern('update.points.user') // update counter points

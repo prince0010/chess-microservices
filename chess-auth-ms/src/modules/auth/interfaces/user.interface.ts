@@ -3,6 +3,12 @@ export interface ICountAndListUsers {
   page: number;
   users: IOneUser[];
 }
+
+export interface ICountAndListStudents {
+  total: number;
+  page: number;
+  students: IOneUser[];
+}
 export interface IOneUser {
   uid: number;
   name: string;
