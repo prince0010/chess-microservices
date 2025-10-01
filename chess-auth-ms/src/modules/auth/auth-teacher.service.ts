@@ -317,18 +317,22 @@ export class AuthTeacherService {
       }
 
       // Check in both pending applications and active teachers
-      const [existingApplication, existingTeacher] = await Promise.all([
-        this.authTeacherRequestRepository.findOne({
-          where: [{ email: email.toLowerCase() }, { mobile }],
-        }),
-        this.authTeacherRepository.findOne({
-          where: [{ username: email.toLowerCase() }, { mobile }],
-        }),
-      ]);
+      const [existingApplication, existingTeacher, existingUser] =
+        await Promise.all([
+          this.authTeacherRequestRepository.findOne({
+            where: [{ email: email.toLowerCase() }, { mobile }],
+          }),
+          this.authTeacherRepository.findOne({
+            where: [{ username: email.toLowerCase() }, { mobile }],
+          }),
+          this.authRepository.findOne({
+            where: { username: email.toLowerCase() },
+          }),
+        ]);
 
-      if (existingApplication || existingTeacher) {
+      if (existingApplication || existingTeacher || existingUser) {
         throw new BadRequestException(
-          `An application already exists with this email or mobile number.`,
+          `That email or mobile already exists on our system. Please verify it or change it`,
         );
       }
 
