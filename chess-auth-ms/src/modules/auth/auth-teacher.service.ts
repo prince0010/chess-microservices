@@ -33,7 +33,7 @@ import {
 } from './interfaces';
 import { IMessage } from 'src/interfaces';
 import { UpdateApplicationStatusDto } from './dto/request-join-teacher.dto';
-import { SecurityRoles, TeacherRequestStatus } from 'src/enum';
+import { Gender, TeacherRequestStatus } from 'src/enum';
 
 @Injectable()
 export class AuthTeacherService {
@@ -397,16 +397,16 @@ export class AuthTeacherService {
 
       // STEP 2: in case approved create the teacher with the email as username and temporary password 123456
       if (status === TeacherRequestStatus.approved) {
-        const newTeacher = this.authTeacherRepository.create({
+        const newTeacher: RegisterAuthTeacherDto = {
           name: `${application.name} ${application.lastName}`,
           username: application.email,
           fideId: application.fideId ?? null,
           password: '123456',
-          roles: [SecurityRoles.TEACHER as string],
           mobile: application.mobile,
-        });
+          gender: Gender.PRIVATE,
+        };
 
-        await this.authTeacherRepository.save(newTeacher);
+        await this.register(newTeacher);
 
         return {
           msg: `Teacher with username: ${application.email} created successfully with a temporary password: 123456`,

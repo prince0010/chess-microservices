@@ -24,9 +24,17 @@ export class RegisterAuthTeacherDto {
   @MinLength(6)
   password: string;
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
-  country: string;
+  mobile?: string;
+
+  @IsOptional()
+  @IsString()
+  country?: string;
+
+  @IsOptional()
+  @IsString()
+  fideId?: string;
 
   @IsNotEmpty()
   @IsEnum(Gender, {
