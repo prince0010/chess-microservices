@@ -1,1 +1,0 @@
-import{Q as i}from"./chunk-4YI4SF3F.js";var t=class e{transform(r){return r?r.charAt(0).toUpperCase()+r.slice(1):""}static \u0275fac=function(n){return new(n||e)};static \u0275pipe=i({name:"capitalizeFirst",type:e,pure:!0})};export{t as a};

@@ -1,1 +1,0 @@
-import{E as e,w as a}from"./chunk-4YI4SF3F.js";var i=class o{toasts=e([]);add(t){this.toasts.set([...this.toasts(),t]),setTimeout(()=>this.remove(0),t.duration)}remove(t){this.toasts.set(this.toasts().filter((s,r)=>r!==t))}static \u0275fac=function(s){return new(s||o)};static \u0275prov=a({token:o,factory:o.\u0275fac,providedIn:"root"})};export{i as a};
