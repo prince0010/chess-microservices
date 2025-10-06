@@ -8,6 +8,19 @@ services:
     networks:
       - chess_production
 
+  # Permission to uploads folder
+  fix-uploads:
+    image: alpine:3.20
+    container_name: fix-uploads
+    command: >
+      sh -c "chown -R 1000:1000 /uploads &&
+             chmod -R 775 /uploads"
+    volumes:
+      - ./chess-gateway/uploads:/uploads
+    restart: "no"
+    networks:
+      - chess_production
+
   # Gateway-MS
   chess-gateway:
     container_name: chess-gateway-prod
