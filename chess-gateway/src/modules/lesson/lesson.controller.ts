@@ -1,5 +1,4 @@
 import {
-  Body,
   Controller,
   Get,
   Inject,
@@ -16,6 +15,7 @@ import { catchError } from 'rxjs';
 import { NATS_SERVICE } from 'src/config';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { SuperAdminGuard } from 'src/guards/super-admin.guard';
+import { TeacherGuard } from 'src/guards/teacher.guard';
 
 import { FindAllHistoryRecordLessonDto } from './dto/find-all-history-record-lesson.dto';
 
@@ -27,6 +27,16 @@ export class LessonController {
   @Post('seed-all-pgn-files')
   insertLessonsByPgnFile() {
     return this.client.send('lesson.insert.pgn', {}).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(SuperAdminGuard)
+  @Post('seed-all-advanced-pgn-files')
+  insertAdvancedPgnFiles() {
+    return this.client.send('lesson.insert.advancedPgn', {}).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
@@ -80,6 +90,16 @@ export class LessonController {
     );
   }
   // END TOP 100
+
+  @UseGuards(TeacherGuard)
+  @Get('/get-advanced-lesson/:id')
+  findOneAdvanced(@Param('id', ParseIntPipe) advancedLessonId: number) {
+    return this.client.send('lesson.advanced.findOne', advancedLessonId).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
 
   @UseGuards(AuthGuard)
   @Get('/:id')

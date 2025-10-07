@@ -11,6 +11,7 @@ import { LessonCompletedTest } from './entities/lesson-completed-test.entity';
 import { LessonPlayed } from './entities/lesson-played.entity';
 import { LessonParentTestRecord } from './entities/lesson-parent-test-record.entity';
 import { LessonSingleRecord } from './entities/lesson-single-record.entity';
+import { LessonAdvanced } from './entities/lesson-advanced.entity';
 
 import { LessonController } from './lesson.controller';
 import { LessonCompletedController } from './lesson-completed.controller';
@@ -47,6 +48,7 @@ import { LessonParentTestRecordService } from './lesson-parent-test-record.servi
       LessonPlayed,
       LessonParentTestRecord,
       LessonSingleRecord,
+      LessonAdvanced,
     ]),
     NatsModule,
   ],
