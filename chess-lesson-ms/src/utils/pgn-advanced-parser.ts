@@ -3,6 +3,7 @@ import * as path from 'path';
 import { RpcException } from '@nestjs/microservices';
 import * as mliebelt from '@mliebelt/pgn-parser';
 import { PgnMove } from '@mliebelt/pgn-types';
+import { Chess } from 'chess.js';
 
 import {
   AdvancedMovesTree,
@@ -10,7 +11,7 @@ import {
 } from 'src/modules/lesson/interfaces';
 
 /**
- * Parses a complex PGN file...
+ * Parses a complex PGN file into a structured format with FEN tracking.
  */
 export const parseAdvancedPgnFile = (
   filename: string,
@@ -75,8 +76,12 @@ export const parseAdvancedPgnFile = (
       };
       // ---------------------------------------------
 
+      // --- Build move tree with FEN tracking ---
+      const chess = new Chess(); // start from initial position
+      const movesTree = buildMovesTreeWithFen(game.moves, chess);
+
       // Build move tree recursively
-      const movesTree = buildMovesTree(game.moves);
+      // const movesTree = buildMovesTree(game.moves); // without fenBefore property
 
       // ✅ Serialize the result so it can be saved safely to DB
       return {
@@ -96,10 +101,12 @@ export const parseAdvancedPgnFile = (
 };
 
 /**
- * Recursively builds a nested move tree.
- * The focus is on correctly extracting comments and maintaining the move order.
+ * Recursively builds a nested move tree and tracks FEN before each move.
  */
-const buildMovesTree = (moves: any[]): AdvancedMovesTree[] => {
+const buildMovesTreeWithFen = (
+  moves: any[],
+  chess: Chess,
+): AdvancedMovesTree[] => {
   if (!moves) return [];
 
   return moves.map((move: any) => {
@@ -107,50 +114,109 @@ const buildMovesTree = (moves: any[]): AdvancedMovesTree[] => {
 
     const extractComment = (commentField: any): string | null => {
       if (!commentField) return null;
-
-      // 1. Check if it's a simple string (most common case for comments)
       if (typeof commentField === 'string' && commentField.trim().length > 0) {
         return commentField.trim();
       }
-
-      // 2. Handle it if it's an object with a 'text' property (sometimes used for complex comments)
       if (typeof commentField === 'object' && commentField.text) {
         return commentField.text.trim();
       }
-
       return null;
     };
 
-    // 1. Check for comment *before* the move (commentDiag)
     const diagComment = extractComment(move.commentDiag);
-    if (diagComment) {
-      comments.push(diagComment);
-    }
+    if (diagComment) comments.push(diagComment);
 
-    // 2. Check for comment *after* the move (simple move annotation - might be 'comment' or 'commentAfter')
     const simpleComment = extractComment(move.comment || move.commentAfter);
-    if (simpleComment) {
-      comments.push(simpleComment);
+    if (simpleComment) comments.push(simpleComment);
+
+    // Save FEN before the move
+    const fenBefore = chess.fen();
+
+    // Make the move (to advance board state)
+    try {
+      chess.move(move.notation?.notation || move.move);
+    } catch {
+      // ignore malformed moves
     }
 
     const moveNode: AdvancedMovesTree = {
-      // The moveNumber is null for Black's move if not explicitly noted
       moveNumber: move.moveNumber || null,
-      color: move.turn || null, // 'w' or 'b'
+      color: move.turn || null,
       move: move.notation?.notation || move.move || '',
-
-      comments: comments, // Use the extracted and cleaned comments array
+      comments,
       nags: move.nag || [],
-
-      // Variations is an array of move lists (PgnMove[][])
-      variations: (move.variations || []).map((variation: PgnMove[]) =>
-        buildMovesTree(variation),
-      ),
+      fenBefore, // ✅ Added FEN state before move
+      variations: [],
     };
+
+    // Process variations
+    if (move.variations && move.variations.length > 0) {
+      moveNode.variations = move.variations.map((variation: PgnMove[]) => {
+        const chessCopy = new Chess(fenBefore); // start each variation from same FEN
+        return buildMovesTreeWithFen(variation, chessCopy);
+      });
+    }
 
     return moveNode;
   });
 };
+
+/**
+ * Recursively builds a nested move tree.
+ * The focus is on correctly extracting comments and maintaining the move order.
+ */
+// const buildMovesTree = (moves: any[]): AdvancedMovesTree[] => {
+//   if (!moves) return [];
+
+//   return moves.map((move: any) => {
+//     const comments: string[] = [];
+
+//     const extractComment = (commentField: any): string | null => {
+//       if (!commentField) return null;
+
+//       // 1. Check if it's a simple string (most common case for comments)
+//       if (typeof commentField === 'string' && commentField.trim().length > 0) {
+//         return commentField.trim();
+//       }
+
+//       // 2. Handle it if it's an object with a 'text' property (sometimes used for complex comments)
+//       if (typeof commentField === 'object' && commentField.text) {
+//         return commentField.text.trim();
+//       }
+
+//       return null;
+//     };
+
+//     // 1. Check for comment *before* the move (commentDiag)
+//     const diagComment = extractComment(move.commentDiag);
+//     if (diagComment) {
+//       comments.push(diagComment);
+//     }
+
+//     // 2. Check for comment *after* the move (simple move annotation - might be 'comment' or 'commentAfter')
+//     const simpleComment = extractComment(move.comment || move.commentAfter);
+//     if (simpleComment) {
+//       comments.push(simpleComment);
+//     }
+
+//     const moveNode: AdvancedMovesTree = {
+//       // The moveNumber is null for Black's move if not explicitly noted
+//       moveNumber: move.moveNumber || null,
+//       color: move.turn || null, // 'w' or 'b'
+//       move: move.notation?.notation || move.move || '',
+
+//       comments: comments, // Use the extracted and cleaned comments array
+//       nags: move.nag || [],
+
+//       // Variations is an array of move lists (PgnMove[][])
+//       variations: (move.variations || []).map((variation: PgnMove[]) =>
+//         buildMovesTree(variation),
+//       ),
+//     };
+
+//     return moveNode;
+//   });
+// };
 
 /**
  * Extracts the general description of the game based on header or comments.

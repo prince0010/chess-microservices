@@ -20,6 +20,7 @@ export interface MetadataAdvancedLesson {
 
 export interface AdvancedMovesTree {
   // Your target output structure
+  fenBefore: string;
   moveNumber: number | null;
   color: 'w' | 'b' | null;
   move: string;
