@@ -19,19 +19,9 @@ export class LessonController {
     return this.lessonSeederService.insertAllPgnFiles();
   }
 
-  @MessagePattern('lesson.insert.advancedPgn')
-  insertAdvancedPgn() {
-    return this.lessonSeederService.insertAdvancedPgnFiles();
-  }
-
   @MessagePattern('lesson.find.one')
   findOne(@Payload() findOneLessonDto: FindOneLessonDto) {
     return this.lessonService.findOne(findOneLessonDto);
-  }
-
-  @MessagePattern('lesson.advanced.findOne')
-  findOneAdvancedLesson(@Payload() advancedLessonId: number) {
-    return this.lessonService.findOneAdvancedLessonId(advancedLessonId);
   }
 
   @MessagePattern('lesson.find.historyRecord')

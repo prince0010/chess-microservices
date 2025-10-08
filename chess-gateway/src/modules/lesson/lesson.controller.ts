@@ -18,6 +18,7 @@ import { SuperAdminGuard } from 'src/guards/super-admin.guard';
 import { TeacherGuard } from 'src/guards/teacher.guard';
 
 import { FindAllHistoryRecordLessonDto } from './dto/find-all-history-record-lesson.dto';
+import { FindAllLessonAdvancedDto } from './dto/find-all-lesson-advanced.dto';
 
 @Controller('lesson')
 export class LessonController {
@@ -99,6 +100,20 @@ export class LessonController {
         throw new RpcException(err);
       }),
     );
+  }
+
+  @UseGuards(TeacherGuard)
+  @Get('/get-list-advanced-lessons')
+  getListAdvancedLessons(
+    @Query() FindAllLessonAdvancedDto: FindAllLessonAdvancedDto,
+  ) {
+    return this.client
+      .send('lesson.advanced.findAll', FindAllLessonAdvancedDto)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
   }
 
   @UseGuards(AuthGuard)

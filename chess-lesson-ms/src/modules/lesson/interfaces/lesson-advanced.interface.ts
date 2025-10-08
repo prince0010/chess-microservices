@@ -1,3 +1,9 @@
+export interface ICountAndListAdvancedLessons {
+  page: number;
+  total: number;
+  advancedLessons: any[];
+}
+
 export interface ParsedAdvancedLesson {
   filename: string;
   metadata: MetadataAdvancedLesson;
