@@ -27,7 +27,6 @@ export class LessonAdvancedController {
   findAllAdvancedLessons(
     @Payload() findAllLessonAdvancedDto: FindAllLessonAdvancedDto,
   ) {
-    console.log('/get-list-advanced-lessons');
     return this.lessonAdvancedService.findAllAdvancedLessons(
       findAllLessonAdvancedDto,
     );
