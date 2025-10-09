@@ -9,7 +9,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 import { Lesson } from './entities/lesson.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
-import { LessonCompleted } from './entities/lesson-completed.entity';
 import { LessonSingleRecord } from './entities/lesson-single-record.entity';
 
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
@@ -26,8 +25,6 @@ export class LessonService {
     private readonly lessonRepository: Repository<Lesson>,
     @InjectRepository(LessonParent)
     private readonly lessonParentRepository: Repository<LessonParent>,
-    @InjectRepository(LessonCompleted)
-    private readonly lessonCompletedRepository: Repository<LessonCompleted>,
     @InjectRepository(LessonSingleRecord)
     private readonly lessonSingleRecordRepository: Repository<LessonSingleRecord>,
   ) {}

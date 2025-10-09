@@ -1,0 +1,147 @@
+﻿[Event "?"]
+[Site "?"]
+[Date "2023.03.04"]
+[Round "?"]
+[White "Paulsen 7.Qf3"]
+[Black "?"]
+[Result "*"]
+[ECO "B48"]
+[Annotator "A.N"]
+[PlyCount "41"]
+[EventDate "2015.??.??"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 6. Be3 a6 7. Qf3 Nf6 (7...
+b5 {Vitiugov played it a few weeks ago and he works together with Matlakov.} 8.
+Nxc6 Qxc6 (8... dxc6 9. Qg3 Qxg3 10. hxg3 Nf6 11. f3 $14) 9. Bd3 Nf6 (9... Bb7
+10. Qg3 Rc8 (10... b4 11. Ne2 Nf6 12. f3) (10... Nf6 11. f3 {This is
+considered to be good, computer also likes it, that is why Vitiugov has
+started with Nf6 instead of Bb7 to prevent this Qg3, f3.} (11. e5 Nh5 (11...
+Nd5 12. Nxd5 Qxd5 13. f3 (13. O-O d6 14. f4)) 12. Qh4 Qxg2 13. O-O-O g6)) 11.
+O-O-O b4 12. Ne2 Nf6 13. f3 Bc5 14. Bxc5 Nh5 15. Qf2 Qxc5 16. Qxc5 Rxc5 17. Kd2
+$36 {/\Ra1, a3}) 10. e5 Qxf3 11. gxf3 b4 12. exf6 bxc3 13. Bd4 cxb2 14. Rb1 g6
+(14... gxf6 15. Bxf6 Rg8 16. Bxh7 Bg7 17. Rg1 Bxf6 18. Rxg8+ Ke7 19. Kd2 $14)
+15. Rxb2 d5 (15... Bd6 $5 {better defense} 16. h4 (16. Ke2 Rb8 17. Rb3) 16...
+Rb8 (16... h5 17. Bxg6) 17. Rxb8 (17. Rb3) 17... Bxb8 18. h5 gxh5 (18... g5 19.
+h6 $14) 19. Rxh5 h6 {This does not look much, but White is playing.} 20. c4 $5
+Bb7 (20... Bf4 21. Be3) 21. Be4) 16. Rb6 (16. Be5 $5 {White must be better.})
+16... Ba3 17. h4 Kd7 (17... O-O 18. Kd2 Bd7 19. Rhb1 $14) 18. h5 gxh5 19. Rxh5
+Bd6 20. c4 $16 {Gonzalez Vidal-Vitiugov, Tsaghkadzor 2015}) (7... Ne5 8. Qg3 h5
+{I dont think anyone else would go for this line, except Giri...} 9. O-O-O (9.
+Nf5 f6 10. O-O-O (10. f4 Ng4 11. Nd4 Nxe3 12. Qxe3 Bc5 13. O-O-O Ne7) 10...
+exf5 11. Nd5 Qc6 12. Bb6 fxe4 (12... f4 13. Qxf4 Kf7 14. Qe3 d6 15. f4) 13.
+Nc7+ Kf7 14. Qb3+ d5 15. Nxa8 Ne7 {unclear. Mamedyarov, S (2759)-Giri,A (2797)
+Tbilisi GEO 2015}) 9... h4 10. Qh3 b5 11. f4 Nc4 12. Bxc4 Qxc4 13. f5 Bb7 (
+13... b4 14. Na4 Qxa2 15. b3 Nf6 16. Kd2 Nxe4+ 17. Ke2 $16) 14. Rhf1 e5 (14...
+Rc8 15. Nf3 $1 (15. fxe6 dxe6 16. Rxf7 Kxf7 17. b3 Ba3+ 18. Kb1 Qxc3 19. Qxe6+
+Kf8 20. Rf1+ Nf6 21. Rxf6+ gxf6 22. Qxf6+ Kg8 23. Qg6+ Kf8 24. Qf6+ Kg8 25.
+Qg6+ Kf8 26. Qf6+ {1/2 (26) Radjabov,T (2734)-Giri,A (2784) Wijk aan Zee NED
+2015}) 15... f6 (15... Qc7 16. fxe6 dxe6 17. Ng5 Nf6 18. Nxe6 fxe6 19. Qxe6+
+Be7 (19... Qe7 20. Qf5 Rh5 21. Bg5 $18) 20. e5 Qc6 21. Qxc6+ Bxc6 22. exf6 Bxf6
+23. Nd5 $14) (15... b4 16. Ne5 Qc7 17. fxe6 $18) (15... Nf6 16. Ne5 Qc7 17.
+Nxd7 Nxd7 18. fxe6 Ne5 19. exf7+ Nxf7 20. Bb6 $1 $18) 16. Qg4 Ne7 17. Nd2 Qc6
+18. Nb3 $40 b4 19. Na5 Qc7 20. Nxb7 Qxb7 21. fxe6 dxe6 22. Na4 $14) 15. Nb3 Qc7
+(15... b4 16. f6 $1 Bc6 (16... Qe6 17. fxg7 Bxg7 18. Na4 Qxh3 19. gxh3 Bxe4 20.
+Nb6 Rd8 21. Nc5 Bc6 22. Nxa6 $16) 17. Na5 Qe6 18. Qxe6+ dxe6 19. Nxc6 bxc3 20.
+Rd3 Nxf6 21. Rfd1 Be7 22. Bc5 $18) 16. Kb1 {Improvement of Wei Yi, but I like
+more Saric's move.} (16. Bg5 Rc8 (16... Be7 17. Bxe7 Kxe7 18. g4 $1) 17. f6 $1
+(17. Rf2 Be7 18. Bxe7 Kxe7 19. Rfd2 Nf6 20. a3 Rh6 21. Qe3 Kf8 $13 22. Kb1 Kg8
+23. Rg1 Ng4 24. Qf3 Qb6 25. Re1 Nf6 26. g4 hxg3 27. Qxg3 d6 28. Rg2 Rh7 29. Qg5
+Kf8 30. Qd2 Rxc3 31. Qxc3 Nxe4 32. Qd3 Nc3+ 33. Qxc3 Bxg2 34. Qc8+ Ke7 35. Qg8
+Qf2 36. Rd1 Be4 37. Rd2 Qg1+ 38. Ka2 Bxf5 39. Qb8 Rh6 40. Rd5 Bd7 41. Qb7 Qg4
+42. Na5 Kf6 43. b3 Rxh2 44. Rxd6+ Be6 45. Kb2 Qf4 46. Nc6 Rh1 47. Qe7+ Kf5 {
+0-1 (47) Saric,I (2666)-Giri,A (2784) Wijk aan Zee NED 2015}) 17... gxf6 (17...
+b4 18. fxg7 Bxg7 19. Rxf7 $1 bxc3 20. Rdxd7 cxb2+ 21. Kxb2 Qxc2+ 22. Ka3 $18)
+18. Bxf6 Nxf6 (18... Rh6 19. Bg5) 19. Rxf6 b4 20. Rxf7 bxc3 21. Rfxd7 (21.
+Rdxd7 cxb2+ 22. Kxb2 Qxc2+ 23. Ka1 Rc6 24. Rd2 $1 Kxf7 25. Rxc2 Rxc2 26. Qf5+
+$11) 21... cxb2+ 22. Kxb2 Qxc2+ 23. Ka1 Rh6 $1 24. Qf3 Qc3+ $1 25. Qxc3 Rxc3
+26. Rxb7 Rf6 {Black holds, but ok...worth a try}) 16... Rc8 $2 (16... Nf6 $1
+17. Nd5 $13 (17. g4 b4 (17... Nxe4 18. Nd5 Bxd5 19. Rxd5 {should be strong
+compensation.}) 18. Nd5 Nxd5 19. exd5 a5)) (16... b4 17. Nd5 Bxd5 18. Rxd5 Nf6
+(18... a5 19. Rb5 a4 20. Nd2 $14) 19. Ra5 $1 $14 Nxe4 $2 20. Qf3 $18) 17. f6 $1
+Nxf6 18. Rxf6 gxf6 19. Bb6 Qc6 20. Na5 Qe6 21. Nxb7 Rb8 (21... Qxh3 22. gxh3
+Rb8 23. Nd6+ Bxd6 24. Rxd6) 22. Nd5 $1 Rxb7 (22... Qxh3 23. Nc7+ Ke7 24. Bc5+
+d6 25. Rxd6 $1 $18) 23. Qc3 $1 $18 Qc6 24. Nxf6+ Ke7 25. Bd8+ Ke6 26. Qh3# {
+1-0 (26) Wei Yi (2675)-Haast,A (2352) Wijk aan Zee NED 2015}) (7... Bd6 $5 8.
+O-O-O Be5 9. g3 $5 {This is the latest development of the theory. White wants
+to go Qe2 and f4. It looks pleasant for white indeed!} Nf6 (9... Nge7 10. Qe2
+O-O 11. f4 Bxd4 12. Bxd4 Nxd4 13. Rxd4 b5 14. Bg2) (9... b5 10. Qe2 Nxd4 11.
+Bxd4 Bxd4 12. Rxd4 Ne7 13. Bg2 Nc6 14. Rd2) 10. Qe2 b5 (10... O-O 11. f4 Bxd4
+12. Bxd4 Nxd4 13. Rxd4 $14 d6 14. Qd2 b5 15. Bg2 Bb7 16. a3 Rfd8 17. Rd1 $14)
+11. f4 Bxd4 12. Bxd4 Nxd4 13. Rxd4 Qc5 (13... e5 14. fxe5 (14. Nd5 $5) 14...
+Qxe5 15. Qd2 O-O 16. Bg2 Bb7 17. Rf1 $14) 14. Rd3 (14. Qd2 Bb7 15. Bg2 O-O 16.
+Rd1 e5 17. fxe5 Qxe5 18. Rf1 $14) 14... Bb7 (14... b4 15. e5 bxc3 16. Rxc3) 15.
+Bg2 e5 (15... b4 16. e5) 16. Nd5 $14) (7... Bb4 8. Nxc6 bxc6 (8... Qxc6 9. Bd4)
+9. Bf4 Bd6 (9... d6 10. Qg3) (9... e5 $2 10. Qg3 $1) 10. Bxd6 Qxd6 11. Rd1 (11.
+Qe3 Ne7 12. Bd3) 11... Qe5 12. Qg3 Qxg3 13. hxg3 $14) (7... Nxd4 8. Bxd4 Ne7 9.
+Qe3 b5 10. O-O-O Bb7 11. f4 (11. a3 Rc8 12. Kb1 $14) 11... f6 (11... b4 12. Na4
+$14) 12. Be2 Rc8 13. Rd2 h5 14. Rhd1 Bc6 15. Bf3 $16 {Oparin,G (2543)
+-Morozevich,A (2712) Moscow RUS 2014}) 8. O-O-O Ne5 (8... Bb4 9. Nxc6 bxc6 10.
+Bd4 Bd6 11. Na4 O-O (11... Be5 12. Bxe5 Qxe5 13. Nb6 Rb8 14. Nc4 Qg5+ 15. Rd2
+O-O 16. e5 $16) (11... Rb8 $2 12. Bb6 $1) 12. Bxf6 gxf6 (12... Bf4+ 13. Kb1
+gxf6 14. Qg4+ Kh8 15. Qh4 Kg7 (15... Bg5 16. Qh5) 16. Bd3 $16) 13. Qxf6 (13.
+Rxd6 $5 Qxd6 14. Qxf6 {looks strong as well.}) 13... Be5 14. Qh4) (8... Be7 9.
+Be2 O-O 10. Qg3 d6 11. f4 Bd7 12. e5 (12. Kb1 Rac8 13. Bd3 Nb4) 12... dxe5 (
+12... Ne8 13. Kb1 b5 14. Nf3 (14. Bd3 Rc8 15. a3 (15. Ne4 Nb4) (15. Qh3 g6 16.
+Qh6 dxe5 17. Nf3 $13) (15. Rhf1)) 14... Rc8 15. Rd2 (15. Ne4 Nxe5 16. fxe5
+Qxc2+ 17. Ka1 Qxe4) 15... d5 (15... dxe5 16. fxe5) (15... b4 16. Ne4 d5 17. Nc5
+) 16. Bd3 (16. f5 b4 17. f6 Bxf6 18. Nxd5 exd5 19. exf6 Qxg3 20. hxg3 Nxf6 21.
+Bxa6 Ra8 $13) 16... f5 17. Ne2) 13. fxe5 Nxe5 (13... Ne8) 14. Nf3 Nfg4 15. Bf4
+Bf6 16. Ne4 Rac8 17. Rd2 Kh8 18. Nxf6 gxf6 19. h3) 9. Qg3 b5 10. f4 (10. Ndxb5
+axb5 11. Nxb5 Qb8 12. Bd4 d6 13. Bxe5 dxe5 14. Qc3 Be7 (14... Nxe4 15. Qc6+ Ke7
+16. Qxe4 Rxa2 $13) 15. Nc7+ Kf8 16. Nxa8 Qxa8 $13) 10... Neg4 11. Bg1 h5 $5 {
+This leads to very difficult positions, but White might hope for an advantage
+after some subtle moves...} (11... b4 12. Na4 Nh6 {Finally, I believe I found
+something here after long fight with the computer!} (12... h5 13. Bd3 Bb7 14.
+h3 Nh6 15. Qf3 {very playble for White}) 13. e5 Nd5 (13... Ne4 14. Qe3 $1 Bb7
+15. Nb3 $1) 14. b3 Bb7 15. Bc4 Rc8 (15... d6 16. f5 $1 dxe5 17. fxe6 f6 (17...
+exd4 18. Qxc7 Nxc7 19. exf7+ Nxf7 20. Bxd4 $16) 18. Ne2 Rc8 (18... Rd8 19. Bf2)
+19. Qf2 $1 Be7 20. Qa7 Ra8 21. Qxb7 Qxb7 22. Bxd5 Qb5 (22... Qb8 23. Nb6 Ra7
+24. Bc6+ Kf8 25. Nd7+ Rxd7 26. Rxd7 $16) 23. Bxa8 Qxe2 24. Bc6+ Kf8 25. Bf3 Qb5
+26. Rd5 Qf1+ 27. Kb2 g5 28. Rd8+ $1 Kg7 29. Rd1 Qb5 30. Rd7 $16) 16. Kb1 Qa5 (
+16... g6 17. h4 Be7 (17... Nf5 18. Nxf5 gxf5 19. Bd4 $14 {/\Rd2-Bxd5 and Nb6.})
+18. h5 Rg8 19. hxg6 Rxg6 20. Qd3 $14 Nxf4 21. Qd2 Bg5 22. Be3 $18) 17. Bxd5
+Bxd5 (17... Qxd5 18. Rd2 Qe4 19. h3 $1 Qg6 (19... Be7 20. Bh2 $1 O-O 21. Qf2
+$14) 20. Qf2 Be7 21. Bh2 O-O 22. Rhd1 $14) 18. Bf2 g6 (18... Qc7 19. Rd2) 19.
+Qh3 Ng8 (19... Bg7 20. Rhe1 O-O 21. g4 $14) 20. Rd2 Ne7 21. Bh4 $14) 12. e5 (
+12. h3 b4 13. Nd5 exd5 14. hxg4 Nxe4 15. Qe3 {hard to estimate how strong is
+the compensation}) 12... b4 13. Nb1 $5 Nd5 (13... Ne4 14. Qe1 Bb7 15. Nd2 Nxd2
+16. Rxd2 $1 {/\Bd3-e4}) 14. Nd2 (14. h3 Nh6 15. Nd2 Bb7 16. Nc4 g6 17. Kb1 Rc8
+18. Bd3 Be7 {playable for both sides.}) 14... Bb7 (14... g5 15. fxg5 Nxe5 16.
+Re1 Bg7 17. h3 $1 {/\Bh2}) 15. Nc4 g6 $1 (15... Rc8 16. f5) 16. Kb1 Be7 17. h3
+Nh6 18. Qf2 h4 19. Rh2 $1 Rc8 20. g4 hxg3 21. Qxg3 {White's chances seem to be
+preferable, but of course the position remains difficult. h4-h5 maybe.} *
+
+[Event "?"]
+[Site "?"]
+[Date "2023.03.04"]
+[Round "?"]
+[White "Sicilian Taïmanov"]
+[Black "with Be3...Qf3"]
+[Result "*"]
+[ECO "B48"]
+[Annotator "A.N"]
+[PlyCount "51"]
+[EventDate "2015.??.??"]
+[SourceDate "2012.10.02"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 6. Be3 a6 7. Qf3 Nf6 8.
+O-O-O Nxd4 9. Bxd4 e5 10. Be3 d6 11. h3 (11. Nd5 Nxd5 12. exd5 f5) (11. Bd3 Be7
+(11... b5 12. Nd5 Nxd5 13. exd5 g6 14. g4 Bg7 15. h4 $14) 12. h3 (12. Nd5 Nxd5
+13. exd5 f5 $1) (12. Qg3 O-O 13. f4 Nh5 (13... b5) (13... exf4 14. Qxf4 Be6 (
+14... Ng4 15. Nd5 Qd8 16. Bd2 Ne5 17. Be2 $14 (17. Be2 Be6 $140 18. Nxe7+ Qxe7
+19. Bb4 $1 $16)) 15. Nd5 Bxd5 16. exd5 Nd7 $1 17. Qe4 (17. h4 Ne5 18. h5 $13)
+17... Nf6 18. Qh4 g6 (18... Rfe8) 19. Bh6 Rfe8 20. Rhe1 Nh5 21. Qf2 Bf8 22. Bg5
+$13 (22. Bg5 Bg7 23. g4)) 14. Qf3 Nxf4 15. Bxf4 exf4 16. Nd5 Qd8 17. Kb1 Bg5
+$13) 12... b5 13. Kb1 b4 14. Nd5 Nxd5 15. exd5 f5 16. Qh5+ g6 17. Qe2 O-O)
+11... b5 12. Bd3 (12. g4 b4 13. Nd5 Nxd5 14. exd5 a5 15. Qe4 Be7 16. f4 (16.
+Bb5+ Bd7 17. Bd3 g6 $13) 16... exf4 17. Bd4 O-O 18. Bd3 f5 19. Qxf4) 12... b4
+13. Nd5 Nxd5 14. exd5 a5 15. Kb1 (15. Qg3 f5) 15... Be7 16. g4 O-O 17. g5 Ba6
+18. Qe4 (18. Rc1 b3 $1) 18... g6 (18... Bxd3 19. cxd3 b3 20. a3 $13 {despite
+computer evaluating 0.00 it seems not easy for Black}) 19. h4 Rfc8 20. h5 (20.
+Rc1 Qd7 21. Bxa6 Rxa6 22. f4 Qf5 23. Qxf5 gxf5 24. c3 bxc3 25. Rxc3 Rxc3 26.
+bxc3 Ra8 27. Kc2 Rb8 28. Rf1 e4 29. a4 Kf8 30. h5 Ke8 31. Rg1 Kd7 32. Bd4 Kc7
+33. g6 fxg6 34. hxg6 hxg6 35. Rxg6 Rf8 36. Rg7 Kd7 37. c4 Ke8 38. Kc3 Bh4 39.
+Ra7 Be1+ 40. Kc2 Rg8 41. Ra8+ Kf7 42. Ra7+ Ke8 43. Ra8+ {1/2-1/2 (43) Caruana,
+F (2804)-Harikrishna,P (2763) Shamkir AZE 2016}) 20... Bxd3 21. cxd3 Qc2+ 22.
+Ka1 a4 23. Rc1 Qe2 24. Rxc8+ Rxc8 25. hxg6 hxg6 26. Qxb4 $16 *
+

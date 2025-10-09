@@ -64,23 +64,23 @@ export class PandaService {
       // STEP 2: update feed and sleep values
       switch (pandaFunction) {
         case PandaFunction.SPEND_EXTRA_LIFE:
-          if (pandaRow.feedValue > 9) {
+          if (pandaRow.feedValue >= 10) {
             pandaRow.feedValue -= 10;
           }
           break;
         case PandaFunction.SPEND_EXTRA_TIME:
-          if (pandaRow.sleepValue > 9) {
+          if (pandaRow.sleepValue >= 10) {
             pandaRow.sleepValue -= 10;
           }
           break;
         case PandaFunction.ADD_EXTRA_LIFE:
-          if (pandaRow.feedValue < 21) {
+          if (pandaRow.feedValue <= 20) {
             pandaRow.feedValue += 10;
             spentPoints = PandaPointsConsumedByAction.POINTS_BY_FEED;
           }
           break;
         case PandaFunction.ADD_EXTRA_TIME:
-          if (pandaRow.sleepValue < 21) {
+          if (pandaRow.sleepValue <= 20) {
             pandaRow.sleepValue += 10;
             spentPoints = PandaPointsConsumedByAction.POINTS_BY_SLEEP;
           }
@@ -157,7 +157,6 @@ export class PandaService {
     const periods = Math.floor(diffMs / MS_IN_DAY);
     if (periods > 0) {
       const deduction = periods * 10;
-
       pandaRow.feedValue = Math.max(0, pandaRow.feedValue - deduction);
       pandaRow.sleepValue = Math.max(0, pandaRow.sleepValue - deduction);
     }

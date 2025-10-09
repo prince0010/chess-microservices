@@ -5,7 +5,10 @@ import { DataSource, Repository } from 'typeorm';
 
 import { Lesson } from './entities/lesson.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
+import { LessonAdvanced } from './entities/lesson-advanced.entity';
 import { parseHintPgnFile, parseNormalPgnFile } from 'src/utils/pgn-parser';
+import { parseAdvancedPgnFile } from 'src/utils/pgn-advanced-parser';
+import { lessonAdvancedFilenames } from './seed/lesson-advanced-data-seed';
 
 @Injectable()
 export class LessonSeederService {
@@ -15,7 +18,32 @@ export class LessonSeederService {
     private readonly lessonParentRepository: Repository<LessonParent>,
     @InjectRepository(Lesson)
     private readonly lessonRepository: Repository<Lesson>,
+    @InjectRepository(LessonAdvanced)
+    private readonly lessonAdvancedRepository: Repository<LessonAdvanced>,
   ) {}
+
+  async insertAdvancedPgnFiles(): Promise<string> {
+    try {
+      const insertedFilenamesArr: string[] = [];
+      for (const filename of lessonAdvancedFilenames) {
+        const existingLessonAdvanced =
+          await this.lessonAdvancedRepository.findOneBy({ filename });
+
+        if (existingLessonAdvanced) continue;
+
+        await this.insertAdvancedLessons(filename);
+
+        insertedFilenamesArr.push(filename);
+      }
+
+      return `These advanced pgn filenames were inserted: [${insertedFilenamesArr.join(', ')}]`;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
 
   async insertAllPgnFiles(): Promise<string> {
     try {
@@ -48,6 +76,33 @@ export class LessonSeederService {
       }
 
       return `These pgn filenames were inserted: [${insertedFilenamesArr.join(', ')}]`;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  // advanced pgn files for teachers coaches
+  async insertAdvancedLessons(filename: string): Promise<void> {
+    try {
+      const lessonAdvancedRepository =
+        this.dataSource.getRepository(LessonAdvanced);
+
+      let pathFile: string = `/usr/src/app/files/${filename}`;
+
+      // Parse advanced PGN file
+      const lessons = parseAdvancedPgnFile(filename, pathFile);
+
+      if (lessons.length === 0) {
+        console.error(
+          `PGN file with name: ${filename} is empty. No content inside that PGN file`,
+        );
+      }
+
+      // Insert advanced lessons into database
+      await lessonAdvancedRepository.insert(lessons);
     } catch (error) {
       throw new RpcException({
         status: 400,
