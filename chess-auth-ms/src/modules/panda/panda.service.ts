@@ -58,6 +58,14 @@ export class PandaService {
     try {
       let spentPoints = 0;
 
+      // STEP 0: make sure to verify lastCorrectPuzzleAt before call findOne to avoid clear feedValue and sleepValue
+      if (
+        pandaFunction === PandaFunction.ADD_EXTRA_LIFE ||
+        pandaFunction === PandaFunction.ADD_EXTRA_TIME
+      ) {
+        await this.updateLastCorrectPuzzleAt(userUid);
+      }
+
       // STEP 1: update state values
       const pandaRow = await this.findOne(userUid);
 
@@ -122,6 +130,7 @@ export class PandaService {
     }
   }
 
+  // update lastCorrectPuzzleAt when player solve a puzzle or feed || sleep panda
   async updateLastCorrectPuzzleAt(userUid: number): Promise<void> {
     try {
       const pandaRow = await this.authPandaRepository.findOne({
