@@ -3,3 +3,7 @@ node_modules/
 .env.production
 .env.testing
 .env.development
+
+# Ignore uploaded files
+chess-gateway/uploads/*
+!chess-gateway/uploads/.gitkeep
