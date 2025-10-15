@@ -11,6 +11,19 @@ services:
     networks:
       - chess_development
 
+  # Container advisor - google HTTP lightweight metric
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    ports:
+      - "9090:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    restart: always
+
   # Gateway-MS
   chess-gateway-dev:
     container_name: chess-gateway-dev
