@@ -57,3 +57,14 @@ This repo in github will host all chess Microservices.
 ## Failed lesson logic to track in lessons record
 
 - When Player is completing a lesson parent needs to pass certain lessons and have 3 lives. In case the player lost those 3 lives the database needs to store the lessonId where he lost the third 3 life.
+
+## Monitoring Server Resources with cadvisor - prometheus - grafana
+
+1. New Files added to root directory to be able to monitoring
+   `dir/
+    |- prometheus.yml
+    |- datasources.yml
+    |- dashboard.json
+    |- default.yaml
+`
+2. Every docker-compose file was updated with new 3 services cadvisor - prometheus and grafana
