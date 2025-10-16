@@ -36,8 +36,6 @@ export const parseAdvancedPgnFile = (
       ? (parsed as mliebelt.ParseTree[])
       : [parsed as mliebelt.ParseTree];
 
-    // console.log('parsed file from mliebelt package: ', parsed[0]);
-
     return games.map((game) => {
       const headers = Object.fromEntries(
         (game.tags ? Object.entries(game.tags) : []).map(([key, value]) => [

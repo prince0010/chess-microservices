@@ -1,7 +1,10 @@
 {
   "cSpell.words": [
+    "allkeys",
     "cadvisor",
     "grafana",
+    "loglevel",
+    "maxmemory",
     "mliebelt",
     "msword",
     "Nodemailer",
@@ -9,6 +12,7 @@
     "openxmlformats",
     "originalname",
     "prometheus",
+    "redis",
     "rootfs",
     "timepicker",
     "wordprocessingml"
