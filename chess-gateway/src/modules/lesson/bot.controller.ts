@@ -13,12 +13,13 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
-import { catchError } from 'rxjs';
+import { catchError, firstValueFrom } from 'rxjs';
 
 import { NATS_SERVICE } from 'src/config';
 import { AdminGuard } from 'src/guards/admin.guard';
 import { AuthGuard } from 'src/guards/auth.guard';
 import { SuperAdminGuard } from 'src/guards/super-admin.guard';
+import { RedisService } from '../redis/redis.service';
 
 import { CreateBotDto, UpdateBotDto } from './dto/create-bot.dto';
 import { CounterBotUserHistoryDto } from './dto/counter-bot-user-history.dto';
@@ -26,7 +27,10 @@ import { FindAllBotsDto } from './dto/find-all-bots.dto';
 
 @Controller('bot')
 export class BotController {
-  constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
+  constructor(
+    @Inject(NATS_SERVICE) private readonly client: ClientProxy,
+    private readonly redisService: RedisService,
+  ) {}
 
   @UseGuards(SuperAdminGuard)
   @Post('seed-animal-bots')
@@ -75,16 +79,29 @@ export class BotController {
 
   @UseGuards(AuthGuard)
   @Get('/:id')
-  findOne(@Param('id', ParseIntPipe) id: string, @Req() req: any) {
+  async findOne(@Param('id', ParseIntPipe) id: string, @Req() req: any) {
+    const cacheKey = `bot-find-one-${id}`;
+    const cached = await this.redisService.get(cacheKey);
+
+    if (cached) {
+      return cached;
+    }
+
     const payload = {
       botId: +id,
       userUid: +req.user.uid,
     };
-    return this.client.send('bot.find.one', payload).pipe(
-      catchError((err) => {
-        throw new RpcException(err);
-      }),
+    const result = await firstValueFrom(
+      this.client.send('bot.find.one', payload).pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      ),
     );
+
+    await this.redisService.set(cacheKey, result, 3000); // large TTL
+
+    return result;
   }
 
   @UseGuards(AdminGuard)

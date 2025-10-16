@@ -7,3 +7,6 @@ node_modules/
 # Ignore uploaded files
 chess-gateway/uploads/*
 !chess-gateway/uploads/.gitkeep
+
+# redis to cache data volume
+redis-data/

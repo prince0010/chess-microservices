@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 
 import { NatsModule } from '../transports/nats.module';
+import { RedisModule } from '../redis/redis.module';
+
 import { BotController } from './bot.controller';
 import { LessonController } from './lesson.controller';
 import { LessonParentController } from './lesson-parent.controller';
@@ -15,6 +17,6 @@ import { LessonParentTestRecordController } from './lesson-parent-test-record.co
     BotRecordGameController,
     LessonParentTestRecordController,
   ],
-  imports: [NatsModule],
+  imports: [NatsModule, RedisModule],
 })
 export class LessonModule {}

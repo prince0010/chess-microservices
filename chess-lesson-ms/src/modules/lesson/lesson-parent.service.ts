@@ -14,6 +14,7 @@ import { LessonPlayed } from './entities/lesson-played.entity';
 import { LessonParentTestRecord } from './entities/lesson-parent-test-record.entity';
 
 import { LessonService } from './lesson.service';
+import { RedisService } from '../redis/redis.service';
 import { transformSingleLessons } from './helpers/transform-lesson.helper';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
@@ -55,6 +56,7 @@ export class LessonParentService {
     @InjectRepository(LessonParentTestRecord)
     private readonly lessonParentTestRecordRepository: Repository<LessonParentTestRecord>,
     private readonly lessonService: LessonService,
+    private readonly redisService: RedisService,
   ) {}
 
   async seedLessonsParents(): Promise<string> {
@@ -167,6 +169,14 @@ export class LessonParentService {
         return await this.selectRandomTestLessonsByLevel(lessonParent, userUid);
       }
 
+      // if not test verify if exists cache - implement redis cached
+      const cacheKey = `lesson-parent-find-one-${lessonParentId}-${userUid}`;
+      const cached = await this.redisService.get(cacheKey);
+
+      if (cached) {
+        return cached;
+      }
+
       const { lessonsLength, lessonsCompleted } =
         await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
 
@@ -197,6 +207,9 @@ export class LessonParentService {
           lessonParent.lessons[0].id - 1,
         lessons: transformSingleLessons(lessonParent.lessons),
       };
+
+      // cache result
+      await this.redisService.set(cacheKey, result, 6000); // large TTL
 
       return result;
     } catch (error) {

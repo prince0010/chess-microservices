@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { Logger, RequestMethod, ValidationPipe } from '@nestjs/common';
+import * as compression from 'compression';
 
 import { AppModule } from './app.module';
 import { RpcCustomExceptionFilter } from './common';
@@ -58,6 +59,8 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
     }),
   );
+
+  app.use(compression());
 
   app.useGlobalFilters(new RpcCustomExceptionFilter());
 

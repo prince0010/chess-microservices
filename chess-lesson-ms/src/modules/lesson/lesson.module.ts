@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { NatsModule } from '../transports/nats.module';
+import { RedisModule } from '../redis/redis.module';
 
 import { Lesson } from './entities/lesson.entity';
 import { LessonCompleted } from './entities/lesson-completed.entity';
@@ -55,6 +56,7 @@ import { LessonAdvancedService } from './lesson-advanced.service';
       LessonAdvanced,
     ]),
     NatsModule,
+    RedisModule,
   ],
   exports: [TypeOrmModule],
 })

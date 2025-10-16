@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigDB } from './db/config';
 import { BotModule } from './modules/bot/bot.module';
 import { LessonModule } from './modules/lesson/lesson.module';
+import { RedisModule } from './modules/redis/redis.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { LessonModule } from './modules/lesson/lesson.module';
     }),
     BotModule,
     LessonModule,
+    RedisModule,
   ],
   controllers: [],
   providers: [],

@@ -57,6 +57,23 @@ services:
     networks:
       - chess_testing
 
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    command: >
+      redis-server
+      --save 60 1
+      --loglevel warning
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+    volumes:
+      - ./redis-data:/data
+    networks:
+      - chess_testing
+
   # Permission to uploads folder
   fix-uploads:
     image: alpine:3.20
@@ -85,6 +102,8 @@ services:
     volumes:
       - ./chess-gateway/public:/usr/src/app/public
       - ./chess-gateway/uploads:/usr/src/app/uploads
+    depends_on:
+      - redis
     networks:
       - chess_testing
 

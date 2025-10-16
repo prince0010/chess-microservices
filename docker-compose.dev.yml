@@ -60,6 +60,23 @@ services:
     networks:
       - chess_development
 
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    command: >
+      redis-server
+      --save 60 1
+      --loglevel warning
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+    volumes:
+      - ./redis-data:/data
+    networks:
+      - chess_development
+
   # Gateway-MS
   chess-gateway-dev:
     container_name: chess-gateway-dev
@@ -70,6 +87,8 @@ services:
     command: npm run start:dev
     env_file:
       - .env
+    depends_on:
+      - redis
     volumes:
       - ./chess-gateway/src:/usr/src/app/src
       - ./chess-gateway/public:/usr/src/app/public
