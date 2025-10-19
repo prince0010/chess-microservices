@@ -55,10 +55,14 @@ export class AuthService {
       const existsUsername = await this.authRepository.findOneBy({
         username: username.toLowerCase(),
       });
+      const existsTeacherWithUsername =
+        await this.authTeacherRepository.findOneBy({
+          username: username.toLowerCase(),
+        });
 
-      if (existsUsername) {
+      if (existsUsername || existsTeacherWithUsername) {
         throw new BadRequestException(
-          `Someone with the username: ${existsUsername.username} already exists.`,
+          `Someone with the username: ${username} already exists.`,
         );
       }
 
@@ -159,7 +163,7 @@ export class AuthService {
   }
 
   async login(loginAuthDto: LoginAuthDto) {
-    const { username, password } = loginAuthDto;
+    const { username, password, fromWebsite = null } = loginAuthDto;
 
     try {
       let user: Auth | AuthTeacher | null = null;
@@ -169,9 +173,36 @@ export class AuthService {
         .where('LOWER(user.username) = LOWER(:username)', { username })
         .getOne();
 
+      // it is a player or admin
       if (userAuth) {
         user = userAuth;
+
+        // Rule 1. Players can not login from website
+        if (fromWebsite && userAuth.roles[0] === SecurityRoles.PLAYER) {
+          throw new RpcException({
+            status: 400,
+            message: 'Students authentication only on We Chess APP.',
+          });
+        }
+
+        // Rule 2. Only players can login from APP
+        if (!fromWebsite && userAuth.roles[0] !== SecurityRoles.PLAYER) {
+          throw new RpcException({
+            status: 400,
+            message: 'Player not found.',
+          });
+        }
+
+        // it is a teacher
       } else {
+        // if come from app not student or player found
+        if (!fromWebsite) {
+          throw new RpcException({
+            status: 400,
+            message: 'Player not found.',
+          });
+        }
+
         const userTeacher = await this.authTeacherRepository.findOneBy({
           username: username.toLowerCase(),
         });
