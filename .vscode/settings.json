@@ -3,6 +3,7 @@
     "allkeys",
     "cadvisor",
     "grafana",
+    "lichess",
     "loglevel",
     "maxmemory",
     "mliebelt",

@@ -50,15 +50,10 @@ export class LessonAdvancedService {
       const [advancedLessons, total] =
         await this.lessonAdvancedRepository.findAndCount(findOptions);
 
-      const filteredLessons = advancedLessons.map((lesson) => {
-        const { movesTree, ...restLesson } = lesson;
-        return { ...restLesson };
-      });
-
       return {
         total,
         page,
-        advancedLessons: filteredLessons,
+        advancedLessons,
       };
     } catch (error) {
       throw new RpcException({
@@ -81,17 +76,7 @@ export class LessonAdvancedService {
         );
       }
 
-      return {
-        ...advancedLesson,
-        metadata:
-          typeof advancedLesson.metadata === 'string'
-            ? JSON.parse(advancedLesson.metadata)
-            : advancedLesson.metadata,
-        movesTree:
-          typeof advancedLesson.movesTree === 'string'
-            ? JSON.parse(advancedLesson.movesTree)
-            : advancedLesson.movesTree,
-      };
+      return advancedLesson;
     } catch (error) {
       throw new RpcException({
         status: 400,
