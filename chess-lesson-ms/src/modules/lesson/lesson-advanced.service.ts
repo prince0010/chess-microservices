@@ -50,10 +50,15 @@ export class LessonAdvancedService {
       const [advancedLessons, total] =
         await this.lessonAdvancedRepository.findAndCount(findOptions);
 
+      const filteredLessons = advancedLessons.map((lesson) => {
+        const { movesTree, ...restLesson } = lesson;
+        return { ...restLesson };
+      });
+
       return {
         total,
         page,
-        advancedLessons,
+        advancedLessons: filteredLessons,
       };
     } catch (error) {
       throw new RpcException({
@@ -70,13 +75,50 @@ export class LessonAdvancedService {
       const advancedLesson = await this.lessonAdvancedRepository.findOneBy({
         id: advancedLessonId,
       });
+
       if (!advancedLesson) {
         throw new BadRequestException(
           `Advanced Lesson with ID: ${advancedLessonId} not found`,
         );
       }
 
-      return advancedLesson;
+      // ✅ Parse metadata and movesTree safely
+      const metadata =
+        typeof advancedLesson.metadata === 'string'
+          ? JSON.parse(advancedLesson.metadata)
+          : advancedLesson.metadata;
+
+      const movesTree =
+        typeof advancedLesson.movesTree === 'string'
+          ? JSON.parse(advancedLesson.movesTree)
+          : advancedLesson.movesTree;
+
+      // // ✅ Define your recursive function
+      // const maxDepth = (node: any, depth = 1): number =>
+      //   node?.variations?.length
+      //     ? Math.max(
+      //         ...node.variations.map((v: any[]) =>
+      //           Math.max(...v.map((m: any) => maxDepth(m, depth + 1))),
+      //         ),
+      //       )
+      //     : depth;
+
+      // // ✅ Compute and log max variation depth (only if movesTree exists)
+      // if (Array.isArray(movesTree) && movesTree.length > 0) {
+      //   const maxVariationDepth = Math.max(
+      //     ...movesTree.map((m: any) => maxDepth(m)),
+      //   );
+      //   console.log('🧩 Max variation depth:', maxVariationDepth);
+      // } else {
+      //   console.log('⚠️ No movesTree data available to compute depth');
+      // }
+
+      // ✅ Return the structured lesson
+      return {
+        ...advancedLesson,
+        metadata,
+        movesTree,
+      };
     } catch (error) {
       throw new RpcException({
         status: 400,
