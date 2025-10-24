@@ -121,10 +121,6 @@ const safeLoadFen = (chess: Chess, fen: string | undefined): boolean => {
     chess.load(normalized);
     return true;
   } catch (err) {
-    console.warn(
-      `Warning: header FEN is invalid, ignoring and using start position. FEN: "${fen}"`,
-      err,
-    );
     chess.reset();
     return false;
   }
@@ -198,15 +194,6 @@ const buildMovesTreeWithFen = (
           appliedSuccessfully = !!res2;
         }
       } catch {}
-    }
-
-    // If still not applied, **do not throw**; we want to keep the tree but mark it if necessary.
-    if (!appliedSuccessfully) {
-      console.warn(
-        `Warning: move not applied while parsing: "${moveNotation}" at fen ${fenBefore}`,
-      );
-      // we do NOT advance the chess state, so subsequent fenBefore values may be incorrect.
-      // To be safe for the rest of the mainline, attempt to apply nothing and continue.
     }
 
     const moveNode: AdvancedMovesTree = {
