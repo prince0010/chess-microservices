@@ -9,6 +9,7 @@ import { LessonAdvanced } from './entities/lesson-advanced.entity';
 import { parseHintPgnFile, parseNormalPgnFile } from 'src/utils/pgn-parser';
 import { parseAdvancedPgnFile } from 'src/utils/pgn-advanced-parser';
 import { lessonAdvancedFilenames } from './seed/lesson-advanced-data-seed';
+import { IAdvancedLessonSeed } from './interfaces';
 
 @Injectable()
 export class LessonSeederService {
@@ -25,13 +26,14 @@ export class LessonSeederService {
   async insertAdvancedPgnFiles(): Promise<string> {
     try {
       const insertedFilenamesArr: string[] = [];
-      for (const filename of lessonAdvancedFilenames) {
+      for (const item of lessonAdvancedFilenames) {
+        const { filename, folder } = item;
         const existingLessonAdvanced =
           await this.lessonAdvancedRepository.findOneBy({ filename });
 
         if (existingLessonAdvanced) continue;
 
-        await this.insertAdvancedLessons(filename);
+        await this.insertAdvancedLessons(item);
 
         insertedFilenamesArr.push(filename);
       }
@@ -85,15 +87,17 @@ export class LessonSeederService {
   }
 
   // advanced pgn files for teachers coaches
-  async insertAdvancedLessons(filename: string): Promise<void> {
+  async insertAdvancedLessons(item: IAdvancedLessonSeed): Promise<void> {
     try {
+      const { filename } = item;
+
       const lessonAdvancedRepository =
         this.dataSource.getRepository(LessonAdvanced);
 
       let pathFile: string = `/usr/src/app/files/${filename}`;
 
       // Parse advanced PGN file
-      const lessons = parseAdvancedPgnFile(filename, pathFile);
+      const lessons = parseAdvancedPgnFile(item, pathFile);
 
       if (lessons.length === 0) {
         console.error(
@@ -101,8 +105,10 @@ export class LessonSeederService {
         );
       }
 
-      // Insert advanced lessons into database
-      await lessonAdvancedRepository.insert(lessons);
+      // Insert advanced lessons into database (batch per record to avoid packet overload)
+      for (const lesson of lessons) {
+        await lessonAdvancedRepository.insert(lesson);
+      }
     } catch (error) {
       throw new RpcException({
         status: 400,

@@ -1,0 +1,7 @@
+export enum FolderAdvancedLesson {
+  ADVANCED = 'ADVANCED',
+  EDUCATION = 'EDUCATION',
+  PUZZLE = 'PUZZLE',
+  MIDDLEGAME = 'MIDDLEGAME',
+  ENDGAME = 'ENDGAME',
+}

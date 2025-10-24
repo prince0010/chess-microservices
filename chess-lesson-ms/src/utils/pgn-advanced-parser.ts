@@ -7,6 +7,7 @@ import { Chess } from 'chess.js';
 
 import {
   AdvancedMovesTree,
+  IAdvancedLessonSeed,
   ParsedAdvancedLesson,
 } from 'src/modules/lesson/interfaces';
 
@@ -14,7 +15,7 @@ import {
  * Parses a complex PGN file into a structured format with FEN tracking.
  */
 export const parseAdvancedPgnFile = (
-  filename: string,
+  item: IAdvancedLessonSeed,
   filePath: string,
 ): ParsedAdvancedLesson[] => {
   try {
@@ -44,9 +45,6 @@ export const parseAdvancedPgnFile = (
         ]),
       );
 
-      // --- CRUCIAL FIX for Metadata Date Objects ---
-      // The parser returns date fields as objects (e.g., { value: '2023.03.04', ... })
-      // We must extract the string value for clean storage.
       const getDateValue = (headerValue: any) => {
         if (
           typeof headerValue === 'object' &&
@@ -64,6 +62,7 @@ export const parseAdvancedPgnFile = (
         date: getDateValue(headers['Date']),
         round: headers['Round'] || '?',
         white: headers['White'] || '?',
+        fen: headers['FEN'] || '?',
         black: headers['Black'] || '?',
         result: headers['Result'] || '*',
         eco: headers['ECO'] || '',
@@ -73,19 +72,23 @@ export const parseAdvancedPgnFile = (
         eventDate: getDateValue(headers['EventDate']),
       };
 
-      // STEP 2: Raw PGN (keep original PGN content or portion)
+      // STEP 2: Raw PGN (keep original PGN content or portion) not used at the moment
       const rawGames = pgnContent.trim();
 
       // STEP 3: Build move tree with FEN tracking
-      const chess = new Chess(); // start from initial position
+      const chess = new Chess();
+      const headerFen =
+        metadata.fen && metadata.fen !== '?' ? metadata.fen : undefined;
+      safeLoadFen(chess, headerFen);
       const movesTree = buildMovesTreeWithFen(game.moves, chess);
 
       return {
-        metadata: metadata,
-        movesTree: movesTree,
+        metadata,
+        movesTree,
         description: extractGameDescription(game),
-        filename,
-        pgnRaw: rawGames,
+        // pgnRaw: rawGames,
+        pgnRaw: 'not-used-at-the-moment',
+        ...item,
       };
     });
   } catch (error) {
@@ -97,28 +100,42 @@ export const parseAdvancedPgnFile = (
   }
 };
 
-/**
- * Extracts the general description of the game based on header or comments.
- */
 const extractGameDescription = (game: any): string => {
-  // If the game has a top-level comment (often a long annotation block), use it.
   if (Array.isArray(game.comments) && game.comments.length > 0) {
-    // Top-level comments are usually objects with a 'text' property.
     return game.comments
       .map((c: any) => c.text?.trim())
       .filter(Boolean)
       .join('\n\n');
   }
-
-  // Otherwise, fallback to the player names.
   const white = game.tags?.['White'] || '';
   const black = game.tags?.['Black'] || '';
   const result = game.tags?.['Result'] || '*';
   return `Game: ${white} - ${black} (${result})`;
 };
 
+const safeLoadFen = (chess: Chess, fen: string | undefined): boolean => {
+  if (!fen || fen === '?' || fen.toLowerCase() === 'start') return false;
+  try {
+    const normalized = fen.trim();
+    // try loading; chess.load throws on invalid FEN
+    chess.load(normalized);
+    return true;
+  } catch (err) {
+    console.warn(
+      `Warning: header FEN is invalid, ignoring and using start position. FEN: "${fen}"`,
+      err,
+    );
+    chess.reset();
+    return false;
+  }
+};
+
 /**
- * Recursively builds a nested move tree and tracks FEN before each move.
+ * Robust move-tree builder:
+ * - uses the provided chess instance (which may already contain a FEN)
+ * - records fenBefore before attempting each move
+ * - attempts to apply SAN using chess.move(san, { sloppy: true }) for more tolerant parsing
+ * - builds variations by copying the FEN BEFORE the variation branch
  */
 const buildMovesTreeWithFen = (
   moves: any[],
@@ -150,16 +167,46 @@ const buildMovesTreeWithFen = (
     const fenBefore = chess.fen();
 
     // --- Build move info safely ---
+    // prefer SAN from parser notation if available (notation.notation holds SAN-like string)
     const moveNotation = move.notation?.notation || move.move || '';
     const color = chess.turn() === 'w' ? 'w' : 'b';
-    const moveNumber = move.notation?.moveNumber || chess.history().length + 1;
+    const moveNumber =
+      move.notation?.moveNumber || Math.floor(chess.history().length / 2) + 1;
     const nags = (move.nags || []).map((n: any) => n.symbol || n);
 
-    // Make the move (to advance board state for the MAIN LINE)
+    // Try to make the move on the mainline chess instance so subsequent fenBefore are correct.
+    // Use sloppy parsing to accept various SAN variants.
+    let appliedSuccessfully = false;
     try {
-      chess.move(moveNotation);
-    } catch {
-      // ignore malformed moves
+      // chess.move returns null if the move is illegal
+      const result = chess.move(moveNotation, { sloppy: true } as any);
+      appliedSuccessfully = !!result;
+    } catch (err) {
+      appliedSuccessfully = false;
+    }
+
+    // If move failed, attempt common fallbacks:
+    if (!appliedSuccessfully) {
+      // 1) If it looks like a promotion without = (e.g. 'e8Q'), try explicit promotion
+      try {
+        const promotionMatch = /([a-h][1-8])([QRNB])$/i.exec(moveNotation);
+        if (promotionMatch) {
+          const sanWithEq = promotionMatch
+            ? `${promotionMatch[1]}=${promotionMatch[2].toUpperCase()}`
+            : moveNotation;
+          const res2 = chess.move(sanWithEq, { sloppy: true } as any);
+          appliedSuccessfully = !!res2;
+        }
+      } catch {}
+    }
+
+    // If still not applied, **do not throw**; we want to keep the tree but mark it if necessary.
+    if (!appliedSuccessfully) {
+      console.warn(
+        `Warning: move not applied while parsing: "${moveNotation}" at fen ${fenBefore}`,
+      );
+      // we do NOT advance the chess state, so subsequent fenBefore values may be incorrect.
+      // To be safe for the rest of the mainline, attempt to apply nothing and continue.
     }
 
     const moveNode: AdvancedMovesTree = {
@@ -170,9 +217,11 @@ const buildMovesTreeWithFen = (
       comments,
       fenBefore,
       variations: [],
+      // optionally expose a flag to identify parsing/application issues
+      invalidDuringParse: !appliedSuccessfully,
     };
 
-    // Process variations (side lines)
+    // Process variations (side lines). Each variation uses a fresh chess copy starting at fenBefore
     if (move.variations && move.variations.length > 0) {
       moveNode.variations = move.variations.map((variation: PgnMove[]) => {
         const chessCopy = new Chess(fenBefore);
@@ -183,3 +232,70 @@ const buildMovesTreeWithFen = (
     return moveNode;
   });
 };
+
+// /**
+//  * OLD Recursively builds a nested move tree and tracks FEN before each move.
+//  */
+// const buildMovesTreeWithFen = (
+//   moves: any[],
+//   chess: Chess,
+// ): AdvancedMovesTree[] => {
+//   if (!moves) return [];
+
+//   return moves.map((move: any) => {
+//     const comments: string[] = [];
+
+//     const extractComment = (commentField: any): string | null => {
+//       if (!commentField) return null;
+//       if (typeof commentField === 'string' && commentField.trim().length > 0) {
+//         return commentField.trim();
+//       }
+//       if (typeof commentField === 'object' && commentField.text) {
+//         return commentField.text.trim();
+//       }
+//       return null;
+//     };
+
+//     const diagComment = extractComment(move.commentDiag);
+//     if (diagComment) comments.push(diagComment);
+
+//     const simpleComment = extractComment(move.comment || move.commentAfter);
+//     if (simpleComment) comments.push(simpleComment);
+
+//     // Save FEN before the move
+//     const fenBefore = chess.fen();
+
+//     // --- Build move info safely ---
+//     const moveNotation = move.notation?.notation || move.move || '';
+//     const color = chess.turn() === 'w' ? 'w' : 'b';
+//     const moveNumber = move.notation?.moveNumber || chess.history().length + 1;
+//     const nags = (move.nags || []).map((n: any) => n.symbol || n);
+
+//     // Make the move (to advance board state for the MAIN LINE)
+//     try {
+//       chess.move(moveNotation);
+//     } catch {
+//       // ignore malformed moves
+//     }
+
+//     const moveNode: AdvancedMovesTree = {
+//       moveNumber,
+//       color,
+//       move: moveNotation,
+//       nags,
+//       comments,
+//       fenBefore,
+//       variations: [],
+//     };
+
+//     // Process variations (side lines)
+//     if (move.variations && move.variations.length > 0) {
+//       moveNode.variations = move.variations.map((variation: PgnMove[]) => {
+//         const chessCopy = new Chess(fenBefore);
+//         return buildMovesTreeWithFen(variation, chessCopy);
+//       });
+//     }
+
+//     return moveNode;
+//   });
+// };

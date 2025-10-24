@@ -166,9 +166,10 @@ export class LessonController {
     const cacheKey = `get-list-advanced-lessons-${page}`;
     const cached = await this.redisService.get(cacheKey);
 
-    if (cached) {
-      return cached;
-    }
+    // changeMe! in production
+    // if (cached) {
+    //   return cached;
+    // }
 
     const result = await firstValueFrom(
       this.client

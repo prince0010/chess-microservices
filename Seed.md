@@ -18,3 +18,8 @@
 1. Run SEED endpoint to generate 57 Levels.
 2. Run SEED endpoint to generate games with the filename as payload (exists enum with the existing filenames)
 3. When new world chess champion pgn file appears add it to existing Enum with the exact filename.
+
+## List advanced lessons and normal lessons for PGN Viewer
+
+1. Get always update list of `lessonAdvancedFilenames`.
+2. Run the SEED endpoint to insert them `lesson/seed-all-advanced-pgn-files`;

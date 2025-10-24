@@ -1,5 +1,3 @@
-import { LessonAdvanced } from '../entities/lesson-advanced.entity';
-
 export interface ICountAndListAdvancedLessons {
   page: number;
   total: number;
@@ -21,6 +19,7 @@ export interface MetadataAdvancedLesson {
   round: string;
   white: string;
   black: string;
+  fen: string;
   result: string;
   eco: string;
   annotator: string;
@@ -33,6 +32,14 @@ export interface AdvancedMovesTree {
   move: string;
   nags: string[];
   comments: string[];
+  invalidDuringParse: boolean; // optionally expose a flag to identify parsing/application issues
   fenBefore: string;
   variations: AdvancedMovesTree[][];
+}
+
+/* IAdvancedLessonSeed List */
+export interface IAdvancedLessonSeed {
+  filename: string;
+  name: string;
+  folder: string;
 }

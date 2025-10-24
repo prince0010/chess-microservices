@@ -5,6 +5,12 @@ export class LessonAdvanced {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @Column({ length: 32, nullable: false })
+  folder: string;
+
+  @Column({ nullable: false })
+  name: string;
+
   @Column({ length: 64, nullable: false })
   filename: string;
 
