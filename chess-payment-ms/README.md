@@ -36,3 +36,6 @@ The file with name `Dockerfile.prod` is what we will use for Production environm
 
 8. Mapped Type
    `npm i @nestjs/mapped-types`
+
+9. Mapped Type
+   `npm i stripe`

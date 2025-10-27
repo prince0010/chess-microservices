@@ -93,7 +93,7 @@ services:
     build:
       context: ./chess-gateway
       dockerfile: Dockerfile.prod
-    image: chess-gateway-prod
+    image: we-chess-gateway-prod
     ports:
       - ${CHESS_GATEWAY_PORT}:${CHESS_GATEWAY_PORT}
     environment:
@@ -113,7 +113,7 @@ services:
     build:
       context: ./chess-auth-ms
       dockerfile: Dockerfile.prod
-    image: auth-ms-prod
+    image: we-chess-auth-ms-prod
     restart: always
     depends_on: [auth-mariadb]
     environment:
@@ -141,7 +141,7 @@ services:
     build:
       context: ./chess-lesson-ms
       dockerfile: Dockerfile.prod
-    image: lesson-ms-prod
+    image: we-chess-lesson-ms-prod
     restart: always
     depends_on: [lesson-mariadb]
     environment:
@@ -166,7 +166,7 @@ services:
     build:
       context: ./chess-game-ms
       dockerfile: Dockerfile.prod
-    image: game-ms-prod
+    image: we-chess-game-ms-prod
     restart: always
     depends_on: [game-mariadb]
     environment:
@@ -183,6 +183,33 @@ services:
       GAME_DB_PASSWORD: ${GAME_DB_PASSWORD}
     volumes:
       - ./chess-game-ms/files:/usr/src/app/files
+    networks:
+      - chess_production
+
+  payment-ms:
+    container_name: payment-ms-prod
+    build:
+      context: ./chess-payment-ms
+      dockerfile: Dockerfile.prod
+    image: we-chess-payment-ms-prod
+    restart: always
+    depends_on: [payment-mariadb]
+    environment:
+      PORT: ${PAYMENT_MS_PORT}
+      NATS_SERVERS: "${NATS_SERVERS}"
+      MARIADB_VERSION: ${MARIADB_VERSION}
+      PAYMENT_MARIADB_CONTAINER_NAME: ${PAYMENT_MARIADB_CONTAINER_NAME}
+      PAYMENT_CONTAINER_NAME: ${PAYMENT_CONTAINER_NAME}
+      PAYMENT_DB_PORT: ${PAYMENT_DB_PORT}
+      PAYMENT_DB_HOST: ${PAYMENT_DB_HOST}
+      PAYMENT_DB_NAME: ${PAYMENT_DB_NAME}
+      PAYMENT_DB_ROOT_PASSWORD: ${PAYMENT_DB_ROOT_PASSWORD}
+      PAYMENT_DB_USERNAME: ${PAYMENT_DB_USERNAME}
+      PAYMENT_DB_PASSWORD: ${PAYMENT_DB_PASSWORD}
+      STRIPE_SECRET_API_KEY: ${STRIPE_SECRET_API_KEY}
+      STRIPE_SUCCESS_URL: ${STRIPE_SUCCESS_URL}
+      STRIPE_CANCEL_URL: ${STRIPE_CANCEL_URL}
+      STRIPE_ENDPOINT_SECRET: ${STRIPE_ENDPOINT_SECRET}
     networks:
       - chess_production
 
@@ -239,6 +266,24 @@ services:
       - chess_production
     volumes:
       - ./chess-game-ms/game-mysql-data:/var/lib/mysql
+
+  payment-mariadb:
+    image: "mariadb:${MARIADB_VERSION:-10.11.2}"
+    container_name: ${PAYMENT_MARIADB_CONTAINER_NAME:-payment-mariadb-prod}
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${PAYMENT_DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${PAYMENT_DB_NAME}
+      MARIADB_USER: ${PAYMENT_DB_USERNAME}
+      MARIADB_PASSWORD: ${PAYMENT_DB_PASSWORD}
+    ports:
+      - "63314:3306"
+    restart: always
+    networks:
+      - chess_production
+    volumes:
+      - ./chess-payment-ms/payment-mysql-data:/var/lib/mysql
 
 networks:
   chess_production:

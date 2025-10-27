@@ -186,6 +186,33 @@ services:
     networks:
       - chess_testing
 
+  payment-ms:
+    container_name: payment-ms-test
+    build:
+      context: ./chess-payment-ms
+      dockerfile: Dockerfile.test
+    image: payment-ms-test
+    restart: always
+    depends_on: [payment-mariadb]
+    environment:
+      PORT: ${PAYMENT_MS_PORT}
+      NATS_SERVERS: "${NATS_SERVERS}"
+      MARIADB_VERSION: ${MARIADB_VERSION}
+      PAYMENT_MARIADB_CONTAINER_NAME: ${PAYMENT_MARIADB_CONTAINER_NAME}
+      PAYMENT_CONTAINER_NAME: ${PAYMENT_CONTAINER_NAME}
+      PAYMENT_DB_PORT: ${PAYMENT_DB_PORT}
+      PAYMENT_DB_HOST: ${PAYMENT_DB_HOST}
+      PAYMENT_DB_NAME: ${PAYMENT_DB_NAME}
+      PAYMENT_DB_ROOT_PASSWORD: ${PAYMENT_DB_ROOT_PASSWORD}
+      PAYMENT_DB_USERNAME: ${PAYMENT_DB_USERNAME}
+      PAYMENT_DB_PASSWORD: ${PAYMENT_DB_PASSWORD}
+      STRIPE_SECRET_API_KEY: ${STRIPE_SECRET_API_KEY}
+      STRIPE_SUCCESS_URL: ${STRIPE_SUCCESS_URL}
+      STRIPE_CANCEL_URL: ${STRIPE_CANCEL_URL}
+      STRIPE_ENDPOINT_SECRET: ${STRIPE_ENDPOINT_SECRET}
+    networks:
+      - chess_testing
+
   auth-mariadb:
     image: "mariadb:${MARIADB_VERSION:-10.11.2}"
     container_name: ${AUTH_MARIADB_CONTAINER_NAME:-auth-mariadb-test}
@@ -239,6 +266,24 @@ services:
       - chess_testing
     volumes:
       - ./chess-game-ms/game-mysql-data:/var/lib/mysql
+
+  payment-mariadb:
+    image: "mariadb:${MARIADB_VERSION:-10.11.2}"
+    container_name: ${PAYMENT_MARIADB_CONTAINER_NAME:-payment-mariadb-test}
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${PAYMENT_DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${PAYMENT_DB_NAME}
+      MARIADB_USER: ${PAYMENT_DB_USERNAME}
+      MARIADB_PASSWORD: ${PAYMENT_DB_PASSWORD}
+    ports:
+      - "63324:3306"
+    restart: always
+    networks:
+      - chess_testing
+    volumes:
+      - ./chess-payment-ms/payment-mysql-data:/var/lib/mysql
 
 networks:
   chess_testing:

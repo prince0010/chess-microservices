@@ -12,6 +12,10 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Payment Mysql Volumes
+/payment-mysql-data/*
+!/payment-mysql-data/.gitkeep
+
 # OS
 .DS_Store
 
