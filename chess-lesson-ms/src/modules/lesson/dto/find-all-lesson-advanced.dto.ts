@@ -14,5 +14,9 @@ export class FindAllLessonAdvancedDto {
 
   @IsOptional()
   @IsString()
+  folder?: string;
+
+  @IsOptional()
+  @IsString()
   description?: string;
 }

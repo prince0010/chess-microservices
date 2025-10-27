@@ -23,6 +23,7 @@ export class LessonAdvancedService {
     const {
       limit = 10,
       page = 1,
+      folder = null,
       description = null,
     } = findAllLessonAdvancedDto;
 
@@ -37,6 +38,10 @@ export class LessonAdvancedService {
     };
 
     const whereConditions: any = {};
+
+    if (folder) {
+      whereConditions.folder = folder;
+    }
 
     if (description) {
       whereConditions.description = Like(`%${description}%`);

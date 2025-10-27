@@ -24,6 +24,10 @@ export interface MetadataAdvancedLesson {
   eco: string;
   annotator: string;
   plyCount: number;
+  hints: {
+    squares: string[];
+    arrows: string[];
+  };
 }
 
 export interface AdvancedMovesTree {

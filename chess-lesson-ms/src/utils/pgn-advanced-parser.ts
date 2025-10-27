@@ -1,13 +1,14 @@
 import * as path from 'path';
 import * as fs from 'fs';
 import { RpcException } from '@nestjs/microservices';
-import { PgnMove } from '@mliebelt/pgn-types';
+import { GameComment, PgnMove } from '@mliebelt/pgn-types';
 import * as mliebelt from '@mliebelt/pgn-parser';
 import { Chess } from 'chess.js';
 
 import {
   AdvancedMovesTree,
   IAdvancedLessonSeed,
+  MetadataAdvancedLesson,
   ParsedAdvancedLesson,
 } from 'src/modules/lesson/interfaces';
 
@@ -82,10 +83,17 @@ export const parseAdvancedPgnFile = (
       safeLoadFen(chess, headerFen);
       const movesTree = buildMovesTreeWithFen(game.moves, chess);
 
+      // STEP 4: description and hints
+      const { description, hints } = extractGameDescription(
+        game.gameComment,
+        metadata,
+      );
+      metadata.hints = hints;
+
       return {
         metadata,
         movesTree,
-        description: extractGameDescription(game),
+        description,
         // pgnRaw: rawGames,
         pgnRaw: 'not-used-at-the-moment',
         ...item,
@@ -100,17 +108,80 @@ export const parseAdvancedPgnFile = (
   }
 };
 
-const extractGameDescription = (game: any): string => {
-  if (Array.isArray(game.comments) && game.comments.length > 0) {
-    return game.comments
-      .map((c: any) => c.text?.trim())
-      .filter(Boolean)
-      .join('\n\n');
+const extractGameDescription = (
+  gameComment: GameComment | undefined,
+  metadata: MetadataAdvancedLesson,
+): any => {
+  if (!gameComment?.comment || gameComment.comment === '[#]') {
+    return {
+      description: `${metadata.white} vs ${metadata.black}`,
+      hints: { squares: [], arrows: [] },
+    };
   }
-  const white = game.tags?.['White'] || '';
-  const black = game.tags?.['Black'] || '';
-  const result = game.tags?.['Result'] || '*';
-  return `Game: ${white} - ${black} (${result})`;
+
+  return {
+    description: gameComment.comment,
+    hints: extractHints(gameComment),
+  };
+};
+
+const extractHints = (
+  gameComment: GameComment,
+): { squares: string[]; arrows: string[] } => {
+  if (!gameComment) {
+    return { squares: [], arrows: [] };
+  }
+
+  const hints = {
+    squares: [] as string[],
+    arrows: [] as string[],
+  };
+
+  // Extract colored squares (highlighted squares)
+  if (gameComment.colorFields && Array.isArray(gameComment.colorFields)) {
+    hints.squares = gameComment.colorFields
+      .map((field: string) => {
+        // Remove the 'G' prefix if present (e.g., "Gc7" -> "c7")
+        if (field.startsWith('G')) {
+          return field.substring(1);
+        }
+        return field;
+      })
+      .filter((field: string) => isValidSquare(field));
+  }
+
+  // Extract colored arrows
+  if (gameComment.colorArrows && Array.isArray(gameComment.colorArrows)) {
+    hints.arrows = gameComment.colorArrows
+      .map((arrow: string) => {
+        // Remove the 'G' prefix if present (e.g., "Gh2c7" -> "h2c7")
+        if (arrow.startsWith('G')) {
+          return arrow.substring(1);
+        }
+        return arrow;
+      })
+      .filter((arrow: string) => isValidArrow(arrow));
+  }
+
+  return hints;
+};
+
+const isValidSquare = (square: string): boolean => {
+  if (square.length !== 2) return false;
+
+  const file = square[0];
+  const rank = square[1];
+
+  return file >= 'a' && file <= 'h' && rank >= '1' && rank <= '8';
+};
+
+const isValidArrow = (arrow: string): boolean => {
+  if (arrow.length !== 4) return false;
+
+  const fromSquare = arrow.substring(0, 2);
+  const toSquare = arrow.substring(2, 4);
+
+  return isValidSquare(fromSquare) && isValidSquare(toSquare);
 };
 
 const safeLoadFen = (chess: Chess, fen: string | undefined): boolean => {
@@ -162,13 +233,17 @@ const buildMovesTreeWithFen = (
     // Save FEN before the move
     const fenBefore = chess.fen();
 
-    // --- Build move info safely ---
     // prefer SAN from parser notation if available (notation.notation holds SAN-like string)
     const moveNotation = move.notation?.notation || move.move || '';
     const color = chess.turn() === 'w' ? 'w' : 'b';
-    const moveNumber =
-      move.notation?.moveNumber || Math.floor(chess.history().length / 2) + 1;
+
+    const moveNumber = Math.floor(chess.history().length / 2) + 1;
     const nags = (move.nags || []).map((n: any) => n.symbol || n);
+
+    // other possible solution - Rely on chess.js history
+    // const moveNumber = Math.floor(chess.history().length / 2) + 1; // <--- Rely on chess.js history
+    // const color = chess.turn() === 'w' ? 'w' : 'b';
+    // const nags = (move.nags || []).map((n: any) => n.symbol || n);
 
     // Try to make the move on the mainline chess instance so subsequent fenBefore are correct.
     // Use sloppy parsing to accept various SAN variants.
