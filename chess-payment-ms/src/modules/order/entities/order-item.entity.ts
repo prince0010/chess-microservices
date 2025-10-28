@@ -1,5 +1,6 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Order } from './order.entity';
+import { Item } from 'src/modules/item/entities/item.entity';
 
 @Entity('order_item')
 export class OrderItem {
@@ -12,7 +13,9 @@ export class OrderItem {
   @Column({ type: 'float', nullable: false })
   price: number;
 
-  // TODO: relation with Item
+  // Relation
+  @ManyToOne(() => Item, (item) => item.orderItems, { nullable: false })
+  item: Item;
 
   @ManyToOne(() => Order, (order) => order.orderItems, {
     nullable: false,

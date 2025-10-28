@@ -23,8 +23,7 @@ export class PaymentService {
         product_data: {
           name: item.name,
         },
-        // unit_amount: item.price // for example 2000 (is equal to $20 = 2000 / 100)
-        unit_amount: Math.round(item.price * 100),
+        unit_amount: Math.round(item.price * 100), // Convert to cents
       },
       quantity: item.quantity,
     }));
