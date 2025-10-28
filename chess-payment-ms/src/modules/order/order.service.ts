@@ -2,19 +2,20 @@ import { BadRequestException, Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
 import { FindManyOptions, Repository } from 'typeorm';
+import { firstValueFrom } from 'rxjs';
 
+import { NATS_SERVICE } from 'src/config';
 import { Order } from './entities/order.entity';
 import { Item } from '../item/entities/item.entity';
+import { OrderReceipt } from './entities/order-receipt.entity';
 
 import { ItemService } from '../item/item.service';
 
 import { CreateOrderDto } from './dto/create-order.dto';
 import { OrderPaginationDto, PaidOrderDto } from './dto';
 import { IListOrders, IPaymentSessionResponse } from 'src/interfaces';
+import { PaymentSessionDto } from '../payment/dto/payment-session.dto';
 import { OrderStatus } from 'src/enum';
-import { OrderReceipt } from './entities/order-receipt.entity';
-import { NATS_SERVICE } from 'src/config';
-import { firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class OrderService {
@@ -70,7 +71,7 @@ export class OrderService {
 
       const orderWithItems = await this.orderRepository.findOne({
         where: { id: savedOrder.id },
-        relations: { orderItems: true },
+        relations: { orderItems: { item: true } },
       });
 
       return orderWithItems;
@@ -84,16 +85,18 @@ export class OrderService {
 
   // STEP 2
   async createPaymentSession(order: Order): Promise<IPaymentSessionResponse> {
+    const dataPaymentSessionDto: PaymentSessionDto = {
+      orderId: order.id,
+      currency: 'usd',
+      items: order.orderItems.map((orderItem) => ({
+        name: orderItem.item.name,
+        price: orderItem.price,
+        quantity: orderItem.quantity,
+      })),
+    };
+
     const paymentSession = await firstValueFrom(
-      this.client.send('payment.create.session', {
-        order: order.id,
-        currency: 'usd',
-        items: order.orderItems.map((orderItem) => ({
-          name: orderItem.item.name,
-          price: orderItem.price,
-          quantity: orderItem.quantity,
-        })),
-      }),
+      this.client.send('payment.create.session', dataPaymentSessionDto),
     );
 
     return paymentSession;
@@ -142,7 +145,10 @@ export class OrderService {
 
   async findOne(id: string): Promise<Order> {
     try {
-      const order = await this.orderRepository.findOneBy({ id });
+      const order = await this.orderRepository.findOne({
+        where: { id },
+        relations: { orderItems: { item: true }, receipt: true },
+      });
 
       if (!order) {
         throw new BadRequestException(`Order with UUID: ${id} not found.`);
@@ -160,21 +166,24 @@ export class OrderService {
   async markOrderAsPaid(paidOrderDto: PaidOrderDto): Promise<void> {
     const { orderId, stripePaymentId, receiptUrl } = paidOrderDto;
 
-    await this.findOne(orderId);
+    const order = await this.findOne(orderId);
 
     const newOrderReceipt = this.orderReceiptRepository.create({
       receiptUrl,
+      order,
     });
 
-    await this.orderRepository.update(
-      { id: orderId },
-      {
-        status: OrderStatus.PAID,
-        paid: true,
-        paidAt: new Date(),
-        stripeChargeId: stripePaymentId,
-        receipt: newOrderReceipt,
-      },
-    );
+    // Save receipt first
+    const savedReceipt =
+      await this.orderReceiptRepository.save(newOrderReceipt);
+
+    // Update order
+    order.status = OrderStatus.PAID;
+    order.paid = true;
+    order.paidAt = new Date();
+    order.stripeChargeId = stripePaymentId;
+    order.receipt = savedReceipt;
+
+    await this.orderRepository.save(order);
   }
 }
