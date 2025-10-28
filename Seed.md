@@ -23,3 +23,8 @@
 
 1. Get always update list of `lessonAdvancedFilenames`.
 2. Run the SEED endpoint to insert them `lesson/seed-all-advanced-pgn-files`;
+
+## List Items packages to allow Payments from APP
+
+1. Get always updated list of items seed.
+2. Run the SEED endpoint to insert items `item/seed-list-packages`;
