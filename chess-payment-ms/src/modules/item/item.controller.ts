@@ -17,8 +17,8 @@ export class ItemController {
   // }
 
   @MessagePattern('item.find.all')
-  findAll() {
-    return this.itemService.findAll();
+  findAll(@Payload() userUid: number) {
+    return this.itemService.findAll(userUid);
   }
 
   @MessagePattern('item.find.one')

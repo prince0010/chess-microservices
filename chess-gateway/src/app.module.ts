@@ -10,6 +10,7 @@ import { NatsModule } from './modules/transports/nats.module';
 import { LessonModule } from './modules/lesson/lesson.module';
 import { GameModule } from './modules/game/game.module';
 import { RedisModule } from './modules/redis/redis.module';
+import { PaymentModule } from './modules/payment/payment.module';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { RedisModule } from './modules/redis/redis.module';
     PandaModule,
     GameModule,
     RedisModule,
+    PaymentModule,
   ],
 })
 export class AppModule {}

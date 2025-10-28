@@ -6,8 +6,6 @@ import { Repository } from 'typeorm';
 import { Item } from './entities/item.entity';
 import { listItems } from './seed/list-item.seed';
 
-import { UpdateItemDto } from './dto/update-item.dto';
-
 @Injectable()
 export class ItemService {
   constructor(
@@ -47,8 +45,9 @@ export class ItemService {
     }
   }
 
-  async findAll(): Promise<Item[]> {
+  async findAll(userUid: number): Promise<Item[]> {
     try {
+      // TODO: filter items depending user so maybe user purchase all levels unlock for life time already
       return await this.itemRepository.find({
         where: {},
       });
