@@ -6,6 +6,7 @@ import Stripe from 'stripe';
 import { envs, NATS_SERVICE } from 'src/config';
 
 import { PaymentSessionDto } from './dto/payment-session.dto';
+import { IPaymentSessionResponse } from 'src/interfaces';
 
 @Injectable()
 export class PaymentService {
@@ -13,8 +14,9 @@ export class PaymentService {
 
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
-  // only called from order service when new intent of purchase
-  public async createPaymentSession(paymentSessionDto: PaymentSessionDto) {
+  async createPaymentSession(
+    paymentSessionDto: PaymentSessionDto,
+  ): Promise<IPaymentSessionResponse> {
     const { currency, items, orderId } = paymentSessionDto;
 
     const lineItems = items.map((item) => ({
@@ -74,9 +76,8 @@ export class PaymentService {
           receiptUrl: chargeSucceeded.receipt_url,
         };
 
-        // On this point notify to orders that payment was paid
-        // TODO: implement order update on db
-        // this.client.emit('payment.succeeded', payload);
+        // On this point notify to order that payment was successful
+        this.client.emit('order.payment.succeeded', payload);
         break;
       case 'payment_method.attached':
         const paymentMethod = event.data.object;

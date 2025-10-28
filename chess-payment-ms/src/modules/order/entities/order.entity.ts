@@ -23,6 +23,9 @@ export class Order {
   @Column({ type: 'int', nullable: false })
   totalItems: number;
 
+  @Column({ nullable: true, default: null })
+  stripeChargeId?: string; // when stripe receive the payment and return an id
+
   // in the app always exists userUid but maybe in website not user authenticated
   @Column({ type: 'int', nullable: true, default: null })
   userUid?: number; // auth reference with column UID

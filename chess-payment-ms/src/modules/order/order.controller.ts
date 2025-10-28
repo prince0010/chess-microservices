@@ -12,36 +12,32 @@ import { PaidOrderDto } from './dto/paid-order.dto';
 export class OrdersController {
   constructor(private readonly orderService: OrderService) {}
 
-  // @MessagePattern('createOrder')
-  // async create(@Payload() createOrderDto: CreateOrderDto) {
-  //   const order = await this.orderService.create(createOrderDto);
+  // first and main endpoint
+  @MessagePattern('order.payment.create')
+  async createPaymentSession(@Payload() createOrderDto: CreateOrderDto) {
+    const order = await this.orderService.create(createOrderDto);
 
-  //   const paymentSession = this.orderService.createPaymentSession(order);
+    const paymentSession = await this.orderService.createPaymentSession(order);
 
-  //   return {
-  //     order,
-  //     paymentSession,
-  //   };
-  // }
+    return {
+      order,
+      paymentSession,
+    };
+  }
 
-  // @MessagePattern('findAllOrders')
-  // findAll(@Payload() orderPaginationDto: OrderPaginationDto) {
-  //   return this.orderService.findAll(orderPaginationDto);
-  // }
+  @MessagePattern('order.find.all')
+  findAll(@Payload() orderPaginationDto: OrderPaginationDto) {
+    return this.orderService.findAll(orderPaginationDto);
+  }
 
-  // @MessagePattern('findOneOrder')
-  // findOne(@Payload('id') id: string) {
-  //   return this.orderService.findOne(id);
-  // }
+  @MessagePattern('order.find.one')
+  findOne(@Payload('id') id: string) {
+    return this.orderService.findOne(id);
+  }
 
-  // @MessagePattern('changeOrderStatus')
-  // changeOrderStatus(@Payload() changeOrderStatusDto: ChangeOrderStatusDto) {
-  //   return this.orderService.changeStatus(changeOrderStatusDto);
-  // }
-
-  // // one order was paid
-  // @EventPattern('payment.succeeded')
-  // paidOrder(@Payload() paidOrderDto: PaidOrderDto) {
-  //   return this.orderService.markOrderAsPaid(paidOrderDto);
-  // }
+  // from payment service webhook endpoint to update status as paid
+  @EventPattern('order.payment.succeeded')
+  paidOrder(@Payload() paidOrderDto: PaidOrderDto) {
+    return this.orderService.markOrderAsPaid(paidOrderDto);
+  }
 }

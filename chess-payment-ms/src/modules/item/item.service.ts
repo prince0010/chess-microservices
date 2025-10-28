@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { In, Repository } from 'typeorm';
 
 import { Item } from './entities/item.entity';
 import { listItems } from './seed/list-item.seed';
@@ -37,6 +37,26 @@ export class ItemService {
       }
 
       return `These items were inserted: [${insertedItemsArr.join(', ')}]`;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async validateItems(itemIdsArray: number[]): Promise<Item[]> {
+    try {
+      const ids = Array.from(new Set(itemIdsArray));
+      const [items, total] = await this.itemRepository.findAndCount({
+        where: { id: In(ids), isActive: true },
+      });
+
+      if (total !== ids.length) {
+        throw new BadRequestException(`Some items were not found.`);
+      }
+
+      return items;
     } catch (error) {
       throw new RpcException({
         status: 400,

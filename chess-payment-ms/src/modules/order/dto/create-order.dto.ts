@@ -1,10 +1,20 @@
 import { Type } from 'class-transformer';
-import { ArrayMinSize, IsArray, ValidateNested } from 'class-validator';
+import {
+  ArrayMinSize,
+  IsArray,
+  IsNotEmpty,
+  IsNumber,
+  IsPositive,
+  ValidateNested,
+} from 'class-validator';
 import { PartialType } from '@nestjs/mapped-types';
 
-import { OrderItemDto } from './order-item.dto';
-
 export class CreateOrderDto {
+  @IsPositive()
+  @IsNumber()
+  @IsNotEmpty()
+  userUid: number;
+
   @IsArray()
   @ArrayMinSize(1)
   @ValidateNested({ each: true })
@@ -14,4 +24,14 @@ export class CreateOrderDto {
 
 export class UpdateOrderDto extends PartialType(CreateOrderDto) {
   id: number;
+}
+
+export class OrderItemDto {
+  @IsNumber()
+  @IsPositive()
+  itemId: number;
+
+  @IsNumber()
+  @IsPositive()
+  quantity: number;
 }

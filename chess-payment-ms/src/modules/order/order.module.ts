@@ -2,6 +2,9 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { NatsModule } from '../transports/nats.module';
+import { ItemModule } from '../item/item.module';
+import { PaymentModule } from '../payment/payment.module';
+
 import { OrdersController } from './order.controller';
 import { OrderService } from './order.service';
 
@@ -15,6 +18,8 @@ import { OrderReceipt } from './entities/order-receipt.entity';
   imports: [
     TypeOrmModule.forFeature([Order, OrderItem, OrderReceipt]),
     NatsModule,
+    ItemModule,
+    PaymentModule,
   ],
   exports: [TypeOrmModule],
 })
