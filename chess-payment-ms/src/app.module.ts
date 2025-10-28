@@ -3,6 +3,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { ConfigDB } from './db/config';
+import { PaymentModule } from './modules/payment/payment.module';
+import { OrderModule } from './modules/order/order.module';
+import { ItemModule } from './modules/item/item.module';
 
 @Module({
   imports: [
@@ -20,6 +23,10 @@ import { ConfigDB } from './db/config';
       imports: [ConfigModule],
       inject: [ConfigService],
     }),
+
+    PaymentModule,
+    OrderModule,
+    ItemModule,
   ],
   controllers: [],
   providers: [],
