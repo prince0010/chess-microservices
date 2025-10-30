@@ -65,11 +65,10 @@ export class ItemService {
     }
   }
 
-  async findAll(userUid: number): Promise<Item[]> {
+  async findAll(): Promise<Item[]> {
     try {
-      // TODO: filter items depending user so maybe user purchase all levels unlock for life time already
       return await this.itemRepository.find({
-        where: {},
+        where: { isActive: true },
       });
     } catch (error) {
       throw new RpcException({
