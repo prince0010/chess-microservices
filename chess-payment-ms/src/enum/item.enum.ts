@@ -13,7 +13,7 @@ export enum SubscriptionTier {
 }
 
 export enum ItemPackage {
-  ONE_MILLION_PANDA_POINTS = '1M Panda points',
+  ONE_MILLION_PANDA_POINTS = '1 Million Panda points',
   OPEN_ALL_LEVELS_FOR_30_DAYS = 'All Levels Unlocked - 30 Days',
   OPEN_ALL_LEVELS_FOR_LIFE_TIME = 'All Levels Unlocked - Life Time',
   // at the moment only 3 packages, add more here in case is needed in future

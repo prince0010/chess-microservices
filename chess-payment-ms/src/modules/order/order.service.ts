@@ -15,7 +15,8 @@ import { CreateOrderDto } from './dto/create-order.dto';
 import { OrderPaginationDto, PaidOrderDto } from './dto';
 import { IListOrders, IPaymentSessionResponse } from 'src/interfaces';
 import { PaymentSessionDto } from '../payment/dto/payment-session.dto';
-import { OrderStatus } from 'src/enum';
+import { UpdateUserPointsAfterPurchaseDto } from './dto/update-user-points-after-purchase.dto';
+import { ItemPackage, OrderStatus } from 'src/enum';
 
 @Injectable()
 export class OrderService {
@@ -184,6 +185,32 @@ export class OrderService {
     order.stripeChargeId = stripePaymentId;
     order.receipt = savedReceipt;
 
-    await this.orderRepository.save(order);
+    const savedOrder = await this.orderRepository.save(order);
+
+    // apply action depend on payment order item
+    for (const orderItem of savedOrder.orderItems) {
+      switch (orderItem.item.name) {
+        case ItemPackage.ONE_MILLION_PANDA_POINTS:
+          this.addOneMillionPandaPoints(order.userUid);
+          break;
+        case ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS:
+          // TODO: implement
+          break;
+        case ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME:
+          // TODO: implement
+          break;
+
+        default:
+          break;
+      }
+    }
+  }
+
+  private async addOneMillionPandaPoints(userUid: number): Promise<void> {
+    const payload: UpdateUserPointsAfterPurchaseDto = {
+      uid: userUid,
+      points: 1000000,
+    };
+    await firstValueFrom(this.client.send('update.points.user', payload));
   }
 }
