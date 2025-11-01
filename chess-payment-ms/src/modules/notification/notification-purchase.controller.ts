@@ -9,7 +9,7 @@ export class NotificationPurchaseController {
   ) {}
 
   // frontend app will ask through a poll in case payment session was triggered
-  @MessagePattern('notification.find.one')
+  @MessagePattern('notificationPurchase.find.one')
   findNotificationByPackageName(@Payload() userUid: number) {
     return this.notificationPurchaseService.findOne(userUid);
   }
