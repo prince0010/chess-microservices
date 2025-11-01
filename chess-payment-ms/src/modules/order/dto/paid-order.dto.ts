@@ -12,3 +12,12 @@ export class PaidOrderDto {
   @IsUrl()
   receiptUrl: string;
 }
+
+export class FailedOrderDto {
+  @IsString()
+  stripePaymentId: string;
+
+  @IsString()
+  @IsUUID()
+  orderId: string;
+}

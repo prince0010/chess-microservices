@@ -5,8 +5,7 @@ import { OrderService } from './order.service';
 
 import { CreateOrderDto } from './dto/create-order.dto';
 import { OrderPaginationDto } from './dto/order-pagination.dto';
-import { ChangeOrderStatusDto } from './dto/change-order-status.dto';
-import { PaidOrderDto } from './dto/paid-order.dto';
+import { FailedOrderDto, PaidOrderDto } from './dto/paid-order.dto';
 
 @Controller()
 export class OrdersController {
@@ -39,5 +38,11 @@ export class OrdersController {
   @EventPattern('order.payment.succeeded')
   paidOrder(@Payload() paidOrderDto: PaidOrderDto) {
     return this.orderService.markOrderAsPaid(paidOrderDto);
+  }
+
+  // from payment service webhook endpoint to update status as failed
+  @EventPattern('order.payment.failed')
+  failedOrder(@Payload() failedOrderDto: FailedOrderDto) {
+    return this.orderService.markOrderAsFailed(failedOrderDto);
   }
 }

@@ -6,6 +6,7 @@ import { ConfigDB } from './db/config';
 import { PaymentModule } from './modules/payment/payment.module';
 import { OrderModule } from './modules/order/order.module';
 import { ItemModule } from './modules/item/item.module';
+import { NotificationPurchaseModule } from './modules/notification/notification-purchase.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { ItemModule } from './modules/item/item.module';
     PaymentModule,
     OrderModule,
     ItemModule,
+    NotificationPurchaseModule,
   ],
   controllers: [],
   providers: [],

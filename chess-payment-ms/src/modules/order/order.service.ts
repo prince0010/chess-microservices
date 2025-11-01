@@ -10,13 +10,21 @@ import { Item } from '../item/entities/item.entity';
 import { OrderReceipt } from './entities/order-receipt.entity';
 
 import { ItemService } from '../item/item.service';
+import { NotificationPurchaseService } from '../notification/notification-purchase.service';
 
 import { CreateOrderDto } from './dto/create-order.dto';
-import { OrderPaginationDto, PaidOrderDto } from './dto';
+import { FailedOrderDto, OrderPaginationDto, PaidOrderDto } from './dto';
 import { IListOrders, IPaymentSessionResponse } from 'src/interfaces';
 import { PaymentSessionDto } from '../payment/dto/payment-session.dto';
 import { UpdateUserPointsAfterPurchaseDto } from './dto/update-user-points-after-purchase.dto';
-import { ItemPackage, OrderStatus } from 'src/enum';
+import {
+  ItemPackage,
+  NotificationPurchaseMessage,
+  NotificationPurchaseTitle,
+  NotificationPurchaseType,
+  OrderStatus,
+} from 'src/enum';
+import { CreateNotificationPurchaseDto } from '../notification/dto/create-notification-purchase.dto';
 
 @Injectable()
 export class OrderService {
@@ -29,6 +37,7 @@ export class OrderService {
     private readonly orderReceiptRepository: Repository<OrderReceipt>,
 
     private readonly itemService: ItemService,
+    private readonly notificationPurchaseService: NotificationPurchaseService,
   ) {}
 
   // STEP 1
@@ -164,6 +173,29 @@ export class OrderService {
     }
   }
 
+  async markOrderAsFailed(failedOrderDto: FailedOrderDto): Promise<void> {
+    const { orderId, stripePaymentId } = failedOrderDto;
+
+    const order = await this.findOne(orderId);
+
+    // Update order
+    order.status = OrderStatus.CANCELLED;
+    order.stripeChargeId = stripePaymentId;
+
+    await this.orderRepository.save(order);
+
+    // create notification payment failed
+    const dataNotification: CreateNotificationPurchaseDto = {
+      userUid: order.userUid,
+      type: NotificationPurchaseType.PAYMENT_FAILED,
+      title: NotificationPurchaseTitle.PAYMENT_FAILED_TITLE,
+      message: NotificationPurchaseMessage.PAYMENT_FAILED_MESSAGE,
+      orderId: order.id,
+    };
+
+    await this.notificationPurchaseService.create(dataNotification);
+  }
+
   async markOrderAsPaid(paidOrderDto: PaidOrderDto): Promise<void> {
     const { orderId, stripePaymentId, receiptUrl } = paidOrderDto;
 
@@ -191,6 +223,18 @@ export class OrderService {
     for (const orderItem of savedOrder.orderItems) {
       switch (orderItem.item.name) {
         case ItemPackage.ONE_MILLION_PANDA_POINTS:
+          // create notification payment succeed
+          const dataNotification: CreateNotificationPurchaseDto = {
+            userUid: order.userUid,
+            type: NotificationPurchaseType.PAYMENT_SUCCESS,
+            title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
+            message:
+              NotificationPurchaseMessage.ONE_MILLION_PANDA_POINTS_ADDED_MESSAGE,
+            orderId: order.id,
+          };
+
+          await this.notificationPurchaseService.create(dataNotification);
+
           this.addOneMillionPandaPoints(order.userUid);
           break;
         case ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS:

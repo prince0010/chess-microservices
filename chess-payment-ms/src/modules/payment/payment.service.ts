@@ -79,6 +79,17 @@ export class PaymentService {
         // On this point notify to order that payment was successful
         this.client.emit('order.payment.succeeded', payload);
         break;
+      case 'payment_intent.payment_failed':
+        const failedPayment = event.data.object;
+        const failedPayload = {
+          stripePaymentId: failedPayment.id,
+          orderId: failedPayment.metadata?.orderId,
+          receiptUrl: null,
+        };
+
+        // On this point notify to order that payment failed
+        this.client.emit('order.payment.failed', failedPayload);
+        break;
       case 'payment_method.attached':
         const paymentMethod = event.data.object;
         // handlePaymentMethodAttached(paymentMethod);
