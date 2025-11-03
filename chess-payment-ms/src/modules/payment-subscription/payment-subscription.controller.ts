@@ -17,13 +17,19 @@ export class PaymentSubscriptionController {
     return this.paymentSubscriptionService.create(createPaymentSubscriptionDto);
   }
 
-  @MessagePattern('findAllPaymentSubscription')
-  findAll() {
-    return this.paymentSubscriptionService.findAll();
+  // return true or false if user authenticated has this subscription alive
+  @MessagePattern('paymentSubscription.levelsFor30Days.active')
+  findIfActiveSubscriptionFor30Days(@Payload() userUid: number) {
+    return this.paymentSubscriptionService.hasActiveLevelsOpenFor30Days(
+      userUid,
+    );
   }
 
-  @MessagePattern('findOnePaymentSubscription')
-  findOne(@Payload() id: number) {
-    return this.paymentSubscriptionService.findOne(id);
+  // return true or false if user authenticated has this subscription alive
+  @MessagePattern('paymentSubscription.levelsForLifeTime.active')
+  findIfActiveSubscriptionForLifeTime(@Payload() userUid: number) {
+    return this.paymentSubscriptionService.hasActiveLevelsOpenForLifeTime(
+      userUid,
+    );
   }
 }

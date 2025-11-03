@@ -4,8 +4,10 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
 import { PaymentSubscription } from './entities/payment-subscription.entity';
-import { CreatePaymentSubscriptionDto } from './dto/create-payment-subscription.dto';
 import { Item } from '../item/entities/item.entity';
+
+import { CreatePaymentSubscriptionDto } from './dto/create-payment-subscription.dto';
+import { ItemPackage, ItemType } from 'src/enum';
 
 @Injectable()
 export class PaymentSubscriptionService {
@@ -47,11 +49,60 @@ export class PaymentSubscriptionService {
     }
   }
 
-  findAll() {
-    return `This action returns all paymentSubscription`;
+  private async findLatestLevelUnlockSubscription(userUid: number) {
+    return this.paymentSubscriptionRepository.findOne({
+      where: {
+        userUid,
+        item: { type: ItemType.LEVELS_UNLOCK },
+      },
+      relations: { item: true },
+      order: { startedAt: 'DESC' },
+    });
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} paymentSubscription`;
+  async hasActiveLevelsOpenFor30Days(userUid: number): Promise<boolean> {
+    try {
+      const subscription =
+        await this.findLatestLevelUnlockSubscription(userUid);
+      if (!subscription) return false;
+
+      const is30Days =
+        subscription.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS;
+      if (!is30Days) return false;
+
+      const startedAt = new Date(subscription.startedAt);
+      const duration =
+        subscription.durationDays ?? subscription.item.durationDays ?? 0;
+
+      const expiresAt = new Date(startedAt);
+      expiresAt.setDate(expiresAt.getDate() + duration);
+
+      return expiresAt > new Date();
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async hasActiveLevelsOpenForLifeTime(userUid: number): Promise<boolean> {
+    try {
+      const subscription =
+        await this.findLatestLevelUnlockSubscription(userUid);
+      if (!subscription) return false;
+
+      const isLifetime =
+        subscription.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME;
+      if (!isLifetime) return false;
+
+      // Life time unlock = always active once purchased
+      return true;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
   }
 }
