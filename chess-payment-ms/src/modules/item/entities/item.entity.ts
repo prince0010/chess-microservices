@@ -1,4 +1,5 @@
 import { OrderItem } from 'src/modules/order/entities/order-item.entity';
+import { PaymentSubscription } from 'src/modules/payment-subscription/entities/payment-subscription.entity';
 import {
   Column,
   CreateDateColumn,
@@ -50,4 +51,7 @@ export class Item {
   // Relations
   @OneToMany(() => OrderItem, (orderItem) => orderItem.item)
   orderItems: OrderItem[];
+
+  @OneToMany(() => PaymentSubscription, (ps) => ps.item)
+  paymentSubscription: PaymentSubscription[];
 }

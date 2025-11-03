@@ -7,6 +7,7 @@ import { PaymentModule } from './modules/payment/payment.module';
 import { OrderModule } from './modules/order/order.module';
 import { ItemModule } from './modules/item/item.module';
 import { NotificationPurchaseModule } from './modules/notification/notification-purchase.module';
+import { PaymentSubscriptionModule } from './modules/payment-subscription/payment-subscription.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { NotificationPurchaseModule } from './modules/notification/notification-
     OrderModule,
     ItemModule,
     NotificationPurchaseModule,
+    PaymentSubscriptionModule,
   ],
   controllers: [],
   providers: [],
