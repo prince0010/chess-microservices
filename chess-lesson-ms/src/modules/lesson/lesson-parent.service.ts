@@ -420,7 +420,26 @@ export class LessonParentService {
       const parents: ILessonParent[] = [];
       const disabledArray: boolean[] = [];
 
-      // STEP 2: calculate progress
+      // STEP 2: verify payment subscription before looping lessons
+      const subscriptionLifetime = await firstValueFrom(
+        this.client.send(
+          'paymentSubscription.levelsForLifeTime.active',
+          userUid,
+        ),
+      ).catch(() => false);
+
+      const subscription30Days = !subscriptionLifetime
+        ? await firstValueFrom(
+            this.client.send(
+              'paymentSubscription.levelsFor30Days.active',
+              userUid,
+            ),
+          ).catch(() => false)
+        : false;
+
+      const hasActiveSubscription = subscriptionLifetime || subscription30Days;
+
+      // STEP 2: calculate progress and disabled state
       for (const [index, lessonParent] of lessonParents.entries()) {
         let lessonsCompleted: number = 0;
         let lessonsLength: number = 0;
@@ -458,9 +477,13 @@ export class LessonParentService {
           lessonsLength = resultFromNormalCompleted.lessonsLength;
         }
 
-        // STEP 3: determine if enabled
+        // STEP: determine if enabled
         let disabled = false;
-        if (index === 0) {
+
+        if (hasActiveSubscription) {
+          // If user has active subscription, unlock all levels
+          disabled = false;
+        } else if (index === 0) {
           disabled = false;
         } else {
           const prevEnabled = await this.lessonParentEnabledRepository.findOne({
