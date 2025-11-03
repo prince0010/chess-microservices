@@ -184,16 +184,16 @@ export class OrderService {
 
     await this.orderRepository.save(order);
 
-    // create notification payment failed
-    const dataNotification: CreateNotificationPurchaseDto = {
-      userUid: order.userUid,
-      type: NotificationPurchaseType.PAYMENT_FAILED,
-      title: NotificationPurchaseTitle.PAYMENT_FAILED_TITLE,
-      message: NotificationPurchaseMessage.PAYMENT_FAILED_MESSAGE,
-      orderId: order.id,
-    };
+    // maybe in future is needed to create notification payment failed
+    // const dataNotification: CreateNotificationPurchaseDto = {
+    //   userUid: order.userUid,
+    //   type: NotificationPurchaseType.PAYMENT_FAILED,
+    //   title: NotificationPurchaseTitle.PAYMENT_FAILED_TITLE,
+    //   message: NotificationPurchaseMessage.PAYMENT_FAILED_MESSAGE,
+    //   orderId: order.id,
+    // };
 
-    await this.notificationPurchaseService.create(dataNotification);
+    // await this.notificationPurchaseService.create(dataNotification);
   }
 
   async markOrderAsPaid(paidOrderDto: PaidOrderDto): Promise<void> {
