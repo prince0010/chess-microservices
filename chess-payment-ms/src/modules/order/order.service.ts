@@ -25,6 +25,7 @@ import {
   OrderStatus,
 } from 'src/enum';
 import { CreateNotificationPurchaseDto } from '../notification/dto/create-notification-purchase.dto';
+import { CreatePaymentSubscriptionDto } from '../payment-subscription/dto/create-payment-subscription.dto';
 
 @Injectable()
 export class OrderService {
@@ -235,13 +236,41 @@ export class OrderService {
 
           await this.notificationPurchaseService.create(dataNotification);
 
-          this.addOneMillionPandaPoints(order.userUid);
+          await this.addOneMillionPandaPoints(order.userUid);
           break;
         case ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS:
-          // TODO: implement
+          // create notification payment succeed
+          const dataNotificationFor30Days: CreateNotificationPurchaseDto = {
+            userUid: order.userUid,
+            type: NotificationPurchaseType.PAYMENT_SUCCESS,
+            title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
+            message:
+              NotificationPurchaseMessage.ALL_LEVELS_OPEN_FOR_30_DAYS_MESSAGE,
+            orderId: order.id,
+          };
+
+          await this.notificationPurchaseService.create(
+            dataNotificationFor30Days,
+          );
+
+          await this.createSubscriptionForLevelsOpenFor30Days(order);
           break;
         case ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME:
-          // TODO: implement
+          // create notification payment succeed
+          const dataNotificationForLifeTime: CreateNotificationPurchaseDto = {
+            userUid: order.userUid,
+            type: NotificationPurchaseType.PAYMENT_SUCCESS,
+            title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
+            message:
+              NotificationPurchaseMessage.ALL_LEVELS_OPEN_FOR_LIFE_TIME_MESSAGE,
+            orderId: order.id,
+          };
+
+          await this.notificationPurchaseService.create(
+            dataNotificationForLifeTime,
+          );
+
+          await this.createSubscriptionForLevelsOpenForLifeTime(order);
           break;
 
         default:
@@ -256,5 +285,41 @@ export class OrderService {
       points: 1000000,
     };
     await firstValueFrom(this.client.send('update.points.user', payload));
+  }
+
+  private async createSubscriptionForLevelsOpenFor30Days(
+    order: Order,
+  ): Promise<void> {
+    for (const orderItem of order.orderItems) {
+      if (orderItem.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS) {
+        const payload: CreatePaymentSubscriptionDto = {
+          userUid: order.userUid,
+          durationDays: orderItem.item.durationDays,
+          itemId: orderItem.item.id,
+        };
+
+        await firstValueFrom(
+          this.client.send('paymentSubscription.create.one', payload),
+        );
+      }
+    }
+  }
+
+  private async createSubscriptionForLevelsOpenForLifeTime(
+    order: Order,
+  ): Promise<void> {
+    for (const orderItem of order.orderItems) {
+      if (orderItem.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME) {
+        const payload: CreatePaymentSubscriptionDto = {
+          userUid: order.userUid,
+          durationDays: orderItem.item.durationDays,
+          itemId: orderItem.item.id,
+        };
+
+        await firstValueFrom(
+          this.client.send('paymentSubscription.create.one', payload),
+        );
+      }
+    }
   }
 }

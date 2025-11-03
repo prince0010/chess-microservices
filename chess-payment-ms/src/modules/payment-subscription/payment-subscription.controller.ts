@@ -9,6 +9,7 @@ export class PaymentSubscriptionController {
     private readonly paymentSubscriptionService: PaymentSubscriptionService,
   ) {}
 
+  // only called from order service markOrderAsPaid
   @MessagePattern('paymentSubscription.create.one')
   create(
     @Payload() createPaymentSubscriptionDto: CreatePaymentSubscriptionDto,
