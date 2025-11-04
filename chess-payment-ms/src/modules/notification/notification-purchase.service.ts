@@ -1,10 +1,11 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { CreateNotificationPurchaseDto } from './dto/create-notification-purchase.dto';
-import { ClientProxy, RpcException } from '@nestjs/microservices';
-import { NATS_SERVICE } from 'src/config';
+import { Injectable } from '@nestjs/common';
+import { RpcException } from '@nestjs/microservices';
+import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { NotificationPurchase } from './entities/notification-purchase.entity';
-import { Repository } from 'typeorm';
+import { Order } from '../order/entities/order.entity';
+
+import { CreateNotificationPurchaseDto } from './dto/create-notification-purchase.dto';
 
 @Injectable()
 export class NotificationPurchaseService {
@@ -13,6 +14,9 @@ export class NotificationPurchaseService {
 
     @InjectRepository(NotificationPurchase)
     private readonly notificationPurchaseRepository: Repository<NotificationPurchase>,
+
+    @InjectRepository(Order)
+    private readonly orderRepository: Repository<Order>,
   ) {}
 
   async create(
@@ -43,7 +47,19 @@ export class NotificationPurchaseService {
         { isRead: true },
       );
 
-      return { notification: unreadNotification };
+      // add order to notification
+      const orderWithItems = await this.orderRepository.findOne({
+        where: { id: unreadNotification.orderId },
+        relations: { orderItems: { item: true } },
+      });
+
+      // important to add order with orderItems and with items relation
+      const notificationResponse = {
+        ...unreadNotification,
+        order: orderWithItems,
+      };
+
+      return { notification: notificationResponse };
     } catch (error) {
       throw new RpcException({
         message: error.message,
