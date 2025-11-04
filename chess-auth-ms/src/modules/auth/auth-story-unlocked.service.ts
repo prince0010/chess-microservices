@@ -1,18 +1,21 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
-import { RpcException } from '@nestjs/microservices';
+import { BadRequestException, Inject, Injectable } from '@nestjs/common';
+import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
+import { NATS_SERVICE } from 'src/config';
 import { AuthStoryUnlocked } from './entities/auth-story-unlocked.entity';
 import { Auth } from './entities/auth.entity';
 
 import { StoriesUnlockedResponse, StoryUnlocked } from './interfaces';
 import { LessonStoryName, ModeSomeStoryCanBeUnlocked } from 'src/enum/index';
 import { UnlockStoryDto } from './dto/unlock-story.dto';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class AuthStoryUnlockedService {
   constructor(
+    @Inject(NATS_SERVICE) private readonly client: ClientProxy,
     @InjectRepository(Auth)
     private readonly authRepository: Repository<Auth>,
     @InjectRepository(AuthStoryUnlocked)
@@ -38,12 +41,33 @@ export class AuthStoryUnlockedService {
         where: { user: { uid: userUid } },
       });
 
+      // verify payment subscription before looping unlocked stories
+      const subscriptionLifetime = await firstValueFrom(
+        this.client.send(
+          'paymentSubscription.levelsForLifeTime.active',
+          userUid,
+        ),
+      ).catch(() => false);
+
+      const subscription30Days = !subscriptionLifetime
+        ? await firstValueFrom(
+            this.client.send(
+              'paymentSubscription.levelsFor30Days.active',
+              userUid,
+            ),
+          ).catch(() => false)
+        : false;
+
+      const hasActiveSubscription = subscriptionLifetime || subscription30Days;
+
       for (const story of availableStories) {
         storiesResult.push({
           story,
-          disabled: !storiesUnlockedList.some(
-            (storyUnlocked) => storyUnlocked.story === story,
-          ),
+          disabled: hasActiveSubscription
+            ? false
+            : !storiesUnlockedList.some(
+                (storyUnlocked) => storyUnlocked.story === story,
+              ),
         });
       }
 
