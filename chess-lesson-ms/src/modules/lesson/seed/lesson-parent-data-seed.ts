@@ -1,11 +1,21 @@
 import { LessonNameAsBot, LessonNameAsGame } from 'src/enum';
 import { ILessonParentSeed } from '../interfaces';
 
+// these enums has to be equal to translate keys on flutter app
+enum LessonParentTranslateGameName {
+  TETRIS_GAME = 'TETRIS_GAME',
+  GUESS_SQUARE_GAME = 'GUESS_SQUARE_GAME',
+  RIGHT_PIECE_ON_RIGHT_SQUARE_GAME = 'RIGHT_PIECE_ON_RIGHT_SQUARE_GAME',
+  MEMORY_TESTER_GAME = 'MEMORY_TESTER_GAME',
+}
+
 export const lessonParentDataSeed: ILessonParentSeed[] = [
   // EDUCATION
   {
     timer: 0,
     name: LessonNameAsGame.TETRIS_GAME,
+    nameTr: LessonParentTranslateGameName.TETRIS_GAME,
+    levelTr: 'Game',
     pgnFilename: null,
     lessonFactor: 0,
     story: 'Education',
@@ -19,12 +29,13 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isPreview: false,
     isBot: false,
     canBeSkipped: false,
-    messageModal:
-      'Reach at least Level 3 in Tetris game to unlock Level 1. Good luck!',
+    messageModal: 'reach_level_3_tetris_message',
   },
   {
     timer: 30,
     name: 'pawn',
+    nameTr: 'pawn',
+    levelTr: 'level1',
     pgnFilename: 'Level_1_Pawn.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -43,6 +54,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'king',
+    nameTr: 'king',
+    levelTr: 'level1',
     pgnFilename: 'Level_1_King.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -61,6 +74,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'bishop',
+    nameTr: 'bishop',
+    levelTr: 'level1',
     pgnFilename: 'Level_1_Bishop.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -79,6 +94,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'knight',
+    nameTr: 'knight',
+    levelTr: 'level1',
     pgnFilename: 'Level_1_Knight.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -97,6 +114,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'rook',
+    nameTr: 'rook',
+    levelTr: 'level1',
     pgnFilename: 'Level_1_Rook.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -115,6 +134,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'queen',
+    nameTr: 'queen',
+    levelTr: 'level1',
     pgnFilename: 'Level_1_Queen.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -133,6 +154,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'test 1',
+    nameTr: 'test1',
+    levelTr: 'level1',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -151,6 +174,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Castle',
+    nameTr: 'castle',
+    levelTr: 'level2',
     pgnFilename: 'Level_2_Preview_1_Castle.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -169,6 +194,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Give check to the King',
+    nameTr: 'give_check_to_the_king',
+    levelTr: 'level2',
     pgnFilename: 'Level_2_Preview_2_Give_check_to_the_king.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -187,6 +214,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Pawn promotion',
+    nameTr: 'pawn_promotion',
+    levelTr: 'level2',
     pgnFilename: 'Level_2_Preview_3_Pawn_promotion.pgn',
     lessonFactor: 0.625,
     story: 'Education',
@@ -205,6 +234,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Stalemate',
+    nameTr: 'stalemate',
+    levelTr: 'level2',
     pgnFilename: 'Level_2_Preview_4_Stalemate.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -223,6 +254,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Take en passant',
+    nameTr: 'take_en_passant',
+    levelTr: 'level2',
     pgnFilename: 'Level_2_Preview_5_Take_en_passant.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -241,6 +274,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Take with a pawn',
+    nameTr: 'take_with_a_pawn',
+    levelTr: 'level2',
     pgnFilename: 'Level_2_Preview_6_Take_with_a_pawn.pgn',
     lessonFactor: 0.5,
     story: 'Education',
@@ -259,6 +294,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Move + Check + Take',
+    nameTr: 'move_check_take',
+    levelTr: 'level2',
     pgnFilename: 'Level_2_Move_Check_Take.pgn',
     lessonFactor: 0.04,
     story: 'Education',
@@ -277,6 +314,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'test 2',
+    nameTr: 'test2',
+    levelTr: 'level2',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -295,6 +334,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 120,
     name: 'What is a mate',
+    nameTr: 'what_is_a_mate',
+    levelTr: 'level3',
     pgnFilename: 'Level_3_Preview_1_What_is_a_mate.pgn',
     lessonFactor: 1,
     story: 'Education',
@@ -313,6 +354,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Checkmate with doublecheck',
+    nameTr: 'checkmate_with_doublecheck',
+    levelTr: 'level3',
     pgnFilename: 'Level_3_Preview_2_Checkmate_with_doublecheck.pgn',
     lessonFactor: 0.119,
     story: 'Education',
@@ -331,6 +374,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Checkmate using the pin',
+    nameTr: 'checkmate_using_the_pin',
+    levelTr: 'level3',
     pgnFilename: 'Level_3_Preview_3_Checkmate_using_the_pin.pgn',
     lessonFactor: 0.119,
     story: 'Education',
@@ -349,6 +394,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Mate in One',
+    nameTr: 'mate_in_one',
+    levelTr: 'level3',
     pgnFilename: 'Level_3_Mate_in_1.pgn',
     lessonFactor: 0.04,
     story: 'Education',
@@ -367,6 +414,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'test 3',
+    nameTr: 'test3',
+    levelTr: 'level3',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -385,6 +434,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 0,
     name: LessonNameAsGame.GUESS_SQUARE_GAME,
+    nameTr: LessonParentTranslateGameName.GUESS_SQUARE_GAME,
+    levelTr: 'Game',
     pgnFilename: null,
     lessonFactor: 0,
     story: 'Education',
@@ -398,12 +449,13 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isPreview: false,
     isBot: false,
     canBeSkipped: false,
-    messageModal:
-      'Reach at least Level 3 in Guess the square game to unlock Level 4. Good luck!',
+    messageModal: 'reach_level_3_guess_square_message',
   },
   {
     timer: 120,
     name: 'The King',
+    nameTr: 'the_king',
+    levelTr: 'level4',
     pgnFilename: 'Level_4_Preview_1_The_king.pgn',
     lessonFactor: 1,
     story: 'Education',
@@ -422,6 +474,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 120,
     name: 'The Queen',
+    nameTr: 'the_queen',
+    levelTr: 'level4',
     pgnFilename: 'Level_4_Preview_2_The_queen.pgn',
     lessonFactor: 1,
     story: 'Education',
@@ -440,6 +494,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 120,
     name: 'The Rook',
+    nameTr: 'the_rook',
+    levelTr: 'level4',
     pgnFilename: 'Level_4_Preview_3_The_rook.pgn',
     lessonFactor: 1,
     story: 'Education',
@@ -458,6 +514,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 120,
     name: 'The Bishop',
+    nameTr: 'the_bishop',
+    levelTr: 'level4',
     pgnFilename: 'Level_4_Preview_4_The_bishop.pgn',
     lessonFactor: 1,
     story: 'Education',
@@ -476,6 +534,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 120,
     name: 'The Knight',
+    nameTr: 'the_knight',
+    levelTr: 'level4',
     pgnFilename: 'Level_4_Preview_5_The_knight.pgn',
     lessonFactor: 1,
     story: 'Education',
@@ -494,6 +554,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 120,
     name: 'The Pawn',
+    nameTr: 'the_pawn',
+    levelTr: 'level4',
     pgnFilename: 'Level_4_Preview_6_The_pawn.pgn',
     lessonFactor: 1,
     story: 'Education',
@@ -512,6 +574,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Win a piece in one move',
+    nameTr: 'win_a_piece_in_one_move',
+    levelTr: 'level4',
     pgnFilename: 'Level_4_Win_a_piece_in_1_move.pgn',
     lessonFactor: 0.04,
     story: 'Education',
@@ -530,6 +594,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'test 4',
+    nameTr: 'test4',
+    levelTr: 'level4',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -548,6 +614,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 45,
     name: 'Complicated checkmate',
+    nameTr: 'complicated_checkmate',
+    levelTr: 'level5',
     pgnFilename: 'Level_5_Complicated_checkmate.pgn',
     lessonFactor: 0.04,
     story: 'Education',
@@ -566,6 +634,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 45,
     name: 'test 5',
+    nameTr: 'test5',
+    levelTr: 'level5',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -584,6 +654,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 45,
     name: 'Pin + Win material in one move',
+    nameTr: 'pin_win_material_in_one_move',
+    levelTr: 'level6',
     pgnFilename: 'Level_6_Pin_Win_Material_in_1_move.pgn',
     lessonFactor: 0.039,
     story: 'Education',
@@ -602,6 +674,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 45,
     name: 'test 6',
+    nameTr: 'test6',
+    levelTr: 'level6',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -620,6 +694,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 0,
     name: LessonNameAsBot.DEFEAT_TO_TIK_AND_SHELLY,
+    nameTr: 'defeat_to_tik_and_shelly',
+    levelTr: 'play_chess',
     pgnFilename: null,
     lessonFactor: 0,
     story: 'Education',
@@ -639,6 +715,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'Smothered mate',
+    nameTr: 'smothered_mate',
+    levelTr: 'level7',
     pgnFilename: 'Level_7_Preview_1_Smothered_mate.pgn',
     lessonFactor: 0.119,
     story: 'Education',
@@ -657,6 +735,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'Stalemate Level 7',
+    nameTr: 'stalemate_level_7',
+    levelTr: 'level7',
     pgnFilename: 'Level_7_Preview_2_Stalemate.pgn',
     lessonFactor: 0.119,
     story: 'Education',
@@ -675,6 +755,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'Mate in 2 moves',
+    nameTr: 'mate_in_2_moves',
+    levelTr: 'level7',
     pgnFilename: 'Level_7_Mate_in_2_moves.pgn',
     lessonFactor: 0.04,
     story: 'Education',
@@ -693,6 +775,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'test 7',
+    nameTr: 'test7',
+    levelTr: 'level7',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -711,6 +795,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'Difficult mate in 2 moves',
+    nameTr: 'difficult_mate_in_2_moves',
+    levelTr: 'level8',
     pgnFilename: 'Level_8_Difficult_mate_in_2_moves.pgn',
     lessonFactor: 0.04,
     story: 'Education',
@@ -729,6 +815,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'test 8',
+    nameTr: 'test8',
+    levelTr: 'level8',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -747,6 +835,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 0,
     name: LessonNameAsGame.RIGHT_PIECE_ON_RIGHT_SQUARE_GAME,
+    nameTr: LessonParentTranslateGameName.RIGHT_PIECE_ON_RIGHT_SQUARE_GAME,
+    levelTr: 'game',
     pgnFilename: null,
     lessonFactor: 0,
     story: 'Education',
@@ -760,12 +850,13 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isPreview: false,
     isBot: false,
     canBeSkipped: false,
-    messageModal:
-      'Reach at least Level 3 in Piece + Square game to unlock Level 9. Good luck!',
+    messageModal: 'reach_level_3_piece_plus_square_message',
   },
   {
     timer: 75,
     name: 'Double attack',
+    nameTr: 'double_attack',
+    levelTr: 'level9',
     pgnFilename: 'Level_9_Preview_1_Double_attack.pgn',
     lessonFactor: 0.119,
     story: 'Education',
@@ -784,6 +875,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 75,
     name: 'Skewer',
+    nameTr: 'skewer',
+    levelTr: 'level9',
     pgnFilename: 'Level_9_Preview_2_Skewer.pgn',
     lessonFactor: 0.119,
     story: 'Education',
@@ -802,6 +895,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 75,
     name: 'The Pin',
+    nameTr: 'the_pin',
+    levelTr: 'level9',
     pgnFilename: 'Level_9_Preview_3_The_pin.pgn',
     lessonFactor: 0.125,
     story: 'Education',
@@ -820,6 +915,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 75,
     name: 'Material Win',
+    nameTr: 'material_win',
+    levelTr: 'level9',
     pgnFilename: 'Level_9_Material_win.pgn',
     lessonFactor: 0.04,
     story: 'Education',
@@ -838,6 +935,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 75,
     name: 'test 9',
+    nameTr: 'test9',
+    levelTr: 'level9',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -856,6 +955,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 0,
     name: LessonNameAsGame.MEMORY_TESTER_GAME,
+    nameTr: LessonParentTranslateGameName.MEMORY_TESTER_GAME,
+    levelTr: 'game',
     pgnFilename: null,
     lessonFactor: 0,
     story: 'Education',
@@ -869,12 +970,13 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isPreview: false,
     isBot: false,
     canBeSkipped: false,
-    messageModal:
-      'Reach at least Level 3 in Memory Tester WC game to unlock Level 10. Good luck!',
+    messageModal: 'reach_level_3_memory_tester_wc_message',
   },
   {
     timer: 75,
     name: 'Mate in many moves',
+    nameTr: 'mate_in_many_moves',
+    levelTr: 'level10',
     pgnFilename: 'Level_10_Difficult_mate_in_many_moves.pgn',
     lessonFactor: 0.04,
     story: 'Education',
@@ -893,6 +995,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 75,
     name: 'test 10',
+    nameTr: 'test10',
+    levelTr: 'level10',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Education',
@@ -912,6 +1016,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Winning combination',
+    nameTr: 'winning_combination',
+    levelTr: 'level1',
     pgnFilename: 'Level_11_Puzzle_Winning_combination.pgn',
     lessonFactor: 0.08,
     story: 'Puzzle',
@@ -930,6 +1036,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'test 1',
+    nameTr: 'test1',
+    levelTr: 'level1',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Puzzle',
@@ -948,6 +1056,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Great moves',
+    nameTr: 'great_moves',
+    levelTr: 'level2',
     pgnFilename: 'Level_12_Puzzle_Great_moves.pgn',
     lessonFactor: 0.08,
     story: 'Puzzle',
@@ -966,6 +1076,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'test 2',
+    nameTr: 'test2',
+    levelTr: 'level2',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Puzzle',
@@ -984,6 +1096,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'Master of the motives',
+    nameTr: 'master_of_the_motives',
+    levelTr: 'level3',
     pgnFilename: 'Level_13_Puzzle_Master_of_the_motives.pgn',
     lessonFactor: 0.08,
     story: 'Puzzle',
@@ -1002,6 +1116,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 30,
     name: 'test 3',
+    nameTr: 'test3',
+    levelTr: 'level3',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Puzzle',
@@ -1020,6 +1136,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 45,
     name: 'The wizard',
+    nameTr: 'the_wizard',
+    levelTr: 'level4',
     pgnFilename: 'Level_14_Puzzle_The_wizard.pgn',
     lessonFactor: 0.08,
     story: 'Puzzle',
@@ -1038,6 +1156,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 45,
     name: 'test 4',
+    nameTr: 'test4',
+    levelTr: 'level4',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Puzzle',
@@ -1056,6 +1176,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 45,
     name: 'Big brain',
+    nameTr: 'big_brain',
+    levelTr: 'level5',
     pgnFilename: 'Level_15_Puzzle_Big_brain.pgn',
     lessonFactor: 0.08,
     story: 'Puzzle',
@@ -1074,6 +1196,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 45,
     name: 'test 5',
+    nameTr: 'test5',
+    levelTr: 'level5',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Puzzle',
@@ -1092,6 +1216,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'Mastermind solver',
+    nameTr: 'mastermind_solver',
+    levelTr: 'level6',
     pgnFilename: 'Level_16_Puzzle_Mastermind_solver.pgn',
     lessonFactor: 0.08,
     story: 'Puzzle',
@@ -1110,6 +1236,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'test 6',
+    nameTr: 'test6',
+    levelTr: 'level6',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Puzzle',
@@ -1128,6 +1256,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'ASAP',
+    nameTr: 'asap',
+    levelTr: 'level7',
     pgnFilename: 'Level_17_Puzzle_Asap.pgn',
     lessonFactor: 0.08,
     story: 'Puzzle',
@@ -1146,6 +1276,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 60,
     name: 'test 7',
+    nameTr: 'test7',
+    levelTr: 'level7',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Puzzle',
@@ -1164,6 +1296,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'The master of studies',
+    nameTr: 'the_master_of_studies',
+    levelTr: 'level8',
     pgnFilename: 'Level_18_Puzzle_The_master_of_studies.pgn',
     lessonFactor: 0.08,
     story: 'Puzzle',
@@ -1182,6 +1316,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'test 8',
+    nameTr: 'test8',
+    levelTr: 'level8',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Puzzle',
@@ -1200,6 +1336,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'The boss',
+    nameTr: 'the_boss',
+    levelTr: 'level9',
     pgnFilename: 'Level_19_Puzzle_The_boss.pgn',
     lessonFactor: 0.08,
     story: 'Puzzle',
@@ -1218,6 +1356,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'test 9',
+    nameTr: 'test9',
+    levelTr: 'level9',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Puzzle',
@@ -1237,6 +1377,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'Pawn Endgame',
+    nameTr: 'pawn_endgame',
+    levelTr: 'level1',
     pgnFilename: 'Level_20_Endgame_Pawn.pgn',
     lessonFactor: 0.28,
     story: 'Endgame',
@@ -1255,6 +1397,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'test 1',
+    nameTr: 'test1',
+    levelTr: 'level1',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Endgame',
@@ -1273,6 +1417,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'Knight Endgame',
+    nameTr: 'knight_endgame',
+    levelTr: 'level2',
     pgnFilename: 'Level_21_Endgame_Knight.pgn',
     lessonFactor: 0.18,
     story: 'Endgame',
@@ -1291,6 +1437,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'test 2',
+    nameTr: 'test2',
+    levelTr: 'level2',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Endgame',
@@ -1309,6 +1457,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'Bishop Endgame',
+    nameTr: 'bishop_endgame',
+    levelTr: 'level3',
     pgnFilename: 'Level_22_Endgame_Bishop.pgn',
     lessonFactor: 0.14,
     story: 'Endgame',
@@ -1327,6 +1477,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'test 3',
+    nameTr: 'test3',
+    levelTr: 'level3',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Endgame',
@@ -1345,6 +1497,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'Bishop and Knight Endgame',
+    nameTr: 'bishop_and_knight_endgame',
+    levelTr: 'level4',
     pgnFilename: 'Level_23_Endgame_Bishop_And_Knight.pgn',
     lessonFactor: 0.12,
     story: 'Endgame',
@@ -1363,6 +1517,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'test 4',
+    nameTr: 'test4',
+    levelTr: 'level4',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Endgame',
@@ -1381,6 +1537,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'Rook Endgame',
+    nameTr: 'rook_endgame',
+    levelTr: 'level5',
     pgnFilename: 'Level_24_Endgame_Rook.pgn',
     lessonFactor: 0.13,
     story: 'Endgame',
@@ -1399,6 +1557,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'test 5',
+    nameTr: 'test5',
+    levelTr: 'level5',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Endgame',
@@ -1417,6 +1577,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'Rook and Minor Piece',
+    nameTr: 'rook_and_minor_piece',
+    levelTr: 'level6',
     pgnFilename: 'Level_25_Endgame_Rook_And_Minor_Piece.pgn',
     lessonFactor: 0.078,
     story: 'Endgame',
@@ -1435,6 +1597,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'test 6',
+    nameTr: 'test6',
+    levelTr: 'level6',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Endgame',
@@ -1453,6 +1617,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'Queen Endgame',
+    nameTr: 'queen_endgame',
+    levelTr: 'level7',
     pgnFilename: 'Level_26_Endgame_Queen.pgn',
     lessonFactor: 0.869,
     story: 'Endgame',
@@ -1471,6 +1637,8 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
   {
     timer: 90,
     name: 'test 7',
+    nameTr: 'test7',
+    levelTr: 'level7',
     pgnFilename: null,
     lessonFactor: 0.7,
     story: 'Endgame',

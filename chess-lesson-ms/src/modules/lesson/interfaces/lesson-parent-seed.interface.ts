@@ -1,6 +1,8 @@
 export interface ILessonParentSeed {
   timer: number;
   name: string;
+  nameTr: string;
+  levelTr: string;
   pgnFilename: string | null;
   lessonFactor: number;
   story: string;

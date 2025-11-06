@@ -6,6 +6,8 @@ export interface ICountAndListLessonParents {
 
 export interface ILessonParent {
   id: number;
+  nameTr: string;
+  levelTr: string;
   lessonFactor: number;
   level: string;
   levelFrontend: string;
@@ -27,6 +29,8 @@ export interface ILessonParent {
 
 export interface ILessonParentDetail {
   id: number;
+  nameTr: string;
+  levelTr: string;
   lessonFactor: number;
   level: string;
   timer: number;

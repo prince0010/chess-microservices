@@ -96,6 +96,7 @@ services:
     environment:
       PORT: ${CHESS_GATEWAY_PORT}
       NATS_SERVERS: "${NATS_SERVERS}"
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
     networks:
       - chess_development
 
@@ -152,6 +153,7 @@ services:
       LESSON_DB_ROOT_PASSWORD: ${LESSON_DB_ROOT_PASSWORD}
       LESSON_DB_USERNAME: ${LESSON_DB_USERNAME}
       LESSON_DB_PASSWORD: ${LESSON_DB_PASSWORD}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
     networks:
       - chess_development
 

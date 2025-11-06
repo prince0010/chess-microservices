@@ -12,8 +12,8 @@ services:
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
     container_name: cadvisor
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080" # with expose it is not public
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:rw
@@ -28,8 +28,8 @@ services:
   prometheus:
     container_name: prometheus
     image: prom/prometheus:latest
-    ports:
-      - "9090:9090"
+    expose:
+      - "9090" # with expose it is not public
     volumes:
       - "./prometheus.yml:/etc/prometheus/prometheus.yml"
     privileged: true
@@ -46,6 +46,8 @@ services:
     environment:
       - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
       - DS_PROMETHEUS=prometheus
+      - GF_SECURITY_ADMIN_USER=${GF_SECURITY_ADMIN_USER}
+      - GF_SECURITY_ADMIN_PASSWORD=${GF_SECURITY_ADMIN_PASSWORD}
     volumes:
       - "grafana-data:/var/lib/grafana"
       - "./datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml"
@@ -61,14 +63,17 @@ services:
     image: redis:7-alpine
     container_name: redis
     restart: always
-    ports:
-      - "6379:6379"
     command: >
       redis-server
       --save 60 1
       --loglevel warning
       --maxmemory 256mb
       --maxmemory-policy allkeys-lru
+      --requirepass ${REDIS_PASSWORD}
+      --bind 0.0.0.0
+      --protected-mode yes
+    expose:
+      - "6379" # Internal Docker access only, not public
     volumes:
       - ./redis-data:/data
     networks:
@@ -99,6 +104,7 @@ services:
     environment:
       - PORT=${CHESS_GATEWAY_PORT}
       - NATS_SERVERS=${NATS_SERVERS}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
     volumes:
       - ./chess-gateway/public:/usr/src/app/public
       - ./chess-gateway/uploads:/usr/src/app/uploads
@@ -156,6 +162,7 @@ services:
       LESSON_DB_ROOT_PASSWORD: ${LESSON_DB_ROOT_PASSWORD}
       LESSON_DB_USERNAME: ${LESSON_DB_USERNAME}
       LESSON_DB_PASSWORD: ${LESSON_DB_PASSWORD}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
     volumes:
       - ./chess-lesson-ms/files:/usr/src/app/files
     networks:

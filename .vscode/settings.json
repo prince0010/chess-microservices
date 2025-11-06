@@ -15,6 +15,7 @@
     "originalname",
     "prometheus",
     "redis",
+    "requirepass",
     "rootfs",
     "timepicker",
     "wordprocessingml"

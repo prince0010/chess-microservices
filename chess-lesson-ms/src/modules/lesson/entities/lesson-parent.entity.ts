@@ -24,6 +24,12 @@ export class LessonParent {
   @Column({ length: 128, nullable: false })
   name: string; // Pawn, King, Queen, Custom, etc.
 
+  @Column({ nullable: false })
+  nameTr: string; // for translations purpose
+
+  @Column({ nullable: false })
+  levelTr: string; // for translations purpose
+
   @Column({ length: 128, nullable: true, default: null })
   pgnFilename?: string; // filename of the pgn, it can be null if isTest | isGame | isBot
 

@@ -173,9 +173,10 @@ export class LessonParentService {
       const cacheKey = `lesson-parent-find-one-${lessonParentId}-${userUid}`;
       const cached = await this.redisService.get(cacheKey);
 
-      if (cached) {
-        return cached;
-      }
+      // changeMe! uncomment this on production
+      // if (cached) {
+      //   return cached;
+      // }
 
       const { lessonsLength, lessonsCompleted } =
         await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
@@ -186,6 +187,8 @@ export class LessonParentService {
 
       const result: ILessonParentDetail = {
         id: lessonParent.id,
+        nameTr: lessonParent.nameTr,
+        levelTr: lessonParent.levelTr,
         lessonFactor: lessonParent.lessonFactor,
         canBeSkipped: lessonParent.canBeSkipped,
         name: lessonParent.name,
@@ -330,6 +333,8 @@ export class LessonParentService {
 
       let lessonsDetail: ILessonParentDetail = {
         id: lessonParent.id,
+        nameTr: lessonParent.nameTr,
+        levelTr: lessonParent.levelTr,
         lessonFactor: lessonParent.lessonFactor,
         canBeSkipped: lessonParent.canBeSkipped,
         timer: lessonParent.timer,
@@ -509,6 +514,8 @@ export class LessonParentService {
 
         parents.push({
           id: lessonParent.id,
+          nameTr: lessonParent.nameTr,
+          levelTr: lessonParent.levelTr,
           lessonFactor: lessonParent.lessonFactor,
           canBeSkipped: lessonParent.canBeSkipped,
           timer: lessonParent.timer,
