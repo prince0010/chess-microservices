@@ -15,7 +15,7 @@ import { LessonParentTestRecord } from './entities/lesson-parent-test-record.ent
 
 import { LessonService } from './lesson.service';
 import { RedisService } from '../redis/redis.service';
-import { transformSingleLessons } from './helpers/transform-lesson.helper';
+import { LessonTranslateService } from './lesson-translate.service';
 import { someLessonDuplicates } from './helpers/duplicate-lesson.helper';
 import { shuffleRandomLessons } from './helpers/shuffle-random-lessons.helper';
 import { typeUserCounterByStoryLesson } from 'src/utils/type-user-counter-by-story-lesson';
@@ -56,6 +56,7 @@ export class LessonParentService {
     @InjectRepository(LessonParentTestRecord)
     private readonly lessonParentTestRecordRepository: Repository<LessonParentTestRecord>,
     private readonly lessonService: LessonService,
+    private readonly lessonTranslateService: LessonTranslateService,
     private readonly redisService: RedisService,
   ) {}
 
@@ -152,7 +153,11 @@ export class LessonParentService {
   async findOne(
     findOneLessonParentDto: FindOneLessonParentDto,
   ): Promise<ILessonParentDetail> {
-    const { userUid, lessonParentId } = findOneLessonParentDto;
+    const {
+      userUid,
+      lessonParentId,
+      targetLanguage = 'en',
+    } = findOneLessonParentDto;
     try {
       const lessonParent = await this.lessonParentRepository.findOne({
         where: { id: lessonParentId },
@@ -166,17 +171,22 @@ export class LessonParentService {
 
       // if the lesson is test it is required to return random lessons
       if (lessonParent.isTest) {
-        return await this.selectRandomTestLessonsByLevel(lessonParent, userUid);
+        return await this.selectRandomTestLessonsByLevel(
+          lessonParent,
+          userUid,
+          targetLanguage,
+        );
       }
 
-      // if not test verify if exists cache - implement redis cached
+      // if not test verify if exists cache on english only due to description - implement redis cached
       const cacheKey = `lesson-parent-find-one-${lessonParentId}-${userUid}`;
-      const cached = await this.redisService.get(cacheKey);
+      if (targetLanguage === 'en') {
+        const cached = await this.redisService.get(cacheKey);
 
-      // changeMe! uncomment this on production
-      // if (cached) {
-      //   return cached;
-      // }
+        if (cached) {
+          return cached;
+        }
+      }
 
       const { lessonsLength, lessonsCompleted } =
         await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
@@ -208,11 +218,16 @@ export class LessonParentService {
         lastLessonPlayedId:
           lastLessonPlayedId?.lastLessonPlayed ??
           lessonParent.lessons[0].id - 1,
-        lessons: transformSingleLessons(lessonParent.lessons),
+        lessons: await this.lessonTranslateService.transformSingleLessons(
+          lessonParent.lessons,
+          targetLanguage,
+        ),
       };
 
-      // cache result
-      await this.redisService.set(cacheKey, result, 6000); // large TTL
+      // cache result if english
+      if (targetLanguage === 'en') {
+        await this.redisService.set(cacheKey, result, 6000); // large TTL
+      }
 
       return result;
     } catch (error) {
@@ -226,6 +241,7 @@ export class LessonParentService {
   private async selectRandomTestLessonsByLevel(
     lessonParent: LessonParent,
     userUid: number,
+    targetLanguage = 'en',
   ): Promise<ILessonParentDetail> {
     try {
       // STEP 1: Get all lessons with this level but only from pgn 250 (isPreview:false)
@@ -352,7 +368,10 @@ export class LessonParentService {
         lessonsLength: 10, // is a test
         lessonsCompleted: 0,
         lastLessonPlayedId: 0,
-        lessons: transformSingleLessons(selectedLessons),
+        lessons: await this.lessonTranslateService.transformSingleLessons(
+          selectedLessons,
+          targetLanguage,
+        ),
       };
 
       if (testCompletedRow) {

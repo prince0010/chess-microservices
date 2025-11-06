@@ -21,6 +21,7 @@ import { SuperAdminGuard } from 'src/guards/super-admin.guard';
 import { FindAllLessonParentDto } from './dto/find-all-lesson-parent.dto';
 import { CompleteLessonParentDto } from './dto/complete-lesson-parent.dto';
 import { FindOneLessonParentDto } from './dto/find-one-lesson-parent.dto';
+import { TargetLanguageDto } from './dto/target-language.dto';
 
 @Controller('lesson-parent')
 export class LessonParentController {
@@ -66,10 +67,15 @@ export class LessonParentController {
 
   @UseGuards(AuthGuard)
   @Get('/:id')
-  findOne(@Param('id', ParseIntPipe) lessonParentId: string, @Req() req: any) {
+  findOne(
+    @Param('id', ParseIntPipe) lessonParentId: string,
+    @Query() targetLanguageDto: TargetLanguageDto,
+    @Req() req: any,
+  ) {
     const payload: FindOneLessonParentDto = {
       lessonParentId: +lessonParentId,
       userUid: req.user.uid,
+      targetLanguage: targetLanguageDto.targetLanguage ?? 'en',
     };
 
     return this.client.send('lessonParent.find.one', payload).pipe(

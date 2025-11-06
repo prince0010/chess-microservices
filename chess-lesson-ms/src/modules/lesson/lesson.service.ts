@@ -10,8 +10,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Lesson } from './entities/lesson.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
 import { LessonSingleRecord } from './entities/lesson-single-record.entity';
-
-import { transformSingleLessons } from './helpers/transform-lesson.helper';
+import { LessonTranslateService } from './lesson-translate.service';
 
 import { FindOneLessonDto } from './dto/find-one-lesson.dto';
 import { FindAllHistoryRecordLessonDto } from './dto/find-all-history-record-lesson.dto';
@@ -27,10 +26,11 @@ export class LessonService {
     private readonly lessonParentRepository: Repository<LessonParent>,
     @InjectRepository(LessonSingleRecord)
     private readonly lessonSingleRecordRepository: Repository<LessonSingleRecord>,
+    private readonly lessonTranslateService: LessonTranslateService,
   ) {}
 
   async findOne(findOneLessonDto: FindOneLessonDto): Promise<ILessonList> {
-    const { lessonId, userUid } = findOneLessonDto;
+    const { lessonId, userUid, targetLanguage = 'en' } = findOneLessonDto;
 
     try {
       const lessonById = await this.lessonRepository.findOne({
@@ -40,7 +40,13 @@ export class LessonService {
         throw new NotFoundException(`Lesson by ID: ${lessonId} not found.`);
       }
 
-      return transformSingleLessons([lessonById])[0];
+      const transformed =
+        await this.lessonTranslateService.transformSingleLessons(
+          [lessonById],
+          targetLanguage,
+        );
+
+      return transformed[0];
     } catch (error) {
       throw new RpcException({
         status: 400,

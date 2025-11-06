@@ -20,6 +20,7 @@ import { RedisService } from '../redis/redis.service';
 
 import { FindAllHistoryRecordLessonDto } from './dto/find-all-history-record-lesson.dto';
 import { FindAllLessonAdvancedDto } from './dto/find-all-lesson-advanced.dto';
+import { TargetLanguageDto } from './dto/target-language.dto';
 
 @Controller('lesson')
 export class LessonController {
@@ -188,15 +189,29 @@ export class LessonController {
 
   @UseGuards(AuthGuard)
   @Get('/:id')
-  async findOne(@Param('id', ParseIntPipe) id: string, @Req() req: any) {
+  async findOne(
+    @Param('id', ParseIntPipe) id: string,
+    @Query() targetLanguageDto: TargetLanguageDto,
+    @Req() req: any,
+  ) {
     const cacheKey = `single-lesson-by-id-user-${id}-${req.user.uid}`;
-    const cached = await this.redisService.get(cacheKey);
 
-    if (cached) {
-      return cached;
+    if (
+      targetLanguageDto.targetLanguage &&
+      targetLanguageDto.targetLanguage === 'en'
+    ) {
+      const cached = await this.redisService.get(cacheKey);
+
+      if (cached) {
+        return cached;
+      }
     }
 
-    const payload = { lessonId: id, userUid: req.user.uid };
+    const payload = {
+      lessonId: id,
+      userUid: req.user.uid,
+      targetLanguage: targetLanguageDto.targetLanguage,
+    };
 
     const result = await firstValueFrom(
       this.client.send('lesson.find.one', payload).pipe(

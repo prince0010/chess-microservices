@@ -26,6 +26,7 @@ import { LessonSeederService } from './lesson-seeder.service';
 import { LessonParentService } from './lesson-parent.service';
 import { LessonParentTestRecordService } from './lesson-parent-test-record.service';
 import { LessonAdvancedService } from './lesson-advanced.service';
+import { LessonTranslateService } from './lesson-translate.service';
 
 @Module({
   controllers: [
@@ -42,6 +43,7 @@ import { LessonAdvancedService } from './lesson-advanced.service';
     LessonParentService,
     LessonParentTestRecordService,
     LessonAdvancedService,
+    LessonTranslateService,
   ],
   imports: [
     TypeOrmModule.forFeature([

@@ -96,7 +96,7 @@ export class PaymentService {
         break;
 
       default:
-        // console.log(`Stripe Event type: ${event.type} not handled`);
+        // console.warn(`Stripe Event type: ${event.type} not handled`);
         break;
     }
 
