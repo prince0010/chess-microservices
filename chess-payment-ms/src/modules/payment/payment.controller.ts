@@ -1,5 +1,5 @@
 import { Controller, Post, Req, Res } from '@nestjs/common';
-import { EventPattern, MessagePattern, Payload } from '@nestjs/microservices';
+import { MessagePattern, Payload } from '@nestjs/microservices';
 import { Request, Response } from 'express';
 
 import { PaymentService } from './payment.service';
@@ -16,32 +16,9 @@ export class PaymentController {
     return this.paymentService.createPaymentSession(paymentSessionDto);
   }
 
-  // stripe events for localhost development with CLI
+  // stripe events
   @Post('webhook')
   async stripeWebhook(@Req() req: Request, @Res() res: Response) {
     return this.paymentService.stripeWebhook(req, res);
-  }
-
-  // Stripe events for production/test forwarded by Gateway via NATS
-  @EventPattern('payment.listen.webhookStripe')
-  async stripeWebhookViaNATS(@Payload() payload: any) {
-    console.log('HEREEEEE');
-    // Reconstruct mock request & response objects for compatibility
-    const mockReq: Partial<any> = {
-      headers: payload.headers,
-      rawBody: payload.rawBody,
-    };
-
-    const mockRes = {
-      status: () => ({
-        send: () => {},
-        json: () => {},
-      }),
-    } as unknown as Partial<Response>;
-
-    return await this.paymentService.stripeWebhook(
-      mockReq as Request,
-      mockRes as Response,
-    );
   }
 }
