@@ -2,6 +2,11 @@
 
 This is the configuration of VPS for We-Chess App
 
+## Remember these points
+
+1. Remember to use SSL and a secure and properly nginx configuration for production.
+2. Disabled port Redis container module to internet and only use internally, configure ufw firewall to block redis port.
+
 ## Initial configuration (APPLIED AT March 24)
 
 `root@srv768144:~# systemctl status nginx
