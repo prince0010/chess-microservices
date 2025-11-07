@@ -6,6 +6,12 @@ This is the configuration of VPS for We-Chess App
 
 1. Remember to use SSL and a secure and properly nginx configuration for production.
 2. Disabled port Redis container module to internet and only use internally, configure ufw firewall to block redis port.
+3. Proxy payment endpoint for stripe webhook events like this example:
+   `location /payment/...route {
+    proxy_pass http://<name-container-docker-service>:<port>/;
+    ...
+}`
+   That way NGINX can reach the payment container through the internal Docker network.
 
 ## Initial configuration (APPLIED AT March 24)
 
