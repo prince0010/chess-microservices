@@ -16,7 +16,7 @@ export class PaymentController {
     return this.paymentService.createPaymentSession(paymentSessionDto);
   }
 
-  // stripe events will notify this endpoint in testing and production environment
+  // stripe events
   @Post('webhook')
   async stripeWebhook(@Req() req: Request, @Res() res: Response) {
     return this.paymentService.stripeWebhook(req, res);
