@@ -6,6 +6,7 @@ import { In, Repository } from 'typeorm';
 import { Lesson } from './entities/lesson.entity';
 import { LessonParent } from './entities/lesson-parent.entity';
 import { LessonParentTestRecord } from './entities/lesson-parent-test-record.entity';
+import { LessonTranslateService } from './lesson-translate.service';
 
 import {
   ILessonTestRecordListByUser,
@@ -24,6 +25,7 @@ export class LessonParentTestRecordService {
     private readonly lessonRepository: Repository<Lesson>,
     @InjectRepository(LessonParent)
     private readonly lessonParentRepository: Repository<LessonParent>,
+    private readonly lessonTranslateService: LessonTranslateService,
   ) {}
 
   async findAllByUser(
@@ -91,6 +93,7 @@ export class LessonParentTestRecordService {
       userUid: userAuthenticatedUid,
       recordId,
       studentUid = null,
+      targetLanguage = 'en',
     } = findOneLessonRecordTestDto;
 
     const userUid = studentUid ?? userAuthenticatedUid;
@@ -114,13 +117,26 @@ export class LessonParentTestRecordService {
         where: { id: In(record.lessons.map((lessonId) => +lessonId)) },
       });
 
-      const transformedLessons: ISingleChildLessonPuzzle[] = lessons.map(
-        (lesson) => ({
+      let translatedLessons: ISingleChildLessonPuzzle[] = [];
+
+      if (targetLanguage !== 'en') {
+        const resultTranslated =
+          await this.lessonTranslateService.transformSingleLessons(
+            lessons,
+            targetLanguage,
+          );
+
+        translatedLessons = resultTranslated.map((lesson) => ({
+          ...lesson,
+          isFailure: false,
+        }));
+      } else {
+        translatedLessons = lessons.map((lesson) => ({
           ...lesson,
           moves: lesson.moves.split(' '),
           isFailure: false,
-        }),
-      );
+        }));
+      }
 
       // STEP verify if some failedLesson exists
       let failedLesson: Lesson | null = null;
@@ -138,7 +154,7 @@ export class LessonParentTestRecordService {
       }
 
       if (failedLesson) {
-        transformedLessons.push({
+        translatedLessons.push({
           ...failedLesson,
           moves: failedLesson.moves.split(' '),
           isFailure: true,
@@ -151,7 +167,7 @@ export class LessonParentTestRecordService {
         name: record.lessonParent.name,
         playedAt: record.playedAt,
         result: record.lessons.length < 7 ? 'failed' : 'passed',
-        lessons: transformedLessons,
+        lessons: translatedLessons,
       };
     } catch (error) {
       throw new RpcException({

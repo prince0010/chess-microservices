@@ -46,11 +46,13 @@ export class LessonParentTestRecordController {
     @Param('recordId', ParseIntPipe) recordId: number,
     @Req() req: any,
     @Query('studentUid') studentUid?: number,
+    @Query('targetLanguage') targetLanguage?: string,
   ) {
     const payload = {
       recordId,
       userUid: +req.user.uid,
       studentUid: studentUid ?? null, // when teacher see student progress on web system panel
+      targetLanguage,
     };
 
     return this.client
