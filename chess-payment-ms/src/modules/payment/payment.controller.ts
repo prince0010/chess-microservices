@@ -16,6 +16,9 @@ export class PaymentController {
     return this.paymentService.createPaymentSession(paymentSessionDto);
   }
 
+  /*
+    On localhost use CLI to activate stripe events with this command: stripe listen --forward-to localhost:3004/payment/webhook
+  */
   // stripe events
   @Post('webhook')
   async stripeWebhook(@Req() req: Request, @Res() res: Response) {
