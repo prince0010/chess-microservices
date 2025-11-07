@@ -24,7 +24,8 @@ export class PaymentController {
 
   // Stripe events for production/test forwarded by Gateway via NATS
   @EventPattern('payment.listen.webhookStripe')
-  stripeWebhookViaNATS(@Payload() payload: any) {
+  async stripeWebhookViaNATS(@Payload() payload: any) {
+    console.log('HEREEEEE');
     // Reconstruct mock request & response objects for compatibility
     const mockReq: Partial<any> = {
       headers: payload.headers,
@@ -38,6 +39,9 @@ export class PaymentController {
       }),
     } as unknown as Partial<Response>;
 
-    this.paymentService.stripeWebhook(mockReq as Request, mockRes as Response);
+    return await this.paymentService.stripeWebhook(
+      mockReq as Request,
+      mockRes as Response,
+    );
   }
 }
