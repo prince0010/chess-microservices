@@ -22,6 +22,35 @@ export class LessonTranslateService {
     private readonly lessonRepository: Repository<Lesson>,
   ) {}
 
+  public async seedManuallyTranslations() {
+    // Get unique descriptions only (to avoid duplicate API calls)
+    const allLessons = await this.lessonRepository.find({
+      select: ['description'],
+      where: { description: Not('') },
+    });
+
+    const uniqueDescriptions = [
+      ...new Set(allLessons.map((l) => l.description.trim())),
+    ];
+
+    for (let i = 0; i < uniqueDescriptions.length; i++) {
+      const description = uniqueDescriptions[i];
+      const textHash = crypto
+        .createHash('sha256')
+        .update(description.trim().toLowerCase())
+        .digest('hex');
+
+      const objectToSeed = {
+        target: 'en',
+        originalDescription: description,
+        translatedDescription: description,
+        hashCode: textHash,
+      };
+
+      console.log(objectToSeed);
+    }
+  }
+
   public async seedCachedTranslations(): Promise<string> {
     const listLanguages = ['ka', 'es']; // you can extend this easily
     const BATCH_SIZE = 50; // optional batching for large datasets

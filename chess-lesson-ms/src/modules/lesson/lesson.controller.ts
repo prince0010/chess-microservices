@@ -26,6 +26,11 @@ export class LessonController {
     return this.lessonTranslateService.seedCachedTranslations();
   }
 
+  @MessagePattern('lesson.seed.manuallyTranslations')
+  seedDescriptionManuallyTranslation() {
+    return this.lessonTranslateService.seedManuallyTranslations();
+  }
+
   @MessagePattern('lesson.find.one')
   findOne(@Payload() findOneLessonDto: FindOneLessonDto) {
     return this.lessonService.findOne(findOneLessonDto);

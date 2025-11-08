@@ -50,6 +50,16 @@ export class LessonController {
   }
 
   @UseGuards(SuperAdminGuard)
+  @Post('seed-manually-translations-list')
+  seedManuallyDescriptionTranslations() {
+    return this.client.send('lesson.seed.manuallyTranslations', {}).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(SuperAdminGuard)
   @Post('seed-all-advanced-pgn-files')
   insertAdvancedPgnFiles() {
     return this.client.send('lesson.insert.advancedPgn', {}).pipe(
