@@ -5,7 +5,7 @@ export interface HashedLessonTranslated {
   hashCode: string; // never change do not touch
 }
 
-const listLessons: HashedLessonTranslated[] = [
+export const listLessonTranslateDescription: HashedLessonTranslated[] = [
   {
     target: 'en',
     originalDescription: 'Move the pawn to the marked square',

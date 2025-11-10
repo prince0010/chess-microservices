@@ -6,9 +6,11 @@ import { Not, Repository } from 'typeorm';
 import axios from 'axios';
 
 import { Lesson } from './entities/lesson.entity';
+import { LessonTranslateDescription } from './entities/lesson-translate-description.entity';
 
 import { envs, NATS_SERVICE } from 'src/config';
 import { RedisService } from '../redis/redis.service';
+import { listLessonTranslateDescription } from './seed/lesson-translate-description-seed';
 
 import { ILessonList } from './interfaces';
 
@@ -20,34 +22,49 @@ export class LessonTranslateService {
 
     @InjectRepository(Lesson)
     private readonly lessonRepository: Repository<Lesson>,
+
+    @InjectRepository(LessonTranslateDescription)
+    private readonly lessonTranslateDescriptionRepository: Repository<LessonTranslateDescription>,
   ) {}
 
-  public async seedManuallyTranslations() {
-    // Get unique descriptions only (to avoid duplicate API calls)
-    const allLessons = await this.lessonRepository.find({
-      select: ['description'],
-      where: { description: Not('') },
-    });
+  public async seedManuallyTranslations(): Promise<string> {
+    try {
+      let counter = 0;
+      const arrPromises: Promise<LessonTranslateDescription>[] = [];
+      for (const description of listLessonTranslateDescription) {
+        if (description.target === 'en') continue;
 
-    const uniqueDescriptions = [
-      ...new Set(allLessons.map((l) => l.description.trim())),
-    ];
+        const lessonWasInserted =
+          await this.lessonTranslateDescriptionRepository.findOneBy({
+            hashCode: description.hashCode,
+          });
+        if (lessonWasInserted) continue;
 
-    for (let i = 0; i < uniqueDescriptions.length; i++) {
-      const description = uniqueDescriptions[i];
-      const textHash = crypto
-        .createHash('sha256')
-        .update(description.trim().toLowerCase())
-        .digest('hex');
+        const newLessonTranslateDescription =
+          this.lessonTranslateDescriptionRepository.create({
+            target: description.target,
+            originalDescription: description.originalDescription,
+            translatedDescription: description.translatedDescription,
+            hashCode: description.hashCode,
+          });
 
-      const objectToSeed = {
-        target: 'en',
-        originalDescription: description,
-        translatedDescription: description,
-        hashCode: textHash,
-      };
+        arrPromises.push(
+          this.lessonTranslateDescriptionRepository.save(
+            newLessonTranslateDescription,
+          ),
+        );
 
-      console.log(objectToSeed);
+        counter++;
+      }
+
+      await Promise.all(arrPromises);
+
+      return `Lesson Translate Description list inserted. The total seeded was: ${counter}`;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
     }
   }
 
