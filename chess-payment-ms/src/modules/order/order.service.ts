@@ -8,6 +8,7 @@ import { NATS_SERVICE } from 'src/config';
 import { Order } from './entities/order.entity';
 import { Item } from '../item/entities/item.entity';
 import { OrderReceipt } from './entities/order-receipt.entity';
+import { PaymentSubscription } from '../payment-subscription/entities/payment-subscription.entity';
 
 import { ItemService } from '../item/item.service';
 import { NotificationPurchaseService } from '../notification/notification-purchase.service';
@@ -36,6 +37,8 @@ export class OrderService {
     private readonly orderRepository: Repository<Order>,
     @InjectRepository(OrderReceipt)
     private readonly orderReceiptRepository: Repository<OrderReceipt>,
+    @InjectRepository(PaymentSubscription)
+    private readonly paymentSubscriptionRepository: Repository<PaymentSubscription>,
 
     private readonly itemService: ItemService,
     private readonly notificationPurchaseService: NotificationPurchaseService,
@@ -49,19 +52,40 @@ export class OrderService {
       const itemIds = createOrderDto.items.map((e) => e.itemId);
       const items = await this.itemService.validateItems(itemIds);
 
-      // 2- calculate total price for each item * quantity (total)
+      // 2: Check for existing subscription => All levels unlocked for life time
+      if (
+        items.some(
+          (item) => item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME,
+        )
+      ) {
+        const hasLifetime = await firstValueFrom(
+          this.client.send(
+            'paymentSubscription.levelsForLifeTime.active',
+            userUid,
+          ),
+        );
+
+        if (hasLifetime) {
+          // User already purchased lifetime access => skip creating a new order
+          throw new BadRequestException(
+            'ALREADY_PACKAGE_ALL_LEVELS_UNLOCKED_PURCHASED',
+          );
+        }
+      }
+
+      // 3- calculate total price for each item * quantity (total)
       const totalAmount = createOrderDto.items.reduce((acc, orderItem) => {
         const price = items.find((e) => e.id === orderItem.itemId).price;
 
         return acc + price * orderItem.quantity;
       }, 0);
 
-      // 3- calculate total items was bought
+      // 4- calculate total items was bought
       const totalItems = createOrderDto.items.reduce((acc, orderItem) => {
         return acc + orderItem.quantity;
       }, 0);
 
-      // 4- create orderItems
+      // 5- create orderItems
       const orderItems: any[] = items.map((item: Item) => ({
         price: item.price,
         quantity: createOrderDto.items.find(
@@ -70,7 +94,7 @@ export class OrderService {
         item,
       }));
 
-      // 5- insert on database
+      // 6- insert on database
       const newOrder = this.orderRepository.create({
         totalAmount,
         totalItems: totalItems,
@@ -290,6 +314,39 @@ export class OrderService {
   private async createSubscriptionForLevelsOpenFor30Days(
     order: Order,
   ): Promise<void> {
+    // verify if user purchase already this package
+    const paymentSubscription =
+      await this.paymentSubscriptionRepository.findOne({
+        where: {
+          userUid: order.userUid,
+          item: { name: ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS },
+        },
+        relations: { item: true },
+        order: { startedAt: 'DESC' },
+      });
+
+    if (paymentSubscription) {
+      const startedAt = new Date(paymentSubscription.startedAt);
+      const duration =
+        paymentSubscription.durationDays ??
+        paymentSubscription.item.durationDays ??
+        0;
+
+      const expiresAt = new Date(startedAt);
+      expiresAt.setDate(expiresAt.getDate() + duration);
+
+      // If the subscription is still active, extend it by 30 days
+      if (expiresAt > new Date()) {
+        const newStartedAt = new Date(startedAt);
+        newStartedAt.setDate(newStartedAt.getDate() + duration);
+
+        paymentSubscription.startedAt = newStartedAt;
+        await this.paymentSubscriptionRepository.save(paymentSubscription);
+
+        return;
+      }
+    }
+
     for (const orderItem of order.orderItems) {
       if (orderItem.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS) {
         const payload: CreatePaymentSubscriptionDto = {

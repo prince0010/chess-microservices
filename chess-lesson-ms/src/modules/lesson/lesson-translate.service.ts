@@ -88,7 +88,7 @@ export class LessonTranslateService {
         `Found ${uniqueDescriptions.length} unique lesson descriptions.`,
       );
 
-      // 2️⃣ Process each language
+      // Process each language
       for (const language of listLanguages) {
         console.log(`\nSeeding translations for language: ${language}`);
 

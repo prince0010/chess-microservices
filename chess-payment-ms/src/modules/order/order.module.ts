@@ -11,12 +11,18 @@ import { OrderService } from './order.service';
 import { Order } from './entities/order.entity';
 import { OrderItem } from './entities/order-item.entity';
 import { OrderReceipt } from './entities/order-receipt.entity';
+import { PaymentSubscription } from '../payment-subscription/entities/payment-subscription.entity';
 
 @Module({
   controllers: [OrdersController],
   providers: [OrderService],
   imports: [
-    TypeOrmModule.forFeature([Order, OrderItem, OrderReceipt]),
+    TypeOrmModule.forFeature([
+      Order,
+      OrderItem,
+      OrderReceipt,
+      PaymentSubscription,
+    ]),
     NatsModule,
     ItemModule,
     NotificationPurchaseModule,

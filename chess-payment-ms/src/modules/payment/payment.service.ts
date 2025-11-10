@@ -69,7 +69,6 @@ export class PaymentService {
 
     switch (event.type) {
       case 'charge.succeeded':
-        console.log('Payemnt sucess stripe event received');
         const chargeSucceeded = event.data.object;
         const payload = {
           stripePaymentId: chargeSucceeded.id,
