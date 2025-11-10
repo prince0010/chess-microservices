@@ -176,6 +176,27 @@ export class LessonTranslateService {
         return text;
       }
 
+      // Normalize and hash text description
+      const textHash = crypto
+        .createHash('sha256')
+        .update(text.trim().toLowerCase())
+        .digest('hex');
+
+      // 1. find in our database
+      const translatedDescriptionFromDB =
+        await this.lessonTranslateDescriptionRepository.findOne({
+          where: { target, hashCode: textHash },
+        });
+
+      if (translatedDescriptionFromDB)
+        return translatedDescriptionFromDB.translatedDescription;
+
+      // 2. find in cache history
+      const cacheKey = `lesson-desc-${textHash}-${target}`;
+      const cached = await this.redisService.get(cacheKey);
+      if (cached) return cached;
+
+      // 3. try Google Translate API up to 3 times
       const apiKey = envs.translationApiKey;
       const baseGoogleApiUrl =
         'https://translation.googleapis.com/language/translate/v2';
@@ -186,19 +207,6 @@ export class LessonTranslateService {
         );
       }
 
-      // 1. Normalize and hash text to cache by meaning
-      const textHash = crypto
-        .createHash('sha256')
-        .update(text.trim().toLowerCase())
-        .digest('hex');
-
-      const cacheKey = `lesson-desc-${textHash}-${target}`;
-
-      // 2. Return cached translation if available
-      const cached = await this.redisService.get(cacheKey);
-      if (cached) return cached;
-
-      // 3. Try Google Translate API up to 3 times
       let translatedText: string | null = null;
       const maxTries = 3;
 
