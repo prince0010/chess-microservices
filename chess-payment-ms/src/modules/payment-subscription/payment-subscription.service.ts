@@ -49,11 +49,14 @@ export class PaymentSubscriptionService {
     }
   }
 
-  private async findLatestLevelUnlockSubscription(userUid: number) {
+  private async findLatestLevelUnlockSubscription(
+    userUid: number,
+    name: string,
+  ) {
     return this.paymentSubscriptionRepository.findOne({
       where: {
         userUid,
-        item: { type: ItemType.LEVELS_UNLOCK },
+        item: { type: ItemType.LEVELS_UNLOCK, name },
       },
       relations: { item: true },
       order: { startedAt: 'DESC' },
@@ -62,8 +65,10 @@ export class PaymentSubscriptionService {
 
   async hasActiveLevelsOpenFor30Days(userUid: number): Promise<boolean> {
     try {
-      const subscription =
-        await this.findLatestLevelUnlockSubscription(userUid);
+      const subscription = await this.findLatestLevelUnlockSubscription(
+        userUid,
+        ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS,
+      );
       if (!subscription) return false;
 
       const is30Days =
@@ -88,8 +93,11 @@ export class PaymentSubscriptionService {
 
   async hasActiveLevelsOpenForLifeTime(userUid: number): Promise<boolean> {
     try {
-      const subscription =
-        await this.findLatestLevelUnlockSubscription(userUid);
+      const subscription = await this.findLatestLevelUnlockSubscription(
+        userUid,
+        ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME,
+      );
+
       if (!subscription) return false;
 
       const isLifetime =
