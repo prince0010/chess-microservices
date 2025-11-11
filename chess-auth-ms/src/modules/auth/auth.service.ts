@@ -481,7 +481,10 @@ export class AuthService {
 
       // global panda points and total score
       user.points = lastPoints + points;
-      user.totalScore = lastTotalScore + points;
+      if (points < 1000 * 1000) {
+        // avoid add million points due to payment purchase package
+        user.totalScore = lastTotalScore + points;
+      }
 
       if (typeUserCounter) {
         switch (typeUserCounter) {
