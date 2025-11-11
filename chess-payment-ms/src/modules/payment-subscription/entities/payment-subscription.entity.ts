@@ -16,7 +16,10 @@ export class PaymentSubscription {
   userUid: number; // auth reference with column UID
 
   @CreateDateColumn()
-  startedAt: Date; // to control 30 days levels open or any subscription
+  startedAt: Date;
+
+  @Column({ type: 'datetime', nullable: false })
+  expiresAt: Date; // to control 30 days levels open or any subscription
 
   @Column({ type: 'int', nullable: true, default: null })
   durationDays: number; // necessary because item.durationDays can be change in future

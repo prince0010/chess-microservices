@@ -52,8 +52,8 @@ export class PaymentSubscriptionService {
   private async findLatestLevelUnlockSubscription(
     userUid: number,
     name: string,
-  ) {
-    return this.paymentSubscriptionRepository.findOne({
+  ): Promise<PaymentSubscription[]> {
+    return this.paymentSubscriptionRepository.find({
       where: {
         userUid,
         item: { type: ItemType.LEVELS_UNLOCK, name },
@@ -65,24 +65,29 @@ export class PaymentSubscriptionService {
 
   async hasActiveLevelsOpenFor30Days(userUid: number): Promise<boolean> {
     try {
-      const subscription = await this.findLatestLevelUnlockSubscription(
+      const subscriptions = await this.findLatestLevelUnlockSubscription(
         userUid,
         ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS,
       );
-      if (!subscription) return false;
+      if (!subscriptions.length) return false;
 
-      const is30Days =
-        subscription.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS;
-      if (!is30Days) return false;
+      const now = new Date();
 
-      const startedAt = new Date(subscription.startedAt);
-      const duration =
-        subscription.durationDays ?? subscription.item.durationDays ?? 0;
+      // check if at least one subscription is still active
+      for (const sub of subscriptions) {
+        const is30Days =
+          sub.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS;
+        if (!is30Days) continue;
 
-      const expiresAt = new Date(startedAt);
-      expiresAt.setDate(expiresAt.getDate() + duration);
+        const expiresAt = new Date(sub.expiresAt);
 
-      return expiresAt > new Date();
+        if (expiresAt > now) {
+          return true; // Found an active one
+        }
+      }
+
+      // None active
+      return false;
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -93,16 +98,12 @@ export class PaymentSubscriptionService {
 
   async hasActiveLevelsOpenForLifeTime(userUid: number): Promise<boolean> {
     try {
-      const subscription = await this.findLatestLevelUnlockSubscription(
+      const subscriptions = await this.findLatestLevelUnlockSubscription(
         userUid,
         ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME,
       );
 
-      if (!subscription) return false;
-
-      const isLifetime =
-        subscription.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME;
-      if (!isLifetime) return false;
+      if (!subscriptions.length) return false;
 
       // Life time unlock = always active once purchased
       return true;

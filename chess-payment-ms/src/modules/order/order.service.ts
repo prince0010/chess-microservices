@@ -248,52 +248,12 @@ export class OrderService {
     for (const orderItem of savedOrder.orderItems) {
       switch (orderItem.item.name) {
         case ItemPackage.ONE_MILLION_PANDA_POINTS:
-          // create notification payment succeed
-          const dataNotification: CreateNotificationPurchaseDto = {
-            userUid: order.userUid,
-            type: NotificationPurchaseType.PAYMENT_SUCCESS,
-            title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
-            message:
-              NotificationPurchaseMessage.ONE_MILLION_PANDA_POINTS_ADDED_MESSAGE,
-            orderId: order.id,
-          };
-
-          await this.notificationPurchaseService.create(dataNotification);
-
-          await this.addOneMillionPandaPoints(order.userUid);
+          await this.addOneMillionPandaPoints(order);
           break;
         case ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS:
-          // create notification payment succeed
-          const dataNotificationFor30Days: CreateNotificationPurchaseDto = {
-            userUid: order.userUid,
-            type: NotificationPurchaseType.PAYMENT_SUCCESS,
-            title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
-            message:
-              NotificationPurchaseMessage.ALL_LEVELS_OPEN_FOR_30_DAYS_MESSAGE,
-            orderId: order.id,
-          };
-
-          await this.notificationPurchaseService.create(
-            dataNotificationFor30Days,
-          );
-
           await this.createSubscriptionForLevelsOpenFor30Days(order);
           break;
         case ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME:
-          // create notification payment succeed
-          const dataNotificationForLifeTime: CreateNotificationPurchaseDto = {
-            userUid: order.userUid,
-            type: NotificationPurchaseType.PAYMENT_SUCCESS,
-            title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
-            message:
-              NotificationPurchaseMessage.ALL_LEVELS_OPEN_FOR_LIFE_TIME_MESSAGE,
-            orderId: order.id,
-          };
-
-          await this.notificationPurchaseService.create(
-            dataNotificationForLifeTime,
-          );
-
           await this.createSubscriptionForLevelsOpenForLifeTime(order);
           break;
 
@@ -303,80 +263,135 @@ export class OrderService {
     }
   }
 
-  private async addOneMillionPandaPoints(userUid: number): Promise<void> {
+  private async addOneMillionPandaPoints(order: Order): Promise<void> {
     const payload: UpdateUserPointsAfterPurchaseDto = {
-      uid: userUid,
+      uid: order.userUid,
       points: 1000000,
     };
     await firstValueFrom(this.client.send('update.points.user', payload));
+
+    // create notification payment succeed for 1M panda points added
+    const dataNotification: CreateNotificationPurchaseDto = {
+      userUid: order.userUid,
+      type: NotificationPurchaseType.PAYMENT_SUCCESS,
+      title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
+      message:
+        NotificationPurchaseMessage.ONE_MILLION_PANDA_POINTS_ADDED_MESSAGE,
+      orderId: order.id,
+    };
+
+    await this.notificationPurchaseService.create(dataNotification);
   }
 
   private async createSubscriptionForLevelsOpenFor30Days(
     order: Order,
   ): Promise<void> {
-    // verify if user purchase already this package
-    const paymentSubscription =
-      await this.paymentSubscriptionRepository.findOne({
+    const now = new Date();
+
+    const orderItem = order.orderItems.find(
+      (i) => i.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS,
+    );
+    if (!orderItem) return;
+
+    // create notification payment succeed all levels open for 30 days
+    const dataNotificationFor30Days: CreateNotificationPurchaseDto = {
+      userUid: order.userUid,
+      type: NotificationPurchaseType.PAYMENT_SUCCESS,
+      title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
+      message: NotificationPurchaseMessage.ALL_LEVELS_OPEN_FOR_30_DAYS_MESSAGE,
+      orderId: order.id,
+    };
+
+    await this.notificationPurchaseService.create(dataNotificationFor30Days);
+
+    // Fetch all existing subscriptions for this user & package
+    const existingSubscriptions = await this.paymentSubscriptionRepository.find(
+      {
         where: {
           userUid: order.userUid,
           item: { name: ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS },
         },
         relations: { item: true },
-        order: { startedAt: 'DESC' },
-      });
+        order: { expiresAt: 'DESC' },
+      },
+    );
 
-    if (paymentSubscription) {
-      const startedAt = new Date(paymentSubscription.startedAt);
-      const duration =
-        paymentSubscription.durationDays ??
-        paymentSubscription.item.durationDays ??
-        0;
+    const durationDays = orderItem.item.durationDays;
 
-      const expiresAt = new Date(startedAt);
-      expiresAt.setDate(expiresAt.getDate() + duration);
+    // Case 1: User has at least one active subscription → extend the most recent one
+    const activeSubscription = existingSubscriptions.find(
+      (sub) => sub.expiresAt > now,
+    );
 
-      // If the subscription is still active, extend it by 30 days
-      if (expiresAt > new Date()) {
-        const newStartedAt = new Date(startedAt);
-        newStartedAt.setDate(newStartedAt.getDate() + duration);
+    if (activeSubscription) {
+      const newExpiresAt = new Date(activeSubscription.expiresAt);
+      newExpiresAt.setDate(newExpiresAt.getDate() + durationDays);
 
-        paymentSubscription.startedAt = newStartedAt;
-        await this.paymentSubscriptionRepository.save(paymentSubscription);
+      activeSubscription.expiresAt = newExpiresAt;
+      await this.paymentSubscriptionRepository.save(activeSubscription);
 
-        return;
-      }
+      return;
     }
 
-    for (const orderItem of order.orderItems) {
-      if (orderItem.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS) {
-        const payload: CreatePaymentSubscriptionDto = {
-          userUid: order.userUid,
-          durationDays: orderItem.item.durationDays,
-          itemId: orderItem.item.id,
-        };
+    // Case 2: No active subscription → create a new one
+    const newSubscription = this.paymentSubscriptionRepository.create({
+      userUid: order.userUid,
+      durationDays,
+      item: orderItem.item,
+      startedAt: now,
+      expiresAt: new Date(now.getTime() + durationDays * 24 * 60 * 60 * 1000),
+    });
 
-        await firstValueFrom(
-          this.client.send('paymentSubscription.create.one', payload),
-        );
-      }
-    }
+    await this.paymentSubscriptionRepository.save(newSubscription);
   }
 
   private async createSubscriptionForLevelsOpenForLifeTime(
     order: Order,
   ): Promise<void> {
-    for (const orderItem of order.orderItems) {
-      if (orderItem.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME) {
-        const payload: CreatePaymentSubscriptionDto = {
-          userUid: order.userUid,
-          durationDays: orderItem.item.durationDays,
-          itemId: orderItem.item.id,
-        };
+    const now = new Date();
 
-        await firstValueFrom(
-          this.client.send('paymentSubscription.create.one', payload),
-        );
-      }
+    const orderItem = order.orderItems.find(
+      (i) => i.item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME,
+    );
+    if (!orderItem) return;
+
+    // Check if the user already has a lifetime subscription
+    const existingLifetime = await this.paymentSubscriptionRepository.findOne({
+      where: {
+        userUid: order.userUid,
+        item: { name: ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME },
+      },
+      relations: { item: true },
+    });
+
+    if (existingLifetime) {
+      return;
     }
+
+    const expiresAt = new Date();
+    expiresAt.setFullYear(expiresAt.getFullYear() + 100); // +100 years
+
+    // Create a new lifetime subscription (no expiration)
+    const newSubscription = this.paymentSubscriptionRepository.create({
+      userUid: order.userUid,
+      durationDays: orderItem.item.durationDays,
+      item: orderItem.item,
+      startedAt: now,
+      expiresAt,
+    });
+
+    await this.paymentSubscriptionRepository.save(newSubscription);
+
+    // create notification payment succeed for all levels unlocked for life time
+    const dataNotificationForLifeTime: CreateNotificationPurchaseDto = {
+      userUid: order.userUid,
+      type: NotificationPurchaseType.PAYMENT_SUCCESS,
+      title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
+      message:
+        NotificationPurchaseMessage.ALL_LEVELS_OPEN_FOR_LIFE_TIME_MESSAGE,
+      orderId: order.id,
+    };
+
+    await this.notificationPurchaseService.create(dataNotificationForLifeTime);
   }
 }
