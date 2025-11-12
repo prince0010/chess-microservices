@@ -154,9 +154,16 @@ export class LessonParentTestRecordService {
       }
 
       if (failedLesson) {
+        const transformedLessonAsArray =
+          await this.lessonTranslateService.transformSingleLessons(
+            [failedLesson],
+            targetLanguage,
+          );
+
         translatedLessons.push({
           ...failedLesson,
           moves: failedLesson.moves.split(' '),
+          description: transformedLessonAsArray[0].description,
           isFailure: true,
         });
       }
