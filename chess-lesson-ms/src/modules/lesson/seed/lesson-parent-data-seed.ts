@@ -709,8 +709,7 @@ export const lessonParentDataSeed: ILessonParentSeed[] = [
     isPreview: false,
     isBot: true,
     canBeSkipped: false,
-    messageModal:
-      'Play chess against Tik and Shelly animal and defeat them. Go to Plays screen and complete the mission to unlock Level 7. Good luck!',
+    messageModal: 'defeat_to_tik_and_shelly_message',
   },
   {
     timer: 60,
