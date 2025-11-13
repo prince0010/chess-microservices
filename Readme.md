@@ -46,14 +46,6 @@ This repo in github will host all chess Microservices.
 3. To go to level 3, player needs to score a total of 100 points or to solve 10 puzzles in a roll correctly ( see below point 5).
 4. To repeat a solved puzzles => 0 points.
 
-5. Special rules
-
-- If player manages to solve 3 puzzles in a roll without a mistake and within the range of 30-16 seconds, player get a bonus of 5 points.
-- If 5 correct in a roll without a mistake and within 30-16 seconds player get an additional bonus of 10 points.
-- If 10 correct in a roll without a mistake and within 30-16 seconds player get an additional bonus of 15 points and Level 3 is opening.
-- After that again if 3 puzzles correct only 5 bonus points.
-- Idea-for strong players to quickly pass the level. Like this a strong player needs to solve a total of 10 puzzles and can go to the Level 3.
-
 ## Failed lesson logic to track in lessons record
 
 - When Player is completing a lesson parent needs to pass certain lessons and have 3 lives. In case the player lost those 3 lives the database needs to store the lessonId where he lost the third 3 life.
