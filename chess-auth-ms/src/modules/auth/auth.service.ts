@@ -177,15 +177,7 @@ export class AuthService {
       if (userAuth) {
         user = userAuth;
 
-        // Rule 1. Players can not login from website
-        if (fromWebsite && userAuth.roles[0] === SecurityRoles.PLAYER) {
-          throw new RpcException({
-            status: 400,
-            message: 'Students authentication only on We Chess APP.',
-          });
-        }
-
-        // Rule 2. Only players can login from APP
+        // Rule APP. Only players can login from APP
         if (!fromWebsite && userAuth.roles[0] !== SecurityRoles.PLAYER) {
           throw new RpcException({
             status: 400,
@@ -193,9 +185,9 @@ export class AuthService {
           });
         }
 
-        // it is a teacher
+        // it could be a teacher
       } else {
-        // if come from app not student or player found
+        // teachers not possible from APP
         if (!fromWebsite) {
           throw new RpcException({
             status: 400,
