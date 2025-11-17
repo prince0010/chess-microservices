@@ -9,6 +9,11 @@ This repo in github will host all chess Microservices.
 3. Run all microservices with command `docker compose -f docker-compose.dev.yml up -d`
 4. If you need to down the containers run `docker compose -f docker-compose.dev.yml down`
 
+# How we are handling APP Version Update
+
+We will use Backend-Driven Version Control. Always check in backend server if is needed some update.
+**Location:** The content of this endpoint to check app version is located at chess-auth-ms in the app-version module.
+
 # Steps to insert pgn files with new structure
 
 1. Create parent lesson if it not exists at the moment.
