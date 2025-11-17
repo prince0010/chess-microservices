@@ -37,6 +37,7 @@ export class LessonTranslateService {
         const lessonWasInserted =
           await this.lessonTranslateDescriptionRepository.findOneBy({
             hashCode: description.hashCode,
+            target: description.target,
           });
         if (lessonWasInserted) continue;
 
