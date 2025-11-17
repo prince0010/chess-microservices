@@ -14036,7 +14036,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Move the knight to the marked square',
     translatedDescription: 'გადაადგილეთ  მხედარი  მონიშნულ უჯრაზე',
     hashCode:
-      'bdd042დ964f3acf5d48b0eb1f925e1b82242661f91a597c8b015a90642f71bba',
+      'bdd042d964f3acf5d48b0eb1f925e1b82242661f91a597c8b015a90642f71bba',
   },
   {
     target: 'ka',
@@ -14196,7 +14196,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Get your bishop to e8 on the shortest way!',
     translatedDescription: 'მიიყვანეთ თქვენი კუ e8-ზე უმოკლესი გზით!',
     hashCode:
-      '2e16715a5d2e126cb8c2b819ad8b762დ0d27623a330e79de9fa684e50c4ae674',
+      '2e16715a5d2e126cb8c2b819ad8b762d0d27623a330e79de9fa684e50c4ae674',
   },
   {
     target: 'ka',
@@ -14942,7 +14942,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Move the white rook to g7 in two moves',
     translatedDescription: 'გადაადგილეთ თეთრი ეტლი g7-ზე ორ სვლაში!',
     hashCode:
-      '0bd3cc215755დ5c28dc47e13c286c74f25e02e15b605b94834894e6bc6786011',
+      '0bd3cc215755d5c28dc47e13c286c74f25e02e15b605b94834894e6bc6786011',
   },
   {
     target: 'ka',
@@ -15047,7 +15047,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Get the white bishop to h1 in two moves',
     translatedDescription: 'მიიყვანეთ თეთრი კუ h1-ზე ორ სვლაში',
     hashCode:
-      '0a90да4e0eaf4cccfb258be5c24baf0a87886580bcbecd0eb9d620190d21706b',
+      '0a90da4e0eaf4cccfb258be5c24baf0a87886580bcbecd0eb9d620190d21706b',
   },
   {
     target: 'ka',
@@ -15218,7 +15218,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Move the white queen to d1',
     translatedDescription: 'გადაადგილეთ თეთრი ლაზიერი d1-ზე',
     hashCode:
-      '9b4264416d81403eea2f2f8bfb605დ996ef61fb48e5af0e49c87c04b7c324afe',
+      '9b4264416d81403eea2f2f8bfb605d996ef61fb48e5af0e49c87c04b7c324afe',
   },
   {
     target: 'ka',
@@ -15365,7 +15365,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Castle to the kingside',
     translatedDescription: 'მოკლე როქი',
     hashCode:
-      '441aef63ac657ecfa249dfd966e75db01fa2f538ე9f51484de0f5ae9d1d45821',
+      '441aef63ac657ecfa249dfd966e75db01fa2f538e9f51484de0f5ae9d1d45821',
   },
   {
     target: 'ka',
@@ -15393,7 +15393,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Get the white rook to d3 in two moves',
     translatedDescription: 'მიიყვანეთ თეთრი ეტლი d3-ზე ორ სვლაში',
     hashCode:
-      'deda684eeac590b5158a04ბ6731c551358ca9b3a4681e7f4ed3108ece5afa2d7',
+      'deda684eeac590b5158a04b6731c551358ca9b3a4681e7f4ed3108ece5afa2d7',
   },
   {
     target: 'ka',
@@ -15421,7 +15421,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Get the white rook to g2 in two moves',
     translatedDescription: 'მიიყვანეთ თეთრი ეტლი g2-ზე ორ სვლაში',
     hashCode:
-      'e5d5c26d151f1bcf379დ0395719459f42e47acad9d72a50c133093d5c8d4487d',
+      'e5d5c26d151f1bcf379d0395719459f42e47acad9d72a50c133093d5c8d4487d',
   },
   {
     target: 'ka',
@@ -15456,7 +15456,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Get the white rook to c1 in two moves',
     translatedDescription: 'მიიყვანეთ თეთრი ეტლი c1-ზე ორ სვლაში',
     hashCode:
-      'e728ე3bc92cad22a5ed064649259ce95a21233b8056c7d6212021d71a41cfd37',
+      'e728e3bc92cad22a5ed064649259ce95a21233b8056c7d6212021d71a41cfd37',
   },
   {
     target: 'ka',
@@ -15617,7 +15617,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Move the white queen to e8',
     translatedDescription: 'გადაადგილეთ თეთრი ლაზიერი e8-ზე',
     hashCode:
-      'e985f59afdb74532d97e6ac143cecb0c01742ea6e71d58255c422დ0a02bed62b',
+      'e985f59afdb74532d97e6ac143cecb0c01742ea6e71d58255c422d0a02bed62b',
   },
   {
     target: 'ka',
@@ -15708,7 +15708,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Get the king to g3 in two moves',
     translatedDescription: 'მიიყვანეთ მეფე g3-ზე ორ სვლაში',
     hashCode:
-      '789bce3994e448266f441b883да0407c3fd1a17ce3625b19ce09564a5c5c26e1',
+      '789bce3994e448266f441b883da0407c3fd1a17ce3625b19ce09564a5c5c26e1',
   },
   {
     target: 'ka',
@@ -16139,7 +16139,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     originalDescription: 'Capture the pawn!',
     translatedDescription: 'აიღეთ პაიკი!',
     hashCode:
-      '7137cd8f006577ed1b5416c5093de9d1ab4b7fed38ebb83b6b0edc3308174a9ე',
+      '7137cd8f006577ed1b5416c5093de9d1ab4b7fed38ebb83b6b0edc3308174a9e',
   },
   {
     target: 'ka',
@@ -18811,7 +18811,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     translatedDescription:
       'Seletsky-ის ეტიუდი. ეცადეთ ამოხსნათ. თეთრები იწყებენ და იგებენ',
     hashCode:
-      'c9a4efc7b5cf2a85503c8a8ae8ca8b40cf2f63aa0b4da9b8c83306383e969დ6b',
+      'c9a4efc7b5cf2a85503c8a8ae8ca8b40cf2f63aa0b4da9b8c83306383e969d6b',
   },
   {
     target: 'ka',
@@ -18874,7 +18874,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     translatedDescription:
       'Rumiantsev-ის ეტიუდი. ეცადეთ ამოხსნათ. თეთრები იწყებენ და აკეთებენ ყაიმს',
     hashCode:
-      '3bb71ee6e5f44440938ee35ffa37b1c397261748fa60bcc7e35де5b729d24531',
+      '3bb71ee6e5f44440938ee35ffa37b1c397261748fa60bcc7e35de5b729d24531',
   },
   {
     target: 'ka',
@@ -18901,7 +18901,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     translatedDescription:
       'Mozes-ის ეტიუდი. ეცადეთ ამოხსნათ. თეთრები იწყებენ და იგებენ',
     hashCode:
-      '4bb769707e9fc58931e5d3f29cfc5c15d2a967867bab8f7e5a956958де003b47',
+      '4bb769707e9fc58931e5d3f29cfc5c15d2a967867bab8f7e5a956958de003b47',
   },
   {
     target: 'ka',
@@ -18910,7 +18910,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     translatedDescription:
       'Kralin-ის ეტიუდი. ეცადეთ ამოხსნათ. თეთრები იწყებენ და იგებენ',
     hashCode:
-      'db89ae80ffecfab6dd3dbcd982aab684cec285b1b8005cabd1d34d608е3944ca',
+      'db89ae80ffecfab6dd3dbcd982aab684cec285b1b8005cabd1d34d608e3944ca',
   },
   {
     target: 'ka',
@@ -18928,7 +18928,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     translatedDescription:
       'Horwitz-ის ეტიუდი. ეცადეთ ამოხსნათ. თეთრები იწყებენ და იგებენ',
     hashCode:
-      '23bd8c6231eee987636ef335ебd024af80fb64b76798a5c904289a843bdc2df1',
+      '23bd8c6231eee987636ef335ebd024af80fb64b76798a5c904289a843bdc2df1',
   },
   {
     target: 'ka',
