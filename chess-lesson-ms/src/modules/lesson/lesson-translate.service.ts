@@ -1,14 +1,14 @@
 import * as crypto from 'crypto';
-import { Injectable, Inject, BadRequestException } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Not, Repository } from 'typeorm';
-import axios from 'axios';
+// import axios from 'axios';
 
 import { Lesson } from './entities/lesson.entity';
 import { LessonTranslateDescription } from './entities/lesson-translate-description.entity';
 
-import { envs, NATS_SERVICE } from 'src/config';
+import { NATS_SERVICE } from 'src/config';
 import { RedisService } from '../redis/redis.service';
 import { listLessonTranslateDescription } from './seed/lesson-translate-description-seed';
 
@@ -183,147 +183,81 @@ export class LessonTranslateService {
         .update(text.trim().toLowerCase())
         .digest('hex');
 
-      // 1. find in our database
+      // 1. find in cache history
+      const cacheKey = `lesson-puzzle-description-${textHash}-${target}`;
+      const cached = await this.redisService.get(cacheKey);
+      if (cached) return cached;
+
+      // 2. find in our database
       const translatedDescriptionFromDB =
         await this.lessonTranslateDescriptionRepository.findOne({
           where: { target, hashCode: textHash },
         });
 
-      if (translatedDescriptionFromDB)
-        return translatedDescriptionFromDB.translatedDescription;
-
-      // 2. find in cache history
-      const cacheKey = `lesson-desc-${textHash}-${target}`;
-      const cached = await this.redisService.get(cacheKey);
-      if (cached) return cached;
-
-      // 3. try Google Translate API up to 3 times
-      const apiKey = envs.translationApiKey;
-      const baseGoogleApiUrl =
-        'https://translation.googleapis.com/language/translate/v2';
-
-      if (!apiKey) {
-        throw new BadRequestException(
-          'Google Translate API key not configured',
+      if (translatedDescriptionFromDB) {
+        await this.redisService.set(
+          cacheKey,
+          translatedDescriptionFromDB.translatedDescription,
+          60 * 60 * 24,
         );
+
+        return translatedDescriptionFromDB.translatedDescription;
       }
 
-      let translatedText: string | null = null;
-      const maxTries = 3;
+      return text;
+      // NO MORE USED GOOGLE API TRANSLATIONS
+      // 3. try Google Translate API up to 3 times
+      // const apiKey = envs.translationApiKey;
+      // const baseGoogleApiUrl =
+      //   'https://translation.googleapis.com/language/translate/v2';
 
-      for (let attempt = 1; attempt <= maxTries; attempt++) {
-        try {
-          const response = await axios.post(
-            `${baseGoogleApiUrl}?key=${apiKey}`,
-            {
-              q: text,
-              target,
-              source,
-              format: 'text',
-            },
-            { timeout: 5000 }, // 5s timeout each try
-          );
+      // if (!apiKey) {
+      //   throw new BadRequestException(
+      //     'Google Translate API key not configured',
+      //   );
+      // }
 
-          translatedText =
-            response.data?.data?.translations?.[0]?.translatedText;
-          if (translatedText) break; // success, stop retry loop
-        } catch (err) {
-          console.warn(
-            `Google translation attempt ${attempt} failed on text: ${text}`,
-            err.message,
-          );
-          // Small delay before next try (0.5s)
-          await new Promise((res) => setTimeout(res, 500));
-        }
-      }
+      // let translatedText: string | null = null;
+      // const maxTries = 3;
+
+      // for (let attempt = 1; attempt <= maxTries; attempt++) {
+      //   try {
+      //     const response = await axios.post(
+      //       `${baseGoogleApiUrl}?key=${apiKey}`,
+      //       {
+      //         q: text,
+      //         target,
+      //         source,
+      //         format: 'text',
+      //       },
+      //       { timeout: 5000 }, // 5s timeout each try
+      //     );
+
+      //     translatedText =
+      //       response.data?.data?.translations?.[0]?.translatedText;
+      //     if (translatedText) break; // success, stop retry loop
+      //   } catch (err) {
+      //     console.warn(
+      //       `Google translation attempt ${attempt} failed on text: ${text}`,
+      //       err.message,
+      //     );
+      //     // Small delay before next try (0.5s)
+      //     await new Promise((res) => setTimeout(res, 500));
+      //   }
+      // }
 
       // 4. Fallback if still failed after all tries
-      if (!translatedText) {
-        console.error(
-          'Translation failed after 3 attempts, returning original text.',
-        );
+      // if (!translatedText) {
+      //   console.error(
+      //     'Translation failed after 3 attempts, returning original text.',
+      //   );
 
-        return text; // don’t throw — return English text instead
-      }
-
-      // 5. Cache result for 1 year
-      await this.redisService.set(cacheKey, translatedText, 60 * 60 * 24 * 365);
-
-      return translatedText;
+      //   return text; // don’t throw — return English text instead
+      // }
     } catch (error) {
       // Only fatal if something is fundamentally wrong (not transient)
       console.error('translateSingleText fatal error:', error.message);
       return text;
     }
   }
-
-  // without looping tries
-  // private async translateSingleText(
-  //   target: string,
-  //   text: string,
-  //   source = 'en',
-  // ): Promise<string> {
-  //   try {
-  //     const disallowedDescriptions: string[] = [
-  //       'No description available',
-  //       '[#]',
-  //     ];
-  //     if (target === 'en' || disallowedDescriptions.includes(text)) {
-  //       return text;
-  //     }
-
-  //     const apiKey = envs.translationApiKey;
-  //     const baseGoogleApiUrl =
-  //       'https://translation.googleapis.com/language/translate/v2';
-
-  //     if (!apiKey) {
-  //       throw new RpcException({
-  //         status: 500,
-  //         message: 'Google Translate API key not configured',
-  //       });
-  //     }
-
-  //     // 1. Normalize and hash the text to avoid duplicate caching
-  //     const textHash = crypto
-  //       .createHash('sha256')
-  //       .update(text.trim().toLowerCase())
-  //       .digest('hex');
-
-  //     const cacheKey = `lesson-desc-${textHash}-${target}`;
-
-  //     // 2. Try to get cached translation
-  //     const cached = await this.redisService.get(cacheKey);
-  //     if (cached) return cached;
-
-  //     // 3. Fetch translation from Google API
-  //     const response = await axios.post(`${baseGoogleApiUrl}?key=${apiKey}`, {
-  //       q: text,
-  //       target,
-  //       source,
-  //       format: 'text',
-  //     });
-
-  //     const translatedText =
-  //       response.data?.data?.translations?.[0]?.translatedText;
-
-  //     if (!translatedText) {
-  //       throw new BadRequestException(
-  //         'Failed to get translation from Google API',
-  //       );
-  //     }
-
-  //     // 4. Cache by hash (for reuse across lessons)
-  //     await this.redisService.set(cacheKey, translatedText, 60 * 60 * 24 * 365); // 365 days cache
-
-  //     return translatedText;
-  //   } catch (error) {
-  //     throw new RpcException({
-  //       status: 400,
-  //       message:
-  //         error.response?.data?.error?.message ||
-  //         error.message ||
-  //         'Translation failed',
-  //     });
-  //   }
-  // }
 }

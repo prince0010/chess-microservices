@@ -178,16 +178,6 @@ export class LessonParentService {
         );
       }
 
-      // if not test verify if exists cache on english only due to description - implement redis cached
-      const cacheKey = `lesson-parent-find-one-${lessonParentId}-${userUid}`;
-      if (targetLanguage === 'en') {
-        const cached = await this.redisService.get(cacheKey);
-
-        if (cached) {
-          return cached;
-        }
-      }
-
       const { lessonsLength, lessonsCompleted } =
         await this.getLessonsLengthAndTotalCompleted(lessonParent, userUid);
 
@@ -223,11 +213,6 @@ export class LessonParentService {
           targetLanguage,
         ),
       };
-
-      // cache result if english
-      if (targetLanguage === 'en') {
-        await this.redisService.set(cacheKey, result, 6000); // large TTL
-      }
 
       return result;
     } catch (error) {
