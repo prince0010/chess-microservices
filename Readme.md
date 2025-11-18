@@ -11,8 +11,9 @@ This repo in github will host all chess Microservices.
 
 # How we are handling APP Version Update
 
-We will use Backend-Driven Version Control. Always check in backend server if is needed some update.
-**Location:** The content of this endpoint to check app version is located at chess-auth-ms in the app-version module.
+1. Directory: We will use Backend-Driven Version Control. Always check in backend server if is needed some update.
+2. Location: The content of this endpoint to check app version is located at chess-auth-ms in the app-version module.
+3. Important: When new app update is released, modify the latestVersion and minimumRequiredVersion class property from this method at service.
 
 # Steps to insert pgn files with new structure
 
