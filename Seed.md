@@ -4,7 +4,9 @@
 
 1. First run SEED of Lesson Parents with endpoint `lessonParent.seed.data`
 2. Then run seed child lessons with endpoint `lesson.insert.pgn`.
-3. Pre job Translating with GOOGLE API all lessons description `seed-translations-for-language`
+3. SEED List of Manual lesson-puzzle-description translation by target and hashCode.
+   `lesson/seed-manually-translations-list`.
+4. (Not more used) Pre job Translating with GOOGLE API all lessons description `seed-translations-for-language`
 
 ## List of Bots
 
