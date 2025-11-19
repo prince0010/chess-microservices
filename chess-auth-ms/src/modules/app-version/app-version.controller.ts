@@ -9,7 +9,6 @@ export class AppVersionController {
 
   @MessagePattern('app.check.version')
   create(@Payload() currentVersion: string) {
-    console.log(currentVersion);
     return this.appVersionService.checkVersion(currentVersion);
   }
 }
