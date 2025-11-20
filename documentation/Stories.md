@@ -1,23 +1,30 @@
-# Story documentation
+# Stories feature documentation (stories_screen.dart)
 
-1. It is the second story player see on the roadmap.
-2. To unlock this story player needs to complete all the lesson parents Education story contains.
-3. The name is "Puzzle".
-4. When player pass the Test Level 10 unlock this story.
+## Education
 
-# Puzzle Story gameplay :
+1. This is the first story player would see on the roadmap.
+2. By default is enabled to all players.
+3. The name is "Education".
+
+## Puzzle
+
+1. It is the second story player would see on the roadmap.
+2. The name is "Puzzle".
+3. When player complete "Education" story or make payment this story is unlocked.
+
+### Structure
 
 - 9 Levels
 - each has 250 puzzle.
 
-## Timer
+### Timer
 
 - 30 seconds for Level 1-3 per puzzle
 - 45 seconds for Level 4-5 per puzzle
 - 60 seconds for Level 6-7 per puzzle
 - 90 seconds for Level 8-9 per puzzle
 
-## Quantity of completed to unlock disables - Points
+### Quantity of completed to unlock disables - Points
 
 . Level 1: Solve at least 20 puzzles to get to Test Level. 1 point per puzzle.
 . Level 2: Solve at least 20 puzzles to get to Test Level. 2 point per puzzle
@@ -28,6 +35,12 @@
 . Level 7: Solve at least 20 puzzles to get to Test Level. 7 point per puzzle
 . Level 8: Solve at least 20 puzzles to get to Test Level. 8 point per puzzle
 . Level 9: Solve at least 20 puzzles to get to Test Level. 9 point per puzzle
+
+## Endgame
+
+1. It is the third and final story player would see on the roadmap.
+2. The name is "Endgame".
+3. When player complete "Puzzle" story or make payment this story is unlocked.
 
 ## Test
 

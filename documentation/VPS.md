@@ -1,4 +1,4 @@
-# VPS Settings
+# VPS Testing Settings
 
 This is the configuration of VPS for We-Chess App
 
