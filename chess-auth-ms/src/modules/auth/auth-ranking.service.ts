@@ -6,6 +6,7 @@ import { Repository } from 'typeorm';
 import { Auth } from './entities/auth.entity';
 
 import { IRankingResponse } from './interfaces';
+import { SecurityRoles } from 'src/enum';
 
 @Injectable()
 export class AuthRankingService {
@@ -14,14 +15,23 @@ export class AuthRankingService {
     private readonly authRepository: Repository<Auth>,
   ) {}
 
+  private async fetchCurrentUser(userUid: number): Promise<Auth | null> {
+    return await this.authRepository
+      .createQueryBuilder('auth')
+      .where('auth.uid = :uid', { uid: userUid })
+      .andWhere('FIND_IN_SET(:role, auth.roles)', {
+        role: SecurityRoles.PLAYER,
+      })
+      .getOne();
+  }
+
   public async rankingByEducationLessons(
     userUid: number,
   ): Promise<IRankingResponse> {
     try {
-      // verify if user is on table history
-      const userRow = await this.authRepository.findOneBy({ uid: userUid });
+      const userRow = await this.fetchCurrentUser(userUid);
       if (!userRow) {
-        throw new BadRequestException(`User with UID: ${userUid} not found.`);
+        throw new BadRequestException(`Player with UID: ${userUid} not found.`);
       }
 
       const currentUserScore = userRow.educationPoints;
@@ -32,18 +42,20 @@ export class AuthRankingService {
         SELECT COUNT(*) + 1 AS rank
         FROM auth
         WHERE educationPoints > ?
+        AND FIND_IN_SET('PLAYER', roles)
         `,
         [currentUserScore],
       );
 
       const currentRank = parseInt(rawRank[0]?.rank ?? '1', 10);
 
-      // Step 2: get top 100
-      const listUsers = await this.authRepository.find({
-        where: {},
-        order: { educationPoints: 'DESC' },
-        take: 100,
-      });
+      // Step 2: get top 100 players only
+      const listUsers = await this.authRepository
+        .createQueryBuilder('auth')
+        .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .orderBy('auth.educationPoints', 'DESC')
+        .limit(100)
+        .getMany();
 
       const result = listUsers.map((user, index) => ({
         userUid: user.uid,
@@ -71,10 +83,9 @@ export class AuthRankingService {
     userUid: number,
   ): Promise<IRankingResponse> {
     try {
-      // verify if user is on table history
-      const userRow = await this.authRepository.findOneBy({ uid: userUid });
+      const userRow = await this.fetchCurrentUser(userUid);
       if (!userRow) {
-        throw new BadRequestException(`User with UID: ${userUid} not found.`);
+        throw new BadRequestException(`Player with UID: ${userUid} not found.`);
       }
 
       const currentUserScore = userRow.puzzlePoints;
@@ -85,18 +96,20 @@ export class AuthRankingService {
         SELECT COUNT(*) + 1 AS rank
         FROM auth
         WHERE puzzlePoints > ?
+        AND FIND_IN_SET('PLAYER', roles)
         `,
         [currentUserScore],
       );
 
       const currentRank = parseInt(rawRank[0]?.rank ?? '1', 10);
 
-      // Step 2: get top 100
-      const listUsers = await this.authRepository.find({
-        where: {},
-        order: { puzzlePoints: 'DESC' },
-        take: 100,
-      });
+      // Step 2: get top 100 players only
+      const listUsers = await this.authRepository
+        .createQueryBuilder('auth')
+        .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .orderBy('auth.puzzlePoints', 'DESC')
+        .limit(100)
+        .getMany();
 
       const result = listUsers.map((user, index) => ({
         userUid: user.uid,
@@ -124,10 +137,9 @@ export class AuthRankingService {
     userUid: number,
   ): Promise<IRankingResponse> {
     try {
-      // verify if user is on table history
-      const userRow = await this.authRepository.findOneBy({ uid: userUid });
+      const userRow = await this.fetchCurrentUser(userUid);
       if (!userRow) {
-        throw new BadRequestException(`User with UID: ${userUid} not found.`);
+        throw new BadRequestException(`Player with UID: ${userUid} not found.`);
       }
 
       const currentUserScore = userRow.endgamesPoints;
@@ -138,18 +150,20 @@ export class AuthRankingService {
         SELECT COUNT(*) + 1 AS rank
         FROM auth
         WHERE endgamesPoints > ?
+        AND FIND_IN_SET('PLAYER', roles)
         `,
         [currentUserScore],
       );
 
       const currentRank = parseInt(rawRank[0]?.rank ?? '1', 10);
 
-      // Step 2: get top 100
-      const listUsers = await this.authRepository.find({
-        where: {},
-        order: { endgamesPoints: 'DESC' },
-        take: 100,
-      });
+      // Step 2: get top 100 players only
+      const listUsers = await this.authRepository
+        .createQueryBuilder('auth')
+        .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .orderBy('auth.endgamesPoints', 'DESC')
+        .limit(100)
+        .getMany();
 
       const result = listUsers.map((user, index) => ({
         userUid: user.uid,
@@ -175,10 +189,9 @@ export class AuthRankingService {
 
   public async rankingByAnimalBots(userUid: number): Promise<IRankingResponse> {
     try {
-      // verify if user is on table history
-      const userRow = await this.authRepository.findOneBy({ uid: userUid });
+      const userRow = await this.fetchCurrentUser(userUid);
       if (!userRow) {
-        throw new BadRequestException(`User with UID: ${userUid} not found.`);
+        throw new BadRequestException(`Player with UID: ${userUid} not found.`);
       }
 
       const currentUserScore = userRow.animalPoints;
@@ -189,18 +202,20 @@ export class AuthRankingService {
         SELECT COUNT(*) + 1 AS rank
         FROM auth
         WHERE animalPoints > ?
+        AND FIND_IN_SET('PLAYER', roles)
         `,
         [currentUserScore],
       );
 
       const currentRank = parseInt(rawRank[0]?.rank ?? '1', 10);
 
-      // Step 2: get top 100
-      const listUsers = await this.authRepository.find({
-        where: {},
-        order: { animalPoints: 'DESC' },
-        take: 100,
-      });
+      // Step 2: get top 100 players only
+      const listUsers = await this.authRepository
+        .createQueryBuilder('auth')
+        .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .orderBy('auth.animalPoints', 'DESC')
+        .limit(100)
+        .getMany();
 
       const result = listUsers.map((user, index) => ({
         userUid: user.uid,
@@ -226,10 +241,9 @@ export class AuthRankingService {
 
   public async rankingByTotalScore(userUid: number): Promise<IRankingResponse> {
     try {
-      // verify if user is on table history
-      const userRow = await this.authRepository.findOneBy({ uid: userUid });
+      const userRow = await this.fetchCurrentUser(userUid);
       if (!userRow) {
-        throw new BadRequestException(`User with UID: ${userUid} not found.`);
+        throw new BadRequestException(`Player with UID: ${userUid} not found.`);
       }
 
       const currentUserScore = userRow.totalScore;
@@ -240,18 +254,20 @@ export class AuthRankingService {
         SELECT COUNT(*) + 1 AS rank
         FROM auth
         WHERE totalScore > ?
+        AND FIND_IN_SET('PLAYER', roles)
         `,
         [currentUserScore],
       );
 
       const currentRank = parseInt(rawRank[0]?.rank ?? '1', 10);
 
-      // Step 2: get top 100
-      const listUsers = await this.authRepository.find({
-        where: {},
-        order: { totalScore: 'DESC' },
-        take: 100,
-      });
+      // Step 2: get top 100 players only
+      const listUsers = await this.authRepository
+        .createQueryBuilder('auth')
+        .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .orderBy('auth.totalScore', 'DESC')
+        .limit(100)
+        .getMany();
 
       const result = listUsers.map((user, index) => ({
         userUid: user.uid,
