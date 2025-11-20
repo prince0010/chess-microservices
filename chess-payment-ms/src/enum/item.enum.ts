@@ -13,10 +13,17 @@ export enum SubscriptionTier {
 }
 
 export enum ItemPackage {
-  ONE_MILLION_PANDA_POINTS = '1 Million Panda points',
-  OPEN_ALL_LEVELS_FOR_30_DAYS = 'All Levels Unlocked - 30 Days',
-  OPEN_ALL_LEVELS_FOR_LIFE_TIME = 'All Levels Unlocked - Life Time',
+  ONE_MILLION_PANDA_POINTS = 'ONE_MILLION_PANDA_POINTS_TITLE',
+  OPEN_ALL_LEVELS_FOR_30_DAYS = 'OPEN_ALL_LEVELS_FOR_30_DAYS_TITLE',
+  OPEN_ALL_LEVELS_FOR_LIFE_TIME = 'OPEN_ALL_LEVELS_FOR_LIFE_TIME_TITLE',
   // at the moment only 3 packages, add more here in case is needed in future
+}
+
+export enum ItemDescription {
+  ONE_MILLION_PANDA_POINTS_DESCRIPTION = 'ONE_MILLION_PANDA_POINTS_DESCRIPTION',
+  OPEN_ALL_LEVELS_FOR_30_DAYS_DESCRIPTION = 'OPEN_ALL_LEVELS_FOR_30_DAYS_DESCRIPTION',
+  OPEN_ALL_LEVELS_FOR_LIFE_TIME_DESCRIPTION = 'OPEN_ALL_LEVELS_FOR_LIFE_TIME_DESCRIPTION',
+  // at the moment only 3 descriptions, add more here in case is needed in future
 }
 
 export enum ItemPlatform {

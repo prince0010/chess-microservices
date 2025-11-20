@@ -1,4 +1,4 @@
-import { ItemPackage, ItemType } from 'src/enum';
+import { ItemDescription, ItemPackage, ItemType } from 'src/enum';
 import { IItemSeed } from 'src/interfaces';
 
 // List Packages
@@ -6,7 +6,7 @@ export const listItems: IItemSeed[] = [
   // Panda Points
   {
     name: ItemPackage.ONE_MILLION_PANDA_POINTS,
-    description: 'Get 1,000,000 Panda points to use in-game',
+    description: ItemDescription.ONE_MILLION_PANDA_POINTS_DESCRIPTION,
     price: 9.9,
     currency: 'USD',
     type: ItemType.PANDA_POINTS,
@@ -19,7 +19,7 @@ export const listItems: IItemSeed[] = [
   // Levels Unlock
   {
     name: ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS,
-    description: 'Access to all levels for 30 days',
+    description: ItemDescription.OPEN_ALL_LEVELS_FOR_30_DAYS_DESCRIPTION,
     price: 9.9,
     currency: 'USD',
     type: ItemType.LEVELS_UNLOCK,
@@ -30,7 +30,7 @@ export const listItems: IItemSeed[] = [
   },
   {
     name: ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME,
-    description: 'Access to all levels for life time',
+    description: ItemDescription.OPEN_ALL_LEVELS_FOR_LIFE_TIME_DESCRIPTION,
     price: 74.9,
     currency: 'USD',
     type: ItemType.LEVELS_UNLOCK,
