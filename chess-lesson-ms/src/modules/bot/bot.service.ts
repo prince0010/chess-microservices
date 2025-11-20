@@ -161,10 +161,33 @@ export class BotService {
         relations: { bot: true },
       });
 
+      // verify payment subscription before looping bots
+      const subscriptionLifetime = await firstValueFrom(
+        this.client.send(
+          'paymentSubscription.levelsForLifeTime.active',
+          userUid,
+        ),
+      ).catch(() => false);
+
+      const subscription30Days = !subscriptionLifetime
+        ? await firstValueFrom(
+            this.client.send(
+              'paymentSubscription.levelsFor30Days.active',
+              userUid,
+            ),
+          ).catch(() => false)
+        : false;
+
+      const hasActiveSubscription = subscriptionLifetime || subscription30Days;
+
       // Map bots with user's game history
       let lastBotWasBeaten = true; // first bot needs to be enabled
       const botsWithHistory = bots.map((bot) => {
-        const currentBotDisabled = !lastBotWasBeaten;
+        let currentBotDisabled = !lastBotWasBeaten;
+        if (hasActiveSubscription) {
+          currentBotDisabled = false;
+        }
+
         const userHistory = botUserHistory.find(
           (historyRow) => historyRow.bot.id === bot.id,
         );
