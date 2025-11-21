@@ -19,13 +19,11 @@ async function bootstrap() {
     optionsSuccessStatus: 204,
   });
 
-  // uncomment and adjust when deploy to production
+  // changeMe! uncomment and adjust when deploy to production
   // if (env === 'production') {
   //   app.enableCors({
   //     origin: [
-  //       'https://your-production-domain.com',
-  //       'http://localhost:4200', // TODO: remove me when domain name and production is ready
-  //       'https://test-we-chess.netlify.app', // TODO: remove me when domain name and production is ready
+  //       'https://we-chess.com',
   //     ],
   //     credentials: true,
   //     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -36,7 +34,6 @@ async function bootstrap() {
   //     origin: [
   //       'http://localhost:4200',
   //       'http://localhost:3000',
-  //       'https://test-we-chess.netlify.app',
   //     ],
   //     credentials: true,
   //     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
