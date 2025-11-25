@@ -13,7 +13,6 @@ interface EnvVars {
   LESSON_DB_ROOT_PASSWORD: string;
   LESSON_DB_USERNAME: string;
   LESSON_DB_PASSWORD: string;
-  TRANSLATION_API_KEY: string;
   REDIS_PASSWORD: string;
 }
 
@@ -30,7 +29,6 @@ const envsSchema = joi
     LESSON_DB_USERNAME: joi.string().required(),
     LESSON_DB_PASSWORD: joi.string().required(),
     NATS_SERVERS: joi.string().required(),
-    TRANSLATION_API_KEY: joi.string().required(),
     REDIS_PASSWORD: joi.string().required(),
   })
   .unknown(true);
@@ -58,6 +56,5 @@ export const envs = {
   dbLessonRootPassword: envVars.LESSON_DB_ROOT_PASSWORD,
   dbLessonUsername: envVars.LESSON_DB_USERNAME,
   dbLessonPassword: envVars.LESSON_DB_PASSWORD,
-  translationApiKey: envVars.TRANSLATION_API_KEY,
   redisPassword: envVars.REDIS_PASSWORD,
 };

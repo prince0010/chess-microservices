@@ -13,38 +13,60 @@ async function bootstrap() {
 
   const env = process.env.NODE_ENV;
 
-  app.enableCors({
-    origin: '*',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    optionsSuccessStatus: 204,
-  });
-
-  // changeMe! uncomment and adjust when deploy to production
-  // if (env === 'production') {
-  //   app.enableCors({
-  //     origin: [
-  //       'https://we-chess.com',
-  //     ],
-  //     credentials: true,
-  //     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  //     optionsSuccessStatus: 204,
-  //   });
-  // } else {
-  //   app.enableCors({
-  //     origin: [
-  //       'http://localhost:4200',
-  //       'http://localhost:3000',
-  //     ],
-  //     credentials: true,
-  //     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  //     optionsSuccessStatus: 204,
-  //   });
-  // }
+  if (env === 'production') {
+    app.enableCors({
+      origin: [
+        'https://we-chess.com',
+        'https://www.we-chess.com',
+        'https://api.we-chess.com', // If case we use API subdomain
+      ],
+      credentials: true,
+      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+      allowedHeaders: [
+        'Content-Type',
+        'Authorization',
+        'X-Requested-With',
+        'Accept',
+        'Origin',
+        'Access-Control-Request-Method',
+        'Access-Control-Request-Headers',
+      ],
+      exposedHeaders: ['Content-Range', 'X-Content-Range'],
+      preflightContinue: false,
+      optionsSuccessStatus: 204,
+      maxAge: 86400, // 24 hours - cache preflight requests
+    });
+  } else {
+    app.enableCors({
+      origin: [
+        'http://localhost:4200',
+        'http://localhost:3000',
+        'http://localhost:3001', // Common additional dev ports
+        'http://127.0.0.1:4200',
+        'http://127.0.0.1:3000',
+        'http://127.0.0.1:3001',
+      ],
+      credentials: true,
+      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+      allowedHeaders: [
+        'Content-Type',
+        'Authorization',
+        'X-Requested-With',
+        'Accept',
+        'Origin',
+      ],
+      optionsSuccessStatus: 204,
+    });
+  }
 
   app.setGlobalPrefix('api', {
     exclude: [
       {
         path: '',
+        method: RequestMethod.GET,
+      },
+      {
+        path: 'health',
         method: RequestMethod.GET,
       },
     ],
@@ -54,6 +76,10 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
+      // transform: true, // Enable auto-transformation
+      // transformOptions: {
+      //   enableImplicitConversion: true,
+      // },
     }),
   );
 

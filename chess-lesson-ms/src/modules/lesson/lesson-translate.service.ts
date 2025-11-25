@@ -205,6 +205,7 @@ export class LessonTranslateService {
       }
 
       return text;
+
       // NO MORE USED GOOGLE API TRANSLATIONS
       // 3. try Google Translate API up to 3 times
       // const apiKey = envs.translationApiKey;

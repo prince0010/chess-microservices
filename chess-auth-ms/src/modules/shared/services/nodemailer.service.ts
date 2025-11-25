@@ -14,10 +14,15 @@ export class NodemailerService {
   // Welcome email to coach
   async sendWelcomeCoachEmail(request: AuthTeacherRequest): Promise<void> {
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // Use your email provider
+      host: 'smtp.office365.com', // Use Outlook SMTP server
+      port: 587, // Use port 587 for TLS
+      secure: false, // true for port 465, false for other ports
       auth: {
         user: envs.weChessEmailUsername,
         pass: envs.weChessEmailPassword,
+      },
+      tls: {
+        ciphers: 'SSLv3',
       },
     });
 
@@ -34,7 +39,7 @@ export class NodemailerService {
 
     // Email options
     const mailOptions = {
-      from: '"We Chess" <onier0217@gmail.com>', // changeMe! in production
+      from: '"We Chess" <info@we-chess.com>',
       to: request.email,
       subject: 'We Chess become a coach - welcome email confirmation',
       html: emailHtml,
