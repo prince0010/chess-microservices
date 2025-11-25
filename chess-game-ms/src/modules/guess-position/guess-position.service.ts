@@ -153,8 +153,6 @@ export class GuessPositionService {
         );
       }
 
-      // TODO: maybe update user panda points
-
       return { bestScore: score };
     } catch (error) {
       throw new RpcException({

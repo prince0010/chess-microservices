@@ -75,7 +75,7 @@ export class LessonTranslateService {
     let totalTranslated = 0;
 
     try {
-      // 1️⃣ Get unique descriptions only (to avoid duplicate API calls)
+      // Get unique descriptions only (to avoid duplicate API calls)
       const allLessons = await this.lessonRepository.find({
         select: ['description'],
         where: { description: Not('') },
@@ -85,13 +85,9 @@ export class LessonTranslateService {
         ...new Set(allLessons.map((l) => l.description.trim())),
       ];
 
-      console.log(
-        `Found ${uniqueDescriptions.length} unique lesson descriptions.`,
-      );
-
       // Process each language
       for (const language of listLanguages) {
-        console.log(`\nSeeding translations for language: ${language}`);
+        console.warn(`\nSeeding translations for language: ${language}`);
 
         // Optionally batch them to reduce Google API stress
         for (let i = 0; i < uniqueDescriptions.length; i += BATCH_SIZE) {
@@ -127,10 +123,6 @@ export class LessonTranslateService {
               }
             }),
           );
-
-          // console.log(
-          //   `Batch ${i / BATCH_SIZE + 1} done for ${language} (${totalTranslated} cached so far)`,
-          // );
         }
       }
 

@@ -160,10 +160,9 @@ export class LessonController {
     const cacheKey = `get-advanced-lesson-${advancedLessonId}`;
     const cached = await this.redisService.get(cacheKey);
 
-    // changeMe! in production
-    // if (cached) {
-    //   return cached;
-    // }
+    if (cached) {
+      return cached;
+    }
 
     const result = await firstValueFrom(
       this.client.send('lesson.advanced.findOne', advancedLessonId).pipe(
@@ -187,10 +186,9 @@ export class LessonController {
     const cacheKey = `get-list-advanced-lessons-${page}`;
     const cached = await this.redisService.get(cacheKey);
 
-    // changeMe! in production
-    // if (cached) {
-    //   return cached;
-    // }
+    if (cached) {
+      return cached;
+    }
 
     const result = await firstValueFrom(
       this.client

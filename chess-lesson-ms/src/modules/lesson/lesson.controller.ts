@@ -21,9 +21,11 @@ export class LessonController {
     return this.lessonSeederService.insertAllPgnFiles();
   }
 
+  // deprecated => now we are using seedDescriptionManuallyTranslation
   @MessagePattern('lesson.seed.translations')
   seedDescriptionTranslation() {
-    return this.lessonTranslateService.seedCachedTranslations();
+    return 'This method is deprecated. Please use lesson.seed.manuallyTranslations instead.';
+    // return this.lessonTranslateService.seedCachedTranslations();
   }
 
   @MessagePattern('lesson.seed.manuallyTranslations')
