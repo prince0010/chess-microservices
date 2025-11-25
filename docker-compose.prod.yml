@@ -103,7 +103,7 @@ services:
       - ${CHESS_GATEWAY_PORT}:${CHESS_GATEWAY_PORT}
     environment:
       - PORT=${CHESS_GATEWAY_PORT}
-      - PORT=${CHESS_GATEWAY_PORT}
+      - NATS_SERVERS=${NATS_SERVERS}
       - REDIS_PASSWORD=${REDIS_PASSWORD}
     volumes:
       - ./chess-gateway/public:/usr/src/app/public
