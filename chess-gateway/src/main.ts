@@ -60,16 +60,7 @@ async function bootstrap() {
   }
 
   app.setGlobalPrefix('api', {
-    exclude: [
-      {
-        path: '',
-        method: RequestMethod.GET,
-      },
-      {
-        path: 'health',
-        method: RequestMethod.GET,
-      },
-    ],
+    exclude: ['/'], // Keeps website root without prefix
   });
 
   app.useGlobalPipes(
