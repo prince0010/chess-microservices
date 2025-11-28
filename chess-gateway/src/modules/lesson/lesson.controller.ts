@@ -182,8 +182,8 @@ export class LessonController {
   async getListAdvancedLessons(
     @Query() findAllLessonAdvancedDto: FindAllLessonAdvancedDto,
   ) {
-    const { page } = findAllLessonAdvancedDto;
-    const cacheKey = `get-list-advanced-lessons-${page}`;
+    const { page, folder } = findAllLessonAdvancedDto;
+    const cacheKey = `get-list-advanced-lessons-${page}-${folder}`;
     const cached = await this.redisService.get(cacheKey);
 
     if (cached) {
