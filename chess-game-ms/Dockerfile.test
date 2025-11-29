@@ -18,7 +18,7 @@ WORKDIR /usr/src/app
 COPY --from=build /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/dist ./dist
 
-ENV NODE_ENV=production
+ENV NODE_ENV=testing
 USER node
 EXPOSE 4003
 CMD ["sh", "-c", "npx typeorm migration:run -d dist/db/typeorm.config.js && node dist/main.js"]

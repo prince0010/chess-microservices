@@ -37,7 +37,7 @@ COPY --from=build /usr/src/app/node_modules ./node_modules
 # copy only the DIST folder
 COPY --from=build /usr/src/app/dist ./dist
 
-ENV NODE_ENV=production
+ENV NODE_ENV=testing
 
 USER node
 

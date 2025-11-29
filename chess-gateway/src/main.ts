@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { Logger, RequestMethod, ValidationPipe } from '@nestjs/common';
+import { Logger, ValidationPipe } from '@nestjs/common';
 import * as compression from 'compression';
 
 import { AppModule } from './app.module';
@@ -35,6 +35,20 @@ async function bootstrap() {
       preflightContinue: false,
       optionsSuccessStatus: 204,
       maxAge: 86400, // 24 hours - cache preflight requests
+    });
+  } else if (env === 'testing') {
+    app.enableCors({
+      origin: ['http://69.62.117.146:4000', 'http://69.62.117.146:3000'],
+      credentials: true,
+      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+      allowedHeaders: [
+        'Content-Type',
+        'Authorization',
+        'X-Requested-With',
+        'Accept',
+        'Origin',
+      ],
+      optionsSuccessStatus: 204,
     });
   } else {
     app.enableCors({
