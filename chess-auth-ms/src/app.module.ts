@@ -7,6 +7,7 @@ import { AppVersionModule } from './modules/app-version/app-version.module';
 import { PandaModule } from './modules/panda/panda.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { ConfigDB } from './db/config';
+import { CoachesModule } from './modules/coaches/coaches.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { ConfigDB } from './db/config';
     PandaModule,
     SharedModule,
     AppVersionModule,
+    CoachesModule,
   ],
   controllers: [],
   providers: [],
