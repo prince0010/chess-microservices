@@ -10,6 +10,7 @@ import {
   Inject,
   Param,
   ParseIntPipe,
+  Patch,
   Post,
   Query,
   UploadedFiles,
@@ -19,14 +20,14 @@ import {
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
-import { catchError } from 'rxjs';
+import { catchError, firstValueFrom } from 'rxjs';
 
 import { NATS_SERVICE } from 'src/config';
 import { AdminGuard } from 'src/guards/admin.guard';
 import { cleanupFiles, generateName, myFileFilter } from 'src/common/files';
 import { CoachCloudinaryService } from './coach-cloudinary.service';
 
-import { CreateCoachDto } from './dto/create-coach.dto';
+import { CreateCoachDto, UpdateCoachDto } from './dto/create-coach.dto';
 import { FindAllCoachesDto } from './dto/find-all-coaches.dto';
 
 @Controller('coach')
@@ -39,7 +40,7 @@ export class CoachController {
   @Post('create-one')
   @UseGuards(AdminGuard)
   @UseInterceptors(
-    FilesInterceptor('files', 6, {
+    FilesInterceptor('files', undefined, {
       fileFilter: myFileFilter,
       storage: diskStorage({
         destination: '/usr/src/app/uploads',
@@ -115,7 +116,77 @@ export class CoachController {
     );
   }
 
-  // TODO: implement update endpoint
+  @Patch('/update/:id')
+  @UseGuards(AdminGuard)
+  @UseInterceptors(
+    FilesInterceptor('files', undefined, {
+      fileFilter: myFileFilter,
+      storage: diskStorage({
+        destination: '/usr/src/app/uploads',
+        filename: generateName,
+      }),
+    }),
+  )
+  async update(
+    @UploadedFiles() files: Array<Express.Multer.File>,
+    @Param('id', ParseIntPipe) coachId: number,
+    @Body() updateCoachDto: UpdateCoachDto,
+  ) {
+    if (files && files.length && files.length !== 2) {
+      cleanupFiles(files);
+      throw new BadRequestException(
+        `If you want update coach files, upload two files exactly, a photo and their CV.`,
+      );
+    }
+
+    const pathFiles = files.map((file) => {
+      return file.path;
+    });
+
+    const payload: any = {
+      id: coachId,
+      ...updateCoachDto,
+    };
+
+    if (pathFiles.length) {
+      // retrieve old coach
+      const oldCoach = await firstValueFrom(
+        this.client.send('coach.find.one', coachId),
+      ).catch((err) => {
+        throw new RpcException(err);
+      });
+
+      const oldUrlFiles = [oldCoach.photoUrl, oldCoach.cvUrl];
+
+      const secureCloudinaryUrls =
+        await this.coachCloudinaryService.updateFilesInCloudinary(
+          oldUrlFiles,
+          pathFiles,
+        );
+
+      const validImgExtensions = ['jpeg', 'jpg', 'png', 'webp'];
+      let photoUrl = '';
+      let cvUrl = '';
+      for (const url of secureCloudinaryUrls) {
+        validImgExtensions.some((extension) => url.includes(extension))
+          ? (photoUrl = url)
+          : (cvUrl = url);
+      }
+
+      payload.photoUrl = photoUrl;
+      payload.cvUrl = cvUrl;
+
+      // cleanup temporary files from fs
+      cleanupFiles(files);
+    }
+
+    return this.client.send('coach.update.one', payload).pipe(
+      catchError((err) => {
+        cleanupFiles(files);
+        throw new RpcException(err);
+      }),
+    );
+  }
 
   @Delete('/:id')
   @UseGuards(AdminGuard)

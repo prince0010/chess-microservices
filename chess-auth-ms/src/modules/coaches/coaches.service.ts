@@ -105,7 +105,7 @@ export class CoachesService {
   }
 
   async update(dto: UpdateCoachDto): Promise<IMessage> {
-    const { id, name = null, photoUrl = null, cvUrl = null } = dto;
+    const { id, name = null } = dto;
 
     try {
       const coach = await this.findOne(id);
@@ -121,8 +121,6 @@ export class CoachesService {
           );
         }
       }
-
-      // TODO: if photoUrl or cvUrl is needed to remove old files from fs
 
       const updatedCoach = await this.coachRepository.preload({
         ...coach,

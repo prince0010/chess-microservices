@@ -16,7 +16,6 @@ export class CloudinaryService {
         if (err) return reject(err);
 
         const ext = path.extname(pathUrl).toLowerCase();
-        console.log({ ext });
         const isImage = ['.jpg', '.jpeg', '.png', '.webp'].includes(ext);
 
         let uploadBuffer: Buffer;

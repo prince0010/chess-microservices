@@ -26,4 +26,24 @@ export class CoachCloudinaryService {
       throw new RpcException(error);
     }
   }
+
+  // for update endpoint where is needed remove old files
+  async updateFilesInCloudinary(
+    oldUrls: string[],
+    pathFiles: string[],
+  ): Promise<string[]> {
+    try {
+      // Remove olds file from Cloudinary
+      for (const url of oldUrls) {
+        let arrName = url.split('/');
+        let name = arrName[arrName.length - 1];
+        let [public_id] = name.split('.');
+        cloudinary.uploader.destroy(public_id);
+      }
+
+      return await this.storeFilesInCloudinary(pathFiles);
+    } catch (error) {
+      throw new RpcException(error);
+    }
+  }
 }

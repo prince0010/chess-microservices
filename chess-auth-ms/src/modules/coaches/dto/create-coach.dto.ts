@@ -18,11 +18,11 @@ export class CreateCoachDto {
 
   @IsNotEmpty()
   @IsString()
-  photoUrl: string; // come from gateway - fs path
+  photoUrl: string;
 
   @IsNotEmpty()
   @IsString()
-  cvUrl: string; // come from gateway - fs path
+  cvUrl: string;
 
   @IsArray()
   @IsString({ each: true })
