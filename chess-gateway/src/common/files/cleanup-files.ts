@@ -7,11 +7,10 @@ export const cleanupFiles = (files: Express.Multer.File[]): void => {
     if (!file?.path) continue;
 
     try {
-      if (fs.existsSync(file.path)) {
-        fs.unlinkSync(file.path);
-      }
+      fs.unlinkSync(file.path);
     } catch (err) {
-      console.error(`Failed to delete file: ${file.path}`, err);
+      // ignore here the log
+      // console.error(`Failed to delete file: ${file.path}`, err);
     }
   }
 };
