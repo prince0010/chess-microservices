@@ -116,7 +116,7 @@ export class CoachController {
     );
   }
 
-  @Patch('/update/:id')
+  @Patch('/update-one/:id')
   @UseGuards(AdminGuard)
   @UseInterceptors(
     FilesInterceptor('files', undefined, {

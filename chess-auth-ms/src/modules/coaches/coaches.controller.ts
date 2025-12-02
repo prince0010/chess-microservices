@@ -16,7 +16,7 @@ export class CoachesController {
   }
 
   @MessagePattern('coach.find.all')
-  findAll(@Query() findAllCoachesDto: FindAllCoachesDto) {
+  findAll(@Payload() findAllCoachesDto: FindAllCoachesDto) {
     return this.coachesService.findAll(findAllCoachesDto);
   }
 
