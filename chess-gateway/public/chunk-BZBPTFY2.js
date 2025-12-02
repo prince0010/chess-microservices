@@ -1,0 +1,1 @@
+import{ha as i}from"./chunk-74TF5QHF.js";var n=class r{transform(e){return e&&e?"YES":"NO"}static \u0275fac=function(t){return new(t||r)};static \u0275pipe=i({name:"yesNo",type:r,pure:!0})};export{n as a};

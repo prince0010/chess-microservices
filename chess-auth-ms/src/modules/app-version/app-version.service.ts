@@ -3,8 +3,8 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppVersionService {
   // updateMe!
-  private readonly minimumRequiredVersion = '1.0.0'; // hard update
-  private readonly latestVersion = '1.0.0'; // soft update available
+  private readonly minimumRequiredVersion = '0.9.30'; // hard update
+  private readonly latestVersion = '0.9.30'; // soft update available
 
   checkVersion(currentVersion: string) {
     const versionStatus = this.compareVersions(
