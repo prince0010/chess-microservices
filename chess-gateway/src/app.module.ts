@@ -4,6 +4,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { ThrottlerModule } from '@nestjs/throttler';
 
 import { AuthModule } from './modules/auth/auth.module';
+import { CloudinaryModule } from './modules/cloudinary/cloudinary.module';
 import { HealthCheckModule } from './modules/health-check/health-check.module';
 import { PandaModule } from './modules/panda/panda.module';
 import { NatsModule } from './modules/transports/nats.module';
@@ -31,6 +32,7 @@ import { PaymentModule } from './modules/payment/payment.module';
     }),
 
     AuthModule,
+    CloudinaryModule,
     HealthCheckModule,
     NatsModule,
     LessonModule,

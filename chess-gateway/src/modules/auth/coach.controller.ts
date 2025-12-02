@@ -24,13 +24,17 @@ import { catchError } from 'rxjs';
 import { NATS_SERVICE } from 'src/config';
 import { AdminGuard } from 'src/guards/admin.guard';
 import { cleanupFiles, generateName, myFileFilter } from 'src/common/files';
+import { CoachCloudinaryService } from './coach-cloudinary.service';
 
 import { CreateCoachDto } from './dto/create-coach.dto';
 import { FindAllCoachesDto } from './dto/find-all-coaches.dto';
 
 @Controller('coach')
 export class CoachController {
-  constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
+  constructor(
+    @Inject(NATS_SERVICE) private readonly client: ClientProxy,
+    private readonly coachCloudinaryService: CoachCloudinaryService,
+  ) {}
 
   @Post('create-one')
   @UseGuards(AdminGuard)
@@ -43,7 +47,7 @@ export class CoachController {
       }),
     }),
   )
-  createNewCoach(
+  async createNewCoach(
     @UploadedFiles() files: Array<Express.Multer.File>,
     @Body() createCoachDto: CreateCoachDto,
   ) {
@@ -62,20 +66,26 @@ export class CoachController {
       return file.path;
     });
 
+    // store on cloudinary the photo coach and their CV
+    const secureCloudinaryUrls =
+      await this.coachCloudinaryService.storeFilesInCloudinary(pathFiles);
+
     const validImgExtensions = ['jpeg', 'jpg', 'png', 'webp'];
     let photoUrl = '';
     let cvUrl = '';
-    for (const file of pathFiles) {
-      validImgExtensions.some((extension) => file.includes(extension))
-        ? (photoUrl = file)
-        : (cvUrl = file);
+    for (const url of secureCloudinaryUrls) {
+      validImgExtensions.some((extension) => url.includes(extension))
+        ? (photoUrl = url)
+        : (cvUrl = url);
     }
-
     const payload = {
       ...createCoachDto,
       photoUrl,
       cvUrl,
     };
+
+    // cleanup temporary files from fs
+    cleanupFiles(files);
 
     return this.client.send('coach.create.one', payload).pipe(
       catchError((err) => {
