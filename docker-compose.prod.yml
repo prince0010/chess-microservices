@@ -105,6 +105,10 @@ services:
       - PORT=${CHESS_GATEWAY_PORT}
       - NATS_SERVERS=${NATS_SERVERS}
       - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - CLOUDINARY_USERNAME=${CLOUDINARY_USERNAME}
+      - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
+      - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
+      - CLOUDINARY_URL=${CLOUDINARY_URL}
     volumes:
       - ./chess-gateway/public:/usr/src/app/public
       - ./chess-gateway/uploads:/usr/src/app/uploads
