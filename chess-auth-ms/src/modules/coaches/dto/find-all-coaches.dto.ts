@@ -14,7 +14,7 @@ export class FindAllCoachesDto {
 
   @IsOptional()
   @IsString()
-  name?: string;
+  query?: string;
 
   @IsOptional()
   @IsString()

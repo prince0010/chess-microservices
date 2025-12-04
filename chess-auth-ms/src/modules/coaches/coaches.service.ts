@@ -39,36 +39,33 @@ export class CoachesService {
   }
 
   async findAll(dto: FindAllCoachesDto) {
-    const { limit = 12, page = 1, name = null, isActive = null } = dto;
+    const { limit = 12, page = 1, query = null, isActive = null } = dto;
     const offset = (page - 1) * limit;
 
-    const findOptions: FindManyOptions<Coach> = {
-      take: limit,
-      skip: offset,
-      order: {
-        name: 'ASC',
-      },
-    };
+    const qb = this.coachRepository
+      .createQueryBuilder('coach')
+      .where({})
+      .take(limit)
+      .skip(offset)
+      .orderBy('coach.name', 'ASC');
 
-    const whereConditions: any = {
-      // roles: Like(`%${SecurityRoles.TEACHER}%`),
-    };
-
-    if (name) {
-      whereConditions.name = Like(`%${name}%`);
+    if (query) {
+      qb.andWhere(
+        `(
+          LOWER(coach.name) LIKE LOWER(:search)
+          OR LOWER(coach.chessTitle) LIKE LOWER(:search)
+        )`,
+        { search: `%${query}%` },
+      );
     }
-    if (isActive) {
+
+    if (isActive !== null) {
       const activeValue = isActive === 'YES';
-      whereConditions.isActive = activeValue;
-    }
-
-    if (Object.keys(whereConditions).length > 0) {
-      findOptions.where = whereConditions;
+      qb.andWhere('coach.isActive = :isActive', { isActive: activeValue });
     }
 
     try {
-      const [coaches, total] =
-        await this.coachRepository.findAndCount(findOptions);
+      const [coaches, total] = await qb.getManyAndCount();
 
       return {
         total,
