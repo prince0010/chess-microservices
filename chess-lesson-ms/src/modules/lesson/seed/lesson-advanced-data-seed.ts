@@ -2,11 +2,12 @@ import { FolderAdvancedLesson } from 'src/enum';
 import { IAdvancedLessonSeed } from '../interfaces';
 
 export const lessonAdvancedFilenames: IAdvancedLessonSeed[] = [
-  {
-    filename: 'Advanced_file_1_Test.pgn',
-    name: 'Advanced Test',
-    folder: FolderAdvancedLesson.ADVANCED,
-  },
+  // changeMe! when other files are required
+  // {
+  //   filename: 'Advanced_file_1_Test.pgn',
+  //   name: 'Advanced Test',
+  //   folder: FolderAdvancedLesson.ADVANCED,
+  // },
 
   // === Level 1: Education ===
   {
