@@ -14010,6 +14010,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     hashCode:
       'a66b41ce19868b3e981ee5124500e6fa82c91252005416e635f6c4912b8f5446',
   },
+  // ============= Georgian =============
   {
     target: 'ka',
     originalDescription: 'Move the pawn to the marked square',
@@ -20994,7 +20995,7 @@ export const listLessonTranslateDescription: HashedLessonTranslated[] = [
     hashCode:
       'a66b41ce19868b3e981ee5124500e6fa82c91252005416e635f6c4912b8f5446',
   },
-  // ===== German =========
+  // ============ German =============
   {
     target: 'de',
     originalDescription: 'Move the pawn to the marked square',
