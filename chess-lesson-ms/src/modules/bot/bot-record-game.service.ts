@@ -63,13 +63,15 @@ export class BotRecordGameService {
     findAllBotRecordGamesDto: FindAllBotRecordGamesDto,
   ): Promise<ICountAndListBotRecordGames> {
     const {
-      userUid,
+      userUid: userAuthenticatedUid,
       limit = 10,
       page = 1,
       id = null,
+      studentUid = null,
     } = findAllBotRecordGamesDto;
 
     const offset = (page - 1) * limit;
+    const userUid = studentUid ?? userAuthenticatedUid;
 
     const findOptions: FindManyOptions<BotUserRecordGame> = {
       where: { userUid },

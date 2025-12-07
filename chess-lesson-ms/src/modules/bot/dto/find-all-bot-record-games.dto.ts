@@ -19,6 +19,12 @@ export class FindAllBotRecordGamesDto {
 
   @IsOptional()
   @IsNumber()
+  @IsPositive()
+  @Type(() => Number)
+  studentUid?: number; // when teacher see student progress on web system panel
+
+  @IsOptional()
+  @IsNumber()
   @Type(() => Number)
   id?: number;
 

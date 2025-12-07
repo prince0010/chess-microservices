@@ -1,997 +1,1001 @@
 export const listLessons = [
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the pawn to the marked square',
-    translatedDescription: 'Move the pawn to the marked square',
+    translatedDescription: 'Déplacez le pion sur la case indiquée',
     hashCode:
       '87cf7b202d5ed910690d5bc50ed6280e4949862ab6ccab3816de7e1193fca788',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the king to the marked square',
-    translatedDescription: 'Move the king to the marked square',
+    translatedDescription: 'Déplacez le roi sur la case indiquée',
     hashCode:
       'a3110a51509ecd38c6551da488a1ca71513d6d9ce7301bb5b55099b8d8790551',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the bishop to the marked square',
-    translatedDescription: 'Move the bishop to the marked square',
+    translatedDescription: 'Déplacez le fou sur la case indiquée',
     hashCode:
       'a896f482d143a2df095d08cb0ef55905b7e712c90ad8ddff20ee8b78d51e3fbe',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the knight to the marked square',
-    translatedDescription: 'Move the knight to the marked square',
+    translatedDescription: 'Déplacez le cavalier sur la case indiquée',
     hashCode:
       'bdd042d964f3acf5d48b0eb1f925e1b82242661f91a597c8b015a90642f71bba',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the rook to the marked square',
-    translatedDescription: 'Move the rook to the marked square',
+    translatedDescription: 'Déplacez la tour sur la case indiquée',
     hashCode:
       'e555af27f487ab8a1f5e5c3b78a280373e52f4fe8d8834528502b1b29bf554b2',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the Queen to marked square',
-    translatedDescription: 'Move the Queen to marked square',
+    translatedDescription: 'Déplacez la dame sur la case indiquée',
     hashCode:
       '521b0c60bf5e1a45219ea250830d4df017296c2f342d91e1682f8dfe0647d5b5',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Play a short castle',
-    translatedDescription: 'Play a short castle',
+    translatedDescription: 'Effectuez le petit roque',
     hashCode:
       'eb50d89643a439fb28ec2e4b0f96371f1602c773f83c64d9e32b14f29d23a298',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Play a long castle',
-    translatedDescription: 'Play a long castle',
+    translatedDescription: 'Effectuez le grand roque',
     hashCode:
       'a1318ce3b17b6ee3fffdbfd2a008454d20f4365c084c228b8f6930a115979bc2',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Give check to the black king',
-    translatedDescription: 'Give check to the black king',
+    translatedDescription: 'Donnez échec au roi noir',
     hashCode:
       '3a91ea1d42601fff0471c7c0ae76bd63b023b00ac0f2143c7760cc7db7a401d2',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote a pawn to a Queen',
-    translatedDescription: 'Promote a pawn to a Queen',
+    translatedDescription: 'Promouvez un pion en dame',
     hashCode:
       '2b640506a4aa65c32e89787595fb1e9d4bfb597b87e35735c8efc250e92c43e9',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote a pawn to a rook',
-    translatedDescription: 'Promote a pawn to a rook',
+    translatedDescription: 'Promouvez un pion en tour',
     hashCode:
       'c85e764d0ba7b6bfab1e34e783b2fbf1fc5b709163f674d26557aae08827ef45',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote a pawn to a bishop',
-    translatedDescription: 'Promote a pawn to a bishop',
+    translatedDescription: 'Promouvez un pion en fou',
     hashCode:
       '3966126adf6e40bcff9e5251669d1913f1254ba565ad8062c942f158c1ca9f9e',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote a pawn to a knight',
-    translatedDescription: 'Promote a pawn to a knight',
+    translatedDescription: 'Promouvez un pion en cavalier',
     hashCode:
       '6775334ad048b21c9b2260d60a5084276a8e3e141692d0e0165178e27e4c9f79',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription:
-      'Stalemate the black king\n' +
-      '\n' +
-      'Stalemate is a\r\n' +
-      'situation where the player whose turn it is to move is not in check but has no\r\n' +
-      'legal move to continue the game. The rules of chess provide that when\r\n' +
-      'stalemate occurs, the game ends as a draw (i.e. having no winner).',
+      'Stalemate the black king\n\nStalemate is a\nsituation where the player whose turn it is to move is not in check but has no\nlegal move to continue the game. The rules of chess provide that when\nstalemate occurs, the game ends as a draw (i.e. having no winner).',
     translatedDescription:
-      'Stalemate the black king\n' +
-      '\n' +
-      'Stalemate is a\r\n' +
-      'situation where the player whose turn it is to move is not in check but has no\r\n' +
-      'legal move to continue the game. The rules of chess provide that when\r\n' +
-      'stalemate occurs, the game ends as a draw (i.e. having no winner).',
+      "Pat le roi noir\n\nLe pat est une situation où le joueur dont c'est le tour n'est pas en échec mais n'a aucun coup légal pour continuer la partie. Les règles des échecs stipulent qu'en cas de pat, la partie se termine par une nulle (c'est-à-dire sans vainqueur).",
     hashCode:
       'a2a9c5a1e0f6a74b770f910f5a6f05811300f27eae49de84e4ad2e1bc2cd78da',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Stalemate the black king',
-    translatedDescription: 'Stalemate the black king',
+    translatedDescription: 'Pat le roi noir',
     hashCode:
       '894d5c43a2053463463eae8867fd72f5b0a0239722a83bd1ef855ac62f7a0582',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Take the black pawn en passant',
-    translatedDescription: 'Take the black pawn en passant',
+    translatedDescription: 'Prenez le pion noir en passant',
     hashCode:
       'b4a144ff7fe86a2633e41c4b6aa7ed9dc881c49b8319e13a42452811797e12fd',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Pawn takes',
-    translatedDescription: 'Pawn takes',
+    translatedDescription: 'Le pion prend',
     hashCode:
       'ebb201a4a010686a2e5d8cd7bb3259689b876523a33f25372497e90fe456433b',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Find the shortest way for the knight to d7!',
-    translatedDescription: 'Find the shortest way for the knight to d7!',
+    translatedDescription:
+      'Trouvez le chemin le plus court pour amener le cavalier en d7 !',
     hashCode:
       '844ebbc236846c27787f9562c241cf199a9021bc6f85ec20ce8da1240650948d',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Find the shortest way for the bishop to c7!',
-    translatedDescription: 'Find the shortest way for the bishop to c7!',
+    translatedDescription:
+      'Trouvez le chemin le plus court pour amener le fou en c7 !',
     hashCode:
       '5b4d223f953a1e3fad6c8d488064d8c94ca8968305240e140b8b974747a803bc',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription:
       'Find the shortest possible way to get the rook to a4!',
     translatedDescription:
-      'Find the shortest possible way to get the rook to a4!',
+      'Trouvez le chemin le plus court possible pour amener la tour en a4 !',
     hashCode:
       'c46d30f7c6a34381c6315d8a1a1413b91f7a7c8b36010c802c6d65cb863860e6',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Try to make a queen from the a-pawn!',
-    translatedDescription: 'Try to make a queen from the a-pawn!',
+    translatedDescription: 'Essayez de promouvoir le pion a en dame !',
     hashCode:
       '6e58d714089e5eaa541cda62b7c7832c2600e7bb0944dd4586d2338fb5815e4d',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Give a check in one move!',
-    translatedDescription: 'Give a check in one move!',
+    translatedDescription: 'Donnez échec en un coup !',
     hashCode:
       '3f79ec2854ed9f8bae7f9a8c3e6fd2510604b2b74e18c98f1d9262586f25221b',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Castle queenside!',
-    translatedDescription: 'Castle queenside!',
+    translatedDescription: 'Roquez côté dame !',
     hashCode:
       '2b8a011c9119730bf02959edadfbb440faa85c3a2d21ab2555293847df7c6793',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer your knight to d5 on the shortest way!',
-    translatedDescription: 'Transfer your knight to d5 on the shortest way!',
+    translatedDescription:
+      'Amenez votre cavalier en d5 par le chemin le plus court !',
     hashCode:
       '454b83201e630aab4dac85e7b7a72f9fb136ef9b403083e379efa6d05813620f',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get your bishop to e8 on the shortest way!',
-    translatedDescription: 'Get your bishop to e8 on the shortest way!',
+    translatedDescription:
+      'Amenez votre fou en e8 par le chemin le plus court !',
     hashCode:
       '2e16715a5d2e126cb8c2b819ad8b762d0d27623a330e79de9fa684e50c4ae674',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Find the shortest way for the rook to c8!',
-    translatedDescription: 'Find the shortest way for the rook to c8!',
+    translatedDescription:
+      'Trouvez le chemin le plus court pour amener la tour en c8 !',
     hashCode:
       '307b4c1d7f6712b4c1c32a1de390cb571102b6ec38074a91363ad1e5b77ea4b4',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Castle kingside!',
-    translatedDescription: 'Castle kingside!',
+    translatedDescription: 'Roquez côté roi !',
     hashCode:
       '43dc973f14f25bda0889c11b2e022c0d8569981c17d3ede54e6ef5e4250b0c5e',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote your pawn faster than your opponent!',
-    translatedDescription: 'Promote your pawn faster than your opponent!',
+    translatedDescription:
+      'Promouvez votre pion plus rapidement que votre adversaire !',
     hashCode:
       '6108a2d197cadb9d331c35b9dd03cbf2f24ab26d99ebcf548ae97e181f5e9161',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Squeeze the Black king to the corner!',
-    translatedDescription: 'Squeeze the Black king to the corner!',
+    translatedDescription: 'Acculez le roi noir dans le coin !',
     hashCode:
       '2cf6f6ad61f635cc560e2c93b6c08f8fea27d7226fc4b319159f6c59627aa9eb',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Find the shortest way for the knight to a8!',
-    translatedDescription: 'Find the shortest way for the knight to a8!',
+    translatedDescription:
+      'Trouvez le chemin le plus court pour amener le cavalier en a8 !',
     hashCode:
       '61b9e606cb81a6e84137b498465f4491ff1afe79d28032470f8f7e7ae7a41be1',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Try to promote a queen!',
-    translatedDescription: 'Try to promote a queen!',
+    translatedDescription: 'Essayez de promouvoir une dame !',
     hashCode:
       '5d4976b57e4c02d7d9ff12fc767d8c88eca92e5c35f3a084f13e7631fb391a6b',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the knight to g4 on the shortest way!',
-    translatedDescription: 'Get the knight to g4 on the shortest way!',
+    translatedDescription:
+      'Amenez le cavalier en g4 par le chemin le plus court !',
     hashCode:
       '56e1a3d0eb00a2b2ea889174477a86d1ac734f5cf29c0102cd59407b0b078a51',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the bishop to c5 on the shortest way!',
-    translatedDescription: 'Get the bishop to c5 on the shortest way!',
+    translatedDescription: 'Amenez le fou en c5 par le chemin le plus court !',
     hashCode:
       'fb9e55c50369de55296058247f8eef464b851e7b27a065c65a1ad3fac71b9492',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move with the queen to a8!',
-    translatedDescription: 'Move with the queen to a8!',
+    translatedDescription: 'Déplacez la dame en a8 !',
     hashCode:
       'b7db933de514deacf284b1cd532855a0bb51bc9aafcf1ff5f134b82965bbd23b',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Give a check to the king!',
-    translatedDescription: 'Give a check to the king!',
+    translatedDescription: 'Donnez échec au roi !',
     hashCode:
       'a30ccec399131b63a27541e12f32386b252ebda59ede755891e95280bed38761',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the queen to e5!',
-    translatedDescription: 'Move the queen to e5!',
+    translatedDescription: 'Déplacez la dame en e5 !',
     hashCode:
       '15039dfb0170104fad05cf52361b1eeb7c3ecaad54c1b761c35c8ad8c6580567',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription:
       'Reach the d5 square with the knight on the shortest way!',
     translatedDescription:
-      'Reach the d5 square with the knight on the shortest way!',
+      'Atteignez la case d5 avec le cavalier par le chemin le plus court !',
     hashCode:
       '5d27236daed1a8c53fb42d0e6d0099722d3e4e796ba617402dcab69ff1676b48',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the rook to b6!',
-    translatedDescription: 'Move the rook to b6!',
+    translatedDescription: 'Déplacez la tour en b6 !',
     hashCode:
       'fd0b4286e39501674e07f0e49a1b01e51fe118969eaa979ae1a6840c8770c654',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Try to promote the pawn!',
-    translatedDescription: 'Try to promote the pawn!',
+    translatedDescription: 'Essayez de promouvoir le pion !',
     hashCode:
       'f843ffab89b37051516cf2c8424a8c8a3e07c5f327c30e5990c5d5b6f8bdd8da',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Find the shortest way to d5 with the knight!',
-    translatedDescription: 'Find the shortest way to d5 with the knight!',
+    translatedDescription:
+      'Trouvez le chemin le plus court pour atteindre d5 avec le cavalier !',
     hashCode:
       '3f9b932386f966ed49fed5610aa7ab7a8c28022063fd1512b858dfa5feff12db',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the bishop to a6 in two moves!',
-    translatedDescription: 'Get the bishop to a6 in two moves!',
+    translatedDescription: 'Amenez le fou en a6 en deux coups !',
     hashCode:
       'f2f464318dee82d72b2b4bd7187b549165906d0dd0e9f8ad7659002fe9150d84',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the queen to g3!',
-    translatedDescription: 'Move the queen to g3!',
+    translatedDescription: 'Déplacez la dame en g3 !',
     hashCode:
       '307e7cd9b369cb56c307b3f20665efeeeac3da3acd0b0d7817970688e4acba05',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the knight to a6 in three moves!',
-    translatedDescription: 'Get the knight to a6 in three moves!',
+    translatedDescription: 'Amenez le cavalier en a6 en trois coups !',
     hashCode:
       '14b9c99f00b887bb9b6b5b0fd29cb5815f3b24e4b2fe035e85820852d24cc6c5',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the bishop to h6 in two moves!',
-    translatedDescription: 'Get the bishop to h6 in two moves!',
+    translatedDescription: 'Amenez le fou en h6 en deux coups !',
     hashCode:
       '55262363630ee0a00f57166563c6c6485549395a16b035b1a790392241ddb68e',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the rook to c6 in two moves!',
-    translatedDescription: 'Get the rook to c6 in two moves!',
+    translatedDescription: 'Amenez la tour en c6 en deux coups !',
     hashCode:
       '0d37d39c0369f64765b1a2d45748d94be426513d3b7879d11b28f13b0d8475cd',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the queen to b6!',
-    translatedDescription: 'Move the queen to b6!',
+    translatedDescription: 'Déplacez la dame en b6 !',
     hashCode:
       '982d0468ea32dd264a70c7f9cd18b9b5aad4c00feb8fcbeb32093681e486cb74',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Try to make a queen!',
-    translatedDescription: 'Try to make a queen!',
+    translatedDescription: 'Essayez de faire une dame !',
     hashCode:
       'baf4e92ce9cdd9547b8d36956b9f619b1c50279376b93479aca7d3c666c8a616',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the knight to b5 in three moves!',
-    translatedDescription: 'Get the knight to b5 in three moves!',
+    translatedDescription: 'Amenez le cavalier en b5 en trois coups !',
     hashCode:
       '0a6e9f7762eedfd1629ab2fd632ed34633c6c4e0ee7ff30b21e43e9233cf5ec7',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the bishop to h8 in two moves!',
-    translatedDescription: 'Transfer the bishop to h8 in two moves!',
+    translatedDescription: 'Amenez le fou en h8 en deux coups !',
     hashCode:
       '2a276b335162ae40878822918ffaff0f0d691970ab6c85b1ca429ee0900e6274',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move your queen to d4!',
-    translatedDescription: 'Move your queen to d4!',
+    translatedDescription: 'Déplacez votre dame en d4 !',
     hashCode:
       '399595604ad063b18e53a4c5ace9650a38a41226911f1e954cbc78997f31b68e',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote the pawn on the fastest way!',
-    translatedDescription: 'Promote the pawn on the fastest way!',
+    translatedDescription: 'Promouvez le pion le plus rapidement possible !',
     hashCode:
       'fec58a8f9249aced7f1f6eaafb7547d039b0cfbeacfa8a4c7a78cb0be9c466dc',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Find the shortest way to c7 for the knight!',
-    translatedDescription: 'Find the shortest way to c7 for the knight!',
+    translatedDescription:
+      'Trouvez le chemin le plus court pour amener le cavalier en c7 !',
     hashCode:
       '5ea2aabe9cd9cdaec3e61b08c8fa422229580632896c6c69496ae1647852a8b0',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Drive the bishop to b7 in two moves!',
-    translatedDescription: 'Drive the bishop to b7 in two moves!',
+    translatedDescription: 'Amenez le fou en b7 en deux coups !',
     hashCode:
       'e09c4e51af4c4bf4c2089ba0a8650cb68510f7bb403ad00ebdd8d25354a2fbc6',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the rook to e6 in two moves!',
-    translatedDescription: 'Get the rook to e6 in two moves!',
+    translatedDescription: 'Amenez la tour en e6 en deux coups !',
     hashCode:
       '9f171ea5f3af131f49e283834702cab92acc823e13c74e4c74a208fa7face2ba',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the queen to g7!',
-    translatedDescription: 'Move the queen to g7!',
+    translatedDescription: 'Déplacez la dame en g7 !',
     hashCode:
       '13a8e6dadc40f13a5fa02ea5f46a99286e0faa14295a58202d3b4638845a08c1',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Run with the king to a1!',
-    translatedDescription: 'Run with the king to a1!',
+    translatedDescription: 'Fuyez avec le roi en a1 !',
     hashCode:
       'c770dc74a7790f8df29077845d790c748224a629fb7fb6b0841295d3879ca158',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Try to make a queen from the h-pawn!',
-    translatedDescription: 'Try to make a queen from the h-pawn!',
+    translatedDescription: 'Essayez de faire une dame avec le pion h !',
     hashCode:
       '8d985c132948bd81e0e9606365b0df4c2dfab8717fa380e70c36a82d1e02a1be',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Find the shortest way for the knight ot a6!',
-    translatedDescription: 'Find the shortest way for the knight ot a6!',
+    translatedDescription:
+      'Trouvez le chemin le plus court pour amener le cavalier en a6 !',
     hashCode:
       'b2b3fb62f1b5051bed45626ba6d6924f081d73e17f0f5fb1927923e4bd9fc0be',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote the pawn into a knight!',
-    translatedDescription: 'Promote the pawn into a knight!',
+    translatedDescription: 'Promouvez le pion en cavalier !',
     hashCode:
       '37789e48cbca607e5754e5b120a11991968daf41cc21169342c7f50dd93e3dbf',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote the pawn into a bishop!',
-    translatedDescription: 'Promote the pawn into a bishop!',
+    translatedDescription: 'Promouvez le pion en fou !',
     hashCode:
       '17faa1f32f4b76a3de864b3af6c854b7eeedf6579f382f52b31c252d580d7edd',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote the pawn into a rook!',
-    translatedDescription: 'Promote the pawn into a rook!',
+    translatedDescription: 'Promouvez le pion en tour !',
     hashCode:
       '1666aa107e76dbb36808ebecafbef7bf92554c1755dd50c981125b603ae8e932',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Eat the black pawn!',
-    translatedDescription: 'Eat the black pawn!',
+    translatedDescription: 'Prenez le pion noir !',
     hashCode:
       'eff3c96cdb8e464d7d5dfe36c26df9eb545bea463432340c07126a9bee6c287d',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Bring the knight to b3!',
-    translatedDescription: 'Bring the knight to b3!',
+    translatedDescription: 'Amenez le cavalier en b3 !',
     hashCode:
       'e20e1204fdf189fdea94cc6abfd9072b2276c19450f5fca26dbfc9d3471647c0',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription:
       'Take the white king to the a5 square on the shortest way!',
     translatedDescription:
-      'Take the white king to the a5 square on the shortest way!',
+      'Amenez le roi blanc sur la case a5 par le chemin le plus court !',
     hashCode:
       '0862c0716c69c1a4e43eabbf3f0a1f2b1e9b6c2d0785c797d24c93697ec409be',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white king to d1!',
-    translatedDescription: 'Move the white king to d1!',
+    translatedDescription: 'Déplacez le roi blanc en d1 !',
     hashCode:
       '42ecd4471615161cd8a6c5d14dc5464e9beaafe84c4a287561f0175c27cd0591',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white king to f4!',
-    translatedDescription: 'Move the white king to f4!',
+    translatedDescription: 'Déplacez le roi blanc en f4 !',
     hashCode:
       '6fe9fd0d263c941881241a2c00cc9195131baebb350b3a6748d65743ec739df0',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white knight to e4!',
-    translatedDescription: 'Move the white knight to e4!',
+    translatedDescription: 'Déplacez le cavalier blanc en e4 !',
     hashCode:
       '4b1a798e6c24178594fc486068546e3739065778d76c52b03791c8e7e5700bc5',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white knight to f4!',
-    translatedDescription: 'Move the white knight to f4!',
+    translatedDescription: 'Déplacez le cavalier blanc en f4 !',
     hashCode:
       '96a322654adb1ea365bbdc714f555dc5f1774cb0630cd822e34c7a18bb07d46a',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white knight to c8!',
-    translatedDescription: 'Move the white knight to c8!',
+    translatedDescription: 'Déplacez le cavalier blanc en c8 !',
     hashCode:
       'b0c61072bd035a3e4ec6e8f8193ad6b79f42a8f6fd60911ceef1817ec355cb6d',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white knight to b6!',
-    translatedDescription: 'Move the white knight to b6!',
+    translatedDescription: 'Déplacez le cavalier blanc en b6 !',
     hashCode:
       'b4fe94e1e420fe9234c6783ce1dee1b391ab9cf21879179f89c85ae443c7dec5',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white knight to e6!',
-    translatedDescription: 'Get the white knight to e6!',
+    translatedDescription: 'Amenez le cavalier blanc en e6 !',
     hashCode:
       'cbc09c89ab1fc9019ba2fef14e7ab89fb279631664d8d850c04bc6ba3c50e6c1',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white knight to b5!',
-    translatedDescription: 'Get the white knight to b5!',
+    translatedDescription: 'Amenez le cavalier blanc en b5 !',
     hashCode:
       'f4590347e04135e4a47e4c3ef7df601e95bf226c950912c1251eb73c22c79dac',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Bring the white bishop to the b4 square!',
-    translatedDescription: 'Bring the white bishop to the b4 square!',
+    translatedDescription: 'Amenez le fou blanc sur la case b4 !',
     hashCode:
       '069f22e5b59340aeb1aa803201cf312cf8a6976ffb1122909589faf5eeb3a4fa',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white bishop in two moves to the c1 square!',
-    translatedDescription:
-      'Get the white bishop in two moves to the c1 square!',
+    translatedDescription: 'Amenez le fou blanc sur la case c1 en deux coups !',
     hashCode:
       '1e77f2ce86e0ba2eb660ca37852d86bffdcd6c2280ba4bb7dba166b0dba13ba6',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Give a check to the black king on the e2 square!',
-    translatedDescription: 'Give a check to the black king on the e2 square!',
+    translatedDescription: 'Donnez échec au roi noir sur la case e2 !',
     hashCode:
       '67ee005c3b57b9cd066f5b17cecd78c50ee8f58caff9f1b873f870642f7f350f',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white bishop to h5!',
-    translatedDescription: 'Move the white bishop to h5!',
+    translatedDescription: 'Déplacez le fou blanc en h5 !',
     hashCode:
       '8ed078905368caac5601e7878561db518b7537d1ba2687a318f1ffbb211f266b',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white bishop to the h8 square!',
-    translatedDescription: 'Move the white bishop to the h8 square!',
+    translatedDescription: 'Déplacez le fou blanc sur la case h8 !',
     hashCode:
       '3f68908ec08506f2975d5522b97da1d048846b29c7b0daa765ef0629ffb7a116',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white bishop to the a8 square!',
-    translatedDescription: 'Get the white bishop to the a8 square!',
+    translatedDescription: 'Amenez le fou blanc sur la case a8 !',
     hashCode:
       'a2d978acfbe27601a9a2200f0ed68ef62f89207334bf7ced4181833b21da6181',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white bishop to b1!',
-    translatedDescription: 'Move the white bishop to b1!',
+    translatedDescription: 'Déplacez le fou blanc en b1 !',
     hashCode:
       '5fbf42b0e3dc5931c9a49aaf1ad239a82b7a1d1db94ca654a548d69df5f80519',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white bishop to the f7 square!',
-    translatedDescription: 'Move the white bishop to the f7 square!',
+    translatedDescription: 'Déplacez le fou blanc sur la case f7 !',
     hashCode:
       '8af4250b20ecaa56768d6e3ff169121212fe821461527ff19b9612d4d2175be6',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white bishop to d8!',
-    translatedDescription: 'Move the white bishop to d8!',
+    translatedDescription: 'Déplacez le fou blanc en d8 !',
     hashCode:
       '4dcbf2f9b5da7a1a2fb6bd507beea05dc86863f0187c1a31e92882f1b68149f4',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white bishop to the e8 square!',
-    translatedDescription: 'Move the white bishop to the e8 square!',
+    translatedDescription: 'Déplacez le fou blanc sur la case e8 !',
     hashCode:
       '2e3688027e5f2a965c2320b31a75538839e05933e890c53cefc2b58808213c07',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white rook to a7!',
-    translatedDescription: 'Get the white rook to a7!',
+    translatedDescription: 'Amenez la tour blanche en a7 !',
     hashCode:
       'd1aac0547bcee8eae2ee9ca9eec93cb9049ed005e0771bceff40ce6fcf2fa538',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white rook to h8!',
-    translatedDescription: 'Get the white rook to h8!',
+    translatedDescription: 'Amenez la tour blanche en h8 !',
     hashCode:
       'febcfae8acc0d377e0a07cc2f5b23a0b09625203fd60760dc30a0b4ec8cc217c',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white rook to the e5 square!',
-    translatedDescription: 'Move the white rook to the e5 square!',
+    translatedDescription: 'Déplacez la tour blanche sur la case e5 !',
     hashCode:
       '19aee6eed4b76d67525a58befa10efb46cef92682d9f23be9ae8da35b4ea2a29',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white rook to the b1 square!',
-    translatedDescription: 'Move the white rook to the b1 square!',
+    translatedDescription: 'Déplacez la tour blanche sur la case b1 !',
     hashCode:
       '206518d006e75b4d4b9ff62f0b6f17e47efbea991c193c27e65f7380e9625090',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white rook to f3!',
-    translatedDescription: 'Move the white rook to f3!',
+    translatedDescription: 'Déplacez la tour blanche en f3 !',
     hashCode:
       '45d2f4eb26158d2e26caa7f85d12ececfec1657ed84776c0822412787eb92578',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white rook to the d6 square!',
-    translatedDescription: 'Get the white rook to the d6 square!',
+    translatedDescription: 'Amenez la tour blanche sur la case d6 !',
     hashCode:
       'a69a9ab7f74cce4e338a8fd06a33fbbe0425e91991f315a06b793dc46cb7b6ac',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Take the white rook to e4!',
-    translatedDescription: 'Take the white rook to e4!',
+    translatedDescription: 'Amenez la tour blanche en e4 !',
     hashCode:
       '43707cea549f4e3fad7dd5cf1d161b61143c9272eab3a9f5f575557ddca793ae',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Take the white rook to c2!',
-    translatedDescription: 'Take the white rook to c2!',
+    translatedDescription: 'Amenez la tour blanche en c2 !',
     hashCode:
       'e448e88005291f3c1dbb282808f79bb84f07e79605b67a2c81098237d9803a10',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white queen to d2!',
-    translatedDescription: 'Move the white queen to d2!',
+    translatedDescription: 'Déplacez la dame blanche en d2 !',
     hashCode:
       '98270d021224fe5a0d1b6d40b11638c3518b1b3777270c9803a2d95f80cb7551',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white queen to g8!',
-    translatedDescription: 'Move the white queen to g8!',
+    translatedDescription: 'Déplacez la dame blanche en g8 !',
     hashCode:
       '5e010b38199eaefe305d047caca8604cd7e4eda2ca0940e514162566093da723',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white queen to the a8 square!',
-    translatedDescription: 'Get the white queen to the a8 square!',
+    translatedDescription: 'Amenez la dame blanche sur la case a8 !',
     hashCode:
       '85d7ec2dbf4ebcdf477d11bbe6a1b68c77d3e5ef33d7eea4ba957d0df8bed18c',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white queen to the h8 square!',
-    translatedDescription: 'Move the white queen to the h8 square!',
+    translatedDescription: 'Déplacez la dame blanche sur la case h8 !',
     hashCode:
       '387caac4a25fb340eb4370e99fbcd8bc69f6fe73658e5d3189e9a60676c5d906',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Take the white queen to the e3 square!',
-    translatedDescription: 'Take the white queen to the e3 square!',
+    translatedDescription: 'Amenez la dame blanche sur la case e3 !',
     hashCode:
       'b834dfa0f6da4c3d4ee6c6be09a6fc22bab196c181eb9f488d637ea0d47978a8',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Take the white queen to the b8 square!',
-    translatedDescription: 'Take the white queen to the b8 square!',
+    translatedDescription: 'Amenez la dame blanche sur la case b8 !',
     hashCode:
       '5a2714095ea063c0ec157177017e8438b529e5b7079c0aa350b373c465ff13d1',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white queen to the d5 square!',
-    translatedDescription: 'Get the white queen to the d5 square!',
+    translatedDescription: 'Amenez la dame blanche sur la case d5 !',
     hashCode:
       '62963e15792e1dd073c148a3e1389f1da9842669f044d3b781348cbf11bee079',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white queen to d7!',
-    translatedDescription: 'Move the white queen to d7!',
+    translatedDescription: 'Déplacez la dame blanche en d7 !',
     hashCode:
       '3f78279412d5403c41341b224af8cab20447655b1750d336ab3d7cee08fb8b29',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white queen to b3!',
-    translatedDescription: 'Move the white queen to b3!',
+    translatedDescription: 'Déplacez la dame blanche en b3 !',
     hashCode:
       '3e945520489cbff53f1c96f2083f3a02c532ac05313e55faa5e8cc8e0a9be5bb',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white knight to h8!',
-    translatedDescription: 'Move the white knight to h8!',
+    translatedDescription: 'Déplacez le cavalier blanc en h8 !',
     hashCode:
       'afd80f988e03e6d491e9bfc2cb2bf798bc082344a83281d00aeb6e92bb4d9a97',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white bishop to c3!',
-    translatedDescription: 'Move the white bishop to c3!',
+    translatedDescription: 'Déplacez le fou blanc en c3 !',
     hashCode:
       '97947ef78afa96d3dd7c917e1bd3033f489169fb9fe42288209eed7ec0a47653',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white rook to a2!',
-    translatedDescription: 'Get the white rook to a2!',
+    translatedDescription: 'Amenez la tour blanche en a2 !',
     hashCode:
       'e078e8fd164bcd65145d734d58f0494ad00b64012f068e9bb53a5ee45d5944eb',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white knight to the d2 square',
-    translatedDescription: 'Get the white knight to the d2 square',
+    translatedDescription: 'Amenez le cavalier blanc sur la case d2',
     hashCode:
       '91c0e08ed61a543de9d4e947ea250b52d572124126d321f858f39eb01e4bd543',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white queen to the g4 square!',
-    translatedDescription: 'Move the white queen to the g4 square!',
+    translatedDescription: 'Déplacez la dame blanche sur la case g4 !',
     hashCode:
       'c9d1752bdc7abbae30f9a493a3c81b362a98ae41a71aa2aefdffb8f1ce4a1ed3',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white pawn to the d4 square!',
-    translatedDescription: 'Move the white pawn to the d4 square!',
+    translatedDescription: 'Déplacez le pion blanc sur la case d4 !',
     hashCode:
       '78b9511b8de2c5c3d6f78322c186332f46fb8d73a79faab468eaa53daaff618d',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Promote the white pawn into a queen in only 5 moves!',
     translatedDescription:
-      'Promote the white pawn into a queen in only 5 moves!',
+      'Promouvez le pion blanc en dame en seulement 5 coups !',
     hashCode:
       '431f78b8a3b5c6228a3c2a860f3297110fb26467a3e2d66b384d6a1a867c2b44',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription:
       'Bring the white pawn to the h4 square in only 1 move!',
     translatedDescription:
-      'Bring the white pawn to the h4 square in only 1 move!',
+      'Amenez le pion blanc sur la case h4 en seulement 1 coup !',
     hashCode:
       '8c55a3295e0606420afd1ebc783f6ce57b438333eeff8aada465593895bc854c',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Bring the white king to h1 as fast as possible!',
-    translatedDescription: 'Bring the white king to h1 as fast as possible!',
+    translatedDescription:
+      'Amenez le roi blanc en h1 le plus rapidement possible !',
     hashCode:
       'abd66b917251761f72df7dc4a48518193496f020fd1d97d2f559599855b7c732',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Bring the white king to a1 as fast as possible',
-    translatedDescription: 'Bring the white king to a1 as fast as possible',
+    translatedDescription:
+      'Amenez le roi blanc en a1 le plus rapidement possible',
     hashCode:
       '5dfca2fa94ff6dd9fb5542f81c7857b7e6f211fc011e144f2517c89b0f8061ff',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Take the white king to h8 as fast as possible!',
-    translatedDescription: 'Take the white king to h8 as fast as possible!',
+    translatedDescription:
+      'Amenez le roi blanc en h8 le plus rapidement possible !',
     hashCode:
       '1a5eff747f59f8ef14e3d5e1d54ba74efeca1e147a0a770fe4697758bbf89c4b',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Bring the white king to a8 as fast as possible',
-    translatedDescription: 'Bring the white king to a8 as fast as possible',
+    translatedDescription:
+      'Amenez le roi blanc en a8 le plus rapidement possible',
     hashCode:
       '69b9f155a260aed0e7a9d9a89b738e34a3da020df11a70db5760bc8067ce4bed',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white king to b8 on the shortest route',
     translatedDescription:
-      'Transfer the white king to b8 on the shortest route',
+      'Amenez le roi blanc en b8 par le chemin le plus court',
     hashCode:
       '295253d5880dabf1b4ee2e3b32b1f19d342b09425f42abf2744883e2822cf318',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Bring the white bishop to f8 in two moves',
-    translatedDescription: 'Bring the white bishop to f8 in two moves',
+    translatedDescription: 'Amenez le fou blanc en f8 en deux coups',
     hashCode:
       '895ff3ddad71c44370e86b341a9082b1a0bfe19c66937083743d0ecbd8dc937d',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Bring the white bishop to g6 in two moves',
-    translatedDescription: 'Bring the white bishop to g6 in two moves',
+    translatedDescription: 'Amenez le fou blanc en g6 en deux coups',
     hashCode:
       '8f014ffb7b817b2b779ad2bb18fcff59c48a85186be72e4e62739f38ae52fbf6',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white bishop to g5 in two moves',
-    translatedDescription: 'Transfer the white bishop to g5 in two moves',
+    translatedDescription: 'Amenez le fou blanc en g5 en deux coups',
     hashCode:
       '8ddcc8e16f6d1e1271566abe3566c62fc9fabdfb6fd1221def5c378b6bf60549',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white bishop to h4 in two moves',
-    translatedDescription: 'Transfer the white bishop to h4 in two moves',
+    translatedDescription: 'Amenez le fou blanc en h4 en deux coups',
     hashCode:
       '0364d1b33bd5129a6f23bbf0634bf7231cf757a1f9bfaaa17b26441de464ec21',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white bishop to h7 in two moves',
-    translatedDescription: 'Transfer the white bishop to h7 in two moves',
+    translatedDescription: 'Amenez le fou blanc en h7 en deux coups',
     hashCode:
       '7b2b05151c7383b9553f2ec0b717350afcfaeed4273409368ecc0ae41642f40f',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white knight to b5 in two moves',
-    translatedDescription: 'Transfer the white knight to b5 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en b5 en deux coups',
     hashCode:
       'b7f24a3bde26b8e944a8f641b667e9cb3d203916cc513bfb16a979296079d9e6',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white knight to d4 in two moves',
-    translatedDescription: 'Move the white knight to d4 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en d4 en deux coups',
     hashCode:
       '65b8e0be5e3ee53efb987cfccfc331fc1364f4bc7574b323fe2e68d7c84273b1',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white knight to c7 in two moves',
-    translatedDescription: 'Transfer the white knight to c7 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en c7 en deux coups',
     hashCode:
       '04124a5ffe3a76e2344a01a6ae8812684f15063a912386e2282b318a7a91b971',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Drive the white knight to f3 in two moves',
-    translatedDescription: 'Drive the white knight to f3 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en f3 en deux coups',
     hashCode:
       'f9d3b88d093d3897d7238742f2891d26d870a1a94b2398eb15eaddbc0a0a6429',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white knight to h4 in two moves',
-    translatedDescription: 'Transfer the white knight to h4 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en h4 en deux coups',
     hashCode:
       'fdfc9ecba93fcc7fbf4f58d5e50497d87b1697356f96289422873a0d1ff5b44a',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Bring the white knight to g4 in two moves',
-    translatedDescription: 'Bring the white knight to g4 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en g4 en deux coups',
     hashCode:
       'ecdd2761677da07bb5c93c20bc9b45e6de3755746d3a8bbab61ff34dd47ca856',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white knight to g5 in two moves',
-    translatedDescription: 'Get the white knight to g5 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en g5 en deux coups',
     hashCode:
       '0fdbf5ca95c91a043c6b20d7fda0b2677f2cf15b8b91501a47976825d729e7d0',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white knight to a7 in two moves',
-    translatedDescription: 'Get the white knight to a7 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en a7 en deux coups',
     hashCode:
       '19bcd668b14658ddb0444060401aebff30501bf118815963adf86fa2c483cf67',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white knight to g8 in two moves',
-    translatedDescription: 'Move the white knight to g8 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en g8 en deux coups',
     hashCode:
       '5ba24b79dbe5c563f232fdc23b09556f6c190c18bcc84adb8f0803af0d097fea',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white knight to f7 in two moves',
-    translatedDescription: 'Move the white knight to f7 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en f7 en deux coups',
     hashCode:
       '7e434ec5afdf18a165f8397de4d47e1bb8891d7b0d04268783059959931492e2',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white knight to c2 in two moves',
-    translatedDescription: 'Move the white knight to c2 in two moves',
+    translatedDescription: 'Amenez le cavalier blanc en c2 en deux coups',
     hashCode:
       '5f70f743b03d659c8c16d065a5ca77894881c02ca2dd23d0ea33c1940c4b98de',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white rook to a1 in two moves',
-    translatedDescription: 'Get the white rook to a1 in two moves',
+    translatedDescription: 'Amenez la tour blanche en a1 en deux coups',
     hashCode:
       '707e8986289d47d43d86bd3d1c3d045e8a4af851a4d208db5876af02872aed8f',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white rook to h2 in two moves',
-    translatedDescription: 'Get the white rook to h2 in two moves',
+    translatedDescription: 'Amenez la tour blanche en h2 en deux coups',
     hashCode:
       '40ccd4ddc47975a50aa88d440dbc9d9da7782226f9e164c45a3a8c6f1e7e035e',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white rook to g7 in two moves',
-    translatedDescription: 'Move the white rook to g7 in two moves',
+    translatedDescription: 'Amenez la tour blanche en g7 en deux coups',
     hashCode:
       '0bd3cc215755d5c28dc47e13c286c74f25e02e15b605b94834894e6bc6786011',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Bring the white rook to a8 in two moves',
-    translatedDescription: 'Bring the white rook to a8 in two moves',
+    translatedDescription: 'Amenez la tour blanche en a8 en deux coups',
     hashCode:
       '74211c56b8b88eff7fabc62d06dd0e1e580a4acafb2ee22e4a1dbc7ca46b3f7b',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Take the white rook to h8 in two moves',
-    translatedDescription: 'Take the white rook to h8 in two moves',
+    translatedDescription: 'Amenez la tour blanche en h8 en deux coups',
     hashCode:
       '64010b2013ce38b42812ddcffbdc1adc75a7c9569d064188b2dae7fe9cf4ba5e',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white rook to h7 in two moves',
-    translatedDescription: 'Get the white rook to h7 in two moves',
+    translatedDescription: 'Amenez la tour blanche en h7 en deux coups',
     hashCode:
       '9a522fc553333e3e094f553f88a86e8a6b0ffc11cdc3a78e485a61d608e7dc94',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Get the white rook to a3 in two moves',
-    translatedDescription: 'Get the white rook to a3 in two moves',
+    translatedDescription: 'Amenez la tour blanche en a3 en deux coups',
     hashCode:
       'b41291406ed5ddb0e314c57378fc00fb5acd1f424926226b38ff16d41858181d',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white rook to a8 in two moves',
-    translatedDescription: 'Transfer the white rook to a8 in two moves',
+    translatedDescription: 'Amenez la tour blanche en a8 en deux coups',
     hashCode:
       'abcd03b94f219e80bef96611462ebc0078c5d1603627161a7443bbb274ef5da3',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white rook to b8 in two moves',
-    translatedDescription: 'Transfer the white rook to b8 in two moves',
+    translatedDescription: 'Amenez la tour blanche en b8 en deux coups',
     hashCode:
       '20f7f9d472f398fbf9a85b395aa702b2e2a6771cd4c6831b42c9aa917290cdc1',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Transfer the white rook to c8 in two moves',
-    translatedDescription: 'Transfer the white rook to c8 in two moves',
+    translatedDescription: 'Amenez la tour blanche en c8 en deux coups',
     hashCode:
       '639288faf87162b320d62ca21d66e5b6dc0b62f2a9657e4224bc1ce72977dd69',
   },
   {
-    target: 'en',
+    target: 'fr',
     originalDescription: 'Move the white rook to b7 in two moves',
-    translatedDescription: 'Move the white rook to b7 in two moves',
+    translatedDescription: 'Amenez la tour blanche en b7 en deux coups',
     hashCode:
       'bcba55a2ba7082d1de3e9af2c2e6ed281a692bee466340f166fc1dc10c65d6c6',
   },
