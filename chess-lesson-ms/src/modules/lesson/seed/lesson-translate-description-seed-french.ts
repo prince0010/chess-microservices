@@ -95,14 +95,14 @@ export const listLessons = [
     originalDescription:
       'Stalemate the black king\n\nStalemate is a\nsituation where the player whose turn it is to move is not in check but has no\nlegal move to continue the game. The rules of chess provide that when\nstalemate occurs, the game ends as a draw (i.e. having no winner).',
     translatedDescription:
-      "Pat le roi noir\n\nLe pat est une situation où le joueur dont c'est le tour n'est pas en échec mais n'a aucun coup légal pour continuer la partie. Les règles des échecs stipulent qu'en cas de pat, la partie se termine par une nulle (c'est-à-dire sans vainqueur).",
+      "Faites Pat au roi noir\n\nLe pat est une situation où le joueur dont c'est le tour n'est pas en échec mais n'a aucun coup légal pour continuer la partie. Les règles des échecs stipulent qu'en cas de pat, la partie se termine par une nulle (c'est-à-dire sans vainqueur).",
     hashCode:
       'a2a9c5a1e0f6a74b770f910f5a6f05811300f27eae49de84e4ad2e1bc2cd78da',
   },
   {
     target: 'fr',
     originalDescription: 'Stalemate the black king',
-    translatedDescription: 'Pat le roi noir',
+    translatedDescription: 'Faites Pat au roi noir',
     hashCode:
       '894d5c43a2053463463eae8867fd72f5b0a0239722a83bd1ef855ac62f7a0582',
   },
@@ -208,7 +208,7 @@ export const listLessons = [
   {
     target: 'fr',
     originalDescription: 'Squeeze the Black king to the corner!',
-    translatedDescription: 'Acculez le roi noir dans le coin !',
+    translatedDescription: 'Forcez le roi noir à aller dans le coin !',
     hashCode:
       '2cf6f6ad61f635cc560e2c93b6c08f8fea27d7226fc4b319159f6c59627aa9eb',
   },
@@ -1772,7 +1772,7 @@ export const listLessons = [
     originalDescription:
       'Doublecheck and\ncheckmate again! White gives two checks in the same time, which means that is\nnot possible to take any of the pieces despite they are hanging and the king\nhas no square to leave. Doublecheck is a very strong weapon in chess. We\nalways need to pay attention for such possibilities. In this chapter you need\nto deliver checkmates with the help of a doublecheck.',
     translatedDescription:
-      "Encore un double échec et mat ! Les Blancs donnent deux échecs simultanément, ce qui signifie qu'il est impossible de prendre l'une des pièces malgré leur exposition, et le roi n'a aucune case de fuite. Le double échec est une arme très puissante aux échecs. Il faut toujours être attentif à ces possibilités. Dans ce chapitre, vous devrez administrer des mats à l'aide d'un double échec.",
+      "Encore un double échec et mat ! Les Blancs donnent deux échecs simultanément, ce qui signifie qu'il est impossible de prendre l'une des pièces malgré le fait qu’elles soient en prise, et le roi n'a aucune case de fuite. Le double échec est une arme très puissante aux échecs. Il faut toujours être attentif à ces possibilités. Dans ce chapitre, vous devrez administrer des mats à l'aide d'un double échec.",
     hashCode:
       '4276a3a80fc2393d48426d053f4df5a3e3d319dde93e86919eb999f7d348aaf9',
   },
@@ -2109,7 +2109,7 @@ export const listLessons = [
     originalDescription:
       'White to move and give mate in two moves!\n\nA\npicturesque checkmate! With the great queen sacrifice in the first move, White\nhas squeezed the black king into the corner and the knight gave mate! This is\ncalled smothered mate as the king cannot move because of his own pieces. We\nshould remember well this motif because this is the most common way to deliver\nsmothered mates.',
     translatedDescription:
-      "Aux Blancs de jouer et de donner mat en deux coups !\n\nUn mat pittoresque ! Avec le grand sacrifice de dame au premier coup, les Blancs ont acculé le roi noir dans le coin et le cavalier a donné mat ! C'est ce qu'on appelle un mat étouffé car le roi ne peut bouger à cause de ses propres pièces. Nous devons bien retenir ce motif car c'est la manière la plus courante d'administrer un mat étouffé.",
+      "Aux Blancs de jouer et de donner mat en deux coups !\n\nUn mat pittoresque ! Avec le grand sacrifice de dame au premier coup, les Blancs ont acculé le roi noir dans le coin et le cavalier a donné mat ! C'est ce qu'on appelle un mat étouffé car le roi ne peut pas bouger à cause de ses propres pièces. Nous devons bien retenir ce motif car c'est la manière la plus courante d'administrer un mat étouffé.",
     hashCode:
       '2ee25fc07456927e0d3756e3a5f449a1e25baadaf77c9eccb950abf21aa01727',
   },
