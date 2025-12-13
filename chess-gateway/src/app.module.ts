@@ -17,8 +17,6 @@ import { PaymentModule } from './modules/payment/payment.module';
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', '/public'),
-      serveRoot: '/',
-      exclude: ['/api*'], // to avoid static intercepting API
     }),
 
     // API Rate Limiting

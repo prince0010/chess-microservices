@@ -17,11 +17,7 @@ async function bootstrap() {
   configureCors(app, env);
 
   app.setGlobalPrefix('api', {
-    exclude: [
-      '/', // homepage
-      '/admin/(.*)', // ALL admin routes
-      '/(.*)', // ALL Angular client routes
-    ],
+    exclude: ['/', '/admin/*'],
   });
 
   app.useGlobalPipes(
