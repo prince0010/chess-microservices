@@ -16,9 +16,7 @@ async function bootstrap() {
   // CORS
   configureCors(app, env);
 
-  app.setGlobalPrefix('api', {
-    exclude: ['/', '/admin/*'],
-  });
+  app.setGlobalPrefix('api');
 
   app.useGlobalPipes(
     new ValidationPipe({
