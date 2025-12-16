@@ -2,16 +2,21 @@ import { Controller } from '@nestjs/common';
 import { EventPattern, MessagePattern, Payload } from '@nestjs/microservices';
 
 import { OrderService } from './order.service';
+import { VerifyInAppPurchaseService } from './verify-in-app-purchase.service';
 
 import { CreateOrderDto } from './dto/create-order.dto';
 import { OrderPaginationDto } from './dto/order-pagination.dto';
 import { FailedOrderDto, PaidOrderDto } from './dto/paid-order.dto';
+import { VerifyInAppPurchaseDto } from './dto';
 
 @Controller()
 export class OrdersController {
-  constructor(private readonly orderService: OrderService) {}
+  constructor(
+    private readonly orderService: OrderService,
+    private readonly verifyInAppPurchaseService: VerifyInAppPurchaseService,
+  ) {}
 
-  // first and main endpoint
+  // first and main endpoint using stripe
   @MessagePattern('order.payment.create')
   async createPaymentSession(@Payload() createOrderDto: CreateOrderDto) {
     const order = await this.orderService.create(createOrderDto);
@@ -22,6 +27,12 @@ export class OrdersController {
       order,
       paymentSession,
     };
+  }
+
+  // verify in app purchase with google or apple
+  @MessagePattern('order.verify.iap')
+  verifyInAppPurchase(@Payload() dto: VerifyInAppPurchaseDto) {
+    return this.verifyInAppPurchaseService.verifyInAppPurchase(dto);
   }
 
   @MessagePattern('order.find.all')

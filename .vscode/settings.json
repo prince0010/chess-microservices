@@ -18,6 +18,7 @@
     "requirepass",
     "rootfs",
     "timepicker",
+    "wechess",
     "wordprocessingml"
   ]
 }
