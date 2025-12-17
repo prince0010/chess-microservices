@@ -24,6 +24,7 @@ import { CreateNotificationPurchaseDto } from '../notification/dto/create-notifi
 import { IListOrders } from 'src/interfaces';
 import {
   ItemPackage,
+  NotificationDestination,
   NotificationPurchaseMessage,
   NotificationPurchaseTitle,
   NotificationPurchaseType,
@@ -257,6 +258,7 @@ export class OrderService {
     // create notification payment succeed for 1M panda points added
     const dataNotification: CreateNotificationPurchaseDto = {
       userUid: order.userUid,
+      destination: NotificationDestination.APP,
       type: NotificationPurchaseType.PAYMENT_SUCCESS,
       title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
       message:
@@ -280,6 +282,7 @@ export class OrderService {
     // create notification payment succeed all levels open for 30 days
     const dataNotificationFor30Days: CreateNotificationPurchaseDto = {
       userUid: order.userUid,
+      destination: NotificationDestination.APP,
       type: NotificationPurchaseType.PAYMENT_SUCCESS,
       title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
       message: NotificationPurchaseMessage.ALL_LEVELS_OPEN_FOR_30_DAYS_MESSAGE,
@@ -369,6 +372,7 @@ export class OrderService {
     // create notification payment succeed for all levels unlocked for life time
     const dataNotificationForLifeTime: CreateNotificationPurchaseDto = {
       userUid: order.userUid,
+      destination: NotificationDestination.APP,
       type: NotificationPurchaseType.PAYMENT_SUCCESS,
       title: NotificationPurchaseTitle.PAYMENT_RECEIVED_TITLE,
       message:

@@ -5,7 +5,7 @@ import {
   IsPositive,
   IsString,
 } from 'class-validator';
-import { NotificationPurchaseType } from 'src/enum';
+import { NotificationDestination, NotificationPurchaseType } from 'src/enum';
 
 export class CreateNotificationPurchaseDto {
   @IsNumber()
@@ -17,6 +17,12 @@ export class CreateNotificationPurchaseDto {
     message: `Only valid notifications type these one: [${Object.values(NotificationPurchaseType)}]`,
   })
   type: NotificationPurchaseType;
+
+  @IsNotEmpty()
+  @IsEnum(NotificationDestination, {
+    message: `Only valid notifications destination these one: [${Object.values(NotificationDestination)}]`,
+  })
+  destination: NotificationDestination;
 
   @IsNotEmpty()
   @IsString()

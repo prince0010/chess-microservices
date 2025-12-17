@@ -8,7 +8,7 @@ export class NotificationPurchaseController {
     private readonly notificationPurchaseService: NotificationPurchaseService,
   ) {}
 
-  // frontend app will ask through a poll in case payment session was triggered
+  // website will ask through a poll in case payment session was triggered
   @MessagePattern('notificationPurchase.find.one')
   findNotificationByPackageName(@Payload() userUid: number) {
     return this.notificationPurchaseService.findOne(userUid);
