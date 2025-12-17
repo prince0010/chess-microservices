@@ -3,14 +3,15 @@ import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { GoogleAuth } from 'google-auth-library';
 
-import { NATS_SERVICE } from 'src/config';
+import { envs, NATS_SERVICE } from 'src/config';
 
 import { VerifyInAppPurchaseDto } from './dto';
+import { StorePlatform } from 'src/enum';
 
 @Injectable()
 export class VerifyInAppPurchaseService {
   private googleAuth = new GoogleAuth({
-    credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON),
+    credentials: JSON.parse(envs.googleServiceAccountJson),
     scopes: ['https://www.googleapis.com/auth/androidpublisher'],
   });
 
@@ -18,11 +19,11 @@ export class VerifyInAppPurchaseService {
 
   // ============= Entry point =============
   async verifyInAppPurchase(dto: VerifyInAppPurchaseDto) {
-    if (dto.source === 'google_play') {
+    if (dto.source === StorePlatform.GOOGLE_PLAY_STORE) {
       return this.verifyGooglePlayPurchase(dto);
     }
 
-    if (dto.source === 'app_store') {
+    if (dto.source === StorePlatform.APPLE_APP_STORE) {
       return this.verifyApplePurchase(dto);
     }
 
@@ -35,7 +36,7 @@ export class VerifyInAppPurchaseService {
   // ============= GOOGLE PLAY =============
   private async verifyGooglePlayPurchase(dto: VerifyInAppPurchaseDto) {
     const { storeProductId, serverVerificationData } = dto;
-    const packageName = process.env.ANDROID_PACKAGE_NAME;
+    const packageName = envs.androidPackageName;
 
     const authClient = await this.googleAuth.getClient();
     const accessToken = await authClient.getAccessToken();
@@ -92,7 +93,7 @@ export class VerifyInAppPurchaseService {
     return this.createPaidOrderAndGrantItems({
       externalOrderId: data.orderId,
       storeProductId,
-      source: 'google_play',
+      source: StorePlatform.GOOGLE_PLAY_STORE,
     });
   }
 
@@ -123,7 +124,7 @@ export class VerifyInAppPurchaseService {
 
     const payload = {
       'receipt-data': receipt,
-      password: process.env.APPLE_SHARED_SECRET,
+      password: envs.appleInAppPurchaseKey,
       'exclude-old-transactions': true,
     };
 
@@ -184,13 +185,13 @@ export class VerifyInAppPurchaseService {
     return this.createPaidOrderAndGrantItems({
       externalOrderId: transactionId,
       storeProductId: receiptInfo.product_id,
-      source: 'app_store',
+      source: StorePlatform.APPLE_APP_STORE,
     });
   }
 
   // ============= STORAGE =============
   private async isGoogleTokenUsed(token: string): Promise<boolean> {
-    // TODO: query DB table google_purchases
+    // TODO: query DB table google_purchases - wrong we only handle order entity
     return false;
   }
 
@@ -205,7 +206,8 @@ export class VerifyInAppPurchaseService {
   private async isAppleTransactionUsed(
     transactionId: string,
   ): Promise<boolean> {
-    // TODO: query DB table apple_purchases
+    // TODO: query DB table apple_purchases - WRONG I used my own order entity for both
+    // please update me this code to verify if some order has the storeChargeId
     return false;
   }
 
@@ -214,14 +216,16 @@ export class VerifyInAppPurchaseService {
     productId: string;
     originalTransactionId?: string;
   }) {
-    // TODO: insert into apple_purchases table
+    // TODO: insert into apple_purchases table - wrong I handle only order entity for both apple and google
+    // generate this in a unique method createPaidOrder
+    // here I have a doubt, which one should I store on my column storeChargeId ?? transactionId or originalTransactionId ?? what is the real one we need to track
   }
 
   // TODO: generate paid order
   private async createPaidOrderAndGrantItems(data: {
     externalOrderId: string;
     storeProductId: string;
-    source: 'google_play' | 'app_store';
+    source: StorePlatform;
   }) {
     /**
      * 1. Validate item exists

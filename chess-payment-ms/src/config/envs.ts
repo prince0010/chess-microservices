@@ -18,6 +18,10 @@ interface EnvVars {
   STRIPE_SUCCESS_URL: string;
   STRIPE_CANCEL_URL: string;
   STRIPE_ENDPOINT_SECRET: string;
+  // In app purchase
+  GOOGLE_SERVICE_ACCOUNT_JSON: string;
+  ANDROID_PACKAGE_NAME: string;
+  APPLE_IN_APP_PURCHASE_KEY: string;
 }
 
 const envsSchema = joi
@@ -38,6 +42,10 @@ const envsSchema = joi
     STRIPE_SUCCESS_URL: joi.string().required(),
     STRIPE_CANCEL_URL: joi.string().required(),
     STRIPE_ENDPOINT_SECRET: joi.string().required(),
+    // In app purchase
+    GOOGLE_SERVICE_ACCOUNT_JSON: joi.string().required(),
+    ANDROID_PACKAGE_NAME: joi.string().required(),
+    APPLE_IN_APP_PURCHASE_KEY: joi.string().required(),
   })
   .unknown(true);
 
@@ -69,4 +77,8 @@ export const envs = {
   stripeSuccessUrl: envVars.STRIPE_SUCCESS_URL,
   stripeCancelUrl: envVars.STRIPE_CANCEL_URL,
   stripeEndpointSecret: envVars.STRIPE_ENDPOINT_SECRET,
+  // In app purchase
+  googleServiceAccountJson: envVars.GOOGLE_SERVICE_ACCOUNT_JSON,
+  androidPackageName: envVars.ANDROID_PACKAGE_NAME,
+  appleInAppPurchaseKey: envVars.APPLE_IN_APP_PURCHASE_KEY,
 };
