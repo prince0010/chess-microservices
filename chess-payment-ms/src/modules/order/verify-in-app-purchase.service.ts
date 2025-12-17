@@ -20,11 +20,11 @@ export class VerifyInAppPurchaseService {
   // ============= Entry point =============
   async verifyInAppPurchase(dto: VerifyInAppPurchaseDto) {
     if (dto.source === StorePlatform.GOOGLE_PLAY_STORE) {
-      return this.verifyGooglePlayPurchase(dto);
+      return this.verifyGoogle(dto);
     }
 
     if (dto.source === StorePlatform.APPLE_APP_STORE) {
-      return this.verifyApplePurchase(dto);
+      return this.verifyApple(dto);
     }
 
     throw new RpcException({
@@ -33,9 +33,9 @@ export class VerifyInAppPurchaseService {
     });
   }
 
-  // ============= GOOGLE PLAY =============
-  private async verifyGooglePlayPurchase(dto: VerifyInAppPurchaseDto) {
-    const { storeProductId, serverVerificationData } = dto;
+  // ============= GOOGLE =============
+  private async verifyGoogle(dto: VerifyInAppPurchaseDto) {
+    const { storeProductId, serverVerificationData, userUid } = dto;
     const packageName = envs.androidPackageName;
 
     const authClient = await this.googleAuth.getClient();
@@ -46,17 +46,9 @@ export class VerifyInAppPurchaseService {
       `${packageName}/purchases/products/${storeProductId}/tokens/${serverVerificationData}`;
 
     const { data } = await axios.get(url, {
-      headers: {
-        Authorization: `Bearer ${accessToken.token}`,
-      },
+      headers: { Authorization: `Bearer ${accessToken.token}` },
     });
 
-    /**
-     * purchaseState
-     * 0 = PURCHASED
-     * 1 = CANCELED
-     * 2 = PENDING
-     */
     if (data.purchaseState !== 0) {
       throw new RpcException({
         status: 400,
@@ -64,66 +56,30 @@ export class VerifyInAppPurchaseService {
       });
     }
 
-    // Prevent double spending
-    if (await this.isGoogleTokenUsed(serverVerificationData)) {
-      throw new RpcException({
-        status: 409,
-        message: 'GOOGLE_PURCHASE_ALREADY_USED',
-      });
-    }
+    const storeChargeId = data.orderId;
 
-    // Persist token BEFORE granting anything
-    await this.storeGooglePurchase({
-      purchaseToken: serverVerificationData,
-      orderId: data.orderId,
-      productId: storeProductId,
-    });
-
-    // Optional but recommended
+    // Acknowledge (mandatory)
     if (data.acknowledgementState === 0) {
-      await this.acknowledgeGooglePurchase(
-        packageName,
-        storeProductId,
-        serverVerificationData,
-        accessToken.token,
+      await axios.post(
+        `${url}:acknowledge`,
+        {},
+        { headers: { Authorization: `Bearer ${accessToken.token}` } },
       );
     }
 
-    // YOUR BUSINESS LOGIC HERE
-    return this.createPaidOrderAndGrantItems({
-      externalOrderId: data.orderId,
+    return this.createPaidOrder({
+      userUid,
+      storeChargeId,
       storeProductId,
       source: StorePlatform.GOOGLE_PLAY_STORE,
+      receiptUrl: url,
     });
   }
 
-  private async acknowledgeGooglePurchase(
-    packageName: string,
-    productId: string,
-    token: string,
-    accessToken: string,
-  ) {
-    const url =
-      `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/` +
-      `${packageName}/purchases/products/${productId}/tokens/${token}:acknowledge`;
-
-    await axios.post(
-      url,
-      {},
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      },
-    );
-  }
-
-  // ============= APPLE APP STORE =============
-  private async verifyApplePurchase(dto: VerifyInAppPurchaseDto) {
-    const receipt = dto.serverVerificationData;
-
+  // ============= APPLE =============
+  private async verifyApple(dto: VerifyInAppPurchaseDto) {
     const payload = {
-      'receipt-data': receipt,
+      'receipt-data': dto.serverVerificationData,
       password: envs.appleInAppPurchaseKey,
       'exclude-old-transactions': true,
     };
@@ -133,7 +89,6 @@ export class VerifyInAppPurchaseService {
       payload,
     );
 
-    // Sandbox receipt sent to production
     if (response.data.status === 21007) {
       response = await axios.post(
         'https://sandbox.itunes.apple.com/verifyReceipt',
@@ -166,77 +121,81 @@ export class VerifyInAppPurchaseService {
       });
     }
 
-    const transactionId = receiptInfo.transaction_id;
+    const storeChargeId = receiptInfo.transaction_id;
 
-    if (await this.isAppleTransactionUsed(transactionId)) {
+    return this.createPaidOrder({
+      userUid: dto.userUid,
+      storeChargeId,
+      storeProductId: receiptInfo.product_id,
+      source: StorePlatform.APPLE_APP_STORE,
+      receiptUrl: 'https://apps.apple.com/account/purchases',
+    });
+  }
+
+  // ================= ORDER CREATION =================
+  private async createPaidOrder(data: {
+    userUid: number;
+    storeChargeId: string;
+    storeProductId: string;
+    source: StorePlatform;
+    receiptUrl: string;
+  }) {
+    /**
+     * SINGLE SOURCE OF TRUTH:
+     * Order + OrderItem + OrderReceipt
+     */
+
+    try {
+      // Create order (PENDING)
+      // TODO: change this endpoint
+      const order = await this.client
+        .send('order.create.app', {
+          userUid: data.userUid,
+          source: data.source,
+          items: [
+            {
+              itemId: await this.resolveItemId(data.storeProductId),
+              quantity: 1,
+            },
+          ],
+        })
+        .toPromise();
+
+      // Mark order as PAID
+      // TODO: change this endpoint
+      await this.client
+        .send('order.mark.paid.app', {
+          orderId: order.id,
+          storePaymentId: data.storeChargeId,
+          receiptUrl: data.receiptUrl,
+        })
+        .toPromise();
+
+      return {
+        success: true,
+        orderId: order.id,
+      };
+    } catch (error) {
       throw new RpcException({
-        status: 409,
-        message: 'APPLE_TRANSACTION_ALREADY_USED',
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  private async resolveItemId(storeProductId: string): Promise<number> {
+    // TODO: change this endpoint
+    const item = await this.client
+      .send('item.find.by.storeProductId', storeProductId)
+      .toPromise();
+
+    if (!item) {
+      throw new RpcException({
+        status: 400,
+        message: 'ITEM_NOT_FOUND',
       });
     }
 
-    await this.storeApplePurchase({
-      transactionId,
-      productId: receiptInfo.product_id,
-      originalTransactionId: receiptInfo.original_transaction_id,
-    });
-
-    // YOUR BUSINESS LOGIC HERE
-    return this.createPaidOrderAndGrantItems({
-      externalOrderId: transactionId,
-      storeProductId: receiptInfo.product_id,
-      source: StorePlatform.APPLE_APP_STORE,
-    });
-  }
-
-  // ============= STORAGE =============
-  private async isGoogleTokenUsed(token: string): Promise<boolean> {
-    // TODO: query DB table google_purchases - wrong we only handle order entity
-    return false;
-  }
-
-  private async storeGooglePurchase(data: {
-    purchaseToken: string;
-    orderId: string;
-    productId: string;
-  }) {
-    // TODO: insert into google_purchases table
-  }
-
-  private async isAppleTransactionUsed(
-    transactionId: string,
-  ): Promise<boolean> {
-    // TODO: query DB table apple_purchases - WRONG I used my own order entity for both
-    // please update me this code to verify if some order has the storeChargeId
-    return false;
-  }
-
-  private async storeApplePurchase(data: {
-    transactionId: string;
-    productId: string;
-    originalTransactionId?: string;
-  }) {
-    // TODO: insert into apple_purchases table - wrong I handle only order entity for both apple and google
-    // generate this in a unique method createPaidOrder
-    // here I have a doubt, which one should I store on my column storeChargeId ?? transactionId or originalTransactionId ?? what is the real one we need to track
-  }
-
-  // TODO: generate paid order
-  private async createPaidOrderAndGrantItems(data: {
-    externalOrderId: string;
-    storeProductId: string;
-    source: StorePlatform;
-  }) {
-    /**
-     * 1. Validate item exists
-     * 2. Prevent lifetime re-purchase
-     * 3. Create PAID order
-     * 4. Grant points / unlock levels
-     * 5. Emit notification
-     */
-    return {
-      success: true,
-      ...data,
-    };
+    return item.id;
   }
 }
