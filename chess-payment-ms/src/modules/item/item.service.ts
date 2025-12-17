@@ -94,6 +94,15 @@ export class ItemService {
     }
   }
 
+  async findOneByStoreProductId(storeProductId: string): Promise<Item | null> {
+    const item = await this.itemRepository.findOneBy({ storeProductId });
+    if (!item) {
+      return null;
+    }
+
+    return item;
+  }
+
   remove(id: number) {
     return `This action removes a #${id} item`;
   }

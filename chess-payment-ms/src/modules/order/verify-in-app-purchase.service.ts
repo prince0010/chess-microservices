@@ -2,10 +2,17 @@ import axios from 'axios';
 import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { GoogleAuth } from 'google-auth-library';
+import { firstValueFrom } from 'rxjs';
 
 import { envs, NATS_SERVICE } from 'src/config';
+import { Item } from '../item/entities/item.entity';
+import { OrderService } from './order.service';
 
-import { VerifyInAppPurchaseDto } from './dto';
+import {
+  CreateOrderAppDto,
+  PaidOrderAppDto,
+  VerifyInAppPurchaseDto,
+} from './dto';
 import { StorePlatform } from 'src/enum';
 
 @Injectable()
@@ -15,7 +22,10 @@ export class VerifyInAppPurchaseService {
     scopes: ['https://www.googleapis.com/auth/androidpublisher'],
   });
 
-  constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
+  constructor(
+    @Inject(NATS_SERVICE) private readonly client: ClientProxy,
+    private readonly orderService: OrderService,
+  ) {}
 
   // ============= Entry point =============
   async verifyInAppPurchase(dto: VerifyInAppPurchaseDto) {
@@ -140,36 +150,27 @@ export class VerifyInAppPurchaseService {
     source: StorePlatform;
     receiptUrl: string;
   }) {
-    /**
-     * SINGLE SOURCE OF TRUTH:
-     * Order + OrderItem + OrderReceipt
-     */
-
     try {
       // Create order (PENDING)
-      // TODO: change this endpoint
-      const order = await this.client
-        .send('order.create.app', {
-          userUid: data.userUid,
-          source: data.source,
-          items: [
-            {
-              itemId: await this.resolveItemId(data.storeProductId),
-              quantity: 1,
-            },
-          ],
-        })
-        .toPromise();
+      const payloadNewOrder: CreateOrderAppDto = {
+        userUid: data.userUid,
+        source: data.source,
+        items: [
+          {
+            itemId: await this.resolveItemId(data.storeProductId),
+            quantity: 1,
+          },
+        ],
+      };
+      const order = await this.orderService.create(payloadNewOrder);
 
       // Mark order as PAID
-      // TODO: change this endpoint
-      await this.client
-        .send('order.mark.paid.app', {
-          orderId: order.id,
-          storePaymentId: data.storeChargeId,
-          receiptUrl: data.receiptUrl,
-        })
-        .toPromise();
+      const payloadPaidOrder: PaidOrderAppDto = {
+        orderId: order.id,
+        storePaymentId: data.storeChargeId,
+        receiptUrl: data.receiptUrl,
+      };
+      await this.orderService.markOrderAppAsPaid(payloadPaidOrder);
 
       return {
         success: true,
@@ -184,10 +185,9 @@ export class VerifyInAppPurchaseService {
   }
 
   private async resolveItemId(storeProductId: string): Promise<number> {
-    // TODO: change this endpoint
-    const item = await this.client
-      .send('item.find.by.storeProductId', storeProductId)
-      .toPromise();
+    const item: Item = await firstValueFrom(
+      this.client.send('item.find.storeProductId', storeProductId),
+    );
 
     if (!item) {
       throw new RpcException({
