@@ -13,11 +13,15 @@ import { PaymentSubscription } from '../payment-subscription/entities/payment-su
 import { ItemService } from '../item/item.service';
 import { NotificationPurchaseService } from '../notification/notification-purchase.service';
 
-import { CreateOrderDto } from './dto/create-order.dto';
-import { FailedOrderDto, OrderPaginationDto, PaidOrderDto } from './dto';
-import { IListOrders, IPaymentSessionResponse } from 'src/interfaces';
-import { PaymentSessionDto } from '../payment/dto/payment-session.dto';
-import { UpdateUserPointsAfterPurchaseDto } from './dto/update-user-points-after-purchase.dto';
+import {
+  CreateOrderAppDto,
+  FailedOrderAppDto,
+  OrderAppPaginationDto,
+  PaidOrderAppDto,
+  UpdateUserPointsAfterPurchaseDto,
+} from './dto';
+import { CreateNotificationPurchaseDto } from '../notification/dto/create-notification-purchase.dto';
+import { IListOrders } from 'src/interfaces';
 import {
   ItemPackage,
   NotificationPurchaseMessage,
@@ -25,8 +29,6 @@ import {
   NotificationPurchaseType,
   OrderStatus,
 } from 'src/enum';
-import { CreateNotificationPurchaseDto } from '../notification/dto/create-notification-purchase.dto';
-import { CreatePaymentSubscriptionDto } from '../payment-subscription/dto/create-payment-subscription.dto';
 
 @Injectable()
 export class OrderService {
@@ -44,12 +46,12 @@ export class OrderService {
     private readonly notificationPurchaseService: NotificationPurchaseService,
   ) {}
 
-  // STEP 1
-  async create(createOrderDto: CreateOrderDto): Promise<Order> {
-    const { userUid } = createOrderDto;
+  // now this endpoint should be called from verify in app purchase
+  async create(dto: CreateOrderAppDto): Promise<Order> {
+    const { userUid } = dto;
     try {
       // 1- validate items IDS exist on database
-      const itemIds = createOrderDto.items.map((e) => e.itemId);
+      const itemIds = dto.items.map((e) => e.itemId);
       const items = await this.itemService.validateItems(itemIds);
 
       // 2: Check for existing subscription => All levels unlocked for life time
@@ -74,23 +76,22 @@ export class OrderService {
       }
 
       // 3- calculate total price for each item * quantity (total)
-      const totalAmount = createOrderDto.items.reduce((acc, orderItem) => {
+      const totalAmount = dto.items.reduce((acc, orderItem) => {
         const price = items.find((e) => e.id === orderItem.itemId).price;
 
         return acc + price * orderItem.quantity;
       }, 0);
 
       // 4- calculate total items was bought
-      const totalItems = createOrderDto.items.reduce((acc, orderItem) => {
+      const totalItems = dto.items.reduce((acc, orderItem) => {
         return acc + orderItem.quantity;
       }, 0);
 
       // 5- create orderItems
       const orderItems: any[] = items.map((item: Item) => ({
         price: item.price,
-        quantity: createOrderDto.items.find(
-          (orderItem) => orderItem.itemId === item.id,
-        ).quantity,
+        quantity: dto.items.find((orderItem) => orderItem.itemId === item.id)
+          .quantity,
         item,
       }));
 
@@ -99,6 +100,7 @@ export class OrderService {
         totalAmount,
         totalItems: totalItems,
         userUid,
+        source: dto.source,
         orderItems,
       });
 
@@ -118,26 +120,9 @@ export class OrderService {
     }
   }
 
-  // STEP 2
-  async createPaymentSession(order: Order): Promise<IPaymentSessionResponse> {
-    const dataPaymentSessionDto: PaymentSessionDto = {
-      orderId: order.id,
-      currency: 'usd',
-      items: order.orderItems.map((orderItem) => ({
-        name: orderItem.item.name,
-        price: orderItem.price,
-        quantity: orderItem.quantity,
-      })),
-    };
-
-    const paymentSession = await firstValueFrom(
-      this.client.send('payment.create.session', dataPaymentSessionDto),
-    );
-
-    return paymentSession;
-  }
-
-  async findAll(orderPaginationDto: OrderPaginationDto): Promise<IListOrders> {
+  async findAll(
+    orderPaginationDto: OrderAppPaginationDto,
+  ): Promise<IListOrders> {
     const { limit = 12, page = 1, status = null } = orderPaginationDto;
 
     const offset = (page - 1) * limit;
@@ -198,14 +183,14 @@ export class OrderService {
     }
   }
 
-  async markOrderAsFailed(failedOrderDto: FailedOrderDto): Promise<void> {
-    const { orderId, stripePaymentId } = failedOrderDto;
+  async markOrderAppAsFailed(dto: FailedOrderAppDto): Promise<void> {
+    const { orderId, storePaymentId } = dto;
 
     const order = await this.findOne(orderId);
 
     // Update order
     order.status = OrderStatus.CANCELLED;
-    order.stripeChargeId = stripePaymentId;
+    order.storeChargeId = storePaymentId;
 
     await this.orderRepository.save(order);
 
@@ -221,8 +206,8 @@ export class OrderService {
     // await this.notificationPurchaseService.create(dataNotification);
   }
 
-  async markOrderAsPaid(paidOrderDto: PaidOrderDto): Promise<void> {
-    const { orderId, stripePaymentId, receiptUrl } = paidOrderDto;
+  async markOrderAppAsPaid(dto: PaidOrderAppDto): Promise<void> {
+    const { orderId, storePaymentId, receiptUrl } = dto;
 
     const order = await this.findOne(orderId);
 
@@ -239,7 +224,7 @@ export class OrderService {
     order.status = OrderStatus.PAID;
     order.paid = true;
     order.paidAt = new Date();
-    order.stripeChargeId = stripePaymentId;
+    order.storeChargeId = storePaymentId;
     order.receipt = savedReceipt;
 
     const savedOrder = await this.orderRepository.save(order);

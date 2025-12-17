@@ -15,7 +15,7 @@ export class OrderReceipt {
   id: string;
 
   @Column({ nullable: false })
-  receiptUrl: string; // Stripe receipt URL
+  receiptUrl: string; // Store receipt URL
 
   @CreateDateColumn()
   createdAt: Date;

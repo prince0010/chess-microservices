@@ -5,6 +5,7 @@ import {
   IsPositive,
   IsString,
 } from 'class-validator';
+import { StorePlatform } from 'src/enum';
 
 export class VerifyInAppPurchaseDto {
   @IsPositive()
@@ -22,6 +23,6 @@ export class VerifyInAppPurchaseDto {
 
   @IsNotEmpty()
   @IsString()
-  @IsIn(['app_store', 'google_play'])
-  source: 'app_store' | 'google_play';
+  @IsIn([StorePlatform.APPLE_APP_STORE, StorePlatform.GOOGLE_PLAY_STORE])
+  source: StorePlatform.APPLE_APP_STORE | StorePlatform.GOOGLE_PLAY_STORE;
 }
