@@ -20,8 +20,8 @@ import { AuthGuard } from 'src/guards/auth.guard';
 import { CreateOrderBookLessonDto } from './dto/create-order-book-lesson.dto';
 import { OrderBookLessonPaginationDto } from './dto/order-book-lesson-pagination.dto';
 
-@Controller('order')
-export class OrderController {
+@Controller('order-book-lesson')
+export class OrderBookLessonController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
   @UseGuards(AuthGuard)
