@@ -66,8 +66,6 @@ export class VerifyInAppPurchaseService {
       });
     }
 
-    const storeChargeId = data.orderId;
-
     // Acknowledge (mandatory)
     if (data.acknowledgementState === 0) {
       await axios.post(
@@ -79,10 +77,10 @@ export class VerifyInAppPurchaseService {
 
     return this.createPaidOrder({
       userUid,
-      storeChargeId,
+      storeChargeId: data.orderId,
       storeProductId,
       source: StorePlatform.GOOGLE_PLAY_STORE,
-      receiptUrl: url,
+      rawReceipt: data,
     });
   }
 
@@ -131,14 +129,12 @@ export class VerifyInAppPurchaseService {
       });
     }
 
-    const storeChargeId = receiptInfo.transaction_id;
-
     return this.createPaidOrder({
       userUid: dto.userUid,
-      storeChargeId,
+      storeChargeId: receiptInfo.transaction_id,
       storeProductId: receiptInfo.product_id,
       source: StorePlatform.APPLE_APP_STORE,
-      receiptUrl: 'https://apps.apple.com/account/purchases',
+      rawReceipt: receiptInfo,
     });
   }
 
@@ -148,11 +144,12 @@ export class VerifyInAppPurchaseService {
     storeChargeId: string;
     storeProductId: string;
     source: StorePlatform;
-    receiptUrl: string;
+    rawReceipt: any;
   }) {
     try {
       // Create order (PENDING)
       const payloadNewOrder: CreateOrderAppDto = {
+        storeChargeId: data.storeChargeId,
         userUid: data.userUid,
         source: data.source,
         items: [
@@ -167,8 +164,8 @@ export class VerifyInAppPurchaseService {
       // Mark order as PAID
       const payloadPaidOrder: PaidOrderAppDto = {
         orderId: order.id,
-        storePaymentId: data.storeChargeId,
-        receiptUrl: data.receiptUrl,
+        source: data.source,
+        rawReceipt: data.rawReceipt,
       };
       await this.orderService.markOrderAppAsPaid(payloadPaidOrder);
 

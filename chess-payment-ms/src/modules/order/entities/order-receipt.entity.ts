@@ -3,25 +3,25 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
-  UpdateDateColumn,
   OneToOne,
   JoinColumn,
 } from 'typeorm';
 import { Order } from './order.entity';
+import { StorePlatform } from 'src/enum';
 
 @Entity('order_receipt')
 export class OrderReceipt {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ nullable: false })
-  receiptUrl: string; // Store receipt URL
+  @Column({ type: 'enum', enum: StorePlatform, nullable: false })
+  source: StorePlatform; // also exists on order
+
+  @Column({ type: 'json', nullable: false })
+  rawReceipt: any; // full response or receipt data (SAFE & FUTURE-PROOF)
 
   @CreateDateColumn()
   createdAt: Date;
-
-  @UpdateDateColumn({ nullable: true })
-  updatedAt?: Date;
 
   // Relations
   @OneToOne(() => Order, (order) => order.receipt, {

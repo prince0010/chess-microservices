@@ -48,7 +48,7 @@ export class OrderService {
 
   // now this endpoint should be called from verify in app purchase
   async create(dto: CreateOrderAppDto): Promise<Order> {
-    const { userUid } = dto;
+    const { userUid, source, storeChargeId } = dto;
     try {
       // 1- validate items IDS exist on database
       const itemIds = dto.items.map((e) => e.itemId);
@@ -97,10 +97,11 @@ export class OrderService {
 
       // 6- insert on database
       const newOrder = this.orderRepository.create({
+        storeChargeId,
         totalAmount,
         totalItems: totalItems,
         userUid,
-        source: dto.source,
+        source,
         orderItems,
       });
 
@@ -184,13 +185,12 @@ export class OrderService {
   }
 
   async markOrderAppAsFailed(dto: FailedOrderAppDto): Promise<void> {
-    const { orderId, storePaymentId } = dto;
+    const { orderId } = dto;
 
     const order = await this.findOne(orderId);
 
     // Update order
     order.status = OrderStatus.CANCELLED;
-    order.storeChargeId = storePaymentId;
 
     await this.orderRepository.save(order);
 
@@ -207,12 +207,13 @@ export class OrderService {
   }
 
   async markOrderAppAsPaid(dto: PaidOrderAppDto): Promise<void> {
-    const { orderId, storePaymentId, receiptUrl } = dto;
+    const { orderId, source, rawReceipt } = dto;
 
     const order = await this.findOne(orderId);
 
     const newOrderReceipt = this.orderReceiptRepository.create({
-      receiptUrl,
+      rawReceipt,
+      source,
       order,
     });
 
@@ -224,8 +225,6 @@ export class OrderService {
     order.status = OrderStatus.PAID;
     order.paid = true;
     order.paidAt = new Date();
-    order.storeChargeId = storePaymentId;
-    order.receipt = savedReceipt;
 
     const savedOrder = await this.orderRepository.save(order);
 

@@ -1,22 +1,20 @@
-import { IsString, IsUrl, IsUUID } from 'class-validator';
+import { IsEnum, IsNotEmpty, IsString, IsUUID } from 'class-validator';
+import { StorePlatform } from 'src/enum';
 
 export class PaidOrderAppDto {
-  @IsString()
-  storePaymentId: string;
-
   @IsString()
   @IsUUID()
   orderId: string;
 
-  @IsString()
-  @IsUrl()
-  receiptUrl: string;
+  @IsNotEmpty()
+  @IsEnum(StorePlatform)
+  source: StorePlatform;
+
+  @IsNotEmpty()
+  rawReceipt: any;
 }
 
 export class FailedOrderAppDto {
-  @IsString()
-  storePaymentId: string;
-
   @IsString()
   @IsUUID()
   orderId: string;
