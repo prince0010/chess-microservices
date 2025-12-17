@@ -3,3 +3,8 @@ export interface IPaymentSessionStripeResponse {
   successUrl: string;
   url: string;
 }
+
+export interface IPaymentInAppPurchaseResponse {
+  success: boolean;
+  orderId: string;
+}

@@ -14,6 +14,7 @@ import {
   VerifyInAppPurchaseDto,
 } from './dto';
 import { StorePlatform } from 'src/enum';
+import { IPaymentInAppPurchaseResponse } from 'src/interfaces';
 
 @Injectable()
 export class VerifyInAppPurchaseService {
@@ -27,8 +28,10 @@ export class VerifyInAppPurchaseService {
     private readonly orderService: OrderService,
   ) {}
 
-  // ============= Entry point =============
-  async verifyInAppPurchase(dto: VerifyInAppPurchaseDto) {
+  // Entry point
+  async verifyInAppPurchase(
+    dto: VerifyInAppPurchaseDto,
+  ): Promise<IPaymentInAppPurchaseResponse> {
     if (dto.source === StorePlatform.GOOGLE_PLAY_STORE) {
       return this.verifyGoogle(dto);
     }
@@ -44,7 +47,9 @@ export class VerifyInAppPurchaseService {
   }
 
   // ============= GOOGLE =============
-  private async verifyGoogle(dto: VerifyInAppPurchaseDto) {
+  private async verifyGoogle(
+    dto: VerifyInAppPurchaseDto,
+  ): Promise<IPaymentInAppPurchaseResponse> {
     const { storeProductId, serverVerificationData, userUid } = dto;
     const packageName = envs.androidPackageName;
 
@@ -75,7 +80,7 @@ export class VerifyInAppPurchaseService {
       );
     }
 
-    return this.createPaidOrder({
+    return await this.createPaidOrder({
       userUid,
       storeChargeId: data.orderId,
       storeProductId,
@@ -85,7 +90,9 @@ export class VerifyInAppPurchaseService {
   }
 
   // ============= APPLE =============
-  private async verifyApple(dto: VerifyInAppPurchaseDto) {
+  private async verifyApple(
+    dto: VerifyInAppPurchaseDto,
+  ): Promise<IPaymentInAppPurchaseResponse> {
     const payload = {
       'receipt-data': dto.serverVerificationData,
       password: envs.appleInAppPurchaseKey,
@@ -129,7 +136,7 @@ export class VerifyInAppPurchaseService {
       });
     }
 
-    return this.createPaidOrder({
+    return await this.createPaidOrder({
       userUid: dto.userUid,
       storeChargeId: receiptInfo.transaction_id,
       storeProductId: receiptInfo.product_id,
@@ -145,7 +152,7 @@ export class VerifyInAppPurchaseService {
     storeProductId: string;
     source: StorePlatform;
     rawReceipt: any;
-  }) {
+  }): Promise<IPaymentInAppPurchaseResponse> {
     try {
       // Create order (PENDING)
       const payloadNewOrder: CreateOrderAppDto = {

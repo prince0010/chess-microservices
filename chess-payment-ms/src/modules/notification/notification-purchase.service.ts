@@ -6,6 +6,7 @@ import { NotificationPurchase } from './entities/notification-purchase.entity';
 import { Order } from '../order/entities/order.entity';
 
 import { CreateNotificationPurchaseDto } from './dto/create-notification-purchase.dto';
+import { FindNotificationPurchaseByOrderDto } from './dto/find-notification-purchase-by-order.dto';
 import { NotificationDestination } from 'src/enum';
 
 @Injectable()
@@ -56,6 +57,38 @@ export class NotificationPurchaseService {
       // important to add order with orderItems and with items relation
       const notificationResponse = {
         ...unreadNotification,
+        order: orderWithItems,
+      };
+
+      return { notification: notificationResponse };
+    } catch (error) {
+      throw new RpcException({
+        message: error.message,
+        status: 400,
+      });
+    }
+  }
+
+  async findOneByOrderId(dto: FindNotificationPurchaseByOrderDto) {
+    const { userUid, orderId } = dto;
+
+    try {
+      const notification = await this.notificationPurchaseRepository.findOne({
+        where: { userUid, orderId },
+      });
+
+      if (!notification) {
+        return { notification: null };
+      }
+
+      // add order to notification
+      const orderWithItems = await this.orderRepository.findOne({
+        where: { id: orderId },
+        relations: { orderItems: { item: true } },
+      });
+
+      const notificationResponse = {
+        ...notification,
         order: orderWithItems,
       };
 
