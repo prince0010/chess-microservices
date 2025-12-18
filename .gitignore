@@ -10,3 +10,6 @@ chess-gateway/uploads/*
 
 # redis to cache data volume
 redis-data/
+
+# important files
+AuthKey_GX75H4CRP6.p8

@@ -21,7 +21,11 @@ interface EnvVars {
   // In app purchase
   GOOGLE_SERVICE_ACCOUNT_JSON: string;
   ANDROID_PACKAGE_NAME: string;
-  APPLE_IN_APP_PURCHASE_KEY: string;
+  APPLE_BASE_URL_API: string;
+  APPLE_ISSUER_ID: string;
+  APPLE_KEY_ID: string;
+  APPLE_BUNDLE_ID: string;
+  APPLE_PRIVATE_KEY: string;
 }
 
 const envsSchema = joi
@@ -45,7 +49,11 @@ const envsSchema = joi
     // In app purchase
     GOOGLE_SERVICE_ACCOUNT_JSON: joi.string().required(),
     ANDROID_PACKAGE_NAME: joi.string().required(),
-    APPLE_IN_APP_PURCHASE_KEY: joi.string().required(),
+    APPLE_BASE_URL_API: joi.string().required(),
+    APPLE_ISSUER_ID: joi.string().required(),
+    APPLE_KEY_ID: joi.string().required(),
+    APPLE_BUNDLE_ID: joi.string().required(),
+    APPLE_PRIVATE_KEY: joi.string().required(),
   })
   .unknown(true);
 
@@ -80,5 +88,9 @@ export const envs = {
   // In app purchase
   googleServiceAccountJson: envVars.GOOGLE_SERVICE_ACCOUNT_JSON,
   androidPackageName: envVars.ANDROID_PACKAGE_NAME,
-  appleInAppPurchaseKey: envVars.APPLE_IN_APP_PURCHASE_KEY,
+  appleBaseUrlApi: envVars.APPLE_BASE_URL_API,
+  appleIssuerId: envVars.APPLE_ISSUER_ID,
+  appleKeyId: envVars.APPLE_KEY_ID,
+  appleBundleId: envVars.APPLE_BUNDLE_ID,
+  applePrivateKey: envVars.APPLE_PRIVATE_KEY,
 };

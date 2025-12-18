@@ -1,3 +1,4 @@
+// import * as jose from 'jose';
 import axios from 'axios';
 import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
@@ -15,6 +16,11 @@ import {
 } from './dto';
 import { StorePlatform } from 'src/enum';
 import { IPaymentInAppPurchaseResponse } from 'src/interfaces';
+
+const loadJose = async () => {
+  // We use eval('import(...)') so the TS compiler doesn't turn it into require()
+  return eval(`import('jose')`) as Promise<typeof import('jose')>;
+};
 
 @Injectable()
 export class VerifyInAppPurchaseService {
@@ -93,56 +99,79 @@ export class VerifyInAppPurchaseService {
   private async verifyApple(
     dto: VerifyInAppPurchaseDto,
   ): Promise<IPaymentInAppPurchaseResponse> {
-    const payload = {
-      'receipt-data': dto.serverVerificationData,
-      password: envs.appleInAppPurchaseKey,
-      'exclude-old-transactions': true,
-    };
+    try {
+      const jose = await loadJose();
 
-    let response = await axios.post(
-      'https://buy.itunes.apple.com/verifyReceipt',
-      payload,
-    );
+      // 1. Decode the JWS token sent by Flutter - the serverVerificationData IS the JWS string
+      const decoded: any = jose.decodeJwt(dto.serverVerificationData);
 
-    if (response.data.status === 21007) {
-      response = await axios.post(
-        'https://sandbox.itunes.apple.com/verifyReceipt',
-        payload,
-      );
-    }
+      // 2. Validate the data from the decoded payload - Apple JWS payload fields: 'transactionId', 'productId', etc.
+      if (!decoded || !decoded.transactionId) {
+        throw new RpcException({
+          status: 400,
+          message: 'APPLE_JWS_INVALID_PAYLOAD',
+        });
+      }
+      const transactionId = decoded.transactionId;
 
-    if (response.data.status !== 0) {
+      const adminToken = await this.generateAppleAdminToken(jose);
+      const url = `${envs.appleBaseUrlApi}/inApps/v1/transactions/${transactionId}`;
+      const appleBundleId = envs.appleBundleId;
+
+      const response = await axios.get(url, {
+        headers: { Authorization: `Bearer ${adminToken}` },
+      });
+
+      // Apple returns a SIGNED JWS. We decode the verified response.
+      const signedTransaction = response.data.signedTransactionInfo;
+      const verifiedData: any = jose.decodeJwt(signedTransaction);
+
+      // Final Verification Logic
+      if (verifiedData.bundleId !== appleBundleId) {
+        throw new RpcException({ status: 403, message: 'BUNDLE_ID_MISMATCH' });
+      }
+
+      if (verifiedData.productId !== dto.storeProductId) {
+        throw new RpcException({ status: 400, message: 'PRODUCT_ID_MISMATCH' });
+      }
+
+      // If it reaches here, it is a 100% verified purchase from Apple's own database
+      return await this.createPaidOrder({
+        userUid: dto.userUid,
+        storeChargeId: verifiedData.transactionId,
+        storeProductId: verifiedData.productId,
+        source: StorePlatform.APPLE_APP_STORE,
+        rawReceipt: verifiedData,
+      });
+    } catch (error) {
+      console.error('Apple Verification Error:', error);
       throw new RpcException({
         status: 400,
-        message: 'APPLE_RECEIPT_INVALID',
+        message: error.message || 'APPLE_VERIFICATION_FAILED',
       });
     }
+  }
 
-    const receiptInfo =
-      response.data.latest_receipt_info?.[0] ??
-      response.data.receipt?.in_app?.[0];
+  private async generateAppleAdminToken(jose: any) {
+    const APPLE_KEY_ID = envs.appleKeyId;
+    const APPLE_ISSUER_ID = envs.appleIssuerId;
+    const APPLE_BUNDLE_ID = envs.appleBundleId;
 
-    if (!receiptInfo) {
-      throw new RpcException({
-        status: 400,
-        message: 'APPLE_NO_RECEIPT_FOUND',
-      });
-    }
+    const privateKeyString = envs.applePrivateKey.replace(/\\n/g, '\n');
+    const ecPrivateKey = await jose.importPKCS8(privateKeyString, 'ES256');
 
-    if (receiptInfo.product_id !== dto.storeProductId) {
-      throw new RpcException({
-        status: 400,
-        message: 'APPLE_PRODUCT_MISMATCH',
-      });
-    }
-
-    return await this.createPaidOrder({
-      userUid: dto.userUid,
-      storeChargeId: receiptInfo.transaction_id,
-      storeProductId: receiptInfo.product_id,
-      source: StorePlatform.APPLE_APP_STORE,
-      rawReceipt: receiptInfo,
-    });
+    return new jose.SignJWT({})
+      .setProtectedHeader({
+        alg: 'ES256',
+        kid: APPLE_KEY_ID,
+        typ: 'JWT',
+      })
+      .setIssuer(APPLE_ISSUER_ID)
+      .setIssuedAt()
+      .setExpirationTime('5m') // Token lasts 5 minutes
+      .setAudience('appstoreconnect-v1')
+      .setPayload({ bid: APPLE_BUNDLE_ID })
+      .sign(ecPrivateKey);
   }
 
   // ================= ORDER CREATION =================

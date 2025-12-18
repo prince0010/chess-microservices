@@ -19,6 +19,7 @@ export class OrderAppController {
       ...dto,
       userUid: +req.user.uid,
     };
+
     return this.client.send('order.verify.iap', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
