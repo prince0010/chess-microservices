@@ -18,8 +18,9 @@ import { StorePlatform } from 'src/enum';
 import { IPaymentInAppPurchaseResponse } from 'src/interfaces';
 
 const loadJose = async () => {
-  // We use eval('import(...)') so the TS compiler doesn't turn it into require()
-  return eval(`import('jose')`) as Promise<typeof import('jose')>;
+  const module = await eval(`import('jose')`);
+  // If the module has a 'default' property, use it, otherwise use the module itself
+  return module.default ? module.default : module;
 };
 
 @Injectable()
@@ -101,50 +102,93 @@ export class VerifyInAppPurchaseService {
   ): Promise<IPaymentInAppPurchaseResponse> {
     try {
       const jose = await loadJose();
+      const APPLE_BUNDLE_ID = envs.appleBundleId;
 
-      // 1. Decode the JWS token sent by Flutter - the serverVerificationData IS the JWS string
-      const decoded: any = jose.decodeJwt(dto.serverVerificationData);
+      // Decode the JWS token sent by Flutter - the serverVerificationData IS the JWS string
+      // const decoded: any = jose.decodeJwt(dto.serverVerificationData);
+      /*
+        {
+          transactionId: '2000001085307874',
+          originalTransactionId: '2000001085307874',
+          bundleId: 'com.wechess.app',
+          productId: 'com.wechess.unlock.lifetime',
+          purchaseDate: 1766038941000,
+          originalPurchaseDate: 1766038941000,
+          quantity: 1,
+          type: 'Non-Consumable',
+          deviceVerification: 'zUxWL49n3ewoDEak2RjNKxWIkV3QC9pZi3K45xyU0x59yBhGS7htloVGRhWf5rUk',
+          deviceVerificationNonce: 'a8d3648e-4020-4782-91a1-eac6832a9112',
+          inAppOwnershipType: 'PURCHASED',
+          signedDate: 1766073401246,
+          environment: 'Sandbox',
+          transactionReason: 'PURCHASE',
+          storefront: 'CRI',
+          storefrontId: '143495',
+          price: 74900,
+          currency: 'USD',
+          appTransactionId: '705117304493438845'
+        }
+      */
 
-      // 2. Validate the data from the decoded payload - Apple JWS payload fields: 'transactionId', 'productId', etc.
-      if (!decoded || !decoded.transactionId) {
+      // 1. Verify JWS signature
+      const { payload }: any = await jose.jwtVerify(
+        dto.serverVerificationData,
+        async (header) => {
+          if (!header.x5c?.length) {
+            throw new RpcException({
+              status: 400,
+              message: 'APPLE_JWS_MISSING_CERT',
+            });
+          }
+
+          return jose.importX509(
+            `-----BEGIN CERTIFICATE-----\n${header.x5c[0]}\n-----END CERTIFICATE-----`,
+            'ES256',
+          );
+        },
+      );
+
+      // 2. Validate transaction identifiers
+      if (!payload.originalTransactionId) {
         throw new RpcException({
           status: 400,
           message: 'APPLE_JWS_INVALID_PAYLOAD',
         });
       }
-      const transactionId = decoded.transactionId;
 
-      const adminToken = await this.generateAppleAdminToken(jose);
-      const url = `${envs.appleBaseUrlApi}/inApps/v1/transactions/${transactionId}`;
-      const appleBundleId = envs.appleBundleId;
-
-      const response = await axios.get(url, {
-        headers: { Authorization: `Bearer ${adminToken}` },
-      });
-
-      // Apple returns a SIGNED JWS. We decode the verified response.
-      const signedTransaction = response.data.signedTransactionInfo;
-      const verifiedData: any = jose.decodeJwt(signedTransaction);
-
-      // Final Verification Logic
-      if (verifiedData.bundleId !== appleBundleId) {
-        throw new RpcException({ status: 403, message: 'BUNDLE_ID_MISMATCH' });
+      // 3. Bundle validation
+      if (payload.bundleId !== APPLE_BUNDLE_ID) {
+        throw new RpcException({
+          status: 403,
+          message: 'BUNDLE_ID_MISMATCH',
+        });
       }
 
-      if (verifiedData.productId !== dto.storeProductId) {
-        throw new RpcException({ status: 400, message: 'PRODUCT_ID_MISMATCH' });
+      // 4. Product validation
+      if (payload.productId !== dto.storeProductId) {
+        throw new RpcException({
+          status: 400,
+          message: 'PRODUCT_ID_MISMATCH',
+        });
       }
 
-      // If it reaches here, it is a 100% verified purchase from Apple's own database
+      // 5. Ownership validation
+      if (payload.inAppOwnershipType !== 'PURCHASED') {
+        throw new RpcException({
+          status: 400,
+          message: 'NOT_PURCHASED',
+        });
+      }
+
+      // ✅ Verified purchase — create order
       return await this.createPaidOrder({
         userUid: dto.userUid,
-        storeChargeId: verifiedData.transactionId,
-        storeProductId: verifiedData.productId,
+        storeChargeId: payload.originalTransactionId ?? payload.transactionId,
+        storeProductId: payload.productId,
         source: StorePlatform.APPLE_APP_STORE,
-        rawReceipt: verifiedData,
+        rawReceipt: payload,
       });
     } catch (error) {
-      console.error('Apple Verification Error:', error);
       throw new RpcException({
         status: 400,
         message: error.message || 'APPLE_VERIFICATION_FAILED',
@@ -152,27 +196,27 @@ export class VerifyInAppPurchaseService {
     }
   }
 
-  private async generateAppleAdminToken(jose: any) {
-    const APPLE_KEY_ID = envs.appleKeyId;
-    const APPLE_ISSUER_ID = envs.appleIssuerId;
-    const APPLE_BUNDLE_ID = envs.appleBundleId;
+  // in case in future is needed generate JWT to use APPLE APP STORE CONNECT API
+  // private async generateAppleAdminToken(jose: any) {
+  //   const APPLE_KEY_ID = envs.appleKeyId;
+  //   const APPLE_ISSUER_ID = envs.appleIssuerId;
+  //   const APPLE_BUNDLE_ID = envs.appleBundleId;
 
-    const privateKeyString = envs.applePrivateKey.replace(/\\n/g, '\n');
-    const ecPrivateKey = await jose.importPKCS8(privateKeyString, 'ES256');
+  //   const privateKeyString = envs.applePrivateKey.replace(/\\n/g, '\n');
+  //   const ecPrivateKey = await jose.importPKCS8(privateKeyString, 'ES256');
 
-    return new jose.SignJWT({})
-      .setProtectedHeader({
-        alg: 'ES256',
-        kid: APPLE_KEY_ID,
-        typ: 'JWT',
-      })
-      .setIssuer(APPLE_ISSUER_ID)
-      .setIssuedAt()
-      .setExpirationTime('5m') // Token lasts 5 minutes
-      .setAudience('appstoreconnect-v1')
-      .setPayload({ bid: APPLE_BUNDLE_ID })
-      .sign(ecPrivateKey);
-  }
+  //   return new jose.SignJWT({ bid: APPLE_BUNDLE_ID })
+  //     .setProtectedHeader({
+  //       alg: 'ES256',
+  //       kid: APPLE_KEY_ID,
+  //       typ: 'JWT',
+  //     })
+  //     .setIssuer(APPLE_ISSUER_ID)
+  //     .setIssuedAt()
+  //     .setExpirationTime('5m') // Token lasts 5 minutes
+  //     .setAudience('appstoreconnect-v1')
+  //     .sign(ecPrivateKey);
+  // }
 
   // ================= ORDER CREATION =================
   private async createPaidOrder(data: {
@@ -203,6 +247,7 @@ export class VerifyInAppPurchaseService {
         source: data.source,
         rawReceipt: data.rawReceipt,
       };
+
       await this.orderService.markOrderAppAsPaid(payloadPaidOrder);
 
       return {
