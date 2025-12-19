@@ -1,3 +1,5 @@
+import { Item } from 'src/modules/item/entities/item.entity';
+
 export interface IPaymentSessionStripeResponse {
   cancelUrl: string;
   successUrl: string;
@@ -6,5 +8,7 @@ export interface IPaymentSessionStripeResponse {
 
 export interface IPaymentInAppPurchaseResponse {
   success: boolean;
-  orderId: string;
+  orderId?: string;
+  item?: Item;
+  errorMessage?: string;
 }

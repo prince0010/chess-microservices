@@ -7,7 +7,6 @@ import { VerifyInAppPurchaseService } from './verify-in-app-purchase.service';
 import {
   FailedOrderAppDto,
   OrderAppPaginationDto,
-  PaidOrderAppDto,
   VerifyInAppPurchaseDto,
 } from './dto';
 
@@ -20,8 +19,8 @@ export class OrdersController {
 
   // verify in app purchase with google or apple
   @MessagePattern('order.verify.iap')
-  verifyInAppPurchase(@Payload() dto: VerifyInAppPurchaseDto) {
-    return this.verifyInAppPurchaseService.verifyInAppPurchase(dto);
+  async verifyInAppPurchase(@Payload() dto: VerifyInAppPurchaseDto) {
+    return await this.verifyInAppPurchaseService.verifyInAppPurchase(dto);
   }
 
   @MessagePattern('order.find.all')
@@ -32,12 +31,6 @@ export class OrdersController {
   @MessagePattern('order.find.one')
   findOne(@Payload('id') id: string) {
     return this.orderService.findOne(id);
-  }
-
-  // from payment service webhook endpoint to update status as paid
-  @EventPattern('order.payment.succeeded')
-  paidOrder(@Payload() dto: PaidOrderAppDto) {
-    return this.orderService.markOrderAppAsPaid(dto);
   }
 
   // from payment service webhook endpoint to update status as failed

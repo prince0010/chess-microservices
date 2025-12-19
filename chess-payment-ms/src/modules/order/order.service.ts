@@ -207,10 +207,8 @@ export class OrderService {
     // await this.notificationPurchaseService.create(dataNotification);
   }
 
-  async markOrderAppAsPaid(dto: PaidOrderAppDto): Promise<void> {
+  async markOrderAppAsPaid(dto: PaidOrderAppDto, order: Order): Promise<void> {
     const { orderId, source, rawReceipt } = dto;
-
-    const order = await this.findOne(orderId);
 
     const newOrderReceipt = this.orderReceiptRepository.create({
       rawReceipt,
@@ -219,8 +217,7 @@ export class OrderService {
     });
 
     // Save receipt first
-    const savedReceipt =
-      await this.orderReceiptRepository.save(newOrderReceipt);
+    await this.orderReceiptRepository.save(newOrderReceipt);
 
     // Update order
     order.status = OrderStatus.PAID;

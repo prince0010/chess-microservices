@@ -14,7 +14,7 @@ import {
   PaidOrderAppDto,
   VerifyInAppPurchaseDto,
 } from './dto';
-import { StorePlatform } from 'src/enum';
+import { IapStoreProductId, StorePlatform } from 'src/enum';
 import { IPaymentInAppPurchaseResponse } from 'src/interfaces';
 
 const loadJose = async () => {
@@ -39,18 +39,22 @@ export class VerifyInAppPurchaseService {
   async verifyInAppPurchase(
     dto: VerifyInAppPurchaseDto,
   ): Promise<IPaymentInAppPurchaseResponse> {
-    if (dto.source === StorePlatform.GOOGLE_PLAY_STORE) {
-      return this.verifyGoogle(dto);
-    }
+    try {
+      if (dto.source === StorePlatform.GOOGLE_PLAY_STORE) {
+        return await this.verifyGoogle(dto);
+      }
 
-    if (dto.source === StorePlatform.APPLE_APP_STORE) {
-      return this.verifyApple(dto);
+      if (dto.source === StorePlatform.APPLE_APP_STORE) {
+        return await this.verifyApple(dto);
+      }
+    } catch (error) {
+      return {
+        success: false,
+        orderId: null,
+        item: null,
+        errorMessage: 'UNHANDLED_ERROR_VERIFYING_IN_APP_PURCHASE',
+      };
     }
-
-    throw new RpcException({
-      status: 400,
-      message: 'INVALID_IAP_SOURCE',
-    });
   }
 
   // ============= GOOGLE =============
@@ -150,40 +154,48 @@ export class VerifyInAppPurchaseService {
 
       // 2. Validate transaction identifiers
       if (!payload.originalTransactionId) {
-        throw new RpcException({
-          status: 400,
-          message: 'APPLE_JWS_INVALID_PAYLOAD',
-        });
+        return {
+          success: false,
+          orderId: null,
+          item: null,
+          errorMessage: 'APPLE_JWS_INVALID_ORIGINAL_TRANSACTION_ID',
+        };
       }
 
       // 3. Bundle validation
       if (payload.bundleId !== APPLE_BUNDLE_ID) {
-        throw new RpcException({
-          status: 403,
-          message: 'BUNDLE_ID_MISMATCH',
-        });
+        return {
+          success: false,
+          orderId: null,
+          item: null,
+          errorMessage: 'BUNDLE_ID_MISMATCH',
+        };
       }
 
       // 4. Product validation
       if (payload.productId !== dto.storeProductId) {
-        throw new RpcException({
-          status: 400,
-          message: 'PRODUCT_ID_MISMATCH',
-        });
+        return {
+          success: false,
+          orderId: null,
+          item: null,
+          errorMessage: 'PRODUCT_ID_MISMATCH',
+        };
       }
 
       // 5. Ownership validation
       if (payload.inAppOwnershipType !== 'PURCHASED') {
-        throw new RpcException({
-          status: 400,
-          message: 'NOT_PURCHASED',
-        });
+        return {
+          success: false,
+          orderId: null,
+          item: null,
+          errorMessage: 'IN_APP_OWNERSHIP_TYPE_NOT_PURCHASED',
+        };
       }
 
-      // ✅ Verified purchase — create order
+      // Verified purchase — create order
       return await this.createPaidOrder({
         userUid: dto.userUid,
-        storeChargeId: payload.originalTransactionId ?? payload.transactionId,
+        storeChargeId: payload.transactionId,
         storeProductId: payload.productId,
         source: StorePlatform.APPLE_APP_STORE,
         rawReceipt: payload,
@@ -227,6 +239,37 @@ export class VerifyInAppPurchaseService {
     rawReceipt: any;
   }): Promise<IPaymentInAppPurchaseResponse> {
     try {
+      // validate itemId
+      const item = await this.resolveItemId(data.storeProductId);
+
+      if (!item) {
+        return {
+          success: false,
+          orderId: null,
+          item: null,
+          errorMessage: 'ITEM_ID_NOT_FOUND',
+        };
+      }
+
+      // validate duplicate purchase for unlock levels for lifetime
+      if (data.storeProductId === IapStoreProductId.UNLOCK_LIFETIME) {
+        const subscriptionLifetime = await firstValueFrom(
+          this.client.send(
+            'paymentSubscription.levelsForLifeTime.active',
+            data.userUid,
+          ),
+        ).catch(() => false);
+
+        if (subscriptionLifetime) {
+          return {
+            success: false,
+            orderId: null,
+            item: null,
+            errorMessage: 'UNLOCK_ALL_LEVELS_FOR_LIFE_TIME_ALREADY_PURCHASED',
+          };
+        }
+      }
+
       // Create order (PENDING)
       const payloadNewOrder: CreateOrderAppDto = {
         storeChargeId: data.storeChargeId,
@@ -234,11 +277,12 @@ export class VerifyInAppPurchaseService {
         source: data.source,
         items: [
           {
-            itemId: await this.resolveItemId(data.storeProductId),
+            itemId: item.id,
             quantity: 1,
           },
         ],
       };
+
       const order = await this.orderService.create(payloadNewOrder);
 
       // Mark order as PAID
@@ -248,11 +292,12 @@ export class VerifyInAppPurchaseService {
         rawReceipt: data.rawReceipt,
       };
 
-      await this.orderService.markOrderAppAsPaid(payloadPaidOrder);
+      await this.orderService.markOrderAppAsPaid(payloadPaidOrder, order);
 
       return {
         success: true,
         orderId: order.id,
+        item: order.orderItems[0].item,
       };
     } catch (error) {
       throw new RpcException({
@@ -262,18 +307,15 @@ export class VerifyInAppPurchaseService {
     }
   }
 
-  private async resolveItemId(storeProductId: string): Promise<number> {
+  private async resolveItemId(storeProductId: string): Promise<Item | null> {
     const item: Item = await firstValueFrom(
       this.client.send('item.find.storeProductId', storeProductId),
     );
 
     if (!item) {
-      throw new RpcException({
-        status: 400,
-        message: 'ITEM_NOT_FOUND',
-      });
+      return null;
     }
 
-    return item.id;
+    return item;
   }
 }
