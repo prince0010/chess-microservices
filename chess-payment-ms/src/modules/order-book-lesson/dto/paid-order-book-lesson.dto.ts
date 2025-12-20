@@ -1,23 +1,23 @@
 import { IsString, IsUrl, IsUUID } from 'class-validator';
 
-export class PaidOrderDto {
+export class PaidOrderBookLessonDto {
   @IsString()
   stripePaymentId: string;
 
   @IsString()
   @IsUUID()
-  orderId: string;
+  orderBookLessonId: string;
 
   @IsString()
   @IsUrl()
   receiptUrl: string;
 }
 
-export class FailedOrderDto {
+export class FailedOrderBookLessonDto {
   @IsString()
   stripePaymentId: string;
 
   @IsString()
   @IsUUID()
-  orderId: string;
+  orderBookLessonId: string;
 }

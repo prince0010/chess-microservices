@@ -16,3 +16,8 @@ export enum NotificationPurchaseType {
   PAYMENT_FAILED = 'PAYMENT_FAILED',
   INSUFFICIENT_BALANCE = 'INSUFFICIENT_BALANCE',
 }
+
+export enum NotificationDestination {
+  APP = 'APP',
+  WEBSITE = 'WEBSITE',
+}

@@ -1,4 +1,7 @@
-import { NotificationPurchaseType } from '../../../enum/notification-purchase.enum';
+import {
+  NotificationDestination,
+  NotificationPurchaseType,
+} from '../../../enum/notification-purchase.enum';
 import {
   Column,
   CreateDateColumn,
@@ -15,8 +18,11 @@ export class NotificationPurchase {
   @Column({ type: 'int', nullable: false })
   userUid: number; // reference to Auth user
 
-  @Column({ type: 'enum', enum: NotificationPurchaseType })
+  @Column({ type: 'enum', enum: NotificationPurchaseType, nullable: false })
   type: NotificationPurchaseType;
+
+  @Column({ type: 'enum', enum: NotificationDestination, nullable: false })
+  destination: NotificationDestination; // APP | WEBSITE
 
   @Column({ nullable: false })
   title: string; // needs to match frontend translation key for title

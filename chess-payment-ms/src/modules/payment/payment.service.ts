@@ -6,7 +6,7 @@ import Stripe from 'stripe';
 import { envs, NATS_SERVICE } from 'src/config';
 
 import { PaymentSessionDto } from './dto/payment-session.dto';
-import { IPaymentSessionResponse } from 'src/interfaces';
+import { IPaymentSessionStripeResponse } from 'src/interfaces';
 
 @Injectable()
 export class PaymentService {
@@ -16,7 +16,7 @@ export class PaymentService {
 
   async createPaymentSession(
     paymentSessionDto: PaymentSessionDto,
-  ): Promise<IPaymentSessionResponse> {
+  ): Promise<IPaymentSessionStripeResponse> {
     const { currency, items, orderId } = paymentSessionDto;
 
     const lineItems = items.map((item) => ({
@@ -77,7 +77,7 @@ export class PaymentService {
         };
 
         // On this point notify to order that payment was successful
-        this.client.emit('order.payment.succeeded', payload);
+        this.client.emit('orderBookLesson.payment.succeeded', payload);
         break;
       case 'charge.failed':
         const failedPayment = event.data.object;
@@ -88,7 +88,7 @@ export class PaymentService {
         };
 
         // On this point notify to order that payment failed
-        this.client.emit('order.payment.failed', failedPayload);
+        this.client.emit('orderBookLesson.payment.failed', failedPayload);
         break;
       case 'payment_method.attached':
         const paymentMethod = event.data.object;

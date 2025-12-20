@@ -1,6 +1,5 @@
-import { Controller, Inject, Post, Req, Res } from '@nestjs/common';
+import { Controller, Inject } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
-import { Request, Response } from 'express';
 
 import { NATS_SERVICE } from 'src/config';
 

@@ -2,31 +2,30 @@ import { Controller } from '@nestjs/common';
 import { EventPattern, MessagePattern, Payload } from '@nestjs/microservices';
 
 import { OrderService } from './order.service';
+import { VerifyInAppPurchaseService } from './verify-in-app-purchase.service';
 
-import { CreateOrderDto } from './dto/create-order.dto';
-import { OrderPaginationDto } from './dto/order-pagination.dto';
-import { FailedOrderDto, PaidOrderDto } from './dto/paid-order.dto';
+import {
+  FailedOrderAppDto,
+  OrderAppPaginationDto,
+  VerifyInAppPurchaseDto,
+} from './dto';
 
 @Controller()
 export class OrdersController {
-  constructor(private readonly orderService: OrderService) {}
+  constructor(
+    private readonly orderService: OrderService,
+    private readonly verifyInAppPurchaseService: VerifyInAppPurchaseService,
+  ) {}
 
-  // first and main endpoint
-  @MessagePattern('order.payment.create')
-  async createPaymentSession(@Payload() createOrderDto: CreateOrderDto) {
-    const order = await this.orderService.create(createOrderDto);
-
-    const paymentSession = await this.orderService.createPaymentSession(order);
-
-    return {
-      order,
-      paymentSession,
-    };
+  // verify in app purchase with google or apple
+  @MessagePattern('order.verify.iap')
+  async verifyInAppPurchase(@Payload() dto: VerifyInAppPurchaseDto) {
+    return await this.verifyInAppPurchaseService.verifyInAppPurchase(dto);
   }
 
   @MessagePattern('order.find.all')
-  findAll(@Payload() orderPaginationDto: OrderPaginationDto) {
-    return this.orderService.findAll(orderPaginationDto);
+  findAll(@Payload() dto: OrderAppPaginationDto) {
+    return this.orderService.findAll(dto);
   }
 
   @MessagePattern('order.find.one')
@@ -34,15 +33,9 @@ export class OrdersController {
     return this.orderService.findOne(id);
   }
 
-  // from payment service webhook endpoint to update status as paid
-  @EventPattern('order.payment.succeeded')
-  paidOrder(@Payload() paidOrderDto: PaidOrderDto) {
-    return this.orderService.markOrderAsPaid(paidOrderDto);
-  }
-
   // from payment service webhook endpoint to update status as failed
   @EventPattern('order.payment.failed')
-  failedOrder(@Payload() failedOrderDto: FailedOrderDto) {
-    return this.orderService.markOrderAsFailed(failedOrderDto);
+  failedOrder(@Payload() dto: FailedOrderAppDto) {
+    return this.orderService.markOrderAppAsFailed(dto);
   }
 }

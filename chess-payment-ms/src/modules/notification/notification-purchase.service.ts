@@ -6,6 +6,8 @@ import { NotificationPurchase } from './entities/notification-purchase.entity';
 import { Order } from '../order/entities/order.entity';
 
 import { CreateNotificationPurchaseDto } from './dto/create-notification-purchase.dto';
+import { FindNotificationPurchaseByOrderDto } from './dto/find-notification-purchase-by-order.dto';
+import { NotificationDestination } from 'src/enum';
 
 @Injectable()
 export class NotificationPurchaseService {
@@ -19,17 +21,16 @@ export class NotificationPurchaseService {
     private readonly orderRepository: Repository<Order>,
   ) {}
 
-  async create(
-    createNotificationPurchaseDto: CreateNotificationPurchaseDto,
-  ): Promise<void> {
+  async create(dto: CreateNotificationPurchaseDto): Promise<void> {
     const newNotification = this.notificationPurchaseRepository.create({
-      ...createNotificationPurchaseDto,
+      ...dto,
+      isRead: dto.destination === NotificationDestination.APP, // changeMe! when app requires create inbox notifications list on flutter app
     });
 
     await this.notificationPurchaseRepository.save(newNotification);
   }
 
-  // this endpoint will be called many times from frontend poll
+  // this endpoint will be called many times from website poll
   // requests to know when a payment session by stripe hook was caught
   async findOne(userUid: number) {
     try {
@@ -56,6 +57,38 @@ export class NotificationPurchaseService {
       // important to add order with orderItems and with items relation
       const notificationResponse = {
         ...unreadNotification,
+        order: orderWithItems,
+      };
+
+      return { notification: notificationResponse };
+    } catch (error) {
+      throw new RpcException({
+        message: error.message,
+        status: 400,
+      });
+    }
+  }
+
+  async findOneByOrderId(dto: FindNotificationPurchaseByOrderDto) {
+    const { userUid, orderId } = dto;
+
+    try {
+      const notification = await this.notificationPurchaseRepository.findOne({
+        where: { userUid, orderId },
+      });
+
+      if (!notification) {
+        return { notification: null };
+      }
+
+      // add order to notification
+      const orderWithItems = await this.orderRepository.findOne({
+        where: { id: orderId },
+        relations: { orderItems: { item: true } },
+      });
+
+      const notificationResponse = {
+        ...notification,
         order: orderWithItems,
       };
 

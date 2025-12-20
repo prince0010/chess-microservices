@@ -10,7 +10,7 @@ import {
 
 import { OrderItem } from './order-item.entity';
 import { OrderReceipt } from './order-receipt.entity';
-import { OrderStatus } from 'src/enum';
+import { OrderStatus, StorePlatform } from 'src/enum';
 
 @Entity('order')
 export class Order {
@@ -23,12 +23,14 @@ export class Order {
   @Column({ type: 'int', nullable: false })
   totalItems: number;
 
-  @Column({ nullable: true, default: null })
-  stripeChargeId?: string; // when stripe receive the payment and return an id
+  @Column({ type: 'enum', enum: StorePlatform, nullable: false })
+  source: StorePlatform; // app_store || play_store
 
-  // in the app always exists userUid but maybe in website not user authenticated
-  @Column({ type: 'int', nullable: true, default: null })
-  userUid?: number; // auth reference with column UID
+  @Column({ nullable: false })
+  storeChargeId: string; // for both apple and google
+
+  @Column({ type: 'int', nullable: false })
+  userUid: number; // auth reference with column UID
 
   @Column({ length: 32, nullable: false, default: OrderStatus.PENDING })
   status: string;

@@ -1,4 +1,9 @@
-import { ItemDescription, ItemPackage, ItemType } from 'src/enum';
+import {
+  IapStoreProductId,
+  ItemDescription,
+  ItemPackage,
+  ItemType,
+} from 'src/enum';
 import { IItemSeed } from 'src/interfaces';
 
 // List Packages
@@ -14,6 +19,7 @@ export const listItems: IItemSeed[] = [
     subscriptionTier: null,
     durationDays: null,
     isActive: true,
+    storeProductId: IapStoreProductId.PANDA_1M,
   },
 
   // Levels Unlock
@@ -27,6 +33,7 @@ export const listItems: IItemSeed[] = [
     durationDays: 30,
     subscriptionTier: null,
     isActive: true,
+    storeProductId: IapStoreProductId.UNLOCK_30DAYS,
   },
   {
     name: ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME,
@@ -38,5 +45,6 @@ export const listItems: IItemSeed[] = [
     durationDays: 100 * 365,
     subscriptionTier: null,
     isActive: true,
+    storeProductId: IapStoreProductId.UNLOCK_LIFETIME,
   },
 ];

@@ -17,21 +17,21 @@ import { NATS_SERVICE } from 'src/config';
 import { AdminGuard } from 'src/guards/admin.guard';
 import { AuthGuard } from 'src/guards/auth.guard';
 
-import { CreateOrderDto } from './dto/create-order.dto';
-import { OrderPaginationDto } from './dto/order-pagination.dto';
+import { CreateOrderBookLessonDto } from './dto/create-order-book-lesson.dto';
+import { OrderBookLessonPaginationDto } from './dto/order-book-lesson-pagination.dto';
 
-@Controller('order')
-export class OrderController {
+@Controller('order-book-lesson')
+export class OrderBookLessonController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
   @UseGuards(AuthGuard)
   @Post('/create-session')
-  create(@Body() createOrderDto: CreateOrderDto, @Req() req: any) {
+  create(@Body() dto: CreateOrderBookLessonDto, @Req() req: any) {
     const payload = {
-      ...createOrderDto,
+      ...dto,
       userUid: +req.user.uid,
     };
-    return this.client.send('order.payment.create', payload).pipe(
+    return this.client.send('orderBookLesson.payment.create', payload).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
@@ -40,8 +40,8 @@ export class OrderController {
 
   @UseGuards(AdminGuard)
   @Get('/')
-  findAll(@Query() orderPaginationDto: OrderPaginationDto) {
-    return this.client.send('order.find.all', orderPaginationDto).pipe(
+  findAll(@Query() dto: OrderBookLessonPaginationDto) {
+    return this.client.send('orderBookLesson.find.all', dto).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),
@@ -51,7 +51,7 @@ export class OrderController {
   @UseGuards(AdminGuard)
   @Get('/:id')
   findOne(@Param('id', ParseUUIDPipe) id: string) {
-    return this.client.send('order.find.one', id).pipe(
+    return this.client.send('orderBookLesson.find.one', id).pipe(
       catchError((err) => {
         throw new RpcException(err);
       }),

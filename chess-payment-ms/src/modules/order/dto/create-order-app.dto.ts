@@ -2,18 +2,28 @@ import { Type } from 'class-transformer';
 import {
   ArrayMinSize,
   IsArray,
+  IsEnum,
   IsNotEmpty,
   IsNumber,
   IsPositive,
+  IsString,
   ValidateNested,
 } from 'class-validator';
 import { PartialType } from '@nestjs/mapped-types';
+import { StorePlatform } from 'src/enum';
 
-export class CreateOrderDto {
+export class CreateOrderAppDto {
   @IsPositive()
   @IsNumber()
   @IsNotEmpty()
   userUid: number;
+
+  @IsString()
+  storeChargeId: string;
+
+  @IsNotEmpty()
+  @IsEnum(StorePlatform)
+  source: StorePlatform;
 
   @IsArray()
   @ArrayMinSize(1)
@@ -22,7 +32,7 @@ export class CreateOrderDto {
   items: OrderItemDto[];
 }
 
-export class UpdateOrderDto extends PartialType(CreateOrderDto) {
+export class UpdateOrderDto extends PartialType(CreateOrderAppDto) {
   id: number;
 }
 

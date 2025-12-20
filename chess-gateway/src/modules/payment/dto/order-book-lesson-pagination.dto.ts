@@ -2,7 +2,7 @@ import { Type } from 'class-transformer';
 import { IsEnum, IsOptional, IsPositive, Min } from 'class-validator';
 import { OrderStatus } from 'src/enum';
 
-export class OrderPaginationDto {
+export class OrderBookLessonPaginationDto {
   @IsOptional()
   @IsPositive()
   @Type(() => Number) // converts query parameter string to number here

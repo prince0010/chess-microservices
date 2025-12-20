@@ -11,11 +11,6 @@ export class ItemController {
     return this.itemService.seedItemsPackages();
   }
 
-  // @MessagePattern('createItem')
-  // create(@Payload() createItemDto: CreateItemDto) {
-  //   return this.itemService.create(createItemDto);
-  // }
-
   @MessagePattern('item.find.all')
   findAll(@Payload() userUid: number) {
     return this.itemService.findAll();
@@ -24,5 +19,11 @@ export class ItemController {
   @MessagePattern('item.find.one')
   findOne(@Payload() id: number) {
     return this.itemService.findOne(id);
+  }
+
+  // to validate google and apple store
+  @MessagePattern('item.find.storeProductId')
+  findOneByStoreProductId(@Payload() storeProductId: string) {
+    return this.itemService.findOneByStoreProductId(storeProductId);
   }
 }

@@ -6,6 +6,12 @@ export enum ItemType {
   BOOSTER = 'BOOSTER',
 }
 
+export enum IapStoreProductId {
+  PANDA_1M = 'com.wechess.panda.1m',
+  UNLOCK_30DAYS = 'com.wechess.unlock.30days',
+  UNLOCK_LIFETIME = 'com.wechess.unlock.lifetime',
+}
+
 export enum SubscriptionTier {
   BASIC = 'BASIC',
   PREMIUM = 'PREMIUM',

@@ -22,8 +22,8 @@ export class Item {
   @Column({ type: 'text', nullable: false })
   description: string;
 
-  // @Column({ nullable: false }) // use it in case pre-defined prices in stripe dashboard
-  // stripePriceId: string; // Stripe Price ID
+  @Column({ nullable: true, default: null })
+  storeProductId?: string; // google and apple store pre-defined products - only for mobile APP
 
   @Column({ type: 'float', nullable: false })
   price: number;
