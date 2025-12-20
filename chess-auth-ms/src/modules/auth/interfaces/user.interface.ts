@@ -13,7 +13,7 @@ export interface IOneUser {
   uid: number;
   name: string;
   username: string;
-  country: string;
+  country?: string;
   gender: string;
   birthday: Date | null;
   roles: string[];
@@ -47,7 +47,7 @@ export interface ICurrentUser {
   uid: number;
   name: string;
   username: string; // or email, it is the same
-  country: string;
+  country?: string;
   roles: string[];
   age?: number;
   gender?: string;

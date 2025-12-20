@@ -28,9 +28,9 @@ export class RegisterAuthDto {
   @MinLength(6)
   password: string;
 
+  @IsOptional()
   @IsString()
-  @IsNotEmpty()
-  country: string;
+  country?: string;
 
   @IsArray()
   @ArrayMinSize(1)

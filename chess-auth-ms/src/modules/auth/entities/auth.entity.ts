@@ -27,8 +27,8 @@ export class Auth {
   @Column({ nullable: false })
   password: string;
 
-  @Column({ length: 128, nullable: false })
-  country: string;
+  @Column({ length: 128, nullable: true, default: null })
+  country?: string;
 
   @Column({ length: 64, nullable: false, default: Gender.PRIVATE })
   gender: string;
