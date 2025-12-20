@@ -26,7 +26,7 @@ export class Order {
   @Column({ type: 'enum', enum: StorePlatform, nullable: false })
   source: StorePlatform; // app_store || play_store
 
-  @Column({ nullable: false })
+  @Column({ nullable: false, unique: true })
   storeChargeId: string; // for both apple and google
 
   @Column({ type: 'int', nullable: false })

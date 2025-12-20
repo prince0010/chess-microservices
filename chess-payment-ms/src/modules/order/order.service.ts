@@ -61,12 +61,8 @@ export class OrderService {
           (item) => item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME,
         )
       ) {
-        const hasLifetime = await firstValueFrom(
-          this.client.send(
-            'paymentSubscription.levelsForLifeTime.active',
-            userUid,
-          ),
-        );
+        const { response: hasLifetime } =
+          await this.existPurchaseUnlockLevelsForLifeTime(userUid);
 
         if (hasLifetime) {
           // User already purchased lifetime access => skip creating a new order
@@ -122,6 +118,16 @@ export class OrderService {
     }
   }
 
+  async existPurchaseUnlockLevelsForLifeTime(
+    userUid: number,
+  ): Promise<{ response: boolean }> {
+    const hasLifetime = await firstValueFrom(
+      this.client.send('paymentSubscription.levelsForLifeTime.active', userUid),
+    );
+
+    return { response: hasLifetime };
+  }
+
   async findAll(
     orderPaginationDto: OrderAppPaginationDto,
   ): Promise<IListOrders> {
@@ -174,6 +180,26 @@ export class OrderService {
 
       if (!order) {
         throw new BadRequestException(`Order with UUID: ${id} not found.`);
+      }
+
+      return order;
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
+  async findOneByStoreChargeId(storeChargeId: string): Promise<Order | null> {
+    try {
+      const order = await this.orderRepository.findOne({
+        where: { storeChargeId },
+        relations: { orderItems: { item: true }, receipt: true },
+      });
+
+      if (!order) {
+        return null;
       }
 
       return order;

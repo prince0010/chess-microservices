@@ -53,6 +53,7 @@ export class VerifyInAppPurchaseService {
         orderId: null,
         item: null,
         errorMessage: 'UNHANDLED_ERROR_VERIFYING_IN_APP_PURCHASE',
+        alreadyProcessed: false,
       };
     }
   }
@@ -152,13 +153,29 @@ export class VerifyInAppPurchaseService {
         },
       );
 
+      // 1.1. Verify if exists order and avoid duplicity
+      const existingOrder = await this.orderService.findOneByStoreChargeId(
+        payload.transactionId,
+      );
+
+      if (existingOrder) {
+        return {
+          success: true,
+          orderId: existingOrder.id,
+          item: existingOrder.orderItems[0].item,
+          errorMessage: null,
+          alreadyProcessed: true,
+        };
+      }
+
       // 2. Validate transaction identifiers
-      if (!payload.originalTransactionId) {
+      if (!payload.originalTransactionId || !payload.transactionId) {
         return {
           success: false,
           orderId: null,
           item: null,
           errorMessage: 'APPLE_JWS_INVALID_ORIGINAL_TRANSACTION_ID',
+          alreadyProcessed: false,
         };
       }
 
@@ -169,6 +186,7 @@ export class VerifyInAppPurchaseService {
           orderId: null,
           item: null,
           errorMessage: 'BUNDLE_ID_MISMATCH',
+          alreadyProcessed: false,
         };
       }
 
@@ -179,6 +197,7 @@ export class VerifyInAppPurchaseService {
           orderId: null,
           item: null,
           errorMessage: 'PRODUCT_ID_MISMATCH',
+          alreadyProcessed: false,
         };
       }
 
@@ -189,6 +208,7 @@ export class VerifyInAppPurchaseService {
           orderId: null,
           item: null,
           errorMessage: 'IN_APP_OWNERSHIP_TYPE_NOT_PURCHASED',
+          alreadyProcessed: false,
         };
       }
 
@@ -248,6 +268,7 @@ export class VerifyInAppPurchaseService {
           orderId: null,
           item: null,
           errorMessage: 'ITEM_ID_NOT_FOUND',
+          alreadyProcessed: false,
         };
       }
 
@@ -266,6 +287,7 @@ export class VerifyInAppPurchaseService {
             orderId: null,
             item: null,
             errorMessage: 'UNLOCK_ALL_LEVELS_FOR_LIFE_TIME_ALREADY_PURCHASED',
+            alreadyProcessed: false,
           };
         }
       }
@@ -298,6 +320,7 @@ export class VerifyInAppPurchaseService {
         success: true,
         orderId: order.id,
         item: order.orderItems[0].item,
+        alreadyProcessed: false,
       };
     } catch (error) {
       throw new RpcException({

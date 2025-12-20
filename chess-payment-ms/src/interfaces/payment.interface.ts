@@ -11,4 +11,5 @@ export interface IPaymentInAppPurchaseResponse {
   orderId?: string;
   item?: Item;
   errorMessage?: string;
+  alreadyProcessed: boolean;
 }
