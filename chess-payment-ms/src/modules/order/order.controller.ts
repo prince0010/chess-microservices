@@ -33,6 +33,11 @@ export class OrdersController {
     return this.orderService.findOne(id);
   }
 
+  @MessagePattern('order.existsPurchaseUnlockLevels.lifeTime')
+  existsPurchaseUnlockLevelsLifeTime(@Payload() userUid: number) {
+    return this.orderService.existPurchaseUnlockLevelsForLifeTime(userUid);
+  }
+
   // from payment service webhook endpoint to update status as failed
   @EventPattern('order.payment.failed')
   failedOrder(@Payload() dto: FailedOrderAppDto) {

@@ -1,4 +1,12 @@
-import { Body, Controller, Inject, Post, Req, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Inject,
+  Post,
+  Req,
+  UseGuards,
+} from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { catchError } from 'rxjs';
 
@@ -25,5 +33,17 @@ export class OrderAppController {
         throw new RpcException(err);
       }),
     );
+  }
+
+  @UseGuards(AuthGuard)
+  @Get('/exists-purchase-unlock-levels-for-lifetime')
+  existsPurchaseUnlockLevelsForLifetime(@Req() req: any) {
+    return this.client
+      .send('order.existsPurchaseUnlockLevels.lifeTime', +req.user.uid)
+      .pipe(
+        catchError((err) => {
+          throw new RpcException(err);
+        }),
+      );
   }
 }
