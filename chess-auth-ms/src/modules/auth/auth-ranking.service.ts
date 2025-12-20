@@ -19,6 +19,7 @@ export class AuthRankingService {
     return await this.authRepository
       .createQueryBuilder('auth')
       .where('auth.uid = :uid', { uid: userUid })
+      .andWhere('auth.isActive = :isActive', { isActive: true })
       .andWhere('FIND_IN_SET(:role, auth.roles)', {
         role: SecurityRoles.PLAYER,
       })
@@ -43,6 +44,7 @@ export class AuthRankingService {
         FROM auth
         WHERE educationPoints > ?
         AND FIND_IN_SET('PLAYER', roles)
+        AND isActive = 1
         `,
         [currentUserScore],
       );
@@ -53,6 +55,7 @@ export class AuthRankingService {
       const listUsers = await this.authRepository
         .createQueryBuilder('auth')
         .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .andWhere('auth.isActive = :isActive', { isActive: true })
         .orderBy('auth.educationPoints', 'DESC')
         .limit(100)
         .getMany();
@@ -97,6 +100,7 @@ export class AuthRankingService {
         FROM auth
         WHERE puzzlePoints > ?
         AND FIND_IN_SET('PLAYER', roles)
+        AND isActive = 1
         `,
         [currentUserScore],
       );
@@ -107,6 +111,7 @@ export class AuthRankingService {
       const listUsers = await this.authRepository
         .createQueryBuilder('auth')
         .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .andWhere('auth.isActive = :isActive', { isActive: true })
         .orderBy('auth.puzzlePoints', 'DESC')
         .limit(100)
         .getMany();
@@ -151,6 +156,7 @@ export class AuthRankingService {
         FROM auth
         WHERE endgamesPoints > ?
         AND FIND_IN_SET('PLAYER', roles)
+        AND isActive = 1
         `,
         [currentUserScore],
       );
@@ -161,6 +167,7 @@ export class AuthRankingService {
       const listUsers = await this.authRepository
         .createQueryBuilder('auth')
         .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .andWhere('auth.isActive = :isActive', { isActive: true })
         .orderBy('auth.endgamesPoints', 'DESC')
         .limit(100)
         .getMany();
@@ -203,6 +210,7 @@ export class AuthRankingService {
         FROM auth
         WHERE animalPoints > ?
         AND FIND_IN_SET('PLAYER', roles)
+        AND isActive = 1
         `,
         [currentUserScore],
       );
@@ -213,6 +221,7 @@ export class AuthRankingService {
       const listUsers = await this.authRepository
         .createQueryBuilder('auth')
         .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .andWhere('auth.isActive = :isActive', { isActive: true })
         .orderBy('auth.animalPoints', 'DESC')
         .limit(100)
         .getMany();
@@ -255,6 +264,7 @@ export class AuthRankingService {
         FROM auth
         WHERE totalScore > ?
         AND FIND_IN_SET('PLAYER', roles)
+        AND isActive = 1
         `,
         [currentUserScore],
       );
@@ -265,6 +275,7 @@ export class AuthRankingService {
       const listUsers = await this.authRepository
         .createQueryBuilder('auth')
         .where("FIND_IN_SET('PLAYER', auth.roles)")
+        .andWhere('auth.isActive = :isActive', { isActive: true })
         .orderBy('auth.totalScore', 'DESC')
         .limit(100)
         .getMany();

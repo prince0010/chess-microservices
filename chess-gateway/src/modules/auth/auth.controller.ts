@@ -52,6 +52,16 @@ export class AuthController {
     );
   }
 
+  @UseGuards(AuthGuard)
+  @Post('delete-account')
+  deleteAccount(@Req() req: any) {
+    return this.client.send('auth.deleteAccount.user', +req.user.uid).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
   @Post('login')
   loginUser(@Body() loginAuthDto: LoginAuthDto) {
     return this.client.send('auth.login.user', loginAuthDto).pipe(

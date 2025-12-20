@@ -60,6 +60,12 @@ export class AuthService {
           username: username.toLowerCase(),
         });
 
+      if (existsUsername && existsUsername.isActive === false) {
+        throw new BadRequestException(
+          `Not possible to register with specific credentials. That account was deleted time ago by user decision.`,
+        );
+      }
+
       if (existsUsername || existsTeacherWithUsername) {
         throw new BadRequestException(
           `Someone with the username: ${username} already exists.`,
@@ -162,6 +168,29 @@ export class AuthService {
     }
   }
 
+  async deleteAccount(
+    userUid: number,
+  ): Promise<{ success: boolean; errorMessage?: string }> {
+    try {
+      const user = await this.authRepository.findOneBy({ uid: userUid });
+      if (!user) {
+        return {
+          success: false,
+          errorMessage: `User with UID: ${userUid} not found`,
+        };
+      }
+
+      await this.authRepository.update({ uid: userUid }, { isActive: false });
+
+      return { success: true, errorMessage: null };
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
+  }
+
   async login(loginAuthDto: LoginAuthDto) {
     const { username, password, fromWebsite = null } = loginAuthDto;
 
@@ -204,7 +233,7 @@ export class AuthService {
         }
       }
 
-      if (!user) {
+      if (!user || user.isActive === false) {
         throw new RpcException({
           status: 400,
           message: 'User does not exists on system.',
@@ -267,7 +296,7 @@ export class AuthService {
         }
       }
 
-      if (!userFromDB) {
+      if (!userFromDB || userFromDB.isActive === false) {
         throw new RpcException({
           status: 401,
           message: 'User not found with UID',
@@ -332,7 +361,7 @@ export class AuthService {
       name = null,
       username = null,
       country = null,
-      isActive = null,
+      isActive = 'YES', // by default only active players
       role = null,
     } = findAllUsersDto;
 

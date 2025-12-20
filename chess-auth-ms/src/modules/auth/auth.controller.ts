@@ -28,6 +28,11 @@ export class AuthController {
     return this.authService.updateProfile(updateAuthDto);
   }
 
+  @MessagePattern('auth.deleteAccount.user')
+  deleteAccount(@Payload() userUid: number) {
+    return this.authService.deleteAccount(userUid);
+  }
+
   @MessagePattern('auth.login.user')
   login(@Payload() loginAuthDto: LoginAuthDto) {
     return this.authService.login(loginAuthDto);
