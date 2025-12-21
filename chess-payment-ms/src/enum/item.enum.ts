@@ -7,9 +7,9 @@ export enum ItemType {
 }
 
 export enum IapStoreProductId {
-  PANDA_1M = 'com.wechess.panda.1m',
-  UNLOCK_30DAYS = 'com.wechess.unlock.30days',
-  UNLOCK_LIFETIME = 'com.wechess.unlock.lifetime',
+  PANDA_1M = 'com.wechess.panda.1m.v2',
+  UNLOCK_30DAYS = 'com.wechess.unlock.30days.v2',
+  UNLOCK_LIFETIME = 'com.wechess.unlock.lifetime.v2',
 }
 
 export enum SubscriptionTier {
