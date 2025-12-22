@@ -48,14 +48,22 @@ export class OrderService {
   ) {}
 
   // now this endpoint should be called from verify in app purchase
-  async create(dto: CreateOrderAppDto): Promise<Order> {
+  async create(
+    dto: CreateOrderAppDto,
+  ): Promise<{ order: Order; duplicatedOrder: boolean }> {
     const { userUid, source, storeChargeId } = dto;
     try {
+      // 0- check if order with storeChargeId already exists
+      const existingOrder = await this.findOneByStoreChargeId(storeChargeId);
+      if (existingOrder) {
+        return { order: existingOrder, duplicatedOrder: true };
+      }
+
       // 1- validate items IDS exist on database
       const itemIds = dto.items.map((e) => e.itemId);
       const items = await this.itemService.validateItems(itemIds);
 
-      // 2: Check for existing subscription => All levels unlocked for life time
+      // 2- Check for existing subscription => All levels unlocked for life time
       if (
         items.some(
           (item) => item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME,
@@ -109,7 +117,10 @@ export class OrderService {
         relations: { orderItems: { item: true } },
       });
 
-      return orderWithItems;
+      return {
+        order: orderWithItems,
+        duplicatedOrder: false,
+      };
     } catch (error) {
       throw new RpcException({
         message: error.message,

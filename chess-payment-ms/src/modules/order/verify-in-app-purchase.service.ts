@@ -305,7 +305,19 @@ export class VerifyInAppPurchaseService {
         ],
       };
 
-      const order = await this.orderService.create(payloadNewOrder);
+      const { order, duplicatedOrder } =
+        await this.orderService.create(payloadNewOrder);
+
+      // on this point no new order was created
+      if (duplicatedOrder) {
+        return {
+          success: true,
+          orderId: order.id,
+          item: order.orderItems[0].item,
+          errorMessage: null,
+          alreadyProcessed: true,
+        };
+      }
 
       // Mark order as PAID
       const payloadPaidOrder: PaidOrderAppDto = {
