@@ -20,6 +20,8 @@ export class NotificationPurchaseController {
   findNotificationByOrderId(
     @Payload() dto: FindNotificationPurchaseByOrderDto,
   ) {
+    console.log('Testing polling is working fine');
+    console.log(dto);
     return this.notificationPurchaseService.findOneByOrderId(dto);
   }
 }

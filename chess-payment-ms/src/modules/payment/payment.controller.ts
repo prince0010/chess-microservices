@@ -33,6 +33,7 @@ export class PaymentController {
   // apple notification v2 sandbox
   @Post('webhook/apple-sandbox-webhook')
   async appleSandboxWebhook(@Req() req: Request, @Res() res: Response) {
+    console.log('Calling webhook/apple-sandbox-webhook');
     return this.paymentAppleService.notificationSandbox(req, res);
   }
 }
