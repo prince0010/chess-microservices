@@ -248,14 +248,15 @@ export class OrderService {
     const newOrderReceipt = this.orderReceiptRepository.create({
       rawReceipt,
       source,
-      order,
+      // order,
     });
 
     // Save receipt first
-    await this.orderReceiptRepository.save(newOrderReceipt);
+    // await this.orderReceiptRepository.save(newOrderReceipt);
     console.log(12);
     // Update order
     order.status = OrderStatus.PAID;
+    order.receipt = newOrderReceipt;
     order.paid = true;
     order.paidAt = new Date();
     order.storeChargeId = rawReceipt.transactionId;
