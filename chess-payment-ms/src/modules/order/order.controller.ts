@@ -2,25 +2,25 @@ import { Controller } from '@nestjs/common';
 import { EventPattern, MessagePattern, Payload } from '@nestjs/microservices';
 
 import { OrderService } from './order.service';
-import { VerifyInAppPurchaseService } from './verify-in-app-purchase.service';
 
 import {
   FailedOrderAppDto,
+  InAppPurchaseRequestDto,
   OrderAppPaginationDto,
-  VerifyInAppPurchaseDto,
 } from './dto';
+import { IapService } from './iap.service';
 
 @Controller()
 export class OrdersController {
   constructor(
     private readonly orderService: OrderService,
-    private readonly verifyInAppPurchaseService: VerifyInAppPurchaseService,
+    private readonly iapService: IapService,
   ) {}
 
-  // verify in app purchase with google or apple
-  @MessagePattern('order.verify.iap')
-  async verifyInAppPurchase(@Payload() dto: VerifyInAppPurchaseDto) {
-    return await this.verifyInAppPurchaseService.verifyInAppPurchase(dto);
+  // new request in app purchase from google or apple
+  @MessagePattern('order.newRequest.iap')
+  async newRequestInAppPurchase(@Payload() dto: InAppPurchaseRequestDto) {
+    return await this.iapService.newRequestInAppPurchase(dto);
   }
 
   @MessagePattern('order.find.all')

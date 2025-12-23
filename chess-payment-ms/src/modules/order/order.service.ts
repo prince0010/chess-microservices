@@ -47,13 +47,12 @@ export class OrderService {
     private readonly notificationPurchaseService: NotificationPurchaseService,
   ) {}
 
-  // now this endpoint should be called from verify in app purchase
   async create(
     dto: CreateOrderAppDto,
   ): Promise<{ order: Order; duplicatedOrder: boolean }> {
     const { userUid, source, storeChargeId } = dto;
     try {
-      // 0- check if order with storeChargeId already exists
+      // 0- check again if order with storeChargeId already exists
       const existingOrder = await this.findOneByStoreChargeId(storeChargeId);
       if (existingOrder) {
         return { order: existingOrder, duplicatedOrder: true };
@@ -104,7 +103,8 @@ export class OrderService {
       const newOrder = this.orderRepository.create({
         storeChargeId,
         totalAmount,
-        totalItems: totalItems,
+        totalItems,
+        status: OrderStatus.PENDING,
         userUid,
         source,
         orderItems,
@@ -282,6 +282,19 @@ export class OrderService {
     }
   }
 
+  async existItemId(storeProductId: string): Promise<Item | null> {
+    const item: Item = await firstValueFrom(
+      this.client.send('item.find.storeProductId', storeProductId),
+    );
+
+    if (!item) {
+      return null;
+    }
+
+    return item;
+  }
+
+  /* ====== APPLY REWARDS ======= */
   private async addOneMillionPandaPoints(order: Order): Promise<void> {
     const payload: UpdateUserPointsAfterPurchaseDto = {
       uid: order.userUid,

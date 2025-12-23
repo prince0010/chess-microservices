@@ -1,18 +1,7 @@
-import {
-  IsIn,
-  IsNotEmpty,
-  IsNumber,
-  IsPositive,
-  IsString,
-} from 'class-validator';
+import { IsIn, IsNotEmpty, IsString } from 'class-validator';
 import { StorePlatform } from 'src/enum';
 
-export class VerifyInAppPurchaseDto {
-  @IsPositive()
-  @IsNumber()
-  @IsNotEmpty()
-  userUid: number;
-
+export class InAppPurchaseRequestDto {
   @IsNotEmpty()
   @IsString()
   storeProductId: string;

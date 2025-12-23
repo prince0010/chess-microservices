@@ -7,7 +7,9 @@ import { ItemModule } from '../item/item.module';
 
 import { OrdersController } from './order.controller';
 import { OrderService } from './order.service';
-import { VerifyInAppPurchaseService } from './verify-in-app-purchase.service';
+import { IapService } from './iap.service';
+import { AppleIapService } from './apple-iap.service';
+import { GoogleIapService } from './google-iap.service';
 
 import { Order } from './entities/order.entity';
 import { OrderItem } from './entities/order-item.entity';
@@ -16,7 +18,7 @@ import { PaymentSubscription } from '../payment-subscription/entities/payment-su
 
 @Module({
   controllers: [OrdersController],
-  providers: [OrderService, VerifyInAppPurchaseService],
+  providers: [OrderService, IapService, GoogleIapService, AppleIapService],
   imports: [
     TypeOrmModule.forFeature([
       Order,
