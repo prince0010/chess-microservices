@@ -217,20 +217,20 @@ export class OrderService {
 
     if (!order) {
       console.error(`Order with UUID: ${appAccountToken} not found.`);
-      throw new RpcException({
-        status: 400,
-        message: `Order with UUID: ${appAccountToken} not found.`,
-      });
+
+      return;
+    }
+
+    if (order.status === OrderStatus.PAID) {
+      return; // already processed, OK
     }
 
     if (order.status !== OrderStatus.PENDING) {
       console.error(
         `Order with UUID: ${appAccountToken} has not pending status.`,
       );
-      throw new RpcException({
-        status: 400,
-        message: `Order with UUID: ${appAccountToken} has not pending status.`,
-      });
+
+      return;
     }
 
     const paidOrderDto: PaidOrderAppDto = {

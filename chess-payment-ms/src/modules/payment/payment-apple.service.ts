@@ -74,6 +74,8 @@ export class PaymentAppleService {
       throw new Error('Missing appAccountToken');
     }
 
+    console.log(notification.notificationType);
+
     // 3. Update order safely
     await this.handleTransaction(notification.notificationType, transaction);
   }
