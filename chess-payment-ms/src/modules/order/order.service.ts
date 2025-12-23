@@ -21,7 +21,7 @@ import {
   UpdateUserPointsAfterPurchaseDto,
 } from './dto';
 import { CreateNotificationPurchaseDto } from '../notification/dto/create-notification-purchase.dto';
-import { IListOrders } from 'src/interfaces';
+import { AppleTransactionInfoV2, IListOrders } from 'src/interfaces';
 import {
   ItemPackage,
   NotificationDestination,
@@ -29,6 +29,7 @@ import {
   NotificationPurchaseTitle,
   NotificationPurchaseType,
   OrderStatus,
+  StorePlatform,
 } from 'src/enum';
 
 @Injectable()
@@ -209,9 +210,41 @@ export class OrderService {
     // await this.notificationPurchaseService.create(dataNotification);
   }
 
+  async applePaymentNotificationReceived(data: AppleTransactionInfoV2) {
+    const { appAccountToken } = data;
+
+    const order = await this.findOne(appAccountToken);
+
+    if (!order) {
+      console.error(`Order with UUID: ${appAccountToken} not found.`);
+      throw new RpcException({
+        status: 400,
+        message: `Order with UUID: ${appAccountToken} not found.`,
+      });
+    }
+
+    if (order.status !== OrderStatus.PENDING) {
+      console.error(
+        `Order with UUID: ${appAccountToken} has not pending status.`,
+      );
+      throw new RpcException({
+        status: 400,
+        message: `Order with UUID: ${appAccountToken} has not pending status.`,
+      });
+    }
+
+    const paidOrderDto: PaidOrderAppDto = {
+      orderId: order.id,
+      source: StorePlatform.APPLE_APP_STORE,
+      rawReceipt: data,
+    };
+
+    await this.markOrderAppAsPaid(paidOrderDto, order);
+  }
+
   async markOrderAppAsPaid(dto: PaidOrderAppDto, order: Order): Promise<void> {
     const { orderId, source, rawReceipt } = dto;
-
+    console.log(11);
     const newOrderReceipt = this.orderReceiptRepository.create({
       rawReceipt,
       source,
@@ -220,14 +253,15 @@ export class OrderService {
 
     // Save receipt first
     await this.orderReceiptRepository.save(newOrderReceipt);
-
+    console.log(12);
     // Update order
     order.status = OrderStatus.PAID;
     order.paid = true;
     order.paidAt = new Date();
+    order.storeChargeId = rawReceipt.transactionId;
 
     const savedOrder = await this.orderRepository.save(order);
-
+    console.log(13);
     // apply action depend on payment order item
     for (const orderItem of savedOrder.orderItems) {
       switch (orderItem.item.name) {

@@ -10,6 +10,7 @@ import {
   PlayerGoToCheckoutDto,
 } from './dto';
 import { IapService } from './iap.service';
+import { AppleTransactionInfoV2 } from 'src/interfaces';
 
 @Controller()
 export class OrdersController {
@@ -28,6 +29,12 @@ export class OrdersController {
   @MessagePattern('order.newRequest.iap')
   async newRequestInAppPurchase(@Payload() dto: InAppPurchaseRequestDto) {
     return await this.iapService.newRequestInAppPurchase(dto);
+  }
+
+  // STEP 3 get notified by apple from payment service webhook endpoint
+  @EventPattern('order.applePayment.notification')
+  applePaymentNotification(@Payload() data: AppleTransactionInfoV2) {
+    return this.orderService.applePaymentNotificationReceived(data);
   }
 
   @MessagePattern('order.find.all')

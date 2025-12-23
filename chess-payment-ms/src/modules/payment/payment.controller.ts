@@ -5,10 +5,14 @@ import { Request, Response } from 'express';
 import { PaymentService } from './payment.service';
 
 import { PaymentSessionDto } from './dto/payment-session.dto';
+import { PaymentAppleService } from './payment-apple.service';
 
 @Controller('payment')
 export class PaymentController {
-  constructor(private readonly paymentService: PaymentService) {}
+  constructor(
+    private readonly paymentService: PaymentService,
+    private readonly paymentAppleService: PaymentAppleService,
+  ) {}
 
   // called from Order Service after generate new order with status pending
   @MessagePattern('payment.create.session')
@@ -23,5 +27,11 @@ export class PaymentController {
   @Post('webhook')
   async stripeWebhook(@Req() req: Request, @Res() res: Response) {
     return this.paymentService.stripeWebhook(req, res);
+  }
+
+  // apple notification v2
+  @Post('apple-sandbox-webhook')
+  async appleSandboxWebhook(@Req() req: Request, @Res() res: Response) {
+    return this.paymentAppleService.notificationSandbox(req, res);
   }
 }
