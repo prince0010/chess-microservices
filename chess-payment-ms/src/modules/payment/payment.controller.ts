@@ -29,8 +29,9 @@ export class PaymentController {
     return this.paymentService.stripeWebhook(req, res);
   }
 
-  // apple notification v2
-  @Post('apple-sandbox-webhook')
+  // http://localhost:3004/payment/webhook/apple-sandbox-webhook
+  // apple notification v2 sandbox
+  @Post('webhook/apple-sandbox-webhook')
   async appleSandboxWebhook(@Req() req: Request, @Res() res: Response) {
     return this.paymentAppleService.notificationSandbox(req, res);
   }
