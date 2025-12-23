@@ -10,6 +10,7 @@
     deviceVerification: 'zUxWL49n3ewoDEak2RjNKxWIkV3QC9pZi3K45xyU0x59yBhGS7htloVGRhWf5rUk',
     deviceVerificationNonce: 'a8d3648e-4020-4782-91a1-eac6832a9112',
     inAppOwnershipType: 'PURCHASED',
+    appAccountToken: '508753e9-9dc5-4175-8bd5-d44fd389bc34',
     signedDate: 1766073401246,
     environment: 'Sandbox',
     transactionReason: 'PURCHASE',
@@ -23,6 +24,7 @@
 export interface IAppleIapClientSideRequest {
   transactionId: string;
   originalTransactionId: string;
+  appAccountToken: string;
   bundleId: string;
   productId: string;
   purchaseDate: number; // maybe date

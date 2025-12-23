@@ -26,8 +26,8 @@ export class Order {
   @Column({ type: 'enum', enum: StorePlatform, nullable: false })
   source: StorePlatform; // app_store || play_store
 
-  @Column({ nullable: false, unique: true })
-  storeChargeId: string; // for both apple and google
+  @Column({ nullable: true, unique: true, default: null })
+  storeChargeId?: string; // for both apple and google
 
   @Column({ type: 'int', nullable: false })
   userUid: number; // auth reference with column UID

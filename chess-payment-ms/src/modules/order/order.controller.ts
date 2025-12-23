@@ -7,6 +7,7 @@ import {
   FailedOrderAppDto,
   InAppPurchaseRequestDto,
   OrderAppPaginationDto,
+  PlayerGoToCheckoutDto,
 } from './dto';
 import { IapService } from './iap.service';
 
@@ -17,7 +18,13 @@ export class OrdersController {
     private readonly iapService: IapService,
   ) {}
 
-  // new request in app purchase from google or apple
+  // STEP 1
+  @MessagePattern('order.player.goToPurchase')
+  playerGoToPurchase(@Payload() dto: PlayerGoToCheckoutDto) {
+    return this.orderService.generateOrderToUseIap(dto);
+  }
+
+  // STEP 2 new request in app purchase from google or apple
   @MessagePattern('order.newRequest.iap')
   async newRequestInAppPurchase(@Payload() dto: InAppPurchaseRequestDto) {
     return await this.iapService.newRequestInAppPurchase(dto);
@@ -31,11 +38,6 @@ export class OrdersController {
   @MessagePattern('order.find.one')
   findOne(@Payload('id') id: string) {
     return this.orderService.findOne(id);
-  }
-
-  @MessagePattern('order.existsPurchaseUnlockLevels.lifeTime')
-  existsPurchaseUnlockLevelsLifeTime(@Payload() userUid: number) {
-    return this.orderService.existPurchaseUnlockLevelsForLifeTime(userUid);
   }
 
   // from payment service webhook endpoint to update status as failed

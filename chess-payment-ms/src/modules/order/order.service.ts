@@ -14,10 +14,10 @@ import { ItemService } from '../item/item.service';
 import { NotificationPurchaseService } from '../notification/notification-purchase.service';
 
 import {
-  CreateOrderAppDto,
   FailedOrderAppDto,
   OrderAppPaginationDto,
   PaidOrderAppDto,
+  PlayerGoToCheckoutDto,
   UpdateUserPointsAfterPurchaseDto,
 } from './dto';
 import { CreateNotificationPurchaseDto } from '../notification/dto/create-notification-purchase.dto';
@@ -47,27 +47,14 @@ export class OrderService {
     private readonly notificationPurchaseService: NotificationPurchaseService,
   ) {}
 
-  async create(
-    dto: CreateOrderAppDto,
-  ): Promise<{ order: Order; duplicatedOrder: boolean }> {
-    const { userUid, source, storeChargeId } = dto;
+  async generateOrderToUseIap(dto: PlayerGoToCheckoutDto): Promise<Order> {
+    const { itemId, userUid, source } = dto;
+
     try {
-      // 0- check again if order with storeChargeId already exists
-      const existingOrder = await this.findOneByStoreChargeId(storeChargeId);
-      if (existingOrder) {
-        return { order: existingOrder, duplicatedOrder: true };
-      }
+      const itemsResponse = await this.itemService.validateItems([itemId]);
+      const item = itemsResponse[0];
 
-      // 1- validate items IDS exist on database
-      const itemIds = dto.items.map((e) => e.itemId);
-      const items = await this.itemService.validateItems(itemIds);
-
-      // 2- Check for existing subscription => All levels unlocked for life time
-      if (
-        items.some(
-          (item) => item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME,
-        )
-      ) {
+      if (item.name === ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME) {
         const { response: hasLifetime } =
           await this.existPurchaseUnlockLevelsForLifeTime(userUid);
 
@@ -79,48 +66,26 @@ export class OrderService {
         }
       }
 
-      // 3- calculate total price for each item * quantity (total)
-      const totalAmount = dto.items.reduce((acc, orderItem) => {
-        const price = items.find((e) => e.id === orderItem.itemId).price;
+      const totalAmount = item.price * 1; // quantity is 1 for go to checkout
+      const orderItems: any[] = [
+        {
+          price: item.price,
+          quantity: 1,
+          item,
+        },
+      ];
 
-        return acc + price * orderItem.quantity;
-      }, 0);
-
-      // 4- calculate total items was bought
-      const totalItems = dto.items.reduce((acc, orderItem) => {
-        return acc + orderItem.quantity;
-      }, 0);
-
-      // 5- create orderItems
-      const orderItems: any[] = items.map((item: Item) => ({
-        price: item.price,
-        quantity: dto.items.find((orderItem) => orderItem.itemId === item.id)
-          .quantity,
-        item,
-      }));
-
-      // 6- insert on database
       const newOrder = this.orderRepository.create({
-        storeChargeId,
+        storeChargeId: null, // at this point we don't have store charge id yet
         totalAmount,
-        totalItems,
+        totalItems: 1,
         status: OrderStatus.PENDING,
         userUid,
         source,
         orderItems,
       });
 
-      const savedOrder = await this.orderRepository.save(newOrder);
-
-      const orderWithItems = await this.orderRepository.findOne({
-        where: { id: savedOrder.id },
-        relations: { orderItems: { item: true } },
-      });
-
-      return {
-        order: orderWithItems,
-        duplicatedOrder: false,
-      };
+      return await this.orderRepository.save(newOrder);
     } catch (error) {
       throw new RpcException({
         message: error.message,

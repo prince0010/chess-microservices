@@ -3,7 +3,9 @@ import {
   Controller,
   Get,
   Inject,
+  ParseIntPipe,
   Post,
+  Query,
   Req,
   UseGuards,
 } from '@nestjs/common';
@@ -20,6 +22,26 @@ export class OrderAppController {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
   @UseGuards(AuthGuard)
+  @Get('/player-go-to-purchase')
+  playerGoToCheckoutFromApp(
+    @Query('itemId', ParseIntPipe) itemId: number,
+    @Query('source') source: string,
+    @Req() req: any,
+  ) {
+    const payload = {
+      itemId,
+      source,
+      userUid: +req.user.uid,
+    };
+
+    return this.client.send('order.player.goToPurchase', payload).pipe(
+      catchError((err) => {
+        throw new RpcException(err);
+      }),
+    );
+  }
+
+  @UseGuards(AuthGuard)
   @Post('/in-app-purchase-request')
   create(@Body() dto: InAppPurchaseRequestDto, @Req() req: any) {
     const payload = {
@@ -32,17 +54,5 @@ export class OrderAppController {
         throw new RpcException(err);
       }),
     );
-  }
-
-  @UseGuards(AuthGuard)
-  @Get('/exists-purchase-unlock-levels-for-lifetime')
-  existsPurchaseUnlockLevelsForLifetime(@Req() req: any) {
-    return this.client
-      .send('order.existsPurchaseUnlockLevels.lifeTime', +req.user.uid)
-      .pipe(
-        catchError((err) => {
-          throw new RpcException(err);
-        }),
-      );
   }
 }

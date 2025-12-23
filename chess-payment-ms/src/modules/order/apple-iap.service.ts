@@ -1,17 +1,20 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 import { firstValueFrom } from 'rxjs';
 
 import { envs, NATS_SERVICE } from 'src/config';
 import { OrderService } from './order.service';
+import { Item } from '../item/entities/item.entity';
+import { Order } from './entities/order.entity';
 
-import { CreateOrderAppDto, InAppPurchaseRequestDto } from './dto';
-import { IapStoreProductId, StorePlatform } from 'src/enum';
+import { InAppPurchaseRequestDto } from './dto';
+import { IapStoreProductId } from 'src/enum';
 import {
   IAppleIapClientSideRequest,
   IPaymentInAppPurchaseResponse,
 } from 'src/interfaces';
-import { Item } from '../item/entities/item.entity';
 
 const loadJose = async () => {
   const module = await eval(`import('jose')`);
@@ -24,6 +27,8 @@ export class AppleIapService {
   constructor(
     @Inject(NATS_SERVICE) private readonly client: ClientProxy,
     private readonly orderService: OrderService,
+    @InjectRepository(Order)
+    private readonly orderRepository: Repository<Order>,
   ) {}
 
   // Entry point from client side - mobile app
@@ -53,7 +58,18 @@ export class AppleIapService {
       );
       const payload: IAppleIapClientSideRequest = payloadDecoded;
 
-      // 2. Verify if exists order and avoid duplicity
+      // 2. Validate transaction identifiers
+      if (!payload.transactionId || !payload.originalTransactionId) {
+        return {
+          success: false,
+          orderId: null,
+          item: null,
+          errorMessage: 'APPLE_JWS_INVALID_ORIGINAL_TRANSACTION_ID',
+          alreadyProcessed: false,
+        };
+      }
+
+      // 3. Verify if exists order and avoid duplicity
       const existingOrder = await this.orderService.findOneByStoreChargeId(
         payload.transactionId,
       );
@@ -64,17 +80,6 @@ export class AppleIapService {
           orderId: existingOrder.id,
           item: existingOrder.orderItems[0].item,
           alreadyProcessed: true,
-        };
-      }
-
-      // 3. Validate transaction identifiers
-      if (!payload.transactionId || !payload.originalTransactionId) {
-        return {
-          success: false,
-          orderId: null,
-          item: null,
-          errorMessage: 'APPLE_JWS_INVALID_ORIGINAL_TRANSACTION_ID',
-          alreadyProcessed: false,
         };
       }
 
@@ -144,7 +149,7 @@ export class AppleIapService {
         }
       }
 
-      return await this.createOrderAsPending(dto.userUid, item, payload);
+      return await this.updateOrder(dto.userUid, item, payload);
     } catch (error) {
       throw new RpcException({
         status: 400,
@@ -175,32 +180,34 @@ export class AppleIapService {
   //     .sign(ecPrivateKey);
   // }
 
-  private async createOrderAsPending(
+  private async updateOrder(
     userUid: number,
     item: Item,
     payload: IAppleIapClientSideRequest,
   ): Promise<IPaymentInAppPurchaseResponse> {
     try {
-      const payloadNewOrder: CreateOrderAppDto = {
-        storeChargeId: payload.transactionId,
-        userUid,
-        source: StorePlatform.APPLE_APP_STORE,
-        items: [
-          {
-            itemId: item.id,
-            quantity: 1,
-          },
-        ],
-      };
+      const order = await this.orderService.findOne(payload.appAccountToken);
 
-      const { order, duplicatedOrder } =
-        await this.orderService.create(payloadNewOrder);
+      if (order.storeChargeId) {
+        return {
+          success: true,
+          orderId: order.id,
+          item,
+          alreadyProcessed: true,
+        };
+      }
+
+      // on this point update order with storeChargeId
+      await this.orderRepository.update(
+        { id: order.id },
+        { storeChargeId: payload.transactionId },
+      );
 
       return {
         success: true,
         orderId: order.id,
-        item: order.orderItems[0].item,
-        alreadyProcessed: duplicatedOrder,
+        item,
+        alreadyProcessed: false,
       };
     } catch (error) {
       throw new RpcException({

@@ -1,11 +1,14 @@
 import axios from 'axios';
 import { Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
+import { InjectRepository } from '@nestjs/typeorm';
 import { GoogleAuth } from 'google-auth-library';
 import { firstValueFrom } from 'rxjs';
+import { Repository } from 'typeorm';
 
 import { envs, NATS_SERVICE } from 'src/config';
 import { Item } from '../item/entities/item.entity';
+import { Order } from './entities/order.entity';
 import { OrderService } from './order.service';
 
 import { CreateOrderAppDto, InAppPurchaseRequestDto } from './dto';
@@ -28,6 +31,8 @@ export class GoogleIapService {
   constructor(
     @Inject(NATS_SERVICE) private readonly client: ClientProxy,
     private readonly orderService: OrderService,
+    @InjectRepository(Order)
+    private readonly orderRepository: Repository<Order>,
   ) {}
 
   async newRequest(
@@ -124,14 +129,29 @@ export class GoogleIapService {
         ],
       };
 
-      const { order, duplicatedOrder } =
-        await this.orderService.create(payloadNewOrder);
+      // changeMe! with google payload real properties
+      const order = await this.orderService.findOne(payload.appTransactionId);
+
+      if (order.storeChargeId) {
+        return {
+          success: true,
+          orderId: order.id,
+          item,
+          alreadyProcessed: true,
+        };
+      }
+
+      // on this point update order with storeChargeId
+      await this.orderRepository.update(
+        { id: order.id },
+        { storeChargeId: payload.transactionId },
+      );
 
       return {
         success: true,
         orderId: order.id,
-        item: order.orderItems[0].item,
-        alreadyProcessed: duplicatedOrder,
+        item,
+        alreadyProcessed: false,
       };
     } catch (error) {
       throw new RpcException({
