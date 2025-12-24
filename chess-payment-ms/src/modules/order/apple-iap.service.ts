@@ -75,6 +75,7 @@ export class AppleIapService {
       );
 
       if (existingOrder) {
+        console.log('Existing order with id: ', existingOrder.id);
         return {
           success: true,
           orderId: existingOrder.id,
@@ -82,6 +83,8 @@ export class AppleIapService {
           alreadyProcessed: true,
         };
       }
+
+      console.log('Generating new iap request.');
 
       // 4. Bundle validation
       if (payload.bundleId !== APPLE_BUNDLE_ID) {

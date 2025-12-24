@@ -86,6 +86,8 @@ export class OrderService {
         orderItems,
       });
 
+      console.log('New order with status pending created');
+
       return await this.orderRepository.save(newOrder);
     } catch (error) {
       throw new RpcException({
