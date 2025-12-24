@@ -10,7 +10,7 @@ import {
 
 import { OrderItem } from './order-item.entity';
 import { OrderReceipt } from './order-receipt.entity';
-import { OrderStatus, StorePlatform } from 'src/enum';
+import { OrderStatus, OrderVerificationStatus, StorePlatform } from 'src/enum';
 
 @Entity('order')
 export class Order {
@@ -34,6 +34,13 @@ export class Order {
 
   @Column({ length: 32, nullable: false, default: OrderStatus.PENDING })
   status: string;
+
+  @Column({
+    length: 32,
+    nullable: false,
+    default: OrderVerificationStatus.UNVERIFIED,
+  })
+  verificationStatus: string;
 
   @Column({ nullable: false, default: false })
   paid: boolean;

@@ -29,7 +29,7 @@ import {
   NotificationPurchaseTitle,
   NotificationPurchaseType,
   OrderStatus,
-  StorePlatform,
+  OrderVerificationStatus,
 } from 'src/enum';
 
 @Injectable()
@@ -223,45 +223,37 @@ export class OrderService {
       return;
     }
 
-    if (order.status === OrderStatus.PAID) {
+    if (
+      order.verificationStatus === OrderVerificationStatus.VERIFIED_SERVER_SIDE
+    ) {
       return; // already processed, OK
     }
 
-    if (order.status !== OrderStatus.PENDING) {
-      console.error(
-        `Order with UUID: ${appAccountToken} has not pending status.`,
-      );
+    order.verificationStatus = OrderVerificationStatus.VERIFIED_SERVER_SIDE; // apple server verification
+    order.receipt.rawReceipt = data; // apple server transaction as receipt
 
-      return;
-    }
-
-    const paidOrderDto: PaidOrderAppDto = {
-      orderId: order.id,
-      source: StorePlatform.APPLE_APP_STORE,
-      rawReceipt: data,
-    };
-
-    await this.markOrderAppAsPaid(paidOrderDto, order);
+    await this.orderRepository.save(order);
+    console.log(
+      ' ====== IMPORTANT ======== Order verificationStatus and receipt updated after apple notification',
+    );
   }
 
-  async markOrderAppAsPaid(dto: PaidOrderAppDto, order: Order): Promise<void> {
+  // this method is called when client side verified
+  async markOrderAppAsPaid(dto: PaidOrderAppDto): Promise<void> {
     const { orderId, source, rawReceipt } = dto;
-    console.log(11);
+    const order = await this.findOne(orderId);
+
     const newOrderReceipt = this.orderReceiptRepository.create({
       rawReceipt,
       source,
-      // order,
     });
 
-    // Save receipt first
-    // await this.orderReceiptRepository.save(newOrderReceipt);
     console.log(12);
     // Update order
     order.status = OrderStatus.PAID;
     order.receipt = newOrderReceipt;
     order.paid = true;
     order.paidAt = new Date();
-    order.storeChargeId = rawReceipt.transactionId;
 
     const savedOrder = await this.orderRepository.save(order);
     console.log(13);

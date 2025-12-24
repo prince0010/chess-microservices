@@ -9,8 +9,13 @@ import { OrderService } from './order.service';
 import { Item } from '../item/entities/item.entity';
 import { Order } from './entities/order.entity';
 
-import { InAppPurchaseRequestDto } from './dto';
-import { IapStoreProductId } from 'src/enum';
+import { InAppPurchaseRequestDto, PaidOrderAppDto } from './dto';
+import {
+  IapStoreProductId,
+  OrderStatus,
+  OrderVerificationStatus,
+  StorePlatform,
+} from 'src/enum';
 import {
   IAppleIapClientSideRequest,
   IPaymentInAppPurchaseResponse,
@@ -74,8 +79,11 @@ export class AppleIapService {
         payload.transactionId,
       );
 
-      if (existingOrder) {
-        console.log('Existing order with id: ', existingOrder.id);
+      if (existingOrder && existingOrder.status !== OrderStatus.PENDING) {
+        console.log(
+          'Existing order not processed still with id: ',
+          existingOrder.id,
+        );
         return {
           success: true,
           orderId: existingOrder.id,
@@ -83,8 +91,6 @@ export class AppleIapService {
           alreadyProcessed: true,
         };
       }
-
-      console.log('Generating new iap request.');
 
       // 4. Bundle validation
       if (payload.bundleId !== APPLE_BUNDLE_ID) {
@@ -152,11 +158,42 @@ export class AppleIapService {
         }
       }
 
-      return await this.updateOrder(dto.userUid, item, payload);
+      console.log('Generating new verified IAP request.');
+      console.log(payload.transactionId);
+      console.log(payload.appAccountToken);
+
+      // changeMe! remember to comment - this only for debug mode
+      // const existsOrder = await this.orderRepository.findOneBy({
+      //   id: payload.appAccountToken,
+      // });
+      // if (!existsOrder) {
+      //   const orderItem: any = {
+      //     quantity: 1,
+      //     price: 9.9,
+      //     item,
+      //   };
+
+      //   // trying to force and create order
+      //   const newOrder = this.orderRepository.create({
+      //     id: payload.appAccountToken,
+      //     storeChargeId: null, // at this point we don't have store charge id yet
+      //     totalAmount: 9.9,
+      //     totalItems: 1,
+      //     status: OrderStatus.PENDING,
+      //     userUid: dto.userUid,
+      //     source: StorePlatform.APPLE_APP_STORE,
+      //     orderItems: [orderItem],
+      //   });
+
+      //   const savedOrder = await this.orderRepository.save(newOrder);
+      //   console.log('Saved order id: ', savedOrder.id);
+      // }
+
+      return await this.updateOrder(item, payload);
     } catch (error) {
       throw new RpcException({
         status: 400,
-        message: error.message || 'APPLE_VERIFICATION_FAILED',
+        message: error.message ?? 'APPLE_VERIFICATION_FAILED',
       });
     }
   }
@@ -184,14 +221,13 @@ export class AppleIapService {
   // }
 
   private async updateOrder(
-    userUid: number,
     item: Item,
     payload: IAppleIapClientSideRequest,
   ): Promise<IPaymentInAppPurchaseResponse> {
     try {
       const order = await this.orderService.findOne(payload.appAccountToken);
 
-      if (order.storeChargeId) {
+      if (order.storeChargeId && order.status !== OrderStatus.PENDING) {
         return {
           success: true,
           orderId: order.id,
@@ -203,8 +239,19 @@ export class AppleIapService {
       // on this point update order with storeChargeId
       await this.orderRepository.update(
         { id: order.id },
-        { storeChargeId: payload.transactionId },
+        {
+          storeChargeId: payload.transactionId,
+          verificationStatus: OrderVerificationStatus.VERIFIED_CLIENT_SIDE,
+        },
       );
+
+      // mark order as paid
+      const dto: PaidOrderAppDto = {
+        orderId: order.id,
+        source: StorePlatform.APPLE_APP_STORE,
+        rawReceipt: payload,
+      };
+      await this.orderService.markOrderAppAsPaid(dto);
 
       return {
         success: true,
