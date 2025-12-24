@@ -267,12 +267,15 @@ export class OrderService {
     for (const orderItem of savedOrder.orderItems) {
       switch (orderItem.item.name) {
         case ItemPackage.ONE_MILLION_PANDA_POINTS:
+          console.log('ONE_MILLION_PANDA_POINTS');
           await this.addOneMillionPandaPoints(order);
           break;
         case ItemPackage.OPEN_ALL_LEVELS_FOR_30_DAYS:
+          console.log('OPEN_ALL_LEVELS_FOR_30_DAYS');
           await this.createSubscriptionForLevelsOpenFor30Days(order);
           break;
         case ItemPackage.OPEN_ALL_LEVELS_FOR_LIFE_TIME:
+          console.log('OPEN_ALL_LEVELS_FOR_LIFE_TIME');
           await this.createSubscriptionForLevelsOpenForLifeTime(order);
           break;
 
@@ -337,6 +340,7 @@ export class OrderService {
     };
 
     await this.notificationPurchaseService.create(dataNotificationFor30Days);
+    console.log('Notification created');
 
     // Fetch all existing subscriptions for this user & package
     const existingSubscriptions = await this.paymentSubscriptionRepository.find(
@@ -377,6 +381,7 @@ export class OrderService {
     });
 
     await this.paymentSubscriptionRepository.save(newSubscription);
+    console.log('Subscription generated');
   }
 
   private async createSubscriptionForLevelsOpenForLifeTime(
