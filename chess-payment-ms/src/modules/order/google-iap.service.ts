@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Inject, Injectable } from '@nestjs/common';
+import { BadRequestException, Inject, Injectable } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
 import { GoogleAuth } from 'google-auth-library';
@@ -11,8 +11,13 @@ import { Item } from '../item/entities/item.entity';
 import { Order } from './entities/order.entity';
 import { OrderService } from './order.service';
 
-import { CreateOrderAppDto, InAppPurchaseRequestDto } from './dto';
-import { IapStoreProductId, StorePlatform } from 'src/enum';
+import { InAppPurchaseRequestDto, PaidOrderAppDto } from './dto';
+import {
+  IapStoreProductId,
+  OrderStatus,
+  OrderVerificationStatus,
+  StorePlatform,
+} from 'src/enum';
 import { IPaymentInAppPurchaseResponse } from 'src/interfaces';
 
 const loadJose = async () => {
@@ -41,6 +46,9 @@ export class GoogleIapService {
     const { storeProductId, serverVerificationData, userUid } = dto;
     const packageName = envs.androidPackageName;
 
+    // TODO: tell me what is come from on google flutter object when customer device send me this and the typo of this object
+    console.log({ serverVerificationData });
+
     try {
       const authClient = await this.googleAuth.getClient();
       const accessToken = await authClient.getAccessToken();
@@ -53,11 +61,20 @@ export class GoogleIapService {
         headers: { Authorization: `Bearer ${accessToken.token}` },
       });
 
+      console.log({ data });
+      // TODO: tell me which properties comes in data
+      /*
+        data = {
+          purchaseState: number,
+          acknowledgementState: number,
+          ... what else ??
+        }
+      */
+
+      const orderId = data.obfuscatedExternalAccountId; // changeMe!
+
       if (data.purchaseState !== 0) {
-        throw new RpcException({
-          status: 400,
-          message: 'GOOGLE_PURCHASE_NOT_COMPLETED',
-        });
+        throw new BadRequestException('GOOGLE_PURCHASE_NOT_COMPLETED');
       }
 
       // Acknowledge (mandatory)
@@ -102,37 +119,9 @@ export class GoogleIapService {
         }
       }
 
-      return await this.createOrderAsPending(dto.userUid, item, data);
-    } catch (error) {
-      throw new RpcException({
-        status: 400,
-        message: error.message || 'APPLE_VERIFICATION_FAILED',
-      });
-    }
-  }
+      const order = await this.orderService.findOne(orderId);
 
-  private async createOrderAsPending(
-    userUid: number,
-    item: Item,
-    payload: any, // changeMe! when we know google request object
-  ): Promise<IPaymentInAppPurchaseResponse> {
-    try {
-      const payloadNewOrder: CreateOrderAppDto = {
-        storeChargeId: payload.transactionId,
-        userUid,
-        source: StorePlatform.APPLE_APP_STORE,
-        items: [
-          {
-            itemId: item.id,
-            quantity: 1,
-          },
-        ],
-      };
-
-      // changeMe! with google payload real properties
-      const order = await this.orderService.findOne(payload.appTransactionId);
-
-      if (order.storeChargeId) {
+      if (order.storeChargeId && order.status !== OrderStatus.PENDING) {
         return {
           success: true,
           orderId: order.id,
@@ -141,15 +130,41 @@ export class GoogleIapService {
         };
       }
 
+      return await this.updateOrder(dto, item, data);
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message || 'APPLE_VERIFICATION_FAILED',
+      });
+    }
+  }
+
+  private async updateOrder(
+    dto: any, // changeMe! when we know google request object
+    item: Item,
+    payload: any,
+  ): Promise<IPaymentInAppPurchaseResponse> {
+    try {
       // on this point update order with storeChargeId
       await this.orderRepository.update(
-        { id: order.id },
-        { storeChargeId: payload.transactionId },
+        { id: dto.orderId },
+        {
+          storeChargeId: payload.orderId, // "GPA.XXXX-XXXX-XXXX"
+          verificationStatus: OrderVerificationStatus.VERIFIED_SERVER_SIDE, // on goggle it is verified always on server side with the googleServiceAccountJson
+        },
       );
+
+      // mark order as paid
+      const dtoPaidOrder: PaidOrderAppDto = {
+        orderId: dto.orderId,
+        source: StorePlatform.GOOGLE_PLAY_STORE,
+        rawReceipt: payload,
+      };
+      await this.orderService.markOrderAppAsPaid(dtoPaidOrder);
 
       return {
         success: true,
-        orderId: order.id,
+        orderId: dto.orderId,
         item,
         alreadyProcessed: false,
       };
