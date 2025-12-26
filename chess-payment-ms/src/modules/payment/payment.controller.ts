@@ -24,16 +24,22 @@ export class PaymentController {
     On localhost use CLI to activate stripe events with this command: stripe listen --forward-to localhost:3004/payment/webhook
   */
   // stripe events
-  @Post('webhook')
-  async stripeWebhook(@Req() req: Request, @Res() res: Response) {
-    return this.paymentService.stripeWebhook(req, res);
-  }
+  // @Post('webhook')
+  // async stripeWebhook(@Req() req: Request, @Res() res: Response) {
+  //   return this.paymentService.stripeWebhook(req, res);
+  // }
+
+  // apple notification v2 production - changeMe! uncomment this and comment sandbox
+  // @Post('webhook/apple-production-webhook')
+  // async appleWebhook(@Req() req: Request, @Res() res: Response) {
+
+  //   return this.paymentAppleService.notificationSandbox(req, res);
+  // }
 
   // http://localhost:3004/payment/webhook/apple-sandbox-webhook
   // apple notification v2 sandbox
   @Post('webhook/apple-sandbox-webhook')
   async appleSandboxWebhook(@Req() req: Request, @Res() res: Response) {
-    console.log('Calling webhook/apple-sandbox-webhook');
     return this.paymentAppleService.notificationSandbox(req, res);
   }
 }

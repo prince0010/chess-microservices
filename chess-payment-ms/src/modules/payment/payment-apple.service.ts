@@ -30,7 +30,6 @@ export class PaymentAppleService {
       await this.processNotification(signedPayload);
 
       // Apple requires fast 200 OK
-      console.log('Returning status 200 OK TO APPLE');
       return res.status(200).send('OK');
     } catch (error) {
       console.error('Apple notification error', error);
@@ -74,8 +73,6 @@ export class PaymentAppleService {
     if (!orderUUID) {
       throw new Error('Missing appAccountToken');
     }
-
-    console.log(notification.notificationType);
 
     // 3. Update order safely
     await this.handleTransaction(notification.notificationType, transaction);

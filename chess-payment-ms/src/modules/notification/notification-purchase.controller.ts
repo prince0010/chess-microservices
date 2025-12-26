@@ -15,13 +15,10 @@ export class NotificationPurchaseController {
     return this.notificationPurchaseService.findOne(userUid);
   }
 
-  // from flutter APP after succeeded In App Purchase
   @MessagePattern('notificationPurchase.findOneBy.orderId')
   findNotificationByOrderId(
     @Payload() dto: FindNotificationPurchaseByOrderDto,
   ) {
-    console.log('Testing polling is working fine');
-    console.log(dto);
     return this.notificationPurchaseService.findOneByOrderId(dto);
   }
 }

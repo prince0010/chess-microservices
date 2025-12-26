@@ -80,10 +80,6 @@ export class AppleIapService {
       );
 
       if (existingOrder && existingOrder.status !== OrderStatus.PENDING) {
-        console.log(
-          'Existing order not processed still with id: ',
-          existingOrder.id,
-        );
         return {
           success: true,
           orderId: existingOrder.id,
@@ -158,10 +154,6 @@ export class AppleIapService {
         }
       }
 
-      console.log('Generating new verified IAP request.');
-      console.log(payload.transactionId);
-      console.log(payload.appAccountToken);
-
       // changeMe! remember to comment - this only for debug mode
       // const existsOrder = await this.orderRepository.findOneBy({
       //   id: payload.appAccountToken,
@@ -186,7 +178,6 @@ export class AppleIapService {
       //   });
 
       //   const savedOrder = await this.orderRepository.save(newOrder);
-      //   console.log('Saved order id: ', savedOrder.id);
       // }
 
       return await this.updateOrder(item, payload);

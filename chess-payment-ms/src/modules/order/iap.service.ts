@@ -26,8 +26,7 @@ export class IapService {
         return await this.appleIapService.newRequest(dto);
       }
     } catch (error) {
-      console.log('Error: On new restored request');
-      console.log({ error });
+      console.error(error);
       return {
         success: false,
         orderId: null,
