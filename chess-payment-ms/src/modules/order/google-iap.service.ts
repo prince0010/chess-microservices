@@ -51,12 +51,15 @@ export class GoogleIapService {
 
     try {
       const authClient = await this.googleAuth.getClient();
+      console.log(1);
       const accessToken = await authClient.getAccessToken();
+      console.log(2);
 
       const url =
         `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/` +
         `${packageName}/purchases/products/${storeProductId}/tokens/${serverVerificationData}`;
 
+      console.log({ url });
       const { data } = await axios.get(url, {
         headers: { Authorization: `Bearer ${accessToken.token}` },
       });
@@ -77,6 +80,8 @@ export class GoogleIapService {
         throw new BadRequestException('GOOGLE_PURCHASE_NOT_COMPLETED');
       }
 
+      console.log(3);
+
       // Acknowledge (mandatory)
       if (data.acknowledgementState === 0) {
         await axios.post(
@@ -85,6 +90,8 @@ export class GoogleIapService {
           { headers: { Authorization: `Bearer ${accessToken.token}` } },
         );
       }
+
+      console.log(4);
 
       // 7- verify itemId exists on database
       const item = await this.orderService.existItemId(data.productId);
@@ -98,6 +105,8 @@ export class GoogleIapService {
           alreadyProcessed: false,
         };
       }
+
+      console.log(5);
 
       // 8- avoid duplicate unlock levels for lifetime - non-consumable
       if (data.productId === IapStoreProductId.UNLOCK_LIFETIME) {
@@ -119,6 +128,7 @@ export class GoogleIapService {
         }
       }
 
+      console.log(6);
       const order = await this.orderService.findOne(orderId);
 
       if (order.storeChargeId && order.status !== OrderStatus.PENDING) {
@@ -129,6 +139,8 @@ export class GoogleIapService {
           alreadyProcessed: true,
         };
       }
+
+      console.log(7);
 
       return await this.updateOrder(dto, item, data);
     } catch (error) {
