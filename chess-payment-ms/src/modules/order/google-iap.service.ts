@@ -18,7 +18,10 @@ import {
   OrderVerificationStatus,
   StorePlatform,
 } from 'src/enum';
-import { IPaymentInAppPurchaseResponse } from 'src/interfaces';
+import {
+  IGoogleIapClientSideRequest,
+  IPaymentInAppPurchaseResponse,
+} from 'src/interfaces';
 
 const loadJose = async () => {
   const module = await eval(`import('jose')`);
@@ -59,15 +62,35 @@ export class GoogleIapService {
       console.log({ accessToken });
       console.log(2);
 
-      const url =
+      const url1 =
         `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/` +
         `${packageName}/purchases/products/${storeProductId}/tokens/${token}`;
+      const url2 =
+        `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/` +
+        `${packageName}/purchases/inapp/${storeProductId}/tokens/${token}`;
 
-      console.log({ url });
-      const { data } = await axios.get(url, {
-        headers: { Authorization: `Bearer ${accessToken.token}` },
-      });
+      let response;
+      const urls = [
+        `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${packageName}/purchases/products/${storeProductId}/tokens/${token}`,
+        `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${packageName}/purchases/inapp/${storeProductId}/tokens/${token}`,
+      ];
 
+      // Try both URLs
+      for (const targetUrl of urls) {
+        try {
+          const { data } = await axios.get(targetUrl, {
+            headers: { Authorization: `Bearer ${accessToken.token}` },
+          });
+          response = { data, url: targetUrl };
+          break; // Success! Exit loop
+        } catch (err) {
+          if (targetUrl === urls[urls.length - 1]) throw err; // If last URL fails, throw
+          continue; // Try next URL
+        }
+      }
+
+      const { data: payloadData, url } = response;
+      const data: IGoogleIapClientSideRequest = payloadData;
       console.log(2.5);
       console.log({ data });
       // TODO: tell me which properties comes in data
@@ -79,7 +102,7 @@ export class GoogleIapService {
         }
       */
 
-      const orderId = data.obfuscatedExternalAccountId; // changeMe!
+      const orderUUID = data.obfuscatedExternalAccountId; // changeMe!
 
       if (data.purchaseState !== 0) {
         throw new BadRequestException('GOOGLE_PURCHASE_NOT_COMPLETED');
@@ -134,7 +157,7 @@ export class GoogleIapService {
       }
 
       console.log(6);
-      const order = await this.orderService.findOne(orderId);
+      const order = await this.orderService.findOne(orderUUID);
 
       if (order.storeChargeId && order.status !== OrderStatus.PENDING) {
         return {
@@ -158,14 +181,16 @@ export class GoogleIapService {
   }
 
   private async updateOrder(
-    dto: any, // changeMe! when we know google request object
+    dto: InAppPurchaseRequestDto,
     item: Item,
-    payload: any,
+    payload: IGoogleIapClientSideRequest,
   ): Promise<IPaymentInAppPurchaseResponse> {
+    const orderUUID = payload.obfuscatedExternalAccountId;
+
     try {
       // on this point update order with storeChargeId
       await this.orderRepository.update(
-        { id: dto.orderId },
+        { id: orderUUID },
         {
           storeChargeId: payload.orderId, // "GPA.XXXX-XXXX-XXXX"
           verificationStatus: OrderVerificationStatus.VERIFIED_SERVER_SIDE, // on goggle it is verified always on server side with the googleServiceAccountJson
@@ -174,7 +199,7 @@ export class GoogleIapService {
 
       // mark order as paid
       const dtoPaidOrder: PaidOrderAppDto = {
-        orderId: dto.orderId,
+        orderId: orderUUID,
         source: StorePlatform.GOOGLE_PLAY_STORE,
         rawReceipt: payload,
       };
@@ -182,7 +207,7 @@ export class GoogleIapService {
 
       return {
         success: true,
-        orderId: dto.orderId,
+        orderId: orderUUID,
         item,
         alreadyProcessed: false,
       };
