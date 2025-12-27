@@ -144,6 +144,7 @@ export class GoogleIapService {
 
       return await this.updateOrder(dto, item, data);
     } catch (error) {
+      console.error(error);
       throw new RpcException({
         status: 400,
         message: error.message || 'APPLE_VERIFICATION_FAILED',
