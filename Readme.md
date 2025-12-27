@@ -48,3 +48,24 @@ This repo in github will host all chess Microservices.
     |- default.yaml
 `
 2. Every docker-compose file was updated with new 3 services cadvisor - prometheus - grafana
+
+A 404 error when calling the Google Play Developer API for in-app purchase validation typically indicates that the resource you're trying to access cannot be found. This often points to an issue with the parameters in your API call or a mismatch in the setup.
+
+Here's a breakdown of common reasons for this error and what to check:
+
+Incorrect packageName :
+Ensure that the packageName in your API call exactly matches the package name of your application as registered in the Google Play Console. This is usually in the format com.yourcompany.yourapp .
+Incorrect storeProductId (or productId ) :
+Verify that storeProductId (the product ID) is correct and corresponds to an in-app product that exists in your Google Play Console for the specified packageName . Product IDs are case-sensitive.
+Incorrect token (purchase token) :
+The token (purchase token) is a unique string representing a specific in-app purchase. Double-check that the token you're using is valid and corresponds to an actual purchase for the given packageName and storeProductId . This token is typically received after a successful purchase.
+API Version Mismatch :
+While you're using /v3/ , which is the current recommended version, ensure that your client library or any manual API construction is consistently using v3 for all related calls and that the endpoint structure is correct for v3 .
+Service Account Permissions (Less likely for 404, but good to check) :
+Although a 404 usually means "not found" rather than "unauthorized," it's crucial to confirm your service account has the necessary permissions. In the Google Play Console, the service account needs permissions like "View financial data, orders, and cancellation survey responses" and "Manage orders and subscriptions" to access purchase information.
+Ensure the service account's email address is correctly added as a user in the Google Play Console under "Users and permissions."
+Google Play Developer API Not Enabled :
+Make sure the Google Play Developer API is enabled in your Google Cloud project. You can check this in the Google Cloud Console under "APIs & Services" > "Enabled APIs & services." If it's not enabled, enable it.
+Propagation Delays :
+After making changes to your Google Play Console permissions or Google Cloud project settings, there can sometimes be a delay (up to 24 hours) for these changes to fully propagate across Google's systems. If you've just made changes, wait a bit and try again.
+To debug, carefully review each parameter you are passing to the API call against the values shown in your Google Play Console

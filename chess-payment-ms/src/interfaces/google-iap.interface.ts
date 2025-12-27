@@ -1,21 +1,19 @@
 /*
     {
-        "kind": "androidpublisher#productPurchase",
-        "purchaseTimeMillis": "1735235232000",
-        "purchaseState": 0, 
-        "consumptionState": 0,
-        "developerPayload": "",
-        "orderId": "GPA.3333-4444-5555-66666",
-        "purchaseType": 0,
-        "acknowledgementState": 0,
-        "productId": "com.wechess.panda.1m.v2",
-        "obfuscatedExternalAccountId": "your-order-uid-if-passed-from-app",
-        "regionCode": "US"
+        purchaseTimeMillis: '1766851197691',
+        purchaseState: 0,
+        consumptionState: 1,
+        developerPayload: '',
+        orderId: 'GPA.3376-4782-1452-37161',
+        purchaseType: 0,
+        acknowledgementState: 1,
+        kind: 'androidpublisher#productPurchase',
+        obfuscatedExternalAccountId: 'e62a013b-e329-4870-b519-bcba9bd25572',
+        regionCode: 'CR'
     }
 */
 
 export interface IGoogleIapClientSideRequest {
-  kind: string;
   purchaseTimeMillis: string;
   purchaseState: number;
   consumptionState: number;
@@ -23,7 +21,7 @@ export interface IGoogleIapClientSideRequest {
   orderId: string;
   purchaseType: number;
   acknowledgementState: number;
-  productId: string;
+  kind: string;
   obfuscatedExternalAccountId: string;
   regionCode: string;
 }
