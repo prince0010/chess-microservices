@@ -45,25 +45,30 @@ export class GoogleIapService {
   ): Promise<IPaymentInAppPurchaseResponse> {
     const { storeProductId, serverVerificationData, userUid } = dto;
     const packageName = envs.androidPackageName;
+    const token = encodeURIComponent(serverVerificationData);
+    console.log({ token });
 
     // TODO: tell me what is come from on google flutter object when customer device send me this and the typo of this object
     console.log({ serverVerificationData });
 
     try {
       const authClient = await this.googleAuth.getClient();
+      console.log({ authClient });
       console.log(1);
       const accessToken = await authClient.getAccessToken();
+      console.log({ accessToken });
       console.log(2);
 
       const url =
         `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/` +
-        `${packageName}/purchases/products/${storeProductId}/tokens/${serverVerificationData}`;
+        `${packageName}/purchases/products/${storeProductId}/tokens/${token}`;
 
       console.log({ url });
       const { data } = await axios.get(url, {
         headers: { Authorization: `Bearer ${accessToken.token}` },
       });
 
+      console.log(2.5);
       console.log({ data });
       // TODO: tell me which properties comes in data
       /*
