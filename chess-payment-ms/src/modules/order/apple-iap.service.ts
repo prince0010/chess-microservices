@@ -154,7 +154,7 @@ export class AppleIapService {
         }
       }
 
-      // changeMe! remember to comment - this only for debug mode
+      // changeMe! remember to comment - uncomment this only for debug mode
       // const existsOrder = await this.orderRepository.findOneBy({
       //   id: payload.appAccountToken,
       // });
