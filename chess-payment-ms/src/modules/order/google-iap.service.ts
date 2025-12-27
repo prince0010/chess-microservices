@@ -40,10 +40,9 @@ export class GoogleIapService {
   async newRequest(
     dto: InAppPurchaseRequestDto,
   ): Promise<IPaymentInAppPurchaseResponse> {
-    const { storeProductId, serverVerificationData, userUid } = dto;
+    const { storeProductId, serverVerificationData } = dto;
     const packageName = envs.androidPackageName;
     const token = encodeURIComponent(serverVerificationData);
-    console.log({ serverVerificationData });
 
     try {
       const authClient = await this.googleAuth.getClient();
@@ -55,33 +54,6 @@ export class GoogleIapService {
         headers: { Authorization: `Bearer ${accessToken.token}` },
       });
 
-      // const url1 =
-      //   `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/` +
-      //   `${packageName}/purchases/products/${storeProductId}/tokens/${token}`;
-      // const url2 =
-      //   `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/` +
-      //   `${packageName}/purchases/inapp/${storeProductId}/tokens/${token}`;
-
-      // let response;
-      // const urls = [
-      //   `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${packageName}/purchases/products/${storeProductId}/tokens/${token}`,
-      //   `https://androidpublisher.googleapis.com/androidpublisher/v3/applications/${packageName}/purchases/inapp/${storeProductId}/tokens/${token}`,
-      // ];
-
-      // // Try both URLs
-      // for (const targetUrl of urls) {
-      //   try {
-      //     const { data } = await axios.get(targetUrl, {
-      //       headers: { Authorization: `Bearer ${accessToken.token}` },
-      //     });
-      //     response = { data, url: targetUrl };
-      //     break; // Success! Exit loop
-      //   } catch (err) {
-      //     if (targetUrl === urls[urls.length - 1]) throw err; // If last URL fails, throw
-      //     continue; // Try next URL
-      //   }
-      // }
-
       const data: IGoogleIapClientSideRequest = payloadData;
       const orderUUID = data.obfuscatedExternalAccountId;
 
@@ -89,9 +61,7 @@ export class GoogleIapService {
         throw new BadRequestException('GOOGLE_PURCHASE_NOT_COMPLETED');
       }
 
-      console.log(3);
-
-      // Acknowledge (mandatory)
+      // Acknowledge google (mandatory)
       if (data.acknowledgementState === 0) {
         await axios.post(
           `${url}:acknowledge`,
@@ -100,9 +70,7 @@ export class GoogleIapService {
         );
       }
 
-      console.log(4);
-
-      // 7- verify itemId exists on database
+      // verify itemId exists on database
       const item = await this.orderService.existItemId(storeProductId);
 
       if (!item) {
@@ -115,9 +83,7 @@ export class GoogleIapService {
         };
       }
 
-      console.log(5);
-
-      // 8- avoid duplicate unlock levels for lifetime - non-consumable
+      // avoid duplicate unlock levels for lifetime - non-consumable
       if (storeProductId === IapStoreProductId.UNLOCK_LIFETIME) {
         const subscriptionLifetime = await firstValueFrom(
           this.client.send(
@@ -137,9 +103,7 @@ export class GoogleIapService {
         }
       }
 
-      console.log(6);
       const order = await this.orderService.findOne(orderUUID);
-
       if (order.storeChargeId && order.status !== OrderStatus.PENDING) {
         return {
           success: true,
@@ -149,11 +113,8 @@ export class GoogleIapService {
         };
       }
 
-      console.log(7);
-
-      return await this.updateOrder(dto, item, data);
+      return await this.updateOrder(item, data);
     } catch (error) {
-      console.error(error);
       throw new RpcException({
         status: 400,
         message: error.message || 'APPLE_VERIFICATION_FAILED',
@@ -162,7 +123,6 @@ export class GoogleIapService {
   }
 
   private async updateOrder(
-    dto: InAppPurchaseRequestDto,
     item: Item,
     payload: IGoogleIapClientSideRequest,
   ): Promise<IPaymentInAppPurchaseResponse> {

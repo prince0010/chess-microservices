@@ -69,73 +69,6 @@ export class LessonTranslateService {
     }
   }
 
-  public async seedCachedTranslations(): Promise<string> {
-    const listLanguages = ['ka', 'es']; // you can extend this easily
-    const BATCH_SIZE = 50; // optional batching for large datasets
-    let totalTranslated = 0;
-
-    try {
-      // Get unique descriptions only (to avoid duplicate API calls)
-      const allLessons = await this.lessonRepository.find({
-        select: ['description'],
-        where: { description: Not('') },
-      });
-
-      const uniqueDescriptions = [
-        ...new Set(allLessons.map((l) => l.description.trim())),
-      ];
-
-      // Process each language
-      for (const language of listLanguages) {
-        console.warn(`\nSeeding translations for language: ${language}`);
-
-        // Optionally batch them to reduce Google API stress
-        for (let i = 0; i < uniqueDescriptions.length; i += BATCH_SIZE) {
-          const batch = uniqueDescriptions.slice(i, i + BATCH_SIZE);
-
-          // Parallelize within each batch (Promise.all)
-          await Promise.all(
-            batch.map(async (desc) => {
-              const textHash = crypto
-                .createHash('sha256')
-                .update(desc.trim().toLowerCase())
-                .digest('hex');
-
-              const cacheKey = `lesson-desc-${textHash}-${language}`;
-              const cached = await this.redisService.get(cacheKey);
-              if (cached) return; // already cached, skip
-
-              // Call Google Translate only if not cached
-              const translated = await this.translateSingleText(
-                language,
-                desc,
-                'en',
-              );
-
-              // If translation succeeded, store in Redis
-              if (translated) {
-                await this.redisService.set(
-                  cacheKey,
-                  translated,
-                  60 * 60 * 24 * 365, // 1 year cache
-                );
-                totalTranslated++;
-              }
-            }),
-          );
-        }
-      }
-
-      return `Pre-caching done. Total cached: ${totalTranslated}`;
-    } catch (error) {
-      console.error('Error seeding translations:', error.message);
-      throw new RpcException({
-        status: 400,
-        message: error.message,
-      });
-    }
-  }
-
   /* Transform single lessons and get description translated */
   public async transformSingleLessons(
     lessons: Lesson[],
@@ -197,58 +130,7 @@ export class LessonTranslateService {
       }
 
       return text;
-
-      // NO MORE USED GOOGLE API TRANSLATIONS
-      // 3. try Google Translate API up to 3 times
-      // const apiKey = envs.translationApiKey;
-      // const baseGoogleApiUrl =
-      //   'https://translation.googleapis.com/language/translate/v2';
-
-      // if (!apiKey) {
-      //   throw new BadRequestException(
-      //     'Google Translate API key not configured',
-      //   );
-      // }
-
-      // let translatedText: string | null = null;
-      // const maxTries = 3;
-
-      // for (let attempt = 1; attempt <= maxTries; attempt++) {
-      //   try {
-      //     const response = await axios.post(
-      //       `${baseGoogleApiUrl}?key=${apiKey}`,
-      //       {
-      //         q: text,
-      //         target,
-      //         source,
-      //         format: 'text',
-      //       },
-      //       { timeout: 5000 }, // 5s timeout each try
-      //     );
-
-      //     translatedText =
-      //       response.data?.data?.translations?.[0]?.translatedText;
-      //     if (translatedText) break; // success, stop retry loop
-      //   } catch (err) {
-      //     console.warn(
-      //       `Google translation attempt ${attempt} failed on text: ${text}`,
-      //       err.message,
-      //     );
-      //     // Small delay before next try (0.5s)
-      //     await new Promise((res) => setTimeout(res, 500));
-      //   }
-      // }
-
-      // 4. Fallback if still failed after all tries
-      // if (!translatedText) {
-      //   console.error(
-      //     'Translation failed after 3 attempts, returning original text.',
-      //   );
-
-      //   return text; // don’t throw — return English text instead
-      // }
     } catch (error) {
-      // Only fatal if something is fundamentally wrong (not transient)
       console.error('translateSingleText fatal error:', error.message);
       return text;
     }
