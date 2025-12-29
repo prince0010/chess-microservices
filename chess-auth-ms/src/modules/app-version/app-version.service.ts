@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { envs } from 'src/config';
 
 @Injectable()
 export class AppVersionService {
@@ -30,10 +31,9 @@ export class AppVersionService {
             ? 'newUpdateAvailable'
             : 'appUpToDate',
       storeUrls: {
-        // changeMe! and use env variables
-        ios: 'https://apps.apple.com/app/idYOUR_APP_ID',
-        android:
-          'https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME',
+        // changeMe! when apple approve app and update env variable for ios
+        ios: envs.iosDownloadAppUrl,
+        android: envs.androidDownloadAppUrl,
       },
     };
   }

@@ -24,7 +24,7 @@ export class NotificationPurchaseService {
   async create(dto: CreateNotificationPurchaseDto): Promise<void> {
     const newNotification = this.notificationPurchaseRepository.create({
       ...dto,
-      isRead: dto.destination === NotificationDestination.APP, // changeMe! when app requires create inbox notifications list on flutter app
+      isRead: dto.destination === NotificationDestination.APP, // change this when app requires create inbox notifications list on flutter app
     });
 
     await this.notificationPurchaseRepository.save(newNotification);

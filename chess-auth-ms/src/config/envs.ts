@@ -16,6 +16,8 @@ interface EnvVars {
   JWT_SECRET: string;
   WE_CHESS_EMAIL_USERNAME: string;
   WE_CHESS_EMAIL_PASSWORD: string;
+  ANDROID_DOWNLOAD_APP_URL: string;
+  IOS_DOWNLOAD_APP_URL: string;
 }
 
 const envsSchema = joi
@@ -34,6 +36,8 @@ const envsSchema = joi
     NATS_SERVERS: joi.string().required(),
     WE_CHESS_EMAIL_USERNAME: joi.string().required(),
     WE_CHESS_EMAIL_PASSWORD: joi.string().required(),
+    ANDROID_DOWNLOAD_APP_URL: joi.string().required(),
+    IOS_DOWNLOAD_APP_URL: joi.string().required(),
   })
   .unknown(true);
 
@@ -63,4 +67,6 @@ export const envs = {
   jwtSecret: envVars.JWT_SECRET,
   weChessEmailUsername: envVars.WE_CHESS_EMAIL_USERNAME,
   weChessEmailPassword: envVars.WE_CHESS_EMAIL_PASSWORD,
+  androidDownloadAppUrl: envVars.ANDROID_DOWNLOAD_APP_URL,
+  iosDownloadAppUrl: envVars.IOS_DOWNLOAD_APP_URL,
 };

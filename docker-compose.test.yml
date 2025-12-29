@@ -19,6 +19,7 @@ services:
       - /var/run:/var/run:rw
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     privileged: true
     restart: always
     networks:
@@ -141,6 +142,8 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       WE_CHESS_EMAIL_USERNAME: ${WE_CHESS_EMAIL_USERNAME}
       WE_CHESS_EMAIL_PASSWORD: ${WE_CHESS_EMAIL_PASSWORD}
+      ANDROID_DOWNLOAD_APP_URL: ${ANDROID_DOWNLOAD_APP_URL}
+      IOS_DOWNLOAD_APP_URL: ${IOS_DOWNLOAD_APP_URL}
     volumes:
       - ./seed:/usr/src/app/seed
     networks:
