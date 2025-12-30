@@ -29,17 +29,17 @@ export class PaymentController {
   //   return this.paymentService.stripeWebhook(req, res);
   // }
 
-  // apple notification v2 production - changeMe! uncomment this and comment sandbox
-  // @Post('webhook/apple-production-webhook')
-  // async appleWebhook(@Req() req: Request, @Res() res: Response) {
+  // apple notification v2 - production
+  // url: https://we-chess.com/payment/webhook/apple-production-webhook
+  @Post('webhook/apple-production-webhook')
+  async appleWebhook(@Req() req: Request, @Res() res: Response) {
+    return this.paymentAppleService.notification(req, res);
+  }
 
-  //   return this.paymentAppleService.notificationSandbox(req, res);
-  // }
-
-  // http://localhost:3004/payment/webhook/apple-sandbox-webhook
-  // apple notification v2 sandbox
+  // apple notification v2 - sandbox
+  // url: https://test-we-chess.com/payment/webhook/apple-sandbox-webhook
   @Post('webhook/apple-sandbox-webhook')
   async appleSandboxWebhook(@Req() req: Request, @Res() res: Response) {
-    return this.paymentAppleService.notificationSandbox(req, res);
+    return this.paymentAppleService.notification(req, res);
   }
 }

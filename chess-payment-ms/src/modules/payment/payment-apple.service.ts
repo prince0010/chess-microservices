@@ -18,7 +18,7 @@ const loadJose = async () => {
 export class PaymentAppleService {
   constructor(@Inject(NATS_SERVICE) private readonly client: ClientProxy) {}
 
-  public async notificationSandbox(req: Request, res: Response) {
+  public async notification(req: Request, res: Response) {
     try {
       const { signedPayload } = req.body;
 
