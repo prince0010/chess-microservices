@@ -29,7 +29,12 @@ export const configureCors = (
     });
   } else if (env === 'testing') {
     app.enableCors({
-      origin: ['http://69.62.117.146:4000', 'http://69.62.117.146:3000'],
+      origin: [
+        'https://test-we-chess.com',
+        'https://www.test-we-chess.com',
+        'http://69.62.117.146:4000',
+        'http://69.62.117.146:3000',
+      ],
       credentials: true,
       methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
       allowedHeaders: [
