@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333;
+      } .container { width: 100%; max-width: 600px; margin: 0 auto; border: 1px
+      solid #ddd; border-radius: 5px; overflow: hidden; } .header_image {
+      display: flex; justify-content:center; width: 100%; } .header_image_logo {
+      margin: 0 auto; width: 120px; } .header { background-color:#ffd400; color:
+      #092648; padding: 15px; text-align: center; font-size: 24px; } .content {
+      padding: 20px; } .footer { padding: 15px; text-align: center;
+      background-color: #f1f1f1; font-size: 12px; } .highlight { font-weight:
+      bold; color: black; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header_image">
+        <img
+          class="header_image_logo"
+          src="cid:logo"
+          width="120px"
+          alt="Logo"
+        />
+      </div>
+      <div class="header">New Apple In App Purchase received</div>
+      <div class="content">
+        <h2>Hi We Chess Administration</h2>
+        <p>
+          New In App Purchase payment received.
+        </p>
+        <strong>Customer name: {{customerName}}</strong>
+        <strong>Package: {{packageName}}</strong>
+        <strong>Price: {{packagePrice}}</strong>
+        <strong>Customer username: {{customerUsername}}</strong>
+        <br />
+        <p>With best regards</p>
+        <p>We Chess automatic email generator</p>
+      </div>
+      <div class="footer">
+        <p>
+          We Chess Software
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

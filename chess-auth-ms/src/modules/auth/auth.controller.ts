@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { MessagePattern, Payload } from '@nestjs/microservices';
+import { EventPattern, MessagePattern, Payload } from '@nestjs/microservices';
 
 import { AuthService } from './auth.service';
 
@@ -13,6 +13,7 @@ import {
 } from './dto';
 import { UpdatePandaUserPointsDto } from '../panda/dto/update-panda-user-points.dto';
 import { IUserUidsArray } from './interfaces';
+import { IEmailAppleIapReceivedData } from 'src/interfaces';
 
 @Controller()
 export class AuthController {
@@ -72,5 +73,12 @@ export class AuthController {
   @MessagePattern('auth.find.usersByUids')
   findUsersByUidArray(@Payload() iUserUidsArray: IUserUidsArray) {
     return this.authService.findUsersByUids(iUserUidsArray.uids);
+  }
+
+  @EventPattern('auth.send.appleIapPaymentReceivedEmailToInfoWeChess')
+  sendAppleIapPaymentReceivedEmail(
+    @Payload() data: IEmailAppleIapReceivedData,
+  ) {
+    return this.authService.sendAppleIapPaymentReceivedEmailToAdmin(data);
   }
 }

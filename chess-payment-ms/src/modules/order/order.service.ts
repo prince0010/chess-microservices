@@ -21,7 +21,11 @@ import {
   UpdateUserPointsAfterPurchaseDto,
 } from './dto';
 import { CreateNotificationPurchaseDto } from '../notification/dto/create-notification-purchase.dto';
-import { AppleTransactionInfoV2, IListOrders } from 'src/interfaces';
+import {
+  AppleTransactionInfoV2,
+  IEmailAppleIapReceivedData,
+  IListOrders,
+} from 'src/interfaces';
 import {
   ItemPackage,
   NotificationDestination,
@@ -231,6 +235,18 @@ export class OrderService {
     order.receipt.rawReceipt = data; // apple server transaction as receipt
 
     await this.orderRepository.save(order);
+
+    // send email notification to admin
+    const payloadEmail: IEmailAppleIapReceivedData = {
+      packageName: order.orderItems[0].item.name,
+      packagePrice: order.totalAmount,
+      userUid: order.userUid,
+    };
+
+    this.client.emit(
+      'auth.send.appleIapPaymentReceivedEmailToInfoWeChess',
+      payloadEmail,
+    );
   }
 
   // this method is called when client side verified

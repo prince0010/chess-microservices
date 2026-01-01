@@ -15,6 +15,7 @@ import { envs, NATS_SERVICE } from 'src/config';
 import { Auth } from './entities/auth.entity';
 import { AuthTeacher } from './entities/auth-teacher.entity';
 import { AuthPanda } from 'src/modules/panda/entities/auth-panda.entity';
+import { NodemailerService } from '../shared/services/nodemailer.service';
 
 import { RegisterAuthDto } from './dto/register-auth.dto';
 import { UpdateAuthDto } from './dto/update-auth.dto';
@@ -23,6 +24,10 @@ import { UpdateUserPointsDto } from './dto/update-user-points.dto';
 import { FindAllStudentsDto, FindAllUsersDto } from './dto/find-all-users.dto';
 import { UpdatePandaUserPointsDto } from '../panda/dto/update-panda-user-points.dto';
 import { SecurityRoles, TypeUserCounter } from 'src/enum';
+import {
+  IEmailAppleIapReceivedData,
+  IEmailAppleIapReceivedPayload,
+} from 'src/interfaces';
 import {
   JwtPayload,
   IOneUser,
@@ -45,6 +50,7 @@ export class AuthService {
     private readonly authPandaRepository: Repository<AuthPanda>,
 
     private readonly jwtService: JwtService, // default Nest Service to generate JWT
+    private readonly nodemailerService: NodemailerService,
     @Inject(NATS_SERVICE) private readonly client: ClientProxy,
   ) {}
 
@@ -585,6 +591,31 @@ export class AuthService {
     });
 
     return users;
+  }
+
+  // ==== email events ====
+  async sendAppleIapPaymentReceivedEmailToAdmin(
+    data: IEmailAppleIapReceivedData,
+  ): Promise<void> {
+    try {
+      const user = await this.findOne(data.userUid);
+
+      const payload: IEmailAppleIapReceivedPayload = {
+        packageName: data.packageName,
+        packagePrice: data.packagePrice,
+        customerName: user.name,
+        customerUsername: user.username,
+      };
+
+      await this.nodemailerService.sendAppleIapPaymentReceivedEmailToAdmin(
+        payload,
+      );
+    } catch (error) {
+      throw new RpcException({
+        status: 400,
+        message: error.message,
+      });
+    }
   }
 
   // ==== private methods ====
