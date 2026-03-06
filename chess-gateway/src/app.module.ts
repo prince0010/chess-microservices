@@ -15,9 +15,9 @@ import { PaymentModule } from './modules/payment/payment.module';
 
 @Module({
   imports: [
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', '/public'),
-    }),
+    // ServeStaticModule.forRoot({
+    //   rootPath: join(__dirname, '..', '/public'),
+    // }),
 
     // API Rate Limiting
     ThrottlerModule.forRoot({
