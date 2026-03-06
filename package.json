@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "nest": "^0.1.6",
+    "nestjs": "^0.0.1"
+  }
+}
