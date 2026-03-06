@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/69219596/cannot-access-pdf-using-public-url-uploaded-on-cloudinary

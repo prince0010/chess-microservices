@@ -1,0 +1,174 @@
+[
+    {
+        "id": 1,
+        "name": "Anna Petrova",
+        "title": "Woman Grandmaster",
+        "rating": 2450,
+        "languages": [
+            "English",
+            "Russian",
+            "Spanish"
+        ],
+        "pricePerHour": 75,
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=face",
+        "description": "Specialized in opening preparation and endgame techniques. 10+ years coaching experience.",
+        "email": "anna.petrova@wechess.com",
+        "phone": "+1 (555) 123-4567",
+        "experience": "12 years",
+        "specialties": [
+            "Opening Theory",
+            "Endgames",
+            "Tournament Preparation"
+        ],
+        "availability": [
+            "Monday",
+            "Wednesday",
+            "Friday"
+        ],
+        "attachment": "/documents/anna_certificates.pdf",
+        "verified": true
+    },
+    {
+        "id": 2,
+        "name": "David Chen",
+        "title": "International Master",
+        "rating": 2420,
+        "languages": [
+            "English",
+            "Mandarin"
+        ],
+        "pricePerHour": 60,
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+        "description": "Focus on positional understanding and calculation skills for intermediate to advanced players.",
+        "email": "david.chen@wechess.com",
+        "phone": "+1 (555) 234-5678",
+        "experience": "8 years",
+        "specialties": [
+            "Positional Play",
+            "Calculation",
+            "Time Management"
+        ],
+        "availability": [
+            "Tuesday",
+            "Thursday",
+            "Saturday"
+        ],
+        "attachment": "/documents/david_certificates.pdf",
+        "verified": true
+    },
+    {
+        "id": 3,
+        "name": "Maria Rodriguez",
+        "title": "FIDE Master",
+        "rating": 2350,
+        "languages": [
+            "English",
+            "Spanish",
+            "Portuguese"
+        ],
+        "pricePerHour": 50,
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+        "description": "Beginner to intermediate level coaching with focus on fundamentals and tactics.",
+        "email": "maria.rodriguez@wechess.com",
+        "phone": "+1 (555) 345-6789",
+        "experience": "6 years",
+        "specialties": [
+            "Beginner Coaching",
+            "Tactics",
+            "Chess Fundamentals"
+        ],
+        "availability": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Saturday"
+        ],
+        "attachment": "/documents/maria_certificates.pdf",
+        "verified": true
+    },
+    {
+        "id": 4,
+        "name": "Alexander Schmidt",
+        "title": "Grandmaster",
+        "rating": 2650,
+        "languages": [
+            "English",
+            "German",
+            "French"
+        ],
+        "pricePerHour": 120,
+        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+        "description": "Former European Champion offering high-level training for tournament players.",
+        "email": "alexander.schmidt@wechess.com",
+        "phone": "+49 123 456789",
+        "experience": "15 years",
+        "specialties": [
+            "Advanced Strategy",
+            "Tournament Coaching",
+            "Game Analysis"
+        ],
+        "availability": [
+            "Wednesday",
+            "Friday",
+            "Sunday"
+        ],
+        "attachment": "/documents/alexander_certificates.pdf",
+        "verified": true
+    },
+    {
+        "id": 5,
+        "name": "Sofia Tanaka",
+        "title": "Woman International Master",
+        "rating": 2380,
+        "languages": [
+            "English",
+            "Japanese"
+        ],
+        "pricePerHour": 55,
+        "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face",
+        "description": "Online chess coaching with interactive lessons and personalized training plans.",
+        "email": "sofia.tanaka@wechess.com",
+        "phone": "+81 90 1234 5678",
+        "experience": "7 years",
+        "specialties": [
+            "Online Coaching",
+            "Interactive Lessons",
+            "Training Plans"
+        ],
+        "availability": [
+            "Monday",
+            "Wednesday",
+            "Friday",
+            "Sunday"
+        ],
+        "attachment": "/documents/sofia_certificates.pdf",
+        "verified": true
+    },
+    {
+        "id": 6,
+        "name": "Michael Brown",
+        "title": "National Master",
+        "rating": 2250,
+        "languages": [
+            "English"
+        ],
+        "pricePerHour": 40,
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+        "description": "Youth chess coach specializing in school programs and young talent development.",
+        "email": "michael.brown@wechess.com",
+        "phone": "+1 (555) 456-7890",
+        "experience": "5 years",
+        "specialties": [
+            "Youth Coaching",
+            "School Programs",
+            "Talent Development"
+        ],
+        "availability": [
+            "Tuesday",
+            "Thursday",
+            "Saturday"
+        ],
+        "attachment": "/documents/michael_certificates.pdf",
+        "verified": true
+    }
+]
