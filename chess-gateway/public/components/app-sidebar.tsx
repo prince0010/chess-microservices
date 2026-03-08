@@ -39,7 +39,6 @@ import {
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 
-// Menu items.
 const menuItems = [
   {
     title: "Dashboard",
